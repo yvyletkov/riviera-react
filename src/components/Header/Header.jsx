@@ -10,15 +10,14 @@ import Button from "../shared/Button/Button";
 
 
 
-const Link = ( {title, icon, href = '#'} ) => {
-    return <a href={href} className={s.link}>
+const Link = ( {title, icon, href = '#', extraClass = null} ) => {
+    return <a href={href} className={s.link + ' ' + extraClass}>
         <img src={icon} alt={title}/>
-        {title?<span>{title}</span>:null}
+        {title?<div>{title}</div>:null}
     </a>
 }
 
 const Header = () => {
-    console.log(s)
     return (
         <div className={s.wrapper}>
             <div className={'container'}>
@@ -37,15 +36,18 @@ const Header = () => {
                         <img src={logo} alt="Riviera Sunrise"/>
                     </div>
                     <div className={s.rightBlock}>
-                        <Link icon={search} href={"#"}/>
-                        <div>
-                            <Link icon={phone} href={"tel:+78005557856"} title={"+7 (800) 555-78-56"}/>
-                            {/*<div>Крым, г. Алушта</div>*/}
-                        </div>
-                        <Button href={'#'} text={'Забронировать'}/>
+                            <Link icon={search} href={"#"}/>
+                            <div className={s.contacts}>
+                                <Link icon={phone} href={"tel:+78005557856"} extraClass={s.number} title={"+7 (800) 555-78-56"}/>
+                                <div>Крым, г. Алушта</div>
+                            </div>
+                            <Button href={'#'} text={'Забронировать'}/>
+
                     </div>
+
                 </div>
             </div>
+
         </div>
     )
 };

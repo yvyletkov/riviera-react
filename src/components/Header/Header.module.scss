@@ -34,6 +34,7 @@ a, a:visited {
 
 .rightBlock {
   display: flex;
+  align-items: baseline;
 }
 
 .link {
@@ -43,9 +44,29 @@ a, a:visited {
   margin-right: 6%;
 }
 
+.link.number {
+  font-family: "Helvetica Neue Medium" !important;
+  margin-right: 0;
+  text-align: right;
+  font-size: 20px;
+}
+
+
 .link img {
   display: inline-block;
   margin-right: 5px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 185px;
+  margin-right: 20px;
+}
+
+.contacts div {
+  font-size: 16px;
 }
 
 .menuIcon {
@@ -60,6 +81,12 @@ a, a:visited {
   height: 2px;
   background-color: $fontBlack;
   margin-bottom: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+  .link, .contacts div  {
+    display: none;
+  }
 }
 
 
