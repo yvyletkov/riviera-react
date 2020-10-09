@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./index.module.scss";
+import s from "./Footer.module.scss";
 import logo from "../../img/footer/logo-footer.jpg";
 import logoVk from "../../img/footer/vk.png";
 import logoFb from "../../img/footer/facebook.png";
