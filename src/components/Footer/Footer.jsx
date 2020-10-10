@@ -12,18 +12,18 @@ const Footer = () => {
   return (
     <>
       <div className={s.footer}>
-        <div className={s.footer__left}>
+        <div className={s.footerLeft}>
           <img src={logo} alt="" />
-          <div className={s.footer__flex}>
+          <div className={s.footerFlex}>
             <img src={logoPin} alt="Лого" />
             <p>ул.Ленина 2, Алушта, Крым</p>
           </div>
-          <div className={s.footer__flex}>
+          <div className={s.footerFlex}>
             <img src={logoPhone} alt="Лого" />
             <p>8 800 300 68 41</p>
           </div>
         </div>
-        <div className={s.footer__center}>
+        <div className={s.footerCenter}>
           <ul>
             <li>О нас</li>
             <li>Размещение</li>
@@ -48,7 +48,7 @@ const Footer = () => {
             <li>Развлечения</li>
           </ul>
         </div>
-        <div className={s.footer__right}>
+        <div className={s.footerRight}>
           <p>Мы в соцсетях</p>
           <div className={s.icons}>
             <img src={logoInst} alt="Лого" />
