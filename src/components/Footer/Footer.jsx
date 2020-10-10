@@ -10,7 +10,7 @@ import logoPhone from "../../img/footer/phone.png";
 
 const Footer = () => {
   return (
-    <>
+    <div className="container">
       <div className={s.footer}>
         <div className={s.footerLeft}>
           <img src={logo} alt="" />
@@ -66,7 +66,7 @@ const Footer = () => {
           гостиницы &nbsp; | &nbsp; Managed by UPRO
         </p>
       </div>
-    </>
+    </div>
   );
 };
 
