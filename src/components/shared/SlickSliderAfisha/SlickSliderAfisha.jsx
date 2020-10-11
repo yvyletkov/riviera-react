@@ -8,18 +8,67 @@ import afisha4 from "../../../img/afisha/afisha4.png";
 import afisha5 from "../../../img/afisha/afisha5.png";
 
 const imgMassive = [
-  { img: afisha1, key: 1 },
-  { img: afisha2, key: 2 },
-  { img: afisha3, key: 3 },
-  { img: afisha4, key: 4 },
-  { img: afisha5, key: 5 },
+  {
+    img: afisha1,
+    title: "Караоке бар",
+    subtitle: "Green Stage",
+    time: "21:00 8 августа",
+    house: "Корпус Classic",
+    key: 1,
+  },
+  {
+    img: afisha2,
+    title: "Караоке бар",
+    subtitle: "Green Stage",
+    time: "21:00 8 августа",
+    house: "Корпус Classic",
+    key: 2,
+  },
+  {
+    img: afisha3,
+    title: "Караоке бар",
+    subtitle: "Green Stage",
+    time: "21:00 8 августа",
+    house: "Корпус Classic",
+    key: 3,
+  },
+  {
+    img: afisha4,
+    title: "Караоке бар",
+    subtitle: "Green Stage",
+    time: "21:00 8 августа",
+    house: "Корпус Classic",
+    key: 4,
+  },
+  {
+    img: afisha5,
+    title: "Караоке бар",
+    subtitle: "Green Stage",
+    time: "21:00 8 августа",
+    house: "Корпус Classic",
+    key: 5,
+  },
+  {
+    img: afisha5,
+    title: "Караоке бар",
+    subtitle: "Green Stage",
+    time: "21:00 8 августа",
+    house: "Корпус Classic",
+    key: 6,
+  },
 ];
 
 const slider = imgMassive.map((e) => {
-    console.log(e)
+  const { img, title, subtitle, time, house, key } = e;
   return (
-    <div key={e.key}>
-      <CardSlider img={e.img} />
+    <div className="SliderElement" key={key}>
+      <CardSlider
+        img={img}
+        title={title}
+        subtitle={subtitle}
+        time={time}
+        house={house}
+      />
     </div>
   );
 });
@@ -27,26 +76,15 @@ const slider = imgMassive.map((e) => {
 export default class SlickSliderAfisha extends Component {
   render() {
     const settings = {
-      dots: false,
+      className: "center",
       centerMode: true,
       infinite: true,
-      speed: 500,
+      centerPadding: "60px",
       slidesToShow: 5,
-      slidesToScroll: 1,
+      speed: 500,
     };
     return (
       <div className="container">
-        <link
-          rel="stylesheet"
-          type="text/css"
-          charset="UTF-8"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-        />
         <style>{cssstyle}</style>
         <h2>Сегодня в программе</h2>
         <Slider {...settings}>{slider}</Slider>
@@ -68,5 +106,13 @@ h3 {
 }
 .slick-next:before, .slick-prev:before {
     color: #000;
+}
+.center .slick-center .SliderElement {
+    opacity: 1;
+    -ms-transform: scale(1.08);
+    transform: scale(1.08);
+}
+.center h3 {
+    transition: all .3s ease;
 }
 `;
