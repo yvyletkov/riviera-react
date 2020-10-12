@@ -1,7 +1,7 @@
 import React from "react";
-import s from "./CardSlider.module.scss";
+import s from "./SliderItem.module.scss";
 
-const CardSlider = (props) => {
+const SliderItem = (props) => {
   const { img, title, subtitle, time, house } = props;
   return (
     <div className={s.afishaCard}>
@@ -16,4 +16,4 @@ const CardSlider = (props) => {
   );
 };
 
-export default CardSlider;
+export default SliderItem;
