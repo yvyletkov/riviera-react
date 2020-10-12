@@ -1,6 +1,6 @@
-import React, {Component} from "react";
+import React from "react";
 import Slider from "react-slick";
-import CardSlider from "../CardSlider/CardSlider";
+import SliderItem from "./SliderItem/SliderItem";
 import afisha1 from "../../../img/afisha/afisha1.png";
 import afisha2 from "../../../img/afisha/afisha2.png";
 import afisha3 from "../../../img/afisha/afisha3.png";
@@ -28,6 +28,10 @@ h3 {
 }
 .center h3 {
     transition: all .3s ease;
+}
+
+.slick-list { 
+   overflow:visible;
 }
 `;
 
@@ -89,7 +93,7 @@ const SlickSliderAfisha = (props) => {
         const {img, title, subtitle, time, house, key} = data;
         return (
             <div className="SliderElement" key={key}>
-                <CardSlider
+                <SliderItem
                     img={img}
                     title={title}
                     subtitle={subtitle}
