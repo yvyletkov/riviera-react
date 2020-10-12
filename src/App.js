@@ -15,7 +15,6 @@ function App() {
       <Header />
       <HomePage/>
       <SlickSliderAfisha></SlickSliderAfisha>
-        <TextPlusImageBlock/>
       {/*<Footer />*/}
     </>
   );
