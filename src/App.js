@@ -13,7 +13,7 @@ function App() {
     <>
       <Header />
       <HomePage/>
-      {/*<SlickSliderAfisha></SlickSliderAfisha>*/}
+      <SlickSliderAfisha></SlickSliderAfisha>
       {/*<Footer />*/}
       <div className='container'>
           <Headline/>
