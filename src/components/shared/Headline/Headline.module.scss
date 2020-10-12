@@ -1,0 +1,30 @@
+$black: #171717;
+
+
+.subtitle {
+  color: $black;
+  text-transform: uppercase;
+  font-family: "Helvetica Neue Light";
+  font-size: 20px;
+  margin-bottom: 7px;
+  position: relative;
+  width: fit-content;
+}
+
+.title {
+  color: $black;
+  text-transform: uppercase;
+  font-family: "Helvetica Neue Bold";
+  font-size: 36px;
+}
+
+.subtitle:after {
+  content: "";
+  width: 65px;
+  height: 1px;
+  top: 8px;
+  right: -82px;
+  display: block;
+  position: absolute;
+  background-color: $black;
+}
