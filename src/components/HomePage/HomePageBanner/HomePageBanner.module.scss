@@ -1,0 +1,66 @@
+$black: #171717;
+
+.bannerWrapper {
+  height: 800px;
+  width: 100%;
+  background-color: #f8f8f8;
+  overflow: hidden;
+}
+
+.flexWrapper {
+  position: relative;
+  display: flex;
+}
+
+.leftSide {
+  padding-top: 175px;
+  z-index: 1;
+}
+
+.textBlock {
+  color: $black;
+}
+
+.textBlock h2 {
+  font-family: "Helvetica Neue Medium";
+  font-size: 27px;
+  margin-bottom: 18px;
+}
+
+.textBlock h1:first-of-type {
+  text-transform: uppercase;
+  font-family: "Helvetica Neue Black";
+  font-size: 84px;
+}
+
+.textBlock h1:last-of-type {
+  text-transform: uppercase;
+  font-family: "Helvetica Neue Black";
+  font-size: 123px;
+  line-height: 0.9;
+}
+
+.textBlock div {
+  font-family: "Helvetica Neue Bold";
+  font-size: 34px;
+}
+
+.rightSide {
+  position: relative;
+  left: -75px;
+}
+
+.bookingBlock {
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 75px;
+  max-width: 1115px;
+  width: 95%;
+  left: 50%;
+  height: 132px;
+  box-shadow: -6.156px 16.914px 40px 0px rgba(23, 23, 23, 0.13);
+  background-color: white;
+  border-radius: 5px;
+}
+
+
