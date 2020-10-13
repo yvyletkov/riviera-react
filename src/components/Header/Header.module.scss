@@ -5,6 +5,10 @@ a, a:visited {
   color: $fontBlack;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 .wrapper {
   width: 100%;
   box-shadow: 0px 0px 40.94px 5.06px rgba(3, 7, 8, 0.08);
