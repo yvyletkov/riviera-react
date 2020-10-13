@@ -4,18 +4,15 @@ import "./App.scss";
 import Header from "./components/Header/Header";
 import "./style/normalize.css";
 import "./style/fonts.css";
-import SlickSliderAfisha from "./components/shared/SlickSliderAfisha/SlickSliderAfisha";
 import HomePage from "./components/HomePage/HomePage";
-import TextPlusImageBlock from "./components/shared/TextPlusImageBlock/TextPlusImageBlock";
+
 
 function App() {
   return (
     <>
       <Header />
       <HomePage/>
-      <SlickSliderAfisha></SlickSliderAfisha>
       {/*<Footer />*/}
-      <TextPlusImageBlock/>
     </>
   );
 }

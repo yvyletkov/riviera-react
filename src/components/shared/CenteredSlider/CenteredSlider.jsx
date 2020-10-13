@@ -1,12 +1,14 @@
 import React from "react";
 import Slider from "react-slick";
-import SliderItem from "./SliderItem/SliderItem";
+import s from "./CenteredSlider.module.scss";
+import CenteredSliderItem from "./CenteredSliderItem/CenteredSliderItem";
 import afisha1 from "../../../img/afisha/afisha1.png";
 import afisha2 from "../../../img/afisha/afisha2.png";
 import afisha3 from "../../../img/afisha/afisha3.png";
 import afisha4 from "../../../img/afisha/afisha4.png";
 import afisha5 from "../../../img/afisha/afisha5.png";
 import styled from "styled-components";
+import HeadlineCenter from "../HeadlineCenter/HeadlineCenter";
 
 const StyledSlider = styled(Slider)`
   h3 {
@@ -78,14 +80,22 @@ const imgMassive = [
     house: "Корпус Classic",
     key: 5,
   },
+  {
+    img: afisha5,
+    title: "Караоке бар",
+    subtitle: "Green Stage",
+    time: "21:00 8 августа",
+    house: "Корпус Classic",
+    key: 6,
+  },
 ];
 
-const SlickSliderAfisha = (props) => {
+const CenteredSlider = (props) => {
   const items = imgMassive.map((data) => {
     const { img, title, subtitle, time, house, key } = data;
     return (
       <div className="SliderElement" key={key}>
-        <SliderItem
+        <CenteredSliderItem
           img={img}
           title={title}
           subtitle={subtitle}
@@ -101,7 +111,7 @@ const SlickSliderAfisha = (props) => {
     centerMode: true,
     infinite: true,
     centerPadding: "60px",
-    slidesToShow: 3,
+    variableWidth: true,
     speed: 500,
     responsive: [
         {
@@ -117,8 +127,8 @@ const SlickSliderAfisha = (props) => {
   };
 
   return (
-    <div className="container">
-      <h2>Сегодня в программе</h2>
+    <div className={s.wrapper}>
+      <HeadlineCenter title={'Cегодня в программе'}/>
       <StyledSlider>
         <Slider {...settings}>{items}</Slider>
       </StyledSlider>
@@ -126,4 +136,4 @@ const SlickSliderAfisha = (props) => {
   );
 };
 
-export default SlickSliderAfisha;
+export default CenteredSlider;

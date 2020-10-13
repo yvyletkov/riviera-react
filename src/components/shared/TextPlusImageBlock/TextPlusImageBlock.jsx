@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./TextPlusImageBlock.module.scss"
 import Headline from "../Headline/Headline";
+import img from "./../../../img/home-page/textimg.png"
 
 const TextPlusImageBlock = () => {
     return (
@@ -8,7 +9,7 @@ const TextPlusImageBlock = () => {
             <div className={s.grid}>
 
                 <div className={s.imageBlock}>
-                    <img src="http://evolutionsport.ru/cashback/assets/images/cashback-beach.png" alt="Пляжный кэшбек"/>
+                    <img src={img} alt="Пляжный кэшбек"/>
                 </div>
 
                 <div className={s.textBlock}>

@@ -1,7 +1,8 @@
 import React from "react";
-import s from "./SliderItem.module.scss";
+import s from "./CenteredSliderItem.module.scss";
 
-const SliderItem = (props) => {
+
+const CenteredSliderItem = (props) => {
   const { img, title, subtitle, time, house } = props;
   return (
     <div className={s.afishaCard}>
@@ -16,4 +17,4 @@ const SliderItem = (props) => {
   );
 };
 
-export default SliderItem;
+export default CenteredSliderItem;
