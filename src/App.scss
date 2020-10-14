@@ -2,7 +2,11 @@
   font-family: Helvetica Neue Light;
 }
 
-a, a:visited {
+*:focus {
+  outline: none;
+}
+
+  a, a:visited {
   text-decoration: none;
 }
 

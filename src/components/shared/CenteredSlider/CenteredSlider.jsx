@@ -27,6 +27,7 @@ const StyledSlider = styled(Slider)`
   }
   .center .slick-center .SliderElement {
     opacity: 1;
+    transition: all 0.3s;
     -ms-transform: scale(1.08);
     transform: scale(1.08);
   }
@@ -35,6 +36,7 @@ const StyledSlider = styled(Slider)`
   }
 
   .slick-list {
+    transition: all 0.3s;
     overflow: visible;
   }
 `;

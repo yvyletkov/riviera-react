@@ -11,6 +11,8 @@ import kurortImg5 from "../../../img/grid-slider/resort-vacation/5.png";
 import kurortImg6 from "../../../img/grid-slider/resort-vacation/6.png";
 import kurortImg7 from "../../../img/grid-slider/resort-vacation/7.png";
 import kurortImg8 from "../../../img/grid-slider/resort-vacation/8.png";
+import styled from "styled-components";
+import arrowImg from "../../../img/sliderArrows/arrowThin.png"
 
 const cssstyle = `
 .slick-next:before, .slick-prev:before {
@@ -29,23 +31,31 @@ const cssstyle = `
 }
 `;
 
-function NextArrow(props) {
-    const {className, style, onClick} = props;
+const Styles = styled.div`
+  .slick-slide {
+    opacity: .3;
+    transition: all 500ms;
+  }
+  .slick-slide.slick-active {
+    opacity: 1;
+  }
+`;
+
+function NextArrow({style, onClick}) {
     return (
         <div
-            className={className}
-            style={{...style, display: "block", background: "red"}}
+            className={s.nextArrow}
+            style={{...style, backgroundImage: 'url(' + arrowImg + ')'}}
             onClick={onClick}
         />
     );
 }
 
-function PrevArrow(props) {
-    const {className, style, onClick} = props;
+function PrevArrow({style, onClick}) {
     return (
         <div
-            className={className}
-            style={{...style, display: "block", background: "green"}}
+            className={s.prevArrow}
+            style={{...style, backgroundImage: 'url(' + arrowImg + ')'}}
             onClick={onClick}
         />
     );
@@ -78,8 +88,8 @@ const GridSlider = ({slides}) => {
             secondRow: [{title: "Турпакет", img: kurortImg5, href: '#'}, {title: "Medical Spa", img: kurortImg6, href: '#'}, {title: "Командировка", img: kurortImg7, href: '#'}, {title: "Романтический отдых", img: kurortImg8, href: '#'}],
             images: [kurortImg1, kurortImg2, kurortImg3, kurortImg4, kurortImg5, kurortImg6, kurortImg7, kurortImg8]
         }];
-    const items = slides.map((item) => {
-        return <GridSliderItem firstRow={item.firstRow} secondRow={item.secondRow}/>
+    const items = slides.map((item, index) => {
+        return <GridSliderItem key={item.name + index} firstRow={item.firstRow} secondRow={item.secondRow}/>
     });
 
     const settings = {
@@ -95,14 +105,16 @@ const GridSlider = ({slides}) => {
 
     return (
         <div className={s.wrapper}>
-            <div className="container">
+            <div className={s.container}>
                 <style>{cssstyle}</style>
                 <div className={s.headlineWrapper}>
                     <Headline subtitle={'Услуги и продукты'} title={slides[currentSlideIndex].name}/>
                 </div>
+                <Styles>
                 <Slider {...settings} afterChange={afterChangeHandler}>
                     {items}
                 </Slider>
+                </Styles>
             </div>
         </div>
     )
