@@ -10,8 +10,10 @@ a:hover {
 }
 
 .wrapper {
+  position: fixed;
+  top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 1000;
   box-shadow: 0px 0px 40.94px 5.06px rgba(3, 7, 8, 0.08);
   background-color: rgb(255, 255, 255);
 }

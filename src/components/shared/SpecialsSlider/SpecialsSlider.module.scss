@@ -1,0 +1,92 @@
+.wrapper {
+  width: 100%;
+  background-color: #f5f5f6;
+  overflow: hidden;
+}
+
+.container {
+  box-sizing: border-box;
+  position: relative;
+
+  padding-top: 225px;
+  max-width: 1200px;
+  height: 640px;
+  width: 100%;
+  margin: 0 auto;
+  //border: thin solid black;
+}
+
+.leftBlock {
+  box-sizing: border-box;
+  width: 420px;
+  padding: 0 25px 0 15px;
+}
+
+.leftBlock p {
+  font-family: "Helvetica Neue Light";
+  font-size: 16px;
+}
+
+.leftBlock h2 {
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+
+.leftBlock h4 {
+  font-size: 26px;
+}
+
+.rightBlock {
+  //display: flex;
+  //align-items: center;
+  position: absolute;
+  overflow: hidden;
+  width: 960px;
+  height: 640px;
+  bottom: 0;
+  right: -180px;
+  //border: thin solid red;
+
+}
+
+.nextArrow, .prevArrow {
+  position: absolute;
+  display: block;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: -0.907px 12.968px 16px 0px rgba(23, 23, 23, 0.1);
+  cursor: pointer;
+  bottom: -100px;
+  background: center no-repeat;
+}
+
+.nextArrow:hover, .prevArrow:hover {
+  background-color: #eaeaea;
+}
+
+.prevArrow {
+  left: 610px;
+  transform: translateY(-50%);
+
+}
+.nextArrow {
+  left: 670px;
+  transform: translateY(-50%);
+}
+
+.Ellipse_3_copy {
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: -0.907px 12.968px 16px 0px rgba(23, 23, 23, 0.1);
+  position: absolute;
+  left: 1379px;
+  top: 2193px;
+  width: 51px;
+  height: 50px;
+  z-index: 343;
+}
+
+
