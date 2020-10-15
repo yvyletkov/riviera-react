@@ -1,7 +1,7 @@
 .wrapper {
   width: 100%;
-  background-color: #f5f5f6;
   overflow: hidden;
+  background: no-repeat center #f5f5f6 url(../../../img/specials-slider/specials-bg.jpg);
 }
 
 .container {
@@ -36,6 +36,19 @@
   font-size: 26px;
 }
 
+.leftBlock a {
+  font-size: 14px;
+  font-family: "Helvetica Neue Roman";
+}
+
+.leftBlock a img {
+  width: 18px;
+  //height: 5px;
+  position: relative;
+  top: 4px;
+  margin-left: 5px;
+}
+
 .rightBlock {
   //display: flex;
   //align-items: center;
@@ -46,47 +59,7 @@
   bottom: 0;
   right: -180px;
   //border: thin solid red;
-
 }
 
-.nextArrow, .prevArrow {
-  position: absolute;
-  display: block;
-  z-index: 10;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: rgb(255, 255, 255);
-  box-shadow: -0.907px 12.968px 16px 0px rgba(23, 23, 23, 0.1);
-  cursor: pointer;
-  bottom: -100px;
-  background: center no-repeat;
-}
-
-.nextArrow:hover, .prevArrow:hover {
-  background-color: #eaeaea;
-}
-
-.prevArrow {
-  left: 610px;
-  transform: translateY(-50%);
-
-}
-.nextArrow {
-  left: 670px;
-  transform: translateY(-50%);
-}
-
-.Ellipse_3_copy {
-  border-radius: 50%;
-  background-color: rgb(255, 255, 255);
-  box-shadow: -0.907px 12.968px 16px 0px rgba(23, 23, 23, 0.1);
-  position: absolute;
-  left: 1379px;
-  top: 2193px;
-  width: 51px;
-  height: 50px;
-  z-index: 343;
-}
 
 

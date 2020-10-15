@@ -23,9 +23,6 @@ const cssstyle = `
     -ms-transform: scale(1.08);
     transform: scale(1.08);
 }
-.center h3 {
-    transition: all .3s ease;
-}
 .slick-list { 
    overflow:visible;
 }
@@ -72,19 +69,19 @@ const GridSlider = ({slides}) => {
 
     slides = [{
             name: "Курортный отдых",
-            firstRow: [{title: "Семейный отдых", img: kurortImg1, href: '#'}, {title: "Номера и цены", img: kurortImg2, href: '#'}, {title: "Отдых без детей", img: kurortImg3, href: '#'}, {title: "Отдых с другзьями", img: kurortImg4, href: '#'}],
+            firstRow: [{title: "Семейный отдых", img: kurortImg1, href: '#'}, {title: "Номера и цены", img: kurortImg2, href: '#'}, {title: "Отдых без детей", img: kurortImg3, href: '#'}, {title: "Отдых с друзьями", img: kurortImg4, href: '#'}],
             secondRow: [{title: "Турпакет", img: kurortImg5, href: '#'}, {title: "Medical Spa", img: kurortImg6, href: '#'}, {title: "Командировка", img: kurortImg7, href: '#'}, {title: "Романтический отдых", img: kurortImg8, href: '#'}],
             images: [kurortImg1, kurortImg2, kurortImg3, kurortImg4, kurortImg5, kurortImg6, kurortImg7, kurortImg8]
         },
         {
             name: "Развлечения",
-            firstRow: [{title: "Семейный отдых", img: kurortImg1, href: '#'}, {title: "Номера и цены", img: kurortImg2, href: '#'}, {title: "Отдых без детей", img: kurortImg3, href: '#'}, {title: "Отдых с другзьями", img: kurortImg4, href: '#'}],
+            firstRow: [{title: "Семейный отдых", img: kurortImg1, href: '#'}, {title: "Номера и цены", img: kurortImg2, href: '#'}, {title: "Отдых без детей", img: kurortImg3, href: '#'}, {title: "Отдых с друзьями", img: kurortImg4, href: '#'}],
             secondRow: [{title: "Турпакет", img: kurortImg5, href: '#'}, {title: "Medical Spa", img: kurortImg6, href: '#'}, {title: "Командировка", img: kurortImg7, href: '#'}, {title: "Романтический отдых", img: kurortImg8, href: '#'}],
             images: [kurortImg1, kurortImg2, kurortImg3, kurortImg4, kurortImg5, kurortImg6, kurortImg7, kurortImg8]
         },
         {
             name: "Инфраструктура",
-            firstRow: [{title: "Семейный отдых", img: kurortImg1, href: '#'}, {title: "Номера и цены", img: kurortImg2, href: '#'}, {title: "Отдых без детей", img: kurortImg3, href: '#'}, {title: "Отдых с другзьями", img: kurortImg4, href: '#'}],
+            firstRow: [{title: "Семейный отдых", img: kurortImg1, href: '#'}, {title: "Номера и цены", img: kurortImg2, href: '#'}, {title: "Отдых без детей", img: kurortImg3, href: '#'}, {title: "Отдых с друзьями", img: kurortImg4, href: '#'}],
             secondRow: [{title: "Турпакет", img: kurortImg5, href: '#'}, {title: "Medical Spa", img: kurortImg6, href: '#'}, {title: "Командировка", img: kurortImg7, href: '#'}, {title: "Романтический отдых", img: kurortImg8, href: '#'}],
             images: [kurortImg1, kurortImg2, kurortImg3, kurortImg4, kurortImg5, kurortImg6, kurortImg7, kurortImg8]
         }];

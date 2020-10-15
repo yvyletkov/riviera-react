@@ -16,6 +16,7 @@ const HomePageBanner = () => {
                         </div>
                     </div>
                     <div className={s.rightSide}>
+                        <div className={s.playBtn}></div>
                         <img src={bannerImg} alt="Riviera Sunrise"/>
                     </div>
                 </div>
