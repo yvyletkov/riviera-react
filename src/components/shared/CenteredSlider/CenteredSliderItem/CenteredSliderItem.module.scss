@@ -1,24 +1,76 @@
-.afishaCard {
-  //width: 325px;
-  //height: 485px;
+.card {
+  width: 325px;
+  height: 485px;
   position: relative;
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
-// .afishaImg:hover {
-//   -webkit-transform: scale(1.25);
-//   -moz-transform: scale(1.25);
-//   transform: scale(1.25);
-// //   margin: 0 20px;
-// }
-
-.afishaText {
+.content {
   position: absolute;
-  top: 55%;
+  bottom: 20px;
   left: 25px;
   text-transform: uppercase;
   font-size: 14px;
   color:#fff;
+}
+
+.content * {
+  font-family: "Bebas Neue Book";
+}
+
+.subtitle {
+  font-family: "Bebas Neue Bold";
+  line-height: 0.9;
+  margin: 0;
+  width: 50px;
+  font-size: 71px;
+}
+
+.subtitle:first-line {
+  font-size: 47px;
+}
+
+.title {
+  margin: 0 0 4px;
+  font-family: "Bebas Neue Book";
+  font-size: 19px;
+}
+
+.time {
+  font-size: 52px;
+  margin: 0 0 20px;
+
+}
+
+.time span {
+  font-size: 13px;
+  vertical-align: 26px;
+  margin-left: 4px;
+}
+
+.campus {
+  margin: 0;
+  font-family: "Bebas Neue Book";
+  font-size: 34px;
+  line-height: 0.9;
+  position: relative;
+}
+
+.campus:before {
+  content: "";
+  display: block;
+  width: 105px;
+  background-color: #fff;
+  height: 1px;
+  position: absolute;
+  top: -20px;
+  left: -25px;
+}
+
+.campus div {
+  font-family: "Bebas Neue Bold";
+  font-size: 29px;
+  padding-left: 8px;
 }
 
 
