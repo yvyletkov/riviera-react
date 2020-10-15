@@ -93,7 +93,7 @@ const imgMassive = [
   },
 ];
 
-const CenteredSlider = (props) => {
+const CenteredSlider = ({blockName = "Сегодня в программе"}) => {
   const items = imgMassive.map((data) => {
     const { img, title, subtitle, time, date, campus, campusName, key } = data;
     return (
@@ -141,7 +141,7 @@ const CenteredSlider = (props) => {
 
   return (
     <div className={s.wrapper}>
-      <HeadlineCenter title={'Cегодня в программе'}/>
+      <HeadlineCenter title={blockName}/>
       <StyledSlider>
         <Slider {...settings}>{items}</Slider>
       </StyledSlider>
