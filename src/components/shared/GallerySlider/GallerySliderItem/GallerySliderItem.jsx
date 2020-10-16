@@ -6,12 +6,14 @@ const GallerySliderItem = ({img, title, description, href}) => {
     let [showDescription, setShowDescription] = React.useState(false);
 
     return (
-        <div className={s.photo}>
+        <div onMouseEnter={() => setShowDescription(true)}
+             onMouseLeave={() => setShowDescription(false)}
+             className={s.photo}>
             <img className={s.img} src={img} alt={title}/>
-            <div className={s.description}>
+            <div className={showDescription ? `${s.description} ${s.shown}` : s.description}>
                 <div className={s.title}>{title}</div>
-                <div className={s.description}>{description}</div>
-                <a href={href} className={s.href}>Подробнее</a>
+                <div className={s.text}>{description}</div>
+                <a href={href} className={s.href}>Подробнее →</a>
             </div>
         </div>
     );

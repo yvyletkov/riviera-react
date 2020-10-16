@@ -1,0 +1,25 @@
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 35px 0 75px;
+}
+
+.mapWrapper {
+  max-width: 1150px;
+  margin: 0 auto;
+  height: 460px;
+  box-shadow: -14.444px 19.167px 27px 0px rgba(23, 23, 23, 0.14);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    padding-bottom: 15px;
+  }
+}

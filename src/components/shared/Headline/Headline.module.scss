@@ -28,3 +28,9 @@ $black: #171717;
   position: absolute;
   background-color: $black;
 }
+
+@media screen and (max-width: 1000px) {
+  .subtitle:after {
+    content: none;
+  }
+}

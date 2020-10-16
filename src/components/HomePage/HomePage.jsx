@@ -6,6 +6,7 @@ import GridSlider from "../shared/GridSlider/GridSlider";
 import TextPlusImageBlock from "../shared/TextPlusImageBlock/TextPlusImageBlock";
 import SpecialsSlider from "../shared/SpecialsSlider/SpecialsSlider";
 import GallerySlider from "../shared/GallerySlider/GallerySlider";
+import MapSection from "../shared/MapSection/MapSection";
 
 const HomePage = () => {
     return <>
@@ -15,6 +16,7 @@ const HomePage = () => {
         <TextPlusImageBlock/>
         <CenteredSlider/>
         <GallerySlider/>
+        <MapSection/>
         </>
 
 };

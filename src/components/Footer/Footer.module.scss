@@ -1,73 +1,201 @@
+.wrapper {
+  background-color: #f8f8f8;
+  width: 100%;
+  padding-top: 40px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
 .footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 220px;
-    font-size: 16px;
-    font-weight: lighter;
+  display: grid;
+  grid-template-areas: "contacts nav socials";
+  //grid-template-rows: 220px;
+  font-size: 16px;
+  font-weight: lighter;
+  margin-bottom: 40px;
 }
 
 .footerFlex {
-    display:flex;
-    margin: 16px 0 0;
+  display: flex;
+  margin: 16px 0 0;
 }
 
 .footerFlex p {
-    margin: 0 0 0 10px;
+  margin: 0 0 0 10px;
 }
 
 .footerGray {
-    display: flex;
-    background-color: #e0e0e0;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 16px;
-    font-weight: lighter;;
+  box-sizing: border-box;
+  padding: 0 10px;
+  width: 100%;
+  display: flex;
+  background-color: #e0e0e0;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 16px;
+  font-weight: lighter;;
 }
 
 .footerGray p {
-    margin:25px auto;
+  margin: 25px auto;
 }
 
-.footerLeft {
-    margin:0 auto;
+.footerContacts {
+  grid-area: contacts;
+  padding: 0 40px;
+  margin: 0 auto;
 }
 
-.footerCenter {
-    display: flex;
-    margin:0 auto;
+.footerNav {
+  grid-area: nav;
+  display: flex;
+  margin: 0 auto;
+  padding: 0 40px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
-.footerCenter::after {
-    content: '';
-    border: 0.5px solid black;
-    margin:20px 0;
+.footerNav ul {
+  margin: 20px 0;
+  padding-left: 0;
 }
 
-.footerCenter::before {
-    content: '';
-    border: 0.5px solid black;
-    margin:20px 0;
+.footerNav ul:not(:last-child) {
+  margin-right: 30px;
 }
 
-.footerCenter li {
-    list-style-type: none;
-    margin:12px 0 0;
-    width:155px;
+.footerNav ul li:first-child {
+  margin-top: 0;
 }
 
-.footerCenter ul {
-    margin:0 45px;
-    padding-left: 0;
+.footerNav li {
+  list-style-type: none;
+  margin: 12px 0 0;
+  max-width: 155px;
 }
 
-.footerRight {
-    margin:0 auto;
+.footerSocials {
+  grid-area: socials;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.footerContacts > img {
+  mix-blend-mode: darken;
 }
 
 .icons {
-    display: flex;
+  display: flex;
 }
 
-.icons img {
-    margin:0 10px 0 0;
+.icons > img:not(:last-child) {
+  margin: 0 10px 0 0;
 }
+
+@media screen and (max-width: 1110px) {
+  .footer {
+    grid-template-areas: "nav" "socials" "contacts";
+  }
+  .footerNav {
+    box-sizing: border-box;
+    max-width: 800px;
+    width: 100%;
+    justify-content: space-between;
+    border: none;
+    padding-bottom: 25px;
+  }
+  .footerContacts {
+    text-align: center;
+  }
+  .footerSocials {
+    border-top: 1px solid #000;
+
+    text-align: center;
+  }
+  .footerSocials > p:first-child {
+    font-size: 140%;
+    font-family: "Helvetica Neue Bold";
+  }
+  .icons {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .icons > img:not(:last-child) {
+    margin: 0 15px 0 0;
+  }
+  .flexWrapper {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .flexWrapper > p {
+    text-align: left;
+    margin-right: 10px;
+  }
+  //.footerContacts {
+  //  text-align: center
+  //}
+  .footerContacts > img {
+    margin-bottom: 20px;
+  }
+  .footerGray .managedBy {
+    display: block;
+  }
+  .footerGray .thinLine {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .flexWrapper > p {
+    font-size: 12px;
+  }
+  .container {
+    padding: 0;
+  }
+  .footerNav li {
+    margin-top: 6px;
+  }
+  .footerNav ul {
+    font-size: 12px;
+    //padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .footerNav {
+    padding: 0 25px;
+    padding-bottom: 25px;
+  }
+  .footerGray > p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footerNav ul {
+    font-size: 11px;
+  }
+  .footerNav ul:not(:last-child) {
+    margin-right: 20px;
+  }
+  .footerSocials {
+    padding: 0 12px
+  }
+  .footerContacts {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .footerNav ul:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+
+
