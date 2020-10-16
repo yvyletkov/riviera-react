@@ -1,10 +1,17 @@
 $orange: #ff6c39;
 
-a.button_orange {
+a.button {
   font-family: "Helvetica Neue Roman";
   background-color: $orange;
   padding: 18px 40px;
-  color: #fff;
   font-size: 16px;
+  color: #fff;
   border-radius: 6px;
+  text-align: center;
+  transition: all 200ms;
+}
+
+a.button:hover {
+  background-color: #c5532c;
+  text-decoration: none;
 }

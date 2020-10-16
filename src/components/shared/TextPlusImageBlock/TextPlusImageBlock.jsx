@@ -2,13 +2,19 @@ import React from "react";
 import s from "./TextPlusImageBlock.module.scss"
 import Headline from "../Headline/Headline";
 import img from "./../../../img/home-page/textimg.png"
+import Button from "../Button/Button";
 
-const TextPlusImageBlock = () => {
+const TextPlusImageBlock = ({withForm = true}) => {
     return (
         <div className={s.wrapper}>
             <div className={s.grid}>
 
                 <div className={s.imageBlock}>
+                    <form>
+                        <input type="text" placeholder={'Имя'} name={'name'}/>
+                        <input type="number" placeholder={'Телефон'} name={'phone'}/>
+                        <Button text={'Заказать звонок'}/>
+                    </form>
                     <img src={img} alt="Пляжный кэшбек"/>
                 </div>
 

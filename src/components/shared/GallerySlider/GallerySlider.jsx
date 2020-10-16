@@ -2,11 +2,20 @@ import React from "react";
 import Slider from "react-slick";
 import s from "./GallerySlider.module.scss";
 import GallerySliderItem from "./GallerySliderItem/GallerySliderItem";
-import afisha1 from "../../../img/afisha/afisha1.png";
-import afisha2 from "../../../img/afisha/afisha2.png";
-import afisha3 from "../../../img/afisha/afisha3.png";
-import afisha4 from "../../../img/afisha/afisha4.png";
-import afisha5 from "../../../img/afisha/afisha5.png";
+
+import img1 from "../../../img/gallery-slider/home-page/fotogalereya3.png";
+import img2 from "../../../img/gallery-slider/home-page/fotogalereya4.png";
+import img3 from "../../../img/gallery-slider/home-page/fotogalereya5.png";
+import img4 from "../../../img/gallery-slider/home-page/fotogalereya6.png";
+import img5 from "../../../img/gallery-slider/home-page/fotogalereya7.png";
+import img6 from "../../../img/gallery-slider/home-page/fotogalereya8.png";
+import img7 from "../../../img/gallery-slider/home-page/fotogalereya9.png";
+import img8 from "../../../img/gallery-slider/home-page/fotogalereya10.png";
+import img9 from "../../../img/gallery-slider/home-page/fotogalereya11.png";
+import img10 from "../../../img/gallery-slider/home-page/fotogalereya12.png";
+import img11 from "../../../img/gallery-slider/home-page/fotogalereya13.png";
+import img12 from "../../../img/gallery-slider/home-page/fotogalereya14.png";
+
 import styled from "styled-components";
 import HeadlineCenter from "../HeadlineCenter/HeadlineCenter";
 import {NextArrow, PrevArrow} from "../SliderArrows/sliderArrowButtons";
@@ -25,153 +34,123 @@ const StyledSlider = styled(Slider)`
 
 const imgMassive = [
     {
-        img: afisha1,
+        img: img1,
         title: "Корпус Modern",
         description: "Номер: стандарт улучшенный двухместный",
         href: "#",
         key: 1,
     },
     {
-        img: afisha2,
+        img: img2,
         title: "Корпус Modern",
         description: "Номер: стандарт улучшенный двухместный",
         href: "#",
         key: 2,
     },
     {
-        img: afisha3,
+        img: img3,
         title: "Корпус Modern",
         description: "Номер: стандарт улучшенный двухместный",
         href: "#",
         key: 3,
     },
     {
-        img: afisha4,
+        img: img4,
         title: "Корпус Modern",
         description: "Номер: стандарт улучшенный двухместный",
         href: "#",
         key: 4,
     },
     {
-        img: afisha5,
+        img: img5,
         title: "Корпус Modern",
         description: "Номер: стандарт улучшенный двухместный",
         href: "#",
         key: 5,
     },
     {
-        img: afisha5,
+        img: img6,
         title: "Корпус Modern",
         description: "Номер: стандарт улучшенный двухместный",
         href: "#",
         key: 6,
     },
     {
-        img: afisha1,
+        img: img7,
         title: "Корпус Modern",
         description: "Номер: стандарт улучшенный двухместный",
         href: "#",
         key: 7,
     },
     {
-        img: afisha2,
+        img: img8,
         title: "Корпус Modern",
         description: "Номер: стандарт улучшенный двухместный",
         href: "#",
         key: 8,
     },
     {
-        img: afisha3,
+        img: img9,
         title: "Корпус Modern",
         description: "Номер: стандарт улучшенный двухместный",
         href: "#",
         key: 9,
     },
     {
-        img: afisha4,
+        img: img10,
         title: "Корпус Modern",
         description: "Номер: стандарт улучшенный двухместный",
         href: "#",
         key: 10,
     },
     {
-        img: afisha5,
+        img: img11,
         title: "Корпус Modern",
         description: "Номер: стандарт улучшенный двухместный",
         href: "#",
         key: 11,
     },
     {
-        img: afisha5,
+        img: img12,
         title: "Корпус Modern",
         description: "Номер: стандарт улучшенный двухместный",
         href: "#",
         key: 12,
     },
     {
-        img: afisha5,
+        img: img5,
         title: "Корпус Modern",
         description: "Номер: стандарт улучшенный двухместный",
         href: "#",
         key: 13,
     },
     {
-        img: afisha1,
+        img: img6,
         title: "Корпус Modern",
         description: "Номер: стандарт улучшенный двухместный",
         href: "#",
         key: 14,
     },
     {
-        img: afisha2,
+        img: img7,
         title: "Корпус Modern",
         description: "Номер: стандарт улучшенный двухместный",
         href: "#",
         key: 15,
     },
     {
-        img: afisha3,
+        img: img8,
         title: "Корпус Modern",
         description: "Номер: стандарт улучшенный двухместный",
         href: "#",
         key: 16,
-    },
-    {
-        img: afisha4,
-        title: "Корпус Modern",
-        description: "Номер: стандарт улучшенный двухместный",
-        href: "#",
-        key: 17,
-    },
-    {
-        img: afisha5,
-        title: "Корпус Modern",
-        description: "Номер: стандарт улучшенный двухместный",
-        href: "#",
-        key: 18,
-    },
-    {
-        img: afisha5,
-        title: "Корпус Modern",
-        description: "Номер: стандарт улучшенный двухместный",
-        href: "#",
-        key: 19,
-    },
-    {
-        img: afisha5,
-        title: "Корпус Modern",
-        description: "Номер: стандарт улучшенный двухместный",
-        href: "#",
-        key: 20,
     },
 ];
 
 const GallerySlider = ({blockName = "Фотогалерея"}) => {
 
     const settings = {
-        // className: "center",
         infinite: true,
-        // variableWidth: true,
         centerMode: true,
         speed: 500,
         slidesToShow: 3,
@@ -187,9 +166,23 @@ const GallerySlider = ({blockName = "Фотогалерея"}) => {
             {
                 breakpoint: 768,
                 settings: {
-                    rows: 1,
-                    slidesToShow: 2,
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
                     slidesPerRow: 1,
+                    centerPadding: "60px"
+                }
+            },
+            {
+                breakpoint: 330,
+                settings: {
+                    slidesToShow: 1,
+                    slidesPerRow: 1,
+                    centerPadding: "20px"
                 }
             },
         ],

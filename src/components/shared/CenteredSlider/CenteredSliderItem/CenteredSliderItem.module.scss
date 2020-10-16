@@ -3,6 +3,11 @@
   height: 485px;
   position: relative;
   margin: 0 15px;
+  border-radius: 5px;
+}
+
+.card .img {
+  border-radius: 5px;
 }
 
 .content {
@@ -71,6 +76,18 @@
   font-family: "Bebas Neue Bold";
   font-size: 29px;
   padding-left: 8px;
+}
+
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: 217px;
+    height: 322px;
+    position: relative;
+    margin: 0 10px;
+    box-shadow: -14.444px 19.167px 27px 0px rgba(23, 23, 23, 0.14);
+  }
+
 }
 
 

@@ -1,6 +1,8 @@
 import React from "react";
 import s from "./HomePageBanner.module.scss";
 import bannerImg from "../../../img/home-page/banner-img.png"
+import cirqlesImg from "../../../img/home-page/cirqles.png"
+import pauseImg from "../../../img/home-page/pause.png"
 
 const HomePageBanner = () => {
     return (
@@ -16,7 +18,10 @@ const HomePageBanner = () => {
                         </div>
                     </div>
                     <div className={s.rightSide}>
-                        <div className={s.playBtn}></div>
+                        <div className={s.playBtn}>
+                            <img src={pauseImg} alt="пауза"/>
+                        </div>
+                        <img className={s.cirqles} src={cirqlesImg} alt=""/>
                         <img src={bannerImg} alt="Riviera Sunrise"/>
                     </div>
                 </div>
