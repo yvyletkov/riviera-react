@@ -6,3 +6,9 @@
   padding-bottom: 130px;
   overflow: hidden;
 }
+
+@media screen and (max-width: 480px){
+  .wrapper {
+    padding-bottom: 75px;
+  }
+}

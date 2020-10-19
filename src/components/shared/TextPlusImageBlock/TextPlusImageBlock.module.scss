@@ -1,6 +1,6 @@
 .wrapper {
   width: 100%;
-  height: 825px;
+  height: 765px;
   background: #f8f8f8;
   padding-top: 65px;
 }
@@ -8,6 +8,7 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-areas: "img text";
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -25,7 +26,6 @@
   top: 10px;
   right: 40px;
   padding: 40px;
-  //padding-bottom: 30px;
   z-index: 10;
 }
 
@@ -43,6 +43,7 @@
 
 
 .imageBlock {
+  grid-area: img;
   display: flex;
   align-items: center;
   background: #d7d7d7;
@@ -58,6 +59,7 @@
 }
 
 .textBlock {
+  grid-area: text;
   display: flex;
   align-items: center;
   padding: 0 30px 0 30px;
@@ -152,25 +154,67 @@
 @media screen and (max-width: 768px) {
   .wrapper {
     height: auto;
-    padding-top: 10px;
+    padding-top: 0;
+    padding-bottom: 335px;
+    background-color: #ededed;
   }
 
   .grid {
     width: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
+    grid-template-areas: "text" "img";
 
   }
 
   .imageBlock {
-    display: none;
+    grid-area: img;
+    display: flex;
+    align-items: center;
+    background: #d7d7d7;
+    width: 100%;
+    height: 320px;
+    position: relative;
+    border-radius: 5px;
+  }
+
+  .imageBlock form {
+    bottom: -295px;
+    width: 100%;
+    top: unset;
+    right: unset;
+    background: #fefcfc;
+    box-shadow: none;
+    padding: 40px 30px;
+
+  }
+
+  .imageBlock form input {
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: inset 0px 4px 16px 0px rgba(32, 35, 35, 0.1);
+  }
+
+
+  .imageBlock img {
+    object-fit: cover;
+    width: 100%;
+    height: calc(100% - 30px);
+    position: relative;
+    right: 0;
   }
 
   .textBlock {
-    padding: 30px 30px;
+    padding: 40px 20px 0;
   }
 
   .textBlock button {
     margin: 0 auto;
+  }
+
+  .textBlock p {
+    margin-bottom: 30px;
   }
 }

@@ -16,7 +16,9 @@
   left: 25px;
   text-transform: uppercase;
   font-size: 14px;
-  color:#fff;
+  color: #fff;
+  transform-origin: 0 100% 0;
+
 }
 
 .content * {
@@ -81,13 +83,30 @@
 
 @media screen and (max-width: 480px) {
   .card {
-    width: 217px;
-    height: 322px;
+    width: 65vw;
+    height: unset;
     position: relative;
     margin: 0 10px;
     box-shadow: -14.444px 19.167px 27px 0px rgba(23, 23, 23, 0.14);
   }
 
+  .content {
+    transform: scale(0.8);
+  }
+
 }
+
+@media screen and (max-width: 425px) {
+  .content {
+    transform: scale(0.73);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .content {
+    transform: scale(0.6);
+  }
+}
+
 
 

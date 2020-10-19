@@ -1,6 +1,6 @@
 $orange: #ff6c39;
 
-a.button {
+.button {
   font-family: "Helvetica Neue Roman";
   background-color: $orange;
   padding: 18px 40px;
@@ -11,7 +11,25 @@ a.button {
   transition: all 200ms;
 }
 
-a.button:hover {
+.button:hover {
   background-color: #c5532c;
   text-decoration: none;
 }
+
+a.button {
+  color: #fff;
+}
+
+a.button:visited {
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    box-sizing: border-box;
+    width: 100%;
+    box-shadow: -1.71px 4.698px 16px 0px rgba(23, 23, 23, 0.17);
+  }
+}
+
+

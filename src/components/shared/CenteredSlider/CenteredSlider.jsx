@@ -28,6 +28,10 @@ const StyledSlider = styled(Slider)`
     transition: all 0.3s;
     overflow: visible;
   }
+  
+  .slick-dots {
+    bottom: -45px;
+  }
 `;
 
 const imgMassive = [
@@ -138,7 +142,8 @@ const CenteredSlider = ({blockName = "Сегодня в программе"}) =>
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     infinite: true,
-                    dots: false
+                    dots: true,
+                    arrows: false
                 }
             },
         ]

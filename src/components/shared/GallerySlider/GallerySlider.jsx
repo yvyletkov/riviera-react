@@ -19,6 +19,7 @@ import img12 from "../../../img/gallery-slider/home-page/fotogalereya14.png";
 import styled from "styled-components";
 import HeadlineCenter from "../HeadlineCenter/HeadlineCenter";
 import {NextArrow, PrevArrow} from "../SliderArrows/sliderArrowButtons";
+import Button from "../Button/Button";
 
 const StyledSlider = styled(Slider)`
   .slick-next:before,
@@ -29,6 +30,10 @@ const StyledSlider = styled(Slider)`
   .slick-list {
     transition: all 0.3s;
     overflow: visible;
+  }
+  
+    .slick-dots {
+    bottom: -30px;
   }
 `;
 
@@ -172,6 +177,8 @@ const GallerySlider = ({blockName = "Фотогалерея"}) => {
             {
                 breakpoint: 600,
                 settings: {
+                    arrows: false,
+                    dots: true,
                     slidesToShow: 1,
                     slidesPerRow: 1,
                     centerPadding: "60px"
@@ -180,6 +187,8 @@ const GallerySlider = ({blockName = "Фотогалерея"}) => {
             {
                 breakpoint: 330,
                 settings: {
+                    arrows: false,
+                    dots: true,
                     slidesToShow: 1,
                     slidesPerRow: 1,
                     centerPadding: "20px"
@@ -219,6 +228,10 @@ const GallerySlider = ({blockName = "Фотогалерея"}) => {
                 <StyledSlider>
                     <Slider {...settings}>{items}</Slider>
                 </StyledSlider>
+                <div className={s.mobileBlock}>
+                    <div className={s.mobileBlockText}>Больше фотографий нашего отеля</div>
+                    <Button text={'Заказать звонок'} />
+                </div>
             </div>
         </div>
     );

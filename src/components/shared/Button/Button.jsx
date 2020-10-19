@@ -1,11 +1,15 @@
 import React from "react";
 import s from "./Button.module.scss";
+import {NavLink} from "react-router-dom";
 
-const Button = ({color = "orange", text = 'Кнопка', href}) => {
+
+const Button = ({text = 'Кнопка', to = '#', onClick}) => {
     console.log(s);
-    return <a className={s.button} href={href}>
-        {text}
-    </a>
+    return <NavLink className={s.button} to={to}>
+        <div onClick={onClick}>
+            {text}
+        </div>
+    </NavLink>
 };
 
 export default Button;

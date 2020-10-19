@@ -2,8 +2,10 @@ h2.headlineCenter {
   text-transform: uppercase;
   text-align: center;
   font-size: 34px;
-  font-family: "Helvetica Neue Bold";
+  font-family: "Helvetica Neue Roman";
   margin-bottom: 70px;
+  max-width: 95%;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 768px) {
