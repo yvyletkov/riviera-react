@@ -13,8 +13,8 @@ const HomePage = () => {
         <HomePageBanner/>
         <GridSlider/>
         <SpecialsSlider/>
-        <TextPlusImageBlock/>
         <CenteredSlider/>
+        <TextPlusImageBlock/>
         <GallerySlider/>
         <MapSection/>
         </>

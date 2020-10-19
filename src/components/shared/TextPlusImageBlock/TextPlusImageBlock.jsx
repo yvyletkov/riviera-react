@@ -10,12 +10,12 @@ const TextPlusImageBlock = ({withForm = true}) => {
             <div className={s.grid}>
 
                 <div className={s.imageBlock}>
+                    <img src={img} alt="Riviera Sunrise"/>
                     <form>
                         <input type="text" placeholder={'Имя'} name={'name'}/>
                         <input type="number" placeholder={'Телефон'} name={'phone'}/>
                         <Button text={'Заказать звонок'}/>
                     </form>
-                    <img src={img} alt="Пляжный кэшбек"/>
                 </div>
 
                 <div className={s.textBlock}>

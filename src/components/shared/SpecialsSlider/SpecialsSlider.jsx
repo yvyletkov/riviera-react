@@ -28,8 +28,12 @@ const SliderStyles = styled(Slider)`
   }
   .slick-slider {
     margin-top: 17%;
+  }
+@media screen and (max-width: 1200px){
+  .slick-slider {
+    margin-top: 0;
+  }
 }
-
 `;
 
 const imgMassive = [
@@ -81,6 +85,15 @@ const SpecialsSlider = ({ textLink = "#", data = imgMassive}) => {
         prevArrow: <PrevArrow positionStyles={{
             bottom: "-80px",
             left: "610px"}}/>,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    dots: true,
+                    arrows: false
+                }
+            },
+        ]
     };
 
   const items = data.map((item, index) => {
@@ -103,7 +116,7 @@ const SpecialsSlider = ({ textLink = "#", data = imgMassive}) => {
         <div className={s.wrapper}>
             <div className={s.container}>
                 <div className={s.leftBlock}>
-                    <Headline subtitle={'Специальные'} title={'спецпредложения'}/>
+                    <Headline subtitle={'Лучшие'} title={'спецпредложения'}/>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
                         maecenas accumsan lacus vel facilisis. </p>

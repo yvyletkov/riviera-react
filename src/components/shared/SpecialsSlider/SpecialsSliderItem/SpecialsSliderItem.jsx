@@ -8,7 +8,7 @@ const SpecialsSliderItem = (props) => {
     let [lifted, setLifted] = React.useState(active);
 
     return (
-        <>
+        <div className={s.cardWrapper}>
             <div className={s.content}>
                 <p>{title}</p>
                 <p>{subtitle}</p>
@@ -26,7 +26,7 @@ const SpecialsSliderItem = (props) => {
                     <a href="">подробнее</a>
                 </div>
             </div>
-        </>);
+        </div>);
 };
 
 export default SpecialsSliderItem;
