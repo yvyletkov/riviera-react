@@ -1,10 +1,13 @@
-
+.cardWrapper {
+  width: 223px;
+  height: 421px;
+  margin: 0 10px;
+}
 
 .card {
-  width: 223px;
+  width: 100%;
   height: 331px;
   position: relative;
-  margin: 0 10px;
   transition: all 300ms ease-out;
   overflow: visible;
 }
@@ -14,6 +17,27 @@
   margin-top: -90px;
   height: 421px;
   transition: all 500ms;
+}
+
+@media screen and (max-width: 1200px){
+  .card, .card.lifted {
+    position: relative;
+    margin-top: 0;
+    height: 421px;
+    transition: all 500ms;
+  }
+  .card .content a, .card.lifted .content a {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .cardWrapper {
+    width: 65vw;
+  }
+  .card, .card.lifted, .cardWrapper {
+    height: calc(65vw * 1.48 + 80px);
+  }
 }
 
 .card img {

@@ -20,7 +20,7 @@ const Link = ( {title, icon, href = '#', extraClass = null} ) => {
 const Header = () => {
     return (
         <div className={s.wrapper}>
-            <div className={'container'}>
+            <div className={s.container}>
                 <div className={s.content}>
                     <div className={s.menuIcon}>
                         <span></span>
@@ -36,12 +36,12 @@ const Header = () => {
                         <img src={logo} alt="Riviera Sunrise"/>
                     </div>
                     <div className={s.rightBlock}>
-                            <Link icon={search} href={"#"}/>
+                            <Link icon={search} extraClass={s.searchIcon} href={"#"}/>
                             <div className={s.contacts}>
                                 <Link icon={phone} href={"tel:+78005557856"} extraClass={s.number} title={"+7 (800) 555-78-56"}/>
                                 <div>Крым, г. Алушта</div>
                             </div>
-                            <Button href={'#'} text={'Забронировать'}/>
+                            <Button className={s.button} href={'#'} text={'Забронировать'}/>
 
                     </div>
 
