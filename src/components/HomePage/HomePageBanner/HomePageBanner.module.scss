@@ -1,5 +1,12 @@
 $black: #171717;
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
 .bannerWrapper {
   margin-top: 120px;
   height: 800px;
@@ -75,7 +82,7 @@ $black: #171717;
 .bookingBlock {
   transform: translateX(-50%);
   position: absolute;
-  bottom: 75px;
+  bottom: 30px;
   max-width: 1115px;
   width: 95%;
   left: 50%;
@@ -104,6 +111,90 @@ $black: #171717;
 
 .playBtn:hover {
   background-color: #d45a2f;
+}
+
+@media screen and (max-width: 620px) {
+  .container {
+    height: calc(100vh - 80px);
+  }
+  .rightSide {
+    display: none;
+  }
+  .textBlock {
+    color: #fff !important;
+    transform: scale(0.7);
+    margin-bottom: 60px;
+  }
+  .textBlock h2:after {
+    background-color: #fff;
+  }
+  .leftSide {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
+  }
+  .flexWrapper {
+    height: 100%;
+  }
+  .bannerWrapper {
+    position: relative;
+    width: 100vw;
+    height: unset;
+    background: none;
+  }
+  .container:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: center url(../../../img/home-page/banner-mobile-img.jpg);
+    background-size: cover;
+    filter: brightness(0.7);
+    z-index: -1;
+  }
+  .bookingBlock {
+    bottom: unset;
+  }
+
+  .bookingBlock {
+    position: relative;
+    bottom: unset;
+    max-width: 1115px;
+    width: 100%;
+    height: 20px;
+    background-color: white;
+    border-radius: 0;
+    margin: 0 0 50px;
+    box-shadow: -7.182px 19.734px 47px 0px rgba(23, 23, 23, 0.13);
+  }
+
+}
+
+
+
+@media screen and (max-width: 475px) {
+  .textBlock {
+    transform: scale(0.6);
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .textBlock {
+    transform: scale(0.5);
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .bannerWrapper {
+    margin-top: 80px;
+  }
+
 }
 
 

@@ -14,21 +14,7 @@ import kurortImg8 from "../../../img/grid-slider/resort-vacation/8.png";
 import styled from "styled-components";
 import arrowImg from "../../../img/sliderArrows/arrowThin.png"
 
-const cssstyle = `
-.slick-next:before, .slick-prev:before {
-    color: #000;
-}
-.center .slick-center .SliderElement {
-    opacity: 1;
-    -ms-transform: scale(1.08);
-    transform: scale(1.08);
-}
-.slick-list { 
-   overflow:visible;
-}
-`;
-
-const Styles = styled.div`
+const SliderStyles = styled.div`
   .slick-slide {
     opacity: .3;
     transition: all 500ms;
@@ -36,26 +22,44 @@ const Styles = styled.div`
   .slick-slide.slick-active {
     opacity: 1;
   }
+  .slick-next:before, .slick-prev:before {
+    color: #000;
+  }
+  .center .slick-center .SliderElement {
+    opacity: 1;
+    -ms-transform: scale(1.08);
+    transform: scale(1.08);
+  }
+  .slick-list { 
+    overflow:visible;
+  }
+  .slick-vertical .slick-slide {
+     box-sizing: border-box;
+  }
+@media screen and (max-width: 768px) {
+    .slick-list { 
+        overflow:visible;
+    }
+    .slick-track { 
+        overflow:hidden;
+    }
+}
 `;
 
 function NextArrow({style, onClick}) {
-    return (
-        <div
-            className={s.nextArrow}
-            style={{...style, backgroundImage: 'url(' + arrowImg + ')'}}
-            onClick={onClick}
-        />
-    );
+    return <div
+        className={s.nextArrow}
+        style={{...style, backgroundImage: 'url(' + arrowImg + ')'}}
+        onClick={onClick}
+    />
 }
 
 function PrevArrow({style, onClick}) {
-    return (
-        <div
-            className={s.prevArrow}
-            style={{...style, backgroundImage: 'url(' + arrowImg + ')'}}
-            onClick={onClick}
-        />
-    );
+    return <div
+        className={s.prevArrow}
+        style={{...style, backgroundImage: 'url(' + arrowImg + ')'}}
+        onClick={onClick}
+    />
 }
 
 
@@ -67,51 +71,107 @@ const GridSlider = ({slides}) => {
         setCurrentSlideIndex(index);
     };
 
-    slides = [{
+    slides = [
+        {
             name: "Курортный отдых",
-            firstRow: [{title: "Семейный отдых", img: kurortImg1, href: '#'}, {title: "Номера и цены", img: kurortImg2, href: '#'}, {title: "Отдых без детей", img: kurortImg3, href: '#'}, {title: "Отдых с друзьями", img: kurortImg4, href: '#'}],
-            secondRow: [{title: "Турпакет", img: kurortImg5, href: '#'}, {title: "Medical Spa", img: kurortImg6, href: '#'}, {title: "Командировка", img: kurortImg7, href: '#'}, {title: "Романтический отдых", img: kurortImg8, href: '#'}],
-            images: [kurortImg1, kurortImg2, kurortImg3, kurortImg4, kurortImg5, kurortImg6, kurortImg7, kurortImg8]
+            firstRow: [{title: "Семейный отдых", img: kurortImg1, href: '#'}, {
+                title: "Номера и цены",
+                img: kurortImg2,
+                href: '#'
+            }, {title: "Отдых без детей", img: kurortImg3, href: '#'}, {
+                title: "Отдых с друзьями",
+                img: kurortImg4,
+                href: '#'
+            }],
+            secondRow: [{title: "Турпакет", img: kurortImg5, href: '#'}, {
+                title: "Medical Spa",
+                img: kurortImg6,
+                href: '#'
+            }, {title: "Командировка", img: kurortImg7, href: '#'}, {
+                title: "Романтический отдых",
+                img: kurortImg8,
+                href: '#'
+            }],
         },
         {
             name: "Развлечения",
-            firstRow: [{title: "Семейный отдых", img: kurortImg1, href: '#'}, {title: "Номера и цены", img: kurortImg2, href: '#'}, {title: "Отдых без детей", img: kurortImg3, href: '#'}, {title: "Отдых с друзьями", img: kurortImg4, href: '#'}],
-            secondRow: [{title: "Турпакет", img: kurortImg5, href: '#'}, {title: "Medical Spa", img: kurortImg6, href: '#'}, {title: "Командировка", img: kurortImg7, href: '#'}, {title: "Романтический отдых", img: kurortImg8, href: '#'}],
-            images: [kurortImg1, kurortImg2, kurortImg3, kurortImg4, kurortImg5, kurortImg6, kurortImg7, kurortImg8]
+            firstRow: [{title: "Семейный отдых", img: kurortImg1, href: '#'}, {
+                title: "Номера и цены",
+                img: kurortImg2,
+                href: '#'
+            }, {title: "Отдых без детей", img: kurortImg3, href: '#'}, {
+                title: "Отдых с друзьями",
+                img: kurortImg4,
+                href: '#'
+            }],
+            secondRow: [{title: "Турпакет", img: kurortImg5, href: '#'}, {
+                title: "Medical Spa",
+                img: kurortImg6,
+                href: '#'
+            }, {title: "Командировка", img: kurortImg7, href: '#'}, {
+                title: "Романтический отдых",
+                img: kurortImg8,
+                href: '#'
+            }],
         },
         {
             name: "Инфраструктура",
-            firstRow: [{title: "Семейный отдых", img: kurortImg1, href: '#'}, {title: "Номера и цены", img: kurortImg2, href: '#'}, {title: "Отдых без детей", img: kurortImg3, href: '#'}, {title: "Отдых с друзьями", img: kurortImg4, href: '#'}],
-            secondRow: [{title: "Турпакет", img: kurortImg5, href: '#'}, {title: "Medical Spa", img: kurortImg6, href: '#'}, {title: "Командировка", img: kurortImg7, href: '#'}, {title: "Романтический отдых", img: kurortImg8, href: '#'}],
-            images: [kurortImg1, kurortImg2, kurortImg3, kurortImg4, kurortImg5, kurortImg6, kurortImg7, kurortImg8]
-        }];
+            firstRow: [{title: "Семейный отдых", img: kurortImg1, href: '#'}, {
+                title: "Номера и цены",
+                img: kurortImg2,
+                href: '#'
+            }, {title: "Отдых без детей", img: kurortImg3, href: '#'}, {
+                title: "Отдых с друзьями",
+                img: kurortImg4,
+                href: '#'
+            }],
+            secondRow: [{title: "Турпакет", img: kurortImg5, href: '#'}, {
+                title: "Medical Spa",
+                img: kurortImg6,
+                href: '#'
+            }, {title: "Командировка", img: kurortImg7, href: '#'}, {
+                title: "Романтический отдых",
+                img: kurortImg8,
+                href: '#'
+            }],
+        }
+    ];
+
     const items = slides.map((item, index) => {
         return <GridSliderItem key={item.name + index} firstRow={item.firstRow} secondRow={item.secondRow}/>
     });
 
     const settings = {
-        className: "center",
         infinite: true,
-        centerPadding: "60px",
         slidesToShow: 1,
         nextArrow: <NextArrow/>,
         prevArrow: <PrevArrow/>,
-        speed: 500,
+        speed: 800,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    infinite: false,
+                    vertical: true,
+                    verticalSwiping: true,
+                }
+            },
+        ]
     };
 
 
     return (
         <div className={s.wrapper}>
             <div className={s.container}>
-                <style>{cssstyle}</style>
                 <div className={s.headlineWrapper}>
                     <Headline subtitle={'Услуги и продукты'} title={slides[currentSlideIndex].name}/>
                 </div>
-                <Styles>
-                <Slider {...settings} afterChange={afterChangeHandler}>
-                    {items}
-                </Slider>
-                </Styles>
+                <SliderStyles>
+                    <Slider {...settings} afterChange={afterChangeHandler}>
+                        {items}
+                    </Slider>
+                </SliderStyles>
             </div>
         </div>
     )

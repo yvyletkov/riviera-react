@@ -13,7 +13,7 @@
   margin-bottom: 20px;
 }
 
-.row .block {
+.block {
   position: relative;
   background-color: #ffa781;
   border-radius: 5px;
@@ -28,9 +28,10 @@
 }
 
 
-.block div {
+.block .content {
+  box-sizing: border-box;
   padding-left: 10px;
-  width: calc(100% - 10px);
+  width: calc(100%);
   position: absolute;
   bottom: 25px;
   height: 45px;
@@ -38,15 +39,15 @@
   transition: all 500ms ease-out;
 }
 
-.row .block:hover div {
+.row .block:hover .content {
   background-color: rgba(0, 0, 0, 0.35);
 }
 
-.row .block:hover div p {
+.row .block:hover .content p {
   color: #e9e9e9;
 }
 
-.block div p {
+.block .content p {
   margin: 0;
   font-family: "Helvetica Neue Bold";
   text-transform: uppercase;
@@ -57,7 +58,7 @@
   transition: all 500ms ease-out;
 }
 
-.block div p:after {
+.block .content p:after {
   display: block;
   background-color: #ff6c39;
   content: "";
@@ -96,4 +97,9 @@
 }
 .row.bottom .block:nth-child(4) {
   flex: 1.8;
+}
+
+.innerSlider {
+  width: 300px;
+  margin: 0 auto;
 }

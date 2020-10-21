@@ -104,7 +104,7 @@ a:hover {
   .searchIcon {
     display: flex;
   }
-  a[aria-current] {
+  .rightBlock a[aria-current] {
     display: none;
   }
   .content {
