@@ -100,6 +100,25 @@
 }
 
 .innerSlider {
-  width: 300px;
-  margin: 0 auto;
+  width: 77vw;
+  margin: 0 0 0 20px;
 }
+
+.innerSlider .block{
+  height: 175px;
+  box-shadow: -6.156px 16.914px 27px 0px rgba(23, 23, 23, 0.05);
+}
+
+.innerSlider .block .content p {
+  margin-top: 15px;
+}
+
+.innerSlider .block .content p:after {
+  top: -9px
+}
+
+.innerSlider .block .content {
+  bottom: 10px;
+  height: 35px;
+}
+

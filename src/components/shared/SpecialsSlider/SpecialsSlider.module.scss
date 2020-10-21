@@ -105,8 +105,14 @@
     height: unset;
     padding-bottom: 60px;
   }
-
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-top: 60px;
+  }
+}
+
 
 
 

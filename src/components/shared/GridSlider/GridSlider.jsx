@@ -21,6 +21,7 @@ const SliderStyles = styled.div`
   }
   .slick-slide.slick-active {
     opacity: 1;
+    filter: brightness(1);
   }
   .slick-next:before, .slick-prev:before {
     color: #000;
@@ -37,12 +38,38 @@ const SliderStyles = styled.div`
      box-sizing: border-box;
   }
 @media screen and (max-width: 768px) {
+
+  .slick-slide {
+    opacity: 1;
+    filter: brightness(0.9);
+    transition: all 500ms;
+  }
+
     .slick-list { 
         overflow:visible;
     }
     .slick-track { 
         overflow:hidden;
     }
+    
+    .slick-vertical .slick-slide {
+        border: none;
+    }
+
+  .slick-list {margin: -18px -8px;}
+  .slick-slide>div {padding: 18px 8px;}
+    
+    .slick-dots {bottom: -8px}
+    
+    .slick-list:before {
+    content: "";
+    width: 100%;
+    height: 145px;
+    background-color: #fff;
+    position: absolute;
+    top: -145px;
+    z-index: 1;
+}
 }
 `;
 
@@ -64,6 +91,9 @@ function PrevArrow({style, onClick}) {
 
 
 const GridSlider = ({slides}) => {
+
+    const disableScroll = () => document.getElementsByTagName("body")[0].style.overflowY = "hidden";
+    const enableScroll = () => document.getElementsByTagName("body")[0].style.overflowY = "visible";
 
     let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
 
@@ -152,9 +182,13 @@ const GridSlider = ({slides}) => {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
-                    infinite: false,
+                    infinite: true,
                     vertical: true,
-                    verticalSwiping: true,
+                    verticalSwiping: false,
+                    arrows: true,
+                    dots: true,
+                    nextArrow: <NextArrow />,
+                    prevArrow: <PrevArrow />,
                 }
             },
         ]
@@ -167,7 +201,7 @@ const GridSlider = ({slides}) => {
                 <div className={s.headlineWrapper}>
                     <Headline subtitle={'Услуги и продукты'} title={slides[currentSlideIndex].name}/>
                 </div>
-                <SliderStyles>
+                <SliderStyles onTouchStart={disableScroll} onTouchEnd={enableScroll}>
                     <Slider {...settings} afterChange={afterChangeHandler}>
                         {items}
                     </Slider>

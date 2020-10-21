@@ -1,5 +1,8 @@
 $black: #171717;
 
+.title, .subtitle, .subtitle:after {
+  z-index: 1;
+}
 
 .subtitle {
   color: $black;
@@ -12,6 +15,7 @@ $black: #171717;
 }
 
 .title {
+  position: relative;
   color: $black;
   text-transform: uppercase;
   font-family: "Helvetica Neue Bold";
@@ -20,7 +24,8 @@ $black: #171717;
 
 .subtitle:after {
   content: "";
-  width: 65px;
+  max-width: 65px;
+  width: 100%;
   height: 1px;
   top: 8px;
   right: -82px;
@@ -32,5 +37,11 @@ $black: #171717;
 @media screen and (max-width: 1000px) {
   .subtitle:after {
     content: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .title {
+    font-size: 29px;
   }
 }

@@ -44,6 +44,10 @@
 @media screen and (max-width: 620px) {
   .wrapper {
     padding-top: 20px;
+    padding-bottom: 110px;
+    -webkit-box-shadow: inset 0px -28px 58px -66px rgba(0,0,0,1);
+    -moz-box-shadow: inset 0px -28px 58px -66px rgba(0,0,0,1);
+    box-shadow: inset 0px -28px 58px -66px rgba(0,0,0,1);
   }
 }
 

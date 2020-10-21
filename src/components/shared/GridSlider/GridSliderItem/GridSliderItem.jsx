@@ -10,6 +10,7 @@ const InnerSlider = ({firstRowItems, secondRowItems}) => {
   .slick-slide {
     opacity: 1;
     transition: all 500ms;
+  
   }
   .slick-slide.slick-active {
     opacity: 1;
@@ -23,15 +24,18 @@ const InnerSlider = ({firstRowItems, secondRowItems}) => {
   .slick-vertical .slick-slide {
      box-sizing: border-box;
   }
+  
+      .slick-list:before {
+    content: none;
+
+}
 `;
 
     const settings = {
         infinite: false,
         slidesToShow: 1,
         speed: 500,
-        // centerMode: true,
-        // cellPadding: "10px"
-        // arrows: false,
+        arrows: false
     };
 
     return (
@@ -52,14 +56,14 @@ const GridSliderItem = ({firstRow, secondRow}) => {
 
     const firstRowItems = firstRow.map((item, index) => {
         return <a key={item.title + index} className={s.block} href={item.href}>
-            <div style={{backgroundImage: 'url(' + item.img + ')', backgroundSize: 'cover', height: "100%"}}>
+            <div style={{backgroundImage: 'url(' + item.img + ')', backgroundSize: 'cover', height: "100%", borderRadius: "5px"}}>
                 <div className={s.content}><p>{item.title}</p></div>
             </div>
         </a>
     });
     const secondRowItems = secondRow.map((item, index) => {
         return <a key={item.title + index} className={s.block} href={item.href}>
-            <div style={{backgroundImage: 'url(' + item.img + ')', backgroundSize: 'cover', height: "100%"}}>
+            <div style={{backgroundImage: 'url(' + item.img + ')', backgroundSize: 'cover', height: "100%", borderRadius: "5px"}}>
                 <div className={s.content}><p>{item.title}</p></div>
             </div>
         </a>
