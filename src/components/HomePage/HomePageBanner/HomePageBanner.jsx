@@ -1,13 +1,14 @@
 import React from "react";
 import s from "./HomePageBanner.module.scss";
 import bannerImg from "../../../img/home-page/banner-img.png"
+import bannerMobileImg from "../../../img/home-page/banner-mobile-img.jpg"
 import cirqlesImg from "../../../img/home-page/cirqles.png"
 import pauseImg from "../../../img/home-page/pause.png"
 
 const HomePageBanner = () => {
     return (
         <section className={s.bannerWrapper}>
-            <div className='container'>
+            <div className={s.container}>
                 <div className={s.flexWrapper}>
                     <div className={s.leftSide}>
                         <div className={s.textBlock}>
@@ -25,8 +26,9 @@ const HomePageBanner = () => {
                         <img src={bannerImg} alt="Riviera Sunrise"/>
                     </div>
                 </div>
-                <div className={s.bookingBlock}></div>
             </div>
+            <div className={s.bookingBlock}></div>
+
         </section>
     )
 };

@@ -15,6 +15,7 @@
   background: no-repeat center;
   cursor: pointer;
 }
+
 //.nextArrow:hover, .prevArrow:hover {
 //  opacity: 50%;
 //}
@@ -23,6 +24,7 @@
   right: -14px;
   transform: translateY(-50%) rotate(180deg);
 }
+
 .prevArrow {
   left: -14px;
   transform: translateY(-50%);
@@ -37,5 +39,11 @@
 .headlineWrapper {
   padding-left: 22px;
   margin-bottom: 50px;
+}
+
+@media screen and (max-width: 620px) {
+  .wrapper {
+    padding-top: 20px;
+  }
 }
 

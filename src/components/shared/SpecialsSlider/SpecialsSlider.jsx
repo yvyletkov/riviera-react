@@ -80,10 +80,10 @@ const SpecialsSlider = ({ textLink = "#", data = imgMassive}) => {
         variableWidth: true,
         speed: 500,
         nextArrow: <NextArrow positionStyles={{
-            bottom: "-80px",
+            bottom: "15px",
             left: "670px"}}/>,
         prevArrow: <PrevArrow positionStyles={{
-            bottom: "-80px",
+            bottom: "15px",
             left: "610px"}}/>,
         responsive: [
             {
