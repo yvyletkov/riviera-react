@@ -2,10 +2,10 @@ import React from "react";
 import Slider from "react-slick";
 import s from "./SpecialsSlider.module.scss";
 import SpecialsSliderItem from "./SpecialsSliderItem/SpecialsSliderItem";
-import img1 from "../../../img/specials-slider/home-page/spetspredlozheniya1.png";
-import img2 from "../../../img/specials-slider/home-page/spetspredlozheniya2.png";
-import img3 from "../../../img/specials-slider/home-page/spetspredlozheniya3.png";
-import img4 from "../../../img/specials-slider/home-page/spetspredlozheniya4.png";
+import img1 from "../../../img/specials-slider/home-page/spetspredlozheniya1.jpg";
+import img2 from "../../../img/specials-slider/home-page/spetspredlozheniya2.jpg";
+import img3 from "../../../img/specials-slider/home-page/spetspredlozheniya3.jpg";
+import img4 from "../../../img/specials-slider/home-page/spetspredlozheniya4.jpg";
 import styled from "styled-components";
 import Headline from "../Headline/Headline";
 import arrowImg from "../../../img/icons/right-arrow.svg";
@@ -29,6 +29,14 @@ const SliderStyles = styled(Slider)`
   .slick-slider {
     margin-top: 17%;
   }
+  .slick-dots li {
+    margin: 0
+}
+.slick-dots li button:before {
+    font-size: 56px;
+    content: '-';
+    font-family: 'Helvetica Neue Light';
+}
 @media screen and (max-width: 1200px){
   .slick-slider {
     margin-top: 0;

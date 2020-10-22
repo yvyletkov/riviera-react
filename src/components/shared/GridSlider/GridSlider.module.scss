@@ -37,6 +37,10 @@
 }
 
 .headlineWrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 43px;
   padding-left: 22px;
   margin-bottom: 50px;
 }
@@ -48,6 +52,15 @@
     -webkit-box-shadow: inset 0px -28px 58px -66px rgba(0,0,0,1);
     -moz-box-shadow: inset 0px -28px 58px -66px rgba(0,0,0,1);
     box-shadow: inset 0px -28px 58px -66px rgba(0,0,0,1);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .headlineWrapper {
+    display: block;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 70px;
   }
 }
 

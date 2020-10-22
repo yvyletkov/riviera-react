@@ -8,7 +8,8 @@ $black: #171717;
 }
 
 .bannerWrapper {
-  margin-top: 120px;
+  position: relative;
+  margin-top: 30px;
   height: 800px;
   width: 100%;
   background-color: #f8f8f8;
@@ -74,15 +75,15 @@ $black: #171717;
 
 .cirqles {
   position: absolute;
-  top: 228px;
-  left: -249px;
+  top: 197px;
+  left: -251px;
   z-index: 0;
 }
 
 .bookingBlock {
   transform: translateX(-50%);
   position: absolute;
-  bottom: 30px;
+  bottom: 110px;
   max-width: 1115px;
   width: 95%;
   left: 50%;
@@ -97,16 +98,21 @@ $black: #171717;
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 253px;
+  bottom: 288px;
   left: -3px;
   border-radius: 50%;
   box-shadow: -10.261px 28.191px 57px 0px rgba(255, 108, 57, 0.41);
-  width: 79px;
-  height: 79px;
+  width: 65px;
+  height: 65px;
   background-color: #ff6c39;
   cursor: pointer;
   z-index: 1;
   transition: all 200ms;
+}
+
+.playBtn img {
+  width: 23px;
+  height: 23px;
 }
 
 .playBtn:hover {
@@ -175,20 +181,29 @@ $black: #171717;
 
 }
 
-
-
 @media screen and (max-width: 475px) {
   .textBlock {
-    transform: scale(0.6);
+    transform: scale(0.67);
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 400px) {
   .textBlock {
-    transform: scale(0.5);
+    transform: scale(0.62);
   }
 }
 
+@media screen and (max-width: 385px) {
+  .textBlock {
+    transform: scale(0.58);
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .textBlock {
+    transform: scale(0.54);
+  }
+}
 
 @media screen and (max-width: 1200px) {
   .bannerWrapper {

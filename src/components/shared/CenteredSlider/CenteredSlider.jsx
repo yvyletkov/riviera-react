@@ -16,7 +16,7 @@ const StyledSlider = styled(Slider)`
   .slick-prev:before {
     color: #000;
   }
-  .center .slick-center .SliderElement {
+  .center .slick-center .sliderElement {
     opacity: 1;
     transition: all 0.3s;
     -ms-transform: scale(1.08);
@@ -32,6 +32,14 @@ const StyledSlider = styled(Slider)`
   .slick-dots {
     bottom: -45px;
   }
+  .slick-dots li {
+    margin: 0
+}
+.slick-dots li button:before {
+    font-size: 56px;
+    content: '-';
+    font-family: 'Helvetica Neue Light';
+}
 `;
 
 const imgMassive = [
@@ -101,7 +109,7 @@ const CenteredSlider = ({blockName = "Сегодня в программе"}) =>
     const items = imgMassive.map((data) => {
         const {img, title, subtitle, time, date, campus, campusName, key} = data;
         return (
-            <div className="SliderElement" key={key}>
+            <div className="sliderElement" key={key}>
                 <CenteredSliderItem
                     img={img}
                     title={title}

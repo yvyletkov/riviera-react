@@ -40,8 +40,20 @@ $black: #171717;
   }
 }
 
+@media screen and (max-width: 430px) {
+  .title {
+    font-size: 32px;
+  }
+}
+
 @media screen and (max-width: 375px) {
   .title {
     font-size: 29px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .title {
+    font-size: 26px;
   }
 }
