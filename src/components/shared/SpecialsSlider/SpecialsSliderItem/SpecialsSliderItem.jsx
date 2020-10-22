@@ -23,7 +23,7 @@ const SpecialsSliderItem = (props) => {
                 <div className={s.content}>
                     <p className={s.subtitle}>на отдых</p>
                     <p className={s.title}>Скидка 10%</p>
-                    <a href="">подробнее</a>
+                    <a href="">Подробнее →</a>
                 </div>
             </div>
         </div>);

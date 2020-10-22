@@ -12,6 +12,11 @@
   overflow: visible;
 }
 
+.card img {
+  height: 331px;
+  object-fit: cover;
+}
+
 .card.lifted {
   position: relative;
   margin-top: -90px;
@@ -34,6 +39,10 @@
 @media screen and (max-width: 480px){
   .cardWrapper {
     width: 65vw;
+  }
+  .card img {
+    height: calc(65vw * 1.48);
+    object-fit: cover;
   }
   .card, .card.lifted, .cardWrapper {
     height: calc(65vw * 1.48 + 80px);
@@ -61,6 +70,10 @@
   font-size: 20px;
   margin-bottom: 8px;
   margin-top: 5px;
+}
+
+.title + a {
+  text-transform: none;
 }
 
 .subtitle {
