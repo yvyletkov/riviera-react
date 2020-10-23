@@ -4,23 +4,23 @@ import Headline from "../Headline/Headline";
 import img from "./../../../img/home-page/textimg.png"
 import Button from "../Button/Button";
 
-const TextPlusImageBlock = ({withForm = true}) => {
+const TextPlusImageBlock = ({subtitle = 'Какой-то', title = 'заголовок', withForm = false}) => {
     return (
         <div className={s.wrapper}>
             <div className={s.grid}>
 
                 <div className={s.imageBlock}>
                     <img src={img} alt="Riviera Sunrise"/>
-                    <form>
+                    { withForm && <form>
                         <input type="text" placeholder={'Имя'} name={'name'}/>
                         <input type="number" placeholder={'Телефон'} name={'phone'}/>
                         <Button text={'Заказать звонок'}/>
-                    </form>
+                    </form> }
                 </div>
 
                 <div className={s.textBlock}>
                     <div className={s.textContent}>
-                        <Headline subtitle={'Идеальный отдых в Крыму'} title={'круглый год'}/>
+                        <Headline subtitle={subtitle} title={title}/>
                         <p>Riviera Sunrise Resort & SPA – отель в Крыму на берегу Чёрного моря в самом центре Алушты с
                             собственным пляжем, открытыми подогреваемыми бассейнами, живописным старинным реликтовым парком,
                             самым большим в Крыму SPA-центром, современным конференц-центром международного уровня и

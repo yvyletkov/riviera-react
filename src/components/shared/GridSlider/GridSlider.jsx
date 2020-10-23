@@ -1,6 +1,5 @@
 import React from "react";
 import Slider from "react-slick";
-import _slider from "react-slick";
 import Headline from "../Headline/Headline";
 import GridSliderItem from "./GridSliderItem/GridSliderItem";
 import s from "./GridSlider.module.scss";
@@ -66,21 +65,17 @@ const SliderStyles = styled.div`
     .slick-list:before {
     content: "";
     width: 100%;
-    height: 145px;
+    height: 170px;
     background-color: #fff;
     position: absolute;
-    top: -145px;
+    top: -155px;
     z-index: 1;
     }
 }
 .slick-dots li {
     margin: 0
 }
-.slick-dots li button:before {
-    font-size: 56px;
-    content: '-';
-    font-family: 'Helvetica Neue Light';
-}
+
 `;
 
 function NextArrow({style, onClick}) {
@@ -102,8 +97,8 @@ function PrevArrow({style, onClick}) {
 
 const GridSlider = ({slides}) => {
 
-    const disableScroll = () => document.getElementsByTagName("body")[0].style.overflowY = "hidden";
-    const enableScroll = () => document.getElementsByTagName("body")[0].style.overflowY = "visible";
+    // const disableScroll = () => document.getElementsByTagName("body")[0].classList.add("fixed");
+    // const enableScroll = () => document.getElementsByTagName("body")[0].classList.remove("fixed");
 
     let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
 
@@ -174,6 +169,27 @@ const GridSlider = ({slides}) => {
                 img: kurortImg8,
                 href: '#'
             }],
+        },
+        {
+            name: "Четвертый слайд",
+            firstRow: [{title: "Семейный отдых", img: kurortImg1, href: '#'}, {
+                title: "Еще один слайд",
+                img: kurortImg2,
+                href: '#'
+            }, {title: "Отдых без детей", img: kurortImg3, href: '#'}, {
+                title: "Еще один слайд",
+                img: kurortImg4,
+                href: '#'
+            }],
+            secondRow: [{title: "Турпакет", img: kurortImg5, href: '#'}, {
+                title: "Еще один слайд",
+                img: kurortImg6,
+                href: '#'
+            }, {title: "Командировка", img: kurortImg7, href: '#'}, {
+                title: "Еще один слайд",
+                img: kurortImg8,
+                href: '#'
+            }],
         }
     ];
 
@@ -192,13 +208,13 @@ const GridSlider = ({slides}) => {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
-                    infinite: false,
+                    infinite: true,
                     vertical: true,
+                    draggable: false,
                     verticalSwiping: true,
                     arrows: false,
                     dots: true,
-                    // nextArrow: <NextArrow />,
-                    // prevArrow: <PrevArrow />,
+                    swipe: false
                 }
             },
         ]
@@ -213,13 +229,16 @@ const GridSlider = ({slides}) => {
 
     return (
         <div className={s.wrapper}>
+
             <div className={s.container}>
                 <div className={s.headlineWrapper}>
-                    <Headline subtitle={'Услуги и продукты'} title={slides[currentSlideIndex].name}/>
+
+                        <Headline subtitle={'Услуги и продукты'} title={slides[currentSlideIndex].name}/>
+
                     <MiniSlider setCurrentSlide={setCurrentSlideIndex} currentSlide={currentSlideIndex}/>
                 </div>
-                <SliderStyles onTouchStart={disableScroll} onTouchEnd={enableScroll}>
-                {/*<SliderStyles>*/}
+                {/*<SliderStyles onTouchStart={disableScroll} onTouchEnd={enableScroll}>*/}
+                <SliderStyles>
                     <Slider {...settings} ref={sliderRef} afterChange={afterChangeHandler}>
                         {items}
                     </Slider>

@@ -42,11 +42,6 @@ const StyledSlider = styled(Slider)`
   .slick-dots li {
     margin: 0
 }
-.slick-dots li button:before {
-    font-size: 56px;
-    content: '-';
-    font-family: 'Helvetica Neue Light';
-}
 `;
 
 const imgMassive = [

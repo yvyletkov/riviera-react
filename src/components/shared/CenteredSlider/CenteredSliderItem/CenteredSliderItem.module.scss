@@ -82,7 +82,7 @@
 
 @media screen and (max-width: 480px) {
   .card {
-    width: 65vw;
+    width: 87vw;
     height: unset;
     position: relative;
     margin: 0 10px;
@@ -90,20 +90,26 @@
   }
 
   .content {
-    transform: scale(0.8);
+    transform: scale(1.1);
   }
 
 }
 
 @media screen and (max-width: 425px) {
   .content {
-    transform: scale(0.73);
+    transform: scale(1);
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 375px) {
   .content {
-    transform: scale(0.6);
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .content {
+    transform: scale(0.75);
   }
 }
 

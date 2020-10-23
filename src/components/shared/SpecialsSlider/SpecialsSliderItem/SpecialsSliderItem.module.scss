@@ -38,14 +38,14 @@
 
 @media screen and (max-width: 480px){
   .cardWrapper {
-    width: 65vw;
+    width: 86vw;
   }
   .card img {
-    height: calc(65vw * 1.48);
+    height: calc(86vw * 1.48);
     object-fit: cover;
   }
   .card, .card.lifted, .cardWrapper {
-    height: calc(65vw * 1.48 + 80px);
+    height: calc(86vw * 1.48 + 80px);
   }
 }
 

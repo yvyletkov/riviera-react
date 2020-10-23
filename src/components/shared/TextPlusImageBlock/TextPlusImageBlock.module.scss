@@ -155,7 +155,7 @@
   .wrapper {
     height: auto;
     padding-top: 0;
-    padding-bottom: 335px;
+    padding-bottom: 275px;
     background-color: #f2f2f2;
   }
 
@@ -179,7 +179,8 @@
   }
 
   .imageBlock form {
-    bottom: -295px;
+    height: 275px;
+    bottom: -275px;
     width: 100%;
     top: unset;
     right: unset;

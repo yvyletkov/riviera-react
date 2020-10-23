@@ -4,21 +4,7 @@ import Slider from "react-slick";
 import styled from "styled-components";
 import {NavLink} from "react-router-dom";
 
-
-const InnerSlider = ({firstRowItems, secondRowItems}) => {
-
-    const InnerSliderStyles = styled.div`
-  .slick-slide {
-    opacity: 1;
-    transition: all 500ms;
-  
-  }
-  .slick-slide.slick-active {
-    opacity: 1;
-  }
-  .slick-next:before, .slick-prev:before {
-    color: #000;
-  }
+const InnerSliderStyles = styled.div`
   .slick-list { 
      overflow:visible;
   }
@@ -26,14 +12,11 @@ const InnerSlider = ({firstRowItems, secondRowItems}) => {
      box-sizing: border-box;
   }
   .slick-list:before {
-    content: none;
+    content: none !important;
   }
-  @media screen and (max-width: 768px) {
-    .slick-track: {
-    overflow: visible;
-    }
- } 
 `;
+
+const InnerSlider = ({firstRowItems, secondRowItems}) => {
 
     const settings = {
         infinite: false,

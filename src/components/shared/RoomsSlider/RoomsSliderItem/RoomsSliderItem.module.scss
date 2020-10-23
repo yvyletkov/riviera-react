@@ -1,0 +1,56 @@
+.card {
+  position: relative;
+  width: 565px;
+  height: 331px;
+  margin: 0 10px;
+}
+
+.defaultCursor {
+  cursor: default;
+}
+
+.card img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+
+.content {
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #171717;
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  padding: 20px 40px 7px 18px;
+  text-transform: uppercase;
+  font-family: "Helvetica Neue Bold";
+  font-size: 16px;
+}
+
+.content:after {
+  display: block;
+  background-color: #ff6c39;
+  content: "";
+  width: 15px;
+  height: 4px;
+  position: absolute;
+  top: 8px;
+  left: 18px;
+}
+
+
+@media screen and (max-width: 480px){
+  .card {
+    width: 86vw;
+    height: calc(86vw * 0.6);
+    margin-left: 10px;
+
+  }
+  .card img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+}
+

@@ -100,13 +100,12 @@
 }
 
 .innerSlider {
-  width: 77vw;
+  width: 86vw;
   margin: 0 0 0 10px;
 }
 
 .innerSlider .block{
-  height: 175px;
-  box-shadow: -6.156px 16.914px 27px 0px rgba(23, 23, 23, 0.05);
+  height: calc(86vw * 0.6)
 }
 
 .innerSlider .block .content p {

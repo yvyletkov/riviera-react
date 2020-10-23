@@ -32,11 +32,6 @@ const SliderStyles = styled(Slider)`
   .slick-dots li {
     margin: 0
 }
-.slick-dots li button:before {
-    font-size: 56px;
-    content: '-';
-    font-family: 'Helvetica Neue Light';
-}
 @media screen and (max-width: 1200px){
   .slick-slider {
     margin-top: 0;
@@ -80,7 +75,7 @@ const imgMassive = [
 ];
 
 
-const SpecialsSlider = ({ textLink = "#", data = imgMassive}) => {
+const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-то", textLink = "#", data = imgMassive}) => {
 
     const settings = {
         infinite: true,
@@ -124,7 +119,7 @@ const SpecialsSlider = ({ textLink = "#", data = imgMassive}) => {
         <div className={s.wrapper}>
             <div className={s.container}>
                 <div className={s.leftBlock}>
-                    <Headline subtitle={'Лучшие'} title={'спецпредложения'}/>
+                    <Headline subtitle={subtitle} title={title}/>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
                         maecenas accumsan lacus vel facilisis. </p>

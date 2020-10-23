@@ -4,7 +4,6 @@ import leftArrowImg from "../../../img/sliderArrows/arrowThinSmallLeft.png";
 import React from "react";
 
 export function NextArrow({style, positionStyles, onClick}) {
-    console.log(positionStyles);
     return (
         <div
             className={s.nextArrow}

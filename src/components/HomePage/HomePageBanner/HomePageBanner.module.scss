@@ -163,11 +163,10 @@ $black: #171717;
     filter: brightness(0.7);
     z-index: -1;
   }
+  
   .bookingBlock {
+    display: none;
     bottom: unset;
-  }
-
-  .bookingBlock {
     position: relative;
     bottom: unset;
     max-width: 1115px;

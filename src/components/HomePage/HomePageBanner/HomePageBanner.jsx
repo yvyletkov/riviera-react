@@ -1,7 +1,6 @@
 import React from "react";
 import s from "./HomePageBanner.module.scss";
 import bannerImg from "../../../img/home-page/banner-img.png"
-import bannerMobileImg from "../../../img/home-page/banner-mobile-img.jpg"
 import cirqlesImg from "../../../img/home-page/cirqles.png"
 import pauseImg from "../../../img/home-page/pause.png"
 
