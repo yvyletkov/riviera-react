@@ -3,14 +3,6 @@ import Slider from "react-slick";
 import Headline from "../Headline/Headline";
 import GridSliderItem from "./GridSliderItem/GridSliderItem";
 import s from "./GridSlider.module.scss";
-import kurortImg1 from "../../../img/grid-slider/resort-vacation/1.jpg";
-import kurortImg2 from "../../../img/grid-slider/resort-vacation/2.jpg";
-import kurortImg3 from "../../../img/grid-slider/resort-vacation/3.jpg";
-import kurortImg4 from "../../../img/grid-slider/resort-vacation/4.jpg";
-import kurortImg5 from "../../../img/grid-slider/resort-vacation/5.jpg";
-import kurortImg6 from "../../../img/grid-slider/resort-vacation/6.jpg";
-import kurortImg7 from "../../../img/grid-slider/resort-vacation/7.jpg";
-import kurortImg8 from "../../../img/grid-slider/resort-vacation/8.jpg";
 import styled from "styled-components";
 import arrowImg from "../../../img/sliderArrows/arrowThin.png"
 import MiniSlider from "../MiniSlider/MiniSlider";
@@ -112,93 +104,6 @@ const GridSlider = ({slides}) => {
     const afterChangeHandler = (index) => {
         setCurrentSlideIndex(index);
     };
-
-    slides = [
-        {
-            name: "Курортный отдых",
-            firstRow: [{title: "Семейный отдых", img: kurortImg1, href: '#'}, {
-                title: "Номера и цены",
-                img: kurortImg2,
-                href: '#'
-            }, {title: "Отдых без детей", img: kurortImg3, href: '#'}, {
-                title: "Отдых с друзьями",
-                img: kurortImg4,
-                href: '#'
-            }],
-            secondRow: [{title: "Турпакет", img: kurortImg5, href: '#'}, {
-                title: "Medical Spa",
-                img: kurortImg6,
-                href: '#'
-            }, {title: "Командировка", img: kurortImg7, href: '#'}, {
-                title: "Романтический отдых",
-                img: kurortImg8,
-                href: '#'
-            }],
-        },
-        {
-            name: "Развлечения",
-            firstRow: [{title: "Семейный отдых", img: kurortImg1, href: '#'}, {
-                title: "Что-то другое",
-                img: kurortImg2,
-                href: '#'
-            }, {title: "Отдых без детей", img: kurortImg3, href: '#'}, {
-                title: "Что-то другое",
-                img: kurortImg4,
-                href: '#'
-            }],
-            secondRow: [{title: "Турпакет", img: kurortImg5, href: '#'}, {
-                title: "Что-то другое",
-                img: kurortImg6,
-                href: '#'
-            }, {title: "Командировка", img: kurortImg7, href: '#'}, {
-                title: "Что-то другое",
-                img: kurortImg8,
-                href: '#'
-            }],
-        },
-        {
-            name: "Инфраструктура",
-            firstRow: [{title: "Семейный отдых", img: kurortImg1, href: '#'}, {
-                title: "Еще один слайд",
-                img: kurortImg2,
-                href: '#'
-            }, {title: "Отдых без детей", img: kurortImg3, href: '#'}, {
-                title: "Еще один слайд",
-                img: kurortImg4,
-                href: '#'
-            }],
-            secondRow: [{title: "Турпакет", img: kurortImg5, href: '#'}, {
-                title: "Еще один слайд",
-                img: kurortImg6,
-                href: '#'
-            }, {title: "Командировка", img: kurortImg7, href: '#'}, {
-                title: "Еще один слайд",
-                img: kurortImg8,
-                href: '#'
-            }],
-        },
-        {
-            name: "Четвертый слайд",
-            firstRow: [{title: "Семейный отдых", img: kurortImg1, href: '#'}, {
-                title: "Еще один слайд",
-                img: kurortImg2,
-                href: '#'
-            }, {title: "Отдых без детей", img: kurortImg3, href: '#'}, {
-                title: "Еще один слайд",
-                img: kurortImg4,
-                href: '#'
-            }],
-            secondRow: [{title: "Турпакет", img: kurortImg5, href: '#'}, {
-                title: "Еще один слайд",
-                img: kurortImg6,
-                href: '#'
-            }, {title: "Командировка", img: kurortImg7, href: '#'}, {
-                title: "Еще один слайд",
-                img: kurortImg8,
-                href: '#'
-            }],
-        }
-    ];
 
     const items = slides.map((item, index) => {
         return <GridSliderItem key={item.name + index} firstRow={item.firstRow} secondRow={item.secondRow}/>
