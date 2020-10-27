@@ -17,7 +17,7 @@ import MiniSlider from "../MiniSlider/MiniSlider";
 
 const SliderStyles = styled.div`
   .slick-slide {
-    opacity: .3;
+    opacity: .18;
     transition: all 500ms;
   }
   .slick-slide.slick-active {
@@ -57,8 +57,8 @@ const SliderStyles = styled.div`
         border: none;
     }
 
-  .slick-list {margin: -18px -8px;}
-  .slick-slide>div {padding: 18px 8px;}
+  .slick-list {margin: -18px 0 -18px -20px;}
+  .slick-slide>div {padding: 18px 0 18px 20px;}
     
     .slick-dots {bottom: -8px}
     
@@ -97,8 +97,15 @@ function PrevArrow({style, onClick}) {
 
 const GridSlider = ({slides}) => {
 
-    // const disableScroll = () => document.getElementsByTagName("body")[0].classList.add("fixed");
-    // const enableScroll = () => document.getElementsByTagName("body")[0].classList.remove("fixed");
+    const bodyEl = document.getElementsByTagName("body")[0];
+
+    const disableScroll = () => bodyEl.classList.add("fixed");
+    const enableScroll = () => bodyEl.classList.remove("fixed");
+    //
+    // React.useEffect(() => {
+    //     window.addEventListener("click", enableScroll);
+    //     return () => window.removeEventListener('scroll', enableScroll)
+    // }, []);
 
     let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
 
@@ -198,6 +205,7 @@ const GridSlider = ({slides}) => {
     });
 
     const settings = {
+        afterChange: afterChangeHandler,
         infinite: true,
         slidesToShow: 1,
         nextArrow: <NextArrow/>,
@@ -210,11 +218,11 @@ const GridSlider = ({slides}) => {
                     slidesToShow: 1,
                     infinite: true,
                     vertical: true,
-                    draggable: false,
                     verticalSwiping: true,
                     arrows: false,
                     dots: true,
-                    swipe: false
+                    draggable: true,
+                    swipe: true
                 }
             },
         ]
@@ -235,11 +243,13 @@ const GridSlider = ({slides}) => {
 
                         <Headline subtitle={'Услуги и продукты'} title={slides[currentSlideIndex].name}/>
 
-                    <MiniSlider setCurrentSlide={setCurrentSlideIndex} currentSlide={currentSlideIndex}/>
+                    <div className={s.miniSliderWrapper}>
+                        <MiniSlider setCurrentSlide={setCurrentSlideIndex} currentSlide={currentSlideIndex} slideNames={['Курортный отдых', 'Развлечения', 'Инфраструктура', 'Четвертый слайд']}/>
+                    </div>
                 </div>
-                {/*<SliderStyles onTouchStart={disableScroll} onTouchEnd={enableScroll}>*/}
-                <SliderStyles>
-                    <Slider {...settings} ref={sliderRef} afterChange={afterChangeHandler}>
+                <SliderStyles onTouchStart={disableScroll} onTouchEnd={enableScroll}>
+                {/*<SliderStyles>*/}
+                    <Slider {...settings} ref={sliderRef}>
                         {items}
                     </Slider>
                 </SliderStyles>

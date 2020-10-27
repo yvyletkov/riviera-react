@@ -40,19 +40,28 @@ const SliderStyles = styled(Slider)`
 }
 `;
 
-const RoomsSlider = ({ title = "Заголовок", subtitle = "Какой-то", textContent = 'Немного какого-то текста', data}) => {
+const RoomsSlider = ({title = "Заголовок", subtitle = "Какой-то", textContent = 'Немного какого-то текста', data, lastOfTwo}) => {
+
+    let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
+
+    const afterChangeHandler = (index) => {
+        setCurrentSlideIndex(index);
+    };
 
     const settings = {
+        afterChange: afterChangeHandler,
         infinite: false,
         centerPadding: "60px",
         variableWidth: true,
         speed: 500,
         nextArrow: <NextArrow positionStyles={{
             bottom: "17px",
-            left: "670px"}}/>,
+            left: "670px"
+        }}/>,
         prevArrow: <PrevArrow positionStyles={{
             bottom: "17px",
-            left: "610px"}}/>,
+            left: "610px"
+        }}/>,
         responsive: [
             {
                 breakpoint: 1200,
@@ -64,7 +73,7 @@ const RoomsSlider = ({ title = "Заголовок", subtitle = "Какой-то
         ]
     };
 
-  const items = data.map((item, index) => {
+    const items = data.map((item, index) => {
         const {img, title, link, bookingLink} = item;
         return (
             <div className="SliderElement" key={index}>
@@ -79,18 +88,28 @@ const RoomsSlider = ({ title = "Заголовок", subtitle = "Какой-то
         );
     });
 
+    const miniSliderItems = data.map(item => item.title);
+
+    const sliderRef = React.useRef();
+
+    React.useEffect(() => {
+        sliderRef.current.slickGoTo(currentSlideIndex);
+    }, [currentSlideIndex]);
+
     return (
         <div className={s.wrapper}>
-            <div className={s.container}>
+            <div className={ lastOfTwo ? s.container + ' ' + s.lastOfTwo : s.container}>
                 <div className={s.leftBlock}>
                     <Headline subtitle={subtitle} title={title}/>
                     <p><b>{textContent[0]}</b></p>
                     <p>{textContent[1]}</p>
                 </div>
                 <div className={s.rightBlock}>
-                    {/*<MiniSlider/>*/}
+                    <div className={s.miniSliderWrapper}>
+                        <MiniSlider setCurrentSlide={setCurrentSlideIndex} currentSlide={currentSlideIndex} slideNames={miniSliderItems}/>
+                    </div>
                     <SliderStyles>
-                        <Slider {...settings}>{items}</Slider>
+                        <Slider ref={sliderRef} {...settings}>{items}</Slider>
                     </SliderStyles>
                 </div>
             </div>

@@ -27,7 +27,7 @@ const SliderStyles = styled.div`
   }
 `;
 
-const MiniSlider = ({setCurrentSlide, currentSlide, slideNames = ['Курортный отдых', 'Развлечения', 'Инфраструктура', 'Четвертый слайд']}) => {
+const MiniSlider = ({setCurrentSlide, currentSlide, slideNames}) => {
 
     const disableScroll = () => document.getElementsByTagName("body")[0].classList.add("fixed");
     const enableScroll = () => document.getElementsByTagName("body")[0].classList.remove("fixed");
@@ -41,6 +41,7 @@ const MiniSlider = ({setCurrentSlide, currentSlide, slideNames = ['Курорт�
     });
 
     const settings = {
+        // variableWidth: true,
         centerPadding: "0",
         centerMode: true,
         arrows: true,

@@ -109,11 +109,22 @@ a:hover {
   }
   .content {
     height: 80px;
+    transition: all 400ms;
+  }
+
+  .content.minified {
+    height: 65px;
   }
 
   .logo img {
     width: 140px;
+    transition: all 400ms;
   }
+
+  .content.minified .logo img{
+    width: 110px;
+  }
+
   .container {
     padding: 0 15px 0 10px;
   }

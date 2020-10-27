@@ -57,7 +57,7 @@ const GridSliderItem = ({firstRow, secondRow}) => {
     });
 
 
-    if (window.innerWidth <= 768) return <InnerSlider firstRowItems={firstRowItems} secondRowItems={secondRowItems}/>
+    if (window.innerWidth <= 768) return <InnerSlider firstRowItems={firstRowItems} secondRowItems={secondRowItems}/>;
 
     else return (
         <div className={s.wrapper}>

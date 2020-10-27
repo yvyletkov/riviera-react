@@ -30,7 +30,7 @@ let roomsAndPricesPageData = {
     classicSlides: [
         {
             img: classic1img,
-            title: "Номера корпуса Классик",
+            title: "Корпуса классик",
             link: "",
             bookingLink: "",
         },
@@ -42,15 +42,21 @@ let roomsAndPricesPageData = {
         },
         {
             img: classic3img,
-            title: "Полулюкс классик",
+            title: "Полулюкс Классик",
             link: "/classic/polulyuks-classic",
+            bookingLink: "",
+        },
+        {
+            img: classic2img,
+            title: "Какой-то номер",
+            link: "/classic/",
             bookingLink: "",
         },
     ],
     modernSlides: [
         {
             img: modern1img,
-            title: "Номера корпуса Модерн",
+            title: "Корпус Модерн",
             link: "",
             bookingLink: "",
         },
@@ -66,6 +72,12 @@ let roomsAndPricesPageData = {
             link: "/modern/polulyuks-modern",
             bookingLink: "",
         },
+        {
+            img: modern2img,
+            title: "Какой-то номер",
+            link: "/modern/",
+            bookingLink: "",
+        },
     ],
 }
 
@@ -73,7 +85,7 @@ const HomePage = () => {
     return <>
         <HomePageBanner/>
         <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={homePageData.modernDescr} data={roomsAndPricesPageData.modernSlides}/>
-        <RoomsSlider subtitle={'Корпус'} title={'Классик'} textContent={homePageData.classicDescr} data={roomsAndPricesPageData.classicSlides}/>
+        <RoomsSlider lastOfTwo={true} subtitle={'Корпус'} title={'Классик'} textContent={homePageData.classicDescr} data={roomsAndPricesPageData.classicSlides}/>
         <GridSlider/>
         <SpecialsSlider subtitle={'Лучшие'} title={'спецпредложения'}/>
         <CenteredSlider title={'Сегодня в программе'}/>

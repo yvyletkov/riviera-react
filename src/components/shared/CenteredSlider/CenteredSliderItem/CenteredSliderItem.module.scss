@@ -1,6 +1,6 @@
 .card {
-  width: 325px;
-  height: 485px;
+  width: calc(325px * 0.88);
+  height: calc(485px * 0.88);
   position: relative;
   margin: 0 15px;
   border-radius: 5px;
@@ -82,34 +82,34 @@
 
 @media screen and (max-width: 480px) {
   .card {
-    width: 87vw;
+    width: 65vw;
     height: unset;
     position: relative;
-    margin: 0 10px;
+    margin: 0 0 0 20px;
     box-shadow: -14.444px 19.167px 27px 0px rgba(23, 23, 23, 0.14);
   }
 
   .content {
-    transform: scale(1.1);
+    transform: scale(0.9);
   }
 
 }
 
 @media screen and (max-width: 425px) {
   .content {
-    transform: scale(1);
+    transform: scale(0.8);
   }
 }
 
 @media screen and (max-width: 375px) {
   .content {
-    transform: scale(1);
+    transform: scale(0.7);
   }
 }
 
 @media screen and (max-width: 320px) {
   .content {
-    transform: scale(0.75);
+    transform: scale(0.6);
   }
 }
 

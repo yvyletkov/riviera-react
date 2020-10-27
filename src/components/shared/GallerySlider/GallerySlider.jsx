@@ -204,12 +204,12 @@ const GallerySlider = ({blockName = "Фотогалерея"}) => {
             },
         ],
         nextArrow: <NextArrow positionStyles={{
-            bottom: "-90px",
+            bottom: "-75px",
             right: "50%",
             transform: "translateX(120%)"
         }}/>,
         prevArrow: <PrevArrow positionStyles={{
-            bottom: "-90px",
+            bottom: "-751px",
             left: "50%",
             transform: "translateX(-120%)"
         }}/>

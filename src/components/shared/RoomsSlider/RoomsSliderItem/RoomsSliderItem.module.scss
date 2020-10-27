@@ -40,11 +40,11 @@
 }
 
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 590px){
   .card {
     width: 86vw;
     height: calc(86vw * 0.6);
-    margin-left: 10px;
+    margin: 0 0 0 20px;
 
   }
   .card img {

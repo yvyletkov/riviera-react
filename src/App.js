@@ -6,16 +6,19 @@ import "./style/normalize.css";
 import "./style/fonts.css";
 import HomePage from "./components/HomePage/HomePage";
 import {BrowserRouter} from "react-router-dom";
+import BottomMenu from "./components/shared/BottomMenu/BottomMenu";
 
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Header />
-      <HomePage/>
-      <Footer />
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <Header/>
+            <HomePage/>
+            <Footer/>
+            <BottomMenu/>
+        </BrowserRouter>
+
+    );
 }
 
 export default App;

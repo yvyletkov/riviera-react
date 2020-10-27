@@ -45,10 +45,17 @@
   margin-bottom: 50px;
 }
 
+.miniSliderWrapper {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
 @media screen and (max-width: 620px) {
   .wrapper {
     padding-top: 20px;
-    padding-bottom: 110px;
+    padding-bottom: 140px;
     -webkit-box-shadow: inset 0px -28px 58px -66px rgba(0,0,0,1);
     -moz-box-shadow: inset 0px -28px 58px -66px rgba(0,0,0,1);
     box-shadow: inset 0px -28px 58px -66px rgba(0,0,0,1);
@@ -61,6 +68,11 @@
     padding-right: 20px;
     padding-left: 20px;
     margin-bottom: 80px;
+  }
+  .miniSliderWrapper {
+    position: absolute;
+    bottom: -79px;
+    right: 20px;
   }
 }
 

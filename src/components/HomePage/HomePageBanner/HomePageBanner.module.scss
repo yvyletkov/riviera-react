@@ -121,7 +121,7 @@ $black: #171717;
 
 @media screen and (max-width: 620px) {
   .container {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 160px);
   }
   .rightSide {
     display: none;
@@ -129,7 +129,7 @@ $black: #171717;
   .textBlock {
     color: #fff !important;
     transform: scale(0.7);
-    margin-bottom: 60px;
+    margin-bottom: 75px;
   }
   .textBlock h2:after {
     background-color: #fff;
@@ -182,25 +182,25 @@ $black: #171717;
 
 @media screen and (max-width: 475px) {
   .textBlock {
-    transform: scale(0.67);
+    transform: scale(0.65);
   }
 }
 
 @media screen and (max-width: 400px) {
   .textBlock {
-    transform: scale(0.62);
+    transform: scale(0.60);
   }
 }
 
 @media screen and (max-width: 385px) {
   .textBlock {
-    transform: scale(0.58);
+    transform: scale(0.56);
   }
 }
 
 @media screen and (max-width: 345px) {
   .textBlock {
-    transform: scale(0.54);
+    transform: scale(0.52);
   }
 }
 
