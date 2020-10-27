@@ -18,10 +18,23 @@ const Link = ( {title, icon, href = '#', extraClass = null} ) => {
 }
 
 const Header = () => {
+
+    let [scrolledFromTop, setScrolledFromTop] = React.useState(0)
+
+    const listenToScroll = () => {
+        const scroll = document.body.scrollTop || document.documentElement.scrollTop
+        setScrolledFromTop(scroll)
+    };
+
+    React.useEffect(() => {
+        window.addEventListener('scroll', listenToScroll)
+        return () => window.removeEventListener('scroll', listenToScroll)
+    }, []);
+
     return (
         <div className={s.wrapper}>
             <div className={s.container}>
-                <div className={s.content}>
+                <div className={scrolledFromTop > window.innerHeight / 3 ? `${s.content} ${s.minified}` : s.content}>
                     <div className={s.menuIcon}>
                         <span></span>
                         <span></span>

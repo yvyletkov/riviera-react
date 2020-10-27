@@ -22,8 +22,8 @@
 }
 
 .row .block:hover {
-  transform: scale(1.03);
-  filter: brightness(1.2);
+  //transform: scale(1.03);
+  filter: brightness(1.1);
   //background-size: 120% !important;
 }
 
@@ -100,13 +100,12 @@
 }
 
 .innerSlider {
-  width: 77vw;
-  margin: 0 0 0 10px;
+  width: 86vw;
+  margin: 0 0 0 19px;
 }
 
 .innerSlider .block{
-  height: 175px;
-  box-shadow: -6.156px 16.914px 27px 0px rgba(23, 23, 23, 0.05);
+  height: calc(86vw * 0.6)
 }
 
 .innerSlider .block .content p {

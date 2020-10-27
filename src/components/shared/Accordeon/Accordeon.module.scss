@@ -1,0 +1,44 @@
+.accordeon {
+  margin-bottom: 20px !important;
+}
+
+.text {
+  position: relative;
+  margin-bottom: 10px !important;
+  max-height: 100px;
+  overflow: hidden;
+  transition: all 500ms;
+}
+
+.text.opened {
+  max-height: 500px;
+}
+
+.text:before{
+  content:"";
+  width: 100%;
+  display:block;
+  height:20px;
+  position:absolute;
+  bottom: 0;
+  background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), #F2F2F2 75%)
+}
+
+.text.opened:before {
+  content: none;
+}
+
+.btn {
+  cursor: pointer;
+  color: #484848;
+  transition: all 400ms
+}
+
+
+.btn.opened {
+  color: #c6c6c6;
+}
+
+.btnHidden {
+  display: none;
+}

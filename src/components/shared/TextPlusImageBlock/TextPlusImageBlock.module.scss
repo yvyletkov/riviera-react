@@ -1,6 +1,6 @@
 .wrapper {
   width: 100%;
-  height: 765px;
+  height: 565px;
   background: #f8f8f8;
   padding-top: 65px;
 }
@@ -48,14 +48,17 @@
   align-items: center;
   background: #d7d7d7;
   width: 538px;
-  height: 695px;
+  height: 495px;
   position: relative;
   border-radius: 5px;
 }
 
 .imageBlock img {
+  object-fit: cover;
   position: absolute;
   right: 7px;
+  height: 475px;
+  width: 984px;
 }
 
 .textBlock {
@@ -151,11 +154,29 @@
   background: #335685;
 }
 
+@media screen and (max-width: 415px) {
+  .textContent h4 {
+    font-size: 19px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .textContent h4 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .textContent h4 {
+    font-size: 16px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .wrapper {
     height: auto;
     padding-top: 0;
-    padding-bottom: 335px;
+    padding-bottom: 275px;
     background-color: #f2f2f2;
   }
 
@@ -179,7 +200,8 @@
   }
 
   .imageBlock form {
-    bottom: -295px;
+    height: 275px;
+    bottom: -275px;
     width: 100%;
     top: unset;
     right: unset;

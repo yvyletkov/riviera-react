@@ -1,6 +1,5 @@
 import React from "react";
 import Slider from "react-slick";
-import _slider from "react-slick";
 import Headline from "../Headline/Headline";
 import GridSliderItem from "./GridSliderItem/GridSliderItem";
 import s from "./GridSlider.module.scss";
@@ -18,7 +17,7 @@ import MiniSlider from "../MiniSlider/MiniSlider";
 
 const SliderStyles = styled.div`
   .slick-slide {
-    opacity: .3;
+    opacity: .18;
     transition: all 500ms;
   }
   .slick-slide.slick-active {
@@ -58,29 +57,25 @@ const SliderStyles = styled.div`
         border: none;
     }
 
-  .slick-list {margin: -18px -8px;}
-  .slick-slide>div {padding: 18px 8px;}
+  .slick-list {margin: -18px 0 -18px -20px;}
+  .slick-slide>div {padding: 18px 0 18px 20px;}
     
     .slick-dots {bottom: -8px}
     
     .slick-list:before {
     content: "";
     width: 100%;
-    height: 145px;
+    height: 170px;
     background-color: #fff;
     position: absolute;
-    top: -145px;
+    top: -155px;
     z-index: 1;
     }
 }
 .slick-dots li {
     margin: 0
 }
-.slick-dots li button:before {
-    font-size: 56px;
-    content: '-';
-    font-family: 'Helvetica Neue Light';
-}
+
 `;
 
 function NextArrow({style, onClick}) {
@@ -102,8 +97,15 @@ function PrevArrow({style, onClick}) {
 
 const GridSlider = ({slides}) => {
 
-    const disableScroll = () => document.getElementsByTagName("body")[0].style.overflowY = "hidden";
-    const enableScroll = () => document.getElementsByTagName("body")[0].style.overflowY = "visible";
+    const bodyEl = document.getElementsByTagName("body")[0];
+
+    const disableScroll = () => bodyEl.classList.add("fixed");
+    const enableScroll = () => bodyEl.classList.remove("fixed");
+    //
+    // React.useEffect(() => {
+    //     window.addEventListener("click", enableScroll);
+    //     return () => window.removeEventListener('scroll', enableScroll)
+    // }, []);
 
     let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
 
@@ -174,6 +176,27 @@ const GridSlider = ({slides}) => {
                 img: kurortImg8,
                 href: '#'
             }],
+        },
+        {
+            name: "Четвертый слайд",
+            firstRow: [{title: "Семейный отдых", img: kurortImg1, href: '#'}, {
+                title: "Еще один слайд",
+                img: kurortImg2,
+                href: '#'
+            }, {title: "Отдых без детей", img: kurortImg3, href: '#'}, {
+                title: "Еще один слайд",
+                img: kurortImg4,
+                href: '#'
+            }],
+            secondRow: [{title: "Турпакет", img: kurortImg5, href: '#'}, {
+                title: "Еще один слайд",
+                img: kurortImg6,
+                href: '#'
+            }, {title: "Командировка", img: kurortImg7, href: '#'}, {
+                title: "Еще один слайд",
+                img: kurortImg8,
+                href: '#'
+            }],
         }
     ];
 
@@ -182,6 +205,7 @@ const GridSlider = ({slides}) => {
     });
 
     const settings = {
+        afterChange: afterChangeHandler,
         infinite: true,
         slidesToShow: 1,
         nextArrow: <NextArrow/>,
@@ -192,13 +216,13 @@ const GridSlider = ({slides}) => {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
-                    infinite: false,
+                    infinite: true,
                     vertical: true,
                     verticalSwiping: true,
                     arrows: false,
                     dots: true,
-                    // nextArrow: <NextArrow />,
-                    // prevArrow: <PrevArrow />,
+                    draggable: true,
+                    swipe: true
                 }
             },
         ]
@@ -213,14 +237,19 @@ const GridSlider = ({slides}) => {
 
     return (
         <div className={s.wrapper}>
+
             <div className={s.container}>
                 <div className={s.headlineWrapper}>
-                    <Headline subtitle={'Услуги и продукты'} title={slides[currentSlideIndex].name}/>
-                    <MiniSlider setCurrentSlide={setCurrentSlideIndex} currentSlide={currentSlideIndex}/>
+
+                        <Headline subtitle={'Услуги и продукты'} title={slides[currentSlideIndex].name}/>
+
+                    <div className={s.miniSliderWrapper}>
+                        <MiniSlider setCurrentSlide={setCurrentSlideIndex} currentSlide={currentSlideIndex} slideNames={['Курортный отдых', 'Развлечения', 'Инфраструктура', 'Четвертый слайд']}/>
+                    </div>
                 </div>
                 <SliderStyles onTouchStart={disableScroll} onTouchEnd={enableScroll}>
                 {/*<SliderStyles>*/}
-                    <Slider {...settings} ref={sliderRef} afterChange={afterChangeHandler}>
+                    <Slider {...settings} ref={sliderRef}>
                         {items}
                     </Slider>
                 </SliderStyles>

@@ -19,21 +19,29 @@ const SliderStyles = styled.div`
   .slick-dots li button:before, .slick-next:before, .slick-prev:before {font-family: 'Helvetica Neue Medium';}
   .slick-prev {left: -20px}
   .slick-next {right: -20px}
-}
+  .slick-list {margin: -2px 0;}
+  .slick-slide>div {padding: 2px 0;}
+ 
+  .slick-vertical .slick-slide {
+    border: none
+  }
 `;
 
-const MiniSlider = ({setCurrentSlide, currentSlide, slideNames = ['Курортный отдых', 'Развлечения', 'Инфраструктура', 'Четвертый слайд', 'Пятый слайд', 'Шестой слайд']}) => {
+const MiniSlider = ({setCurrentSlide, currentSlide, slideNames}) => {
 
+    const disableScroll = () => document.getElementsByTagName("body")[0].classList.add("fixed");
+    const enableScroll = () => document.getElementsByTagName("body")[0].classList.remove("fixed");
 
     const items = slideNames.map((item, index) => {
         return (
-            <div onClick={ () => setCurrentSlide(index)} className={currentSlide === index ? `${s.miniSliderItem} ${s.active}` : `${s.miniSliderItem}`} key={item.title}>
+            <div onClick={ () => setCurrentSlide(index)} className={currentSlide === index ? `${s.miniSliderItem} ${s.active}` : `${s.miniSliderItem}`} key={index}>
                 {item}
             </div>
         );
     });
 
     const settings = {
+        // variableWidth: true,
         centerPadding: "0",
         centerMode: true,
         arrows: true,
@@ -44,7 +52,7 @@ const MiniSlider = ({setCurrentSlide, currentSlide, slideNames = ['Курорт�
         speed: 500,
         responsive: [
             {
-                breakpoint: 1400,
+                breakpoint: 768,
                 settings: {
                     vertical: true,
                     verticalSwiping: true,
@@ -52,15 +60,23 @@ const MiniSlider = ({setCurrentSlide, currentSlide, slideNames = ['Курорт�
                     slidesToScroll: 1,
                     infinite: true,
                     arrows: false,
+                    swipeToSlide: true,
                 }
             },
         ]
     };
 
+    const sliderRef = React.useRef();
+
+    React.useEffect(() => {
+        sliderRef.current.slickGoTo(currentSlide);
+    }, [currentSlide]);
+
+
     return (
         <div className={s.wrapper}>
-            <SliderStyles>
-                <Slider className={s.slider} {...settings}>{items}</Slider>
+            <SliderStyles onTouchStart={disableScroll} onTouchEnd={enableScroll}>
+                <Slider ref={sliderRef} className={s.slider} {...settings}>{items}</Slider>
             </SliderStyles>
         </div>
     );
