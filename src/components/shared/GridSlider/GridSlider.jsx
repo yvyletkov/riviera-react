@@ -54,15 +54,6 @@ const SliderStyles = styled.div`
     
     .slick-dots {bottom: -8px}
     
-    .slick-list:before {
-    content: "";
-    width: 100%;
-    height: 170px;
-    background-color: #fff;
-    position: absolute;
-    top: -155px;
-    z-index: 1;
-    }
 }
 .slick-dots li {
     margin: 0
@@ -91,8 +82,8 @@ const GridSlider = ({slides}) => {
 
     const bodyEl = document.getElementsByTagName("body")[0];
 
+    // const enableScroll = () => bodyEl.classList.remove("fixed");
     const disableScroll = () => bodyEl.classList.add("fixed");
-    const enableScroll = () => bodyEl.classList.remove("fixed");
     //
     // React.useEffect(() => {
     //     window.addEventListener("click", enableScroll);
@@ -121,7 +112,7 @@ const GridSlider = ({slides}) => {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
-                    infinite: true,
+                    infinite: false,
                     vertical: true,
                     verticalSwiping: true,
                     arrows: false,
@@ -141,10 +132,11 @@ const GridSlider = ({slides}) => {
 
 
     return (
-        <div className={s.wrapper}>
+        <div id={'verticalSliderWrapper'} className={s.wrapper}>
 
             <div className={s.container}>
                 <div className={s.headlineWrapper}>
+                    <div id='whiteGridSliderBg'></div>
 
                         <Headline subtitle={'Услуги и продукты'} title={slides[currentSlideIndex].name}/>
 
@@ -152,7 +144,7 @@ const GridSlider = ({slides}) => {
                         <MiniSlider setCurrentSlide={setCurrentSlideIndex} currentSlide={currentSlideIndex} slideNames={['Курортный отдых', 'Развлечения', 'Инфраструктура', 'Четвертый слайд']}/>
                     </div>
                 </div>
-                <SliderStyles onTouchStart={disableScroll} onTouchEnd={enableScroll}>
+                <SliderStyles onTouchStart={disableScroll}>
                 {/*<SliderStyles>*/}
                     <Slider {...settings} ref={sliderRef}>
                         {items}

@@ -34,7 +34,9 @@ const MiniSlider = ({setCurrentSlide, currentSlide, slideNames}) => {
 
     const items = slideNames.map((item, index) => {
         return (
-            <div onClick={ () => setCurrentSlide(index)} className={currentSlide === index ? `${s.miniSliderItem} ${s.active}` : `${s.miniSliderItem}`} key={index}>
+            <div onClick={() => setCurrentSlide(index)}
+                 className={currentSlide === index ? `${s.miniSliderItem} ${s.active}` : `${s.miniSliderItem}`}
+                 key={index}>
                 {item}
             </div>
         );
@@ -55,12 +57,12 @@ const MiniSlider = ({setCurrentSlide, currentSlide, slideNames}) => {
                 breakpoint: 768,
                 settings: {
                     vertical: true,
-                    verticalSwiping: true,
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     infinite: true,
                     arrows: false,
-                    swipeToSlide: true,
+                    verticalSwiping: false,
+                    swipeToSlide: false,
                 }
             },
         ]
@@ -75,7 +77,8 @@ const MiniSlider = ({setCurrentSlide, currentSlide, slideNames}) => {
 
     return (
         <div className={s.wrapper}>
-            <SliderStyles onTouchStart={disableScroll} onTouchEnd={enableScroll}>
+            <SliderStyles>
+                {/*<SliderStyles onTouchStart={disableScroll} onTouchEnd={enableScroll}>*/}
                 <Slider ref={sliderRef} className={s.slider} {...settings}>{items}</Slider>
             </SliderStyles>
         </div>
