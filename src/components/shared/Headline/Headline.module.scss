@@ -1,5 +1,9 @@
 $black: #171717;
 
+.wrapper {
+  display: inline-block;
+}
+
 .title, .subtitle, .subtitle:after {
   z-index: 1;
 }
@@ -16,10 +20,11 @@ $black: #171717;
 
 .title {
   position: relative;
-  color: $black;
+  display: inline-block;
   text-transform: uppercase;
   font-family: "Helvetica Neue Bold";
   font-size: 36px;
+  width: fit-content;
 }
 
 .subtitle:after {

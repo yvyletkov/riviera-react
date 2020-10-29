@@ -209,7 +209,7 @@ const GallerySlider = ({blockName = "Фотогалерея"}) => {
             transform: "translateX(120%)"
         }}/>,
         prevArrow: <PrevArrow positionStyles={{
-            bottom: "-751px",
+            bottom: "-75px",
             left: "50%",
             transform: "translateX(-120%)"
         }}/>

@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Headline from "../Headline/Headline";
 import {NextArrow, PrevArrow} from "../SliderArrows/sliderArrowButtons";
 import MiniSlider from "../MiniSlider/MiniSlider";
+import Accordeon from "../Accordeon/Accordeon";
 
 const SliderStyles = styled(Slider)`
   .slick-next:before,
@@ -43,6 +44,11 @@ const SliderStyles = styled(Slider)`
 const RoomsSlider = ({title = "Заголовок", subtitle = "Какой-то", textContent = 'Немного какого-то текста', data, lastOfTwo}) => {
 
     let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
+    let [accordeonStatus, setAccordeonStatus] = React.useState(false);
+
+    const cirqleBtnHandler = () => {
+        setAccordeonStatus(!accordeonStatus)
+    }
 
     const afterChangeHandler = (index) => {
         setCurrentSlideIndex(index);
@@ -101,8 +107,9 @@ const RoomsSlider = ({title = "Заголовок", subtitle = "Какой-то"
             <div className={ lastOfTwo ? s.container + ' ' + s.lastOfTwo : s.container}>
                 <div className={s.leftBlock}>
                     <Headline subtitle={subtitle} title={title}/>
+                    <span className={accordeonStatus ? s.circleBtn + ' ' + s.active : s.circleBtn} onClick={cirqleBtnHandler}>!</span>
                     <p><b>{textContent[0]}</b></p>
-                    <p>{textContent[1]}</p>
+                    <Accordeon withBtn={false} zeroHeight={true} status={accordeonStatus}>{textContent[1]}</Accordeon>
                 </div>
                 <div className={s.rightBlock}>
                     <div className={s.miniSliderWrapper}>
