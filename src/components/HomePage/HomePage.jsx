@@ -103,7 +103,6 @@ let homePageData = {
             }],
         }
     ],
-
 }
 
 const HomePage = () => {

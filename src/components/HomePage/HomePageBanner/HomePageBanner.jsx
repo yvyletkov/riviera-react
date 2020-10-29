@@ -16,11 +16,12 @@ const HomePageBanner = () => {
                             <h1>Sunrise</h1>
                             <div>RESORT & SPA</div>
                         </div>
-                    </div>
-                    <div className={s.rightSide}>
                         <div className={s.playBtn}>
                             <img src={pauseImg} alt="пауза"/>
                         </div>
+                    </div>
+                    <div className={s.rightSide}>
+
                         <img className={s.cirqles} src={cirqlesImg} alt=""/>
                         <img src={bannerImg} alt="Riviera Sunrise"/>
                     </div>

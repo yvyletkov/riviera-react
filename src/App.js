@@ -15,23 +15,18 @@ function App() {
 
     const bodyEl = document.getElementsByTagName("body")[0];
     const enableScroll = () => bodyEl.classList.remove("fixed");
-
-    // #verticalSliderWrapper
-
     React.useEffect( function () {
         const sliderElementsObj = $("#verticalSliderWrapper *");
         const sliderElementsArr = Object.values(sliderElementsObj);
         const whiteBg = Object.values($('#whiteGridSliderBg'))[0];
         const h2El = Object.values($('h2'));
         const h4El = Object.values($('h4'));
-
         // console.log('index:', sliderElementsArr.indexOf(whiteBg));
         // console.log('sliderElementsArr', sliderElementsArr);
-
         $(document).on('touchstart', (e) => {
-            console.log(e.target === whiteBg);
-            console.log('target: ', e.target);
-            console.log(whiteBg);
+            // console.log(e.target === whiteBg);
+            // console.log('target: ', e.target);
+            // console.log(whiteBg);
             if (!sliderElementsArr.includes(e.target) || e.target === whiteBg || h2El.includes(e.target) || h4El.includes(e.target)) enableScroll()
         })
     }, []);

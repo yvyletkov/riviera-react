@@ -1,6 +1,7 @@
 $black: #171717;
 
 .container {
+  box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -9,7 +10,7 @@ $black: #171717;
 
 .bannerWrapper {
   position: relative;
-  margin-top: 30px;
+  margin-top: 0;
   height: 800px;
   width: 100%;
   background-color: #f8f8f8;
@@ -24,7 +25,9 @@ $black: #171717;
 
 .leftSide {
   padding-top: 175px;
+  padding-left: 20px;
   z-index: 1;
+  position: relative;
 }
 
 .textBlock {
@@ -75,7 +78,7 @@ $black: #171717;
 
 .cirqles {
   position: absolute;
-  top: 197px;
+  top: 187px;
   left: -251px;
   z-index: 0;
 }
@@ -83,7 +86,7 @@ $black: #171717;
 .bookingBlock {
   transform: translateX(-50%);
   position: absolute;
-  bottom: 110px;
+  bottom: 120px;
   max-width: 1115px;
   width: 95%;
   left: 50%;
@@ -98,8 +101,8 @@ $black: #171717;
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 288px;
-  left: -3px;
+  bottom: 298px;
+  right: 10px;
   border-radius: 50%;
   box-shadow: -10.261px 28.191px 57px 0px rgba(255, 108, 57, 0.41);
   width: 65px;
@@ -120,15 +123,17 @@ $black: #171717;
 }
 
 @media screen and (max-width: 620px) {
+  .playBtn {
+    display: none;
+  }
   .container {
-    height: calc(100vh - 160px);
+    height: calc(100vh - 80px);
   }
   .rightSide {
     display: none;
   }
   .textBlock {
     color: #fff !important;
-    transform: scale(0.7);
     margin-bottom: 75px;
   }
   .textBlock h2:after {
@@ -163,7 +168,7 @@ $black: #171717;
     filter: brightness(0.7);
     z-index: -1;
   }
-  
+
   .bookingBlock {
     display: none;
     bottom: unset;
@@ -180,35 +185,19 @@ $black: #171717;
 
 }
 
-@media screen and (max-width: 475px) {
-  .textBlock {
-    transform: scale(0.65);
+@media screen and (max-width: 490px) {
+  .textBlock h1:last-of-type {
+    font-size: 20vw;
   }
-}
-
-@media screen and (max-width: 400px) {
-  .textBlock {
-    transform: scale(0.60);
+  .textBlock h1:first-of-type {
+    font-size: 14vw;
   }
-}
-
-@media screen and (max-width: 385px) {
-  .textBlock {
-    transform: scale(0.56);
+  .textBlock h2 {
+    font-size: 4.8vw;
   }
-}
-
-@media screen and (max-width: 345px) {
-  .textBlock {
-    transform: scale(0.52);
+  .textBlock div {
+    font-size: 6vw;
   }
-}
-
-@media screen and (max-width: 1200px) {
-  .bannerWrapper {
-    margin-top: 80px;
-  }
-
 }
 
 

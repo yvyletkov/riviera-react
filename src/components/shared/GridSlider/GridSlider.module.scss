@@ -34,6 +34,7 @@
   padding-top: 55px;
   padding-bottom: 80px;
   overflow: hidden;
+  transition: all 400ms;
 }
 
 .headlineWrapper {
@@ -55,10 +56,13 @@
 @media screen and (max-width: 620px) {
   .wrapper {
     padding-top: 20px;
-    padding-bottom: 140px;
-    -webkit-box-shadow: inset 0px -28px 58px -66px rgba(0,0,0,1);
-    -moz-box-shadow: inset 0px -28px 58px -66px rgba(0,0,0,1);
-    box-shadow: inset 0px -28px 58px -66px rgba(0,0,0,1);
+    padding-bottom: 120px;
+    -webkit-box-shadow: inset 0px -28px 58px -66px rgba(0, 0, 0, 1);
+    -moz-box-shadow: inset 0px -28px 58px -66px rgba(0, 0, 0, 1);
+    box-shadow: inset 0px -28px 58px -66px rgba(0, 0, 0, 1);
+  }
+  .wrapper.minified {
+    padding-bottom: 40px;
   }
 }
 

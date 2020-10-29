@@ -1,21 +1,25 @@
 import React from "react";
 import s from "./Accordeon.module.scss"
 
-const Accordeon = ({children}) => {
+const Accordeon = ({status = false, children, zeroHeight = false, withBtn = true}) => {
 
-    let [opened, setOpened] = React.useState(false)
+    let [opened, setOpened] = React.useState(status);
+
+    React.useEffect( () => {
+        setOpened(status);
+    }, [status])
 
     const onClick = () => {
         setOpened(!opened)
     };
 
-    return <div className={s.accordeon}>
-        <p className={opened || window.innerWidth >= 500 ? s.text + ' ' + s.opened : s.text}>
+    return <div className={zeroHeight ? s.accordeon + ' ' + s.zeroHeight : s.accordeon}>
+        <p className={opened || window.innerWidth >= 500 ? s.text + ' ' + s.opened : zeroHeight ? s.text + ' ' + s.zeroHeight : s.text}>
             {children}
         </p>
-        <div onClick={onClick} className={window.innerWidth >= 500 ? s.btnHidden : opened ? s.btn + ' ' + s.opened : s.btn}>
+        { withBtn && <div onClick={onClick} className={window.innerWidth >= 500 ? s.btnHidden : opened ? s.btn + ' ' + s.opened : s.btn}>
             {opened ? 'Свернуть' : 'Подробнее'}
-        </div>
+        </div> }
     </div>
 }
 

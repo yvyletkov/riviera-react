@@ -80,17 +80,11 @@ function PrevArrow({style, onClick}) {
 
 const GridSlider = ({slides}) => {
 
+    let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
+
     const bodyEl = document.getElementsByTagName("body")[0];
 
-    // const enableScroll = () => bodyEl.classList.remove("fixed");
     const disableScroll = () => bodyEl.classList.add("fixed");
-    //
-    // React.useEffect(() => {
-    //     window.addEventListener("click", enableScroll);
-    //     return () => window.removeEventListener('scroll', enableScroll)
-    // }, []);
-
-    let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
 
     const afterChangeHandler = (index) => {
         setCurrentSlideIndex(index);
@@ -130,9 +124,10 @@ const GridSlider = ({slides}) => {
         sliderRef.current.slickGoTo(currentSlideIndex);
     }, [currentSlideIndex]);
 
+    const slideNames = slides.map( (item) => item.name);
 
     return (
-        <div id={'verticalSliderWrapper'} className={s.wrapper}>
+        <div id={'verticalSliderWrapper'} className={ currentSlideIndex === slides.length - 1 ? s.wrapper + ' ' + s.minified : s.wrapper}>
 
             <div className={s.container}>
                 <div className={s.headlineWrapper}>
@@ -141,7 +136,7 @@ const GridSlider = ({slides}) => {
                         <Headline subtitle={'Услуги и продукты'} title={slides[currentSlideIndex].name}/>
 
                     <div className={s.miniSliderWrapper}>
-                        <MiniSlider setCurrentSlide={setCurrentSlideIndex} currentSlide={currentSlideIndex} slideNames={['Курортный отдых', 'Развлечения', 'Инфраструктура', 'Четвертый слайд']}/>
+                        <MiniSlider setCurrentSlide={setCurrentSlideIndex} currentSlide={currentSlideIndex} slideNames={slideNames}/>
                     </div>
                 </div>
                 <SliderStyles onTouchStart={disableScroll}>
