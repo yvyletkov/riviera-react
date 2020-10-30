@@ -8,6 +8,7 @@ import {NextArrow, PrevArrow} from "../SliderArrows/sliderArrowButtons";
 import MiniSlider from "../MiniSlider/MiniSlider";
 import Accordeon from "../Accordeon/Accordeon";
 
+
 const SliderStyles = styled(Slider)`
   .slick-next:before,
   .slick-prev:before {
@@ -43,16 +44,51 @@ const SliderStyles = styled(Slider)`
 
 const RoomsSlider = ({title = "Заголовок", subtitle = "Какой-то", textContent = 'Немного какого-то текста', data, lastOfTwo}) => {
 
+
     let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
     let [accordeonStatus, setAccordeonStatus] = React.useState(false);
+    let [sliderIsInViewport, setSliderIsInViewport] = React.useState(false);
+    let [scrolledFromTop, setScrolledFromTop] = React.useState(0);
+    let [sliderCoords, setSliderCoords] = React.useState(0);
 
-    const cirqleBtnHandler = () => {
-        setAccordeonStatus(!accordeonStatus)
-    }
+    const sliderWrapperRef = React.useRef();
+    const sliderRef = React.useRef();
 
-    const afterChangeHandler = (index) => {
-        setCurrentSlideIndex(index);
+    const getCoords = (elem) => {
+        let box = elem.getBoundingClientRect();
+        return box.top + window.pageYOffset
     };
+
+    const listenToScroll = () => {
+        const scroll = document.body.scrollTop || document.documentElement.scrollTop;
+        setScrolledFromTop(scroll)
+    };
+
+    React.useEffect( () => {
+        if (sliderCoords < scrolledFromTop) setSliderIsInViewport(true)
+    }, [scrolledFromTop]);
+
+    React.useEffect( () => {
+        if (sliderIsInViewport) sliderRef.current.slickGoTo(1)
+    }, [sliderIsInViewport]);
+
+    React.useEffect(() => {
+        const coords = getCoords(sliderWrapperRef.current);
+        setSliderCoords(coords - 130);
+    }, [sliderCoords]);
+
+    React.useEffect(() => {
+        sliderRef.current.slickGoTo(currentSlideIndex);
+    }, [currentSlideIndex]);
+
+    React.useEffect(() => {
+        window.addEventListener('scroll', listenToScroll);
+        return () => window.removeEventListener('scroll', listenToScroll)
+    }, []);
+
+    const cirqleBtnHandler = () => setAccordeonStatus(!accordeonStatus);
+
+    const afterChangeHandler = index => setCurrentSlideIndex(index);
 
     const settings = {
         afterChange: afterChangeHandler,
@@ -96,24 +132,20 @@ const RoomsSlider = ({title = "Заголовок", subtitle = "Какой-то"
 
     const miniSliderItems = data.map(item => item.title);
 
-    const sliderRef = React.useRef();
-
-    React.useEffect(() => {
-        sliderRef.current.slickGoTo(currentSlideIndex);
-    }, [currentSlideIndex]);
-
     return (
-        <div className={s.wrapper}>
-            <div className={ lastOfTwo ? s.container + ' ' + s.lastOfTwo : s.container}>
+        <div ref={sliderWrapperRef} className={s.wrapper + ' roomSlider'}>
+            <div className={lastOfTwo ? s.container + ' ' + s.lastOfTwo : s.container}>
                 <div className={s.leftBlock}>
                     <Headline subtitle={subtitle} title={title}/>
-                    <span className={accordeonStatus ? s.circleBtn + ' ' + s.active : s.circleBtn} onClick={cirqleBtnHandler}>!</span>
+                    <span className={accordeonStatus ? s.circleBtn + ' ' + s.active : s.circleBtn}
+                          onClick={cirqleBtnHandler}>!</span>
                     <p><b>{textContent[0]}</b></p>
                     <Accordeon withBtn={false} zeroHeight={true} status={accordeonStatus}>{textContent[1]}</Accordeon>
                 </div>
                 <div className={s.rightBlock}>
                     <div className={s.miniSliderWrapper}>
-                        <MiniSlider setCurrentSlide={setCurrentSlideIndex} currentSlide={currentSlideIndex} slideNames={miniSliderItems}/>
+                        <MiniSlider setCurrentSlide={setCurrentSlideIndex} currentSlide={currentSlideIndex}
+                                    slideNames={miniSliderItems}/>
                     </div>
                     <SliderStyles>
                         <Slider ref={sliderRef} {...settings}>{items}</Slider>

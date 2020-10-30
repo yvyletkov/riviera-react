@@ -212,11 +212,14 @@
   }
 
   .imageBlock form input {
+    padding: 24px 40px;
     box-sizing: border-box;
     border-radius: 5px;
     width: 100%;
     background-color: rgb(255, 255, 255);
-    box-shadow: inset 0px 4px 16px 0px rgba(32, 35, 35, 0.1);
+    -webkit-box-shadow: inset -2px 2px 32px -21px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset -2px 2px 32px -21px rgba(0,0,0,0.75);
+    box-shadow: inset -2px 2px 32px -21px rgba(0,0,0,0.75);
   }
 
 

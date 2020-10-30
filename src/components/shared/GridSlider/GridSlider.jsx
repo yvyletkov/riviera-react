@@ -6,6 +6,7 @@ import s from "./GridSlider.module.scss";
 import styled from "styled-components";
 import arrowImg from "../../../img/sliderArrows/arrowThin.png"
 import MiniSlider from "../MiniSlider/MiniSlider";
+import Swipe from 'react-easy-swipe';
 
 const SliderStyles = styled.div`
   .slick-slide {
@@ -81,18 +82,24 @@ function PrevArrow({style, onClick}) {
 const GridSlider = ({slides}) => {
 
     let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
+    let [swipedVertically, setSwipedVertically] = React.useState(0);
 
     const bodyEl = document.getElementsByTagName("body")[0];
 
     const disableScroll = () => bodyEl.classList.add("fixed");
 
-    const afterChangeHandler = (index) => {
-        setCurrentSlideIndex(index);
-    };
+    const afterChangeHandler = (index) => setCurrentSlideIndex(index);
 
-    const items = slides.map((item, index) => {
-        return <GridSliderItem key={item.name + index} firstRow={item.firstRow} secondRow={item.secondRow}/>
-    });
+    const items = slides.map((item, index) => <GridSliderItem key={item.name + index} firstRow={item.firstRow}
+                                                              secondRow={item.secondRow}/>);
+    const onSwipeMove = (position, event) => {
+        // console.log(`Moved ${position.y} pixels vertically`, event);
+        setSwipedVertically(position.y)
+    }
+
+    // const onSwipeEnd = (position, event) => {
+    //     console.log('state swipedVertically: ', swipedVertically);
+    // }
 
     const settings = {
         afterChange: afterChangeHandler,
@@ -105,6 +112,7 @@ const GridSlider = ({slides}) => {
             {
                 breakpoint: 768,
                 settings: {
+                    speed: 400,
                     slidesToShow: 1,
                     infinite: false,
                     vertical: true,
@@ -112,7 +120,7 @@ const GridSlider = ({slides}) => {
                     arrows: false,
                     dots: true,
                     draggable: true,
-                    swipe: true
+                    swipe: false
                 }
             },
         ]
@@ -124,26 +132,40 @@ const GridSlider = ({slides}) => {
         sliderRef.current.slickGoTo(currentSlideIndex);
     }, [currentSlideIndex]);
 
-    const slideNames = slides.map( (item) => item.name);
+    React.useEffect(() => {
+        if (swipedVertically > 50) {
+            if (currentSlideIndex === 0) sliderRef.current.slickGoTo(slides.length);
+            else sliderRef.current.slickPrev();
+        } else if (swipedVertically < -50) {
+            if (currentSlideIndex === slides.length - 1) sliderRef.current.slickGoTo(0);
+            else sliderRef.current.slickNext();
+        }
+    }, [swipedVertically]);
+
+    const slideNames = slides.map((item) => item.name);
 
     return (
-        <div id={'verticalSliderWrapper'} className={ currentSlideIndex === slides.length - 1 ? s.wrapper + ' ' + s.minified : s.wrapper}>
+        <div id={'verticalSliderWrapper'}
+             className={currentSlideIndex === slides.length - 1 ? s.wrapper + ' ' + s.minified : s.wrapper}>
 
             <div className={s.container}>
                 <div className={s.headlineWrapper}>
                     <div id='whiteGridSliderBg'></div>
 
-                        <Headline subtitle={'Услуги и продукты'} title={slides[currentSlideIndex].name}/>
+                    <Headline subtitle={'Услуги и продукты'} title={slides[currentSlideIndex].name}/>
 
                     <div className={s.miniSliderWrapper}>
-                        <MiniSlider setCurrentSlide={setCurrentSlideIndex} currentSlide={currentSlideIndex} slideNames={slideNames}/>
+                        <MiniSlider setCurrentSlide={setCurrentSlideIndex} currentSlide={currentSlideIndex}
+                                    slideNames={slideNames}/>
                     </div>
                 </div>
                 <SliderStyles onTouchStart={disableScroll}>
-                {/*<SliderStyles>*/}
-                    <Slider {...settings} ref={sliderRef}>
-                        {items}
-                    </Slider>
+                    {/*<SliderStyles>*/}
+                    <Swipe onSwipeMove={onSwipeMove}>
+                        <Slider {...settings} ref={sliderRef}>
+                            {items}
+                        </Slider>
+                    </Swipe>
                 </SliderStyles>
             </div>
         </div>
