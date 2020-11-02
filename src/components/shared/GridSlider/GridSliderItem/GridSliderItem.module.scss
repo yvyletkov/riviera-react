@@ -68,7 +68,6 @@
   top: -11px
 }
 
-
 .row .block:not(:last-child) {
   margin-right: 20px;
 }
@@ -100,12 +99,12 @@
 }
 
 .innerSlider {
-  width: 86vw;
+  width: 82vw;
   margin: 0 0 0 19px;
 }
 
 .innerSlider .block{
-  height: calc(86vw * 0.6)
+  height: calc(82vw * 0.6)
 }
 
 .innerSlider .block .content p {

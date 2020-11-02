@@ -35,7 +35,7 @@ const MiniSlider = ({setCurrentSlide, currentSlide, slideNames}) => {
     const items = slideNames.map((item, index) => {
         return (
             <div onClick={() => setCurrentSlide(index)}
-                 className={currentSlide === index ? `${s.miniSliderItem} ${s.active}` : `${s.miniSliderItem}`}
+                 className={currentSlide === index ? `${s.miniSliderItem} ${s.active} miniSliderTarget` : `${s.miniSliderItem} miniSliderTarget`}
                  key={index}>
                 {item}
             </div>

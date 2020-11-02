@@ -108,12 +108,30 @@ let homePageData = {
 const HomePage = () => {
     return <>
         <HomePageBanner/>
-        <GridSlider slides={homePageData.gridSlides}/>
-        <SpecialsSlider subtitle={'Лучшие'} title={'спецпредложения'}/>
-        <CenteredSlider title={'Сегодня в программе'}/>
-        <TextPlusImageBlock subtitle={'Идеальный отдых в Крыму'} title={'круглый год'} withForm={true}/>
-        <GallerySlider/>
-        <MapSection/>
+
+        <section className='section first'>
+            <GridSlider slides={homePageData.gridSlides}/>
+        </section>
+
+        <section className='section'>
+            <SpecialsSlider subtitle={'Лучшие'} title={'спецпредложения'}/>
+        </section>
+
+        <section className='section'>
+            <CenteredSlider title={'Сегодня в программе'}/>
+        </section>
+
+        <section className='section'>
+            <TextPlusImageBlock subtitle={'Идеальный отдых в Крыму'} title={'круглый год'} withForm={true}/>
+        </section>
+
+        <section className='section'>
+            <GallerySlider/>
+        </section>
+
+        <section className='section last'>
+            <MapSection/>
+        </section>
     </>
 
 };

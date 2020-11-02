@@ -1,7 +1,6 @@
 import React from "react";
 // import s from "./RoomPage.module.scss";
 import RoomPageBanner from "./RoomPageBanner/RoomPageBanner";
-import RoomsSlider from "../shared/RoomsSlider/RoomsSlider";
 import CenteredSlider from "../shared/CenteredSlider/CenteredSlider";
 import classic1img from "../../img/rooms-slider/rooms-and-prices-page/classic1.jpg";
 import classic2img from "../../img/rooms-slider/rooms-and-prices-page/classic2.jpg";
@@ -25,8 +24,8 @@ import gridKurortImg6 from "../../img/grid-slider/resort-vacation/6.jpg";
 import gridKurortImg7 from "../../img/grid-slider/resort-vacation/7.jpg";
 import gridKurortImg8 from "../../img/grid-slider/resort-vacation/8.jpg";
 import GridSlider from "../shared/GridSlider/GridSlider";
-import GallerySlider from "../shared/GallerySlider/GallerySlider";
 import RoomDescriptionBlock from "./RoomDescriptionBlock/RoomDescriptionBlock";
+import LargeGallerySlider from "../shared/LargeGallerySlider/LargeGallerySlider";
 
 let roomsAndPricesPageData = {
     classicSlides: [
@@ -178,11 +177,22 @@ let roomsAndPricesPageData = {
 const RoomPage = ({campusName, roomName}) => {
     return <>
         <RoomPageBanner campusName={campusName} roomName={roomName}/>
-        <div style={{height: "60px"}}></div>
-        <RoomDescriptionBlock/>
-        <CenteredSlider title={'Сегодня в программе'}/>
-        <GridSlider slides={roomsAndPricesPageData.gridSlides}/>
-        <GallerySlider/>
+
+        <section className='section first'>
+            <RoomDescriptionBlock/>
+        </section>
+
+        <section className='section'>
+            <CenteredSlider title={'Сегодня в программе'}/>
+        </section>
+
+        <section className='section'>
+            <GridSlider slides={roomsAndPricesPageData.gridSlides}/>
+        </section>
+
+        <section className='section last'>
+            <LargeGallerySlider/>
+        </section>
     </>
 
 };

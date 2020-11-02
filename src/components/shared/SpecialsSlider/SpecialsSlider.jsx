@@ -31,6 +31,15 @@ const SliderStyles = styled(Slider)`
   }
   .slick-dots li {
     margin: 0
+  }
+  
+.slick-slide img {
+  width: 100%;
+  margin: 0 40px 0 0;
+}
+
+.slick-track {
+  margin: 0 auto;
 }
 @media screen and (max-width: 1200px){
   .slick-slider {

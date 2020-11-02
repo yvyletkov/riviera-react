@@ -18,9 +18,9 @@
 .container {
   box-sizing: border-box;
   position: relative;;
-  padding-top: 225px;
+  padding-top: 190px;
   max-width: 1200px;
-  height: 640px;
+  height: 565px;
   width: 100%;
   margin: 0 auto;
   //border: thin solid black;
@@ -65,7 +65,7 @@
   overflow: hidden;
   width: 1165px;
   height: unset;
-  top: 23%;
+  top: 80px;
   right: -385px;
 }
 
@@ -102,6 +102,13 @@
     height: unset;
     padding-bottom: 60px;
   }
+
+  .miniSliderWrapper {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: fit-content;
+    float: none;
+  }
 }
 
 
@@ -109,16 +116,6 @@
   margin-bottom: 20px;
   width: 900px;
   float: right;
-}
-
-
-@media screen and (max-width: 1200px) {
-  .miniSliderWrapper {
-    margin: 0 auto;
-    margin-bottom: 20px;
-    width: fit-content;
-    float: none;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -137,6 +134,9 @@
   }
   .leftBlock p {
     margin-bottom: 0px;
+  }
+  .rightBlock {
+    top: unset;
   }
 }
 

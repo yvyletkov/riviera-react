@@ -176,10 +176,22 @@ let roomsAndPricesPageData = {
 const RoomsAndPricesPage = () => {
     return <>
         <RoomsAndPricesPageBanner/>
-        <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={roomsAndPricesPageData.modernDescr} data={roomsAndPricesPageData.modernSlides}/>
-        <RoomsSlider lastOfTwo={true} subtitle={'Корпус'} title={'Классик'} textContent={roomsAndPricesPageData.classicDescr} data={roomsAndPricesPageData.classicSlides}/>
-        <CenteredSlider title={'Сегодня в программе'}/>
-        <GridSlider slides={roomsAndPricesPageData.gridSlides}/>
+
+        <section className='section'>
+            <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={roomsAndPricesPageData.modernDescr}
+                         data={roomsAndPricesPageData.modernSlides}/>
+
+            <RoomsSlider lastOfTwo={true} subtitle={'Корпус'} title={'Классик'}
+                         textContent={roomsAndPricesPageData.classicDescr} data={roomsAndPricesPageData.classicSlides}/>
+        </section>
+
+        <section className='section'>
+            <CenteredSlider title={'Сегодня в программе'}/>
+        </section>
+
+        <section className='section last'>
+            <GridSlider slides={roomsAndPricesPageData.gridSlides}/>
+        </section>
     </>
 
 };

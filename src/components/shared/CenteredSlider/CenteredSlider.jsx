@@ -11,7 +11,7 @@ import styled from "styled-components";
 import HeadlineCenter from "../HeadlineCenter/HeadlineCenter";
 import {NextArrow, PrevArrow} from "../SliderArrows/sliderArrowButtons";
 
-const StyledSlider = styled(Slider)`
+const SliderStyles = styled.div`
   .slick-next:before,
   .slick-prev:before {
     color: #000;
@@ -35,6 +35,15 @@ const StyledSlider = styled(Slider)`
   .slick-dots li {
     margin: 0
   }
+
+.slick-slide img {
+  width: 100%;
+  margin: 0 40px 0 0;
+}
+
+.slick-track {
+  margin: 0 auto;
+}
 }
 `;
 
@@ -156,9 +165,9 @@ const CenteredSlider = ({title = "Какой-то заголовок"}) => {
     return (
         <div className={s.wrapper}>
             <HeadlineCenter title={title}/>
-            <StyledSlider>
+            <SliderStyles>
                 <Slider {...settings}>{items}</Slider>
-            </StyledSlider>
+            </SliderStyles>
         </div>
     );
 };

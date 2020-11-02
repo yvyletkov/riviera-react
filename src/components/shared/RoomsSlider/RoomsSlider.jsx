@@ -16,24 +16,12 @@ const SliderStyles = styled(Slider)`
     color: #000;
   }
   .slick-slider {height: 435px}
-  .center .slick-center .SliderElement {
-    opacity: 1;
-    transition: all 0.3s;
-    -ms-transform: scale(1.08);
-    transform: scale(1.08);
-  }
   .slick-list {
     transition: all 0.3s;
     overflow: visible;
   }
   .slick-dots li {
     margin: 0
-}
-.slick-dots li button:before {
-    font-size: 56px;
-    content: '-';
-    top: 10px;
-    font-family: 'Helvetica Neue Light';
 }
 @media screen and (max-width: 1200px){
   .slick-slider {

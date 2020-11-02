@@ -2,21 +2,12 @@
   max-width: 1580px;
   width: 100%;
   margin: 0 auto;
-  padding-top: 90px;
-  padding-bottom: 130px;
+  padding-bottom: 105px;
   overflow: hidden;
 }
 
 @media screen and (max-width: 480px){
   .wrapper {
-    padding-bottom: 75px;
-    padding-top: 75px;
-  }
-}
-
-@media screen and (max-width: 380px){
-  .wrapper {
-    padding-bottom: 75px;
-    padding-top: 65px;
+    padding-bottom: 35px;
   }
 }

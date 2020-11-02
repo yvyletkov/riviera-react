@@ -89,13 +89,20 @@ const GridSlider = ({slides}) => {
         const whiteBg = Object.values($('#whiteGridSliderBg'))[0];
         const h2El = Object.values($('h2'));
         const h4El = Object.values($('h4'));
+        const miniSliderEl = Object.values($('.miniSliderTarget'));
         // console.log('index:', sliderElementsArr.indexOf(whiteBg));
         // console.log('sliderElementsArr', sliderElementsArr);
+
         $(document).on('touchstart', (e) => {
             // console.log(e.target === whiteBg);
             // console.log('target: ', e.target);
             // console.log(whiteBg);
-            if (!sliderElementsArr.includes(e.target) || e.target === whiteBg || h2El.includes(e.target) || h4El.includes(e.target)) enableScroll()
+            if (!sliderElementsArr.includes(e.target)
+                || e.target === whiteBg
+                || h2El.includes(e.target)
+                || h4El.includes(e.target)
+                || miniSliderEl.includes(e.target))
+                enableScroll()
         })
     }, []);
 

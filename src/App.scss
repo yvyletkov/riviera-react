@@ -27,20 +27,30 @@ body.fixed {
   overflow: hidden;
 }
 
+section.section {
+  padding-bottom: 80px;
+}
+
+section.section.first {
+  padding-top: 50px;
+}
+
+section.section.last {
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  section.section {
+    padding-bottom: 60px;
+  }
+}
+
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
-}
-
-.slick-slide img {
-  width: 100%;
-  margin: 0 40px 0 0;
-}
-
-.slick-track {
-  margin: 0 auto;
 }
 
 .slick-dots li button:before {

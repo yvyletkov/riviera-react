@@ -31,8 +31,6 @@
 }
 
 .wrapper {
-  padding-top: 55px;
-  padding-bottom: 80px;
   overflow: hidden;
   transition: all 400ms;
 }
@@ -55,7 +53,6 @@
 
 @media screen and (max-width: 620px) {
   .wrapper {
-    padding-top: 20px;
     padding-bottom: 120px;
     -webkit-box-shadow: inset 0px -28px 58px -66px rgba(0, 0, 0, 1);
     -moz-box-shadow: inset 0px -28px 58px -66px rgba(0, 0, 0, 1);

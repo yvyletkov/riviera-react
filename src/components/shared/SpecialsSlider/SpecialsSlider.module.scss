@@ -44,11 +44,6 @@
   }
 }
 
-//
-//.leftBlock h4 {
-//  font-size: 26px;
-//}
-
 .leftBlock a {
   font-size: 14px;
   font-family: "Helvetica Neue Roman";
@@ -103,18 +98,17 @@
   }
 
   .container {
-    padding-top: 10px;
     height: unset;
-    padding-bottom: 60px;
+    padding-bottom: 15px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .container {
-    padding-top: 60px;
-  }
   .leftBlock p {
     font-size: 14px;
+  }
+  .container {
+    padding-top: 0;
   }
 }
 
