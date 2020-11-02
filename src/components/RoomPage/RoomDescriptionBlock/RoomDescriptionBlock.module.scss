@@ -121,7 +121,7 @@
 
 @media screen and (max-width: 768px) {
   .firstCol p {
-    line-height: 1.3;
+    line-height: 1.2;
     //margin-top: 20px !important;
   }
 
@@ -166,7 +166,7 @@
     margin-top: 0;
   }
   .descriptionPart p {
-    font-size: 16px;
+    font-size: 14px;
   }
   .rightBlock {
     display: none;
@@ -184,6 +184,10 @@
   .leftBlock p b {
     font-family: "Helvetica Neue Medium";
     font-size: 16px;
+  }
+  .leftBlock p {
+    font-family: "Helvetica Neue Light";
+    font-size: 14px;
   }
   .leftBlock .firstCol .colTitle {
     font-size: 14px;

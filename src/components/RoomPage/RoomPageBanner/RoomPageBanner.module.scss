@@ -150,8 +150,10 @@ $black: #171717;
 @media screen and (max-width: 768px) {
 
 
-  .descriptionBtn {
-    font-size: 17px !important;
+  .textBlock .descriptionBtn {
+    font-family: "Helvetica Neue";
+    font-size: 15px !important;
+    color: #fff;
   }
 
   .description {

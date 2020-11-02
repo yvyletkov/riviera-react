@@ -157,6 +157,9 @@
 }
 
 @media screen and (max-width: 650px) {
+  .footerFlex {
+    margin-top: 10px;
+  }
   .flexWrapper > p {
     font-size: 12px;
   }
