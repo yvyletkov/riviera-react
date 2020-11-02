@@ -230,7 +230,7 @@ const GallerySlider = ({blockName = "Фотогалерея"}) => {
     });
 
     return (
-        <div className={s.wrapper}>
+        <div id='gallery' className={s.wrapper}>
             <div className={s.container}>
                 <HeadlineCenter title={blockName}/>
                 <StyledSlider>

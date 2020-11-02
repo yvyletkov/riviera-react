@@ -14,10 +14,10 @@ const Accordeon = ({status = false, children, zeroHeight = false, withBtn = true
     };
 
     return <div className={zeroHeight ? s.accordeon + ' ' + s.zeroHeight : s.accordeon}>
-        <p className={opened || window.innerWidth >= 500 ? s.text + ' ' + s.opened : zeroHeight ? s.text + ' ' + s.zeroHeight : s.text}>
+        <p className={opened || window.matchMedia("(min-width: 500px)").matches ? s.text + ' ' + s.opened : zeroHeight ? s.text + ' ' + s.zeroHeight : s.text}>
             {children}
         </p>
-        { withBtn && <div onClick={onClick} className={window.innerWidth >= 500 ? s.btnHidden : opened ? s.btn + ' ' + s.opened : s.btn}>
+        { withBtn && <div onClick={onClick} className={window.matchMedia("(min-width: 500px)").matches ? s.btnHidden : opened ? s.btn + ' ' + s.opened : s.btn}>
             {opened ? 'Свернуть' : 'Подробнее'}
         </div> }
     </div>

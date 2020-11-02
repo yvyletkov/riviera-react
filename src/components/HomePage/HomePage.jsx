@@ -1,5 +1,5 @@
 import React from "react";
-// import s from "./RoomsAndPricesPage.module.scss";
+// import s from "./RoomPage.module.scss";
 import HomePageBanner from "./HomePageBanner/HomePageBanner";
 import CenteredSlider from "../shared/CenteredSlider/CenteredSlider";
 import GridSlider from "../shared/GridSlider/GridSlider";

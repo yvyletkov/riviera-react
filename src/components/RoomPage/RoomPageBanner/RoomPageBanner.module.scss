@@ -1,0 +1,263 @@
+$black: #171717;
+
+.bannerWrapper {
+  position: relative;
+  height: 800px;
+  max-width: 1920px;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 30px;
+  //background: url(../../../img/rooms-and-prices-page/banner-bg.jpg) center no-repeat;
+  box-shadow: 0px 0px 40.94px 5.06px rgba(3, 7, 8, 0.09);
+}
+
+.bannerImg, .bannerImgTop {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  //z-index: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.bannerImgTop {
+  z-index: 2;
+}
+
+.container {
+  box-sizing: border-box;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  padding-top: 160px;
+}
+
+.descriptionWrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.textBlock {
+  color: $black;
+}
+
+.textBlock h2 {
+  font-family: "Helvetica Neue Medium";
+  font-size: 27px;
+  margin-bottom: 18px;
+  position: relative;
+  width: fit-content;
+}
+
+.textBlock h2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: #171717;
+  top: 12px;
+  right: -73px;
+}
+
+.textBlock h1:first-of-type {
+  text-transform: uppercase;
+  font-family: "Helvetica Neue Black";
+  font-size: 78px;
+}
+
+.textBlock h1:last-of-type {
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-family: "Helvetica Neue Black";
+  font-size: 95px;
+  line-height: 0.8;
+}
+
+.textBlock .descriptionBtn {
+  position: relative;
+  width: fit-content;
+  cursor: pointer;
+  font-family: "Helvetica Neue Bold";
+  margin-top: 20px;
+  font-size: 22px;
+  transition: all 300ms;
+}
+
+.textBlock .descriptionBtn:hover {
+
+}
+
+.description {
+  z-index: 3;
+  opacity: 0;
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+  box-shadow: 0px 4px 27px 0px rgba(23, 23, 23, 0.52);
+  position: absolute;
+  width: 582px;
+  top: 15px;
+  left: 40px;
+  padding: 40px 50px;
+  font-family: "Helvetica Neue Light";
+  font-size: 16px;
+  transition: all 300ms;
+  cursor: default;
+}
+
+.description.shown {
+  opacity: 1;
+  z-index: 3;
+}
+
+//.descriptionBtn a div, .descriptionBtn a:visited div{
+//  color: #fff!important;
+//}
+
+
+.bookingBlock {
+  z-index: 2;
+  max-width: 1115px;
+  width: 95%;
+  left: 50%;
+  bottom: 130px;
+  transform: translateX(-50%);
+  height: 132px;
+  box-shadow: -6.156px 16.914px 40px 0 hsla(0, 0%, 9%, .13);
+  background-color: #fff;
+  border-radius: 5px;
+  position: absolute;
+  background: url(../../../img/booking.jpg) center;
+
+}
+
+@media screen and (max-width: 1100px) {
+  .bannerImgTop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+
+  .descriptionBtn {
+    font-size: 17px !important;
+  }
+
+  .description {
+    z-index: -1;
+    position: absolute;
+    width: 86%;
+    top: -95px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  .textBlock h2 {
+    font-family: "Helvetica Neue Medium";
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .textBlock h1:first-of-type {
+    font-size: 50px;
+  }
+
+  .textBlock h1:last-of-type {
+    font-size: 82px;
+  }
+
+  .bannerImg, .bannerImgTop {
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: calc(100vh - 130px);
+    padding: 0;
+    width: 100%;
+  }
+  .textBlock {
+    position: absolute;
+    bottom: 0;
+    color: #fff !important;
+    transform: scale(1);
+    margin-bottom: 105px;
+  }
+  .textBlock h2:after {
+    background-color: #fff;
+  }
+
+  .bannerWrapper {
+    position: relative;
+    width: 100vw;
+    height: unset;
+    background: none;
+    overflow: visible;
+  }
+  .container:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: center url(../../../img/rooms-and-prices-page/banner-bg.jpg);
+    background-size: cover;
+    filter: brightness(0.7);
+    z-index: -1;
+  }
+
+  .bookingBlock {
+    display: none;
+    bottom: unset;
+    position: relative;
+    bottom: unset;
+    max-width: 1115px;
+    width: 100%;
+    height: 20px;
+    background-color: white;
+    border-radius: 0;
+    margin: 0 0 50px;
+    box-shadow: -7.182px 19.734px 47px 0px rgba(23, 23, 23, 0.13);
+  }
+
+}
+
+@media screen and (max-width: 490px) {
+  .textBlock h1:last-of-type {
+    font-size: 16vw;
+  }
+  .textBlock h1:first-of-type {
+    font-size: 14vw;
+  }
+  .textBlock h2 {
+    font-size: 4.8vw;
+  }
+  .textBlock div {
+    font-size: 6vw;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .bannerWrapper {
+    margin-top: 70px;
+  }
+}
+
+
+

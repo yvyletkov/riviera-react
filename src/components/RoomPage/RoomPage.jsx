@@ -1,6 +1,6 @@
 import React from "react";
 // import s from "./RoomPage.module.scss";
-import RoomsAndPricesPageBanner from "./RoomsAndPricesPageBanner/RoomsAndPricesPageBanner";
+import RoomPageBanner from "./RoomPageBanner/RoomPageBanner";
 import RoomsSlider from "../shared/RoomsSlider/RoomsSlider";
 import CenteredSlider from "../shared/CenteredSlider/CenteredSlider";
 import classic1img from "../../img/rooms-slider/rooms-and-prices-page/classic1.jpg";
@@ -25,6 +25,8 @@ import gridKurortImg6 from "../../img/grid-slider/resort-vacation/6.jpg";
 import gridKurortImg7 from "../../img/grid-slider/resort-vacation/7.jpg";
 import gridKurortImg8 from "../../img/grid-slider/resort-vacation/8.jpg";
 import GridSlider from "../shared/GridSlider/GridSlider";
+import GallerySlider from "../shared/GallerySlider/GallerySlider";
+import RoomDescriptionBlock from "./RoomDescriptionBlock/RoomDescriptionBlock";
 
 let roomsAndPricesPageData = {
     classicSlides: [
@@ -173,16 +175,17 @@ let roomsAndPricesPageData = {
 
 }
 
-const RoomsAndPricesPage = () => {
+const RoomPage = ({campusName, roomName}) => {
     return <>
-        <RoomsAndPricesPageBanner/>
-        <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={roomsAndPricesPageData.modernDescr} data={roomsAndPricesPageData.modernSlides}/>
-        <RoomsSlider lastOfTwo={true} subtitle={'Корпус'} title={'Классик'} textContent={roomsAndPricesPageData.classicDescr} data={roomsAndPricesPageData.classicSlides}/>
+        <RoomPageBanner campusName={campusName} roomName={roomName}/>
+        <div style={{height: "60px"}}></div>
+        <RoomDescriptionBlock/>
         <CenteredSlider title={'Сегодня в программе'}/>
         <GridSlider slides={roomsAndPricesPageData.gridSlides}/>
+        <GallerySlider/>
     </>
 
 };
 
-export default RoomsAndPricesPage;
+export default RoomPage;
 

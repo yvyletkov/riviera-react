@@ -97,8 +97,8 @@
 
   .wrapper:before {
     background-image: url(../../../img/specials-slider/specials-bg-mobile.jpg);
-    background-position: left;
-    background-size: cover;
+    background-position: left bottom;
+    background-size: contain;
     opacity: 0.3;
   }
 
@@ -113,8 +113,10 @@
   .container {
     padding-top: 60px;
   }
+  .leftBlock p {
+    font-size: 14px;
+  }
 }
-
 
 
 

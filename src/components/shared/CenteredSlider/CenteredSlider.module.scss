@@ -13,3 +13,10 @@
     padding-top: 75px;
   }
 }
+
+@media screen and (max-width: 380px){
+  .wrapper {
+    padding-bottom: 75px;
+    padding-top: 65px;
+  }
+}

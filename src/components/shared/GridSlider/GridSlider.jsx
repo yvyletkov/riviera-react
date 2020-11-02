@@ -7,6 +7,7 @@ import styled from "styled-components";
 import arrowImg from "../../../img/sliderArrows/arrowThin.png"
 import MiniSlider from "../MiniSlider/MiniSlider";
 import Swipe from 'react-easy-swipe';
+import $ from "jquery";
 
 const SliderStyles = styled.div`
   .slick-slide {
@@ -81,12 +82,29 @@ function PrevArrow({style, onClick}) {
 
 const GridSlider = ({slides}) => {
 
+    const bodyEl = document.getElementsByTagName("body")[0];
+    React.useEffect( function () {
+        const sliderElementsObj = $("#verticalSliderWrapper *");
+        const sliderElementsArr = Object.values(sliderElementsObj);
+        const whiteBg = Object.values($('#whiteGridSliderBg'))[0];
+        const h2El = Object.values($('h2'));
+        const h4El = Object.values($('h4'));
+        // console.log('index:', sliderElementsArr.indexOf(whiteBg));
+        // console.log('sliderElementsArr', sliderElementsArr);
+        $(document).on('touchstart', (e) => {
+            // console.log(e.target === whiteBg);
+            // console.log('target: ', e.target);
+            // console.log(whiteBg);
+            if (!sliderElementsArr.includes(e.target) || e.target === whiteBg || h2El.includes(e.target) || h4El.includes(e.target)) enableScroll()
+        })
+    }, []);
+
     let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
     let [swipedVertically, setSwipedVertically] = React.useState(0);
 
-    const bodyEl = document.getElementsByTagName("body")[0];
-
     const disableScroll = () => bodyEl.classList.add("fixed");
+    const enableScroll = () => bodyEl.classList.remove("fixed");
+
 
     const afterChangeHandler = (index) => setCurrentSlideIndex(index);
 
@@ -96,10 +114,6 @@ const GridSlider = ({slides}) => {
         // console.log(`Moved ${position.y} pixels vertically`, event);
         setSwipedVertically(position.y)
     }
-
-    // const onSwipeEnd = (position, event) => {
-    //     console.log('state swipedVertically: ', swipedVertically);
-    // }
 
     const settings = {
         afterChange: afterChangeHandler,
@@ -133,10 +147,10 @@ const GridSlider = ({slides}) => {
     }, [currentSlideIndex]);
 
     React.useEffect(() => {
-        if (swipedVertically > 50) {
+        if (swipedVertically > 90) {
             if (currentSlideIndex === 0) sliderRef.current.slickGoTo(slides.length);
             else sliderRef.current.slickPrev();
-        } else if (swipedVertically < -50) {
+        } else if (swipedVertically < -90) {
             if (currentSlideIndex === slides.length - 1) sliderRef.current.slickGoTo(0);
             else sliderRef.current.slickNext();
         }

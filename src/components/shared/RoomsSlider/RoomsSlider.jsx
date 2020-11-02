@@ -7,6 +7,7 @@ import Headline from "../Headline/Headline";
 import {NextArrow, PrevArrow} from "../SliderArrows/sliderArrowButtons";
 import MiniSlider from "../MiniSlider/MiniSlider";
 import Accordeon from "../Accordeon/Accordeon";
+import CirqleTip from "../CirqleTip/CirqleTip";
 
 
 const SliderStyles = styled(Slider)`
@@ -74,7 +75,7 @@ const RoomsSlider = ({title = "Заголовок", subtitle = "Какой-то"
 
     React.useEffect(() => {
         const coords = getCoords(sliderWrapperRef.current);
-        setSliderCoords(coords - 130);
+        setSliderCoords(window.innerWidth < 768 ? coords - 130 : coords - 300);
     }, [sliderCoords]);
 
     React.useEffect(() => {
@@ -86,7 +87,7 @@ const RoomsSlider = ({title = "Заголовок", subtitle = "Какой-то"
         return () => window.removeEventListener('scroll', listenToScroll)
     }, []);
 
-    const cirqleBtnHandler = () => setAccordeonStatus(!accordeonStatus);
+    const cirqleTipHandler = () => setAccordeonStatus(!accordeonStatus);
 
     const afterChangeHandler = index => setCurrentSlideIndex(index);
 
@@ -137,8 +138,7 @@ const RoomsSlider = ({title = "Заголовок", subtitle = "Какой-то"
             <div className={lastOfTwo ? s.container + ' ' + s.lastOfTwo : s.container}>
                 <div className={s.leftBlock}>
                     <Headline subtitle={subtitle} title={title}/>
-                    <span className={accordeonStatus ? s.circleBtn + ' ' + s.active : s.circleBtn}
-                          onClick={cirqleBtnHandler}>!</span>
+                    <CirqleTip onClick={cirqleTipHandler} accordeonStatus={accordeonStatus}/>
                     <p><b>{textContent[0]}</b></p>
                     <Accordeon withBtn={false} zeroHeight={true} status={accordeonStatus}>{textContent[1]}</Accordeon>
                 </div>

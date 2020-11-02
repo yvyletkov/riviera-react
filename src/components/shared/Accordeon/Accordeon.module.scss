@@ -1,15 +1,23 @@
 .accordeon {
+  margin-top: 15px;
   margin-bottom: 20px !important;
 }
 
 .accordeon.zeroHeight {
+  margin-top: 0 !important;
   margin-bottom: 0 !important;
+}
+
+.accordeon p{
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin: 0;
 }
 
 .text {
   position: relative;
-  margin-bottom: 10px !important;
-  max-height: 100px;
+  margin-bottom: 0px !important;
+  max-height: 105px;
   overflow: hidden;
   transition: all 500ms;
 }
@@ -19,7 +27,8 @@
 }
 
 .text.opened {
-  max-height: 350px;
+  margin: 15px 0 !important;
+  max-height: 400px;
 }
 
 .text:before{

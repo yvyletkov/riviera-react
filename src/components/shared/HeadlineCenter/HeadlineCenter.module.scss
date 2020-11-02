@@ -19,3 +19,10 @@ h2.headlineCenter {
     margin-bottom: 30px;
   }
 }
+
+@media screen and (max-width: 380px) {
+  h2.headlineCenter {
+    margin-bottom: 23px;
+    font-size: 30px;
+  }
+}
