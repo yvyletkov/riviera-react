@@ -48,43 +48,7 @@ const SliderStyles = styled(Slider)`
 }
 `;
 
-const imgMassive = [
-    {
-        img: img1,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00 8 августа",
-        house: "Корпус Classic",
-        key: 1,
-    },
-    {
-        img: img2,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00 8 августа",
-        house: "Корпус Classic",
-        key: 2,
-    },
-    {
-        img: img3,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00 8 августа",
-        house: "Корпус Classic",
-        key: 3,
-    },
-    {
-        img: img4,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00 8 августа",
-        house: "Корпус Classic",
-        key: 4,
-    },
-];
-
-
-const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-то", textLink = "#", data = imgMassive}) => {
+const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-то", textLink = "#", slides}) => {
 
     const settings = {
         infinite: true,
@@ -108,7 +72,7 @@ const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-�
         ]
     };
 
-  const items = data.map((item, index) => {
+  const items = slides.map((item, index) => {
         const {img, title, subtitle, time, house, key} = item;
         return (
             <div className="SliderElement" key={key}>

@@ -32,7 +32,7 @@ const SliderStyles = styled.div`
   }
   
   .slick-dots {
-    bottom: -30px;
+    bottom: -32px;
   }
   .slick-dots li {
     margin: 0
@@ -43,52 +43,7 @@ const SliderStyles = styled.div`
 }
 `;
 
-const imgMassive = [
-    {
-        img: img1,
-        title: "Корпус Modern",
-        description: "Номер: стандарт улучшенный двухместный",
-        href: "#",
-        key: 1,
-    },
-    {
-        img: img2,
-        title: "Корпус Modern",
-        description: "Номер: стандарт улучшенный двухместный",
-        href: "#",
-        key: 2,
-    },
-    {
-        img: img3,
-        title: "Корпус Modern",
-        description: "Номер: стандарт улучшенный двухместный",
-        href: "#",
-        key: 3,
-    },
-    {
-        img: img4,
-        title: "Корпус Modern",
-        description: "Номер: стандарт улучшенный двухместный",
-        href: "#",
-        key: 4,
-    },
-    {
-        img: img5,
-        title: "Корпус Modern",
-        description: "Номер: стандарт улучшенный двухместный",
-        href: "#",
-        key: 5,
-    },
-    {
-        img: img6,
-        title: "Корпус Modern",
-        description: "Номер: стандарт улучшенный двухместный",
-        href: "#",
-        key: 6,
-    },
-];
-
-const LargeGallerySlider = ({blockName = "Фотогалерея"}) => {
+const LargeGallerySlider = ({blockName = "Фотогалерея", slides}) => {
 
     const settings = {
         dots: false,
@@ -124,7 +79,7 @@ const LargeGallerySlider = ({blockName = "Фотогалерея"}) => {
         ]
     };
 
-    const items = imgMassive.map((item) => {
+    const items = slides.map((item) => {
         const {img, title, key} = item;
         return (
             <div className={s.card} key={key}>

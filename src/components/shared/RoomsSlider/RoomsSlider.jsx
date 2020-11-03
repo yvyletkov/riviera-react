@@ -63,7 +63,7 @@ const RoomsSlider = ({title = "Заголовок", subtitle = "Какой-то"
 
     React.useEffect(() => {
         const coords = getCoords(sliderWrapperRef.current);
-        setSliderCoords(window.innerWidth < 768 ? coords - 130 : coords - 300);
+        setSliderCoords(window.innerWidth < 768 ? coords - 200 : coords - 300);
     }, [sliderCoords]);
 
     React.useEffect(() => {
@@ -122,8 +122,8 @@ const RoomsSlider = ({title = "Заголовок", subtitle = "Какой-то"
     const miniSliderItems = data.map(item => item.title);
 
     return (
-        <div ref={sliderWrapperRef} className={s.wrapper + ' roomSlider'}>
-            <div className={lastOfTwo ? s.container + ' ' + s.lastOfTwo : s.container}>
+        <div ref={sliderWrapperRef} className={lastOfTwo ? s.wrapper + ' ' + s.lastOfTwo : s.wrapper}>
+            <div className={s.container}>
                 <div className={s.leftBlock}>
                     <Headline subtitle={subtitle} title={title}/>
                     <CirqleTip onClick={cirqleTipHandler} accordeonStatus={accordeonStatus}/>

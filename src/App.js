@@ -8,8 +8,8 @@ import HomePage from "./components/HomePage/HomePage";
 import {BrowserRouter, Route} from "react-router-dom";
 import BottomMenu from "./components/shared/BottomMenu/BottomMenu";
 import RoomsAndPricesPage from "./components/RoomsAndPricesPage/RoomsAndPricesPage";
-import $ from "jquery"
 import RoomPage from "./components/RoomPage/RoomPage";
+import {roomPageData} from "./data";
 
 
 function App() {
@@ -17,13 +17,19 @@ function App() {
     return (
         <BrowserRouter>
             <Header/>
-            <Route exact path='/modern/standart' component={() => <RoomPage campusName={'Модерн'} roomName={'Стандарт'}/>}/>
-            <Route path='/rooms-and-prices' component={RoomsAndPricesPage}/>
-            <Route exact path='/' component={HomePage}/>
+
+            <Route path='/modern/standart' exact
+                   component={() => <RoomPage data={roomPageData.modernStandart}/>}/>
+
+            <Route path='/rooms-and-prices'
+                   component={() => <RoomsAndPricesPage/>}/>
+
+            <Route path='/' exact
+                   component={() => <HomePage/>}/>
+
             <Footer/>
             <BottomMenu/>
         </BrowserRouter>
-
     );
 }
 

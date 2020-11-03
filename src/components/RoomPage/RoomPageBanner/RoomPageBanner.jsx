@@ -14,7 +14,7 @@ const RoomPageBanner = ({campusName, roomName}) => {
                     <h2>{campusName}</h2>
                     <h1>Номер</h1>
                     <h1>{roomName}</h1>
-                    <Scroll to="gallery" spy={true} smooth={true} offset={-70} duration={700}>
+                    <Scroll to="gallery" spy={true} smooth={true} offset={-150} duration={700}>
                         <div className={s.descriptionBtn}>
                             Смотреть фото ↓
                         </div>
