@@ -4,10 +4,13 @@
   position: relative;
   margin: 0 15px;
   border-radius: 5px;
+  box-shadow: -14.444px 19.167px 27px 0px rgba(23, 23, 23, 0.14);
 }
 
 .card .img {
   border-radius: 5px;
+  object-fit: cover;
+  height: 100%;
 }
 
 .content {

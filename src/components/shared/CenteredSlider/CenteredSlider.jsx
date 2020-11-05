@@ -2,16 +2,11 @@ import React from "react";
 import Slider from "react-slick";
 import s from "./CenteredSlider.module.scss";
 import CenteredSliderItem from "./CenteredSliderItem/CenteredSliderItem";
-import afisha1 from "../../../img/centered-slider/home-page/afisha1.png";
-import afisha2 from "../../../img/centered-slider/home-page/afisha2.png";
-import afisha3 from "../../../img/centered-slider/home-page/afisha3.png";
-import afisha4 from "../../../img/centered-slider/home-page/afisha4.png";
-import afisha5 from "../../../img/centered-slider/home-page/afisha5.png";
 import styled from "styled-components";
 import HeadlineCenter from "../HeadlineCenter/HeadlineCenter";
 import {NextArrow, PrevArrow} from "../SliderArrows/sliderArrowButtons";
 
-const StyledSlider = styled(Slider)`
+const SliderStyles = styled.div`
   .slick-next:before,
   .slick-prev:before {
     color: #000;
@@ -30,80 +25,27 @@ const StyledSlider = styled(Slider)`
   }
   
   .slick-dots {
-    bottom: -45px;
+    bottom: -32px;
   }
   .slick-dots li {
     margin: 0
   }
+
+.slick-slide img {
+  width: 100%;
+  margin: 0 40px 0 0;
+}
+
+.slick-track {
+  margin: 0 auto;
+}
 }
 `;
 
-const imgMassive = [
-    {
-        img: afisha1,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00",
-        date: "8 августа",
-        campus: "Корпус",
-        campusName: "Classic",
-        key: 1,
-    },
-    {
-        img: afisha2,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00",
-        date: "8 августа",
-        campus: "Корпус",
-        campusName: "Classic",
-        key: 2,
-    },
-    {
-        img: afisha3,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00",
-        date: "8 августа",
-        campus: "Корпус",
-        campusName: "Classic",
-        key: 3,
-    },
-    {
-        img: afisha4,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00",
-        date: "8 августа",
-        campus: "Корпус",
-        campusName: "Classic",
-        key: 4,
-    },
-    {
-        img: afisha5,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00",
-        date: "8 августа",
-        campus: "Корпус",
-        campusName: "Classic",
-        key: 5,
-    },
-    {
-        img: afisha5,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00",
-        date: "8 августа",
-        campus: "Корпус",
-        campusName: "Classic",
-        key: 6,
-    },
-];
 
-const CenteredSlider = ({title = "Какой-то заголовок"}) => {
-    const items = imgMassive.map((data) => {
-        const {img, title, subtitle, time, date, campus, campusName, key} = data;
+const CenteredSlider = ({title = "Какой-то заголовок", slides}) => {
+    const items = slides.map((item) => {
+        const {img, title, subtitle, time, date, campus, campusName, key} = item;
         return (
             <div className="sliderElement" key={key}>
                 <CenteredSliderItem
@@ -156,9 +98,9 @@ const CenteredSlider = ({title = "Какой-то заголовок"}) => {
     return (
         <div className={s.wrapper}>
             <HeadlineCenter title={title}/>
-            <StyledSlider>
+            <SliderStyles>
                 <Slider {...settings}>{items}</Slider>
-            </StyledSlider>
+            </SliderStyles>
         </div>
     );
 };

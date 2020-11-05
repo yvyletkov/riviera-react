@@ -25,6 +25,11 @@
   margin: 16px 0 0;
 }
 
+.footerFlex img {
+  object-fit: contain;
+}
+
+
 .footerFlex p {
   margin: 0 0 0 10px;
 }
@@ -157,6 +162,9 @@
 }
 
 @media screen and (max-width: 650px) {
+  .footerFlex {
+    margin-top: 10px;
+  }
   .flexWrapper > p {
     font-size: 12px;
   }
@@ -166,8 +174,8 @@
   .footerNav li {
     margin-top: 6px;
   }
-  .footerNav ul {
-    font-size: 12px;
+  .footerNav ul li {
+    font-size: 12px !important;
     //padding: 0 20px;
   }
 }
@@ -177,14 +185,14 @@
     padding: 0 25px;
     padding-bottom: 25px;
   }
-  .footerGray > p {
-    font-size: 12px;
+  .footerGray > p, .footerGray > p > a {
+    font-size: 12px !important;
   }
 }
 
 @media screen and (max-width: 400px) {
-  .footerNav ul {
-    font-size: 11px;
+  .footerNav ul li {
+    font-size: 11px !important;
   }
   .footerNav ul:not(:last-child) {
     margin-right: 20px;

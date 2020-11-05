@@ -1,6 +1,6 @@
 .wrapper {
   position: relative;
-  max-width: 420px;
+  max-width: 470px;
   width: 100%;
   overflow: visible;
   align-self: flex-end;
@@ -9,10 +9,11 @@
 }
 
 .miniSliderItem {
+  cursor: pointer;
   text-align: center;
   color: #B4B4B4;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 13px;
   display: flex;
   align-items: center
 }
@@ -24,5 +25,6 @@
 @media screen and (max-width: 768px){
   .miniSliderItem {
     text-align: right;
+    font-size: 12px;
   }
 }

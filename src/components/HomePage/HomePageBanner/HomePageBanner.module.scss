@@ -94,6 +94,7 @@ $black: #171717;
   box-shadow: -6.156px 16.914px 40px 0px rgba(23, 23, 23, 0.13);
   background-color: white;
   border-radius: 5px;
+  background: url(../../../img/booking.jpg) center;
 }
 
 .playBtn {
@@ -127,14 +128,14 @@ $black: #171717;
     display: none;
   }
   .container {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 60px);
   }
   .rightSide {
     display: none;
   }
   .textBlock {
     color: #fff !important;
-    margin-bottom: 75px;
+    margin-bottom: 100px;
   }
   .textBlock h2:after {
     background-color: #fff;

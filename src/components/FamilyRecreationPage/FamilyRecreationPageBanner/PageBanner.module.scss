@@ -1,0 +1,260 @@
+$black: #171717;
+
+.container {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.bannerWrapper {
+  position: relative;
+  margin-top: 0;
+  height: 800px;
+  width: 100%;
+  background-color: #f8f8f8;
+  overflow: hidden;
+  //box-shadow: 0px 0px 40.94px 5.06px rgba(3, 7, 8, 0.09);
+}
+
+.flexWrapper {
+  position: relative;
+  display: flex;
+}
+
+.leftSide {
+  padding-top: 195px;
+  padding-left: 20px;
+  z-index: 1;
+  position: relative;
+}
+
+.pageNameBlock {
+  color: $black;
+}
+
+.pageNameBlock h2 {
+  font-family: "Helvetica Neue Medium";
+  font-size: 27px;
+  margin-bottom: 14px;
+  position: relative;
+  width: fit-content;
+}
+
+.pageNameBlock h2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 53px;
+  height: 1px;
+  background-color: #171717;
+  top: 14px;
+  right: -66px;
+}
+
+.pageNameBlock h1:first-of-type {
+  text-transform: uppercase;
+  font-family: "Helvetica Neue Black";
+}
+
+.pageNameBlock h1:last-of-type {
+  text-transform: uppercase;
+  font-family: "Helvetica Neue Black";
+  line-height: 0.9;
+}
+
+.pageNameBlock div {
+  font-family: "Helvetica Neue Bold";
+  font-size: 34px;
+}
+
+.descriptionWrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.descriptionBtn {
+  position: relative;
+  width: fit-content;
+  cursor: pointer;
+  font-family: "Helvetica Neue Bold";
+  margin-top: 20px;
+  font-size: 21px;
+  transition: all 300ms;
+}
+
+.description {
+  z-index: 3;
+  opacity: 0;
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+  box-shadow: 0px 4px 27px 0px rgba(23, 23, 23, 0.52);
+  position: absolute;
+  width: 582px;
+  top: 25px;
+  left: 40px;
+  padding: 40px 50px;
+  font-family: "Helvetica Neue Light";
+  font-size: 16px;
+  text-align: justify;
+  transition: all 300ms;
+  cursor: default;
+}
+
+.description.shown {
+  opacity: 1;
+  z-index: 3;
+}
+
+.rightSide {
+  position: absolute;
+  left: 43%;
+}
+
+.cirqles {
+  position: absolute;
+  top: 187px;
+  left: -251px;
+  z-index: 0;
+}
+
+.bookingBlock {
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 120px;
+  max-width: 1115px;
+  width: 95%;
+  left: 50%;
+  height: 132px;
+  box-shadow: -6.156px 16.914px 40px 0px rgba(23, 23, 23, 0.13);
+  background-color: white;
+  border-radius: 5px;
+  background: url(../../../img/booking.jpg) center;
+}
+
+.playBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 298px;
+  right: 10px;
+  border-radius: 50%;
+  box-shadow: -10.261px 28.191px 57px 0px rgba(255, 108, 57, 0.41);
+  width: 65px;
+  height: 65px;
+  background-color: #ff6c39;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 200ms;
+}
+
+.playBtn img {
+  width: 23px;
+  height: 23px;
+}
+
+.playBtn:hover {
+  background-color: #d45a2f;
+}
+
+@media screen and (max-width: 768px) {
+  .descriptionBtn {
+    font-family: "Helvetica Neue";
+    font-size: 15px !important;
+    color: #fff;
+  }
+  .description {
+    z-index: -1;
+    position: absolute;
+    width: 86%;
+    top: -95px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .playBtn {
+    display: none;
+  }
+  .container {
+    height: calc(100vh - 60px);
+  }
+  .rightSide {
+    display: none;
+  }
+  .pageNameBlock {
+    color: #fff !important;
+    margin-bottom: 100px;
+  }
+  .pageNameBlock h2:after {
+    background-color: #fff;
+  }
+  .leftSide {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
+  }
+  .flexWrapper {
+    height: 100%;
+  }
+  .bannerWrapper {
+    position: relative;
+    width: 100vw;
+    height: unset;
+    background: none;
+  }
+  .container:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: center url(../../../img/home-page/banner-mobile-img.jpg);
+    background-size: cover;
+    filter: brightness(0.7);
+    z-index: -1;
+  }
+
+  .bookingBlock {
+    display: none;
+    bottom: unset;
+    position: relative;
+    bottom: unset;
+    max-width: 1115px;
+    width: 100%;
+    height: 20px;
+    background-color: white;
+    border-radius: 0;
+    margin: 0 0 50px;
+    box-shadow: -7.182px 19.734px 47px 0px rgba(23, 23, 23, 0.13);
+  }
+
+}
+
+@media screen and (max-width: 490px) {
+  .pageNameBlock h1:last-of-type {
+    font-size: 20vw;
+  }
+  .pageNameBlock h1:first-of-type {
+    font-size: 14vw;
+  }
+  .pageNameBlock h2 {
+    font-size: 4.8vw;
+  }
+  .pageNameBlock div {
+    font-size: 6vw;
+  }
+}
+
+
+

@@ -2,10 +2,6 @@ import React from "react";
 import Slider from "react-slick";
 import s from "./SpecialsSlider.module.scss";
 import SpecialsSliderItem from "./SpecialsSliderItem/SpecialsSliderItem";
-import img1 from "../../../img/specials-slider/home-page/spetspredlozheniya1.jpg";
-import img2 from "../../../img/specials-slider/home-page/spetspredlozheniya2.jpg";
-import img3 from "../../../img/specials-slider/home-page/spetspredlozheniya3.jpg";
-import img4 from "../../../img/specials-slider/home-page/spetspredlozheniya4.jpg";
 import styled from "styled-components";
 import Headline from "../Headline/Headline";
 import arrowImg from "../../../img/icons/right-arrow.svg";
@@ -31,6 +27,15 @@ const SliderStyles = styled(Slider)`
   }
   .slick-dots li {
     margin: 0
+  }
+  
+.slick-slide img {
+  width: 100%;
+  margin: 0 40px 0 0;
+}
+
+.slick-track {
+  margin: 0 auto;
 }
 @media screen and (max-width: 1200px){
   .slick-slider {
@@ -39,43 +44,7 @@ const SliderStyles = styled(Slider)`
 }
 `;
 
-const imgMassive = [
-    {
-        img: img1,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00 8 августа",
-        house: "Корпус Classic",
-        key: 1,
-    },
-    {
-        img: img2,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00 8 августа",
-        house: "Корпус Classic",
-        key: 2,
-    },
-    {
-        img: img3,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00 8 августа",
-        house: "Корпус Classic",
-        key: 3,
-    },
-    {
-        img: img4,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00 8 августа",
-        house: "Корпус Classic",
-        key: 4,
-    },
-];
-
-
-const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-то", textLink = "#", data = imgMassive}) => {
+const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-то", textLink = "#", slides}) => {
 
     const settings = {
         infinite: true,
@@ -99,7 +68,7 @@ const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-�
         ]
     };
 
-  const items = data.map((item, index) => {
+  const items = slides.map((item, index) => {
         const {img, title, subtitle, time, house, key} = item;
         return (
             <div className="SliderElement" key={key}>

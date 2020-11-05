@@ -96,7 +96,7 @@
 .textBlock p {
   font-size: 16px;
   margin-bottom: 40px;
-  line-height: 1.25;
+  line-height: 1.15;
   text-align: justify;
 }
 
@@ -176,7 +176,7 @@
   .wrapper {
     height: auto;
     padding-top: 0;
-    padding-bottom: 275px;
+    padding-bottom: 245px;
     background-color: #f2f2f2;
   }
 
@@ -200,23 +200,26 @@
   }
 
   .imageBlock form {
-    height: 275px;
-    bottom: -275px;
+    height: 245px;
+    bottom: -245px;
     width: 100%;
     top: unset;
     right: unset;
     background: #fefcfc;
     box-shadow: none;
     padding: 40px 30px;
-
+    padding-bottom: 0;
   }
 
   .imageBlock form input {
+    padding: 24px 40px;
     box-sizing: border-box;
     border-radius: 5px;
     width: 100%;
     background-color: rgb(255, 255, 255);
-    box-shadow: inset 0px 4px 16px 0px rgba(32, 35, 35, 0.1);
+    -webkit-box-shadow: inset -2px 2px 32px -21px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset -2px 2px 32px -21px rgba(0,0,0,0.75);
+    box-shadow: inset -2px 2px 32px -21px rgba(0,0,0,0.75);
   }
 
 
@@ -238,5 +241,9 @@
 
   .textBlock p {
     margin-bottom: 30px;
+  }
+
+  .textContent p {
+    font-size: 14px;
   }
 }

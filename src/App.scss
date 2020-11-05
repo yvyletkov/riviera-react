@@ -1,9 +1,15 @@
 * {
   font-family: Helvetica Neue Light;
+  font-size: 16px;
 }
 
 *:focus {
   outline: none;
+}
+
+ul {
+  margin: 0;
+  padding-left: 20px;
 }
 
 b, strong {
@@ -22,20 +28,30 @@ body.fixed {
   overflow: hidden;
 }
 
+section.section {
+  padding-bottom: 80px;
+}
+
+section.section.first {
+  padding-top: 50px;
+}
+
+section.section.last {
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  section.section {
+    padding-bottom: 60px;
+  }
+}
+
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
-}
-
-.slick-slide img {
-  width: 100%;
-  margin: 0 40px 0 0;
-}
-
-.slick-track {
-  margin: 0 auto;
 }
 
 .slick-dots li button:before {
@@ -51,7 +67,7 @@ body.fixed {
   height: 180px;
   background-color: #fff;
   position: absolute;
-  top: -35px;
+  top: -38px;
   left: 0;
   z-index: 1
 }
@@ -62,4 +78,10 @@ body.fixed {
 }
 // END ---- for Grid Slider
 
+
+@media screen and (max-width: 768px) {
+  * {
+    font-size: 14px;
+  }
+}
 

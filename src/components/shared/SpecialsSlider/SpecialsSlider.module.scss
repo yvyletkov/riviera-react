@@ -44,11 +44,6 @@
   }
 }
 
-//
-//.leftBlock h4 {
-//  font-size: 26px;
-//}
-
 .leftBlock a {
   font-size: 14px;
   font-family: "Helvetica Neue Roman";
@@ -97,24 +92,26 @@
 
   .wrapper:before {
     background-image: url(../../../img/specials-slider/specials-bg-mobile.jpg);
-    background-position: left;
-    background-size: cover;
-    opacity: 0.9;
+    background-position: left bottom;
+    background-size: contain;
+    opacity: 0.3;
   }
 
   .container {
-    padding-top: 10px;
     height: unset;
-    padding-bottom: 60px;
+    padding-bottom: 37px;
+    padding-top: 0;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .leftBlock p {
+    font-size: 14px;
+  }
   .container {
-    padding-top: 60px;
+    padding-top: 0;
   }
 }
-
 
 
 

@@ -4,6 +4,12 @@
   overflow: hidden;
 }
 
+.miniSliderWrapper {
+  margin-bottom: 20px;
+  width: 900px;
+  float: right;
+}
+
 .wrapper:before {
   content: "";
   position: absolute;
@@ -18,33 +24,27 @@
 .container {
   box-sizing: border-box;
   position: relative;;
-  padding-top: 225px;
+  padding-top: 190px;
   max-width: 1200px;
-  height: 640px;
+  height: 565px;
   width: 100%;
   margin: 0 auto;
   //border: thin solid black;
 }
 
-.container.lastOfTwo .rightBlock {
+.wrapper.lastOfTwo .rightBlock {
   top: 8%
 }
 
-.container.lastOfTwo {
+.wrapper.lastOfTwo .container {
   padding-top: 150px;
   height: 550px;
 }
-
-
 
 .leftBlock {
   box-sizing: border-box;
   width: 420px;
   padding: 0 25px 0 15px;
-}
-
-.leftBlock .circleBtn {
-  display: none;
 }
 
 .leftBlock p {
@@ -71,7 +71,7 @@
   overflow: hidden;
   width: 1165px;
   height: unset;
-  top: 23%;
+  top: 80px;
   right: -385px;
 }
 
@@ -94,31 +94,38 @@
     height: unset;
     bottom: unset;
     right: unset;
+    top: 0;
   }
 
   .wrapper:before {
+    display: none;
+  }
+
+  .wrapper.lastOfTwo:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
     background-image: url(../../../img/specials-slider/specials-bg-mobile.jpg);
     background-position: left;
     background-size: cover;
-    opacity: 0.9;
+    opacity: 0.4;
   }
 
-  .container, .container.lastOfTwo {
-    padding-top: 10px;
+  .wrapper .container {
+    padding-top: 60px;
+  }
+  .wrapper.lastOfTwo .container {
+    padding-top: 50px;
+  }
+  .wrapper.lastOfTwo .container, .wrapper .container{
     height: unset;
-    padding-bottom: 60px;
+    padding-bottom: 35px;
   }
-}
 
-
-.miniSliderWrapper {
-  margin-bottom: 20px;
-  width: 900px;
-  float: right;
-}
-
-
-@media screen and (max-width: 1200px) {
   .miniSliderWrapper {
     margin: 0 auto;
     margin-bottom: 20px;
@@ -134,38 +141,20 @@
     float: right;
     padding-right: 20px;
   }
-
-  .container, .container.lastOfTwo {
-    padding-top: 60px;
-  }
   .leftBlock {
     margin-bottom: 8px;
   }
   .leftBlock p {
     margin-bottom: 0px;
   }
-
-  .leftBlock .circleBtn {
-    font-family: 'Helvetica Neue Bold';
-    display: inline-block;
-    margin-left: 7px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    text-align: center;
-    background-color: #f4f4f4;
-    color: #b0b0b0;
-    font-size: 21px;
-    padding-top: 6px;
-    box-sizing: border-box;
-    position: relative;
-    top: -4px;
-    transition: all 200ms;
+  .rightBlock {
+    top: unset;
   }
+}
 
-  .leftBlock .circleBtn.active {
-    background-color: #cccccc;
-    color: #fff;
+@media screen and (max-width: 480px) {
+  .leftBlock p {
+    font-size: 14px;
   }
 }
 
