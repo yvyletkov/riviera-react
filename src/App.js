@@ -10,6 +10,7 @@ import BottomMenu from "./components/shared/BottomMenu/BottomMenu";
 import RoomsAndPricesPage from "./components/RoomsAndPricesPage/RoomsAndPricesPage";
 import RoomPage from "./components/RoomPage/RoomPage";
 import {roomPageData} from "./data";
+import FamilyRecreationPage from "./components/FamilyRecreationPage/FamilyRecreationPage";
 
 
 function App() {
@@ -18,8 +19,14 @@ function App() {
         <BrowserRouter>
             <Header/>
 
+            <Route path='/family-recreation' exact
+                   component={() => <FamilyRecreationPage/>}/>
+
             <Route path='/modern/standart' exact
                    component={() => <RoomPage data={roomPageData.modernStandart}/>}/>
+
+            <Route path='/modern/junior-suite' exact
+                   component={() => <RoomPage data={roomPageData.modernJuniorSuite}/>}/>
 
             <Route path='/rooms-and-prices'
                    component={() => <RoomsAndPricesPage/>}/>

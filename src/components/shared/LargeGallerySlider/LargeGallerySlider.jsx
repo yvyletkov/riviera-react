@@ -1,14 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
 import s from "./LargeGallerySlider.module.scss";
-
-import img1 from "../../../img/gallery-slider/home-page/fotogalereya1.jpg";
-import img2 from "../../../img/gallery-slider/home-page/fotogalereya2.jpg";
-import img3 from "../../../img/gallery-slider/home-page/fotogalereya3.jpg";
-import img4 from "../../../img/gallery-slider/home-page/fotogalereya4.jpg";
-import img5 from "../../../img/gallery-slider/home-page/fotogalereya5.jpg";
-import img6 from "../../../img/gallery-slider/home-page/fotogalereya6.jpg";
-
 import styled from "styled-components";
 import HeadlineCenter from "../HeadlineCenter/HeadlineCenter";
 import {NextArrow, PrevArrow} from "../SliderArrows/sliderArrowButtons";

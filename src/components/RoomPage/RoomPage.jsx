@@ -5,7 +5,6 @@ import RoomDescriptionBlock from "./RoomDescriptionBlock/RoomDescriptionBlock";
 import LargeGallerySlider from "../shared/LargeGallerySlider/LargeGallerySlider";
 import SpecialsSlider from "../shared/SpecialsSlider/SpecialsSlider";
 import MapSection from "../shared/MapSection/MapSection";
-import {roomPageData} from "../../data";
 
 const RoomPage = ({data}) => {
     return <>

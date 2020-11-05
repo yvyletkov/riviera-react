@@ -47,11 +47,11 @@ $black: #171717;
   margin: 0 auto;
 }
 
-.textBlock {
+.pageNameBlock {
   color: $black;
 }
 
-.textBlock h2 {
+.pageNameBlock h2 {
   font-family: "Helvetica Neue Medium";
   font-size: 27px;
   margin-bottom: 18px;
@@ -59,7 +59,7 @@ $black: #171717;
   width: fit-content;
 }
 
-.textBlock h2:after {
+.pageNameBlock h2:after {
   content: "";
   position: absolute;
   display: block;
@@ -70,13 +70,13 @@ $black: #171717;
   right: -73px;
 }
 
-.textBlock h1:first-of-type {
+.pageNameBlock h1:first-of-type {
   text-transform: uppercase;
   font-family: "Helvetica Neue Black";
   font-size: 78px;
 }
 
-.textBlock h1:last-of-type {
+.pageNameBlock h1:last-of-type {
   white-space: nowrap;
   text-transform: uppercase;
   font-family: "Helvetica Neue Black";
@@ -84,7 +84,7 @@ $black: #171717;
   line-height: 0.9;
 }
 
-.textBlock .descriptionBtn {
+.pageNameBlock .descriptionBtn {
   position: relative;
   width: fit-content;
   cursor: pointer;
@@ -92,10 +92,6 @@ $black: #171717;
   margin-top: 20px;
   font-size: 22px;
   transition: all 300ms;
-}
-
-.textBlock .descriptionBtn:hover {
-
 }
 
 .description {
@@ -144,7 +140,7 @@ $black: #171717;
 }
 
 @media screen and (max-width: 768px) {
-  .textBlock .descriptionBtn {
+  .pageNameBlock .descriptionBtn {
     font-family: "Helvetica Neue";
     font-size: 15px !important;
     color: #fff;
@@ -160,17 +156,17 @@ $black: #171717;
     font-size: 12px;
   }
 
-  .textBlock h2 {
+  .pageNameBlock h2 {
     font-family: "Helvetica Neue Medium";
     font-size: 22px;
     margin-bottom: 10px;
   }
 
-  .textBlock h1:first-of-type {
+  .pageNameBlock h1:first-of-type {
     font-size: 50px;
   }
 
-  .textBlock h1:last-of-type {
+  .pageNameBlock h1:last-of-type {
     font-size: 82px;
   }
 
@@ -186,14 +182,14 @@ $black: #171717;
     padding: 0;
     width: 100%;
   }
-  .textBlock {
+  .pageNameBlock {
     position: absolute;
     bottom: 0;
     color: #fff !important;
     transform: scale(1);
     margin-bottom: 105px;
   }
-  .textBlock h2:after {
+  .pageNameBlock h2:after {
     background-color: #fff;
   }
 
@@ -234,16 +230,16 @@ $black: #171717;
 }
 
 @media screen and (max-width: 490px) {
-  .textBlock h1:last-of-type {
+  .pageNameBlock h1:last-of-type {
     font-size: 20vw;
   }
-  .textBlock h1:first-of-type {
+  .pageNameBlock h1:first-of-type {
     font-size: 14vw;
   }
-  .textBlock h2 {
+  .pageNameBlock h2 {
     font-size: 4.8vw;
   }
-  .textBlock div {
+  .pageNameBlock div {
     font-size: 6vw;
   }
 }

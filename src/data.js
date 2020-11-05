@@ -46,7 +46,7 @@ import iconView from "./img/room-page/mountains.png";
 import iconShower from "./img/room-page/shower.png";
 import iconSpace from "./img/room-page/ploshchad.png";
 import iconConnected from "./img/room-page/connected.png";
-import React from "react";
+import familyRecreationBannerImg from "./img/banners/family-recreation.png";
 
 export const homePageData = {
     gridSlides: [
@@ -735,7 +735,570 @@ export const roomPageData = {
                 key: 4,
             },
         ],
+    },
+    modernJuniorSuite: {
+        campusName: 'Модерн',
+        roomName: 'Полулюкс',
+        largeGallerySlides: [
+            {
+                img: img1,
+                title: "Корпус Modern",
+                description: "Номер: стандарт улучшенный двухместный",
+                href: "#",
+                key: 1,
+            },
+            {
+                img: img2,
+                title: "Корпус Modern",
+                description: "Номер: стандарт улучшенный двухместный",
+                href: "#",
+                key: 2,
+            },
+            {
+                img: img3,
+                title: "Корпус Modern",
+                description: "Номер: стандарт улучшенный двухместный",
+                href: "#",
+                key: 3,
+            },
+            {
+                img: img4,
+                title: "Корпус Modern",
+                description: "Номер: стандарт улучшенный двухместный",
+                href: "#",
+                key: 4,
+            },
+            {
+                img: img5,
+                title: "Корпус Modern",
+                description: "Номер: стандарт улучшенный двухместный",
+                href: "#",
+                key: 5,
+            },
+            {
+                img: img6,
+                title: "Корпус Modern",
+                description: "Номер: стандарт улучшенный двухместный",
+                href: "#",
+                key: 6,
+            },
+        ],
+        descriptionBlockData: {
+            includedInPrice: [
+                'Завтрак «Шведский стол»',
+                'Фитнес-зал',
+                'Джакузи в SPA',
+                'Детский бассейн',
+                'Крытый бассейн с противотоками',
+                'Финская сауна',
+                'Римская парная',
+                'Соляная комната',
+                'Уборка в номере',
+                'Гладильная (на этаже)',
+                'Парковка',
+            ],
+            roomEquipment: [
+                'Wi-Fi, Телефон',
+                'Телевизор',
+                'Кондиционер',
+                'Сейф',
+                'Фен, Полотенца, Гардероб',
+                'Халат (вафельный) + тапочки',
+                'Набор принадлежностей для ванны',
+                'Чайник, Чай, кофе, сахар',
+                'Стаканы, бокалы, чашки, ложки, штопор',
+            ],
+            features: [
+                {icon: iconFloor, desc: 'Номера<br/>с 4 по 10 этаж'},
+                {icon: iconCapacity, desc: '2 человека,<br/>2 доп. места*'},
+                {icon: iconView, desc: 'Вид из номера<br/>на город и горы'},
+                {icon: iconSpace, desc: 'Площадь<br/>25 м²'},
+                {icon: iconShower, desc: 'Ванная комната:<br/>Душ'},
+                {icon: iconConnected, desc: 'Есть номера<br/>connected**'},
+            ],
+            roomDescription: 'Однокомнатный номер представлен спальней комнатой с одной двуспальной или двумя раздельными кроватями, гостевой зоной с мягким креслом и журнальным столиком, а также комфортной ванной комнатой.<br/><br/>Все номера данной категории имеют выход на балкон <b>с видом на величественные Крымские горы и город.</b> Для Вашего комфорта балкон оснащен столом и стульями, наслаждайтесь кофе на свежем воздухе c невероятно красивыми видами!'
+        },
+        centeredSlides: [
+            {
+                img: afisha1,
+                title: "Караоке бар",
+                subtitle: "Green Stage",
+                time: "21:00",
+                date: "8 августа",
+                campus: "Корпус",
+                campusName: "Classic",
+                key: 1,
+            },
+            {
+                img: afisha2,
+                title: "Караоке бар",
+                subtitle: "Green Stage",
+                time: "21:00",
+                date: "8 августа",
+                campus: "Корпус",
+                campusName: "Classic",
+                key: 2,
+            },
+            {
+                img: afisha3,
+                title: "Караоке бар",
+                subtitle: "Green Stage",
+                time: "21:00",
+                date: "8 августа",
+                campus: "Корпус",
+                campusName: "Classic",
+                key: 3,
+            },
+            {
+                img: afisha4,
+                title: "Караоке бар",
+                subtitle: "Green Stage",
+                time: "21:00",
+                date: "8 августа",
+                campus: "Корпус",
+                campusName: "Classic",
+                key: 4,
+            },
+            {
+                img: afisha5,
+                title: "Караоке бар",
+                subtitle: "Green Stage",
+                time: "21:00",
+                date: "8 августа",
+                campus: "Корпус",
+                campusName: "Classic",
+                key: 5,
+            },
+            {
+                img: afisha5,
+                title: "Караоке бар",
+                subtitle: "Green Stage",
+                time: "21:00",
+                date: "8 августа",
+                campus: "Корпус",
+                campusName: "Classic",
+                key: 6,
+            },
+        ],
+        specialsSlides: [
+            {
+                img: img1,
+                title: "Караоке бар",
+                subtitle: "Green Stage",
+                time: "21:00 8 августа",
+                house: "Корпус Classic",
+                key: 1,
+            },
+            {
+                img: img2,
+                title: "Караоке бар",
+                subtitle: "Green Stage",
+                time: "21:00 8 августа",
+                house: "Корпус Classic",
+                key: 2,
+            },
+            {
+                img: img3,
+                title: "Караоке бар",
+                subtitle: "Green Stage",
+                time: "21:00 8 августа",
+                house: "Корпус Classic",
+                key: 3,
+            },
+            {
+                img: img4,
+                title: "Караоке бар",
+                subtitle: "Green Stage",
+                time: "21:00 8 августа",
+                house: "Корпус Classic",
+                key: 4,
+            },
+        ],
     }
+}
+
+export const familyRecreationPageData = {
+    bannerImg: familyRecreationBannerImg,
+    classicSlides: [
+        {
+            img: classic1img,
+            title: "Корпуса классик",
+            link: "",
+            bookingLink: "",
+        },
+        {
+            img: classic2img,
+            title: "Стандарт",
+            link: "/classic/standart",
+            bookingLink: "",
+        },
+        {
+            img: classic3img,
+            title: "Полулюкс Классик",
+            link: "/classic/polulyuks-classic",
+            bookingLink: "",
+        },
+        {
+            img: classic2img,
+            title: "Какой-то номер",
+            link: "/classic/",
+            bookingLink: "",
+        },
+    ],
+    modernSlides: [
+        {
+            img: modern1img,
+            title: "Корпус Модерн",
+            link: "",
+            bookingLink: "",
+        },
+        {
+            img: modern2img,
+            title: "Стандарт",
+            link: "/modern/standart",
+            bookingLink: "",
+        },
+        {
+            img: modern3img,
+            title: "Полулюкс модерн",
+            link: "/modern/polulyuks-modern",
+            bookingLink: "",
+        },
+        {
+            img: modern2img,
+            title: "Какой-то номер",
+            link: "/modern/",
+            bookingLink: "",
+        },
+    ],
+    modernDescr: [
+        '146 номеров в современном дизайне',
+        'Дизайн интерьера выдержан в стиле Модерн и выполнен в концепции Natural Cool и Ocean Style. Современная эксклюзивная дизайнерская мебель в натуральных тонах создает лучшие условия для комфорта и уюта.'
+    ],
+    classicDescr: [
+        '63 номера в классическом стиле',
+        'Исторический корпус Классик был полностью реновирован в 2016 году.  Свою историю начал вести в 1913 году и имеет особую атмосферу. Дизайн номеров выполнен в эксклюзивном, классическом стиле.'
+    ],
+    gridSlides: [
+        {
+            name: "SPA комплекс",
+            firstRow: [{title: "Финская сауна", img: gridSpaImg1, href: '#'}, {
+                title: "Русская баня",
+                img: gridSpaImg2,
+                href: '#'
+            }, {title: "Римская сауна", img: gridSpaImg3, href: '#'}, {
+                title: "Хаммам",
+                img: gridSpaImg4,
+                href: '#'
+            }],
+            secondRow: [{title: `Процедурный кабинет "Расул"`, img: gridSpaImg5, href: '#'}, {
+                title: "Соляная пещера",
+                img: gridSpaImg6,
+                href: '#'
+            }, {title: "Крытый бассейн", img: gridSpaImg7, href: '#'},
+            ],
+        },
+        {
+            name: "Аква-зона",
+            firstRow: [{title: "Семейный отдых", img: gridKurortImg1, href: '#'}, {
+                title: "Что-то другое",
+                img: gridKurortImg2,
+                href: '#'
+            }, {title: "Отдых без детей", img: gridKurortImg3, href: '#'}, {
+                title: "Что-то другое",
+                img: gridKurortImg4,
+                href: '#'
+            }],
+            secondRow: [{title: "Турпакет", img: gridKurortImg5, href: '#'}, {
+                title: "Что-то другое",
+                img: gridKurortImg6,
+                href: '#'
+            }, {title: "Командировка", img: gridKurortImg7, href: '#'}, {
+                title: "Что-то другое",
+                img: gridKurortImg8,
+                href: '#'
+            }],
+        },
+        {
+            name: "Изысканная еда",
+            firstRow: [{title: "Семейный отдых", img: gridKurortImg1, href: '#'}, {
+                title: "Еще один слайд",
+                img: gridKurortImg2,
+                href: '#'
+            }, {title: "Отдых без детей", img: gridKurortImg3, href: '#'}, {
+                title: "Еще один слайд",
+                img: gridKurortImg4,
+                href: '#'
+            }],
+            secondRow: [{title: "Турпакет", img: gridKurortImg5, href: '#'}, {
+                title: "Еще один слайд",
+                img: gridKurortImg6,
+                href: '#'
+            }, {title: "Командировка", img: gridKurortImg7, href: '#'}, {
+                title: "Еще один слайд",
+                img: gridKurortImg8,
+                href: '#'
+            }],
+        },
+        {
+            name: "Анимация",
+            firstRow: [{title: "Семейный отдых", img: gridKurortImg1, href: '#'}, {
+                title: "Еще один слайд",
+                img: gridKurortImg2,
+                href: '#'
+            }, {title: "Отдых без детей", img: gridKurortImg3, href: '#'}, {
+                title: "Еще один слайд",
+                img: gridKurortImg4,
+                href: '#'
+            }],
+            secondRow: [{title: "Турпакет", img: gridKurortImg5, href: '#'}, {
+                title: "Еще один слайд",
+                img: gridKurortImg6,
+                href: '#'
+            }, {title: "Командировка", img: gridKurortImg7, href: '#'}, {
+                title: "Еще один слайд",
+                img: gridKurortImg8,
+                href: '#'
+            }],
+        }
+    ],
+    centeredSlides: [
+        {
+            img: afisha1,
+            title: "Караоке бар",
+            subtitle: "Green Stage",
+            time: "21:00",
+            date: "8 августа",
+            campus: "Корпус",
+            campusName: "Classic",
+            key: 1,
+        },
+        {
+            img: afisha2,
+            title: "Караоке бар",
+            subtitle: "Green Stage",
+            time: "21:00",
+            date: "8 августа",
+            campus: "Корпус",
+            campusName: "Classic",
+            key: 2,
+        },
+        {
+            img: afisha3,
+            title: "Караоке бар",
+            subtitle: "Green Stage",
+            time: "21:00",
+            date: "8 августа",
+            campus: "Корпус",
+            campusName: "Classic",
+            key: 3,
+        },
+        {
+            img: afisha4,
+            title: "Караоке бар",
+            subtitle: "Green Stage",
+            time: "21:00",
+            date: "8 августа",
+            campus: "Корпус",
+            campusName: "Classic",
+            key: 4,
+        },
+        {
+            img: afisha5,
+            title: "Караоке бар",
+            subtitle: "Green Stage",
+            time: "21:00",
+            date: "8 августа",
+            campus: "Корпус",
+            campusName: "Classic",
+            key: 5,
+        },
+        {
+            img: afisha5,
+            title: "Караоке бар",
+            subtitle: "Green Stage",
+            time: "21:00",
+            date: "8 августа",
+            campus: "Корпус",
+            campusName: "Classic",
+            key: 6,
+        },
+    ],
+    specialsSlides: [
+        {
+            img: img1,
+            title: "Караоке бар",
+            subtitle: "Green Stage",
+            time: "21:00 8 августа",
+            house: "Корпус Classic",
+            key: 1,
+        },
+        {
+            img: img2,
+            title: "Караоке бар",
+            subtitle: "Green Stage",
+            time: "21:00 8 августа",
+            house: "Корпус Classic",
+            key: 2,
+        },
+        {
+            img: img3,
+            title: "Караоке бар",
+            subtitle: "Green Stage",
+            time: "21:00 8 августа",
+            house: "Корпус Classic",
+            key: 3,
+        },
+        {
+            img: img4,
+            title: "Караоке бар",
+            subtitle: "Green Stage",
+            time: "21:00 8 августа",
+            house: "Корпус Classic",
+            key: 4,
+        },
+    ],
+    gallerySlides: [
+        {
+            img: img1,
+            title: "Корпус Modern",
+            description: "Номер: стандарт улучшенный двухместный",
+            href: "#",
+            key: 1,
+        },
+        {
+            img: img2,
+            title: "Корпус Modern",
+            description: "Номер: стандарт улучшенный двухместный",
+            href: "#",
+            key: 2,
+        },
+        {
+            img: img3,
+            title: "Корпус Modern",
+            description: "Номер: стандарт улучшенный двухместный",
+            href: "#",
+            key: 3,
+        },
+        {
+            img: img4,
+            title: "Корпус Modern",
+            description: "Номер: стандарт улучшенный двухместный",
+            href: "#",
+            key: 4,
+        },
+        {
+            img: img5,
+            title: "Корпус Modern",
+            description: "Номер: стандарт улучшенный двухместный",
+            href: "#",
+            key: 5,
+        },
+        {
+            img: img6,
+            title: "Корпус Modern",
+            description: "Номер: стандарт улучшенный двухместный",
+            href: "#",
+            key: 6,
+        },
+        {
+            img: img7,
+            title: "Корпус Modern",
+            description: "Номер: стандарт улучшенный двухместный",
+            href: "#",
+            key: 7,
+        },
+        {
+            img: img8,
+            title: "Корпус Modern",
+            description: "Номер: стандарт улучшенный двухместный",
+            href: "#",
+            key: 8,
+        },
+        {
+            img: img9,
+            title: "Корпус Modern",
+            description: "Номер: стандарт улучшенный двухместный",
+            href: "#",
+            key: 9,
+        },
+        {
+            img: img10,
+            title: "Корпус Modern",
+            description: "Номер: стандарт улучшенный двухместный",
+            href: "#",
+            key: 10,
+        },
+        {
+            img: img11,
+            title: "Корпус Modern",
+            description: "Номер: стандарт улучшенный двухместный",
+            href: "#",
+            key: 11,
+        },
+        {
+            img: img12,
+            title: "Корпус Modern",
+            description: "Номер: стандарт улучшенный двухместный",
+            href: "#",
+            key: 12,
+        },
+        {
+            img: img13,
+            title: "Корпус Modern",
+            description: "Номер: стандарт улучшенный двухместный",
+            href: "#",
+            key: 13,
+        },
+        {
+            img: img14,
+            title: "Корпус Modern",
+            description: "Номер: стандарт улучшенный двухместный",
+            href: "#",
+            key: 14,
+        },
+        {
+            img: img15,
+            title: "Корпус Modern",
+            description: "Номер: стандарт улучшенный двухместный",
+            href: "#",
+            key: 15,
+        },
+        {
+            img: img16,
+            title: "Корпус Modern",
+            description: "Номер: стандарт улучшенный двухместный",
+            href: "#",
+            key: 16,
+        },
+
+    ],
+    wideSlides: [
+        {
+            img: classic1img,
+            title: "Корпуса классик",
+            link: "",
+            bookingLink: "",
+        },
+        {
+            img: classic2img,
+            title: "Стандарт",
+            link: "/classic/standart",
+            bookingLink: "",
+        },
+        {
+            img: classic3img,
+            title: "Полулюкс Классик",
+            link: "/classic/polulyuks-classic",
+            bookingLink: "",
+        },
+        {
+            img: classic2img,
+            title: "Какой-то номер",
+            link: "/classic/",
+            bookingLink: "",
+        },
+    ],
 }
 
 

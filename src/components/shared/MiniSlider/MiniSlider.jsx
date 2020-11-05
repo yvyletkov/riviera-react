@@ -29,8 +29,8 @@ const SliderStyles = styled.div`
 
 const MiniSlider = ({setCurrentSlide, currentSlide, slideNames}) => {
 
-    const disableScroll = () => document.getElementsByTagName("body")[0].classList.add("fixed");
-    const enableScroll = () => document.getElementsByTagName("body")[0].classList.remove("fixed");
+    // const disableScroll = () => document.getElementsByTagName("body")[0].classList.add("fixed");
+    // const enableScroll = () => document.getElementsByTagName("body")[0].classList.remove("fixed");
 
     const items = slideNames.map((item, index) => {
         return (
