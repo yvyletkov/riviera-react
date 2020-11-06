@@ -43,6 +43,8 @@ const RoomsSlider = ({title = "Заголовок", subtitle = "Какой-то"
     const sliderWrapperRef = React.useRef();
     const sliderRef = React.useRef();
 
+    const windowHeight = window.innerHeight;
+
     const getCoords = (elem) => {
         let box = elem.getBoundingClientRect();
         return box.top + window.pageYOffset
@@ -63,7 +65,7 @@ const RoomsSlider = ({title = "Заголовок", subtitle = "Какой-то"
 
     React.useEffect(() => {
         const coords = getCoords(sliderWrapperRef.current);
-        setSliderCoords(window.innerWidth < 768 ? coords - 200 : coords - 300);
+        setSliderCoords(window.innerWidth < 768 ? coords - (windowHeight - 540) : coords - 300);
     }, [sliderCoords]);
 
     React.useEffect(() => {

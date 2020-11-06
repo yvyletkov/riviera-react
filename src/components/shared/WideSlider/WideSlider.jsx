@@ -38,7 +38,7 @@ const WideSlider = ({title = "Заголовок", subtitle = "Какой-то",
 
     const settings = {
         afterChange: afterChangeHandler,
-        infinite: false,
+        infinite: true,
         variableWidth: true,
         speed: 500,
         nextArrow: <NextArrow positionStyles={{

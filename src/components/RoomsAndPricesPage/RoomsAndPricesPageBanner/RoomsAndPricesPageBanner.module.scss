@@ -47,11 +47,11 @@ $black: #171717;
   margin: 0 auto;
 }
 
-.pageNameBlock {
+.textBlock {
   color: $black;
 }
 
-.pageNameBlock h2 {
+.textBlock h2 {
   font-family: "Helvetica Neue Medium";
   font-size: 27px;
   margin-bottom: 18px;
@@ -59,24 +59,24 @@ $black: #171717;
   width: fit-content;
 }
 
-.pageNameBlock h2:after {
+.textBlock h2:after {
   content: "";
   position: absolute;
   display: block;
   width: 60px;
   height: 1px;
   background-color: #171717;
-  top: 12px;
+  top: 40%;
   right: -73px;
 }
 
-.pageNameBlock h1:first-of-type {
+.textBlock h1:first-of-type {
   text-transform: uppercase;
   font-family: "Helvetica Neue Black";
   font-size: 78px;
 }
 
-.pageNameBlock h1:last-of-type {
+.textBlock h1:last-of-type {
   white-space: nowrap;
   text-transform: uppercase;
   font-family: "Helvetica Neue Black";
@@ -84,7 +84,7 @@ $black: #171717;
   line-height: 0.9;
 }
 
-.pageNameBlock .descriptionBtn {
+.textBlock .descriptionBtn {
   position: relative;
   width: fit-content;
   cursor: pointer;
@@ -140,15 +140,15 @@ $black: #171717;
 }
 
 @media screen and (max-width: 768px) {
-  .pageNameBlock .descriptionBtn {
+  .textBlock .descriptionBtn {
     font-family: "Helvetica Neue";
-    font-size: 15px !important;
+    font-size: 16px !important;
     color: #fff;
   }
   .description {
     z-index: -1;
     position: absolute;
-    width: 86%;
+    width: calc(100vw - 40px);
     top: -95px;
     left: 50%;
     transform: translateX(-50%);
@@ -156,17 +156,17 @@ $black: #171717;
     font-size: 12px;
   }
 
-  .pageNameBlock h2 {
+  .textBlock h2 {
     font-family: "Helvetica Neue Medium";
     font-size: 22px;
     margin-bottom: 10px;
   }
 
-  .pageNameBlock h1:first-of-type {
+  .textBlock h1:first-of-type {
     font-size: 50px;
   }
 
-  .pageNameBlock h1:last-of-type {
+  .textBlock h1:last-of-type {
     font-size: 82px;
   }
 
@@ -182,14 +182,14 @@ $black: #171717;
     padding: 0;
     width: 100%;
   }
-  .pageNameBlock {
+  .textBlock {
     position: absolute;
     bottom: 0;
     color: #fff !important;
     transform: scale(1);
     margin-bottom: 105px;
   }
-  .pageNameBlock h2:after {
+  .textBlock h2:after {
     background-color: #fff;
   }
 
@@ -230,16 +230,16 @@ $black: #171717;
 }
 
 @media screen and (max-width: 490px) {
-  .pageNameBlock h1:last-of-type {
+  .textBlock h1:last-of-type {
     font-size: 20vw;
   }
-  .pageNameBlock h1:first-of-type {
+  .textBlock h1:first-of-type {
     font-size: 14vw;
   }
-  .pageNameBlock h2 {
+  .textBlock h2 {
     font-size: 4.8vw;
   }
-  .pageNameBlock div {
+  .textBlock div {
     font-size: 6vw;
   }
 }

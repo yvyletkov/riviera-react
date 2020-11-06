@@ -8,6 +8,10 @@ $black: #171717;
   position: relative;
 }
 
+.background {
+  display: none;
+}
+
 .bannerWrapper {
   position: relative;
   margin-top: 0;
@@ -49,7 +53,7 @@ $black: #171717;
   width: 53px;
   height: 1px;
   background-color: #171717;
-  top: 14px;
+  top: 40%;
   right: -66px;
 }
 
@@ -60,6 +64,7 @@ $black: #171717;
 
 .pageNameBlock h1:last-of-type {
   text-transform: uppercase;
+  white-space: nowrap;
   font-family: "Helvetica Neue Black";
   line-height: 0.9;
 }
@@ -83,6 +88,10 @@ $black: #171717;
   margin-top: 20px;
   font-size: 21px;
   transition: all 300ms;
+}
+
+.descriptionBtn.active {
+  //maybe smth
 }
 
 .description {
@@ -134,42 +143,19 @@ $black: #171717;
   background: url(../../../img/booking.jpg) center;
 }
 
-.playBtn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 298px;
-  right: 10px;
-  border-radius: 50%;
-  box-shadow: -10.261px 28.191px 57px 0px rgba(255, 108, 57, 0.41);
-  width: 65px;
-  height: 65px;
-  background-color: #ff6c39;
-  cursor: pointer;
-  z-index: 1;
-  transition: all 200ms;
-}
-
-.playBtn img {
-  width: 23px;
-  height: 23px;
-}
-
-.playBtn:hover {
-  background-color: #d45a2f;
-}
-
 @media screen and (max-width: 768px) {
+  .bannerWrapper {
+    overflow: visible;
+  }
   .descriptionBtn {
     font-family: "Helvetica Neue";
-    font-size: 15px !important;
+    font-size: 16px !important;
     color: #fff;
   }
   .description {
     z-index: -1;
     position: absolute;
-    width: 86%;
+    width: calc(100vw - 40px);
     top: -95px;
     left: 50%;
     transform: translateX(-50%);
@@ -179,8 +165,9 @@ $black: #171717;
 }
 
 @media screen and (max-width: 620px) {
-  .playBtn {
-    display: none;
+  .descriptionBtn {
+    align-self: flex-start;
+    margin-bottom: 105px;
   }
   .container {
     height: calc(100vh - 60px);
@@ -190,7 +177,7 @@ $black: #171717;
   }
   .pageNameBlock {
     color: #fff !important;
-    margin-bottom: 100px;
+    //margin-bottom: 100px;
   }
   .pageNameBlock h2:after {
     background-color: #fff;
@@ -198,10 +185,11 @@ $black: #171717;
   .leftSide {
     padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     width: 100%;
     height: 100%;
-    align-items: flex-end;
   }
   .flexWrapper {
     height: 100%;
@@ -212,16 +200,16 @@ $black: #171717;
     height: unset;
     background: none;
   }
-  .container:before {
-    content: "";
+  .background {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: center url(../../../img/home-page/banner-mobile-img.jpg);
     background-size: cover;
-    filter: brightness(0.7);
+    background-position: center;
+    filter: brightness(0.8);
     z-index: -1;
   }
 
@@ -241,18 +229,9 @@ $black: #171717;
 
 }
 
-@media screen and (max-width: 490px) {
-  .pageNameBlock h1:last-of-type {
-    font-size: 20vw;
-  }
-  .pageNameBlock h1:first-of-type {
-    font-size: 14vw;
-  }
+@media screen and (max-width: 620px) {
   .pageNameBlock h2 {
     font-size: 4.8vw;
-  }
-  .pageNameBlock div {
-    font-size: 6vw;
   }
 }
 

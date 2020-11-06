@@ -16,7 +16,7 @@ const RoomsAndPricesPageBanner = () => {
                     <h1>Номера</h1>
                     <h1>И цены</h1>
                     <div className={s.descriptionBtn} onClick={() => setDescriptionShown(!descriptionShown)}>
-                        Подробнее ↓
+                        Подробнее&nbsp;&nbsp;• • •
                     </div>
                 </div>
             </div>

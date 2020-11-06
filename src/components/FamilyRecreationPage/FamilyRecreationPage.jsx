@@ -3,7 +3,7 @@ import {familyRecreationPageData} from "../../data";
 import CenteredSlider from "../shared/CenteredSlider/CenteredSlider";
 import SpecialsSlider from "../shared/SpecialsSlider/SpecialsSlider";
 import MapSection from "../shared/MapSection/MapSection";
-import PageBanner from "./FamilyRecreationPageBanner/PageBanner";
+import PageBanner from "../shared/PageBanner/PageBanner";
 import RoomsSlider from "../shared/RoomsSlider/RoomsSlider";
 import GridSlider from "../shared/GridSlider/GridSlider";
 import GallerySlider from "../shared/GallerySlider/GallerySlider";
@@ -13,12 +13,14 @@ import WideSlider from "../shared/WideSlider/WideSlider";
 const FamilyRecreationPage = () => {
     return <>
         <PageBanner fontSize={["84px", "71px"]}
+                    fontSizeMobile={["16.7vw", "11.3vw"]}
                     topLine={"Лучшее"}
                     bottomLine={"Вашей семье"}
                     bannerImg={familyRecreationPageData.bannerImg}
+                    bannerMobileImg={familyRecreationPageData.bannerMobileImg}
                     descr={'Семья — это счастье, любовь и яркие эмоций, это традиционные поездки на отдых и безудержное\n' +
-                    ' веселье. Один из лучших курортных отелей Riviera Sunrise Resort & SPA, г. Алушта, приглашает вас\n' +
-                    ' на семейный отдых в Крым. В гостиничном комплексе 209 номеров различных категорий: от\n' +
+                    ' веселье.<br/>Один из лучших курортных отелей Riviera Sunrise Resort & SPA, г. Алушта, приглашает вас\n' +
+                    ' на семейный отдых в Крым.<br/>В гостиничном комплексе 209 номеров различных категорий: от\n' +
                     ' «Стандарта» до «Президентского люкса». Отличный климат, элегантный дизайн, современное оснащение\n' +
                     ' номеров, высококлассный сервис, анимация для детей и взрослых и многое другое – создают\n' +
                     ' идеальные условия для Вашего комфортного отдыха.'}/>

@@ -75,7 +75,6 @@ a:hover {
   font-size: 20px;
 }
 
-
 .link img {
   display: inline-block;
   margin-right: 5px;
@@ -97,6 +96,16 @@ a:hover {
   position: absolute;
   font-size: 60px;
   left: 12px;
+  transition: all 200ms;
+}
+
+.menuIcon.opened {
+  z-index: 3000;
+  transform: scale(1.5);
+}
+
+.menuIcon.opened span {
+  background-color: #f4f4f4;
 }
 
 .menuIcon span {
@@ -105,6 +114,20 @@ a:hover {
   height: 2px;
   background-color: $fontBlack;
   margin-bottom: 5px;
+  transition: all 200ms;
+  transform-origin: left;
+}
+
+.menuIcon.opened span:nth-child(1) {
+  transform: rotate(45deg) translateY(-2px);
+}
+
+.menuIcon.opened span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuIcon.opened span:nth-child(3) {
+  transform: rotate(-45deg) translateY(2px);
 }
 
 @media screen and (max-width: 1200px) {
@@ -139,6 +162,51 @@ a:hover {
     padding: 0 15px 0 10px;
   }
 }
+
+
+//menu
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  z-index: -100;
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(23, 23, 23, 0.82);
+  transition: all 200ms;
+  padding: 0 10%;
+  //backdrop-filter: blur(10px);
+}
+
+.menu div a {
+  font-size: 28px;
+  font-family: "Helvetica Neue Black";
+  color: #fff;
+}
+
+.menu div {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.menu.opened {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1000;
+}
+
+.menuLinkActive {
+  color: #ff8d66 !important;
+}
+
 
 
 

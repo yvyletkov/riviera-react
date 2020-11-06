@@ -47,6 +47,7 @@ import iconShower from "./img/room-page/shower.png";
 import iconSpace from "./img/room-page/ploshchad.png";
 import iconConnected from "./img/room-page/connected.png";
 import familyRecreationBannerImg from "./img/banners/family-recreation.png";
+import familyRecreationBannerMobileImg from "./img/banners/family-recreation-mob.jpg";
 
 export const homePageData = {
     gridSlides: [
@@ -204,6 +205,7 @@ export const homePageData = {
             subtitle: "Green Stage",
             time: "21:00 8 августа",
             house: "Корпус Classic",
+            link: '#',
             key: 1,
         },
         {
@@ -212,6 +214,7 @@ export const homePageData = {
             subtitle: "Green Stage",
             time: "21:00 8 августа",
             house: "Корпус Classic",
+            link: '#',
             key: 2,
         },
         {
@@ -220,6 +223,7 @@ export const homePageData = {
             subtitle: "Green Stage",
             time: "21:00 8 августа",
             house: "Корпус Classic",
+            link: '#',
             key: 3,
         },
         {
@@ -228,6 +232,7 @@ export const homePageData = {
             subtitle: "Green Stage",
             time: "21:00 8 августа",
             house: "Корпус Classic",
+            link: '#',
             key: 4,
         },
     ],
@@ -708,6 +713,7 @@ export const roomPageData = {
                 subtitle: "Green Stage",
                 time: "21:00 8 августа",
                 house: "Корпус Classic",
+                link: '#',
                 key: 1,
             },
             {
@@ -716,6 +722,7 @@ export const roomPageData = {
                 subtitle: "Green Stage",
                 time: "21:00 8 августа",
                 house: "Корпус Classic",
+                link: '#',
                 key: 2,
             },
             {
@@ -724,6 +731,7 @@ export const roomPageData = {
                 subtitle: "Green Stage",
                 time: "21:00 8 августа",
                 house: "Корпус Classic",
+                link: '#',
                 key: 3,
             },
             {
@@ -732,6 +740,7 @@ export const roomPageData = {
                 subtitle: "Green Stage",
                 time: "21:00 8 августа",
                 house: "Корпус Classic",
+                link: '#',
                 key: 4,
             },
         ],
@@ -919,6 +928,7 @@ export const roomPageData = {
 
 export const familyRecreationPageData = {
     bannerImg: familyRecreationBannerImg,
+    bannerMobileImg: familyRecreationBannerMobileImg,
     classicSlides: [
         {
             img: classic1img,
@@ -1131,6 +1141,7 @@ export const familyRecreationPageData = {
             subtitle: "Green Stage",
             time: "21:00 8 августа",
             house: "Корпус Classic",
+            link: '#',
             key: 1,
         },
         {
@@ -1139,6 +1150,7 @@ export const familyRecreationPageData = {
             subtitle: "Green Stage",
             time: "21:00 8 августа",
             house: "Корпус Classic",
+            link: '#',
             key: 2,
         },
         {
@@ -1147,6 +1159,7 @@ export const familyRecreationPageData = {
             subtitle: "Green Stage",
             time: "21:00 8 августа",
             house: "Корпус Classic",
+            link: '#',
             key: 3,
         },
         {
@@ -1155,6 +1168,7 @@ export const familyRecreationPageData = {
             subtitle: "Green Stage",
             time: "21:00 8 августа",
             house: "Корпус Classic",
+            link: '#',
             key: 4,
         },
     ],
@@ -1276,26 +1290,26 @@ export const familyRecreationPageData = {
     wideSlides: [
         {
             img: classic1img,
-            title: "Корпуса классик",
-            link: "",
+            title: "Детская анимация",
+            link: "#",
             bookingLink: "",
         },
         {
             img: classic2img,
-            title: "Стандарт",
-            link: "/classic/standart",
+            title: "Детская зона бассейна",
+            link: "#",
             bookingLink: "",
         },
         {
             img: classic3img,
-            title: "Полулюкс Классик",
-            link: "/classic/polulyuks-classic",
+            title: "День рождения",
+            link: "#",
             bookingLink: "",
         },
         {
             img: classic2img,
-            title: "Какой-то номер",
-            link: "/classic/",
+            title: "Игровая площадка",
+            link: "#",
             bookingLink: "",
         },
     ],

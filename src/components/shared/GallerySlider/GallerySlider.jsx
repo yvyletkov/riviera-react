@@ -106,7 +106,7 @@ const GallerySlider = ({blockName = "Фотогалерея", slides}) => {
                 </StyledSlider>
                 <div className={s.mobileBlock}>
                     <div className={s.mobileBlockText}>Больше фотографий нашего отеля</div>
-                    <Button text={'Заказать звонок'} />
+                    <Button text={'Перейти к галерее'} />
                 </div>
             </div>
         </div>

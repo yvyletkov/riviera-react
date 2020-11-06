@@ -69,7 +69,7 @@ const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-�
     };
 
   const items = slides.map((item, index) => {
-        const {img, title, subtitle, time, house, key} = item;
+        const {img, title, subtitle, time, house, key, link} = item;
         return (
             <div className="SliderElement" key={key}>
                 <SpecialsSliderItem
@@ -79,6 +79,7 @@ const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-�
                     time={time}
                     house={house}
                     active={index===1}
+                    link={link}
                 />
             </div>
         );
