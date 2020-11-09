@@ -47,11 +47,11 @@ $black: #171717;
   margin: 0 auto;
 }
 
-.pageNameBlock {
+.textBlock {
   color: $black;
 }
 
-.pageNameBlock h2 {
+.textBlock h2 {
   font-family: "Helvetica Neue Medium";
   font-size: 27px;
   margin-bottom: 18px;
@@ -59,7 +59,7 @@ $black: #171717;
   width: fit-content;
 }
 
-.pageNameBlock h2:after {
+.textBlock h2:after {
   content: "";
   position: absolute;
   display: block;
@@ -70,13 +70,13 @@ $black: #171717;
   right: -73px;
 }
 
-.pageNameBlock h1:first-of-type {
+.textBlock h1:first-of-type {
   text-transform: uppercase;
   font-family: "Helvetica Neue Black";
   font-size: 78px;
 }
 
-.pageNameBlock h1:last-of-type {
+.textBlock h1:last-of-type {
   white-space: nowrap;
   text-transform: uppercase;
   font-family: "Helvetica Neue Black";
@@ -84,7 +84,7 @@ $black: #171717;
   line-height: 0.8;
 }
 
-.pageNameBlock .descriptionBtn {
+.textBlock .descriptionBtn {
   position: relative;
   width: fit-content;
   cursor: pointer;
@@ -94,7 +94,7 @@ $black: #171717;
   transition: all 300ms;
 }
 
-.pageNameBlock .descriptionBtn:hover {
+.textBlock .descriptionBtn:hover {
 
 }
 
@@ -137,7 +137,7 @@ $black: #171717;
   background-color: #fff;
   border-radius: 5px;
   position: absolute;
-  background: url(../../../img/booking.jpg) center;
+  background: url(../../../../img/booking.jpg) center;
 
 }
 
@@ -150,7 +150,7 @@ $black: #171717;
 @media screen and (max-width: 768px) {
 
 
-  .pageNameBlock .descriptionBtn {
+  .textBlock .descriptionBtn {
     font-family: "Helvetica Neue";
     font-size: 15px !important;
     color: #fff;
@@ -167,17 +167,17 @@ $black: #171717;
     font-size: 12px;
   }
 
-  .pageNameBlock h2 {
+  .textBlock h2 {
     font-family: "Helvetica Neue Medium";
     font-size: 22px;
     margin-bottom: 10px;
   }
 
-  .pageNameBlock h1:first-of-type {
+  .textBlock h1:first-of-type {
     font-size: 50px;
   }
 
-  .pageNameBlock h1:last-of-type {
+  .textBlock h1:last-of-type {
     font-size: 82px;
   }
 
@@ -193,14 +193,14 @@ $black: #171717;
     padding: 0;
     width: 100%;
   }
-  .pageNameBlock {
+  .textBlock {
     position: absolute;
     bottom: 0;
     color: #fff !important;
     transform: scale(1);
     margin-bottom: 105px;
   }
-  .pageNameBlock h2:after {
+  .textBlock h2:after {
     background-color: #fff;
   }
 
@@ -218,7 +218,7 @@ $black: #171717;
     left: 0;
     width: 100%;
     height: 100%;
-    background: center url(../../../img/rooms-and-prices-page/banner-bg.jpg);
+    background: center url(../../../../img/rooms-and-prices-page/banner-bg.jpg);
     background-size: cover;
     filter: brightness(0.7);
     z-index: -1;
@@ -241,16 +241,16 @@ $black: #171717;
 }
 
 @media screen and (max-width: 490px) {
-  .pageNameBlock h1:last-of-type {
+  .textBlock h1:last-of-type {
     font-size: 16vw;
   }
-  .pageNameBlock h1:first-of-type {
+  .textBlock h1:first-of-type {
     font-size: 14vw;
   }
-  .pageNameBlock h2 {
+  .textBlock h2 {
     font-size: 4.8vw;
   }
-  .pageNameBlock div {
+  .textBlock div {
     font-size: 6vw;
   }
 }

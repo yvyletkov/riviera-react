@@ -1,9 +1,9 @@
 import React from "react";
 import RoomsAndPricesPageBanner from "./RoomsAndPricesPageBanner/RoomsAndPricesPageBanner";
-import RoomsSlider from "../shared/RoomsSlider/RoomsSlider";
-import CenteredSlider from "../shared/CenteredSlider/CenteredSlider";
-import GridSlider from "../shared/GridSlider/GridSlider";
-import {roomsAndPricesPageData} from "../../data";
+import RoomsSlider from "../../shared/RoomsSlider/RoomsSlider";
+import CenteredSlider from "../../shared/CenteredSlider/CenteredSlider";
+import GridSlider from "../../shared/GridSlider/GridSlider";
+import {roomsAndPricesPageData} from "../../../data";
 
 
 const RoomsAndPricesPage = () => {

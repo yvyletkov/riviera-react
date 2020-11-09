@@ -1,10 +1,10 @@
 import React from "react";
 import RoomPageBanner from "./RoomPageBanner/RoomPageBanner";
-import CenteredSlider from "../shared/CenteredSlider/CenteredSlider";
+import CenteredSlider from "../../shared/CenteredSlider/CenteredSlider";
 import RoomDescriptionBlock from "./RoomDescriptionBlock/RoomDescriptionBlock";
-import LargeGallerySlider from "../shared/LargeGallerySlider/LargeGallerySlider";
-import SpecialsSlider from "../shared/SpecialsSlider/SpecialsSlider";
-import MapSection from "../shared/MapSection/MapSection";
+import LargeGallerySlider from "../../shared/LargeGallerySlider/LargeGallerySlider";
+import SpecialsSlider from "../../shared/SpecialsSlider/SpecialsSlider";
+import MapSection from "../../shared/MapSection/MapSection";
 
 const RoomPage = ({data}) => {
     return <>

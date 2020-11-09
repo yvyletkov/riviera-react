@@ -105,7 +105,7 @@ a:hover {
 }
 
 .menuIcon.opened span {
-  background-color: #f4f4f4;
+  background-color: #171717;
 }
 
 .menuIcon span {
@@ -131,7 +131,7 @@ a:hover {
 }
 
 @media screen and (max-width: 1200px) {
-  .link, .contacts  {
+  .link, .contacts {
     display: none;
   }
   .searchIcon {
@@ -154,7 +154,7 @@ a:hover {
     transition: all 400ms;
   }
 
-  .content.minified .logo img{
+  .content.minified .logo img {
     width: 110px;
   }
 
@@ -176,25 +176,27 @@ a:hover {
   opacity: 0;
   z-index: -100;
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(23, 23, 23, 0.82);
-  transition: all 200ms;
-  padding: 0 10%;
+  background-color: rgba(255, 255, 255, 0.95);
+  transition: all 350ms;
+  padding: 0 7px;
   //backdrop-filter: blur(10px);
 }
 
 .menu div a {
-  font-size: 28px;
-  font-family: "Helvetica Neue Black";
-  color: #fff;
+  font-size: 8.2vw;
+  font-family: "Helvetica Neue Light";
+  color: #171717;
+  transition: all 200ms;
+  text-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,.1), 0 0.9375rem 1.40625rem rgba(90,97,105,.1), 0 0.25rem 0.53125rem rgba(90,97,105,.12), 0 0.125rem 0.1875rem rgba(90,97,105,.1);
 }
 
 .menu div {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .menu.opened {
@@ -204,8 +206,31 @@ a:hover {
 }
 
 .menuLinkActive {
-  color: #ff8d66 !important;
+  color: #a1a1a1 !important;
 }
+
+@media screen and (min-width: 501px) {
+  .menu div a {
+    font-size: 46px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .menuIcon.opened {
+    z-index: 3000;
+    transform: scale(1.5) translateY(25%) translateX(25%);
+  }
+}
+
+$link: #ff8d66;
+
+.menu a {
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: $link;
+}
+
 
 
 

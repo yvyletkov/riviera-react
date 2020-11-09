@@ -109,7 +109,11 @@ const GridSlider = ({slides}) => {
     let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
     let [swipedVertically, setSwipedVertically] = React.useState(0);
 
-    const disableScroll = () => bodyEl.classList.add("fixed");
+    const disableScroll = () => {
+        console.log(bodyEl);
+        console.log(bodyEl.classList.add);
+        bodyEl.classList.add("fixed");
+    }
     const enableScroll = () => bodyEl.classList.remove("fixed");
 
 

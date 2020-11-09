@@ -28,7 +28,7 @@ const Header = () => {
     };
 
     React.useEffect(() => {
-        window.addEventListener('scroll', listenToScroll)
+        window.addEventListener('scroll', listenToScroll);
         return () => window.removeEventListener('scroll', listenToScroll)
     }, []);
 
@@ -39,7 +39,6 @@ const Header = () => {
     const checkActive = (match, location) => {
         if(!location) return false;
         const {pathname} = location;
-        console.log(pathname);
         return pathname === "/";
     }
 
@@ -48,10 +47,13 @@ const Header = () => {
             <div className={s.wrapper}>
 
                 <div className={ menuOpened ? s.menu + ' ' + s.opened : s.menu}>
-                    <div><NavLink isActive={checkActive} activeClassName={s.menuLinkActive} to={"/"}>Главная</NavLink></div>
-                    <div><NavLink activeClassName={s.menuLinkActive} to={"/rooms-and-prices"}>Номера и цены</NavLink></div>
-                    <div><NavLink activeClassName={s.menuLinkActive} to={"/family-recreation"}>Семеный отдых</NavLink></div>
-                    <div><NavLink activeClassName={s.menuLinkActive} to={"/modern/standart"}>Модерн Стандарт</NavLink></div>
+                    <div onClick={toggleMenu}><NavLink isActive={checkActive} activeClassName={s.menuLinkActive} to={"/"}>Главная</NavLink></div>
+                    <div onClick={toggleMenu}><NavLink activeClassName={s.menuLinkActive} to={"/rooms-and-prices"}>Номера и цены</NavLink></div>
+                    <div onClick={toggleMenu}><NavLink activeClassName={s.menuLinkActive} to={"/modern/standart"}>Модерн Стандарт</NavLink></div>
+                    <div onClick={toggleMenu}><NavLink activeClassName={s.menuLinkActive} to={"/family-vacation"}>Семейный отдых</NavLink></div>
+                    <div onClick={toggleMenu}><NavLink activeClassName={s.menuLinkActive} to={"/vacation-with-friends"}>Отдых с друзьями</NavLink></div>
+                    <div onClick={toggleMenu}><NavLink activeClassName={s.menuLinkActive} to={"/romantic-vacation"}>Романтический отдых</NavLink></div>
+                    <div onClick={toggleMenu}><NavLink activeClassName={s.menuLinkActive} to={"/vacation-for-yourself"}>Отдых для себя</NavLink></div>
                 </div>
 
                 <div className={s.container}>

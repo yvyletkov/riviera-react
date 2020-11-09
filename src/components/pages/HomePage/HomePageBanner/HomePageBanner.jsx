@@ -1,8 +1,8 @@
 import React from "react";
 import s from "./HomePageBanner.module.scss";
-import bannerImg from "../../../img/home-page/banner-img.png"
-import cirqlesImg from "../../../img/home-page/cirqles.png"
-import pauseImg from "../../../img/home-page/pause.png"
+import bannerImg from "../../../../img/home-page/banner-img.png"
+import cirqlesImg from "../../../../img/home-page/cirqles.png"
+import pauseImg from "../../../../img/home-page/pause.png"
 
 const HomePageBanner = () => {
     return (

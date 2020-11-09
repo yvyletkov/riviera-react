@@ -1,9 +1,9 @@
 import React from "react";
 import s from "./RoomDescriptionBlock.module.scss";
-import Headline from "../../shared/Headline/Headline";
-import CirqleTip from "../../shared/CirqleTip/CirqleTip";
-import Accordeon from "../../shared/Accordeon/Accordeon";
-import arrowIcon from "../../../img/arrow-accordeon.png";
+import Headline from "../../../shared/Headline/Headline";
+import CirqleTip from "../../../shared/CirqleTip/CirqleTip";
+import Accordeon from "../../../shared/Accordeon/Accordeon";
+import arrowIcon from "../../../../img/arrow-accordeon.png";
 import {NavLink} from "react-router-dom";
 
 

@@ -69,9 +69,10 @@ $black: #171717;
   line-height: 0.9;
 }
 
-.pageNameBlock div {
+.pageNameBlock h3.extraline {
+  margin-top: 0.9rem;
+  text-transform: uppercase;
   font-family: "Helvetica Neue Bold";
-  font-size: 34px;
 }
 
 .descriptionWrapper {
@@ -156,7 +157,7 @@ $black: #171717;
     z-index: -1;
     position: absolute;
     width: calc(100vw - 40px);
-    top: -95px;
+    top: -130px;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
@@ -167,7 +168,7 @@ $black: #171717;
 @media screen and (max-width: 620px) {
   .descriptionBtn {
     align-self: flex-start;
-    margin-bottom: 105px;
+    margin-bottom: 135px;
   }
   .container {
     height: calc(100vh - 60px);
@@ -187,7 +188,7 @@ $black: #171717;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: center;
+    align-items: start;
     width: 100%;
     height: 100%;
   }
@@ -209,7 +210,7 @@ $black: #171717;
     height: 100%;
     background-size: cover;
     background-position: center;
-    filter: brightness(0.8);
+    filter: brightness(0.7);
     z-index: -1;
   }
 

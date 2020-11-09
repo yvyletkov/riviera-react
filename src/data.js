@@ -46,8 +46,15 @@ import iconView from "./img/room-page/mountains.png";
 import iconShower from "./img/room-page/shower.png";
 import iconSpace from "./img/room-page/ploshchad.png";
 import iconConnected from "./img/room-page/connected.png";
-import familyRecreationBannerImg from "./img/banners/family-recreation.png";
-import familyRecreationBannerMobileImg from "./img/banners/family-recreation-mob.jpg";
+import familyVacationBannerImg from "./img/banners/family-vacation.png";
+import familyVacationBannerMobileImg from "./img/banners/family-vacation-mob.jpg";
+import romanticVacationBannerImg from "./img/banners/romantic-vacation.png";
+import romanticVacationBannerMobileImg from "./img/banners/romantic-vacation-mob.jpg";
+import vacationForYourselfBannerImg from "./img/banners/vacation-for-yourself.png";
+import vacationForYourselfBannerMobileImg from "./img/banners/vacation-for-yourself-mob.jpg";
+import vacationWithFriendsBannerImg from "./img/banners/vacation-with-friends.png";
+import vacationWithFriendsBannerMobileImg from "./img/banners/vacation-with-friends.png";
+
 
 export const homePageData = {
     gridSlides: [
@@ -561,6 +568,7 @@ export const roomsAndPricesPageData = {
     ],
 }
 
+
 export const roomPageData = {
     modernStandart: {
         campusName: 'Модерн',
@@ -926,9 +934,17 @@ export const roomPageData = {
     }
 }
 
-export const familyRecreationPageData = {
-    bannerImg: familyRecreationBannerImg,
-    bannerMobileImg: familyRecreationBannerMobileImg,
+
+// Cемейный отдых, Отдых для себя, Отдых с друзьями, Романтический отдых:
+export const vacationPagesData = {
+    familyVacationBannerImg,
+    familyVacationBannerMobileImg,
+    romanticVacationBannerImg,
+    romanticVacationBannerMobileImg,
+    vacationForYourselfBannerImg,
+    vacationForYourselfBannerMobileImg,
+    vacationWithFriendsBannerImg,
+    vacationWithFriendsBannerMobileImg,
     classicSlides: [
         {
             img: classic1img,

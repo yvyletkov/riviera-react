@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./RoomsAndPricesPageBanner.module.scss";
-import bannerImg from "../../../img/rooms-and-prices-page/banner-bg.jpg";
-import bannerImgTopLayer from "../../../img/rooms-and-prices-page/banner-top-layer.png"
+import bannerImg from "../../../../img/rooms-and-prices-page/banner-bg.jpg";
+import bannerImgTopLayer from "../../../../img/rooms-and-prices-page/banner-top-layer.png"
 
 const RoomsAndPricesPageBanner = () => {
 
