@@ -151,13 +151,11 @@ $black: #171717;
   .descriptionBtn {
     font-family: "Helvetica Neue";
     font-size: 16px !important;
-    color: #fff;
   }
   .description {
     z-index: -1;
     position: absolute;
     width: calc(100vw - 40px);
-    top: -130px;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
@@ -166,9 +164,13 @@ $black: #171717;
 }
 
 @media screen and (max-width: 620px) {
+  .description {
+    top: -130px;
+  }
   .descriptionBtn {
     align-self: flex-start;
     margin-bottom: 135px;
+    color: #fff;
   }
   .container {
     height: calc(100vh - 60px);

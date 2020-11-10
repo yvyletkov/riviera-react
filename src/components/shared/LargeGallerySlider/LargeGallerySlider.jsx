@@ -35,7 +35,7 @@ const SliderStyles = styled.div`
 }
 `;
 
-const LargeGallerySlider = ({blockName = "Фотогалерея", slides}) => {
+const LargeGallerySlider = ({blockName = "Фотогалерея", slides, slideTitle}) => {
 
     const settings = {
         dots: false,
@@ -72,10 +72,10 @@ const LargeGallerySlider = ({blockName = "Фотогалерея", slides}) => {
     };
 
     const items = slides.map((item) => {
-        const {img, title, key} = item;
+        const {img, key} = item;
         return (
             <div className={s.card} key={key}>
-                <img className={s.item} alt={title} key={key} src={img}/>
+                <img className={s.item} alt={slideTitle} key={key} src={img}/>
             </div>
         );
     });

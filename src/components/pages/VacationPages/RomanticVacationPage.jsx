@@ -7,14 +7,13 @@ import PageBanner from "../../shared/PageBanner/PageBanner";
 import RoomsSlider from "../../shared/RoomsSlider/RoomsSlider";
 import GridSlider from "../../shared/GridSlider/GridSlider";
 import GallerySlider from "../../shared/GallerySlider/GallerySlider";
-import WideSlider from "../../shared/WideSlider/WideSlider";
 
 const RomanticVacationPage = () => {
     return <>
         <PageBanner fontSize={["84px", "57px"]}
                     fontSizeMobile={["15.6vw", "8.7vw"]}
                     extraLine={['отдых любимому человеку', '5vw', '30px',]}
-                    subtitle={'Отдых c любимыми'}
+                    subtitle={'Отдых c любимым'}
                     topLine={"Подари"}
                     bottomLine={"романтический"}
                     bannerImg={vacationPagesData.romanticVacationBannerImg}

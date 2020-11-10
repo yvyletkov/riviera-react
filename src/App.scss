@@ -41,11 +41,20 @@ section.section.last {
 }
 
 @media screen and (max-width: 768px) {
+
+  * {
+    font-size: 14px;
+  }
+
+  #root {
+    overflow: hidden;
+  }
+
   section.section {
     padding-bottom: 60px;
   }
-}
 
+}
 
 .container {
   max-width: 1200px;
@@ -77,11 +86,4 @@ section.section.last {
   }
 }
 // END ---- for Grid Slider
-
-
-@media screen and (max-width: 768px) {
-  * {
-    font-size: 14px;
-  }
-}
 

@@ -7,7 +7,6 @@ import PageBanner from "../../shared/PageBanner/PageBanner";
 import RoomsSlider from "../../shared/RoomsSlider/RoomsSlider";
 import GridSlider from "../../shared/GridSlider/GridSlider";
 import GallerySlider from "../../shared/GallerySlider/GallerySlider";
-import WideSlider from "../../shared/WideSlider/WideSlider";
 
 const VacationWithFriendsPage = () => {
     return <>

@@ -8,14 +8,14 @@ import MapSection from "../../shared/MapSection/MapSection";
 
 const RoomPage = ({data}) => {
     return <>
-        <RoomPageBanner campusName={data.campusName} roomName={data.roomName}/>
+        <RoomPageBanner campusName={data.campusName} roomName={data.roomName} roomNameFontSize={data.roomNameFontSize}/>
 
         <section className='section first'>
             <RoomDescriptionBlock data={data.descriptionBlockData}/>
         </section>
 
         <section className='section'>
-            <LargeGallerySlider slides={data.largeGallerySlides}/>
+            <LargeGallerySlider slideTitle={data.campusName + ' ' + data.roomName} slides={data.largeGallerySlides}/>
         </section>
 
         <section className='section'>

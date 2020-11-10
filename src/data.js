@@ -53,9 +53,10 @@ import romanticVacationBannerMobileImg from "./img/banners/romantic-vacation-mob
 import vacationForYourselfBannerImg from "./img/banners/vacation-for-yourself.png";
 import vacationForYourselfBannerMobileImg from "./img/banners/vacation-for-yourself-mob.jpg";
 import vacationWithFriendsBannerImg from "./img/banners/vacation-with-friends.png";
-import vacationWithFriendsBannerMobileImg from "./img/banners/vacation-with-friends.png";
+import vacationWithFriendsBannerMobileImg from "./img/banners/vacation-with-friends-mob.jpg";
 
 
+// Домашняя страница
 export const homePageData = {
     gridSlides: [
         {
@@ -360,6 +361,8 @@ export const homePageData = {
     ],
 }
 
+
+// Старница "Номера и Цены"
 export const roomsAndPricesPageData = {
     classicSlides: [
         {
@@ -569,51 +572,35 @@ export const roomsAndPricesPageData = {
 }
 
 
+// Страницы номеров
 export const roomPageData = {
     modernStandart: {
         campusName: 'Модерн',
         roomName: 'Стандарт',
+        roomNameFontSize: ["14.8vw", "95px"],
         largeGallerySlides: [
             {
                 img: img1,
-                title: "Корпус Modern",
-                description: "Номер: стандарт улучшенный двухместный",
-                href: "#",
                 key: 1,
             },
             {
                 img: img2,
-                title: "Корпус Modern",
-                description: "Номер: стандарт улучшенный двухместный",
-                href: "#",
                 key: 2,
             },
             {
                 img: img3,
-                title: "Корпус Modern",
-                description: "Номер: стандарт улучшенный двухместный",
-                href: "#",
                 key: 3,
             },
             {
                 img: img4,
-                title: "Корпус Modern",
-                description: "Номер: стандарт улучшенный двухместный",
-                href: "#",
                 key: 4,
             },
             {
                 img: img5,
-                title: "Корпус Modern",
-                description: "Номер: стандарт улучшенный двухместный",
-                href: "#",
                 key: 5,
             },
             {
                 img: img6,
-                title: "Корпус Modern",
-                description: "Номер: стандарт улучшенный двухместный",
-                href: "#",
                 key: 6,
             },
         ],
@@ -753,50 +740,33 @@ export const roomPageData = {
             },
         ],
     },
-    modernJuniorSuite: {
+    modernSemiLux: {
         campusName: 'Модерн',
         roomName: 'Полулюкс',
+        roomNameFontSize: ["13.4vw", "86px"],
         largeGallerySlides: [
             {
                 img: img1,
-                title: "Корпус Modern",
-                description: "Номер: стандарт улучшенный двухместный",
-                href: "#",
                 key: 1,
             },
             {
                 img: img2,
-                title: "Корпус Modern",
-                description: "Номер: стандарт улучшенный двухместный",
-                href: "#",
                 key: 2,
             },
             {
                 img: img3,
-                title: "Корпус Modern",
-                description: "Номер: стандарт улучшенный двухместный",
-                href: "#",
                 key: 3,
             },
             {
                 img: img4,
-                title: "Корпус Modern",
-                description: "Номер: стандарт улучшенный двухместный",
-                href: "#",
                 key: 4,
             },
             {
                 img: img5,
-                title: "Корпус Modern",
-                description: "Номер: стандарт улучшенный двухместный",
-                href: "#",
                 key: 5,
             },
             {
                 img: img6,
-                title: "Корпус Modern",
-                description: "Номер: стандарт улучшенный двухместный",
-                href: "#",
                 key: 6,
             },
         ],
@@ -904,6 +874,7 @@ export const roomPageData = {
                 subtitle: "Green Stage",
                 time: "21:00 8 августа",
                 house: "Корпус Classic",
+                link: '#',
                 key: 1,
             },
             {
@@ -912,6 +883,7 @@ export const roomPageData = {
                 subtitle: "Green Stage",
                 time: "21:00 8 августа",
                 house: "Корпус Classic",
+                link: '#',
                 key: 2,
             },
             {
@@ -920,6 +892,7 @@ export const roomPageData = {
                 subtitle: "Green Stage",
                 time: "21:00 8 августа",
                 house: "Корпус Classic",
+                link: '#',
                 key: 3,
             },
             {
@@ -928,14 +901,15 @@ export const roomPageData = {
                 subtitle: "Green Stage",
                 time: "21:00 8 августа",
                 house: "Корпус Classic",
+                link: '#',
                 key: 4,
             },
         ],
-    }
+    },
 }
 
 
-// Cемейный отдых, Отдых для себя, Отдых с друзьями, Романтический отдых:
+// Страницы "Cемейный отдых", "Отдых для себя", "Отдых с друзьями", "Романтический отдых"
 export const vacationPagesData = {
     familyVacationBannerImg,
     familyVacationBannerMobileImg,
@@ -945,7 +919,7 @@ export const vacationPagesData = {
     vacationForYourselfBannerMobileImg,
     vacationWithFriendsBannerImg,
     vacationWithFriendsBannerMobileImg,
-    classicSlides: [
+    classicSlides: [        // слайды корпуса Классик
         {
             img: classic1img,
             title: "Корпуса классик",
@@ -971,7 +945,7 @@ export const vacationPagesData = {
             bookingLink: "",
         },
     ],
-    modernSlides: [
+    modernSlides: [        // слайды корпуса Модерн
         {
             img: modern1img,
             title: "Корпус Модерн",

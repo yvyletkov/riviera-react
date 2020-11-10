@@ -36,8 +36,8 @@ function App() {
             <Route path='/modern/standart' exact
                    component={() => <RoomPage data={roomPageData.modernStandart}/>}/>
 
-            <Route path='/modern/junior-suite' exact
-                   component={() => <RoomPage data={roomPageData.modernJuniorSuite}/>}/>
+            <Route path='/modern/semi-lux' exact
+                   component={() => <RoomPage data={roomPageData.modernSemiLux}/>}/>
 
             <Route path='/rooms-and-prices' exact
                    component={() => <RoomsAndPricesPage/>}/>

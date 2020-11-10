@@ -50,6 +50,7 @@ const Header = () => {
                     <div onClick={toggleMenu}><NavLink isActive={checkActive} activeClassName={s.menuLinkActive} to={"/"}>Главная</NavLink></div>
                     <div onClick={toggleMenu}><NavLink activeClassName={s.menuLinkActive} to={"/rooms-and-prices"}>Номера и цены</NavLink></div>
                     <div onClick={toggleMenu}><NavLink activeClassName={s.menuLinkActive} to={"/modern/standart"}>Модерн Стандарт</NavLink></div>
+                    <div onClick={toggleMenu}><NavLink activeClassName={s.menuLinkActive} to={"/modern/semi-lux"}>Модерн Полулюкс</NavLink></div>
                     <div onClick={toggleMenu}><NavLink activeClassName={s.menuLinkActive} to={"/family-vacation"}>Семейный отдых</NavLink></div>
                     <div onClick={toggleMenu}><NavLink activeClassName={s.menuLinkActive} to={"/vacation-with-friends"}>Отдых с друзьями</NavLink></div>
                     <div onClick={toggleMenu}><NavLink activeClassName={s.menuLinkActive} to={"/romantic-vacation"}>Романтический отдых</NavLink></div>

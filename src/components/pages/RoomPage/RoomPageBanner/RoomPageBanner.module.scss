@@ -80,7 +80,6 @@ $black: #171717;
   white-space: nowrap;
   text-transform: uppercase;
   font-family: "Helvetica Neue Black";
-  font-size: 95px;
   line-height: 0.8;
 }
 
@@ -149,7 +148,6 @@ $black: #171717;
 
 @media screen and (max-width: 768px) {
 
-
   .textBlock .descriptionBtn {
     font-family: "Helvetica Neue";
     font-size: 15px !important;
@@ -187,10 +185,10 @@ $black: #171717;
 
   .container {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: flex-end;
     height: calc(100vh - 130px);
-    padding: 0;
+    padding: 0 20px;
     width: 100%;
   }
   .textBlock {
