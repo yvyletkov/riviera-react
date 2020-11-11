@@ -3,9 +3,6 @@ import Slider from "react-slick";
 import s from "./WeddingSlider.module.scss";
 import styled from "styled-components";
 import HeadlineCenter from "../../../HeadlineCenter/HeadlineCenter";
-import img1 from "../../../../../img/specials-slider/home-page/spetspredlozheniya1.jpg";
-import img2 from "../../../../../img/specials-slider/home-page/spetspredlozheniya2.jpg";
-import img3 from "../../../../../img/specials-slider/home-page/spetspredlozheniya3.jpg";
 
 const SliderStyles = styled(Slider)`
   .slick-next:before,
@@ -33,38 +30,9 @@ const SliderStyles = styled(Slider)`
 }
 `;
 
-const specialsSlides = [
-    {
-        img: img1,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00 8 августа",
-        house: "Корпус Classic",
-        link: '#',
-        key: 1,
-    },
-    {
-        img: img2,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00 8 августа",
-        house: "Корпус Classic",
-        link: '#',
-        key: 2,
-    },
-    {
-        img: img3,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00 8 августа",
-        house: "Корпус Classic",
-        link: '#',
-        key: 3,
-    },
-];
 
 
-const WeddingSlider = ({title, slides = specialsSlides}) => {
+const WeddingSlider = ({slides}) => {
 
     const settings = {
         infinite: false,
@@ -88,13 +56,14 @@ const WeddingSlider = ({title, slides = specialsSlides}) => {
     };
 
     const items = slides.map((item, index) => {
-        const {img, key, link} = item;
+        const {img, title, key, descr} = item;
         return (
             <div className="SliderElement" key={key}>
                 <WeddingSliderItem
                     img={img}
-                    link={link}
-                    active={index === 1}
+                    title={title}
+                    descr={descr}
+                    active={window.matchMedia('(max-width: 490px').matches ? false : index === 0}
                 />
             </div>
         );
@@ -103,7 +72,7 @@ const WeddingSlider = ({title, slides = specialsSlides}) => {
     return (
         <div className={s.wrapper}>
             <div className={s.container}>
-                <HeadlineCenter title={'Варианты'}/>
+                <HeadlineCenter title={window.matchMedia('(max-width: 490px').matches ? "Варианты церемоний" : "Варианты выездной церемонии"}/>
                 <SliderStyles>
                     <Slider {...settings}>{items}</Slider>
                 </SliderStyles>
@@ -116,7 +85,7 @@ export default WeddingSlider;
 
 
 const WeddingSliderItem = (props) => {
-    const {img, active} = props;
+    const {img, title, descr, active} = props;
 
     let [showDescr, setShowDescr] = React.useState(active);
 
@@ -126,10 +95,9 @@ const WeddingSliderItem = (props) => {
             <img className={s.img} src={img} alt=""/>
 
             <div className={s.content}>
-                <h6 className={s.title}>Скидка 10%</h6>
+                <h6 className={s.title}>{title}</h6>
                 <p className={s.descr}>
-                    Площадка с аккуратным мостиком, подсветкой бассейна, с видом на реликтовый парк и морское
-                    побережье позволит создать дополнительную атмосферу романтики и уюта.
+                    {descr}
                 </p>
                 <div className={s.moreBtn} onClick={() => setShowDescr(!showDescr)}>
                     {showDescr ? 'Cкрыть' : 'Подробнее'}

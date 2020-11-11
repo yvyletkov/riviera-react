@@ -2,10 +2,13 @@ import React from "react";
 import s from "./WeddingPage.module.scss";
 import WeddingPageBanner from "./WeddingPageBanner/WeddingPageBanner";
 import Accordeon from "../../../shared/Accordeon/Accordeon";
-import firstBlockImg from "../../../../img/events/wedding/1.jpg"
+import firstBlockImg from "../../../../img/events/wedding/wedding.jpg"
+import priceBlockImg from "../../../../img/events/wedding/weddingPriceBlock.jpg"
 import Headline from "../../../shared/Headline/Headline";
 import CirqleTip from "../../../shared/CirqleTip/CirqleTip";
 import WeddingSlider from "../../../shared/sliders/eventsSliders/WeddingSlider/WeddingSlider";
+import {eventPagesData} from "../../../../data";
+import Button from "../../../shared/Button/Button";
 
 const WeddingPage = () => {
 
@@ -51,11 +54,33 @@ const WeddingPage = () => {
         </section>
 
         <section className='section'>
-            <WeddingSlider/>
+            <WeddingSlider slides={eventPagesData.weddingSlides}/>
         </section>
+
+        <section className='section'>
+            <div className={s.weddingPriceBlock}>
+                <div className={s.wrapper}>
+                    <div className={s.container}>
+                        <h4 className={s.title}>
+                            <span>Хотите знать,</span>
+                            <span>сколько стоит выездная</span>
+                            <span>церемония?</span>
+                        </h4>
+                        <p>Оставьте свою почту и мы вышлем вам подробный
+                            прайс с описанием</p>
+                        <form className={'form'}>
+                            <input className={'formInput'} placeholder={'Введите Ваше имя'} type="text"/>
+                            <input className={'formInput'} placeholder={'Введите Вашу почту'} type="text"/>
+                            <Button text={'Получить прайс'} />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         </>
 
 };
 
-        export default WeddingPage;
+export default WeddingPage;

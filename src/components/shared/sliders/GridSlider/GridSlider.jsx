@@ -159,10 +159,14 @@ const GridSlider = ({slides}) => {
 
     React.useEffect(() => {
         if (swipedVertically > 90) {
-            if (currentSlideIndex === 0) sliderRef.current.slickGoTo(slides.length);
+            if (currentSlideIndex === 0)
+                // sliderRef.current.slickGoTo(slides.length);
+                return;
             else sliderRef.current.slickPrev();
         } else if (swipedVertically < -90) {
-            if (currentSlideIndex === slides.length - 1) sliderRef.current.slickGoTo(0);
+            if (currentSlideIndex === slides.length - 1)
+                // sliderRef.current.slickGoTo(0);
+                return;
             else sliderRef.current.slickNext();
         }
     }, [swipedVertically]);
