@@ -7,9 +7,16 @@
   outline: none;
 }
 
+p {margin: 0;}
+
 ul {
   margin: 0;
   padding-left: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 16px;
+  margin: 0;
 }
 
 b, strong {
@@ -42,7 +49,7 @@ section.section.last {
 
 @media screen and (max-width: 768px) {
 
-  * {
+  *, h1, h2, h3, h4, h5, h6 {
     font-size: 14px;
   }
 

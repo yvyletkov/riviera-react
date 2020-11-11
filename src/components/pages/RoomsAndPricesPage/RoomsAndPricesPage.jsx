@@ -1,8 +1,8 @@
 import React from "react";
 import RoomsAndPricesPageBanner from "./RoomsAndPricesPageBanner/RoomsAndPricesPageBanner";
-import RoomsSlider from "../../shared/RoomsSlider/RoomsSlider";
-import CenteredSlider from "../../shared/CenteredSlider/CenteredSlider";
-import GridSlider from "../../shared/GridSlider/GridSlider";
+import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
+import CenteredSlider from "../../shared/sliders/CenteredSlider/CenteredSlider";
+import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
 import {roomsAndPricesPageData} from "../../../data";
 
 

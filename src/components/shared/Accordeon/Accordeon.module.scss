@@ -52,11 +52,16 @@
   transition: all 400ms
 }
 
-
 .btn.opened {
   color: #c6c6c6;
 }
 
 .btnHidden {
   display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .text {
+    text-align: justify;
+  }
 }

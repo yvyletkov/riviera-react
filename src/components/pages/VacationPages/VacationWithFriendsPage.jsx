@@ -1,12 +1,12 @@
 import React from "react";
 import {vacationPagesData} from "../../../data";
-import CenteredSlider from "../../shared/CenteredSlider/CenteredSlider";
-import SpecialsSlider from "../../shared/SpecialsSlider/SpecialsSlider";
+import CenteredSlider from "../../shared/sliders/CenteredSlider/CenteredSlider";
+import SpecialsSlider from "../../shared/sliders/SpecialsSlider/SpecialsSlider";
 import MapSection from "../../shared/MapSection/MapSection";
 import PageBanner from "../../shared/PageBanner/PageBanner";
-import RoomsSlider from "../../shared/RoomsSlider/RoomsSlider";
-import GridSlider from "../../shared/GridSlider/GridSlider";
-import GallerySlider from "../../shared/GallerySlider/GallerySlider";
+import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
+import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
+import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
 
 const VacationWithFriendsPage = () => {
     return <>

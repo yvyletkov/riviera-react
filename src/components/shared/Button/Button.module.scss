@@ -1,6 +1,7 @@
 $orange: #ff6c39;
 
 .button {
+  display: block;
   font-family: "Helvetica Neue Roman";
   background-color: $orange;
   padding: 18px 40px;
@@ -12,7 +13,7 @@ $orange: #ff6c39;
 }
 
 .button:hover {
-  background-color: #c5532c;
+  background-color: $orange * 0.9;
   text-decoration: none;
 }
 

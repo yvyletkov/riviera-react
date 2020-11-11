@@ -1,11 +1,11 @@
 import React from "react";
 import {homePageData} from "../../../data"
 import HomePageBanner from "./HomePageBanner/HomePageBanner";
-import CenteredSlider from "../../shared/CenteredSlider/CenteredSlider";
-import GridSlider from "../../shared/GridSlider/GridSlider";
+import CenteredSlider from "../../shared/sliders/CenteredSlider/CenteredSlider";
+import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
 import TextPlusImageBlock from "../../shared/TextPlusImageBlock/TextPlusImageBlock";
-import SpecialsSlider from "../../shared/SpecialsSlider/SpecialsSlider";
-import GallerySlider from "../../shared/GallerySlider/GallerySlider";
+import SpecialsSlider from "../../shared/sliders/SpecialsSlider/SpecialsSlider";
+import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
 import MapSection from "../../shared/MapSection/MapSection";
 
 const HomePage = () => {

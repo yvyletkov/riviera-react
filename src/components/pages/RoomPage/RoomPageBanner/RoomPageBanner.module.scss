@@ -51,6 +51,10 @@ $black: #171717;
   color: $black;
 }
 
+.textBlock a:hover {
+  text-decoration: none;
+}
+
 .textBlock h2 {
   font-family: "Helvetica Neue Medium";
   font-size: 27px;

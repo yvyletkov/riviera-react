@@ -14,12 +14,16 @@ import FamilyVacationPage from "./components/pages/VacationPages/FamilyVacationP
 import VacationForYourselfPage from "./components/pages/VacationPages/VacationForYourselfPage";
 import RomanticVacationPage from "./components/pages/VacationPages/RomanticVacationPage";
 import VacationWithFriendsPage from "./components/pages/VacationPages/VacationWithFriendsPage";
+import WeddingPage from "./components/pages/events/WeddingPage/WeddingPage";
 
 
 function App() {
 
     return (<>
             <Header/>
+
+            <Route path='/wedding' exact
+                   component={() => <WeddingPage/>}/>
 
             <Route path='/family-vacation' exact
                    component={() => <FamilyVacationPage/>}/>
