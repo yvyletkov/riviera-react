@@ -35,7 +35,7 @@ const SliderStyles = styled.div`
 }
 `;
 
-const LargeGallerySlider = ({blockName = "Фотогалерея", slides, slideTitle}) => {
+const LargeGallerySlider = ({blockName = "Фотогалерея", slides, slideTitle, videoMode}) => {
 
     const settings = {
         dots: false,
@@ -71,14 +71,16 @@ const LargeGallerySlider = ({blockName = "Фотогалерея", slides, slide
         ]
     };
 
-    const items = slides.map((item) => {
+    const items = !videoMode ?
+
+        slides.map((item) => {
         const {img, key} = item;
-        return (
-            <div className={s.card} key={key}>
+        return <div className={s.card} key={key}>
                 <img className={s.item} alt={slideTitle} key={key} src={img}/>
-            </div>
-        );
-    });
+            </div>})
+
+        : null;
+        // : slides.map(item => <VideoItem {...item} />) ;
 
     return (
         <div id='gallery' className={s.wrapper}>

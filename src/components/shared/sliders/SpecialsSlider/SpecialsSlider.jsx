@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Headline from "../../Headline/Headline";
 import arrowImg from "../../../../img/icons/right-arrow.svg";
 import {NextArrow, PrevArrow} from "../SliderArrows/sliderArrowButtons";
+import Button from "../../Button/Button";
 
 const SliderStyles = styled(Slider)`
   .slick-next:before,
@@ -44,7 +45,11 @@ const SliderStyles = styled(Slider)`
 }
 `;
 
-const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-то", textLink = "#", slides}) => {
+const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-то", textLink = "#", slides, text, btnText = 'Смотреть все предложения'}) => {
+
+    if (!text) text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut\n' +
+        '                        labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra\n' +
+        '                        maecenas accumsan lacus vel facilisis. '
 
     const settings = {
         infinite: true,
@@ -69,15 +74,13 @@ const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-�
     };
 
   const items = slides.map((item, index) => {
-        const {img, title, subtitle, time, house, key, link} = item;
+        const {img, title, subtitle, key, link} = item;
         return (
             <div className="SliderElement" key={key}>
                 <SpecialsSliderItem
                     img={img}
                     title={title}
                     subtitle={subtitle}
-                    time={time}
-                    house={house}
                     active={index===1}
                     link={link}
                 />
@@ -90,10 +93,9 @@ const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-�
             <div className={s.container}>
                 <div className={s.leftBlock}>
                     <Headline subtitle={subtitle} title={title}/>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                        maecenas accumsan lacus vel facilisis. </p>
-                    <a href={textLink}>Cмотреть все предложения <img src={arrowImg} alt=""/></a>
+                    <p>{text}</p>
+                    <Button text={btnText} link={textLink}/>
+                    {/*<a href={textLink}>Cмотреть все предложения <img src={arrowImg} alt=""/></a>*/}
                 </div>
                 <div className={s.rightBlock}>
                     <SliderStyles>

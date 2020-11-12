@@ -63,7 +63,7 @@ const WeddingSlider = ({slides}) => {
                     img={img}
                     title={title}
                     descr={descr}
-                    active={window.matchMedia('(max-width: 490px').matches ? false : index === 0}
+                    active={window.matchMedia('(max-width: 490px').matches ? false : index === 1}
                 />
             </div>
         );

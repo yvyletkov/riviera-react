@@ -1,10 +1,10 @@
 import React from "react";
 import s from "./WeddingPageBanner.module.scss";
-import img from "./../../../../../img/banners/events/weddingPageBanner.jpg"
-import img1 from "./../../../../../img/banners/events/weddingPageBannerTopLayer.png"
-import iconCapacity from "./../../../../../img/events/icon-capacity.png"
-import iconPhotozone from "./../../../../../img/events/icon-photozone.png"
-import iconThematic from "./../../../../../img/events/icon-thematic.png"
+import img from "../../../../../img/events/wedding/weddingPageBanner.jpg"
+import img1 from "../../../../../img/events/wedding/weddingPageBannerTopLayer.png"
+import iconCapacity from "../../../../../img/events/wedding/icon-capacity.png"
+import iconPhotozone from "../../../../../img/events/wedding/icon-photozone.png"
+import iconThematic from "../../../../../img/events/wedding/icon-thematic.png"
 import AnimatedMouseIcon from "../../../../shared/AnimatedMouseIcon/AnimatedMouseIcon";
 import Button from "../../../../shared/Button/Button";
 

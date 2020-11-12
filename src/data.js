@@ -57,41 +57,42 @@ import vacationWithFriendsBannerMobileImg from "./img/banners/vacations/vacation
 import weddingSliderImg1 from "./img/events/wedding/aquazone.jpg";
 import weddingSliderImg2 from "./img/events/wedding/park.jpg";
 import weddingSliderImg3 from "./img/events/wedding/beach.jpg";
+import weddingSliderIcon1 from "./img/events/wedding/icon1.png";
+import weddingSliderIcon2 from "./img/events/wedding/icon2.png";
+import weddingSliderIcon3 from "./img/events/wedding/icon3.png";
+import weddingSliderIcon4 from "./img/events/wedding/icon4.png";
+import weddingSliderIcon5 from "./img/events/wedding/icon5.png";
+import weddingSpecial1 from "./img/events/wedding/specials/1.jpg";
+import weddingSpecial2 from "./img/events/wedding/specials/2.jpg";
+import weddingSpecial3 from "./img/events/wedding/specials/3.jpg";
+import weddingSpecial4 from "./img/events/wedding/specials/4.jpg";
 
 const commonSpecialsSlides = [
     {
         img: img1,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00 8 августа",
-        house: "Корпус Classic",
+        title: "Cкидка 10%",
+        subtitle: "На что-то",
         link: '#',
         key: 1,
     },
     {
         img: img2,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00 8 августа",
-        house: "Корпус Classic",
+        title: "Cкидка 20%",
+        subtitle: "На что-то",
         link: '#',
         key: 2,
     },
     {
         img: img3,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00 8 августа",
-        house: "Корпус Classic",
+        title: "Cкидка 30%",
+        subtitle: "На что-то",
         link: '#',
         key: 3,
     },
     {
         img: img4,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00 8 августа",
-        house: "Корпус Classic",
+        title: "Cкидка 40%",
+        subtitle: "На что-то",
         link: '#',
         key: 4,
     },
@@ -1100,6 +1101,70 @@ export const eventPagesData  = {
                 key: 3,
             },
         ],
+    weddingIcons: [
+        {img: weddingSliderIcon1, text: "Профессиональная команда организаторов"},
+        {img: weddingSliderIcon2, text: "Изысканное меню от бренд-шефа"},
+        {img: weddingSliderIcon3, text: "Полное оснащение залов"},
+        {img: weddingSliderIcon4, text: "В 1 часе езды на авто из аэропорта"},
+        {img: weddingSliderIcon5, text: "Несколько вариантов церемоний"},
+    ],
+    specialsSlides: [
+        {
+            img: weddingSpecial1,
+            title: "Cкидка 10%",
+            subtitle: "На что-то",
+            link: '#',
+            key: 1,
+        },
+        {
+            img: weddingSpecial2,
+            title: "Программы",
+            subtitle: "Экскурсионные",
+            link: '#',
+            key: 2,
+        },
+        {
+            img: weddingSpecial3,
+            title: "Cкидка 30%",
+            subtitle: "На что-то",
+            link: '#',
+            key: 3,
+        },
+        {
+            img: weddingSpecial4,
+            title: "Cкидка 40%",
+            subtitle: "На что-то",
+            link: '#',
+            key: 4,
+        },
+    ],
+    largeGallerySlides: [
+        {
+            img: img1,
+            key: 1,
+        },
+        {
+            img: img2,
+            key: 2,
+        },
+        {
+            img: img3,
+            key: 3,
+        },
+        {
+            img: img4,
+            key: 4,
+        },
+        {
+            img: img5,
+            key: 5,
+        },
+        {
+            img: img6,
+            key: 6,
+        },
+    ], // need videos
+
 };
 
 

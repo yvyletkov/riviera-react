@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 
 
 const SpecialsSliderItem = (props) => {
-    const {img, active, link} = props;
+    const {img, active, title, subtitle, link} = props;
 
     let [lifted, setLifted] = React.useState(active);
 
@@ -17,8 +17,8 @@ const SpecialsSliderItem = (props) => {
                     onMouseLeave={() => setLifted(false)}>
                     <img className={s.img} src={img} alt="Афиша"/>
                     <div className={s.content}>
-                        <p className={s.subtitle}>на отдых</p>
-                        <p className={s.title}>Скидка 10%</p>
+                        <p className={s.subtitle}>{subtitle}</p>
+                        <p className={s.title}>{title}</p>
                         <a href="">Подробнее →</a>
                     </div>
                 </div>
