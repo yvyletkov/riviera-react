@@ -1108,7 +1108,7 @@ export const eventPagesData  = {
         {img: weddingSliderIcon4, text: "В 1 часе езды на авто из аэропорта"},
         {img: weddingSliderIcon5, text: "Несколько вариантов церемоний"},
     ],
-    specialsSlides: [
+    weddingSpecialsSlides: [
         {
             img: weddingSpecial1,
             title: "Cкидка 10%",
@@ -1138,7 +1138,7 @@ export const eventPagesData  = {
             key: 4,
         },
     ],
-    largeGallerySlides: [
+    weddingLargeGallerySlides: [
         {
             img: img1,
             key: 1,
@@ -1164,6 +1164,12 @@ export const eventPagesData  = {
             key: 6,
         },
     ], // need videos
+    weddingPlacesSlides: [
+        {text: 'Обширный номерной фонд'},
+        {text: 'Профессиональное звуковое и акустическое оборудование'},
+        {text: 'Персональный организатор на площадке'},
+        {text: '...и еще 17 пунктов проверки места для проведения мероприятия'},
+    ]
 
 };
 

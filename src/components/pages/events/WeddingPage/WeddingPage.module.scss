@@ -517,6 +517,7 @@
       max-width: 1200px;
       width: 100%;
       margin: 0 auto;
+      overflow: hidden;
 
       .topRow {
         display: flex;
@@ -524,6 +525,8 @@
         align-items: center;
 
         h4.title {
+          //display: inline-block;
+          width: 480px;
 
           span {
             text-transform: uppercase;
@@ -563,6 +566,8 @@
           }
 
           @media (max-width: 500px) {
+            width: fit-content;
+
             span:first-of-type {
               font-size: 16px;
             }
@@ -576,21 +581,66 @@
 
         }
 
-        p {
+        .textContent {
           padding: 0 20px;
           text-align: justify;
           width: 60%;
         }
 
+        @media (max-width: 1000px) {
+          display: block;
+          .textContent {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 0 20px;
+          }
+          h4.title {
+            width: fit-content;
+            padding-left: 20px;
+          }
+        }
+
       }
 
-      .sliderItemWrapper {
-        box-shadow: -4.54px 8.91px 35px 0px rgba(23, 23, 23, 0.25);
-        background-color: rgb(255, 255, 255);
-        width: 237px;
-        height: 237px;
-        margin: 0 10px;
+      .sliderWrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .sliderItemWrapper {
+          box-sizing: border-box;
+          display: flex;
+          position: relative;
+          align-items: center;
+          justify-content: center;
+          box-shadow: -4.54px 8.91px 35px 0px rgba(23, 23, 23, 0.25);
+          background-color: rgb(255, 255, 255);
+          width: 237px;
+          height: 237px;
+          margin: 40px auto;
+          padding: 10px;
+
+          @media (max-width: 1000px) {
+            margin-left: 20px;
+          }
+
+          div {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-family: "Helvetica Neue Black";
+            font-size: 40px;
+            color: #f7f7f7;
+          }
+
+          p {
+            font-family: "Helvetica Neue Roman";
+            line-height: 1.4;
+            color: #8e8e8e;
+            text-align: center;
+          }
+        }
       }
+
 
     }
 

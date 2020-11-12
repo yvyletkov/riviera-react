@@ -19,10 +19,7 @@ import LargeGallerySlider from "../../../shared/sliders/LargeGallerySlider/Large
 const WeddingPage = () => {
 
     let [accordeonStatus, setAccordeonStatus] = React.useState(false);
-
-    const handleClick = () => {
-        setAccordeonStatus(!accordeonStatus)
-    }
+    let [accordeonStatus1, setAccordeonStatus1] = React.useState(false);
 
     const settings = {
         infinite: false,
@@ -50,7 +47,7 @@ const WeddingPage = () => {
                     <div className={s.background}/>
                     <div className={s.textContent}>
                         <Headline subtitle={'Ваша семья'} title={'Начинается здесь'}/>
-                        <CirqleTip accordeonStatus={accordeonStatus} onClick={handleClick}/>
+                        <CirqleTip accordeonStatus={accordeonStatus} onClick={() => setAccordeonStatus(!accordeonStatus)}/>
                         <Accordeon withBtn={false} zeroHeight={true} status={accordeonStatus}>
                             <p>
                                 Любви нужно пространство! Особенный день для пары должен пройти там, где будет всё
@@ -179,13 +176,13 @@ const WeddingPage = () => {
 
         <section className='section'>
             <SpecialsSlider subtitle={'Дополнительные'} title={'услуги'} btnText={'Получить прайс по услугам'}
-                            slides={eventPagesData.specialsSlides}/>
+                            slides={eventPagesData.weddingSpecialsSlides}/>
         </section>
 
         {/* Лучше один ращ увидеть */}
 
         <section className='section'>
-            <LargeGallerySlider blockName={'Лучше один раз увидеть'} slides={eventPagesData.largeGallerySlides}
+            <LargeGallerySlider blockName={'Лучше один раз увидеть'} slides={eventPagesData.weddingLargeGallerySlides}
                                 slideTitle={'Лучше один раз увидеть'}/>
         </section>
 
@@ -201,6 +198,9 @@ const WeddingPage = () => {
                                 <span>площадку для проведения</span>
                                 <span>свадьбы</span>
                             </h4>
+                            <CirqleTip style={{marginLeft: "-40px"}} accordeonStatus={accordeonStatus1} onClick={() => setAccordeonStatus1(!accordeonStatus1)}/>
+                            <div className={s.textContent}>
+                            <Accordeon withBtn={false} zeroHeight={true} status={accordeonStatus1}>
                             <p>
                                 Свадьба в Крыму – сложное и большое по уровню организации мероприятие. Поэтому в
                                 качестве площадки должен выступать отель с большим ассортиментом банкетных залов, с
@@ -209,15 +209,23 @@ const WeddingPage = () => {
                                 проведения свадьбы будет зависеть многое. Важно определить идеальное соотношение цены,
                                 качества и уровня сервиса для того, чтобы создать действительно незабываемое событие.
                             </p>
+                            </Accordeon>
+                            </div>
                         </div>
 
 
-
-                        <Slider {...settings}>
-                            {eventPagesData.weddingPlacesSlides.map( item => {
-                                return <div className={s.sliderItemWrapper}></div>
-                            })}
-                        </Slider>
+                        <div className={s.sliderWrapper}>
+                            <Slider {...settings} slidesToShow={4}>
+                                {eventPagesData.weddingPlacesSlides.map((item, index) => {
+                                    return <div>
+                                        <div className={s.sliderItemWrapper}>
+                                            <div>{index + 1}</div>
+                                            <p>{item.text}</p>
+                                        </div>
+                                    </div>
+                                })}
+                            </Slider>
+                        </div>
 
                     </div>
                 </div>
