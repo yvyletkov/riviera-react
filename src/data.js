@@ -46,8 +46,122 @@ import iconView from "./img/room-page/mountains.png";
 import iconShower from "./img/room-page/shower.png";
 import iconSpace from "./img/room-page/ploshchad.png";
 import iconConnected from "./img/room-page/connected.png";
-import familyRecreationBannerImg from "./img/banners/family-recreation.png";
+import familyVacationBannerImg from "./img/banners/vacations/family-vacation.png";
+import familyVacationBannerMobileImg from "./img/banners/vacations/family-vacation-mob.jpg";
+import romanticVacationBannerImg from "./img/banners/vacations/romantic-vacation.png";
+import romanticVacationBannerMobileImg from "./img/banners/vacations/romantic-vacation-mob.jpg";
+import vacationForYourselfBannerImg from "./img/banners/vacations/vacation-for-yourself.png";
+import vacationForYourselfBannerMobileImg from "./img/banners/vacations/vacation-for-yourself-mob.jpg";
+import vacationWithFriendsBannerImg from "./img/banners/vacations/vacation-with-friends.png";
+import vacationWithFriendsBannerMobileImg from "./img/banners/vacations/vacation-with-friends-mob.jpg";
+import weddingSliderImg1 from "./img/events/wedding/aquazone.jpg";
+import weddingSliderImg2 from "./img/events/wedding/park.jpg";
+import weddingSliderImg3 from "./img/events/wedding/beach.jpg";
+import weddingSliderIcon1 from "./img/events/wedding/icon1.png";
+import weddingSliderIcon2 from "./img/events/wedding/icon2.png";
+import weddingSliderIcon3 from "./img/events/wedding/icon3.png";
+import weddingSliderIcon4 from "./img/events/wedding/icon4.png";
+import weddingSliderIcon5 from "./img/events/wedding/icon5.png";
+import weddingSpecial1 from "./img/events/wedding/specials/1.jpg";
+import weddingSpecial2 from "./img/events/wedding/specials/2.jpg";
+import weddingSpecial3 from "./img/events/wedding/specials/3.jpg";
+import weddingSpecial4 from "./img/events/wedding/specials/4.jpg";
 
+const commonSpecialsSlides = [
+    {
+        img: img1,
+        title: "Cкидка 10%",
+        subtitle: "На что-то",
+        link: '#',
+        key: 1,
+    },
+    {
+        img: img2,
+        title: "Cкидка 20%",
+        subtitle: "На что-то",
+        link: '#',
+        key: 2,
+    },
+    {
+        img: img3,
+        title: "Cкидка 30%",
+        subtitle: "На что-то",
+        link: '#',
+        key: 3,
+    },
+    {
+        img: img4,
+        title: "Cкидка 40%",
+        subtitle: "На что-то",
+        link: '#',
+        key: 4,
+    },
+];
+const commonAfishaSlides = [
+    {
+        img: afisha1,
+        title: "Караоке бар",
+        subtitle: "Green Stage",
+        time: "21:00",
+        date: "8 августа",
+        campus: "Корпус",
+        campusName: "Classic",
+        key: 1,
+    },
+    {
+        img: afisha2,
+        title: "Караоке бар",
+        subtitle: "Green Stage",
+        time: "21:00",
+        date: "8 августа",
+        campus: "Корпус",
+        campusName: "Classic",
+        key: 2,
+    },
+    {
+        img: afisha3,
+        title: "Караоке бар",
+        subtitle: "Green Stage",
+        time: "21:00",
+        date: "8 августа",
+        campus: "Корпус",
+        campusName: "Classic",
+        key: 3,
+    },
+    {
+        img: afisha4,
+        title: "Караоке бар",
+        subtitle: "Green Stage",
+        time: "21:00",
+        date: "8 августа",
+        campus: "Корпус",
+        campusName: "Classic",
+        key: 4,
+    },
+    {
+        img: afisha5,
+        title: "Караоке бар",
+        subtitle: "Green Stage",
+        time: "21:00",
+        date: "8 августа",
+        campus: "Корпус",
+        campusName: "Classic",
+        key: 5,
+    },
+    {
+        img: afisha5,
+        title: "Караоке бар",
+        subtitle: "Green Stage",
+        time: "21:00",
+        date: "8 августа",
+        campus: "Корпус",
+        campusName: "Classic",
+        key: 6,
+    },
+];
+
+
+// Домашняя страница
 export const homePageData = {
     gridSlides: [
         {
@@ -135,102 +249,8 @@ export const homePageData = {
             }],
         }
     ],
-    centeredSlides: [
-        {
-            img: afisha1,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00",
-            date: "8 августа",
-            campus: "Корпус",
-            campusName: "Classic",
-            key: 1,
-        },
-        {
-            img: afisha2,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00",
-            date: "8 августа",
-            campus: "Корпус",
-            campusName: "Classic",
-            key: 2,
-        },
-        {
-            img: afisha3,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00",
-            date: "8 августа",
-            campus: "Корпус",
-            campusName: "Classic",
-            key: 3,
-        },
-        {
-            img: afisha4,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00",
-            date: "8 августа",
-            campus: "Корпус",
-            campusName: "Classic",
-            key: 4,
-        },
-        {
-            img: afisha5,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00",
-            date: "8 августа",
-            campus: "Корпус",
-            campusName: "Classic",
-            key: 5,
-        },
-        {
-            img: afisha5,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00",
-            date: "8 августа",
-            campus: "Корпус",
-            campusName: "Classic",
-            key: 6,
-        },
-    ],
-    specialsSlides: [
-        {
-            img: img1,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00 8 августа",
-            house: "Корпус Classic",
-            key: 1,
-        },
-        {
-            img: img2,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00 8 августа",
-            house: "Корпус Classic",
-            key: 2,
-        },
-        {
-            img: img3,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00 8 августа",
-            house: "Корпус Classic",
-            key: 3,
-        },
-        {
-            img: img4,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00 8 августа",
-            house: "Корпус Classic",
-            key: 4,
-        },
-    ],
+    centeredSlides: commonAfishaSlides,
+    specialsSlides: commonSpecialsSlides,
     gallerySlides: [
         {
             img: img1,
@@ -348,6 +368,8 @@ export const homePageData = {
     ],
 }
 
+
+// Старница "Номера и Цены"
 export const roomsAndPricesPageData = {
     classicSlides: [
         {
@@ -492,115 +514,39 @@ export const roomsAndPricesPageData = {
             }],
         }
     ],
-    centeredSlides: [
-        {
-            img: afisha1,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00",
-            date: "8 августа",
-            campus: "Корпус",
-            campusName: "Classic",
-            key: 1,
-        },
-        {
-            img: afisha2,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00",
-            date: "8 августа",
-            campus: "Корпус",
-            campusName: "Classic",
-            key: 2,
-        },
-        {
-            img: afisha3,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00",
-            date: "8 августа",
-            campus: "Корпус",
-            campusName: "Classic",
-            key: 3,
-        },
-        {
-            img: afisha4,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00",
-            date: "8 августа",
-            campus: "Корпус",
-            campusName: "Classic",
-            key: 4,
-        },
-        {
-            img: afisha5,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00",
-            date: "8 августа",
-            campus: "Корпус",
-            campusName: "Classic",
-            key: 5,
-        },
-        {
-            img: afisha5,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00",
-            date: "8 августа",
-            campus: "Корпус",
-            campusName: "Classic",
-            key: 6,
-        },
-    ],
+    centeredSlides: commonAfishaSlides,
 }
 
+
+// Страницы номеров
 export const roomPageData = {
     modernStandart: {
         campusName: 'Модерн',
         roomName: 'Стандарт',
+        roomNameFontSize: ["14.8vw", "95px"],
         largeGallerySlides: [
             {
                 img: img1,
-                title: "Корпус Modern",
-                description: "Номер: стандарт улучшенный двухместный",
-                href: "#",
                 key: 1,
             },
             {
                 img: img2,
-                title: "Корпус Modern",
-                description: "Номер: стандарт улучшенный двухместный",
-                href: "#",
                 key: 2,
             },
             {
                 img: img3,
-                title: "Корпус Modern",
-                description: "Номер: стандарт улучшенный двухместный",
-                href: "#",
                 key: 3,
             },
             {
                 img: img4,
-                title: "Корпус Modern",
-                description: "Номер: стандарт улучшенный двухместный",
-                href: "#",
                 key: 4,
             },
             {
                 img: img5,
-                title: "Корпус Modern",
-                description: "Номер: стандарт улучшенный двухместный",
-                href: "#",
                 key: 5,
             },
             {
                 img: img6,
-                title: "Корпус Modern",
-                description: "Номер: стандарт улучшенный двухместный",
-                href: "#",
                 key: 6,
             },
         ],
@@ -701,85 +647,35 @@ export const roomPageData = {
                 key: 6,
             },
         ],
-        specialsSlides: [
-            {
-                img: img1,
-                title: "Караоке бар",
-                subtitle: "Green Stage",
-                time: "21:00 8 августа",
-                house: "Корпус Classic",
-                key: 1,
-            },
-            {
-                img: img2,
-                title: "Караоке бар",
-                subtitle: "Green Stage",
-                time: "21:00 8 августа",
-                house: "Корпус Classic",
-                key: 2,
-            },
-            {
-                img: img3,
-                title: "Караоке бар",
-                subtitle: "Green Stage",
-                time: "21:00 8 августа",
-                house: "Корпус Classic",
-                key: 3,
-            },
-            {
-                img: img4,
-                title: "Караоке бар",
-                subtitle: "Green Stage",
-                time: "21:00 8 августа",
-                house: "Корпус Classic",
-                key: 4,
-            },
-        ],
+        specialsSlides: commonSpecialsSlides,
     },
-    modernJuniorSuite: {
+    modernSemiLux: {
         campusName: 'Модерн',
         roomName: 'Полулюкс',
+        roomNameFontSize: ["13.4vw", "86px"],
         largeGallerySlides: [
             {
                 img: img1,
-                title: "Корпус Modern",
-                description: "Номер: стандарт улучшенный двухместный",
-                href: "#",
                 key: 1,
             },
             {
                 img: img2,
-                title: "Корпус Modern",
-                description: "Номер: стандарт улучшенный двухместный",
-                href: "#",
                 key: 2,
             },
             {
                 img: img3,
-                title: "Корпус Modern",
-                description: "Номер: стандарт улучшенный двухместный",
-                href: "#",
                 key: 3,
             },
             {
                 img: img4,
-                title: "Корпус Modern",
-                description: "Номер: стандарт улучшенный двухместный",
-                href: "#",
                 key: 4,
             },
             {
                 img: img5,
-                title: "Корпус Modern",
-                description: "Номер: стандарт улучшенный двухместный",
-                href: "#",
                 key: 5,
             },
             {
                 img: img6,
-                title: "Корпус Modern",
-                description: "Номер: стандарт улучшенный двухместный",
-                href: "#",
                 key: 6,
             },
         ],
@@ -880,46 +776,22 @@ export const roomPageData = {
                 key: 6,
             },
         ],
-        specialsSlides: [
-            {
-                img: img1,
-                title: "Караоке бар",
-                subtitle: "Green Stage",
-                time: "21:00 8 августа",
-                house: "Корпус Classic",
-                key: 1,
-            },
-            {
-                img: img2,
-                title: "Караоке бар",
-                subtitle: "Green Stage",
-                time: "21:00 8 августа",
-                house: "Корпус Classic",
-                key: 2,
-            },
-            {
-                img: img3,
-                title: "Караоке бар",
-                subtitle: "Green Stage",
-                time: "21:00 8 августа",
-                house: "Корпус Classic",
-                key: 3,
-            },
-            {
-                img: img4,
-                title: "Караоке бар",
-                subtitle: "Green Stage",
-                time: "21:00 8 августа",
-                house: "Корпус Classic",
-                key: 4,
-            },
-        ],
-    }
+        specialsSlides: commonSpecialsSlides,
+    },
 }
 
-export const familyRecreationPageData = {
-    bannerImg: familyRecreationBannerImg,
-    classicSlides: [
+
+// Страницы "Cемейный отдых", "Отдых для себя", "Отдых с друзьями", "Романтический отдых"
+export const vacationPagesData = {
+    familyVacationBannerImg,
+    familyVacationBannerMobileImg,
+    romanticVacationBannerImg,
+    romanticVacationBannerMobileImg,
+    vacationForYourselfBannerImg,
+    vacationForYourselfBannerMobileImg,
+    vacationWithFriendsBannerImg,
+    vacationWithFriendsBannerMobileImg,
+    classicSlides: [        // слайды корпуса Классик
         {
             img: classic1img,
             title: "Корпуса классик",
@@ -945,7 +817,7 @@ export const familyRecreationPageData = {
             bookingLink: "",
         },
     ],
-    modernSlides: [
+    modernSlides: [        // слайды корпуса Модерн
         {
             img: modern1img,
             title: "Корпус Модерн",
@@ -1062,102 +934,8 @@ export const familyRecreationPageData = {
             }],
         }
     ],
-    centeredSlides: [
-        {
-            img: afisha1,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00",
-            date: "8 августа",
-            campus: "Корпус",
-            campusName: "Classic",
-            key: 1,
-        },
-        {
-            img: afisha2,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00",
-            date: "8 августа",
-            campus: "Корпус",
-            campusName: "Classic",
-            key: 2,
-        },
-        {
-            img: afisha3,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00",
-            date: "8 августа",
-            campus: "Корпус",
-            campusName: "Classic",
-            key: 3,
-        },
-        {
-            img: afisha4,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00",
-            date: "8 августа",
-            campus: "Корпус",
-            campusName: "Classic",
-            key: 4,
-        },
-        {
-            img: afisha5,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00",
-            date: "8 августа",
-            campus: "Корпус",
-            campusName: "Classic",
-            key: 5,
-        },
-        {
-            img: afisha5,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00",
-            date: "8 августа",
-            campus: "Корпус",
-            campusName: "Classic",
-            key: 6,
-        },
-    ],
-    specialsSlides: [
-        {
-            img: img1,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00 8 августа",
-            house: "Корпус Classic",
-            key: 1,
-        },
-        {
-            img: img2,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00 8 августа",
-            house: "Корпус Classic",
-            key: 2,
-        },
-        {
-            img: img3,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00 8 августа",
-            house: "Корпус Classic",
-            key: 3,
-        },
-        {
-            img: img4,
-            title: "Караоке бар",
-            subtitle: "Green Stage",
-            time: "21:00 8 августа",
-            house: "Корпус Classic",
-            key: 4,
-        },
-    ],
+    centeredSlides: commonAfishaSlides,
+    specialsSlides: commonSpecialsSlides,
     gallerySlides: [
         {
             img: img1,
@@ -1276,29 +1054,124 @@ export const familyRecreationPageData = {
     wideSlides: [
         {
             img: classic1img,
-            title: "Корпуса классик",
-            link: "",
+            title: "Детская анимация",
+            link: "#",
             bookingLink: "",
         },
         {
             img: classic2img,
-            title: "Стандарт",
-            link: "/classic/standart",
+            title: "Детская зона бассейна",
+            link: "#",
             bookingLink: "",
         },
         {
             img: classic3img,
-            title: "Полулюкс Классик",
-            link: "/classic/polulyuks-classic",
+            title: "День рождения",
+            link: "#",
             bookingLink: "",
         },
         {
             img: classic2img,
-            title: "Какой-то номер",
-            link: "/classic/",
+            title: "Игровая площадка",
+            link: "#",
             bookingLink: "",
         },
     ],
 }
+
+
+export const eventPagesData  = {
+    weddingSlides: [
+            {
+                img: weddingSliderImg2,
+                title: "Парк",
+                descr: 'Площадка с аккуратным мостиком, подсветкой бассейна, с видом на реликтовый парк и морское побережье позволит создать дополнительную атмосферу романтики и уюта.',
+                key: 1,
+            },
+            {
+                img: weddingSliderImg1,
+                title: "Аквазона",
+                descr: 'Площадка с аккуратным мостиком, подсветкой бассейна, с видом на реликтовый парк и морское побережье позволит создать дополнительную атмосферу романтики и уюта.',
+                key: 2,
+            },
+            {
+                img: weddingSliderImg3,
+                title: "Пляж",
+                descr: 'Площадка с аккуратным мостиком, подсветкой бассейна, с видом на реликтовый парк и морское побережье позволит создать дополнительную атмосферу романтики и уюта.',
+                key: 3,
+            },
+        ],
+    weddingIcons: [
+        {img: weddingSliderIcon1, text: "Профессиональная команда организаторов"},
+        {img: weddingSliderIcon2, text: "Изысканное меню от бренд-шефа"},
+        {img: weddingSliderIcon3, text: "Полное оснащение залов"},
+        {img: weddingSliderIcon4, text: "В 1 часе езды на авто из аэропорта"},
+        {img: weddingSliderIcon5, text: "Несколько вариантов церемоний"},
+    ],
+    weddingSpecialsSlides: [
+        {
+            img: weddingSpecial1,
+            title: "Cкидка 10%",
+            subtitle: "На что-то",
+            link: '#',
+            key: 1,
+        },
+        {
+            img: weddingSpecial2,
+            title: "Программы",
+            subtitle: "Экскурсионные",
+            link: '#',
+            key: 2,
+        },
+        {
+            img: weddingSpecial3,
+            title: "Cкидка 30%",
+            subtitle: "На что-то",
+            link: '#',
+            key: 3,
+        },
+        {
+            img: weddingSpecial4,
+            title: "Cкидка 40%",
+            subtitle: "На что-то",
+            link: '#',
+            key: 4,
+        },
+    ],
+    weddingLargeGallerySlides: [
+        {
+            img: img1,
+            key: 1,
+        },
+        {
+            img: img2,
+            key: 2,
+        },
+        {
+            img: img3,
+            key: 3,
+        },
+        {
+            img: img4,
+            key: 4,
+        },
+        {
+            img: img5,
+            key: 5,
+        },
+        {
+            img: img6,
+            key: 6,
+        },
+    ], // need videos
+    weddingPlacesSlides: [
+        {text: 'Обширный номерной фонд'},
+        {text: 'Профессиональное звуковое и акустическое оборудование'},
+        {text: 'Персональный организатор на площадке'},
+        {text: '...и еще 17 пунктов проверки места для проведения мероприятия'},
+    ]
+
+};
+
 
 

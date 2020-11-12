@@ -75,7 +75,6 @@ a:hover {
   font-size: 20px;
 }
 
-
 .link img {
   display: inline-block;
   margin-right: 5px;
@@ -97,6 +96,16 @@ a:hover {
   position: absolute;
   font-size: 60px;
   left: 12px;
+  transition: all 200ms;
+}
+
+.menuIcon.opened {
+  z-index: 3000;
+  transform: scale(1.5);
+}
+
+.menuIcon.opened span {
+  background-color: #171717;
 }
 
 .menuIcon span {
@@ -105,10 +114,24 @@ a:hover {
   height: 2px;
   background-color: $fontBlack;
   margin-bottom: 5px;
+  transition: all 200ms;
+  transform-origin: left;
+}
+
+.menuIcon.opened span:nth-child(1) {
+  transform: rotate(45deg) translateY(-2px);
+}
+
+.menuIcon.opened span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuIcon.opened span:nth-child(3) {
+  transform: rotate(-45deg) translateY(2px);
 }
 
 @media screen and (max-width: 1200px) {
-  .link, .contacts  {
+  .link, .contacts {
     display: none;
   }
   .searchIcon {
@@ -131,7 +154,7 @@ a:hover {
     transition: all 400ms;
   }
 
-  .content.minified .logo img{
+  .content.minified .logo img {
     width: 110px;
   }
 
@@ -139,6 +162,75 @@ a:hover {
     padding: 0 15px 0 10px;
   }
 }
+
+
+//menu
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  z-index: -100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.98);
+  transition: all 350ms;
+  padding: 0 7px;
+  //backdrop-filter: blur(5px);
+}
+
+.menu div a {
+  font-size: 7vw;
+  font-family: "Helvetica Neue Light";
+  color: #7a7a7a;
+  transition: all 200ms;
+}
+
+.menu div {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.menu.opened {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1000;
+}
+
+.menuLinkActive {
+  color: #b0b0b0 !important;
+}
+
+@media screen and (min-width: 501px) {
+  .menu div a {
+    font-size: 46px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .menuIcon.opened {
+    z-index: 3000;
+    transform: scale(1.5) translateY(25%) translateX(25%);
+  }
+}
+
+$link: #ff8d66;
+
+.menu a {
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: $link;
+}
+
+
 
 
 
