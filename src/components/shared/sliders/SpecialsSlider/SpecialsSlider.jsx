@@ -94,7 +94,7 @@ const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-�
                 <div className={s.leftBlock}>
                     <Headline subtitle={subtitle} title={title}/>
                     <p>{text}</p>
-                    <Button text={btnText} link={textLink}/>
+                    <Button text={btnText} style={{width: "200px"}} link={textLink}/>
                     {/*<a href={textLink}>Cмотреть все предложения <img src={arrowImg} alt=""/></a>*/}
                 </div>
                 <div className={s.rightBlock}>

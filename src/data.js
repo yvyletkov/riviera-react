@@ -66,6 +66,28 @@ import weddingSpecial1 from "./img/events/wedding/specials/1.jpg";
 import weddingSpecial2 from "./img/events/wedding/specials/2.jpg";
 import weddingSpecial3 from "./img/events/wedding/specials/3.jpg";
 import weddingSpecial4 from "./img/events/wedding/specials/4.jpg";
+import placesIcon1 from "./img/events/wedding/placesIcon1.png";
+import placesIcon2 from "./img/events/wedding/placesIcon2.png";
+import placesIcon3 from "./img/events/wedding/placesIcon3.png";
+import placesIcon4 from "./img/events/wedding/placesIcon4.png";
+import weddingGallery1 from "./img/events/wedding/gallery/1.jpg";
+import weddingGallery2 from "./img/events/wedding/gallery/2.jpg";
+import weddingGallery3 from "./img/events/wedding/gallery/3.jpg";
+import weddingGallery4 from "./img/events/wedding/gallery/4.jpg";
+import weddingGallery5 from "./img/events/wedding/gallery/5.jpg";
+import weddingGallery6 from "./img/events/wedding/gallery/6.jpg";
+import weddingGallery7 from "./img/events/wedding/gallery/7.jpg";
+import weddingGallery8 from "./img/events/wedding/gallery/8.jpg";
+import weddingGallery9 from "./img/events/wedding/gallery/9.jpg";
+import weddingGallery10 from "./img/events/wedding/gallery/10.jpg";
+import weddingGallery11 from "./img/events/wedding/gallery/11.jpg";
+import weddingGallery12 from "./img/events/wedding/gallery/12.jpg";
+import weddingGallery13 from "./img/events/wedding/gallery/13.jpg";
+import weddingGallery14 from "./img/events/wedding/gallery/14.jpg";
+import weddingGallery15 from "./img/events/wedding/gallery/15.jpg";
+import weddingGallery16 from "./img/events/wedding/gallery/16.jpg";
+
+
 
 const commonSpecialsSlides = [
     {
@@ -158,6 +180,66 @@ const commonAfishaSlides = [
         campusName: "Classic",
         key: 6,
     },
+];
+const commonClassicCampusSlides = [
+    {
+        img: classic1img,
+        title: "Корпуса классик",
+        link: "",
+        bookingLink: "",
+    },
+    {
+        img: classic2img,
+        title: "Стандарт",
+        link: "/classic/standart",
+        bookingLink: "",
+    },
+    {
+        img: classic3img,
+        title: "Полулюкс Классик",
+        link: "/classic/polulyuks-classic",
+        bookingLink: "",
+    },
+    {
+        img: classic2img,
+        title: "Какой-то номер",
+        link: "/classic/",
+        bookingLink: "",
+    },
+];
+const commonModernCampusSlides = [
+    {
+        img: modern1img,
+        title: "Корпус Модерн",
+        link: "",
+        bookingLink: "",
+    },
+    {
+        img: modern2img,
+        title: "Стандарт",
+        link: "/modern/standart",
+        bookingLink: "",
+    },
+    {
+        img: modern3img,
+        title: "Полулюкс модерн",
+        link: "/modern/polulyuks-modern",
+        bookingLink: "",
+    },
+    {
+        img: modern2img,
+        title: "Какой-то номер",
+        link: "/modern/",
+        bookingLink: "",
+    },
+];
+const commonClassicDescr = [
+    '63 номера в классическом стиле',
+    'Исторический корпус Классик был полностью реновирован в 2016 году.  Свою историю начал вести в 1913 году и имеет особую атмосферу. Дизайн номеров выполнен в эксклюзивном, классическом стиле.'
+];
+const commonModernDescr = [
+    '146 номеров в современном дизайне',
+    'Дизайн интерьера выдержан в стиле Модерн и выполнен в концепции Natural Cool и Ocean Style. Современная эксклюзивная дизайнерская мебель в натуральных тонах создает лучшие условия для комфорта и уюта.'
 ];
 
 
@@ -371,66 +453,10 @@ export const homePageData = {
 
 // Старница "Номера и Цены"
 export const roomsAndPricesPageData = {
-    classicSlides: [
-        {
-            img: classic1img,
-            title: "Корпуса классик",
-            link: "",
-            bookingLink: "",
-        },
-        {
-            img: classic2img,
-            title: "Стандарт",
-            link: "/classic/standart",
-            bookingLink: "",
-        },
-        {
-            img: classic3img,
-            title: "Полулюкс Классик",
-            link: "/classic/polulyuks-classic",
-            bookingLink: "",
-        },
-        {
-            img: classic2img,
-            title: "Какой-то номер",
-            link: "/classic/",
-            bookingLink: "",
-        },
-    ],
-    modernSlides: [
-        {
-            img: modern1img,
-            title: "Корпус Модерн",
-            link: "",
-            bookingLink: "",
-        },
-        {
-            img: modern2img,
-            title: "Стандарт",
-            link: "/modern/standart",
-            bookingLink: "",
-        },
-        {
-            img: modern3img,
-            title: "Полулюкс модерн",
-            link: "/modern/polulyuks-modern",
-            bookingLink: "",
-        },
-        {
-            img: modern2img,
-            title: "Какой-то номер",
-            link: "/modern/",
-            bookingLink: "",
-        },
-    ],
-    modernDescr: [
-        '146 номеров в современном дизайне',
-        'Дизайн интерьера выдержан в стиле Модерн и выполнен в концепции Natural Cool и Ocean Style. Современная эксклюзивная дизайнерская мебель в натуральных тонах создает лучшие условия для комфорта и уюта.'
-    ],
-    classicDescr: [
-        '63 номера в классическом стиле',
-        'Исторический корпус Классик был полностью реновирован в 2016 году.  Свою историю начал вести в 1913 году и имеет особую атмосферу. Дизайн номеров выполнен в эксклюзивном, классическом стиле.'
-    ],
+    classicSlides: commonClassicCampusSlides,
+    modernSlides: commonModernCampusSlides,
+    modernDescr: commonModernDescr,
+    classicDescr: commonClassicDescr,
     gridSlides: [
         {
             name: "SPA комплекс",
@@ -791,66 +817,10 @@ export const vacationPagesData = {
     vacationForYourselfBannerMobileImg,
     vacationWithFriendsBannerImg,
     vacationWithFriendsBannerMobileImg,
-    classicSlides: [        // слайды корпуса Классик
-        {
-            img: classic1img,
-            title: "Корпуса классик",
-            link: "",
-            bookingLink: "",
-        },
-        {
-            img: classic2img,
-            title: "Стандарт",
-            link: "/classic/standart",
-            bookingLink: "",
-        },
-        {
-            img: classic3img,
-            title: "Полулюкс Классик",
-            link: "/classic/polulyuks-classic",
-            bookingLink: "",
-        },
-        {
-            img: classic2img,
-            title: "Какой-то номер",
-            link: "/classic/",
-            bookingLink: "",
-        },
-    ],
-    modernSlides: [        // слайды корпуса Модерн
-        {
-            img: modern1img,
-            title: "Корпус Модерн",
-            link: "",
-            bookingLink: "",
-        },
-        {
-            img: modern2img,
-            title: "Стандарт",
-            link: "/modern/standart",
-            bookingLink: "",
-        },
-        {
-            img: modern3img,
-            title: "Полулюкс модерн",
-            link: "/modern/polulyuks-modern",
-            bookingLink: "",
-        },
-        {
-            img: modern2img,
-            title: "Какой-то номер",
-            link: "/modern/",
-            bookingLink: "",
-        },
-    ],
-    modernDescr: [
-        '146 номеров в современном дизайне',
-        'Дизайн интерьера выдержан в стиле Модерн и выполнен в концепции Natural Cool и Ocean Style. Современная эксклюзивная дизайнерская мебель в натуральных тонах создает лучшие условия для комфорта и уюта.'
-    ],
-    classicDescr: [
-        '63 номера в классическом стиле',
-        'Исторический корпус Классик был полностью реновирован в 2016 году.  Свою историю начал вести в 1913 году и имеет особую атмосферу. Дизайн номеров выполнен в эксклюзивном, классическом стиле.'
-    ],
+    classicSlides: commonClassicCampusSlides,
+    modernSlides: commonModernCampusSlides,
+    modernDescr: commonModernDescr,
+    classicDescr: commonClassicDescr,
     gridSlides: [
         {
             name: "SPA комплекс",
@@ -1077,11 +1047,13 @@ export const vacationPagesData = {
             bookingLink: "",
         },
     ],
-}
+};
 
 
+// Страницы ивентов: "Свадьба"
 export const eventPagesData  = {
-    weddingSlides: [
+    weddingPage: {
+        weddingSlides: [
             {
                 img: weddingSliderImg2,
                 title: "Парк",
@@ -1101,76 +1073,149 @@ export const eventPagesData  = {
                 key: 3,
             },
         ],
-    weddingIcons: [
-        {img: weddingSliderIcon1, text: "Профессиональная команда организаторов"},
-        {img: weddingSliderIcon2, text: "Изысканное меню от бренд-шефа"},
-        {img: weddingSliderIcon3, text: "Полное оснащение залов"},
-        {img: weddingSliderIcon4, text: "В 1 часе езды на авто из аэропорта"},
-        {img: weddingSliderIcon5, text: "Несколько вариантов церемоний"},
-    ],
-    weddingSpecialsSlides: [
-        {
-            img: weddingSpecial1,
-            title: "Cкидка 10%",
-            subtitle: "На что-то",
-            link: '#',
-            key: 1,
-        },
-        {
-            img: weddingSpecial2,
-            title: "Программы",
-            subtitle: "Экскурсионные",
-            link: '#',
-            key: 2,
-        },
-        {
-            img: weddingSpecial3,
-            title: "Cкидка 30%",
-            subtitle: "На что-то",
-            link: '#',
-            key: 3,
-        },
-        {
-            img: weddingSpecial4,
-            title: "Cкидка 40%",
-            subtitle: "На что-то",
-            link: '#',
-            key: 4,
-        },
-    ],
-    weddingLargeGallerySlides: [
-        {
-            img: img1,
-            key: 1,
-        },
-        {
-            img: img2,
-            key: 2,
-        },
-        {
-            img: img3,
-            key: 3,
-        },
-        {
-            img: img4,
-            key: 4,
-        },
-        {
-            img: img5,
-            key: 5,
-        },
-        {
-            img: img6,
-            key: 6,
-        },
-    ], // need videos
-    weddingPlacesSlides: [
-        {text: 'Обширный номерной фонд'},
-        {text: 'Профессиональное звуковое и акустическое оборудование'},
-        {text: 'Персональный организатор на площадке'},
-        {text: '...и еще 17 пунктов проверки места для проведения мероприятия'},
-    ]
-
+        weddingIcons: [
+            {img: weddingSliderIcon1, text: "Профессиональная команда организаторов"},
+            {img: weddingSliderIcon2, text: "Изысканное меню от бренд-шефа"},
+            {img: weddingSliderIcon3, text: "Полное оснащение залов"},
+            {img: weddingSliderIcon4, text: "В 1 часе езды на авто из аэропорта"},
+            {img: weddingSliderIcon5, text: "Несколько вариантов церемоний"},
+        ],
+        weddingSpecialsSlides: [
+            {
+                img: weddingSpecial1,
+                title: "Cкидка 10%",
+                subtitle: "На что-то",
+                link: '#',
+                key: 1,
+            },
+            {
+                img: weddingSpecial2,
+                title: "Программы",
+                subtitle: "Экскурсионные",
+                link: '#',
+                key: 2,
+            },
+            {
+                img: weddingSpecial3,
+                title: "Cкидка 30%",
+                subtitle: "На что-то",
+                link: '#',
+                key: 3,
+            },
+            {
+                img: weddingSpecial4,
+                title: "Cкидка 40%",
+                subtitle: "На что-то",
+                link: '#',
+                key: 4,
+            },
+        ],
+        weddingLargeGallerySlides: [
+            {
+                img: img1,
+                key: 1,
+            },
+            {
+                img: img2,
+                key: 2,
+            },
+            {
+                img: img3,
+                key: 3,
+            },
+            {
+                img: img4,
+                key: 4,
+            },
+            {
+                img: img5,
+                key: 5,
+            },
+            {
+                img: img6,
+                key: 6,
+            },
+        ], // need videos
+        weddingPlacesSlides: [
+            {img: placesIcon1, text: 'Обширный<br/>номерной<br/>фонд'},
+            {img: placesIcon2, text: 'Профессиональное<br/>звуковое и акустическое<br/>оборудование'},
+            {img: placesIcon3, text: 'Персональный<br/>организатор<br/>на площадке'},
+            {img: placesIcon4, text: '...и еще 17 пунктов<br/>проверки места для<br/>проведения мероприятия'},
+        ],
+        weddingGallerySlides: [
+            {
+                img: weddingGallery1,
+                key: 1,
+            },
+            {
+                img: weddingGallery2,
+                key: 2,
+            },
+            {
+                img: weddingGallery3,
+                key: 3,
+            },
+            {
+                img: weddingGallery4,
+                key: 4,
+            },
+            {
+                img: weddingGallery5,
+                key: 5,
+            },
+            {
+                img: weddingGallery6,
+                title: "Корпус Modern",
+                description: "Номер: стандарт улучшенный двухместный",
+                href: "#",
+                key: 6,
+            },
+            {
+                img: weddingGallery7,
+                key: 7,
+            },
+            {
+                img: weddingGallery8,
+                key: 8,
+            },
+            {
+                img: weddingGallery9,
+                key: 9,
+            },
+            {
+                img: weddingGallery10,
+                key: 10,
+            },
+            {
+                img: weddingGallery11,
+                key: 11,
+            },
+            {
+                img: weddingGallery12,
+                key: 12,
+            },
+            {
+                img: weddingGallery13,
+                key: 13,
+            },
+            {
+                img: weddingGallery14,
+                key: 14,
+            },
+            {
+                img: weddingGallery15,
+                key: 15,
+            },
+            {
+                img: weddingGallery16,
+                key: 16,
+            },
+        ],
+    },
+    classicSlides: commonClassicCampusSlides,
+    modernSlides: commonModernCampusSlides,
+    modernDescr: commonModernDescr,
+    classicDescr: commonClassicDescr,
 };
 
 

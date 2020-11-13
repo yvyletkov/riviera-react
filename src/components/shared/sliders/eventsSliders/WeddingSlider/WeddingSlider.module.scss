@@ -58,6 +58,7 @@
   font-size: 14px;
   line-height: 1;
   transition: all 200ms;
+  padding: 0 20px 20px;
 
   p.descr {
     transition: all 200ms;
@@ -102,7 +103,7 @@
 
 .card.active {
   box-shadow: -14.444px 19.167px 27px 0px rgba(23, 23, 23, 0.05);
-  width: 360px;
+  width: 330px;
 
   .content {
     padding: 0 20px 20px;
@@ -110,6 +111,7 @@
     background-color: #fff;
 
     p.descr {
+      line-height: 1.15;
       opacity: 1;
       max-height: 200px;
       padding-top: 10px;
