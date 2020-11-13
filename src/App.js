@@ -15,6 +15,7 @@ import VacationForYourselfPage from "./components/pages/VacationPages/VacationFo
 import RomanticVacationPage from "./components/pages/VacationPages/RomanticVacationPage";
 import VacationWithFriendsPage from "./components/pages/VacationPages/VacationWithFriendsPage";
 import WeddingPage from "./components/pages/events/WeddingPage/WeddingPage";
+import ForumPage from "./components/pages/mice/ForumPage/ForumPage";
 
 
 function App() {
@@ -48,6 +49,8 @@ function App() {
 
             <Route path='/' exact
                    component={() => <HomePage/>}/>
+
+            <Route path='/forum' exact component={() => <ForumPage/>}/>
 
             <Footer/>
 
