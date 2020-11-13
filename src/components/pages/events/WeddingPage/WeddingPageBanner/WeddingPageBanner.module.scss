@@ -52,8 +52,18 @@
   @media screen and (max-width: 620px) {
     background-size: cover;
     margin-top: 0;
-
+    background: center no-repeat url("../../../../../img/events/wedding/weddingPageBanner-mob.jpg");
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.3);
+    }
     .container {
+      position: relative;
       height: calc(100vh - 60px);
       padding: 0 20px;
       display: flex;

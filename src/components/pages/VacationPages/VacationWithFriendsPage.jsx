@@ -10,7 +10,7 @@ import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
 
 const VacationWithFriendsPage = () => {
     return <>
-        <PageBanner fontSize={["84px", "71px"]}
+        <PageBanner fontSize={["40px", "71px"]}
                     fontSizeMobile={["6vw", "10.4vw"]}
                     subtitle={'Отдых c друзьями'}
                     topLine={"Отдых, который вы"}

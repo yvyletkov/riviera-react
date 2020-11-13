@@ -14,6 +14,10 @@ import Slider from "react-slick";
 import HeadlineCenter from "../../../shared/HeadlineCenter/HeadlineCenter";
 import SpecialsSlider from "../../../shared/sliders/SpecialsSlider/SpecialsSlider";
 import LargeGallerySlider from "../../../shared/sliders/LargeGallerySlider/LargeGallerySlider";
+import RoomsSlider from "../../../shared/sliders/RoomsSlider/RoomsSlider";
+import GalleryWeddingSlider from "../../../shared/sliders/GalleryWeddingSlider/GalleryWeddingSlider";
+import decisionBlockImg from "../../../../img/events/wedding/decision.jpg";
+import MapSection from "../../../shared/MapSection/MapSection";
 
 
 const WeddingPage = () => {
@@ -47,7 +51,8 @@ const WeddingPage = () => {
                     <div className={s.background}/>
                     <div className={s.textContent}>
                         <Headline subtitle={'Ваша семья'} title={'Начинается здесь'}/>
-                        <CirqleTip accordeonStatus={accordeonStatus} onClick={() => setAccordeonStatus(!accordeonStatus)}/>
+                        <CirqleTip accordeonStatus={accordeonStatus}
+                                   onClick={() => setAccordeonStatus(!accordeonStatus)}/>
                         <Accordeon withBtn={false} zeroHeight={true} status={accordeonStatus}>
                             <p>
                                 Любви нужно пространство! Особенный день для пары должен пройти там, где будет всё
@@ -71,7 +76,7 @@ const WeddingPage = () => {
         </section>
 
         <section className='section'>
-            <WeddingSlider slides={eventPagesData.weddingSlides}/>
+            <WeddingSlider slides={eventPagesData.weddingPage.weddingSlides}/>
         </section>
 
         {/* Хотите знать сколько стоит выездная церемония? */}
@@ -106,7 +111,7 @@ const WeddingPage = () => {
                         <div className={s.sliderWrapper}>
                             <Slider {...settings}>
 
-                                {eventPagesData.weddingIcons.map((item, index) => {
+                                {eventPagesData.weddingPage.weddingIcons.map((item, index) => {
                                     return <div key={index}>
                                         <div className={s.iconWrapper}>
                                             <img src={item.img} alt=""/>
@@ -176,13 +181,14 @@ const WeddingPage = () => {
 
         <section className='section'>
             <SpecialsSlider subtitle={'Дополнительные'} title={'услуги'} btnText={'Получить прайс по услугам'}
-                            slides={eventPagesData.weddingSpecialsSlides}/>
+                            slides={eventPagesData.weddingPage.weddingSpecialsSlides}/>
         </section>
 
         {/* Лучше один ращ увидеть */}
 
         <section className='section'>
-            <LargeGallerySlider blockName={'Лучше один раз увидеть'} slides={eventPagesData.weddingLargeGallerySlides}
+            <LargeGallerySlider blockName={'Лучше один раз увидеть'}
+                                slides={eventPagesData.weddingPage.weddingLargeGallerySlides}
                                 slideTitle={'Лучше один раз увидеть'}/>
         </section>
 
@@ -198,29 +204,36 @@ const WeddingPage = () => {
                                 <span>площадку для проведения</span>
                                 <span>свадьбы</span>
                             </h4>
-                            <CirqleTip style={{marginLeft: "-40px"}} accordeonStatus={accordeonStatus1} onClick={() => setAccordeonStatus1(!accordeonStatus1)}/>
+                            <CirqleTip style={{marginLeft: "-30px"}} accordeonStatus={accordeonStatus1}
+                                       onClick={() => setAccordeonStatus1(!accordeonStatus1)}/>
                             <div className={s.textContent}>
-                            <Accordeon withBtn={false} zeroHeight={true} status={accordeonStatus1}>
-                            <p>
-                                Свадьба в Крыму – сложное и большое по уровню организации мероприятие. Поэтому в
-                                качестве площадки должен выступать отель с большим ассортиментом банкетных залов, с
-                                крытыми и открытыми площадками для выездной церемонии. Играет немаловажную роль опыт в
-                                организации мероприятий и профессиональное оборудование на площадках. От выбора места
-                                проведения свадьбы будет зависеть многое. Важно определить идеальное соотношение цены,
-                                качества и уровня сервиса для того, чтобы создать действительно незабываемое событие.
-                            </p>
-                            </Accordeon>
+                                <Accordeon withBtn={false} zeroHeight={true} status={accordeonStatus1}>
+                                    <p>
+                                        Свадьба в Крыму – сложное и большое по уровню организации мероприятие. Поэтому в
+                                        качестве площадки должен выступать отель с большим ассортиментом банкетных
+                                        залов, с
+                                        крытыми и открытыми площадками для выездной церемонии. Играет немаловажную роль
+                                        опыт в
+                                        организации мероприятий и профессиональное оборудование на площадках. От выбора
+                                        места
+                                        проведения свадьбы будет зависеть многое. Важно определить идеальное соотношение
+                                        цены,
+                                        качества и уровня сервиса для того, чтобы создать действительно незабываемое
+                                        событие.
+                                    </p>
+                                </Accordeon>
                             </div>
                         </div>
 
 
                         <div className={s.sliderWrapper}>
                             <Slider {...settings} slidesToShow={4}>
-                                {eventPagesData.weddingPlacesSlides.map((item, index) => {
+                                {eventPagesData.weddingPage.weddingPlacesSlides.map((item, index) => {
                                     return <div>
                                         <div className={s.sliderItemWrapper}>
                                             <div>{index + 1}</div>
-                                            <p>{item.text}</p>
+                                            <img src={item.img} alt={item.text}/>
+                                            <p dangerouslySetInnerHTML={{__html: item.text}}/>
                                         </div>
                                     </div>
                                 })}
@@ -232,7 +245,80 @@ const WeddingPage = () => {
             </div>
         </section>
 
-    </>
+        {/* Сомневаетесь в площадке ?*/}
+
+        <section className='section'>
+            <div className={s.weddingBlackBlock}>
+                <div className={s.wrapper}>
+                    <div className={s.container}>
+                        <div className={s.content}>
+                            <div className={s.textBlock}>
+                                <p>Сомневаетесь в площаке?</p>
+                                <p>Обязательно проверьте выбранное место по чек-листу</p>
+                            </div>
+                            <Button text={'Скачать чек-лист'} link='#'/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section className='section'>
+            <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={eventPagesData.modernDescr}
+                         data={eventPagesData.modernSlides}/>
+
+            <RoomsSlider lastOfTwo={true} subtitle={'Корпус'} title={'Классик'}
+                         textContent={eventPagesData.classicDescr} data={eventPagesData.classicSlides}/>
+        </section>
+
+        {/* Фотографии со свадьбы */}
+
+        <section className='section'>
+            <GalleryWeddingSlider blockName={'Фотографии со свадьбы'}
+                                  slides={eventPagesData.weddingPage.weddingGallerySlides}/>
+        </section>
+
+        {/* Вам предстоит ответсвенное решение */}
+
+        <section className='section'>
+            <div className={s.weddingDecisionBlock}>
+                <div className={s.wrapper}>
+                    <div className={s.grid}>
+
+                        <div className={s.imageBlock}>
+                            <img src={decisionBlockImg} alt="Riviera Sunrise"/>
+                        </div>
+
+                        <div className={s.textBlock}>
+                            <div className={s.textContent}>
+                                <Headline subtitle={'Вам предстоит'} title={'Ответственное решение'}/>
+
+                                <p>
+                                    Лучше принимать его, владея полной информацией. Получите на свою почту все
+                                    необходимые материалы для принятия решения о проведении свадьбы в нашем отеле.
+                                </p>
+
+                                <form className={'form'}>
+                                    <input className={'formInput'} placeholder={'Введите Ваше имя'} type="text"/>
+                                    <input className={'formInput'} placeholder={'Введите Вашу почту'} type="text"/>
+                                    <Button text={'Скачать коммерческое предложение'}/>
+                                </form>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section className='section last'>
+            <MapSection/>
+        </section>
+
+        </>
 
 };
 

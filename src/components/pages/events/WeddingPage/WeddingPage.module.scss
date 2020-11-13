@@ -98,7 +98,6 @@
 
 }
 
-
 .weddingPriceBlock {
   .wrapper {
     max-width: 1920px;
@@ -384,10 +383,11 @@
 
         form {
           display: flex;
+          justify-content: space-between;
           flex-wrap: wrap;
 
           input {
-            flex: 50%;
+            width: 48%;
             margin-bottom: 25px;
           }
 
@@ -400,6 +400,7 @@
             width: 100%;
 
             input {
+              width: 100%;
               margin-bottom: 10px;
             }
           }
@@ -572,10 +573,11 @@
               font-size: 16px;
             }
             span:nth-child(2) {
-              font-size: 4.6vw;
+              font-size: 5vw;
             }
             span:last-of-type {
-              font-size: 11.3vw;
+              font-size: 13.2vw;
+              margin-bottom: 0;
             }
           }
 
@@ -595,8 +597,16 @@
             padding: 0 20px;
           }
           h4.title {
+            display: inline-block;
             width: fit-content;
             padding-left: 20px;
+          }
+        }
+
+        @media (max-width: 500px) {
+          display: block;
+          .textContent {
+            //margin-top: -40px;
           }
         }
 
@@ -609,6 +619,7 @@
         .sliderItemWrapper {
           box-sizing: border-box;
           display: flex;
+          flex-direction: column;
           position: relative;
           align-items: center;
           justify-content: center;
@@ -621,6 +632,12 @@
 
           @media (max-width: 1000px) {
             margin-left: 20px;
+          }
+
+          img {
+            object-fit: contain;
+            width: 62px;
+            margin-bottom: 15px;
           }
 
           div {
@@ -647,5 +664,190 @@
   }
 }
 
+.weddingBlackBlock {
+  .wrapper {
+    width: 100%;
+    background-color: #202020;
+
+    .container {
+      height: 120px;
+      max-width: 740px;
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+
+      .content {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        .textBlock {
+          color: #fff;
+
+          p:first-of-type {
+            font-family: "Helvetica Neue Bold";
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-size: 24.5px;
+          }
+
+          p:last-of-type {
+            font-family: "Helvetica Neue Light";
+            font-size: 17px;
+          }
+        }
+
+      }
+
+      @media (max-width: 768px) {
+        padding: 30px 20px;
+        height: unset;
+
+        .content {
+          display: block;
+
+          .textBlock p {
+            text-align: center;
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+.weddingDecisionBlock {
+  .wrapper {
+    width: 100%;
+    height: 565px;
+    padding-top: 65px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "img text";
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .imageBlock {
+    grid-area: img;
+    display: flex;
+    align-items: center;
+    background: #d7d7d7;
+    width: 538px;
+    height: 495px;
+    position: relative;
+    border-radius: 5px;
+  }
+
+  .imageBlock img {
+    object-fit: cover;
+    position: absolute;
+    right: 7px;
+    height: 475px;
+    width: 984px;
+  }
+
+  .textBlock {
+    grid-area: text;
+    display: flex;
+    align-items: center;
+    padding: 0 30px 0 30px;
+  }
+
+  .textBlock p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    line-height: 1.15;
+    text-align: justify;
+  }
+
+
+  form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    input {
+      width: 48%;
+      margin-bottom: 25px;
+    }
+
+    a {
+      flex-grow: 1;
+    }
+
+    @media (max-width: 500px) {
+      width: 100%;
+
+      input {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .wrapper {
+      height: auto;
+      padding-top: 0;
+      padding-bottom: 0;
+
+      .grid {
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: "text" "img";
+
+      }
+
+      .imageBlock {
+        grid-area: img;
+        display: flex;
+        align-items: center;
+        background: none;
+        width: 100%;
+        height: unset;
+        position: relative;
+        border-radius: 5px;
+        margin-top: 45px;
+      }
+
+      .imageBlock img {
+        object-fit: cover;
+        width: 100%;
+        height: calc(100vw * 0.8);
+        position: relative;
+        right: 0;
+        box-shadow: 0px 0px 14.24px 1.76px rgba(3, 7, 8, 0.29);
+
+      }
+
+
+      .textBlock {
+        padding: 0 20px;
+      }
+
+      .textBlock button {
+        margin: 0 auto;
+      }
+
+      .textBlock p {
+        margin: 20px 0 30px;
+      }
+
+      .textContent p {
+        font-size: 14px;
+      }
+    }
+  }
+}
 
 

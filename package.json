@@ -12,11 +12,13 @@
     "react": "^16.13.1",
     "react-dom": "^17.0.1",
     "react-easy-swipe": "^0.0.21",
+    "react-fancybox": "^0.2.5",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-scroll": "^1.8.1",
     "react-slick": "^0.27.11",
     "react-transition-group": "^4.4.1",
+    "simple-react-lightbox": "^3.3.4-2",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.2.0",
     "video-react": "^0.14.1"
