@@ -23,7 +23,7 @@ const StyledSlider = styled(Slider)`
   
   @media (min-width: 601px) {
     .slick-list {
-    margin-top: -100px;
+    margin-top: -75px;
     }   
     
   }

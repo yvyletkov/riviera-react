@@ -46,7 +46,7 @@ const WeddingPageBanner = () => {
                     </div>
                 </div>
             </div>
-            <img className={s.bannerImgTop} src={img1} alt=""/>
+            <div className={s.bannerImgTop} />
 
             <div className={s.animatedMouseWrapper}>
                 <AnimatedMouseIcon/>

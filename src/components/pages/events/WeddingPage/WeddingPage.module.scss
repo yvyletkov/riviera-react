@@ -524,6 +524,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0 20px 0 30px;
 
         h4.title {
           //display: inline-block;
@@ -725,6 +726,7 @@
     width: 100%;
     height: 565px;
     padding-top: 65px;
+    background: #f4f4f4;
   }
 
   .grid {
@@ -763,7 +765,7 @@
 
   .textBlock p {
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     margin-top: 10px;
     line-height: 1.15;
     text-align: justify;
@@ -797,7 +799,7 @@
   @media screen and (max-width: 1000px) {
     .wrapper {
       height: auto;
-      padding-top: 0;
+      padding-top: 35px;
       padding-bottom: 0;
 
       .grid {
