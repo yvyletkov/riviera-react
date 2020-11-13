@@ -4,7 +4,9 @@
   width: 100%;
   margin: 0 auto;
   margin-top: 100px;
-  background: center no-repeat url("../../../../../img/events/wedding/weddingPageBanner.jpg");
+  background-color: #202020;
+  overflow: hidden;
+
 
   .container {
     box-sizing: border-box;
@@ -12,15 +14,16 @@
     height: 750px;
     margin: 0 auto;
     padding: 90px 20px 0;
+    position: relative;
   }
 
-  .blackHalf {
+  .background {
+    background: right no-repeat url("../../../../../img/mice/conference/1.jpg");
     position: absolute;
     top:0;
-    left:0;
-    background-color: #202020;
-    //height:750px;
-    width:800px;
+    right:-570px;
+    height:750px;
+    width:100%;
   }
 
   .bannerImgTop {
@@ -67,13 +70,13 @@
 }
 
 .headings {
-  h2 {
+  h1 {
     position: relative;
     width: fit-content;
     font-size: 34.5px;
     font-family: "Helvetica Neue";
     color: #fff;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-weight: 400;
 
     &:after {
@@ -84,11 +87,11 @@
       display: block;
       background-color: #fff;
       right: -90px;
-      top: 45%;
+      top: 50%;
     }
   }
 
-    p {
+    h2 {
     color: #fff;
     text-transform: uppercase;
 
@@ -100,20 +103,18 @@
     }
 
     span:first-of-type {
-      font-size: 30px;
+      font-size: 84px;
+      font-family: "Helvetica Neue Black";
     }
 
     span:nth-child(2) {
       font-size: 75px;
-      margin:20px 0;
-      font-family: "Helvetica Neue Black";
+      font-family: "Helvetica Neue";
       font-weight: 900;
     }
 
     span:last-of-type {
       font-size: 32px;
-      background-color: #ffbb28;
-      padding: 5px;
       display: inline-block;
     }
   }
@@ -145,17 +146,14 @@
 .icons {
   display: flex;
   color: #fff;
-  position: absolute;
-  bottom: 80px;
+  margin:60px 0;
+  width:600px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   .icon {
     display: flex;
-    flex-direction: column;
     align-items: center;
-
-    &:not(:last-child) {
-      margin-right: 40px;
-    }
 
     img {
       height: 55px;
@@ -163,7 +161,9 @@
     }
 
     p {
-      text-align: center;
+      text-align: left;
+      margin:0 20px;
+      width:200px;
     }
   }
 
