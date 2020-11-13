@@ -1,0 +1,18 @@
+.wrapper {
+  max-width: 1920px;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 100px;
+  overflow: hidden;
+
+
+  .container {
+    box-sizing: border-box;
+    max-width: 1000px;
+    height: 750px;
+    margin: 0 auto;
+    padding: 90px 20px 0;
+    position: relative;
+  }
+}

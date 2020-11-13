@@ -1,11 +1,15 @@
 import React from "react";
 import s from "./ForumPage.module.scss";
-import ForumPageBanner from "./ForumPageBanner/ForumPageBanner";
+import MicePageBanner from "./MicePageBanner/MicePageBanner";
+import TextBlock from "./TextBlock/TextBlock";
 
 
 const ForumPage = () => {
     return (
-        <ForumPageBanner />
+        <>
+        <MicePageBanner />
+        <TextBlock />
+        </>
     )
 }
 
