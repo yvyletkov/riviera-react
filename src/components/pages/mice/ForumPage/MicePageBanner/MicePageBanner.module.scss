@@ -2,16 +2,16 @@
   max-width: 1920px;
   position: relative;
   width: 100%;
-  margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 99px;
   background-color: #202020;
   overflow: hidden;
+  height: 800px;
 
 
   .container {
     box-sizing: border-box;
     max-width: 1200px;
-    height: 750px;
+    height: 800px;
     margin: 0 auto;
     padding: 90px 20px 0;
     position: relative;
@@ -20,9 +20,9 @@
   .background {
     background: right no-repeat url("../../../../../img/mice/conference/1.jpg");
     position: absolute;
-    top:0;
+    top: 0;
     right:-570px;
-    height:750px;
+    height:800px;
     width:100%;
   }
 
@@ -52,6 +52,16 @@
   }
 
   @media screen and (max-width: 768px) {
+    background: url("../../../../../img/mice/conference/1.jpg");
+    height:auto;
+
+    .background {
+      display: none;
+    }
+    .container {
+      padding: 0;
+      height: calc(100vh - 130px);
+    }
   }
 
   @media screen and (max-width: 620px) {
@@ -66,11 +76,10 @@
       justify-content: flex-end;
     }
   }
-
 }
 
 .headings {
-  h1 {
+  h2 {
     position: relative;
     width: fit-content;
     font-size: 34.5px;
@@ -91,7 +100,8 @@
     }
   }
 
-    h2 {
+    h1 {
+      position: relative;
     color: #fff;
     text-transform: uppercase;
 
@@ -109,7 +119,7 @@
 
     span:nth-child(2) {
       font-size: 75px;
-      font-family: "Helvetica Neue";
+      font-family: 'Helvetica Neue Black';
       font-weight: 900;
     }
 
@@ -119,8 +129,9 @@
     }
   }
 
-  @media screen and (max-width: 620px) {
-    margin-bottom: 135px;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 50px;
+    position: relative;
 
     h2 {
       font-size: 4.8vw;
@@ -132,7 +143,7 @@
       }
 
       span:nth-child(2) {
-        font-size: 19.2vw;
+        font-size: 10.2vw;
       }
 
       span:last-of-type {
@@ -146,7 +157,7 @@
 .icons {
   display: flex;
   color: #fff;
-  margin:60px 0;
+  margin:60px 0 50px;
   width:600px;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -167,7 +178,52 @@
     }
   }
 
-  @media screen and (max-width: 620px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
+}
+
+.cirqleTipWrapper {
+  position: absolute;
+  bottom:-5px;
+  left:30vw;
+}
+
+.descriptionWrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.description {
+  z-index: 3;
+  opacity: 0;
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+  box-shadow: 0px 4px 27px 0px rgba(23, 23, 23, 0.52);
+  position: absolute;
+  width: 582px;
+  top: 15px;
+  left: 40px;
+  padding: 40px 50px;
+  font-family: "Helvetica Neue Light";
+  font-size: 16px;
+  transition: all 300ms;
+  cursor: default;
+
+  @media screen and (max-width: 768px) {
+    z-index: -1;
+    position: absolute;
+    width: calc(100vw - 40px);
+    top: -95px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}
+
+.description.shown {
+  opacity: 1;
+  z-index: 3;
 }

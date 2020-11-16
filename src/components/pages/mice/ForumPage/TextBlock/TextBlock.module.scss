@@ -3,16 +3,40 @@
   position: relative;
   width: 100%;
   margin: 0 auto;
-  margin-top: 100px;
   overflow: hidden;
 
 
+
   .container {
+    display: flex;
     box-sizing: border-box;
     max-width: 1000px;
-    height: 750px;
     margin: 0 auto;
-    padding: 90px 20px 0;
     position: relative;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: -6.156px 16.914px 27px 0px rgba(23, 23, 23, 0.05);
   }
+}
+
+.rightSide {
+  max-width: 590px;
+  margin:60px 40px 60px 60px;
+}
+
+.leftSide img {
+  height:380px;
+  width:100%;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.rightSide p {
+  margin:30px 0 0;
+  max-width: 480px;
+  text-align: justify;
+  font-size: 16px;
+  font-family: 'Helvetica Neue';
+  font-weight: 400;
 }
