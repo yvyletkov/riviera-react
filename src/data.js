@@ -66,11 +66,6 @@ import weddingSpecial1 from "./img/events/wedding/specials/1.jpg";
 import weddingSpecial2 from "./img/events/wedding/specials/2.jpg";
 import weddingSpecial3 from "./img/events/wedding/specials/3.jpg";
 import weddingSpecial4 from "./img/events/wedding/specials/4.jpg";
-import forumImg from "./img/mice/conference/3.jpg";
-import forumImg1 from "./img/mice/conference/4.jpg";
-import forumImg2 from "./img/mice/conference/5.jpg";
-import forumImg3 from "./img/mice/conference/6.jpg";
-import forumImg4 from "./img/mice/conference/7.jpg";
 
 const commonSpecialsSlides = [
     {
