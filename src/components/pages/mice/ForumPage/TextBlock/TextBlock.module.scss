@@ -11,17 +11,25 @@
     display: flex;
     box-sizing: border-box;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 40px auto;
     position: relative;
     background-color: #fff;
     border-radius: 5px;
+    height:380px;
     box-shadow: -6.156px 16.914px 27px 0px rgba(23, 23, 23, 0.05);
   }
 }
 
 .rightSide {
   max-width: 590px;
-  margin:60px 40px 60px 60px;
+  margin:60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.leftSide {
+  height: 390px;
 }
 
 .leftSide img {

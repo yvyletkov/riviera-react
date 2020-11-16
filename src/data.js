@@ -806,7 +806,6 @@ export const roomPageData = {
     },
 }
 
-
 // Страницы "Cемейный отдых", "Отдых для себя", "Отдых с друзьями", "Романтический отдых"
 export const vacationPagesData = {
     familyVacationBannerImg,
