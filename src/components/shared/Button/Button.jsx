@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./Button.module.scss";
-import {NavLink, withRouter} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 
 const Button = ({text = 'Кнопка', link = "#", onClick, style}) => {

@@ -12,16 +12,17 @@ const SliderStyles = styled(Slider)`
   .slick-list {
     overflow: visible;
   }
-  .slick-slider {
-    height: 610px
-  }
+
 .slick-track {
   margin: 0 auto;
   display: flex;
   justify-content: center;
 }
-@media screen and (max-width: 1000px){
-        
+@media screen and (min-width: 481px){
+ .slick-slider {
+    height: unset;
+    padding-bottom: 40px;
+  }
 }
 @media screen and (max-width: 1200px){
   .slick-slider {

@@ -564,7 +564,6 @@
             font-family: "Helvetica Neue Black";
             font-size: 60px;
             line-height: 1.2;
-            margin-bottom: 20px;
           }
 
           @media (max-width: 500px) {
@@ -605,6 +604,7 @@
         }
 
         @media (max-width: 500px) {
+          padding: 0;
           display: block;
           .textContent {
             //margin-top: -40px;

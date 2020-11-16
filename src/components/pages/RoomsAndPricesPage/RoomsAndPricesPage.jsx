@@ -10,7 +10,7 @@ const RoomsAndPricesPage = () => {
     return <>
         <RoomsAndPricesPageBanner/>
 
-        <section className='section'>
+        <section className='section first'>
             <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={roomsAndPricesPageData.modernDescr}
                          data={roomsAndPricesPageData.modernSlides}/>
 
