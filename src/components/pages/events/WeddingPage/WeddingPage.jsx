@@ -18,6 +18,7 @@ import RoomsSlider from "../../../shared/sliders/RoomsSlider/RoomsSlider";
 import GalleryWeddingSlider from "../../../shared/sliders/GalleryWeddingSlider/GalleryWeddingSlider";
 import decisionBlockImg from "../../../../img/events/wedding/decision.jpg";
 import MapSection from "../../../shared/MapSection/MapSection";
+import SweetAlert from "sweetalert2-react";
 
 
 const WeddingPage = () => {

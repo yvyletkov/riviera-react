@@ -95,7 +95,7 @@
 
 .arrow {
   display: none;
-  width: 15px;
+  width: 12px;
   margin-left: 10px;
   transition: all 200ms;
   object-fit: contain;
@@ -177,6 +177,7 @@
   }
   .iconsPart {
     margin-top: 25px;
+    margin-bottom: 10px;
   }
   .leftBlock .firstCol, .leftBlock .secondCol {
     width: 100%;
