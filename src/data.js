@@ -86,8 +86,72 @@ import weddingGallery13 from "./img/events/wedding/gallery/13.jpg";
 import weddingGallery14 from "./img/events/wedding/gallery/14.jpg";
 import weddingGallery15 from "./img/events/wedding/gallery/15.jpg";
 import weddingGallery16 from "./img/events/wedding/gallery/16.jpg";
+import forumImg from "./img/mice/conference/3.jpg";
+import forumImg1 from "./img/mice/conference/4.jpg";
+import forumImg2 from "./img/mice/conference/5.jpg";
+import forumImg3 from "./img/mice/conference/6.jpg";
+import forumImg4 from "./img/mice/conference/7.jpg";
 
-
+//страницы майса
+export  const micePagesData = {
+    centeredSlides: [
+        {
+            img:forumImg,
+            title:'Кофебрейки',
+            subtitle:'Финальный',
+            subsubtitle:'Фуршет',
+            fontsizeSubsubtitle:'69px',
+            date:'',
+            campus:'',
+            campusName:'',
+            key:1,
+        },
+        {
+            img:forumImg1,
+            title:'Настройка',
+            subtitle:'Мультимедиа',
+            subsubtitle:'Оборудования',
+            fontsizeSubsubtitle:'49px',
+            date:'',
+            campus:'',
+            campusName:'',
+            key:2,
+        },
+        {
+            img:forumImg2,
+            title:'Кофебрейки',
+            subtitle:'Финальный',
+            subsubtitle:'Фуршет',
+            fontsizeSubsubtitle:'69px',
+            date:'test',
+            campus:'test',
+            campusName:'test',
+            key:3,
+        },
+        {
+            img:forumImg3,
+            title:'test3',
+            subtitle:'test',
+            subsubtitle:'test',
+            fontsizeSubsubtitle:'69px',
+            date:'test',
+            campus:'test',
+            campusName:'test',
+            key:4,
+        },
+        {
+            img:forumImg4,
+            title:'test4',
+            subtitle:'test',
+            subsubtitle:'test',
+            fontsizeSubsubtitle:'69px',
+            date:'test',
+            campus:'test',
+            campusName:'test',
+            key:1,
+        },
+    ]
+}
 
 const commonSpecialsSlides = [
     {
