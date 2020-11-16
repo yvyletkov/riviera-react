@@ -26,12 +26,17 @@ const SliderStyles = styled.div`
   .slick-dots {
     bottom: -32px;
   }
+  
   .slick-dots li {
     margin: 0
   }
 
 .slick-track {
   margin: 0 auto;
+}
+
+@media screen and (min-width: 481px) {
+   margin-top: -18px;
 }
 `;
 
@@ -40,8 +45,8 @@ const LargeGallerySlider = ({blockName = "Фотогалерея", slides, slide
     const settings = {
         dots: false,
         className: "center",
-        centerMode: true,
-        infinite: true,
+        centerMode: !videoMode && true,
+        infinite: !videoMode && true,
         centerPadding: "60px",
         variableWidth: true,
         speed: 500,
@@ -72,19 +77,28 @@ const LargeGallerySlider = ({blockName = "Фотогалерея", slides, slide
     };
 
     const items = !videoMode ?
-
         slides.map((item) => {
-        const {img, key} = item;
-        return <div className={s.card} key={key}>
+            const {img, key} = item;
+            return <div key={key}>
                 <img className={s.item} alt={slideTitle} key={key} src={img}/>
-            </div>})
-
-        : null;
-        // : slides.map(item => <VideoItem {...item} />) ;
+            </div>
+        }) :
+        slides.map((item) => {
+            const {video, key} = item;
+            return <div key={key}>
+                <div className={s.item + ' ' + s.video}>
+                    <iframe title={'Riviera Sunrise'} width="100%" height="100%" src={video}
+                            scrolling="no"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen/>
+                </div>
+            </div>
+        });
 
     return (
         <div id='gallery' className={s.wrapper}>
-            <div className={s.container}>
+            <div className={videoMode ? s.videoContainer : s.container}>
                 <HeadlineCenter title={blockName}/>
                 <SliderStyles>
                     <Slider {...settings}>{items}</Slider>

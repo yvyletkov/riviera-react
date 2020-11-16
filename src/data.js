@@ -1112,29 +1112,23 @@ export const eventPagesData  = {
         ],
         weddingLargeGallerySlides: [
             {
-                img: img1,
+                video: "https://www.youtube.com/embed/9ZaY4ILBbzA?controls=0",
                 key: 1,
             },
             {
-                img: img2,
+                video: "https://www.youtube.com/embed/9ZaY4ILBbzA?controls=0",
                 key: 2,
             },
             {
-                img: img3,
+                video: "https://www.youtube.com/embed/9ZaY4ILBbzA?controls=0",
                 key: 3,
             },
             {
-                img: img4,
+                video: "https://www.youtube.com/embed/9ZaY4ILBbzA?controls=0",
                 key: 4,
             },
-            {
-                img: img5,
-                key: 5,
-            },
-            {
-                img: img6,
-                key: 6,
-            },
+
+
         ], // need videos
         weddingPlacesSlides: [
             {img: placesIcon1, text: 'Обширный<br/>номерной<br/>фонд'},

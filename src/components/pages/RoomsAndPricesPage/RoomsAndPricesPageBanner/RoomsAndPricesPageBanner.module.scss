@@ -2,7 +2,7 @@ $black: #171717;
 
 .bannerWrapper {
   position: relative;
-  height: 800px;
+  height: calc(100vh - 30px);
   max-width: 1920px;
   width: 100%;
   overflow: hidden;
@@ -38,7 +38,7 @@ $black: #171717;
   margin: 0 auto;
   padding: 0 40px;
   position: relative;
-  padding-top: 150px;
+  padding-top: 18vh;
 }
 
 .descriptionWrapper {
@@ -122,7 +122,7 @@ $black: #171717;
   max-width: 1115px;
   width: 95%;
   left: 50%;
-  bottom: 130px;
+  bottom: 7vh;
   transform: translateX(-50%);
   height: 132px;
   box-shadow: -6.156px 16.914px 40px 0 hsla(0, 0%, 9%, .13);
@@ -152,7 +152,7 @@ $black: #171717;
     top: -95px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 10px 20px;
+    padding: 20px 20px;
     font-size: 12px;
   }
 

@@ -184,12 +184,13 @@ const WeddingPage = () => {
                             slides={eventPagesData.weddingPage.weddingSpecialsSlides}/>
         </section>
 
-        {/* Лучше один ращ увидеть */}
+        {/* Лучше один раз увидеть */}
 
         <section className='section'>
             <LargeGallerySlider blockName={'Лучше один раз увидеть'}
                                 slides={eventPagesData.weddingPage.weddingLargeGallerySlides}
-                                slideTitle={'Лучше один раз увидеть'}/>
+                                slideTitle={'Лучше один раз увидеть'}
+                                videoMode={true}/>
         </section>
 
         {/* Как выбрать площадку для проведения свадьбы*/}
@@ -314,11 +315,11 @@ const WeddingPage = () => {
             </div>
         </section>
 
-        <section className='section last'>
+        <section className='section'>
             <MapSection/>
         </section>
 
-        </>
+    </>
 
 };
 
