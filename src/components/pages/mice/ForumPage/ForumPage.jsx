@@ -1,14 +1,19 @@
 import React from "react";
-import s from "./ForumPage.module.scss";
 import MicePageBanner from "./MicePageBanner/MicePageBanner";
 import TextBlock from "./TextBlock/TextBlock";
+import IconsBlock from "./IconsBlock/IconsBlock";
 
 
 const ForumPage = () => {
     return (
         <>
-        <MicePageBanner />
-        <TextBlock />
+            <MicePageBanner/>
+            <section className="section">
+                <TextBlock style={{marginTop: '-100px'}}/>
+            </section>
+            <section className="section">
+                <IconsBlock/>
+            </section>
         </>
     )
 }
