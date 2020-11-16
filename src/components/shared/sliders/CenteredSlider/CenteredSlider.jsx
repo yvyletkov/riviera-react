@@ -43,15 +43,18 @@ const SliderStyles = styled.div`
 `;
 
 
-const CenteredSlider = ({title = "Какой-то заголовок", slides}) => {
+const CenteredSlider = ({title = "Какой-то заголовок", slides, type = 1}) => {
     const items = slides.map((item) => {
-        const {img, title, subtitle, time, date, campus, campusName, key} = item;
+        const {img, title, subtitle, time, date, campus, campusName, key, subsubtitle='', fontsizeSubsubtitle='',} = item;
         return (
             <div className="sliderElement" key={key}>
                 <CenteredSliderItem
+                    type={type}
                     img={img}
                     title={title}
                     subtitle={subtitle}
+                    subsubtitle={subsubtitle}
+                    fontsizeSubsubtitle={fontsizeSubsubtitle}
                     time={time}
                     date={date}
                     campus={campus}

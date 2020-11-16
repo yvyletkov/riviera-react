@@ -6,7 +6,6 @@ import iconExcursions from "../../../../../img/mice/conference/icons/3.png"
 import iconResidence from "../../../../../img/mice/conference/icons/4.png"
 import Button from "../../../../shared/Button/Button";
 import CirqleTip from "../../../../shared/CirqleTip/CirqleTip";
-import Accordeon from "../../../../shared/Accordeon/Accordeon";
 
 
 const MicePageBanner = () => {
@@ -61,7 +60,10 @@ const MicePageBanner = () => {
                             проживание в отеле</p>
                     </div>
                 </div>
-                <Button style={window.matchMedia("(max-width:768px)").matches ? {marginBottom: "48px"} : {maxWidth:"300px"}}
+                <Button style={window.matchMedia("(max-width:768px)").matches ? {
+                    marginBottom: "48px",
+                    maxWidth: "200px"
+                } : {maxWidth: "200px"}}
                         text={"Получить смету"}/>
             </div>
             </div>
