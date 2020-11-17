@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import s from "./WeddingSlider.module.scss";
 import styled from "styled-components";
-import HeadlineCenter from "../../../HeadlineCenter/HeadlineCenter";
+import HeadlineCenter from "../../HeadlineCenter/HeadlineCenter";
 
 const SliderStyles = styled(Slider)`
   .slick-next:before,

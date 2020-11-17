@@ -1293,6 +1293,11 @@ export const eventPagesData  = {
                 key: 16,
             },
         ],
+        weddingBannerIcons: [
+            {descr: 'Вместимость<br/>залов до<br/>300 персон'},
+            {descr: 'Более 100<br/>вариантов<br/>фотозон'},
+            {descr: 'Тематическое<br/>оформление<br/>свадьбы'},
+        ],
     },
     classicSlides: commonClassicCampusSlides,
     modernSlides: commonModernCampusSlides,
