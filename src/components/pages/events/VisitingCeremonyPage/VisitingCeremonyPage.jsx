@@ -1,14 +1,11 @@
 import React from "react";
 import Slider from "react-slick";
-import s from "./WeddingPage.module.scss";
+import s from "./VisitingCeremonyPage.module.scss";
 import EventPageBanner from "../EventPageBanner/EventPageBanner";
 import Accordeon from "../../../shared/Accordeon/Accordeon";
 import {eventPagesData} from "../../../../data";
 import firstBlockImg from "../../../../img/events/wedding/wedding.jpg";
 import decisionBlockImg from "../../../../img/events/wedding/decision.jpg";
-import bannerImg from "../../../../img/events/wedding/weddingPageBanner.jpg";
-import bannerImgMobile from "../../../../img/events/wedding/weddingPageBanner-mob.jpg";
-
 import Headline from "../../../shared/Headline/Headline";
 import CirqleTip from "../../../shared/CirqleTip/CirqleTip";
 import EventSlider from "../../../shared/sliders/EventSlider/EventSlider";
@@ -21,8 +18,10 @@ import MapSection from "../../../shared/MapSection/MapSection";
 import AdvantagesBlock from "../../../shared/AdvantagesBlock/AdvantagesBlock";
 import KitchenBlock from "../../../shared/KitchenBlock/KitchenBlock";
 import BlackBlock from "../../../shared/BlackBlock/BlackBlock";
+import bannerImg from "../../../../img/events/wedding/weddingPageBanner.jpg";
+import bannerImgMobile from "../../../../img/events/wedding/weddingPageBanner-mob.jpg";
 
-const WeddingPage = () => {
+const VisitingCeremonyPage = () => {
 
     let [accordeonStatus, setAccordeonStatus] = React.useState(false);
     let [accordeonStatus1, setAccordeonStatus1] = React.useState(false);
@@ -45,7 +44,7 @@ const WeddingPage = () => {
     return <>
 
         <EventPageBanner fontSize={['68px', '82px', '52px']} mobileFontSize={['11.7vw', '19.2vw', '6.2vw']}
-                         titles={['Ваша', 'свадьба', 'мечты', 'в Крыму']}
+                         titles={['Выездная', 'свадебная', 'церемония', 'в Крыму']}
                          icons={eventPagesData.weddingPage.weddingBannerIcons} bannerImg={bannerImg} bannerImgMobile={bannerImgMobile}/>
 
         {/* Ваша семья начинается здесь */}
@@ -282,4 +281,4 @@ const WeddingPage = () => {
 
 };
 
-export default WeddingPage;
+export default VisitingCeremonyPage;

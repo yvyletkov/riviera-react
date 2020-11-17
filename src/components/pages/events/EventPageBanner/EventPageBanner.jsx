@@ -8,9 +8,9 @@ import AnimatedMouseIcon from "../../../shared/AnimatedMouseIcon/AnimatedMouseIc
 import Button from "../../../shared/Button/Button";
 
 
-const EventPageBanner = ({mobileFontSize, fontSize, titles, icons}) => {
+const EventPageBanner = ({mobileFontSize, fontSize, titles, icons, bannerImg, bannerImgMobile}) => {
     return (
-        <div className={s.wrapper}>
+        <div className={s.wrapper} style={{  background: !window.matchMedia("(max-width: 620px").matches ? `center no-repeat url("${bannerImg}")` : `center no-repeat url("${bannerImgMobile}")`}}>
             <div className={s.container}>
                 <div className={s.headings}>
                     <h2>{titles[0]}</h2>
