@@ -7,7 +7,7 @@ import kitchenImg1 from "../../../../img/events/wedding/kitchen1.jpg";
 import kitchenImg2 from "../../../../img/events/wedding/kitchen2.jpg";
 import Headline from "../../../shared/Headline/Headline";
 import CirqleTip from "../../../shared/CirqleTip/CirqleTip";
-import WeddingSlider from "../../../shared/sliders/eventsSliders/WeddingSlider/WeddingSlider";
+import WeddingSlider from "../../../shared/sliders/EventSlider/WeddingSlider";
 import {eventPagesData} from "../../../../data";
 import Button from "../../../shared/Button/Button";
 import Slider from "react-slick";
@@ -19,6 +19,8 @@ import decisionBlockImg from "../../../../img/events/wedding/decision.jpg";
 import menuPriceImg from "../../../../img/events/wedding/menuPrice.png";
 import MapSection from "../../../shared/MapSection/MapSection";
 import AdvantagesBlock from "../../../shared/AdvantagesBlock/AdvantagesBlock";
+import KitchenBlock from "../../../shared/KitchenBlock/KitchenBlock";
+import BlackBlock from "../../../shared/BlackBlock/BlackBlock";
 
 const WeddingPage = () => {
 
@@ -43,7 +45,8 @@ const WeddingPage = () => {
     return <>
 
         <EventPageBanner fontSize={['68px', '82px', '52px']} mobileFontSize={['11.7vw', '19.2vw', '6.2vw']}
-        titles={['Ваша', 'свадьба', 'мечты', 'в Крыму']} icons={eventPagesData.weddingPage.weddingBannerIcons}/>
+                         titles={['Ваша', 'свадьба', 'мечты', 'в Крыму']}
+                         icons={eventPagesData.weddingPage.weddingBannerIcons}/>
 
         <section className='section first'>
             <div className={s.weddingFirstBlockWrapper}>
@@ -134,26 +137,7 @@ const WeddingPage = () => {
         {/* Вас ждет изысканная еда */}
 
         <section className='section'>
-            <div className={s.weddingKitchenBlock}>
-                <div className={s.wrapper}>
-                    <div className={s.container}>
-                        <img className={s.leftImg} src={kitchenImg1} alt=""/>
-                        <img className={s.rightImg} src={kitchenImg2} alt=""/>
-                        <div className={s.textContent}>
-                        <img className={s.menuPriceImg} src={menuPriceImg} alt="Стоимость меню"/>
-                            <Headline subtitle={'Вас ожидает'} title={'Изысканная кухня'}/>
-                            <p>
-                                Наши профессиональные повара во главе с бренд-шефом Андреем Поляшовым создали уникальные
-                                композиции из нескольких курсов для ценителей вкусной и сытной кухни. Гости будут в
-                                восторге!
-                            </p>
-                            <p><b>Получите на свою почту полное меню банкета!</b></p>
-                            <Button text={"Получить меню"}
-                                    style={!window.matchMedia("(max-width: 768px").matches ? {width: "230px"} : {}}/>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <KitchenBlock/>
         </section>
 
         {/* Дополнительные услуги */}
@@ -228,19 +212,7 @@ const WeddingPage = () => {
         {/* Сомневаетесь в площадке ?*/}
 
         <section className='section'>
-            <div className={s.weddingBlackBlock}>
-                <div className={s.wrapper}>
-                    <div className={s.container}>
-                        <div className={s.content}>
-                            <div className={s.textBlock}>
-                                <p>Сомневаетесь в площаке?</p>
-                                <p>Обязательно проверьте выбранное место по чек-листу</p>
-                            </div>
-                            <Button text={'Скачать чек-лист'} link='#'/>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <BlackBlock/>
         </section>
 
         <section className='section'>
