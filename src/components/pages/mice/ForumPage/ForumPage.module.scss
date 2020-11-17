@@ -16,7 +16,6 @@
 
       img {
         object-fit: cover;
-        border-radius: 5px;
         box-shadow: -14.444px 19.167px 27px 0px rgba(23, 23, 23, 0.08);
 
         &.leftImg {
@@ -27,7 +26,7 @@
         }
 
         &.rightImg {
-          margin-left: 330px;
+          margin-left: 310px;
           height: 500px;
           width: 350px;
         }
@@ -100,5 +99,14 @@
       }
 
     }
+  }
+}
+
+
+.flex {
+  display: flex;
+
+  .partnerShip {
+    margin:0 auto;
   }
 }
