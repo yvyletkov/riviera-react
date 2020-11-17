@@ -91,6 +91,9 @@ import forumImg1 from "./img/mice/conference/4.jpg";
 import forumImg2 from "./img/mice/conference/5.jpg";
 import forumImg3 from "./img/mice/conference/6.jpg";
 import forumImg4 from "./img/mice/conference/7.jpg";
+import widthForumImg5 from "./img/mice/conference/8.jpg";
+import widthForumImg6 from "./img/mice/conference/9.jpg";
+import widthForumImg7 from "./img/mice/conference/10.jpg";
 
 //страницы майса
 export  const micePagesData = {
@@ -101,9 +104,6 @@ export  const micePagesData = {
             subtitle:'Финальный',
             subsubtitle:'Фуршет',
             fontsizeSubsubtitle:'69px',
-            date:'',
-            campus:'',
-            campusName:'',
             key:1,
         },
         {
@@ -112,43 +112,68 @@ export  const micePagesData = {
             subtitle:'Мультимедиа',
             subsubtitle:'Оборудования',
             fontsizeSubsubtitle:'49px',
-            date:'',
-            campus:'',
-            campusName:'',
             key:2,
         },
         {
             img:forumImg2,
-            title:'Кофебрейки',
-            subtitle:'Финальный',
-            subsubtitle:'Фуршет',
+            title:'Подготовка',
+            subtitle:'Оформление',
+            subsubtitle:'Площадки',
             fontsizeSubsubtitle:'69px',
-            date:'test',
-            campus:'test',
-            campusName:'test',
             key:3,
         },
         {
             img:forumImg3,
-            title:'test3',
-            subtitle:'test',
-            subsubtitle:'test',
+            title:'Полный',
+            subtitle:'Конференц',
+            subsubtitle:'Набор',
             fontsizeSubsubtitle:'69px',
-            date:'test',
-            campus:'test',
-            campusName:'test',
             key:4,
         },
         {
             img:forumImg4,
-            title:'test4',
-            subtitle:'test',
-            subsubtitle:'test',
+            title:'Трансфер',
+            subtitle:'Участников',
+            subsubtitle:'На место',
             fontsizeSubsubtitle:'69px',
-            date:'test',
-            campus:'test',
-            campusName:'test',
+            key:5,
+        },
+    ],
+    widthSpecialsSlider: [
+        {
+            img:widthForumImg5,
+            title:'Кофебрейки',
+            subtitle:'Финальный',
+            link:'#',
             key:1,
+        },
+        {
+            img:widthForumImg6,
+            title:'Настройка',
+            subtitle:'Мультимедиа',
+            link:'#',
+            key:2,
+        },
+        {
+            img:widthForumImg7,
+            title:'Подготовка',
+            subtitle:'Оформление',
+            link:'#',
+            key:3,
+        },
+        {
+            img:widthForumImg7,
+            title:'Подготовка',
+            subtitle:'Оформление',
+            link:'#',
+            key:4,
+        },
+        {
+            img:widthForumImg7,
+            title:'Подготовка',
+            subtitle:'Оформление',
+            link:'#',
+            key:5,
         },
     ]
 }
