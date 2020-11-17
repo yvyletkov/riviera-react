@@ -210,67 +210,6 @@
   }
 }
 
-.weddingIconsBlock {
-
-  .wrapper {
-    max-width: 1920px;
-    width: 100%;
-    margin: 0 auto;
-
-    .container {
-      box-sizing: border-box;
-      max-width: 1200px;
-      width: 100%;
-      margin: 0 auto;
-
-      .sliderWrapper {
-        max-width: 940px;
-        margin: 0 auto;
-      }
-
-      .iconWrapper {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0 40px;
-
-        img {
-          width: 55px;
-          filter: brightness(0);
-          margin-bottom: 20px;
-        }
-
-        p {
-          font-family: "Helvetica Neue Roman";
-          text-align: center;
-        }
-
-        @media (max-width: 1000px) {
-          flex-direction: row;
-          max-width: 200px;
-          width: fit-content;
-          padding: 0 20px;
-
-          img {
-            margin-bottom: 0;
-            margin-right: 10px;
-            height: 55px;
-            width: unset;
-          }
-
-          p {
-            text-align: left;
-          }
-        }
-
-      }
-
-
-    }
-  }
-}
-
 .weddingOrganizationBlock {
   .wrapper {
     max-width: 1920px;
@@ -450,10 +389,18 @@
           height: 500px;
           width: 350px;
         }
+
+        &.menuPriceImg {
+          position: absolute;
+          left: -65px;
+          top: -80px;
+          box-shadow: none;
+        }
       }
 
       .textContent {
         padding: 0 20px 0 80px;
+        position: relative;
 
         p {
           margin-top: 30px;

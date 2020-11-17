@@ -4,7 +4,7 @@
   width: 100%;
   margin: 0 auto;
   margin-top: 100px;
-  background: center no-repeat url("../../../../../img/events/wedding/weddingPageBanner.jpg");
+  background: center no-repeat url("../../../../img/events/wedding/weddingPageBanner.jpg");
   background-size: cover;
 
   .container {
@@ -27,7 +27,7 @@
     height: 100%;
     overflow: hidden;
     object-fit: cover;
-    background: center no-repeat url(../../../../../img/events/wedding/weddingPageBannerTopLayer.png);
+    background: center no-repeat url(../../../../img/events/wedding/weddingPageBannerTopLayer.png);
   }
 
   .animatedMouseWrapper {
@@ -53,7 +53,7 @@
 
   @media screen and (max-width: 620px) {
     margin-top: 0;
-    background: center no-repeat url("../../../../../img/events/wedding/weddingPageBanner-mob.jpg");
+    background: center no-repeat url("../../../../img/events/wedding/weddingPageBanner-mob.jpg");
     background-size: cover;
 
     &:before {
