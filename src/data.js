@@ -94,6 +94,15 @@ import forumImg4 from "./img/mice/conference/7.jpg";
 import widthForumImg5 from "./img/mice/conference/8.jpg";
 import widthForumImg6 from "./img/mice/conference/9.jpg";
 import widthForumImg7 from "./img/mice/conference/10.jpg";
+import conferenceIcon1 from './img/mice/conference/icons/10.png';
+import conferenceIcon2 from './img/mice/conference/icons/11.png';
+import conferenceIcon3 from './img/mice/conference/icons/12.png';
+import conferenceIcon4 from './img/mice/conference/icons/13.png';
+import conferenceIcon5 from './img/mice/conference/icons/5.png';
+import conferenceIcon6 from './img/mice/conference/icons/6.png';
+import conferenceIcon7 from './img/mice/conference/icons/7.png';
+import conferenceIcon8 from './img/mice/conference/icons/8.png';
+import conferenceIcon9 from './img/mice/conference/icons/9.png';
 
 //страницы майса
 export  const micePagesData = {
@@ -175,7 +184,51 @@ export  const micePagesData = {
             link:'#',
             key:5,
         },
-    ]
+    ],
+    wideSliderServices: [
+        {
+            img: weddingSpecial1,
+            title: "Cкидка 10%",
+            subtitle: "На что-то",
+            link: '#',
+            key: 1,
+        },
+        {
+            img: weddingSpecial2,
+            title: "Программы",
+            subtitle: "Экскурсионные",
+            link: '#',
+            key: 2,
+        },
+        {
+            img: weddingSpecial3,
+            title: "Cкидка 30%",
+            subtitle: "На что-то",
+            link: '#',
+            key: 3,
+        },
+        {
+            img: weddingSpecial4,
+            title: "Cкидка 40%",
+            subtitle: "На что-то",
+            link: '#',
+            key: 4,
+        },
+    ],
+    conferenceIcons: [
+        {img: conferenceIcon1},
+        {img: conferenceIcon2},
+        {img: conferenceIcon3},
+        {img: conferenceIcon4},
+    ],
+    conferenceIconsAdvantages: [
+        {img: conferenceIcon5, text: "Съезд руководителей"},
+        {img: conferenceIcon6, text: "Международная премия"},
+        {img: conferenceIcon7, text: "Экспертный форум"},
+        {img: conferenceIcon8, text: "Конференции для компаний"},
+        {img: conferenceIcon9, text: "Показ мод"},
+    ],
+
 }
 
 const commonSpecialsSlides = [
