@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./WeddingPage.module.scss";
-import WeddingPageBanner from "./WeddingPageBanner/WeddingPageBanner";
+import EventPageBanner from "../EventPageBanner/EventPageBanner";
 import Accordeon from "../../../shared/Accordeon/Accordeon";
 import firstBlockImg from "../../../../img/events/wedding/wedding.jpg";
 import kitchenImg1 from "../../../../img/events/wedding/kitchen1.jpg";
@@ -11,15 +11,14 @@ import WeddingSlider from "../../../shared/sliders/eventsSliders/WeddingSlider/W
 import {eventPagesData} from "../../../../data";
 import Button from "../../../shared/Button/Button";
 import Slider from "react-slick";
-import HeadlineCenter from "../../../shared/HeadlineCenter/HeadlineCenter";
 import SpecialsSlider from "../../../shared/sliders/SpecialsSlider/SpecialsSlider";
 import LargeGallerySlider from "../../../shared/sliders/LargeGallerySlider/LargeGallerySlider";
 import RoomsSlider from "../../../shared/sliders/RoomsSlider/RoomsSlider";
 import GalleryWeddingSlider from "../../../shared/sliders/GalleryWeddingSlider/GalleryWeddingSlider";
 import decisionBlockImg from "../../../../img/events/wedding/decision.jpg";
+import menuPriceImg from "../../../../img/events/wedding/menuPrice.png";
 import MapSection from "../../../shared/MapSection/MapSection";
-import SweetAlert from "sweetalert2-react";
-
+import AdvantagesBlock from "../../../shared/AdvantagesBlock/AdvantagesBlock";
 
 const WeddingPage = () => {
 
@@ -41,10 +40,10 @@ const WeddingPage = () => {
         ]
     };
 
-
     return <>
 
-        <WeddingPageBanner/>
+        <EventPageBanner fontSize={['68px', '82px', '52px']} mobileFontSize={['11.7vw', '19.2vw', '6.2vw']}
+        titles={['Ваша', 'свадьба', 'мечты', 'в Крыму']} icons={eventPagesData.weddingPage.weddingBannerIcons}/>
 
         <section className='section first'>
             <div className={s.weddingFirstBlockWrapper}>
@@ -104,29 +103,7 @@ const WeddingPage = () => {
 
         {/* Доверьтесь профессионалам */}
         <section className='section'>
-            <div className={s.weddingIconsBlock}>
-                <div className={s.wrapper}>
-                    <div className={s.container}>
-                        <HeadlineCenter title={'Доверьтесь профессионалам'}/>
-
-                        <div className={s.sliderWrapper}>
-                            <Slider {...settings}>
-
-                                {eventPagesData.weddingPage.weddingIcons.map((item, index) => {
-                                    return <div key={index}>
-                                        <div className={s.iconWrapper}>
-                                            <img src={item.img} alt=""/>
-                                            <p>{item.text}</p>
-                                        </div>
-                                    </div>
-                                })}
-
-                            </Slider>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+            <AdvantagesBlock title={'Доверьтесь профессионалам'} icons={eventPagesData.weddingPage.weddingIcons}/>
         </section>
 
         {/* Приезжайте и наслаждайтесь пезупречной организацией */}
@@ -163,6 +140,7 @@ const WeddingPage = () => {
                         <img className={s.leftImg} src={kitchenImg1} alt=""/>
                         <img className={s.rightImg} src={kitchenImg2} alt=""/>
                         <div className={s.textContent}>
+                        <img className={s.menuPriceImg} src={menuPriceImg} alt="Стоимость меню"/>
                             <Headline subtitle={'Вас ожидает'} title={'Изысканная кухня'}/>
                             <p>
                                 Наши профессиональные повара во главе с бренд-шефом Андреем Поляшовым создали уникальные
