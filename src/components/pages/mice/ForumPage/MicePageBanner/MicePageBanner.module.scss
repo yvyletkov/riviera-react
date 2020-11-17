@@ -54,6 +54,7 @@
   @media screen and (max-width: 768px) {
     background: url("../../../../../img/mice/conference/1.jpg");
     height:auto;
+    overflow: visible;
 
     .background {
       display: none;
@@ -216,7 +217,7 @@
     z-index: -1;
     position: absolute;
     width: calc(100vw - 40px);
-    top: -95px;
+    top: 0px;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
