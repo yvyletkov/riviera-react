@@ -6,8 +6,6 @@ import styled from "styled-components";
 import Headline from "../../Headline/Headline";
 import {NextArrow, PrevArrow} from "../SliderArrows/sliderArrowButtons";
 import MiniSlider from "../MiniSlider/MiniSlider";
-import Accordeon from "../../Accordeon/Accordeon";
-import CirqleTip from "../../CirqleTip/CirqleTip";
 
 const SliderStyles = styled(Slider)`
   .slick-next:before,

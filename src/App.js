@@ -16,12 +16,16 @@ import RomanticVacationPage from "./components/pages/VacationPages/RomanticVacat
 import VacationWithFriendsPage from "./components/pages/VacationPages/VacationWithFriendsPage";
 import WeddingPage from "./components/pages/events/WeddingPage/WeddingPage";
 import ForumPage from "./components/pages/mice/ForumPage/ForumPage";
+import VisitingCeremonyPage from "./components/pages/events/VisitingCeremonyPage/VisitingCeremonyPage";
 
 
 function App() {
 
     return (<>
             <Header/>
+
+            <Route path='/visiting-ceremony' exact
+                   component={() => <VisitingCeremonyPage/>}/>
 
             <Route path='/wedding' exact
                    component={() => <WeddingPage/>}/>
