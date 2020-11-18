@@ -1,11 +1,11 @@
 import React from "react";
-import MicePageBanner from "./MicePageBanner/MicePageBanner";
-import TextBlock from "./TextBlock/TextBlock";
+import MicePageBanner from "../MicePageBanner/MicePageBanner";
+import TextBlock from "../TextBlock/TextBlock";
 import CenteredSlider from "../../../shared/sliders/CenteredSlider/CenteredSlider";
 import {eventPagesData, micePagesData, roomsAndPricesPageData} from "../../../../data";
 import WidthSpecialsSlider from "../../../shared/sliders/WidthSpecialsSlider/WidthSpecialsSlider";
 import RoomsSlider from "../../../shared/sliders/RoomsSlider/RoomsSlider";
-import s from "./ConferencesPage.module.scss";
+import s from "./ForumPage.module.scss";
 import imgAbout1 from '../../../../img/mice/conference/11.jpg'
 import imgAbout2 from '../../../../img/mice/conference/12.jpg'
 import Headline from "../../../shared/Headline/Headline";
@@ -20,7 +20,7 @@ import MapSection from "../../../shared/MapSection/MapSection";
 import AdvantagesBlock from "../../../shared/AdvantagesBlock/AdvantagesBlock";
 import LogosSlider from "../../../shared/LogosSlider/LogosSlider";
 
-const ConferencesPage = () => {
+const ForumPage = () => {
     let [accordeonStatus, setAccordeonStatus] = React.useState(false);
 
     const settings = {
@@ -40,7 +40,11 @@ const ConferencesPage = () => {
 
     return (
         <>
-            <MicePageBanner/>
+            <MicePageBanner subtitle={'Идеальная организация'}
+                            title1={'Вашей'}
+                            title2={'Конференции'}
+                            title3={'В крыму'}
+                            icons={micePagesData.conferenceIconsBanner}/>
             <section className="section">
                 <TextBlock style={{marginTop: '-100px'}}/>
             </section>
@@ -175,4 +179,4 @@ const ConferencesPage = () => {
     )
 }
 
-export default ConferencesPage;
+export default ForumPage;

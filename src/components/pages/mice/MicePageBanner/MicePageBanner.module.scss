@@ -18,7 +18,7 @@
   }
 
   .background {
-    background: right no-repeat url("../../../../../img/mice/conference/1.jpg");
+    background: right no-repeat url("../../../../img/mice/conference/1.jpg");
     position: absolute;
     top: 0;
     right:-570px;
@@ -52,7 +52,7 @@
   }
 
   @media screen and (max-width: 768px) {
-    background: url("../../../../../img/mice/conference/1.jpg");
+    background: url("../../../../img/mice/conference/1.jpg");
     height:auto;
     overflow: visible;
 

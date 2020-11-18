@@ -1,26 +1,32 @@
 import React, {useState} from "react";
 import s from "./MicePageBanner.module.scss";
-import iconHalls from "../../../../../img/mice/conference/icons/1.png"
-import iconЕquipment from "../../../../../img/mice/conference/icons/2.png"
-import iconExcursions from "../../../../../img/mice/conference/icons/3.png"
-import iconResidence from "../../../../../img/mice/conference/icons/4.png"
-import Button from "../../../../shared/Button/Button";
-import CirqleTip from "../../../../shared/CirqleTip/CirqleTip";
+import Button from "../../../shared/Button/Button";
+import CirqleTip from "../../../shared/CirqleTip/CirqleTip";
 
 
-const MicePageBanner = () => {
+const MicePageBanner = ({subtitle, title1, title2, title3, title3Style, icons}) => {
     const [accordeonStatus, setAccordeonStatus] = useState(false);
+
+    icons = icons.map((icon)=> {
+        return (
+            <div className={s.icon} key={icon.key}>
+                <img src={icon.img} alt={icon.desc}/>
+                <p>{icon.text}</p>
+            </div>
+        )
+    })
+
     return (
 
         <div className={s.wrapper}>
             <div className={s.container}>
                 <div className={s.background}/>
                 <div className={s.headings}>
-                    <h2>Идеальная организация</h2>
+                    <h2>{subtitle}</h2>
                     <h1>
-                        <span>Вашей</span>
-                        <span>Конференции</span>
-                        <span>В крыму</span>
+                        <span>{title1}</span>
+                        <span>{title2}</span>
+                        <span style={title3Style}>{title3}</span>
                         <div className={s.cirqleTipWrapper}>
                             <CirqleTip onClick={() => setAccordeonStatus(!accordeonStatus)} accordeonStatus={accordeonStatus}/>
                         </div>
@@ -37,26 +43,7 @@ const MicePageBanner = () => {
                     </div>
                 </div>
                 <div className={s.icons}>
-                    <div className={s.icon}>
-                        <img src={iconHalls} alt="9 залов"/>
-                        <p>9 оборудованных<br/>
-                            залов</p>
-                    </div>
-                    <div className={s.icon}>
-                        <img src={iconЕquipment} alt="Оборудование"/>
-                        <p>Оборудование для<br/>
-                            выступлений</p>
-                        </div>
-                        <div className={s.icon}>
-                            <img src={iconExcursions} alt="Экскурсии"/>
-                            <p>Экскурсии и<br/>
-                                тимбилдинги</p>
-                        </div>
-                    <div className={s.icon}>
-                        <img src={iconResidence} alt="Проживание в отеле"/>
-                        <p>Предложение на<br/>
-                            проживание в отеле</p>
-                    </div>
+                    {icons}
                 </div>
                 <Button style={window.matchMedia("(max-width:768px)").matches ? {
                     marginBottom: "48px",
