@@ -33,7 +33,7 @@ const SliderStyles = styled(Slider)`
 
 
 
-const EventMainSlider = ({slides}) => {
+const EventMainSlider = ({slides, title, titleMobile}) => {
 
     const settings = {
         infinite: false,
@@ -73,7 +73,7 @@ const EventMainSlider = ({slides}) => {
     return (
         <div className={s.wrapper}>
             <div className={s.container}>
-                <HeadlineCenter title={window.matchMedia('(max-width: 490px').matches ? "Варианты церемоний" : "Варианты выездной церемонии"}/>
+                <HeadlineCenter title={window.matchMedia('(max-width: 490px').matches ? titleMobile : title}/>
                 <SliderStyles>
                     <Slider {...settings}>{items}</Slider>
                 </SliderStyles>

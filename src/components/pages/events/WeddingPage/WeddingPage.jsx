@@ -27,7 +27,7 @@ const WeddingPage = () => {
 
         <EventPageBanner fontSize={['68px', '82px', '52px']} mobileFontSize={['11.7vw', '19.2vw', '6.2vw']}
                          titles={['Ваша', 'свадьба', 'мечты', 'в Крыму']}
-                         icons={eventPagesData.weddingPage.weddingBannerIcons} bannerImg={bannerImg} bannerImgMobile={bannerImgMobile}/>
+                         icons={eventPagesData.weddingPages.weddingBannerIcons} bannerImg={bannerImg} bannerImgMobile={bannerImgMobile}/>
 
         {/* Ваша семья начинается здесь */}
 
@@ -38,7 +38,7 @@ const WeddingPage = () => {
         {/* Варианты выездной церемонии */}
 
         <section className='section'>
-            <EventMainSlider slides={eventPagesData.weddingPage.weddingSlides}/>
+            <EventMainSlider slides={eventPagesData.weddingPages.weddingSlides} title={'Варианты выездной церемонии'} titleMobile={'Варианты церемоний'}/>
         </section>
 
         {/* Хотите знать сколько стоит выездная церемония? */}
@@ -65,7 +65,7 @@ const WeddingPage = () => {
 
         {/* Доверьтесь профессионалам */}
         <section className='section'>
-            <AdvantagesBlock title={'Доверьтесь профессионалам'} icons={eventPagesData.weddingPage.weddingIcons}/>
+            <AdvantagesBlock title={'Доверьтесь профессионалам'} icons={eventPagesData.weddingPages.weddingIcons}/>
         </section>
 
         {/* Приезжайте и наслаждайтесь безупречной организацией */}
@@ -103,14 +103,14 @@ const WeddingPage = () => {
 
         <section className='section'>
             <SpecialsSlider subtitle={'Дополнительные'} title={'услуги'} btnText={'Получить прайс по услугам'}
-                            slides={eventPagesData.weddingPage.weddingSpecialsSlides}/>
+                            slides={eventPagesData.weddingPages.weddingSpecialsSlides}/>
         </section>
 
         {/* Лучше один раз увидеть */}
 
         <section className='section'>
             <LargeGallerySlider blockName={'Лучше один раз увидеть'}
-                                slides={eventPagesData.weddingPage.weddingLargeGallerySlides}
+                                slides={eventPagesData.weddingPages.weddingLargeGallerySlides}
                                 slideTitle={'Лучше один раз увидеть'}
                                 videoMode={true}/>
         </section>
@@ -141,7 +141,7 @@ const WeddingPage = () => {
 
         <section className='section'>
             <GalleryWeddingSlider blockName={'Фотографии со свадьбы'}
-                                  slides={eventPagesData.weddingPage.weddingGallerySlides}/>
+                                  slides={eventPagesData.weddingPages.weddingGallerySlides}/>
         </section>
 
         {/* Вам предстоит ответсвенное решение */}

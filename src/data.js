@@ -1201,9 +1201,9 @@ export const vacationPagesData = {
 };
 
 
-// Страницы ивентов: "Свадьба"
+// Страницы ивентов: "Свадьба", "Выездная церемония", "ДР"
 export const eventPagesData  = {
-    weddingPage: {
+    weddingPages: { // "Свадьба", "Выездная церемония"
         weddingSlides: [
             {
                 img: weddingSliderImg2,
@@ -1358,6 +1358,11 @@ export const eventPagesData  = {
         ],
         weddingBannerIcons: [
             {descr: 'Вместимость<br/>залов до<br/>300 персон'},
+            {descr: 'Более 100<br/>вариантов<br/>фотозон'},
+            {descr: 'Тематическое<br/>оформление<br/>свадьбы'},
+        ],
+        weddingCeremonyBannerIcons: [
+            {descr: 'Более<br/>7 площадок<br/>для свадьбы'},
             {descr: 'Более 100<br/>вариантов<br/>фотозон'},
             {descr: 'Тематическое<br/>оформление<br/>свадьбы'},
         ],

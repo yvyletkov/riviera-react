@@ -180,8 +180,8 @@ a:hover {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.98);
-  transition: all 350ms;
+  background-color: rgba(255, 255, 255, 1);
+  transition: all 500ms;
   padding: 0 7px;
   //backdrop-filter: blur(5px);
 }
@@ -211,6 +211,9 @@ a:hover {
 @media screen and (min-width: 501px) {
   .menu div a {
     font-size: 46px;
+    &:hover {
+      color: #171717;
+    }
   }
 }
 

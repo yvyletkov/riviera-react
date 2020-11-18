@@ -13,7 +13,7 @@ $black: #171717;
   text-transform: uppercase;
   font-family: "Helvetica Neue Light";
   font-size: 20px;
-  margin-bottom: 7px;
+  margin-bottom: 6px;
   position: relative;
   width: fit-content;
 }
@@ -47,18 +47,28 @@ $black: #171717;
 
 @media screen and (max-width: 430px) {
   .title {
-    font-size: 31px;
+    font-size: 30px;
+  }
+  .subtitle {
+    font-size: 19px;
+    margin-bottom: 4px;
   }
 }
 
 @media screen and (max-width: 375px) {
   .title {
-    font-size: 28px;
+    font-size: 26px;
+  }
+  .subtitle {
+    font-size: 17px;
   }
 }
 
 @media screen and (max-width: 340px) {
   .title {
-    font-size: 25px;
+    font-size: 23px;
+  }
+  .subtitle {
+    font-size: 15px;
   }
 }

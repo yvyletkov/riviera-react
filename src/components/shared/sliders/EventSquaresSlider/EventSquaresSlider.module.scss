@@ -74,6 +74,12 @@
 
       }
 
+      .tipWrapper {
+        display: inline-block;
+        position: relative;
+        bottom: 9px;
+      }
+
       .textContent {
         padding: 0 20px;
         text-align: justify;
