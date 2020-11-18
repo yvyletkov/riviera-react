@@ -11,13 +11,6 @@ const SliderStyles = styled.div`
   .slick-prev:before {
     color: #000;
   }
-  .center .slick-center .sliderElement {
-    opacity: 1;
-    transition: all 0.3s;
-    -ms-transform: scale(1.08);
-    transform: scale(1.08);
-    // margin: 0 14px;
-  }
 
   .slick-list {
     transition: all 0.3s;
@@ -39,16 +32,20 @@ const SliderStyles = styled.div`
 .slick-track {
   margin: 0 auto;
 }
-}
+
 `;
 
 
 const CenteredSlider = ({title = "Какой-то заголовок", slides, type = 1}) => {
-    const items = slides.map((item) => {
+
+    let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
+
+    const items = slides.map((item, index) => {
         const {img, title, subtitle, time, date, campus, campusName, key, subsubtitle='', fontsizeSubsubtitle='',} = item;
         return (
             <div className="sliderElement" key={key}>
                 <CenteredSliderItem
+                    active={currentSlideIndex === index}
                     type={type}
                     img={img}
                     title={title}
@@ -64,7 +61,10 @@ const CenteredSlider = ({title = "Какой-то заголовок", slides, t
         );
     });
 
+    const afterChangeHandler = (index) => setCurrentSlideIndex(index)
+
     const settings = {
+        afterChange: afterChangeHandler,
         dots: false,
         className: "center",
         centerMode: true,
