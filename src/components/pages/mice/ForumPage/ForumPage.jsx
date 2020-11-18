@@ -69,54 +69,6 @@ const ForumPage = () => {
                 />
             </section>
             <section className='section'>
-                <div className={s.conferencesPlacesBlock}>
-                    <div className={s.wrapper}>
-                        <div className={s.container}>
-                            <div className={s.topRow}>
-                                <h4 className={s.title}>
-                                    <span>Как выбрать</span>
-                                    <span>площадку для проведения</span>
-                                    <span>мероприятия</span>
-                                </h4>
-                                <CirqleTip style={{marginLeft: "-30px"}} accordeonStatus={accordeonStatus}
-                                           onClick={() => setAccordeonStatus(!accordeonStatus)}/>
-                                <div className={s.textContent}>
-                                    <Accordeon withBtn={false} zeroHeight={true} status={accordeonStatus}>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
-                                            ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
-                                            facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
-                                            ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
-                                            facilisis.</p>
-                                    </Accordeon>
-                                </div>
-                            </div>
-
-
-                            <div className={s.sliderWrapper}>
-                                <Slider {...settings} slidesToShow={4}>
-                                    {eventPagesData.weddingPages.weddingPlacesSlides.map((item, index) => {
-                                        return <div>
-                                            <div className={s.sliderItemWrapper}>
-                                                <div>{index + 1}</div>
-                                                <img src={item.img} alt={item.text}/>
-                                                <p dangerouslySetInnerHTML={{__html: item.text}}/>
-                                            </div>
-                                        </div>
-                                    })}
-                                </Slider>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className='section'>
-                <BlackBlock/>
-            </section>
-            <section className='section'>
                 <div className={s.conferencesDecisionBlock}>
                     <div className={s.wrapper}>
                         <div className={s.grid}>
