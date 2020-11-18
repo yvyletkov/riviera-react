@@ -45,10 +45,13 @@ const ConferencesPage = () => {
                             title2={'Конференции'}
                             title3={'В крыму'}
                             icons={micePagesData.conferenceIconsBanner}/>
+            {window.matchMedia('(min-width:769px)').matches &&
             <section className="section">
                 <TextBlock style={{marginTop: '-100px'}}/>
             </section>
-            <section className='section'>
+            }
+            <section className={window.matchMedia('(max-width: 768px)').matches ? 'section first' : 'section'}
+                     style={window.matchMedia('(min-width: 768px)').matches ? {marginBottom:'30px'} : {}}>
                 <AdvantagesBlock title={'Какие мероприятия мы организуем'} icons={micePagesData.conferenceIconsAdvantages}/>
             </section>
             <section className="section">
@@ -108,7 +111,7 @@ const ConferencesPage = () => {
                                     <span>площадку для проведения</span>
                                     <span>мероприятия</span>
                                 </h4>
-                                <CirqleTip style={{marginLeft: "-30px"}} accordeonStatus={accordeonStatus}
+                                <CirqleTip accordeonStatus={accordeonStatus}
                                            onClick={() => setAccordeonStatus(!accordeonStatus)}/>
                                 <div className={s.textContent}>
                                     <Accordeon withBtn={false} zeroHeight={true} status={accordeonStatus}>
@@ -143,6 +146,12 @@ const ConferencesPage = () => {
             <section className='section'>
                 <BlackBlock/>
             </section>
+
+            {window.matchMedia('(max-width:768px)').matches &&
+            <section className="section">
+                <TextBlock />
+            </section>
+            }
 
             <section className='section'>
                 <div className={s.conferencesDecisionBlock}>

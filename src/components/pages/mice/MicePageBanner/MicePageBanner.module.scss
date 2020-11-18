@@ -18,10 +18,10 @@
   }
 
   .background {
-    background: right no-repeat url("../../../../img/mice/conference/1.jpg");
+    background: left no-repeat url("../../../../img/mice/conference/1.jpg");
     position: absolute;
     top: 0;
-    right:-570px;
+    right:-550px;
     height:800px;
     width:100%;
   }
@@ -55,6 +55,7 @@
     background: url("../../../../img/mice/conference/1.jpg");
     height:auto;
     overflow: visible;
+    background-position: -190px;
 
     .background {
       display: none;
@@ -114,12 +115,12 @@
     }
 
     span:first-of-type {
-      font-size: 84px;
+      font-size: 70px;
       font-family: "Helvetica Neue Black";
     }
 
     span:nth-child(2) {
-      font-size: 75px;
+      font-size: 56px;
       font-family: 'Helvetica Neue Black';
       font-weight: 900;
     }
@@ -160,7 +161,7 @@
   display: flex;
   color: #fff;
   margin:60px 0 50px;
-  width:600px;
+  width:500px;
   flex-wrap: wrap;
   justify-content: space-between;
 
@@ -176,7 +177,7 @@
     p {
       text-align: left;
       margin:0 20px;
-      width:200px;
+      width:150px;
     }
   }
 

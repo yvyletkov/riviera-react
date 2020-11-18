@@ -23,6 +23,12 @@
 
       img {
         width:100%;
+        filter: saturate(0);
+        transition: 300ms;
+      }
+
+      img:hover {
+        filter:saturate(1);
       }
 
       @media (max-width: 1000px) {

@@ -5,21 +5,29 @@
   margin: 0 auto;
   overflow: hidden;
 
+  @media screen and (max-width: 768px) {
+    overflow: visible;
+  }
+
 
 
   .container {
     display: flex;
     box-sizing: border-box;
     max-width: 1000px;
-    margin: 40px auto;
+    margin: 30px auto;
     position: relative;
     background-color: #fff;
     border-radius: 5px;
     height:380px;
     box-shadow: -6.156px 16.914px 27px 0px rgba(23, 23, 23, 0.05);
-  }
-  @media screen and (max-width: 768px) {
-    display: none;
+
+    @media screen and (max-width: 768px) {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      margin:0;
+    }
   }
 }
 
@@ -29,6 +37,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    margin:0;
+    padding: 20px;
+  }
 }
 
 .leftSide {

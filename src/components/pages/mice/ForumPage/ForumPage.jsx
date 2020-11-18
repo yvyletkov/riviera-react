@@ -40,10 +40,12 @@ const ForumPage = () => {
 
     return (
         <>
-            <MicePageBanner subtitle={'Идеальная организация'}
-                            title1={'Вашей'}
-                            title2={'Конференции'}
+            <MicePageBanner subtitle={'Мероприятия'}
+                            title1={'Размещение участников'}
+                            title1Style={{fontSize:'30px', marginBottom:'5px'}}
+                            title2={'Форума'}
                             title3={'В крыму'}
+                            title3Style={{fontSize:'32px', backgroundColor:"#ffbb28", padding:'5px 10px'}}
                             icons={micePagesData.conferenceIconsBanner}/>
             <section className="section">
                 <TextBlock style={{marginTop: '-100px'}}/>
@@ -113,6 +115,9 @@ const ForumPage = () => {
                                 <div className={s.textContent}>
                                     <Accordeon withBtn={false} zeroHeight={true} status={accordeonStatus}>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
+                                            ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                            facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                             tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
                                             ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
                                             facilisis.</p>
