@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import s from "./EventSlider.module.scss";
+import s from "./EventMainSlider.module.scss";
 import styled from "styled-components";
 import HeadlineCenter from "../../HeadlineCenter/HeadlineCenter";
 
@@ -33,7 +33,7 @@ const SliderStyles = styled(Slider)`
 
 
 
-const EventSlider = ({slides}) => {
+const EventMainSlider = ({slides}) => {
 
     const settings = {
         infinite: false,
@@ -82,7 +82,7 @@ const EventSlider = ({slides}) => {
     );
 };
 
-export default EventSlider;
+export default EventMainSlider;
 
 
 const WeddingSliderItem = (props) => {

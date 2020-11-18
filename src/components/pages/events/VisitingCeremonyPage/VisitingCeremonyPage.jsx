@@ -1,14 +1,14 @@
 import React from "react";
-import Slider from "react-slick";
 import s from "./VisitingCeremonyPage.module.scss";
-import EventPageBanner from "../EventPageBanner/EventPageBanner";
-import Accordeon from "../../../shared/Accordeon/Accordeon";
 import {eventPagesData} from "../../../../data";
-import firstBlockImg from "../../../../img/events/wedding/wedding.jpg";
 import decisionBlockImg from "../../../../img/events/wedding/decision.jpg";
+import bannerImg from "../../../../img/events/visiting-ceremony/banner.jpg";
+// import bannerImgMobile from "../../../../img/events/visiting-ceremony/banner.jpg";
+import textImgBlockImg from "../../../../img/events/visiting-ceremony/visiting-ceremony.jpg";
+
+import EventPageBanner from "../EventPageBanner/EventPageBanner";
 import Headline from "../../../shared/Headline/Headline";
-import CirqleTip from "../../../shared/CirqleTip/CirqleTip";
-import EventSlider from "../../../shared/sliders/EventSlider/EventSlider";
+import EventMainSlider from "../../../shared/sliders/EventMainSlider/EventMainSlider";
 import Button from "../../../shared/Button/Button";
 import SpecialsSlider from "../../../shared/sliders/SpecialsSlider/SpecialsSlider";
 import LargeGallerySlider from "../../../shared/sliders/LargeGallerySlider/LargeGallerySlider";
@@ -18,71 +18,27 @@ import MapSection from "../../../shared/MapSection/MapSection";
 import AdvantagesBlock from "../../../shared/AdvantagesBlock/AdvantagesBlock";
 import KitchenBlock from "../../../shared/KitchenBlock/KitchenBlock";
 import BlackBlock from "../../../shared/BlackBlock/BlackBlock";
-import bannerImg from "../../../../img/events/wedding/weddingPageBanner.jpg";
-import bannerImgMobile from "../../../../img/events/wedding/weddingPageBanner-mob.jpg";
+import EventTextImgBlock from "../../../shared/EventTextImgBlock/EventTextImgBlock";
+import EventSquaresSlider from "../../../shared/sliders/EventSquaresSlider/EventSquaresSlider";
 
-const VisitingCeremonyPage = () => {
-
-    let [accordeonStatus, setAccordeonStatus] = React.useState(false);
-    let [accordeonStatus1, setAccordeonStatus1] = React.useState(false);
-
-    const settings = {
-        infinite: false,
-        slidesToShow: 5,
-        arrows: false,
-        responsive: [
-            {
-                breakpoint: 1000,
-                settings: {
-                    variableWidth: true,
-                    slidesToShow: 1,
-                }
-            },
-        ]
-    };
+const WeddingPage = () => {
 
     return <>
 
         <EventPageBanner fontSize={['68px', '82px', '52px']} mobileFontSize={['11.7vw', '19.2vw', '6.2vw']}
                          titles={['Выездная', 'свадебная', 'церемония', 'в Крыму']}
-                         icons={eventPagesData.weddingPage.weddingBannerIcons} bannerImg={bannerImg} bannerImgMobile={bannerImgMobile}/>
+                         icons={eventPagesData.weddingPage.weddingBannerIcons} bannerImg={bannerImg} bannerImgMobile={bannerImg}/>
 
         {/* Ваша семья начинается здесь */}
 
         <section className='section first'>
-            <div className={s.weddingFirstBlockWrapper}>
-                <div className={s.container}>
-                    <div className={s.background}/>
-                    <div className={s.textContent}>
-                        <Headline subtitle={'Ваша семья'} title={'Начинается здесь'}/>
-                        <CirqleTip accordeonStatus={accordeonStatus}
-                                   onClick={() => setAccordeonStatus(!accordeonStatus)}/>
-                        <Accordeon withBtn={false} zeroHeight={true} status={accordeonStatus}>
-                            <p>
-                                Любви нужно пространство! Особенный день для пары должен пройти там, где будет всё
-                                необходимое для трогательной церемонии, зажигательной свадебной программы, удивительных
-                                сюрпризов, выступления артистов и кавер-групп.
-                            </p>
-                        </Accordeon>
-                        <p>
-                            <h5><b>Молодожёнов ждёт:</b></h5>
-                            <ul>
-                                <li>незабываемый мальчишник и девичник,</li>
-                                <li>свадебная фото- и видеосессия,</li>
-                                <li>сборы невесты;</li>
-                                <li>романтичная первая ночь.</li>
-                            </ul>
-                        </p>
-                    </div>
-                    <img src={firstBlockImg} alt={"Свадьба"}/>
-                </div>
-            </div>
+            <EventTextImgBlock subtitle='Ваша семья' title='Начинается здесь' img={textImgBlockImg}/>
         </section>
 
         {/* Варианты выездной церемонии */}
 
         <section className='section'>
-            <EventSlider slides={eventPagesData.weddingPage.weddingSlides}/>
+            <EventMainSlider slides={eventPagesData.weddingPage.weddingSlides}/>
         </section>
 
         {/* Хотите знать сколько стоит выездная церемония? */}
@@ -162,54 +118,7 @@ const VisitingCeremonyPage = () => {
         {/* Как выбрать площадку для проведения свадьбы*/}
 
         <section className='section'>
-            <div className={s.weddingPlacesBlock}>
-                <div className={s.wrapper}>
-                    <div className={s.container}>
-                        <div className={s.topRow}>
-                            <h4 className={s.title}>
-                                <span>Как выбрать</span>
-                                <span>площадку для проведения</span>
-                                <span>свадьбы</span>
-                            </h4>
-                            <CirqleTip style={{marginLeft: "-30px"}} accordeonStatus={accordeonStatus1}
-                                       onClick={() => setAccordeonStatus1(!accordeonStatus1)}/>
-                            <div className={s.textContent}>
-                                <Accordeon withBtn={false} zeroHeight={true} status={accordeonStatus1}>
-                                    <p>
-                                        Свадьба в Крыму – сложное и большое по уровню организации мероприятие. Поэтому в
-                                        качестве площадки должен выступать отель с большим ассортиментом банкетных
-                                        залов, с
-                                        крытыми и открытыми площадками для выездной церемонии. Играет немаловажную роль
-                                        опыт в
-                                        организации мероприятий и профессиональное оборудование на площадках. От выбора
-                                        места
-                                        проведения свадьбы будет зависеть многое. Важно определить идеальное соотношение
-                                        цены,
-                                        качества и уровня сервиса для того, чтобы создать действительно незабываемое
-                                        событие.
-                                    </p>
-                                </Accordeon>
-                            </div>
-                        </div>
-
-
-                        <div className={s.sliderWrapper}>
-                            <Slider {...settings} slidesToShow={4}>
-                                {eventPagesData.weddingPage.weddingPlacesSlides.map((item, index) => {
-                                    return <div>
-                                        <div className={s.sliderItemWrapper}>
-                                            <div>{index + 1}</div>
-                                            <img src={item.img} alt={item.text}/>
-                                            <p dangerouslySetInnerHTML={{__html: item.text}}/>
-                                        </div>
-                                    </div>
-                                })}
-                            </Slider>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+            <EventSquaresSlider/>
         </section>
 
         {/* Сомневаетесь в площадке ?*/}
@@ -281,4 +190,4 @@ const VisitingCeremonyPage = () => {
 
 };
 
-export default VisitingCeremonyPage;
+export default WeddingPage;
