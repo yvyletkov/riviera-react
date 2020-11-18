@@ -44,53 +44,21 @@ const ForumPage = () => {
                             title1={'Размещение участников'}
                             title1Style={{fontSize:'30px', marginBottom:'5px'}}
                             title2={'Форума'}
-                            title3={'В крыму'}
+                            title3={'Созвездия'}
                             title3Style={{fontSize:'32px', backgroundColor:"#ffbb28", padding:'5px 10px'}}
                             icons={micePagesData.conferenceIconsBanner}/>
-            <section className="section">
-                <TextBlock style={{marginTop: '-100px'}}/>
-            </section>
-            <section className='section'>
-                <AdvantagesBlock title={'Какие мероприятия мы организуем'} icons={micePagesData.conferenceIconsAdvantages}/>
-            </section>
-            <section className="section">
-                <CenteredSlider slides={micePagesData.centeredSlides} title={"Что мы берем на себя"} type={2} />
-            </section>
-            <section className="section">
-                <WidthSpecialsSlider slides={micePagesData.widthSpecialsSlider} title={"Наши залы"}/>
-            </section>
-            <section className='section'>
+            <section className='section first'>
                 <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={roomsAndPricesPageData.modernDescr}
                              data={roomsAndPricesPageData.modernSlides}/>
 
                 <RoomsSlider lastOfTwo={true} subtitle={'Корпус'} title={'Классик'}
                              textContent={roomsAndPricesPageData.classicDescr} data={roomsAndPricesPageData.classicSlides}/>
             </section>
-            <section className='section'>
-                <div className={s.conferencesAboutBlock}>
-                    <div className={s.wrapper}>
-                        <div className={s.container}>
-                            <img className={s.leftImg} src={imgAbout1} alt=""/>
-                            <img className={s.rightImg} src={imgAbout2} alt=""/>
-                            <div className={s.textContent}>
-                                <Headline subtitle={'Ваша задача'} title={'Особенная?'}/>
-                                <p className={s.boldTitle}>Справимся и с ней!</p>
-                                <p>Запишитесь на 20-минутную консультацию с нашим организатором мероприятий.</p>
-                                <ul>
-                                    <li>бриф на 3 вопроса</li>
-                                    <li>легкое общение без сложных терминов</li>
-                                    <li>прозрачная смета</li>
-                                </ul>
-                                <p className={s.boldSubtitle}>Поддержим все ваши идеи и расскажем, как их реализовать несколькими способами, учитывая ваш бюджет!</p>
-                                <Button text={"Оставить заявку"}
-                                        style={!window.matchMedia("(max-width: 768px").matches ? {width: "230px"} : {}}/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <section className="section" style={window.matchMedia('(min-width: 768px)').matches ? {marginBottom:'30px'} : {}}>
+                <WidthSpecialsSlider slides={micePagesData.widthSpecialsSlider} title={"Для деловых встреч"}/>
             </section>
             <section className="section">
-                <LogosSlider title={"С кем мы сотрудничали"} icons={micePagesData.conferenceIcons}/>
+                <TextBlock/>
             </section>
             <section className="section">
                 <SpecialsSlider title={"Услуги"}
@@ -100,55 +68,6 @@ const ForumPage = () => {
                                 textLink={'#'}
                 />
             </section>
-            <section className='section'>
-                <div className={s.conferencesPlacesBlock}>
-                    <div className={s.wrapper}>
-                        <div className={s.container}>
-                            <div className={s.topRow}>
-                                <h4 className={s.title}>
-                                    <span>Как выбрать</span>
-                                    <span>площадку для проведения</span>
-                                    <span>мероприятия</span>
-                                </h4>
-                                <CirqleTip style={{marginLeft: "-30px"}} accordeonStatus={accordeonStatus}
-                                           onClick={() => setAccordeonStatus(!accordeonStatus)}/>
-                                <div className={s.textContent}>
-                                    <Accordeon withBtn={false} zeroHeight={true} status={accordeonStatus}>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
-                                            ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
-                                            facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
-                                            ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
-                                            facilisis.</p>
-                                    </Accordeon>
-                                </div>
-                            </div>
-
-
-                            <div className={s.sliderWrapper}>
-                                <Slider {...settings} slidesToShow={4}>
-                                    {eventPagesData.weddingPage.weddingPlacesSlides.map((item, index) => {
-                                        return <div>
-                                            <div className={s.sliderItemWrapper}>
-                                                <div>{index + 1}</div>
-                                                <img src={item.img} alt={item.text}/>
-                                                <p dangerouslySetInnerHTML={{__html: item.text}}/>
-                                            </div>
-                                        </div>
-                                    })}
-                                </Slider>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className='section'>
-                <BlackBlock/>
-            </section>
-
             <section className='section'>
                 <div className={s.conferencesDecisionBlock}>
                     <div className={s.wrapper}>
