@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./WeddingPageBanner.module.scss";
+import s from "./EventPageBanner.module.scss";
 import img from "../../../../img/events/wedding/weddingPageBanner.jpg"
 import iconCapacity from "../../../../img/events/wedding/icon-capacity.png"
 import iconPhotozone from "../../../../img/events/wedding/icon-photozone.png"

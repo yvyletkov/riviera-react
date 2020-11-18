@@ -1,6 +1,7 @@
 .cirqleTip {
   display: none !important;
-  font-family: 'Helvetica Neue Bold';
+  align-items: center;
+  justify-content: center;
   margin-left: 7px;
   width: 24px;
   height: 24px;
@@ -8,21 +9,28 @@
   text-align: center;
   background-color: #f4f4f4;
   color: #b0b0b0;
-  font-size: 18px;
-  padding-top: .3rem;
   box-sizing: border-box;
   position: relative;
   top: -4px;
   transition: all 200ms;
+  p {
+    margin: 0;
+    padding: 0;
+    height: 15px;
+    font-size: 18px;
+    font-family: 'Helvetica Neue Bold';
+  }
 }
 
 .cirqleTip.active {
   background-color: #cccccc;
-  color: #fff;
+  p {
+    color: #fff;
+  }
 }
 
 @media screen and (max-width: 500px) {
   .cirqleTip {
-    display: inline-block !important;
+    display: inline-flex !important;
   }
 }

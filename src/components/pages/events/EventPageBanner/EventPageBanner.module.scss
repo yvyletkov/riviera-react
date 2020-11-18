@@ -10,6 +10,7 @@
     box-sizing: border-box;
     max-width: 1200px;
     height: calc(100vh - 100px);
+    max-height: 770px;
     margin: 0 auto;
     padding: 10vh 20px 0;
   }
@@ -115,7 +116,21 @@
     }
 
     span:last-of-type {
+      position: relative;
       font-size: 52px;
+      width: fit-content;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: #ff6c39;
+        right: -16px;
+        bottom: 12px;
+        @media (max-width: 620px) {
+          display: none;
+        }
+      }
     }
   }
 

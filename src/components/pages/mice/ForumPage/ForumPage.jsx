@@ -123,7 +123,7 @@ const ForumPage = () => {
 
                             <div className={s.sliderWrapper}>
                                 <Slider {...settings} slidesToShow={4}>
-                                    {eventPagesData.weddingPage.weddingPlacesSlides.map((item, index) => {
+                                    {eventPagesData.weddingPages.weddingPlacesSlides.map((item, index) => {
                                         return <div>
                                             <div className={s.sliderItemWrapper}>
                                                 <div>{index + 1}</div>
