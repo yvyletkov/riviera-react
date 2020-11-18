@@ -4,7 +4,7 @@ import Button from "../../../shared/Button/Button";
 import CirqleTip from "../../../shared/CirqleTip/CirqleTip";
 
 
-const MicePageBanner = ({subtitle, title1, title2, title3, title3Style, icons}) => {
+const MicePageBanner = ({subtitle, title1, title2, title3, title3Style, icons, title1Style}) => {
     const [accordeonStatus, setAccordeonStatus] = useState(false);
 
     icons = icons.map((icon)=> {
@@ -24,7 +24,7 @@ const MicePageBanner = ({subtitle, title1, title2, title3, title3Style, icons}) 
                 <div className={s.headings}>
                     <h2>{subtitle}</h2>
                     <h1>
-                        <span>{title1}</span>
+                        <span style={title1Style}>{title1}</span>
                         <span>{title2}</span>
                         <span style={title3Style}>{title3}</span>
                         <div className={s.cirqleTipWrapper}>
@@ -46,7 +46,7 @@ const MicePageBanner = ({subtitle, title1, title2, title3, title3Style, icons}) 
                     {icons}
                 </div>
                 <Button style={window.matchMedia("(max-width:768px)").matches ? {
-                    marginBottom: "48px",
+                    marginBottom: "15vh",
                     maxWidth: "200px"
                 } : {maxWidth: "200px"}}
                         text={"Получить смету"}/>
