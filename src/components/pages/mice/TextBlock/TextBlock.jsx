@@ -1,7 +1,7 @@
 import React from "react";
 import s from './TextBlock.module.scss';
-import Headline from "../../../../shared/Headline/Headline";
-import eventImg from "../../../../../img/mice/conference/2.jpg"
+import Headline from "../../../shared/Headline/Headline";
+import eventImg from "../../../../img/mice/conference/2.jpg"
 
 const TextBlock = (props) => {
     return (

@@ -16,12 +16,15 @@ import RomanticVacationPage from "./components/pages/VacationPages/RomanticVacat
 import VacationWithFriendsPage from "./components/pages/VacationPages/VacationWithFriendsPage";
 import WeddingPage from "./components/pages/events/WeddingPage/WeddingPage";
 import VisitingCeremonyPage from "./components/pages/events/VisitingCeremonyPage/VisitingCeremonyPage";
-import ConferencesPage from "./components/pages/mice/ForumPage/ConferencesPage";
+import ConferencesPage from "./components/pages/mice/ConferencesPage/ConferencesPage";
+import ForumPage from "./components/pages/mice/ForumPage/ForumPage";
 
 function App() {
 
     return (<>
             <Header/>
+                <Route path='/forum' exact
+                       component={() => <ForumPage />}/>
 
             <Route path='/visiting-ceremony' exact
                    component={() => <VisitingCeremonyPage/>}/>

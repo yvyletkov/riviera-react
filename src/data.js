@@ -103,6 +103,10 @@ import conferenceIcon6 from './img/mice/conference/icons/6.png';
 import conferenceIcon7 from './img/mice/conference/icons/7.png';
 import conferenceIcon8 from './img/mice/conference/icons/8.png';
 import conferenceIcon9 from './img/mice/conference/icons/9.png';
+import iconHalls from "./img/mice/conference/icons/1.png"
+import iconЕquipment from "./img/mice/conference/icons/2.png"
+import iconExcursions from "./img/mice/conference/icons/3.png"
+import iconResidence from "./img/mice/conference/icons/4.png"
 
 //страницы майса
 export  const micePagesData = {
@@ -228,6 +232,12 @@ export  const micePagesData = {
         {img: conferenceIcon8, text: "Конференции для компаний"},
         {img: conferenceIcon9, text: "Показ мод"},
     ],
+    conferenceIconsBanner: [
+        {img: iconHalls, text: '9 оборудованных залов', key:1, desc:"9 залов"},
+        {img: iconЕquipment, text: 'Оборудование для выступлений', key:2, desc:"Оборудование"},
+        {img: iconExcursions, text: 'Экскурсии и тимбилдинги', key:3, desc:"Экскурсии"},
+        {img: iconResidence, text: 'Предложение на проживание в отеле', key:4, desc:"Проживание"},
+    ]
 
 }
 
