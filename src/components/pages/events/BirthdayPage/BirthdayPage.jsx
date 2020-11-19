@@ -1,10 +1,10 @@
 import React from "react";
-import s from "./VisitingCeremonyPage.module.scss";
+import s from "./BirthdayPage.module.scss";
 import {eventPagesData} from "../../../../data";
 import decisionBlockImg from "../../../../img/events/wedding/decision.jpg";
-import bannerImg from "../../../../img/events/visiting-ceremony/banner.jpg";
-// import bannerImgMobile from "../../../../img/events/visiting-ceremony/banner.jpg";
-import textImgBlockImg from "../../../../img/events/visiting-ceremony/visiting-ceremony.jpg";
+import bannerImg from "../../../../img/events/birthday/birthdayBanner.jpg";
+import bannerImgMobile from "../../../../img/events/birthday/birthdayBanner-mob.jpg";
+import textImgBlockImg from "../../../../img/events/wedding/wedding.jpg";
 
 import EventPageBanner from "../EventPageBanner/EventPageBanner";
 import Headline from "../../../shared/Headline/Headline";
@@ -20,18 +20,28 @@ import KitchenBlock from "../../../shared/KitchenBlock/KitchenBlock";
 import BlackBlock from "../../../shared/BlackBlock/BlackBlock";
 import EventTextImgBlock from "../../../shared/EventTextImgBlock/EventTextImgBlock";
 import EventSquaresSlider from "../../../shared/sliders/EventSquaresSlider/EventSquaresSlider";
+import CenteredSlider from "../../../shared/sliders/CenteredSlider/CenteredSlider";
 
-const WeddingPage = () => {
+const BirthdayPage = () => {
 
     return <>
 
-        <EventPageBanner fontSize={['68px', '82px', '52px']} mobileFontSize={['9.7vw', '12.3vw', '6.2vw']}
-                         titles={['Выездная', 'свадебная', 'церемония', 'в Крыму']}
-                         icons={eventPagesData.weddingPages.weddingCeremonyBannerIcons} bannerImg={bannerImg} bannerImgMobile={bannerImg}/>
+        <EventPageBanner fontSize={['75px', '75px', '52px']} mobileFontSize={['11.7vw', '13vw', '6.2vw']}
+                         titles={['Незабываемый', 'день', 'рождения', 'в Крыму']}
+                         icons={eventPagesData.weddingPages.weddingBannerIcons}
+                         bannerImg={bannerImg}
+                         bannerImgMobile={bannerImgMobile}
+                         blackFont={true}
+        />
 
         {/* Ваша семья начинается здесь */}
 
         <section className='section first'>
+            <CenteredSlider title={'Организация под Ваши пожелания'} slides={eventPagesData.birthdayPage.centeredSlides}/>
+        </section>
+
+
+        <section className='section'>
             <EventTextImgBlock subtitle='Ваша семья' title='Начинается здесь' img={textImgBlockImg}/>
         </section>
 
@@ -43,7 +53,7 @@ const WeddingPage = () => {
 
         {/* Хотите знать сколько стоит выездная церемония? */}
         <section className='section'>
-            <div className={s.visitingCeremonyPriceBlock}>
+            <div className={s.weddingPriceBlock}>
                 <div className={s.wrapper}>
                     <div className={s.container}>
                         <h4 className={s.title}>
@@ -71,7 +81,7 @@ const WeddingPage = () => {
         {/* Приезжайте и наслаждайтесь безупречной организацией */}
 
         <section className='section'>
-            <div className={s.visitingCeremonyOrganizationBlock}>
+            <div className={s.weddingOrganizationBlock}>
                 <div className={s.wrapper}>
                     <div className={s.container}>
                         <div className={s.contentWrapper}>
@@ -147,7 +157,7 @@ const WeddingPage = () => {
         {/* Вам предстоит ответсвенное решение */}
 
         <section className='section'>
-            <div className={s.visitingCeremonyDecisionBlock}>
+            <div className={s.weddingDecisionBlock}>
                 <div className={s.wrapper}>
                     <div className={s.grid}>
 
@@ -190,4 +200,4 @@ const WeddingPage = () => {
 
 };
 
-export default WeddingPage;
+export default BirthdayPage;

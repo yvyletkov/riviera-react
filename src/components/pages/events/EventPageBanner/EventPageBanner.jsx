@@ -8,11 +8,14 @@ import AnimatedMouseIcon from "../../../shared/AnimatedMouseIcon/AnimatedMouseIc
 import Button from "../../../shared/Button/Button";
 
 
-const EventPageBanner = ({mobileFontSize, fontSize, titles, icons, bannerImg, bannerImgMobile}) => {
+const EventPageBanner = ({mobileFontSize, fontSize, titles, icons, bannerImg, bannerImgMobile, blackFont}) => {
+
+
     return (
-        <div className={s.wrapper} style={{  background: !window.matchMedia("(max-width: 620px").matches ? `center no-repeat url("${bannerImg}")` : `center no-repeat url("${bannerImgMobile}")`}}>
+        <div className={s.wrapper}
+             style={{  background: window.matchMedia("(max-width: 620px").matches ? `center no-repeat url("${bannerImgMobile}")` : `center no-repeat url("${bannerImg}")`, backgroundSize: "cover"}}>
             <div className={s.container}>
-                <div className={s.headings}>
+                <div className={!blackFont ? s.headings : s.headings + ' ' + s.black}>
                     <h2>{titles[0]}</h2>
                     <h1>
                         <span style={window.matchMedia("(max-width: 620px)").matches ? {fontSize: mobileFontSize[0]} : {fontSize: fontSize[0]} }>{titles[1]}</span>
@@ -24,7 +27,7 @@ const EventPageBanner = ({mobileFontSize, fontSize, titles, icons, bannerImg, ba
                 </div>
 
 
-                <div className={s.icons}>
+                <div className={!blackFont ? s.icons : s.icons + ' ' + s.black}>
                     <div className={s.icon}>
                         <img src={iconCapacity} alt="Вместимость"/>
                         <p dangerouslySetInnerHTML={{__html: icons[0].descr}}/>

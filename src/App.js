@@ -18,13 +18,18 @@ import WeddingPage from "./components/pages/events/WeddingPage/WeddingPage";
 import VisitingCeremonyPage from "./components/pages/events/VisitingCeremonyPage/VisitingCeremonyPage";
 import ConferencesPage from "./components/pages/mice/ConferencesPage/ConferencesPage";
 import ForumPage from "./components/pages/mice/ForumPage/ForumPage";
+import BirthdayPage from "./components/pages/events/BirthdayPage/BirthdayPage";
 
 function App() {
 
     return (<>
             <Header/>
-                <Route path='/forum' exact
-                       component={() => <ForumPage />}/>
+
+            <Route path='/birthday' exact
+                   component={() => <BirthdayPage/>}/>
+
+            <Route path='/forum' exact
+                   component={() => <ForumPage/>}/>
 
             <Route path='/visiting-ceremony' exact
                    component={() => <VisitingCeremonyPage/>}/>
