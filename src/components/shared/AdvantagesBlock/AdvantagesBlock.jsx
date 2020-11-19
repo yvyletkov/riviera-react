@@ -7,7 +7,7 @@ const AdvantagesBlock = ({title, icons}) => {
 
     const settings = {
         infinite: false,
-        slidesToShow: 5,
+        slidesToShow: icons.length,
         arrows: false,
         responsive: [
             {

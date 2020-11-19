@@ -44,7 +44,7 @@ section.section {
 }
 
 section.section.first {
-  padding-top: 70px;
+  padding-top: 90px;
 }
 
 section.section.last {
@@ -63,6 +63,10 @@ section.section.last {
 
   section.section {
     padding-bottom: 60px;
+  }
+
+  section.section.first {
+    padding-top: 60px;
   }
 
 }

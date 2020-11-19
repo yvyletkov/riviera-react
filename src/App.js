@@ -19,11 +19,15 @@ import VisitingCeremonyPage from "./components/pages/events/VisitingCeremonyPage
 import ConferencesPage from "./components/pages/mice/ConferencesPage/ConferencesPage";
 import ForumPage from "./components/pages/mice/ForumPage/ForumPage";
 import BirthdayPage from "./components/pages/events/BirthdayPage/BirthdayPage";
+import HenPartyPage from "./components/pages/events/HenPartyPage/HenPartyPage";
 
 function App() {
 
     return (<>
             <Header/>
+
+            <Route path='/hen-party' exact
+                   component={() => <HenPartyPage/>}/>
 
             <Route path='/birthday' exact
                    component={() => <BirthdayPage/>}/>
