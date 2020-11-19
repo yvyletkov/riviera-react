@@ -4,8 +4,9 @@ import Headline from "../Headline/Headline";
 import CirqleTip from "../CirqleTip/CirqleTip";
 import Accordeon from "../Accordeon/Accordeon";
 import bestDayEverImg from "../../../img/events/bestdayever.png";
+import Button from "../Button/Button";
 
-const EventTextImgBlock = ({subtitle = 'Ваша семья', title = 'Начинается здесь', img, text, listArray, forWedding = true}) => {
+const EventTextImgBlock = ({subtitle = 'Ваша семья', title = 'Начинается здесь', img, text, listArray = [], forWedding = true}) => {
 
     let [accordeonStatus, setAccordeonStatus] = React.useState(false);
 
@@ -24,9 +25,8 @@ const EventTextImgBlock = ({subtitle = 'Ваша семья', title = 'Начи�
                     </Accordeon>
                     <p>
                         {forWedding && <h5><b>Молодожёнов ждёт:</b></h5>}
-                        <ul>
-                            {listArray.map((item, index) => <li key={index}>{item}</li>)}
-                        </ul>
+
+                            {listArray.length ? <ul>{listArray.map((item, index) => <li key={index}>{item}</li>)}</ul> : <Button text={'Узнать подробоности'} style={window.matchMedia("(max-width: 768px)").matches ? {} : {width: '220px'}}/> }
                     </p>
                     {forWedding && <img src={bestDayEverImg} alt="Лучший день"/>}
                 </div>

@@ -1248,36 +1248,6 @@ export const eventPagesData  = {
             {img: weddingSliderIcon4, text: "В 1 часе езды<br/>на авто<br/>из аэропорта"},
             {img: weddingSliderIcon5, text: "Несколько<br/>вариантов<br/>церемоний"},
         ],
-        weddingSpecialsSlides: [
-            {
-                img: weddingSpecial1,
-                title: "Cкидка 10%",
-                subtitle: "На что-то",
-                link: '#',
-                key: 1,
-            },
-            {
-                img: weddingSpecial2,
-                title: "Программы",
-                subtitle: "Экскурсионные",
-                link: '#',
-                key: 2,
-            },
-            {
-                img: weddingSpecial3,
-                title: "Cкидка 30%",
-                subtitle: "На что-то",
-                link: '#',
-                key: 3,
-            },
-            {
-                img: weddingSpecial4,
-                title: "Cкидка 40%",
-                subtitle: "На что-то",
-                link: '#',
-                key: 4,
-            },
-        ],
         weddingLargeGallerySlides: [
             {
                 video: "https://www.youtube.com/embed/9ZaY4ILBbzA?controls=0",
@@ -1385,6 +1355,11 @@ export const eventPagesData  = {
         ],
     },
     birthdayPage: {
+        birthdayBannerIcons: [
+            {descr: 'Вместимость<br/>залов до<br/>300 персон'},
+            {descr: 'Более 100<br/>вариантов<br/>фотозон'},
+            {descr: 'Специальные<br/>условия<br/>на проживание'},
+        ],
         birthdayMainSlides: [
             {
                 img: weddingSliderImg2,
@@ -1455,6 +1430,49 @@ export const eventPagesData  = {
             {img: birthdayIcon5, text: "Живописный<br/>реликтовый<br/>парк"},
         ],
     },
+    henPartyPage: {
+        henPartyBannerIcons: [
+            {descr: 'SPA-процедуры,<br/>бассейны<br/>и парные'},
+            {descr: 'Пляж<br/>в 50 метрах<br/>от отеля'},
+            {descr: 'Специальные<br/>условия<br/>на проживание'},
+        ],
+        henPartyIcons: [
+            {img: birthdayIcon1, text: "Прохладительные<br/>напитки и<br/>легкие закуски"},
+            {img: birthdayIcon2, text: "Расслабляющий<br/>массаж перед<br/>важным днем"},
+            {img: birthdayIcon3, text: "Открытые и<br/>закрытые бассейны,<br/>бани и сауны"},
+            {img: birthdayIcon4, text: "Сценарий от<br/>команды<br/>организаторов"},
+        ],
+    },
+    specialsSlides: [
+        {
+            img: weddingSpecial1,
+            title: "Cкидка 10%",
+            subtitle: "На что-то",
+            link: '#',
+            key: 1,
+        },
+        {
+            img: weddingSpecial2,
+            title: "Программы",
+            subtitle: "Экскурсионные",
+            link: '#',
+            key: 2,
+        },
+        {
+            img: weddingSpecial3,
+            title: "Cкидка 30%",
+            subtitle: "На что-то",
+            link: '#',
+            key: 3,
+        },
+        {
+            img: weddingSpecial4,
+            title: "Cкидка 40%",
+            subtitle: "На что-то",
+            link: '#',
+            key: 4,
+        },
+    ],
     classicSlides: commonClassicCampusSlides,
     modernSlides: commonModernCampusSlides,
     modernDescr: commonModernDescr,

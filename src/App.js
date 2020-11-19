@@ -30,7 +30,6 @@ function App() {
                 <Route path='/trainings' exact
                        component={() => <TrainingsPage/>}/>
 
-
                 <Route path='/hen-party' exact
                        component={() => <HenPartyPage/>}/>
  

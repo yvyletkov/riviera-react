@@ -23,7 +23,7 @@ const BirthdayPage = () => {
 
         <EventPageBanner fontSize={['75px', '75px', '52px']} mobileFontSize={['11.7vw', '13vw', '6.2vw']}
                          titles={['Незабываемый', 'день', 'рождения', 'в Крыму']}
-                         icons={eventPagesData.weddingPages.weddingBannerIcons}
+                         icons={eventPagesData.birthdayPage.birthdayBannerIcons}
                          bannerImg={bannerImg}
                          bannerImgMobile={bannerImgMobile}
                          blackFont={true}
@@ -89,7 +89,7 @@ const BirthdayPage = () => {
 
         <section className='section'>
             <SpecialsSlider subtitle={'Дополнительные'} title={'услуги'} btnText={'Получить прайс по услугам'}
-                            slides={eventPagesData.weddingPages.weddingSpecialsSlides}/>
+                            slides={eventPagesData.specialsSlides}/>
         </section>
 
         {/* Вам предстоит легкое решение */}
