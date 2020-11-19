@@ -58,6 +58,8 @@ const Header = () => {
                     <div onClick={toggleMenu}><NavLink activeClassName={s.menuLinkActive} to={"/wedding"}>Свадьба</NavLink></div>
                     <div onClick={toggleMenu}><NavLink activeClassName={s.menuLinkActive} to={"/conference"}>Конференции</NavLink></div>
                     <div onClick={toggleMenu}><NavLink activeClassName={s.menuLinkActive} to={"/forum"}>Форум</NavLink></div>
+                    <div onClick={toggleMenu}><NavLink activeClassName={s.menuLinkActive} to={"/event-tourism"}>Событийный туризм</NavLink></div>
+                    <div onClick={toggleMenu}><NavLink activeClassName={s.menuLinkActive} to={"/trainings"}>Семинар/Тренинги</NavLink></div>
                 </div>
 
                 <div className={s.container}>
