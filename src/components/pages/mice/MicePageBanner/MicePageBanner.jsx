@@ -10,7 +10,7 @@ const MicePageBanner = ({subtitle,
                             title3Style,
                             icons,
                             title1Style,
-                            background}) => {
+                            backgroundStyle}) => {
     const [accordeonStatus, setAccordeonStatus] = useState(false);
     // {background: 'left no-repeat url("../../../../img/mice/conference/1.jpg")'}
 
@@ -27,7 +27,7 @@ const MicePageBanner = ({subtitle,
 
         <div className={s.wrapper}>
             <div className={s.container}>
-                <div className={s.background} style={{backgroundImage:`url(${background})`}}/>
+                <div className={s.background} style={backgroundStyle}/>
                 <div className={s.headings}>
                     <h2>{subtitle}</h2>
                     <h1>
@@ -52,12 +52,13 @@ const MicePageBanner = ({subtitle,
                 <div className={s.icons}>
                     {icons}
                 </div>
-                <Button style={window.matchMedia("(max-width:768px)").matches ? {
-                    marginBottom: "15vh",
-                    maxWidth: "200px",
-                    zIndex: "1"
-                } : {maxWidth: "200px", zIndex: "1"}}
-                        text={"Получить смету"}/>
+                    <Button style={window.matchMedia("(max-width:767px)").matches ? {
+                        marginBottom: '15vh',
+                        maxWidth: "200px",
+                        zIndex: "1",
+                        position: "relative"
+                    } : {maxWidth: "200px", zIndex: "1", position: "relative", marginTop: '15px',marginLeft:'50px',}}
+                            text={"Получить смету"}/>
             </div>
             </div>
     )

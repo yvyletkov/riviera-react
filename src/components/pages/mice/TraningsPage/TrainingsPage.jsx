@@ -19,7 +19,7 @@ import decisionBlockImg from "../../../../img/mice/forum/2.jpg";
 import MapSection from "../../../shared/MapSection/MapSection";
 import AdvantagesBlock from "../../../shared/AdvantagesBlock/AdvantagesBlock";
 import LogosSlider from "../../../shared/sliders/LogosSlider/LogosSlider";
-import imageBackground from "../../../../img/mice/tranings/1.jpg";
+import imageBanner from "../../../../img/mice/tranings/1.jpg";
 
 const TrainingsPage = () => {
     let [accordeonStatus, setAccordeonStatus] = React.useState(false);
@@ -43,11 +43,11 @@ const TrainingsPage = () => {
         <>
             <MicePageBanner subtitle={'Лучшая площадка'}
                             title1={''}
-                            title1Style={window.matchMedia('(max-width: 500px)').matches ? {} : {fontSize: '90px'}}
                             title2={'Для тренинга'}
                             title3={'В крыму'}
+                            title3Style={{marginTop:'10px'}}
                             icons={micePagesData.conferenceIconsBanner}
-                            background={imageBackground}/>
+                            backgroundStyle={{backgroundImage:`url(${imageBanner})`, backgroundPosition:'0'}} />
             {window.matchMedia('(min-width:769px)').matches &&
             <section className="section">
                 <TextBlock style={{marginTop: '-100px'}}/>

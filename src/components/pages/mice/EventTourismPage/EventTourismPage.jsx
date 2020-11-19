@@ -12,6 +12,7 @@ import decisionBlockImg from "../../../../img/mice/conference/14.jpg";
 import MapSection from "../../../shared/MapSection/MapSection";
 import imageBanner from "../../../../img/mice/event-tourism/2.jpg"
 
+
 const EventTourismPage = () => {
 
     return (
@@ -23,7 +24,8 @@ const EventTourismPage = () => {
                             title3={'Созвездия'}
                             title3Style={{fontSize:'32px', backgroundColor:"#ffbb28", padding:'5px 10px'}}
                             icons={micePagesData.conferenceIconsBanner}
-                            background={imageBanner}/>
+                            backgroundStyle={{
+                                backgroundImage:`url(${imageBanner})`}}/>
             <section className='section first'>
                 <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={roomsAndPricesPageData.modernDescr}
                              data={roomsAndPricesPageData.modernSlides}/>
