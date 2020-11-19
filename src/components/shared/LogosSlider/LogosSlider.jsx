@@ -2,12 +2,20 @@ import s from "./LogosSlider.module.scss";
 import HeadlineCenter from "../HeadlineCenter/HeadlineCenter";
 import Slider from "react-slick";
 import React from "react";
+import styled from "styled-components";
 
 const LogosSlider = ({title, icons}) => {
 
+    const StyledSlider = styled(Slider)`
+      .slick-track {
+        display:flex;
+        align-items:center;
+      }
+    `;
+
     const settings = {
         infinite: false,
-        slidesToShow: 4,
+        slidesToShow: `${icons.length}`,
         arrows: false,
         responsive: [
             {
@@ -25,17 +33,19 @@ const LogosSlider = ({title, icons}) => {
             <HeadlineCenter title={title}/>
 
             <div className={s.sliderWrapper}>
-                <Slider {...settings}>
+                <StyledSlider>
+                    <Slider {...settings}>
 
-                    {icons.map((item, index) => {
-                        return <div key={index}>
-                            <div className={s.iconWrapper}>
-                                <img src={item.img} alt=""/>
+                        {icons.map((item, index) => {
+                            return <div key={index}>
+                                <div className={s.iconWrapper}>
+                                    <img src={item.img} alt=""/>
+                                </div>
                             </div>
-                        </div>
-                    })}
+                        })}
 
-                </Slider>
+                    </Slider>
+                </StyledSlider>
             </div>
 
         </div>
