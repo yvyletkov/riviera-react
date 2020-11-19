@@ -112,6 +112,15 @@ import birthdayIcon2 from "./img/events/birthday/icon2.png"
 import birthdayIcon3 from "./img/events/birthday/icon3.png"
 import birthdayIcon4 from "./img/events/birthday/icon4.png"
 import birthdayIcon5 from "./img/events/birthday/icon5.png"
+import iconHalls from "./img/mice/conference/icons/1.png";
+import iconЕquipment from "./img/mice/conference/icons/2.png";
+import iconExcursions from "./img/mice/conference/icons/3.png";
+import iconResidence from "./img/mice/conference/icons/4.png";
+import forumIcon1 from './img/mice/forum/icons/1.png';
+import forumIcon2 from './img/mice/forum/icons/2.png';
+import forumIcon3 from './img/mice/forum/icons/3.png';
+import forumIcon4 from './img/mice/forum/icons/4.png';
+import forumIcon5 from './img/mice/forum/icons/5.png';
 
 //страницы майса
 export  const micePagesData = {
@@ -229,6 +238,13 @@ export  const micePagesData = {
         {img: conferenceIcon2},
         {img: conferenceIcon3},
         {img: conferenceIcon4},
+    ],
+    forumIcons: [
+        {img: forumIcon1},
+        {img: forumIcon2},
+        {img: forumIcon3},
+        {img: forumIcon4},
+        {img: forumIcon5},
     ],
     conferenceIconsAdvantages: [
         {img: conferenceIcon5, text: "Съезд руководителей"},
