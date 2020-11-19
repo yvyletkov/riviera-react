@@ -54,8 +54,9 @@ const MicePageBanner = ({subtitle,
                 </div>
                 <Button style={window.matchMedia("(max-width:768px)").matches ? {
                     marginBottom: "15vh",
-                    maxWidth: "200px"
-                } : {maxWidth: "200px"}}
+                    maxWidth: "200px",
+                    zIndex: "1"
+                } : {maxWidth: "200px", zIndex: "1"}}
                         text={"Получить смету"}/>
             </div>
             </div>
