@@ -5,7 +5,7 @@ import CenteredSlider from "../../../shared/sliders/CenteredSlider/CenteredSlide
 import {eventPagesData, micePagesData, roomsAndPricesPageData} from "../../../../data";
 import WidthSpecialsSlider from "../../../shared/sliders/WidthSpecialsSlider/WidthSpecialsSlider";
 import RoomsSlider from "../../../shared/sliders/RoomsSlider/RoomsSlider";
-import s from "./ForumPage.module.scss";
+import s from "./IntensivePage.module.scss";
 import imgAbout1 from '../../../../img/mice/conference/11.jpg'
 import imgAbout2 from '../../../../img/mice/conference/12.jpg'
 import Headline from "../../../shared/Headline/Headline";
@@ -19,9 +19,9 @@ import decisionBlockImg from "../../../../img/mice/forum/2.jpg";
 import MapSection from "../../../shared/MapSection/MapSection";
 import AdvantagesBlock from "../../../shared/AdvantagesBlock/AdvantagesBlock";
 import LogosSlider from "../../../shared/sliders/LogosSlider/LogosSlider";
-import imageBanner from "../../../../img/mice/forum/1.jpg";
+import imageBanner from "../../../../img/mice/tranings/1.jpg";
 
-const ForumPage = () => {
+const IntensivePage = () => {
     let [accordeonStatus, setAccordeonStatus] = React.useState(false);
 
     const settings = {
@@ -42,14 +42,14 @@ const ForumPage = () => {
     return (
         <>
             <MicePageBanner subtitle={'Организация'}
-                            title1={'Форума'}
-                            title1Style={window.matchMedia('(max-width: 500px)').matches ? {} : {fontSize: '90px'}}
-                            title2={''}
+                            title1={'Корпоративного'}
+                            title1Style={{fontSize: '50px'}}
+                            title2={'Мероприятия'}
+                            title2Style={{fontSize: '50px'}}
                             title3={'В крыму'}
+                            title3Style={{marginTop:'10px'}}
                             icons={micePagesData.conferenceIconsBanner}
-                            backgroundStyle={{
-                                backgroundImage:`url(${imageBanner})`,
-                                backgroundPosition:window.matchMedia('(max-width: 767px)').matches ? '-190px' : ''}}/>
+                            backgroundStyle={{backgroundImage:`url(${imageBanner})`, backgroundPosition:'0'}} />
             {window.matchMedia('(min-width:769px)').matches &&
             <section className="section">
                 <TextBlock style={{marginTop: '-100px'}}/>
@@ -193,4 +193,4 @@ const ForumPage = () => {
     )
 }
 
-export default ForumPage;
+export default IntensivePage;
