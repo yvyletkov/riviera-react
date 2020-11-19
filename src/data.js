@@ -1367,6 +1367,9 @@ export const eventPagesData  = {
             {descr: 'Тематическое<br/>оформление<br/>свадьбы'},
         ],
     },
+    birthdayPage: {
+        centeredSlides: commonAfishaSlides,
+    },
     classicSlides: commonClassicCampusSlides,
     modernSlides: commonModernCampusSlides,
     modernDescr: commonModernDescr,

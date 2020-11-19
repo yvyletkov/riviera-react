@@ -14,6 +14,7 @@
     margin: 0 auto;
     padding: 10vh 20px 0;
   }
+
   //
   //.bannerImgTop {
   //  -webkit-user-select: none;
@@ -77,11 +78,21 @@
 }
 
 .headings {
+
+  &.black {
+    h2, h1 {
+      color: #080808 !important;
+    }
+    h2:after {
+      background: #080808;
+    }
+  }
+
   h2 {
     position: relative;
     width: fit-content;
     font-size: 30.5px;
-    font-family: "Helvetica Neue Medium";
+    font-family: "Helvetica Neue Light";
     color: #fff;
     margin-bottom: 10px;
 
@@ -119,6 +130,7 @@
       position: relative;
       font-size: 52px;
       width: fit-content;
+
       &::after {
         content: "";
         position: absolute;
@@ -163,6 +175,13 @@
   color: #fff;
   position: absolute;
   bottom: 6.5%;
+
+  &.black {
+    color: #080808;
+    img {
+      filter: brightness(0);
+    }
+  }
 
   .icon {
     display: flex;
