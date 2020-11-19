@@ -106,7 +106,7 @@ const WeddingPage = () => {
 
         <section className='section'>
             <SpecialsSlider subtitle={'Дополнительные'} title={'услуги'} btnText={'Получить прайс по услугам'}
-                            slides={eventPagesData.weddingPages.weddingSpecialsSlides}/>
+                            slides={eventPagesData.specialsSlides}/>
         </section>
 
         {/* Лучше один раз увидеть */}

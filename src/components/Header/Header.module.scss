@@ -187,10 +187,14 @@ a:hover {
 }
 
 .menu div a {
-  font-size: 7vw;
   font-family: "Helvetica Neue Light";
   color: #7a7a7a;
-  transition: all 200ms;
+  transition: all 100ms;
+  font-size: 26px;
+  &:hover {
+    color: #171717;
+    background: #e8f7fc;
+  }
 }
 
 .menu div {
@@ -208,12 +212,12 @@ a:hover {
   color: #b0b0b0 !important;
 }
 
-@media screen and (min-width: 501px) {
+@media screen and (max-width: 500px) {
   .menu div a {
-    font-size: 46px;
-    &:hover {
-      color: #171717;
-    }
+    font-size: 5.5vw;
+  }
+  .menu div {
+    margin-bottom: 10px;
   }
 }
 

@@ -8,7 +8,7 @@ import AnimatedMouseIcon from "../../../shared/AnimatedMouseIcon/AnimatedMouseIc
 import Button from "../../../shared/Button/Button";
 
 
-const EventPageBanner = ({mobileFontSize, fontSize, titles, icons, bannerImg, bannerImgMobile, blackFont}) => {
+const EventPageBanner = ({mobileFontSize, fontSize, titles, icons, bannerImg, bannerImgMobile, blackFont, btnLink = "#"}) => {
 
 
     return (
@@ -23,7 +23,7 @@ const EventPageBanner = ({mobileFontSize, fontSize, titles, icons, bannerImg, ba
                         <span style={window.matchMedia("(max-width: 620px)").matches ? {fontSize: mobileFontSize[2]} : {fontSize: fontSize[2]} }>{titles[3]}</span>
                     </h1>
                     <Button style={{width: "fit-content", marginTop: "20px"}}
-                            text={"Узнать стоимость"}/>
+                            link={btnLink} text={"Узнать стоимость"}/>
                 </div>
 
 

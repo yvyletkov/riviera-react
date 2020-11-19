@@ -2,47 +2,46 @@ import React from "react";
 import s from "./HenPartyPage.module.scss";
 import {eventPagesData} from "../../../../data";
 import decisionBlockImg from "../../../../img/events/wedding/decision.jpg";
-import bannerImg from "../../../../img/events/wedding/weddingPageBanner.jpg";
-import bannerImgMobile from "../../../../img/events/wedding/weddingPageBanner-mob.jpg";
+import bannerImg from "../../../../img/events/hen-party/hen-party-banner.jpg";
+import bannerImgMobile from "../../../../img/events/hen-party/hen-party-banner.jpg";
 import textImgBlockImg from "../../../../img/events/wedding/wedding.jpg";
 
 import EventPageBanner from "../EventPageBanner/EventPageBanner";
 import Headline from "../../../shared/Headline/Headline";
-import EventMainSlider from "../../../shared/sliders/EventMainSlider/EventMainSlider";
 import Button from "../../../shared/Button/Button";
 import SpecialsSlider from "../../../shared/sliders/SpecialsSlider/SpecialsSlider";
-import LargeGallerySlider from "../../../shared/sliders/LargeGallerySlider/LargeGallerySlider";
 import RoomsSlider from "../../../shared/sliders/RoomsSlider/RoomsSlider";
-import GalleryWeddingSlider from "../../../shared/sliders/GalleryWeddingSlider/GalleryWeddingSlider";
 import MapSection from "../../../shared/MapSection/MapSection";
 import AdvantagesBlock from "../../../shared/AdvantagesBlock/AdvantagesBlock";
 import KitchenBlock from "../../../shared/KitchenBlock/KitchenBlock";
-import BlackBlock from "../../../shared/BlackBlock/BlackBlock";
 import EventTextImgBlock from "../../../shared/EventTextImgBlock/EventTextImgBlock";
-import EventSquaresSlider from "../../../shared/sliders/EventSquaresSlider/EventSquaresSlider";
 
 const HenPartyPage = () => {
 
     return <>
 
-        <EventPageBanner fontSize={['68px', '82px', '52px']} mobileFontSize={['11.7vw', '19.2vw', '6.2vw']}
-                         titles={['Ваша', 'свадьба', 'мечты', 'в Крыму']}
-                         icons={eventPagesData.weddingPages.weddingBannerIcons} bannerImg={bannerImg}
-                         bannerImgMobile={bannerImgMobile}/>
+        <EventPageBanner fontSize={['46px', '79px', '55px']} mobileFontSize={['8.7vw', '14.3vw', '6.2vw']}
+                         titles={['Организуем вам', 'атмосферный', 'девичник', 'в Крыму']}
+                         icons={eventPagesData.henPartyPage.henPartyBannerIcons} bannerImg={bannerImg}
+                         bannerImgMobile={bannerImgMobile}
+                         blackFont={true}/>
 
         {/* Идеальное место для проведения */}
 
         <section className='section first'>
-            <AdvantagesBlock title={'Идеальное место для проведения'} icons={eventPagesData.weddingPages.weddingIcons}/>
+            <AdvantagesBlock title={'Идеальное место для проведения'} icons={eventPagesData.henPartyPage.henPartyIcons}/>
         </section>
 
         {/* Для Вас душевная атмосфера */}
 
         <section className='section'>
             <EventTextImgBlock subtitle='Для Вас' title='душевная атмосфера' img={textImgBlockImg}
-                               text={'Любви нужно пространство! Особенный день для пары должен пройти там, где будет всё необходимое для трогательной церемонии, зажигательной свадебной программы, удивительных сюрпризов, выступления артистов и кавер-групп.'}
-                               forWedding={true}
-                               listArray={['незабываемый мальчишник и девичник,', 'свадебная фото- и видеосессия,', 'сборы невесты,', 'романтичная первая ночь.']}/>
+                               text={'Для того, чтобы прочувствовать свадьбу по-настоящему, обязательно нужно провести с подругами незабываемый душевный девичник!\n' +
+                               'Дружеская атмосфера, смех, приятные расслабляющие процедуры, зажигательная фотосессия и душевные вечерние посиделки создадут правильный настрой на важный день, помогут справиться со стрессом и почувствовать поддержку!\n' +
+                               'В нашем отеле есть всё для того, чтобы получить духовное и эстетическое удовольствие, окружить себя комфортом и любовью близких!\n'}
+                               forWedding={false}
+                               listArray={[]}/>
+
         </section>
 
         {/* Слайдеры корпусов */}
@@ -65,13 +64,13 @@ const HenPartyPage = () => {
 
         <section className='section'>
             <SpecialsSlider subtitle={'Дополнительные'} title={'услуги'} btnText={'Получить прайс по услугам'}
-                            slides={eventPagesData.weddingPages.weddingSpecialsSlides}/>
+                            slides={eventPagesData.specialsSlides}/>
         </section>
 
         {/* Вам предстоит легкое решение */}
 
         <section className='section'>
-            <div className={s.weddingDecisionBlock}>
+            <div className={s.henPartyDecisionBlock}>
                 <div className={s.wrapper}>
                     <div className={s.grid}>
 
