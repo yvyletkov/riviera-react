@@ -103,6 +103,15 @@ import conferenceIcon6 from './img/mice/conference/icons/6.png';
 import conferenceIcon7 from './img/mice/conference/icons/7.png';
 import conferenceIcon8 from './img/mice/conference/icons/8.png';
 import conferenceIcon9 from './img/mice/conference/icons/9.png';
+import iconHalls from "./img/mice/conference/icons/1.png"
+import iconЕquipment from "./img/mice/conference/icons/2.png"
+import iconExcursions from "./img/mice/conference/icons/3.png"
+import iconResidence from "./img/mice/conference/icons/4.png"
+import birthdayIcon1 from "./img/events/birthday/icon1.png"
+import birthdayIcon2 from "./img/events/birthday/icon2.png"
+import birthdayIcon3 from "./img/events/birthday/icon3.png"
+import birthdayIcon4 from "./img/events/birthday/icon4.png"
+import birthdayIcon5 from "./img/events/birthday/icon5.png"
 import iconHalls from "./img/mice/conference/icons/1.png";
 import iconЕquipment from "./img/mice/conference/icons/2.png";
 import iconExcursions from "./img/mice/conference/icons/3.png";
@@ -1216,7 +1225,7 @@ export const vacationPagesData = {
 // Страницы ивентов: "Свадьба", "Выездная церемония", "ДР"
 export const eventPagesData  = {
     weddingPages: { // "Свадьба", "Выездная церемония"
-        weddingSlides: [
+        weddingMainSlides: [
             {
                 img: weddingSliderImg2,
                 title: "Парк",
@@ -1237,11 +1246,11 @@ export const eventPagesData  = {
             },
         ],
         weddingIcons: [
-            {img: weddingSliderIcon1, text: "Профессиональная команда организаторов"},
-            {img: weddingSliderIcon2, text: "Изысканное меню от бренд-шефа"},
-            {img: weddingSliderIcon3, text: "Полное оснащение залов"},
-            {img: weddingSliderIcon4, text: "В 1 часе езды на авто из аэропорта"},
-            {img: weddingSliderIcon5, text: "Несколько вариантов церемоний"},
+            {img: weddingSliderIcon1, text: "Профессиональная<br/>команда<br/>организаторов"},
+            {img: weddingSliderIcon2, text: "Изысканное<br/>меню от<br/>бренд-шефа"},
+            {img: weddingSliderIcon3, text: "Полное<br/>оснащение<br/>залов"},
+            {img: weddingSliderIcon4, text: "В 1 часе езды<br/>на авто<br/>из аэропорта"},
+            {img: weddingSliderIcon5, text: "Несколько<br/>вариантов<br/>церемоний"},
         ],
         weddingSpecialsSlides: [
             {
@@ -1380,6 +1389,26 @@ export const eventPagesData  = {
         ],
     },
     birthdayPage: {
+        birthdayMainSlides: [
+            {
+                img: weddingSliderImg2,
+                title: "Ресторан Tavrika",
+                descr: 'Зал вместит до 120 гостей, его можно украсить в соответствии с общей тональностью мероприятия, подойдет для праздника в любое время года и в любую погоду. Имеет отдельный вход и зону для приветственного фуршета. Есть возможность организации танцпола.',
+                key: 1,
+            },
+            {
+                img: weddingSliderImg1,
+                title: "Ball Room",
+                descr: 'Зал вместит до 120 гостей, его можно украсить в соответствии с общей тональностью мероприятия, подойдет для праздника в любое время года и в любую погоду. Имеет отдельный вход и зону для приветственного фуршета. Есть возможность организации танцпола.',
+                key: 2,
+            },
+            {
+                img: weddingSliderImg3,
+                title: "Зеленая терраса",
+                descr: 'Зал вместит до 120 гостей, его можно украсить в соответствии с общей тональностью мероприятия, подойдет для праздника в любое время года и в любую погоду. Имеет отдельный вход и зону для приветственного фуршета. Есть возможность организации танцпола.',
+                key: 3,
+            },
+        ],
         centeredSlides: [
             {
                 img:forumImg,
@@ -1421,6 +1450,13 @@ export const eventPagesData  = {
                 fontsizeSubsubtitle:'43px',
                 key:5,
             },
+        ],
+        birthdayIcons: [
+            {img: birthdayIcon1, text: "Профессиональная<br/>команда<br/>организаторов"},
+            {img: birthdayIcon2, text: "Банкетное<br/>меню от<br/>шеф-повара"},
+            {img: birthdayIcon3, text: "Уникальный<br/>SPA-комплекс<br/>на 2000 м²"},
+            {img: birthdayIcon4, text: "Выгодные<br/>предложения<br/>для именнинников"},
+            {img: birthdayIcon5, text: "Живописный<br/>реликтовый<br/>парк"},
         ],
     },
     classicSlides: commonClassicCampusSlides,

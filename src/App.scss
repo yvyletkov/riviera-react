@@ -1,5 +1,5 @@
 * {
-  font-family: Helvetica Neue Light;
+  font-family: Helvetica Neue Light, Arial, serif;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -40,7 +40,7 @@ body.fixed {
 }
 
 section.section {
-  padding-bottom: 80px;
+  padding-bottom: 90px;
 }
 
 section.section.first {
@@ -48,7 +48,7 @@ section.section.first {
 }
 
 section.section.last {
-  padding-bottom: 50px;
+  padding-bottom: 70px;
 }
 
 @media screen and (max-width: 768px) {
