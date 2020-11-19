@@ -31,7 +31,7 @@ const AdvantagesBlock = ({title, icons}) => {
                             return <div key={index}>
                                 <div className={s.iconWrapper}>
                                     <img src={item.img} alt=""/>
-                                    <p>{item.text}</p>
+                                    <p dangerouslySetInnerHTML={{__html: item.text}}/>
                                 </div>
                             </div>
                         })}

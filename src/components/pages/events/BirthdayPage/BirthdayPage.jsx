@@ -4,22 +4,17 @@ import {eventPagesData} from "../../../../data";
 import decisionBlockImg from "../../../../img/events/wedding/decision.jpg";
 import bannerImg from "../../../../img/events/birthday/birthdayBanner.jpg";
 import bannerImgMobile from "../../../../img/events/birthday/birthdayBanner-mob.jpg";
-import textImgBlockImg from "../../../../img/events/wedding/wedding.jpg";
+import textImgBlockImg from "../../../../img/events/birthday/text-img-block.jpg";
 
 import EventPageBanner from "../EventPageBanner/EventPageBanner";
 import Headline from "../../../shared/Headline/Headline";
 import EventMainSlider from "../../../shared/sliders/EventMainSlider/EventMainSlider";
 import Button from "../../../shared/Button/Button";
 import SpecialsSlider from "../../../shared/sliders/SpecialsSlider/SpecialsSlider";
-import LargeGallerySlider from "../../../shared/sliders/LargeGallerySlider/LargeGallerySlider";
-import RoomsSlider from "../../../shared/sliders/RoomsSlider/RoomsSlider";
-import GalleryWeddingSlider from "../../../shared/sliders/GalleryWeddingSlider/GalleryWeddingSlider";
 import MapSection from "../../../shared/MapSection/MapSection";
 import AdvantagesBlock from "../../../shared/AdvantagesBlock/AdvantagesBlock";
 import KitchenBlock from "../../../shared/KitchenBlock/KitchenBlock";
-import BlackBlock from "../../../shared/BlackBlock/BlackBlock";
 import EventTextImgBlock from "../../../shared/EventTextImgBlock/EventTextImgBlock";
-import EventSquaresSlider from "../../../shared/sliders/EventSquaresSlider/EventSquaresSlider";
 import CenteredSlider from "../../../shared/sliders/CenteredSlider/CenteredSlider";
 
 const BirthdayPage = () => {
@@ -34,73 +29,54 @@ const BirthdayPage = () => {
                          blackFont={true}
         />
 
-        {/* Ваша семья начинается здесь */}
+        {/* Организация под ваши пожелания */}
 
         <section className='section first'>
             <CenteredSlider title={'Организация под Ваши пожелания'} slides={eventPagesData.birthdayPage.centeredSlides} type={2}/>
         </section>
 
+        {/* Выберите место празднования */}
 
         <section className='section'>
-            <EventTextImgBlock subtitle='Ваша семья' title='Начинается здесь' img={textImgBlockImg}/>
+            <EventMainSlider slides={eventPagesData.birthdayPage.birthdayMainSlides} title={'Выберите место празднования'} titleMobile={'Выберите место'}/>
         </section>
 
-        {/* Варианты выездной церемонии */}
+        {/* Планировать свой праздник лучше заранее */}
 
         <section className='section'>
-            <EventMainSlider slides={eventPagesData.weddingPages.weddingSlides} title={'Варианты выездной церемонии'} titleMobile={'Варианты церемоний'}/>
-        </section>
-
-        {/* Хотите знать сколько стоит выездная церемония? */}
-        <section className='section'>
-            <div className={s.weddingPriceBlock}>
+            <div className={s.birthdayPlanningBlock}>
                 <div className={s.wrapper}>
                     <div className={s.container}>
                         <h4 className={s.title}>
-                            <span>Хотите знать,</span>
-                            <span>сколько стоит выездная</span>
-                            <span>церемония?</span>
+                            <span>Планировать</span>
+                            <span>свой праздник лучше</span>
+                            <span>заранее</span>
                         </h4>
-                        <p>Оставьте свою почту и мы вышлем вам подробный
-                            прайс с описанием</p>
+                        <p>Оставьте свою почту и мы вышлем вам список
+                            свободных дат</p>
                         <form className={'form'}>
                             <input className={'formInput'} placeholder={'Введите Ваше имя'} type="text"/>
                             <input className={'formInput'} placeholder={'Введите Вашу почту'} type="text"/>
-                            <Button text={'Получить прайс'}/>
+                            <Button text={'Узнать свободные даты'}/>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
 
-        {/* Доверьтесь профессионалам */}
+        {/* Возможности в нашем отеле */}
+
         <section className='section'>
-            <AdvantagesBlock title={'Доверьтесь профессионалам'} icons={eventPagesData.weddingPages.weddingIcons}/>
+            <AdvantagesBlock title={'Возможности в нашем отеле'} icons={eventPagesData.birthdayPage.birthdayIcons}/>
         </section>
 
-        {/* Приезжайте и наслаждайтесь безупречной организацией */}
+        {/* Для Вас лучший день */}
 
         <section className='section'>
-            <div className={s.weddingOrganizationBlock}>
-                <div className={s.wrapper}>
-                    <div className={s.container}>
-                        <div className={s.contentWrapper}>
-                            <h4 className={s.title}>
-                                <span>Приезжайте</span>
-                                <span>и наслаждайтесь безупречной</span>
-                                <span>организацией</span>
-                                <span>Вашей свадьбы</span>
-                            </h4>
-                            <form className={'form'}>
-                                <input className={'formInput'} placeholder={'Введите Ваше имя'} type="text"/>
-                                <input className={'formInput'} placeholder={'Введите Вашу почту'} type="text"/>
-                                <Button
-                                    text={window.matchMedia("(max-width: 768px").matches ? 'Узнать подробности' : 'Узнать подробности об организации свадьбы'}/>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <EventTextImgBlock subtitle='Для Вас' title='Лучший день' img={textImgBlockImg}
+                               text={'Доверьте ваш праздник профессиональной команде отеля Rivera Sunrise Resort & SPA и получите в подарок незабываемые впечатления от времени, проведенного в кругу своих близких в незабываемой атмосфере роскошного курорта!'}
+                               forWedding={false}
+                               listArray={['веселая атмосферная вечеринка с дискотекой и фейерверком,','время с друзьями в СПА, купание в бассейнах и в море,','уединенный романтический стиль празднования,','праздник дома и угощения от профессионального шефа']}/>
         </section>
 
         {/* Вас ждет изысканная еда */}
@@ -116,48 +92,10 @@ const BirthdayPage = () => {
                             slides={eventPagesData.weddingPages.weddingSpecialsSlides}/>
         </section>
 
-        {/* Лучше один раз увидеть */}
+        {/* Вам предстоит легкое решение */}
 
         <section className='section'>
-            <LargeGallerySlider blockName={'Лучше один раз увидеть'}
-                                slides={eventPagesData.weddingPages.weddingLargeGallerySlides}
-                                slideTitle={'Лучше один раз увидеть'}
-                                videoMode={true}/>
-        </section>
-
-        {/* Как выбрать площадку для проведения свадьбы*/}
-
-        <section className='section'>
-            <EventSquaresSlider/>
-        </section>
-
-        {/* Сомневаетесь в площадке ?*/}
-
-        <section className='section'>
-            <BlackBlock/>
-        </section>
-
-        {/* Слайдеры корпусов */}
-
-        <section className='section'>
-            <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={eventPagesData.modernDescr}
-                         data={eventPagesData.modernSlides}/>
-
-            <RoomsSlider lastOfTwo={true} subtitle={'Корпус'} title={'Классик'}
-                         textContent={eventPagesData.classicDescr} data={eventPagesData.classicSlides}/>
-        </section>
-
-        {/* Фотографии со свадьбы */}
-
-        <section className='section'>
-            <GalleryWeddingSlider blockName={'Фотографии со свадьбы'}
-                                  slides={eventPagesData.weddingPages.weddingGallerySlides}/>
-        </section>
-
-        {/* Вам предстоит ответсвенное решение */}
-
-        <section className='section'>
-            <div className={s.weddingDecisionBlock}>
+            <div className={s.birthdayDecisionBlock}>
                 <div className={s.wrapper}>
                     <div className={s.grid}>
 
@@ -167,11 +105,11 @@ const BirthdayPage = () => {
 
                         <div className={s.textBlock}>
                             <div className={s.textContent}>
-                                <Headline subtitle={'Вам предстоит'} title={'Ответственное решение'}/>
+                                <Headline subtitle={'Вам предстоит'} title={'Легкое решение'}/>
 
                                 <p>
                                     Лучше принимать его, владея полной информацией. Получите на свою почту все
-                                    необходимые материалы для принятия решения о проведении свадьбы в нашем отеле.
+                                    необходимые материалы для принятия решения о проведении дня рождения в нашем отеле.
                                 </p>
 
                                 <form className={'form'}>

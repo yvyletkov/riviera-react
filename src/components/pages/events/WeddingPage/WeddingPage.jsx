@@ -27,18 +27,23 @@ const WeddingPage = () => {
 
         <EventPageBanner fontSize={['68px', '82px', '52px']} mobileFontSize={['11.7vw', '19.2vw', '6.2vw']}
                          titles={['Ваша', 'свадьба', 'мечты', 'в Крыму']}
-                         icons={eventPagesData.weddingPages.weddingBannerIcons} bannerImg={bannerImg} bannerImgMobile={bannerImgMobile}/>
+                         icons={eventPagesData.weddingPages.weddingBannerIcons} bannerImg={bannerImg}
+                         bannerImgMobile={bannerImgMobile}/>
 
         {/* Ваша семья начинается здесь */}
 
         <section className='section first'>
-            <EventTextImgBlock subtitle='Ваша семья' title='Начинается здесь' img={textImgBlockImg}/>
+            <EventTextImgBlock subtitle='Ваша семья' title='Начинается здесь' img={textImgBlockImg}
+                               text={'Любви нужно пространство! Особенный день для пары должен пройти там, где будет всё необходимое для трогательной церемонии, зажигательной свадебной программы, удивительных сюрпризов, выступления артистов и кавер-групп.'}
+                               forWedding={true}
+                               listArray={['незабываемый мальчишник и девичник,','свадебная фото- и видеосессия,','сборы невесты,','романтичная первая ночь.']}/>
         </section>
 
         {/* Варианты выездной церемонии */}
 
         <section className='section'>
-            <EventMainSlider slides={eventPagesData.weddingPages.weddingSlides} title={'Варианты выездной церемонии'} titleMobile={'Варианты церемоний'}/>
+            <EventMainSlider slides={eventPagesData.weddingPages.weddingMainSlides} title={'Варианты выездной церемонии'}
+                             titleMobile={'Варианты церемоний'}/>
         </section>
 
         {/* Хотите знать сколько стоит выездная церемония? */}

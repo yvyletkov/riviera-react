@@ -5,7 +5,7 @@ import CirqleTip from "../CirqleTip/CirqleTip";
 import Accordeon from "../Accordeon/Accordeon";
 import bestDayEverImg from "../../../img/events/bestdayever.png";
 
-const EventTextImgBlock = ({subtitle = 'Ваша семья', title = 'Начинается здесь', img}) => {
+const EventTextImgBlock = ({subtitle = 'Ваша семья', title = 'Начинается здесь', img, text, listArray, forWedding = true}) => {
 
     let [accordeonStatus, setAccordeonStatus] = React.useState(false);
 
@@ -19,23 +19,18 @@ const EventTextImgBlock = ({subtitle = 'Ваша семья', title = 'Начи�
                                onClick={() => setAccordeonStatus(!accordeonStatus)}/>
                     <Accordeon withBtn={false} zeroHeight={true} status={accordeonStatus}>
                         <p>
-                            Любви нужно пространство! Особенный день для пары должен пройти там, где будет всё
-                            необходимое для трогательной церемонии, зажигательной свадебной программы, удивительных
-                            сюрпризов, выступления артистов и кавер-групп.
+                            {text}
                         </p>
                     </Accordeon>
                     <p>
-                        <h5><b>Молодожёнов ждёт:</b></h5>
+                        {forWedding && <h5><b>Молодожёнов ждёт:</b></h5>}
                         <ul>
-                            <li>незабываемый мальчишник и девичник,</li>
-                            <li>свадебная фото- и видеосессия,</li>
-                            <li>сборы невесты;</li>
-                            <li>романтичная первая ночь.</li>
+                            {listArray.map((item, index) => <li key={index}>{item}</li>)}
                         </ul>
                     </p>
-                    <img src={bestDayEverImg} alt="Лучший день"/>
+                    {forWedding && <img src={bestDayEverImg} alt="Лучший день"/>}
                 </div>
-                <img src={img} alt={"Молодожёны"}/>
+                <img src={img} alt={"Лучший праздник"}/>
             </div>
         </div>
     )
