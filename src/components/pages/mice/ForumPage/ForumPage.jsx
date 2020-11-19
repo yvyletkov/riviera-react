@@ -18,7 +18,7 @@ import BlackBlock from "../../../shared/BlackBlock/BlackBlock";
 import decisionBlockImg from "../../../../img/mice/forum/2.jpg";
 import MapSection from "../../../shared/MapSection/MapSection";
 import AdvantagesBlock from "../../../shared/AdvantagesBlock/AdvantagesBlock";
-import LogosSlider from "../../../shared/LogosSlider/LogosSlider";
+import LogosSlider from "../../../shared/sliders/LogosSlider/LogosSlider";
 import imageBackground from "../../../../img/mice/forum/1.jpg";
 
 const ForumPage = () => {
