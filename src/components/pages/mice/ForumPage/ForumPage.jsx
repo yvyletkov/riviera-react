@@ -1,42 +1,18 @@
 import React from "react";
 import MicePageBanner from "../MicePageBanner/MicePageBanner";
 import TextBlock from "../TextBlock/TextBlock";
-import CenteredSlider from "../../../shared/sliders/CenteredSlider/CenteredSlider";
-import {eventPagesData, micePagesData, roomsAndPricesPageData} from "../../../../data";
+import {micePagesData, roomsAndPricesPageData} from "../../../../data";
 import WidthSpecialsSlider from "../../../shared/sliders/WidthSpecialsSlider/WidthSpecialsSlider";
 import RoomsSlider from "../../../shared/sliders/RoomsSlider/RoomsSlider";
 import s from "./ForumPage.module.scss";
-import imgAbout1 from '../../../../img/mice/conference/11.jpg'
-import imgAbout2 from '../../../../img/mice/conference/12.jpg'
 import Headline from "../../../shared/Headline/Headline";
 import Button from "../../../shared/Button/Button";
 import SpecialsSlider from "../../../shared/sliders/SpecialsSlider/SpecialsSlider";
-import CirqleTip from "../../../shared/CirqleTip/CirqleTip";
-import Accordeon from "../../../shared/Accordeon/Accordeon";
-import Slider from "react-slick";
-import BlackBlock from "../../../shared/BlackBlock/BlackBlock";
 import decisionBlockImg from "../../../../img/mice/conference/14.jpg";
 import MapSection from "../../../shared/MapSection/MapSection";
-import AdvantagesBlock from "../../../shared/AdvantagesBlock/AdvantagesBlock";
-import LogosSlider from "../../../shared/LogosSlider/LogosSlider";
+import imageBanner from "../../../../img/mice/forum/2.jpg"
 
 const ForumPage = () => {
-    let [accordeonStatus, setAccordeonStatus] = React.useState(false);
-
-    const settings = {
-        infinite: false,
-        slidesToShow: 5,
-        arrows: false,
-        responsive: [
-            {
-                breakpoint: 1000,
-                settings: {
-                    variableWidth: true,
-                    slidesToShow: 1,
-                }
-            },
-        ]
-    };
 
     return (
         <>
@@ -46,7 +22,8 @@ const ForumPage = () => {
                             title2={'Форума'}
                             title3={'Созвездия'}
                             title3Style={{fontSize:'32px', backgroundColor:"#ffbb28", padding:'5px 10px'}}
-                            icons={micePagesData.conferenceIconsBanner}/>
+                            icons={micePagesData.conferenceIconsBanner}
+                            background={imageBanner}/>
             <section className='section first'>
                 <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={roomsAndPricesPageData.modernDescr}
                              data={roomsAndPricesPageData.modernSlides}/>

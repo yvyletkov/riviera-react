@@ -3,9 +3,16 @@ import s from "./MicePageBanner.module.scss";
 import Button from "../../../shared/Button/Button";
 import CirqleTip from "../../../shared/CirqleTip/CirqleTip";
 
-
-const MicePageBanner = ({subtitle, title1, title2, title3, title3Style, icons, title1Style}) => {
+const MicePageBanner = ({subtitle,
+                            title1,
+                            title2,
+                            title3,
+                            title3Style,
+                            icons,
+                            title1Style,
+                            background}) => {
     const [accordeonStatus, setAccordeonStatus] = useState(false);
+    // {background: 'left no-repeat url("../../../../img/mice/conference/1.jpg")'}
 
     icons = icons.map((icon)=> {
         return (
@@ -20,7 +27,7 @@ const MicePageBanner = ({subtitle, title1, title2, title3, title3Style, icons, t
 
         <div className={s.wrapper}>
             <div className={s.container}>
-                <div className={s.background}/>
+                <div className={s.background} style={{backgroundImage:`url(${background})`}}/>
                 <div className={s.headings}>
                     <h2>{subtitle}</h2>
                     <h1>
