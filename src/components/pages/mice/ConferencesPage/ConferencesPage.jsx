@@ -19,6 +19,7 @@ import decisionBlockImg from "../../../../img/mice/conference/14.jpg";
 import MapSection from "../../../shared/MapSection/MapSection";
 import AdvantagesBlock from "../../../shared/AdvantagesBlock/AdvantagesBlock";
 import LogosSlider from "../../../shared/LogosSlider/LogosSlider";
+import imageBackground from "../../../../img/mice/conference/1.jpg";
 
 const ConferencesPage = () => {
     let [accordeonStatus, setAccordeonStatus] = React.useState(false);
@@ -44,7 +45,8 @@ const ConferencesPage = () => {
                             title1={'Вашей'}
                             title2={'Конференции'}
                             title3={'В крыму'}
-                            icons={micePagesData.conferenceIconsBanner}/>
+                            icons={micePagesData.conferenceIconsBanner}
+                            background={imageBackground}/>
             {window.matchMedia('(min-width:769px)').matches &&
             <section className="section">
                 <TextBlock style={{marginTop: '-100px'}}/>
