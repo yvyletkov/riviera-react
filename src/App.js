@@ -19,6 +19,7 @@ import VisitingCeremonyPage from "./components/pages/events/VisitingCeremonyPage
 import ConferencesPage from "./components/pages/mice/ConferencesPage/ConferencesPage";
 import ForumPage from "./components/pages/mice/ForumPage/ForumPage";
 import BirthdayPage from "./components/pages/events/BirthdayPage/BirthdayPage";
+import HenPartyPage from "./components/pages/events/HenPartyPage/HenPartyPage";
 import EventTourismPage from "./components/pages/mice/EventTourismPage/EventTourismPage";
 import TrainingsPage from "./components/pages/mice/TraningsPage/TrainingsPage";
 
@@ -28,6 +29,13 @@ function App() {
                 <Header/>
                 <Route path='/trainings' exact
                        component={() => <TrainingsPage/>}/>
+
+
+                <Route path='/hen-party' exact
+                       component={() => <HenPartyPage/>}/>
+ 
+                <Route path='/birthday' exact
+                       component={() => <BirthdayPage/>}/>
 
                 <Route path='/event-tourism' exact
                        component={() => <EventTourismPage/>}/>
