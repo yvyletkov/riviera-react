@@ -22,11 +22,15 @@ import BirthdayPage from "./components/pages/events/BirthdayPage/BirthdayPage";
 import HenPartyPage from "./components/pages/events/HenPartyPage/HenPartyPage";
 import EventTourismPage from "./components/pages/mice/EventTourismPage/EventTourismPage";
 import TrainingsPage from "./components/pages/mice/TraningsPage/TrainingsPage";
+import IntensivePage from "./components/pages/mice/IntensivePage/IntensivePage";
 
 function App() {
 
     return (<>
                 <Header/>
+                <Route path='/intensive' exact
+                   component={() => <IntensivePage/>}/>
+
                 <Route path='/trainings' exact
                        component={() => <TrainingsPage/>}/>
 

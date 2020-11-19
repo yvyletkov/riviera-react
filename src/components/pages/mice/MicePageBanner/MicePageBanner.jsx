@@ -7,9 +7,10 @@ const MicePageBanner = ({subtitle,
                             title1,
                             title2,
                             title3,
+                            title1Style,
+                            title2Style,
                             title3Style,
                             icons,
-                            title1Style,
                             backgroundStyle}) => {
     const [accordeonStatus, setAccordeonStatus] = useState(false);
     // {background: 'left no-repeat url("../../../../img/mice/conference/1.jpg")'}
@@ -32,7 +33,7 @@ const MicePageBanner = ({subtitle,
                     <h2>{subtitle}</h2>
                     <h1>
                         <span style={title1Style}>{title1}</span>
-                        <span>{title2}</span>
+                        <span style={title2Style}>{title2}</span>
                         <span style={title3Style}>{title3}</span>
                         <div className={s.cirqleTipWrapper}>
                             <CirqleTip onClick={() => setAccordeonStatus(!accordeonStatus)} accordeonStatus={accordeonStatus}/>
@@ -52,12 +53,16 @@ const MicePageBanner = ({subtitle,
                 <div className={s.icons}>
                     {icons}
                 </div>
-                    <Button style={window.matchMedia("(max-width:767px)").matches ? {
-                        marginBottom: '15vh',
+                    <Button style={window.matchMedia("(min-width:426px) and (max-width:1201px)").matches ? {
                         maxWidth: "200px",
                         zIndex: "1",
-                        position: "relative"
-                    } : {maxWidth: "200px", zIndex: "1", position: "relative", marginTop: '15px',marginLeft:'50px',}}
+                        position: "relative",
+                        marginTop: '15px',
+                        marginLeft:'50px',
+                    } : {marginBottom: '15vh',
+                        maxWidth: "200px",
+                        zIndex: "1",
+                        position: "relative"}}
                             text={"Получить смету"}/>
             </div>
             </div>
