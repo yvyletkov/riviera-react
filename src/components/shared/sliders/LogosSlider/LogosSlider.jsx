@@ -1,5 +1,5 @@
 import s from "./LogosSlider.module.scss";
-import HeadlineCenter from "../HeadlineCenter/HeadlineCenter";
+import HeadlineCenter from "../../HeadlineCenter/HeadlineCenter";
 import Slider from "react-slick";
 import React from "react";
 import styled from "styled-components";
@@ -15,7 +15,7 @@ const LogosSlider = ({title, icons}) => {
 
     const settings = {
         infinite: false,
-        slidesToShow: `${icons.length}`,
+        slidesToShow: icons.length,
         arrows: false,
         responsive: [
             {

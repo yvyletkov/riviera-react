@@ -20,29 +20,43 @@ import ConferencesPage from "./components/pages/mice/ConferencesPage/Conferences
 import ForumPage from "./components/pages/mice/ForumPage/ForumPage";
 import BirthdayPage from "./components/pages/events/BirthdayPage/BirthdayPage";
 import HenPartyPage from "./components/pages/events/HenPartyPage/HenPartyPage";
+import EventTourismPage from "./components/pages/mice/EventTourismPage/EventTourismPage";
+import TrainingsPage from "./components/pages/mice/TraningsPage/TrainingsPage";
 
 function App() {
 
     return (<>
-            <Header/>
+                <Header/>
+                <Route path='/trainings' exact
+                       component={() => <TrainingsPage/>}/>
 
-            <Route path='/hen-party' exact
-                   component={() => <HenPartyPage/>}/>
 
-            <Route path='/birthday' exact
-                   component={() => <BirthdayPage/>}/>
+                <Route path='/hen-party' exact
+                       component={() => <HenPartyPage/>}/>
+ 
+                <Route path='/birthday' exact
+                       component={() => <BirthdayPage/>}/>
 
-            <Route path='/forum' exact
-                   component={() => <ForumPage/>}/>
+                <Route path='/event-tourism' exact
+                       component={() => <EventTourismPage/>}/>
 
-            <Route path='/visiting-ceremony' exact
-                   component={() => <VisitingCeremonyPage/>}/>
+                <Route path='/birthday' exact
+                       component={() => <BirthdayPage/>}/>
 
-            <Route path='/wedding' exact
-                   component={() => <WeddingPage/>}/>
+                <Route path='/forum' exact
+                       component={() => <ForumPage/>}/>
 
-            <Route path='/family-vacation' exact
-                   component={() => <FamilyVacationPage/>}/>
+                <Route path='/conference' exact
+                       component={() => <ConferencesPage/>}/>
+
+                <Route path='/visiting-ceremony' exact
+                       component={() => <VisitingCeremonyPage/>}/>
+
+                <Route path='/wedding' exact
+                       component={() => <WeddingPage/>}/>
+
+                <Route path='/family-vacation' exact
+                       component={() => <FamilyVacationPage/>}/>
 
             <Route path='/vacation-for-yourself' exact
                    component={() => <VacationForYourselfPage/>}/>
@@ -64,8 +78,6 @@ function App() {
 
             <Route path='/' exact
                    component={() => <HomePage/>}/>
-
-            <Route path='/conference' exact component={() => <ConferencesPage/>}/>
 
             <Footer/>
 

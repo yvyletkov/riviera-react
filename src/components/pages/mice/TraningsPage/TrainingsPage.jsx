@@ -5,7 +5,7 @@ import CenteredSlider from "../../../shared/sliders/CenteredSlider/CenteredSlide
 import {eventPagesData, micePagesData, roomsAndPricesPageData} from "../../../../data";
 import WidthSpecialsSlider from "../../../shared/sliders/WidthSpecialsSlider/WidthSpecialsSlider";
 import RoomsSlider from "../../../shared/sliders/RoomsSlider/RoomsSlider";
-import s from "./ConferencesPage.module.scss";
+import s from "./TrainingsPage.module.scss";
 import imgAbout1 from '../../../../img/mice/conference/11.jpg'
 import imgAbout2 from '../../../../img/mice/conference/12.jpg'
 import Headline from "../../../shared/Headline/Headline";
@@ -15,13 +15,13 @@ import CirqleTip from "../../../shared/CirqleTip/CirqleTip";
 import Accordeon from "../../../shared/Accordeon/Accordeon";
 import Slider from "react-slick";
 import BlackBlock from "../../../shared/BlackBlock/BlackBlock";
-import decisionBlockImg from "../../../../img/mice/conference/14.jpg";
+import decisionBlockImg from "../../../../img/mice/forum/2.jpg";
 import MapSection from "../../../shared/MapSection/MapSection";
 import AdvantagesBlock from "../../../shared/AdvantagesBlock/AdvantagesBlock";
 import LogosSlider from "../../../shared/sliders/LogosSlider/LogosSlider";
-import imageBackground from "../../../../img/mice/conference/1.jpg";
+import imageBackground from "../../../../img/mice/tranings/1.jpg";
 
-const ConferencesPage = () => {
+const TrainingsPage = () => {
     let [accordeonStatus, setAccordeonStatus] = React.useState(false);
 
     const settings = {
@@ -41,9 +41,10 @@ const ConferencesPage = () => {
 
     return (
         <>
-            <MicePageBanner subtitle={'Идеальная организация'}
-                            title1={'Вашей'}
-                            title2={'Конференции'}
+            <MicePageBanner subtitle={'Лучшая площадка'}
+                            title1={''}
+                            title1Style={window.matchMedia('(max-width: 500px)').matches ? {} : {fontSize: '90px'}}
+                            title2={'Для тренинга'}
                             title3={'В крыму'}
                             icons={micePagesData.conferenceIconsBanner}
                             background={imageBackground}/>
@@ -70,7 +71,7 @@ const ConferencesPage = () => {
                              textContent={roomsAndPricesPageData.classicDescr} data={roomsAndPricesPageData.classicSlides}/>
             </section>
             <section className='section'>
-                <div className={s.conferencesAboutBlock}>
+                <div className={s.forumAboutBlock}>
                     <div className={s.wrapper}>
                         <div className={s.container}>
                             <img className={s.leftImg} src={imgAbout1} alt=""/>
@@ -93,7 +94,7 @@ const ConferencesPage = () => {
                 </div>
             </section>
             <section className="section">
-                <LogosSlider title={"С кем мы сотрудничали"} icons={micePagesData.conferenceIcons}/>
+                <LogosSlider title={"С кем мы сотрудничали"} icons={micePagesData.forumIcons}/>
             </section>
             <section className="section">
                 <SpecialsSlider title={"Услуги"}
@@ -104,7 +105,7 @@ const ConferencesPage = () => {
                 />
             </section>
             <section className='section'>
-                <div className={s.conferencesPlacesBlock}>
+                <div className={s.forumPlacesBlock}>
                     <div className={s.wrapper}>
                         <div className={s.container}>
                             <div className={s.topRow}>
@@ -156,7 +157,7 @@ const ConferencesPage = () => {
             }
 
             <section className='section'>
-                <div className={s.conferencesDecisionBlock}>
+                <div className={s.forumDecisionBlock}>
                     <div className={s.wrapper}>
                         <div className={s.grid}>
                             <div className={s.imageBlock}>
@@ -190,4 +191,4 @@ const ConferencesPage = () => {
     )
 }
 
-export default ConferencesPage;
+export default TrainingsPage;
