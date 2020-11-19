@@ -84,7 +84,15 @@
       color: #080808 !important;
     }
     h2:after {
-      background: #080808;
+      background: #080808 !important;
+    }
+    @media (max-width: 620px) {
+      h2, h1 {
+        color: #fff !important;
+      }
+      h2:after {
+        background: #fff !important;
+      }
     }
   }
 

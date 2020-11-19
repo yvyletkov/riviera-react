@@ -37,7 +37,7 @@ const BirthdayPage = () => {
         {/* Ваша семья начинается здесь */}
 
         <section className='section first'>
-            <CenteredSlider title={'Организация под Ваши пожелания'} slides={eventPagesData.birthdayPage.centeredSlides}/>
+            <CenteredSlider title={'Организация под Ваши пожелания'} slides={eventPagesData.birthdayPage.centeredSlides} type={2}/>
         </section>
 
 
