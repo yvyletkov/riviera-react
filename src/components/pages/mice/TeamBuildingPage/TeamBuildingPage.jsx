@@ -41,27 +41,33 @@ const TeamBuildingPage = () => {
 
     return (
         <>
-            <MicePageBanner subtitle={'Организация'}
-                            title1={'Корпоративного'}
-                            title1Style={{fontSize: window.matchMedia('(max-width: 500px)').matches ? '8.7vw' : '50px'}}
-                            title2={'Мероприятия'}
-                            title2Style={{fontSize: window.matchMedia('(max-width: 500px)').matches ? '8.7vw' : '50px'}}
-                            title3={'В крыму'}
-                            title3Style={{marginTop:'10px'}}
-                            icons={micePagesData.conferenceIconsBanner}
-                            backgroundStyle={{backgroundImage:`url(${imageBanner})`,
-                                backgroundPosition:window.matchMedia('(max-width: 500px)').matches ? '-190px' : '0'}} />
+            <MicePageBanner subtitle={'Незабываемый'}
+                            title1={'Тимбилдинг'}
+                            title1Style={{fontSize: window.matchMedia('(max-width: 500px)').matches ? '8.7vw' : '60px'}}
+                            title2={''}
+                            title3Style={{
+                                fontSize: window.matchMedia('(max-width: 500px)').matches ? '5.7vw' : '40px',
+                                marginTop: '10px'
+                            }}
+                            title3={'Для вашей команды'}
+                            styleCirqleTip={{left: '68vw'}}
+                            icons={micePagesData.teamBuildingIconsBanner}
+                            backgroundStyle={{
+                                backgroundImage: `url(${imageBanner})`,
+                                backgroundPosition: window.matchMedia('(max-width: 500px)').matches ? '-65px' : '0'
+                            }}/>
             {window.matchMedia('(min-width:769px)').matches &&
             <section className="section">
                 <TextBlock style={{marginTop: '-100px'}}/>
             </section>
             }
             <section className={window.matchMedia('(max-width: 768px)').matches ? 'section first' : 'section'}
-                     style={window.matchMedia('(min-width: 768px)').matches ? {marginBottom:'30px'} : {}}>
-                <AdvantagesBlock title={'Какие мероприятия мы организуем'} icons={micePagesData.conferenceIconsAdvantages}/>
+                     style={window.matchMedia('(min-width: 768px)').matches ? {marginBottom: '30px'} : {}}>
+                <AdvantagesBlock title={'Какие мероприятия мы организуем'}
+                                 icons={micePagesData.conferenceIconsAdvantages}/>
             </section>
             <section className="section">
-                <CenteredSlider slides={micePagesData.centeredSlides} title={"Что мы берем на себя"} type={2} />
+                <CenteredSlider slides={micePagesData.centeredSlides} title={"Что мы берем на себя"} type={2}/>
             </section>
             <section className="section">
                 <WidthSpecialsSlider slides={micePagesData.widthSpecialsSlider} title={"Наши залы"}/>
@@ -71,24 +77,29 @@ const TeamBuildingPage = () => {
                              data={roomsAndPricesPageData.modernSlides}/>
 
                 <RoomsSlider lastOfTwo={true} subtitle={'Корпус'} title={'Классик'}
-                             textContent={roomsAndPricesPageData.classicDescr} data={roomsAndPricesPageData.classicSlides}/>
+                             textContent={roomsAndPricesPageData.classicDescr}
+                             data={roomsAndPricesPageData.classicSlides}/>
             </section>
             <section className='section'>
-                <div className={s.forumAboutBlock}>
+                <div className={s.teamBuildingAboutBlock}>
                     <div className={s.wrapper}>
                         <div className={s.container}>
                             <img className={s.leftImg} src={imgAbout1} alt=""/>
-                            <img className={s.rightImg} src={imgAbout2} alt=""/>
                             <div className={s.textContent}>
-                                <Headline subtitle={'Ваша задача'} title={'Особенная?'}/>
-                                <p className={s.boldTitle}>Справимся и с ней!</p>
-                                <p>Запишитесь на 20-минутную консультацию с нашим организатором мероприятий.</p>
-                                <ul>
-                                    <li>бриф на 3 вопроса</li>
-                                    <li>легкое общение без сложных терминов</li>
-                                    <li>прозрачная смета</li>
-                                </ul>
-                                <p className={s.boldSubtitle}>Поддержим все ваши идеи и расскажем, как их реализовать несколькими способами, учитывая ваш бюджет!</p>
+                                <div className={s.paddingContainer}>
+                                    <Headline subtitle={'Ваша задача'} title={'Особенная?'}/>
+                                    <p className={s.boldTitle}>Справимся и с ней!</p>
+                                    <p>Запишитесь на 20-минутную консультацию с нашим организатором мероприятий.</p>
+                                    <ul>
+                                        <li>бриф на 3 вопроса</li>
+                                        <li>легкое общение без сложных терминов</li>
+                                        <li>прозрачная смета</li>
+                                    </ul>
+                                    <p className={s.boldSubtitle}>Поддержим все ваши идеи и расскажем, как их
+                                        реализовать несколькими способами, учитывая ваш бюджет!</p>
+                                    <img className={s.rightImg} src={imgAbout2} alt=""/>
+                                </div>
+
                                 <Button text={"Оставить заявку"}
                                         style={!window.matchMedia("(max-width: 768px").matches ? {width: "230px"} : {}}/>
                             </div>
@@ -108,7 +119,7 @@ const TeamBuildingPage = () => {
                 />
             </section>
             <section className='section'>
-                <div className={s.forumPlacesBlock}>
+                <div className={s.teamBuildingPlacesBlock}>
                     <div className={s.wrapper}>
                         <div className={s.container}>
                             <div className={s.topRow}>
@@ -155,12 +166,12 @@ const TeamBuildingPage = () => {
 
             {window.matchMedia('(max-width:768px)').matches &&
             <section className="section">
-                <TextBlock />
+                <TextBlock/>
             </section>
             }
 
             <section className='section'>
-                <div className={s.forumDecisionBlock}>
+                <div className={s.teamBuildingDecisionBlock}>
                     <div className={s.wrapper}>
                         <div className={s.grid}>
                             <div className={s.imageBlock}>
@@ -169,7 +180,8 @@ const TeamBuildingPage = () => {
                             <div className={s.textBlock}>
                                 <div className={s.textContent}>
                                     <Headline subtitle={'Хотите посоветоваться'} title={'С коллегами?'}/>
-                                    <p>Для предметного обсуждения мы подготовили каталог со всеми нашими залами и возможностями для вашего мероприятия.</p>
+                                    <p>Для предметного обсуждения мы подготовили каталог со всеми нашими залами и
+                                        возможностями для вашего мероприятия.</p>
                                     <p>Подберите идеальное сочетание услуг!</p>
                                     <form className={'form'}>
                                         <input className={'formInput'} placeholder={'Введите Ваше имя'} type="text"/>
@@ -188,7 +200,7 @@ const TeamBuildingPage = () => {
             </section>
 
             <section className="section">
-                <MapSection />
+                <MapSection/>
             </section>
         </>
     )

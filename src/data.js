@@ -134,6 +134,8 @@ import iconBeach from "./img/events/hen-party/icon2.png";
 import iconGirlDrink from "./img/events/hen-party/drinks.png";
 import iconClearHand from "./img/events/hen-party/clearhand.png";
 import iconList from "./img/events/hen-party/list.png";
+import iconProgramms from "./img/mice/team-building/icons/1.png";
+import iconSPA from "./img/mice/team-building/icons/2.png";
 
 //страницы майса
 export  const micePagesData = {
@@ -272,9 +274,9 @@ export  const micePagesData = {
         {img: iconExcursions, text: 'Экскурсии и тимбилдинги', key:3, desc:"Экскурсии"},
         {img: iconResidence, text: 'Предложение на проживание в отеле', key:4, desc:"Проживание"},
     ],
-    TeamBuildingIconsBanner: [
-        {img: iconHalls, text: 'Разные программы тимбилдинга', key:1, desc:"9 залов"},
-        {img: iconЕquipment, text: 'SPA-комплекс THE SHORE SPA 2000 м2', key:2, desc:"Оборудование"},
+    teamBuildingIconsBanner: [
+        {img: iconProgramms, text: 'Разные программы тимбилдинга', key:1, desc:"Программы тимбилдинга"},
+        {img: iconSPA, text: 'SPA-комплекс THE SHORE SPA', key:2, desc:"SPA"},
         {img: iconExcursions, text: 'Экскурсии и тимбилдинги', key:3, desc:"Экскурсии"},
         {img: iconResidence, text: 'Предложение на проживание в отеле', key:4, desc:"Проживание"},
     ]
