@@ -23,6 +23,7 @@
         width: 660px;
         position: absolute;
         left: -360px;
+        top: 0;
       }
 
       &.rightImg {
@@ -33,8 +34,8 @@
 
       &.menuPriceImg {
         position: absolute;
-        left: -65px;
-        top: -80px;
+        left: 610px;
+        top: 30px;
         box-shadow: none;
         @media (max-width: 768px) {
           display: none;
@@ -44,7 +45,6 @@
 
     .textContent {
       padding: 0 20px 0 80px;
-      position: relative;
 
       p {
         margin-top: 30px;
@@ -57,6 +57,7 @@
     @media (max-width: 1200px) {
       .textContent {
         padding: 0 20px;
+        overflow: hidden;
       }
 
       img {
@@ -85,11 +86,20 @@
         &.leftImg {
           border-radius: 0;
           height: calc(100vw * 0.87);
-          width: 100vw;
+          width: calc(100% + 40px);
+          margin-left: -20px;
         }
       }
-      .textContent p {
-        margin: 20px 0;
+      .textContent {
+        margin-bottom: 0;
+
+        p {
+          margin: 20px 0;
+          &:last-of-type {
+            text-align: center;
+          }
+        }
+
       }
     }
 

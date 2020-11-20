@@ -1,10 +1,10 @@
 import React from "react";
-import s from "./HenPartyPage.module.scss";
+import s from "./BachelorPartyPage.module.scss";
 import {eventPagesData} from "../../../../data";
 import decisionBlockImg from "../../../../img/events/wedding/decision.jpg";
-import bannerImg from "../../../../img/events/hen-party/hen-party-banner.jpg";
-import bannerImgMobile from "../../../../img/events/hen-party/hen-party-banner.jpg";
-import textImgBlockImg from "../../../../img/events/hen-party/girls.jpg";
+import bannerImg from "../../../../img/events/bachelor-party/banner.jpg";
+import bannerImgMobile from "../../../../img/events/bachelor-party/banner.jpg";
+import textImgBlockImg from "../../../../img/events/bachelor-party/guys.jpg";
 import kitchenImg from "../../../../img/events/birthday/kitchen.jpg";
 
 import EventPageBanner from "../EventPageBanner/EventPageBanner";
@@ -17,30 +17,29 @@ import AdvantagesBlock from "../../../shared/AdvantagesBlock/AdvantagesBlock";
 import KitchenBlock from "../../../shared/KitchenBlock/KitchenBlock";
 import EventTextImgBlock from "../../../shared/EventTextImgBlock/EventTextImgBlock";
 
-const HenPartyPage = () => {
+const BachelorPartyPage = () => {
 
     return <>
 
-        <EventPageBanner fontSize={['46px', '79px', '55px']} mobileFontSize={['8.7vw', '14.3vw', '8.2vw']}
-                         titles={['Организуем вам', 'атмосферный', 'девичник', 'в Крыму']}
-                         icons={eventPagesData.henPartyPage.henPartyBannerIcons} bannerImg={bannerImg}
+        <EventPageBanner fontSize={['46px', '61px', '55px']} mobileFontSize={['8.7vw', '11vw', '8.2vw']}
+                         titles={['Организуем вам', 'настоящий', 'мальчишник', 'в Крыму']}
+                         icons={eventPagesData.bachelorParty.bachelorPartyBannerIcons} bannerImg={bannerImg}
                          bannerImgMobile={bannerImgMobile}
                          blackFont={true}/>
 
         {/* Идеальное место для проведения */}
 
         <section className='section first'>
-            <AdvantagesBlock title={'Идеальное место для проведения'} icons={eventPagesData.henPartyPage.henPartyIcons}/>
+            <AdvantagesBlock title={'Идеальное место для проведения'} icons={eventPagesData.bachelorParty.bachelorPartyIcons}/>
         </section>
 
         {/* Для Вас душевная атмосфера */}
 
         <section className='section'>
             <EventTextImgBlock subtitle='Для Вас' title='душевная атмосфера' img={textImgBlockImg}
-                               text={'Для того, чтобы прочувствовать свадьбу по-настоящему, обязательно нужно провести с подругами незабываемый душевный девичник!\n' +
-                               'Дружеская атмосфера, смех, приятные расслабляющие процедуры, зажигательная фотосессия и душевные вечерние посиделки создадут правильный настрой на важный день, помогут справиться со стрессом и почувствовать поддержку!\n' +
-                               'В нашем отеле есть всё для того, чтобы получить духовное и эстетическое удовольствие, окружить себя комфортом и любовью близких!\n'}
+                               text={'Накануне свадебного торжества хочется вспомнить всё самое веселое и яркое, что случалось! И с кем это еще сделать, как не с верными друзьями, которые были рядом на протяжении многих лет?<br/>Мальчишник - это праздник дружбы, возможность отметить важный переход в жизни в окружении самых близких по духу людей!<br/>В нашем SPA-отеле вы сможете провести мальчишник насыщенно, весело и безопасно.'}
                                forWedding={false}
+                               wideImg={true}
                                listArray={[]}/>
 
         </section>
@@ -71,7 +70,7 @@ const HenPartyPage = () => {
         {/* Вам предстоит легкое решение */}
 
         <section className='section'>
-            <div className={s.henPartyDecisionBlock}>
+            <div className={s.bachelorPartyDecisionBlock}>
                 <div className={s.wrapper}>
                     <div className={s.grid}>
 
@@ -85,7 +84,7 @@ const HenPartyPage = () => {
 
                                 <p>
                                     Лучше принимать его, владея полной информацией. Получите на свою почту все
-                                    необходимые материалы для принятия решения о проведении девичника в нашем отеле.
+                                    необходимые материалы для принятия решения о проведении мальчишника в нашем отеле.
                                 </p>
 
                                 <form className={'form'}>
@@ -112,4 +111,4 @@ const HenPartyPage = () => {
 
 };
 
-export default HenPartyPage;
+export default BachelorPartyPage;

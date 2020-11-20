@@ -25,7 +25,7 @@ const WeddingPage = () => {
 
     return <>
 
-        <EventPageBanner fontSize={['68px', '82px', '52px']} mobileFontSize={['9.7vw', '12.3vw', '6.2vw']}
+        <EventPageBanner fontSize={['68px', '82px', '52px']} mobileFontSize={['9.7vw', '12.3vw', '8.2vw']}
                          titles={['Выездная', 'свадебная', 'церемония', 'в Крыму']}
                          icons={eventPagesData.weddingPages.weddingCeremonyBannerIcons} bannerImg={bannerImg} bannerImgMobile={bannerImg}/>
 
