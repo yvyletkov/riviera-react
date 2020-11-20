@@ -5,7 +5,7 @@ import CenteredSlider from "../../../shared/sliders/CenteredSlider/CenteredSlide
 import {eventPagesData, micePagesData, roomsAndPricesPageData} from "../../../../data";
 import WidthSpecialsSlider from "../../../shared/sliders/WidthSpecialsSlider/WidthSpecialsSlider";
 import RoomsSlider from "../../../shared/sliders/RoomsSlider/RoomsSlider";
-import s from "./IntensivePage.module.scss";
+import s from "./TeamBuildingPage.module.scss";
 import imgAbout1 from '../../../../img/mice/conference/11.jpg'
 import imgAbout2 from '../../../../img/mice/conference/12.jpg'
 import Headline from "../../../shared/Headline/Headline";
@@ -19,9 +19,9 @@ import decisionBlockImg from "../../../../img/mice/forum/2.jpg";
 import MapSection from "../../../shared/MapSection/MapSection";
 import AdvantagesBlock from "../../../shared/AdvantagesBlock/AdvantagesBlock";
 import LogosSlider from "../../../shared/sliders/LogosSlider/LogosSlider";
-import imageBanner from "../../../../img/mice/intensive/1.jpg";
+import imageBanner from "../../../../img/mice/team-building/1.jpg";
 
-const IntensivePage = () => {
+const TeamBuildingPage = () => {
     let [accordeonStatus, setAccordeonStatus] = React.useState(false);
 
     const settings = {
@@ -194,4 +194,4 @@ const IntensivePage = () => {
     )
 }
 
-export default IntensivePage;
+export default TeamBuildingPage;

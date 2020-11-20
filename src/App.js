@@ -23,11 +23,15 @@ import HenPartyPage from "./components/pages/events/HenPartyPage/HenPartyPage";
 import EventTourismPage from "./components/pages/mice/EventTourismPage/EventTourismPage";
 import TrainingsPage from "./components/pages/mice/TraningsPage/TrainingsPage";
 import IntensivePage from "./components/pages/mice/IntensivePage/IntensivePage";
+import TeamBuildingPage from "./components/pages/mice/TeamBuildingPage/TeamBuildingPage";
 
 function App() {
 
     return (<>
                 <Header/>
+                <Route path='/team-building' exact
+                   component={() => <TeamBuildingPage/>}/>
+
                 <Route path='/intensive' exact
                    component={() => <IntensivePage/>}/>
 

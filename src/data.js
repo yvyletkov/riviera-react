@@ -254,6 +254,12 @@ export  const micePagesData = {
         {img: iconЕquipment, text: 'Оборудование для выступлений', key:2, desc:"Оборудование"},
         {img: iconExcursions, text: 'Экскурсии и тимбилдинги', key:3, desc:"Экскурсии"},
         {img: iconResidence, text: 'Предложение на проживание в отеле', key:4, desc:"Проживание"},
+    ],
+    TeamBuildingIconsBanner: [
+        {img: iconHalls, text: 'Разные программы тимбилдинга', key:1, desc:"9 залов"},
+        {img: iconЕquipment, text: 'SPA-комплекс THE SHORE SPA 2000 м2', key:2, desc:"Оборудование"},
+        {img: iconExcursions, text: 'Экскурсии и тимбилдинги', key:3, desc:"Экскурсии"},
+        {img: iconResidence, text: 'Предложение на проживание в отеле', key:4, desc:"Проживание"},
     ]
 
 }
