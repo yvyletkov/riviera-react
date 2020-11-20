@@ -137,7 +137,8 @@ import iconList from "./img/events/hen-party/list.png";
 import iconMassage from "./img/events/bachelor-party/handsIcon.png";
 import iconDrinks from "./img/events/bachelor-party/drinkIcon.png";
 import iconSauna from "./img/events/bachelor-party/saunaIcon.png";
-
+import iconPrograms from "./img/mice/team-building/icons/1.png";
+import iconSPA from "./img/mice/team-building/icons/2.png";
 
 //страницы майса
 export const micePagesData = {
@@ -276,13 +277,12 @@ export const micePagesData = {
         {img: iconExcursions, text: 'Экскурсии и тимбилдинги', key: 3, desc: "Экскурсии"},
         {img: iconResidence, text: 'Предложение на проживание в отеле', key: 4, desc: "Проживание"},
     ],
-    TeamBuildingIconsBanner: [
-        {img: iconHalls, text: 'Разные программы тимбилдинга', key: 1, desc: "9 залов"},
-        {img: iconEquipment, text: 'SPA-комплекс THE SHORE SPA 2000 м2', key: 2, desc: "Оборудование"},
-        {img: iconExcursions, text: 'Экскурсии и тимбилдинги', key: 3, desc: "Экскурсии"},
-        {img: iconResidence, text: 'Предложение на проживание в отеле', key: 4, desc: "Проживание"},
+    teamBuildingIconsBanner: [
+        {img: iconPrograms, text: 'Разные программы тимбилдинга', key:1, desc:"Программы тимбилдинга"},
+        {img: iconSPA, text: 'SPA-комплекс THE SHORE SPA', key:2, desc:"SPA"},
+        {img: iconExcursions, text: 'Экскурсии и тимбилдинги', key:3, desc:"Экскурсии"},
+        {img: iconResidence, text: 'Предложение на проживание в отеле', key:4, desc:"Проживание"},
     ]
-    
 }
 
 const commonSpecialsSlides = [
