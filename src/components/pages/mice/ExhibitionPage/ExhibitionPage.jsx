@@ -5,7 +5,7 @@ import CenteredSlider from "../../../shared/sliders/CenteredSlider/CenteredSlide
 import {eventPagesData, micePagesData, roomsAndPricesPageData} from "../../../../data";
 import WidthSpecialsSlider from "../../../shared/sliders/WidthSpecialsSlider/WidthSpecialsSlider";
 import RoomsSlider from "../../../shared/sliders/RoomsSlider/RoomsSlider";
-import s from "./ConferencesPage.module.scss";
+import s from "./ExhibitionPage.module.scss";
 import Headline from "../../../shared/Headline/Headline";
 import Button from "../../../shared/Button/Button";
 import SpecialsSlider from "../../../shared/sliders/SpecialsSlider/SpecialsSlider";
@@ -13,14 +13,14 @@ import CirqleTip from "../../../shared/CirqleTip/CirqleTip";
 import Accordeon from "../../../shared/Accordeon/Accordeon";
 import Slider from "react-slick";
 import BlackBlock from "../../../shared/BlackBlock/BlackBlock";
-import decisionBlockImg from "../../../../img/mice/conference/14.jpg";
+import decisionBlockImg from "../../../../img/mice/forum/2.jpg";
 import MapSection from "../../../shared/MapSection/MapSection";
 import AdvantagesBlock from "../../../shared/AdvantagesBlock/AdvantagesBlock";
 import LogosSlider from "../../../shared/sliders/LogosSlider/LogosSlider";
-import imageBanner from "../../../../img/mice/conference/1.jpg";
+import imageBanner from "../../../../img/mice/exhibition/1.jpg";
 import SpecialTask from "../../../shared/SpecialTask/SpecialTask";
 
-const ConferencesPage = () => {
+const ExhibitionPage = () => {
     let [accordeonStatus, setAccordeonStatus] = React.useState(false);
 
     const settings = {
@@ -40,25 +40,33 @@ const ConferencesPage = () => {
 
     return (
         <>
-            <MicePageBanner subtitle={'Идеальная организация'}
-                            title1={'Вашей'}
-                            title2={'Конференции'}
-                            title3={'В крыму'}
-                            icons={micePagesData.conferenceIconsBanner}
+            <MicePageBanner subtitle={'Площадка для'}
+                            title1={'Выставки'}
+                            title1Style={{fontSize: window.matchMedia('(max-width: 500px)').matches ? '8.7vw' : '70px'}}
+                            title2={''}
+                            title3Style={{
+                                fontSize: window.matchMedia('(max-width: 500px)').matches ? '5.7vw' : '50px',
+                                marginTop: '10px'
+                            }}
+                            title3={'В Riviera Sunrise'}
+                            styleCirqleTip={{left: '55vw', bottom:0}}
+                            icons={micePagesData.exhibitionIconsBanner}
                             backgroundStyle={{
-                                backgroundImage:`url(${imageBanner})`,
-                                backgroundPosition: window.matchMedia('(max-width: 500px)').matches ? '-190px' : '0'}}/>
+                                backgroundImage: `url(${imageBanner})`,
+                                backgroundPosition: window.matchMedia('(max-width: 1200px)').matches ? '0' : '-190px'
+                            }}/>
             {window.matchMedia('(min-width:769px)').matches &&
             <section className="section">
                 <TextBlock style={{marginTop: '-100px'}}/>
             </section>
             }
             <section className={window.matchMedia('(max-width: 768px)').matches ? 'section first' : 'section'}
-                     style={window.matchMedia('(min-width: 768px)').matches ? {marginBottom:'30px'} : {}}>
-                <AdvantagesBlock title={'Какие мероприятия мы организуем'} icons={micePagesData.conferenceIconsAdvantages}/>
+                     style={window.matchMedia('(min-width: 768px)').matches ? {marginBottom: '30px'} : {}}>
+                <AdvantagesBlock title={'Какие мероприятия мы организуем'}
+                                 icons={micePagesData.conferenceIconsAdvantages}/>
             </section>
             <section className="section">
-                <CenteredSlider slides={micePagesData.centeredSlides} title={"Что мы берем на себя"} type={2} />
+                <CenteredSlider slides={micePagesData.centeredSlides} title={"Что мы берем на себя"} type={2}/>
             </section>
             <section className="section">
                 <WidthSpecialsSlider slides={micePagesData.widthSpecialsSlider} title={"Наши залы"}/>
@@ -68,13 +76,14 @@ const ConferencesPage = () => {
                              data={roomsAndPricesPageData.modernSlides}/>
 
                 <RoomsSlider lastOfTwo={true} subtitle={'Корпус'} title={'Классик'}
-                             textContent={roomsAndPricesPageData.classicDescr} data={roomsAndPricesPageData.classicSlides}/>
+                             textContent={roomsAndPricesPageData.classicDescr}
+                             data={roomsAndPricesPageData.classicSlides}/>
             </section>
             <section className='section'>
                 <SpecialTask />
             </section>
             <section className="section">
-                <LogosSlider title={"С кем мы сотрудничали"} icons={micePagesData.conferenceIcons}/>
+                <LogosSlider title={"С кем мы сотрудничали"} icons={micePagesData.forumIcons}/>
             </section>
             <section className="section">
                 <SpecialsSlider title={"Услуги"}
@@ -85,7 +94,7 @@ const ConferencesPage = () => {
                 />
             </section>
             <section className='section'>
-                <div className={s.conferencesPlacesBlock}>
+                <div className={s.teamBuildingPlacesBlock}>
                     <div className={s.wrapper}>
                         <div className={s.container}>
                             <div className={s.topRow}>
@@ -132,12 +141,12 @@ const ConferencesPage = () => {
 
             {window.matchMedia('(max-width:768px)').matches &&
             <section className="section">
-                <TextBlock />
+                <TextBlock/>
             </section>
             }
 
             <section className='section'>
-                <div className={s.conferencesDecisionBlock}>
+                <div className={s.teamBuildingDecisionBlock}>
                     <div className={s.wrapper}>
                         <div className={s.grid}>
                             <div className={s.imageBlock}>
@@ -146,7 +155,8 @@ const ConferencesPage = () => {
                             <div className={s.textBlock}>
                                 <div className={s.textContent}>
                                     <Headline subtitle={'Хотите посоветоваться'} title={'С коллегами?'}/>
-                                    <p>Для предметного обсуждения мы подготовили каталог со всеми нашими залами и возможностями для вашего мероприятия.</p>
+                                    <p>Для предметного обсуждения мы подготовили каталог со всеми нашими залами и
+                                        возможностями для вашего мероприятия.</p>
                                     <p>Подберите идеальное сочетание услуг!</p>
                                     <form className={'form'}>
                                         <input className={'formInput'} placeholder={'Введите Ваше имя'} type="text"/>
@@ -165,10 +175,10 @@ const ConferencesPage = () => {
             </section>
 
             <section className="section">
-                <MapSection />
+                <MapSection/>
             </section>
         </>
     )
 }
 
-export default ConferencesPage;
+export default ExhibitionPage;

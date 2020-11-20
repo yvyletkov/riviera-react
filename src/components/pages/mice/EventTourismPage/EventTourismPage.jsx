@@ -10,7 +10,7 @@ import Button from "../../../shared/Button/Button";
 import SpecialsSlider from "../../../shared/sliders/SpecialsSlider/SpecialsSlider";
 import decisionBlockImg from "../../../../img/mice/conference/14.jpg";
 import MapSection from "../../../shared/MapSection/MapSection";
-import imageBanner from "../../../../img/mice/event-tourism/2.jpg"
+import imageBanner from "../../../../img/mice/event-tourism/2.jpg";
 
 
 const EventTourismPage = () => {
@@ -19,7 +19,7 @@ const EventTourismPage = () => {
         <>
             <MicePageBanner subtitle={'Мероприятия'}
                             title1={'Размещение участников'}
-                            title1Style={{fontSize:'30px', marginBottom:'5px'}}
+                            title1Style={{fontSize:'30px', margin:'25px 0 10px'}}
                             title2={'Форума'}
                             title3={'Созвездия'}
                             title3Style={{fontSize:'32px', backgroundColor:"#ffbb28", padding:'5px 10px'}}
@@ -33,8 +33,19 @@ const EventTourismPage = () => {
                 <RoomsSlider lastOfTwo={true} subtitle={'Корпус'} title={'Классик'}
                              textContent={roomsAndPricesPageData.classicDescr} data={roomsAndPricesPageData.classicSlides}/>
             </section>
-            <section className="section" style={window.matchMedia('(min-width: 768px)').matches ? {marginBottom:'30px'} : {}}>
+            <section className="section">
                 <WidthSpecialsSlider slides={micePagesData.widthSpecialsSlider} title={"Для деловых встреч"}/>
+            </section>
+            <section className="section">
+                <div className={s.wrapper}>
+                    <div className={s.container}>
+                        <div className={s.content}>
+                            <Headline subtitle={'Изысканные'} title={'Блюда'}/>
+                            <p className={s.text}>Русская и Черноморская кухня, мясные и рыбные деликатесы, опции для вегетарианцев и приверженцев здорового питания, нежные десерты – любой найдет как привычную для себя кухню, так и сможет порадовать себя чем-то новым.</p>
+                            <p className={s.hashtag}>#соберёмланчбокс</p>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section className="section">
                 <TextBlock/>

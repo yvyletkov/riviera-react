@@ -1,0 +1,130 @@
+.wrapper {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+
+  .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    height: 500px;
+
+    img {
+      object-fit: cover;
+      border-radius: 5px;
+      box-shadow: -14.444px 19.167px 27px 0px rgba(23, 23, 23, 0.08);
+
+      &.leftImg {
+        height: 500px;
+        width: 660px;
+        position: absolute;
+        left: -360px;
+        top: 0;
+      }
+
+      &.rightImg {
+        margin-left: 310px;
+        height: 500px;
+        width: 350px;
+      }
+
+      &.menuPriceImg {
+        position: absolute;
+        left: 610px;
+        top: 30px;
+        box-shadow: none;
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+    }
+
+    .textContent {
+      padding: 0 20px 0 80px;
+
+      .boldTitle {
+        font-family: "Helvetica Neue Bold";
+        margin:30px 0;
+        text-align: justify;
+      }
+
+      ul {
+        font-family: "Helvetica Neue Light";
+        list-style: none;
+        padding: 0;
+
+        li:before {
+          content:'\2714';
+          color:#ff6c39;
+          padding-right: 10px;
+        }
+      }
+
+      .boldSubtitle {
+        font-family: "Helvetica Neue Light";
+        margin-bottom: 30px;
+      }
+
+    }
+
+    @media (max-width: 1200px) {
+      .textContent {
+        padding: 0 20px;
+        overflow: hidden;
+      }
+
+      img {
+        &.leftImg {
+          width: 100%;
+          max-height:200px;
+          position: relative;
+          left: unset;
+          object-position: 0 -65px;
+        }
+
+        &.rightImg {
+          display: none;
+        }
+      }
+
+      .textContent {
+        margin-bottom: 40px;
+        margin:0 auto;
+      }
+
+    }
+
+    @media (max-width: 670px) {
+      flex-direction: column-reverse;
+      height: unset;
+      img {
+        &.leftImg {
+          border-radius: 0;
+          height: calc(100vw * 0.87);
+          width: calc(100% + 40px);
+          margin-left: -20px;
+          object-position: 0;
+          max-height: unset;
+        }
+      }
+      .textContent {
+        margin-bottom: 0;
+
+        p {
+          margin: 20px 0;
+          text-align: justify;
+
+          &:last-of-type {
+            text-align: justify;
+          }
+        }
+
+      }
+    }
+
+  }
+}

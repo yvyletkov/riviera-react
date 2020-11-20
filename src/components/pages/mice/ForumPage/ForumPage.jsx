@@ -6,8 +6,6 @@ import {eventPagesData, micePagesData, roomsAndPricesPageData} from "../../../..
 import WidthSpecialsSlider from "../../../shared/sliders/WidthSpecialsSlider/WidthSpecialsSlider";
 import RoomsSlider from "../../../shared/sliders/RoomsSlider/RoomsSlider";
 import s from "./ForumPage.module.scss";
-import imgAbout1 from '../../../../img/mice/conference/11.jpg'
-import imgAbout2 from '../../../../img/mice/conference/12.jpg'
 import Headline from "../../../shared/Headline/Headline";
 import Button from "../../../shared/Button/Button";
 import SpecialsSlider from "../../../shared/sliders/SpecialsSlider/SpecialsSlider";
@@ -20,6 +18,7 @@ import MapSection from "../../../shared/MapSection/MapSection";
 import AdvantagesBlock from "../../../shared/AdvantagesBlock/AdvantagesBlock";
 import LogosSlider from "../../../shared/sliders/LogosSlider/LogosSlider";
 import imageBanner from "../../../../img/mice/forum/1.jpg";
+import SpecialTask from "../../../shared/SpecialTask/SpecialTask";
 
 const ForumPage = () => {
     let [accordeonStatus, setAccordeonStatus] = React.useState(false);
@@ -73,27 +72,7 @@ const ForumPage = () => {
                              textContent={roomsAndPricesPageData.classicDescr} data={roomsAndPricesPageData.classicSlides}/>
             </section>
             <section className='section'>
-                <div className={s.forumAboutBlock}>
-                    <div className={s.wrapper}>
-                        <div className={s.container}>
-                            <img className={s.leftImg} src={imgAbout1} alt=""/>
-                            <img className={s.rightImg} src={imgAbout2} alt=""/>
-                            <div className={s.textContent}>
-                                <Headline subtitle={'Ваша задача'} title={'Особенная?'}/>
-                                <p className={s.boldTitle}>Справимся и с ней!</p>
-                                <p>Запишитесь на 20-минутную консультацию с нашим организатором мероприятий.</p>
-                                <ul>
-                                    <li>бриф на 3 вопроса</li>
-                                    <li>легкое общение без сложных терминов</li>
-                                    <li>прозрачная смета</li>
-                                </ul>
-                                <p className={s.boldSubtitle}>Поддержим все ваши идеи и расскажем, как их реализовать несколькими способами, учитывая ваш бюджет!</p>
-                                <Button text={"Оставить заявку"}
-                                        style={!window.matchMedia("(max-width: 768px").matches ? {width: "230px"} : {}}/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <SpecialTask />
             </section>
             <section className="section">
                 <LogosSlider title={"С кем мы сотрудничали"} icons={micePagesData.forumIcons}/>

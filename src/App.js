@@ -25,11 +25,15 @@ import TrainingsPage from "./components/pages/mice/TraningsPage/TrainingsPage";
 import IntensivePage from "./components/pages/mice/IntensivePage/IntensivePage";
 import TeamBuildingPage from "./components/pages/mice/TeamBuildingPage/TeamBuildingPage";
 import BachelorPartyPage from "./components/pages/events/BachelorPartyPage/BachelorPartyPage";
+import ExhibitionPage from "./components/pages/mice/ExhibitionPage/ExhibitionPage";
 
 function App() {
 
     return (<>
                 <Header/>
+                <Route path='/exhibition' exact
+                   component={() => <ExhibitionPage/>}/>
+
                 <Route path='/team-building' exact
                    component={() => <TeamBuildingPage/>}/>
 

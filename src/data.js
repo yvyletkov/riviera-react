@@ -139,6 +139,9 @@ import iconDrinks from "./img/events/bachelor-party/drinkIcon.png";
 import iconSauna from "./img/events/bachelor-party/saunaIcon.png";
 import iconPrograms from "./img/mice/team-building/icons/1.png";
 import iconSPA from "./img/mice/team-building/icons/2.png";
+import iconExhibition from "./img/mice/exhibition/icons/1.png";
+import iconEscort from "./img/mice/exhibition/icons/2.png";
+import iconBonuses from "./img/mice/exhibition/icons/3.png";
 
 //страницы майса
 export const micePagesData = {
@@ -282,6 +285,11 @@ export const micePagesData = {
         {img: iconSPA, text: 'SPA-комплекс THE SHORE SPA', key:2, desc:"SPA"},
         {img: iconExcursions, text: 'Экскурсии и тимбилдинги', key:3, desc:"Экскурсии"},
         {img: iconResidence, text: 'Предложение на проживание в отеле', key:4, desc:"Проживание"},
+    ],
+    exhibitionIconsBanner: [
+        {img: iconExhibition, text: 'Выставочные пространства', key:1, desc:"Пространства"},
+        {img: iconEscort, text: 'Организационное сопровождение', key:2, desc:"Сопровождение"},
+        {img: iconBonuses, text: 'Бонусы для организаторов', key:3, desc:"Бонусы"},
     ]
 }
 
