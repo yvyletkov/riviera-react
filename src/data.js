@@ -273,13 +273,6 @@ export  const micePagesData = {
         {img: iconExcursions, text: 'Экскурсии и тимбилдинги', key:3, desc:"Экскурсии"},
         {img: iconResidence, text: 'Предложение на проживание в отеле', key:4, desc:"Проживание"},
     ],
-    teamBuildingIconsBanner: [
-        {img: iconProgramms, text: 'Разные программы тимбилдинга', key:1, desc:"Программы тимбилдинга"},
-        {img: iconSPA, text: 'SPA-комплекс THE SHORE SPA', key:2, desc:"SPA"},
-        {img: iconExcursions, text: 'Экскурсии и тимбилдинги', key:3, desc:"Экскурсии"},
-        {img: iconResidence, text: 'Предложение на проживание в отеле', key:4, desc:"Проживание"},
-    ]
-
 }
 
 const commonSpecialsSlides = [
