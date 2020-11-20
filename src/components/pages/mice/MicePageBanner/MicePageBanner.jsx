@@ -11,7 +11,8 @@ const MicePageBanner = ({subtitle,
                             title2Style,
                             title3Style,
                             icons,
-                            backgroundStyle}) => {
+                            backgroundStyle,
+                            styleCirqleTip }) => {
     const [accordeonStatus, setAccordeonStatus] = useState(false);
     // {background: 'left no-repeat url("../../../../img/mice/conference/1.jpg")'}
 
@@ -35,7 +36,7 @@ const MicePageBanner = ({subtitle,
                         <span style={title1Style}>{title1}</span>
                         <span style={title2Style}>{title2}</span>
                         <span style={title3Style}>{title3}</span>
-                        <div className={s.cirqleTipWrapper}>
+                        <div className={s.cirqleTipWrapper} style={styleCirqleTip}>
                             <CirqleTip onClick={() => setAccordeonStatus(!accordeonStatus)} accordeonStatus={accordeonStatus}/>
                         </div>
                     </h1>

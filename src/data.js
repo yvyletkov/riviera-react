@@ -138,6 +138,7 @@ import iconMassage from "./img/events/bachelor-party/handsIcon.png";
 import iconDrinks from "./img/events/bachelor-party/drinkIcon.png";
 import iconSauna from "./img/events/bachelor-party/saunaIcon.png";
 
+
 //страницы майса
 export const micePagesData = {
     centeredSlides: [
@@ -281,7 +282,7 @@ export const micePagesData = {
         {img: iconExcursions, text: 'Экскурсии и тимбилдинги', key: 3, desc: "Экскурсии"},
         {img: iconResidence, text: 'Предложение на проживание в отеле', key: 4, desc: "Проживание"},
     ]
-
+    
 }
 
 const commonSpecialsSlides = [
