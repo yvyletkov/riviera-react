@@ -6,10 +6,10 @@ import menuPriceImg from "../../../img/events/wedding/menuPrice.png";
 import Headline from "../Headline/Headline";
 import Button from "../Button/Button";
 
-const KitchenBlock = () => {
+const KitchenBlock = ({firstImg = kitchenImg1}) => {
     return <div className={s.wrapper}>
         <div className={s.container}>
-            <img className={s.leftImg} src={kitchenImg1} alt=""/>
+            <img className={s.leftImg} src={firstImg} alt=""/>
             <img className={s.rightImg} src={kitchenImg2} alt=""/>
             <div className={s.textContent}>
                 <img className={s.menuPriceImg} src={menuPriceImg} alt="Стоимость меню"/>

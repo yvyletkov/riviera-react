@@ -36,7 +36,7 @@ const SliderStyles = styled.div`
 `;
 
 
-const CenteredSlider = ({title = "Какой-то заголовок", slides, type = 1}) => {
+const CenteredSlider = ({title = "Какой-то заголовок", slides, type = "home-page"}) => {
 
     let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
 

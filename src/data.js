@@ -104,7 +104,7 @@ import conferenceIcon7 from './img/mice/conference/icons/7.png';
 import conferenceIcon8 from './img/mice/conference/icons/8.png';
 import conferenceIcon9 from './img/mice/conference/icons/9.png';
 import iconHalls from "./img/mice/conference/icons/1.png"
-import iconЕquipment from "./img/mice/conference/icons/2.png"
+import iconEquipment from "./img/mice/conference/icons/2.png"
 import iconExcursions from "./img/mice/conference/icons/3.png"
 import iconResidence from "./img/mice/conference/icons/4.png"
 import birthdayIcon1 from "./img/events/birthday/icon1.png"
@@ -112,11 +112,28 @@ import birthdayIcon2 from "./img/events/birthday/icon2.png"
 import birthdayIcon3 from "./img/events/birthday/icon3.png"
 import birthdayIcon4 from "./img/events/birthday/icon4.png"
 import birthdayIcon5 from "./img/events/birthday/icon5.png"
+import birthdayIcon6 from "./img/events/birthday/icon6.png"
+import iconCapacityBanner from "./img/events/wedding/icon-capacity.png"
 import forumIcon1 from './img/mice/forum/icons/1.png';
 import forumIcon2 from './img/mice/forum/icons/2.png';
 import forumIcon3 from './img/mice/forum/icons/3.png';
 import forumIcon4 from './img/mice/forum/icons/4.png';
 import forumIcon5 from './img/mice/forum/icons/5.png';
+import birthdayCentered1 from './img/events/birthday/centered/1.jpg';
+import birthdayCentered2 from './img/events/birthday/centered/2.jpg';
+import birthdayCentered3 from './img/events/birthday/centered/3.jpg';
+import birthdayCentered4 from './img/events/birthday/centered/4.jpg';
+import birthdayCentered5 from './img/events/birthday/centered/5.jpg';
+import birthdayTavrika from './img/events/birthday/tavrika.jpg';
+import birthdayBallroom from './img/events/birthday/ballroom.jpg';
+import birthdayGreenTerrase from './img/events/birthday/greenterrase.jpg';
+import iconPhotozone from "./img/events/wedding/icon-photozone.png";
+import iconThematic from "./img/events/wedding/icon-thematic.png";
+import iconSpa from "./img/events/hen-party/icon1.png";
+import iconBeach from "./img/events/hen-party/icon2.png";
+import iconGirlDrink from "./img/events/hen-party/drinks.png";
+import iconClearHand from "./img/events/hen-party/clearhand.png";
+import iconList from "./img/events/hen-party/list.png";
 
 //страницы майса
 export  const micePagesData = {
@@ -251,7 +268,7 @@ export  const micePagesData = {
     ],
     conferenceIconsBanner: [
         {img: iconHalls, text: '9 оборудованных залов', key:1, desc:"9 залов"},
-        {img: iconЕquipment, text: 'Оборудование для выступлений', key:2, desc:"Оборудование"},
+        {img: iconEquipment, text: 'Оборудование для выступлений', key:2, desc:"Оборудование"},
         {img: iconExcursions, text: 'Экскурсии и тимбилдинги', key:3, desc:"Экскурсии"},
         {img: iconResidence, text: 'Предложение на проживание в отеле', key:4, desc:"Проживание"},
     ]
@@ -1218,7 +1235,7 @@ export const vacationPagesData = {
 };
 
 
-// Страницы ивентов: "Свадьба", "Выездная церемония", "ДР"
+// Страницы ивентов: "Свадьба", "Выездная церемония", "ДР', "Мальчишник", "Девичник"
 export const eventPagesData  = {
     weddingPages: { // "Свадьба", "Выездная церемония"
         weddingMainSlides: [
@@ -1344,9 +1361,9 @@ export const eventPagesData  = {
             },
         ],
         weddingBannerIcons: [
-            {descr: 'Вместимость<br/>залов до<br/>300 персон'},
-            {descr: 'Более 100<br/>вариантов<br/>фотозон'},
-            {descr: 'Тематическое<br/>оформление<br/>свадьбы'},
+            {img: iconCapacityBanner, descr: 'Вместимость<br/>залов до<br/>300 персон'},
+            {img: iconPhotozone, descr: 'Более 100<br/>вариантов<br/>фотозон'},
+            {img: iconThematic, descr: 'Тематическое<br/>оформление<br/>свадьбы'},
         ],
         weddingCeremonyBannerIcons: [
             {descr: 'Более<br/>7 площадок<br/>для свадьбы'},
@@ -1356,25 +1373,25 @@ export const eventPagesData  = {
     },
     birthdayPage: {
         birthdayBannerIcons: [
-            {descr: 'Вместимость<br/>залов до<br/>300 персон'},
-            {descr: 'Более 100<br/>вариантов<br/>фотозон'},
-            {descr: 'Специальные<br/>условия<br/>на проживание'},
+            {img: iconCapacityBanner, descr: 'Вместимость<br/>залов до<br/>300 персон'},
+            {img: iconPhotozone, descr: 'Более 100<br/>вариантов<br/>фотозон'},
+            {img: birthdayIcon6, descr: 'Специальные<br/>условия<br/>на проживание'},
         ],
         birthdayMainSlides: [
             {
-                img: weddingSliderImg2,
+                img: birthdayTavrika,
                 title: "Ресторан Tavrika",
                 descr: 'Зал вместит до 120 гостей, его можно украсить в соответствии с общей тональностью мероприятия, подойдет для праздника в любое время года и в любую погоду. Имеет отдельный вход и зону для приветственного фуршета. Есть возможность организации танцпола.',
                 key: 1,
             },
             {
-                img: weddingSliderImg1,
+                img: birthdayBallroom,
                 title: "Ball Room",
                 descr: 'Зал вместит до 120 гостей, его можно украсить в соответствии с общей тональностью мероприятия, подойдет для праздника в любое время года и в любую погоду. Имеет отдельный вход и зону для приветственного фуршета. Есть возможность организации танцпола.',
                 key: 2,
             },
             {
-                img: weddingSliderImg3,
+                img: birthdayGreenTerrase,
                 title: "Зеленая терраса",
                 descr: 'Зал вместит до 120 гостей, его можно украсить в соответствии с общей тональностью мероприятия, подойдет для праздника в любое время года и в любую погоду. Имеет отдельный вход и зону для приветственного фуршета. Есть возможность организации танцпола.',
                 key: 3,
@@ -1382,7 +1399,7 @@ export const eventPagesData  = {
         ],
         centeredSlides: [
             {
-                img:forumImg,
+                img: birthdayCentered3,
                 title:'Организуем',
                 subtitle:'День рождения',
                 subsubtitle:'В vip-suite',
@@ -1390,7 +1407,7 @@ export const eventPagesData  = {
                 key:1,
             },
             {
-                img:forumImg1,
+                img:birthdayCentered4,
                 title:'Организуем',
                 subtitle:'День рождения',
                 subsubtitle:'С фейерверком',
@@ -1398,7 +1415,7 @@ export const eventPagesData  = {
                 key:2,
             },
             {
-                img:forumImg2,
+                img:birthdayCentered5,
                 title:'Организуем',
                 subtitle:'День рождения',
                 subsubtitle:'С шоу-програмой',
@@ -1406,7 +1423,7 @@ export const eventPagesData  = {
                 key:3,
             },
             {
-                img:forumImg3,
+                img:birthdayCentered1,
                 title:'Организуем',
                 subtitle:'Романтичный',
                 subsubtitle:'День рождения',
@@ -1414,7 +1431,7 @@ export const eventPagesData  = {
                 key:4,
             },
             {
-                img:forumImg4,
+                img:birthdayCentered2,
                 title:'Организуем',
                 subtitle:'Детский',
                 subsubtitle:'День рождения',
@@ -1432,11 +1449,24 @@ export const eventPagesData  = {
     },
     henPartyPage: {
         henPartyBannerIcons: [
-            {descr: 'SPA-процедуры,<br/>бассейны<br/>и парные'},
-            {descr: 'Пляж<br/>в 50 метрах<br/>от отеля'},
-            {descr: 'Специальные<br/>условия<br/>на проживание'},
+            {img: iconSpa, descr: 'SPA-процедуры,<br/>бассейны<br/>и парные'},
+            {img: iconBeach, descr: 'Пляж<br/>в 50 метрах<br/>от отеля'},
+            {img: birthdayIcon6, descr: 'Специальные<br/>условия<br/>на проживание'},
         ],
         henPartyIcons: [
+            {img: iconGirlDrink, text: "Прохладительные<br/>напитки и<br/>легкие закуски"},
+            {img: iconClearHand, text: "Расслабляющий<br/>массаж перед<br/>важным днем"},
+            {img: iconSpa, text: "Открытые и<br/>закрытые бассейны,<br/>бани и сауны"},
+            {img: iconList, text: "Сценарий от<br/>команды<br/>организаторов"},
+        ],
+    },
+    bachelorParty: {
+        bachelorPartyBannerIcons: [
+            {img: iconSpa, descr: 'SPA-процедуры,<br/>бассейны<br/>и парные'},
+            {img: iconBeach, descr: 'Пляж<br/>в 50 метрах<br/>от отеля'},
+            {img: birthdayIcon6, descr: 'Специальные<br/>условия<br/>на проживание'},
+        ],
+        bachelorPartyIcons: [
             {img: birthdayIcon1, text: "Прохладительные<br/>напитки и<br/>легкие закуски"},
             {img: birthdayIcon2, text: "Расслабляющий<br/>массаж перед<br/>важным днем"},
             {img: birthdayIcon3, text: "Открытые и<br/>закрытые бассейны,<br/>бани и сауны"},

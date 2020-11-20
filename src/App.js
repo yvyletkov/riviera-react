@@ -43,9 +43,6 @@ function App() {
                 <Route path='/event-tourism' exact
                        component={() => <EventTourismPage/>}/>
 
-                <Route path='/birthday' exact
-                       component={() => <BirthdayPage/>}/>
-
                 <Route path='/forum' exact
                        component={() => <ForumPage/>}/>
 
