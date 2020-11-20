@@ -13,7 +13,7 @@ const EventPageBanner = ({mobileFontSize, fontSize, titles, icons, bannerImg, ba
 
     return (
         <div className={s.wrapper}
-             style={{  background: window.matchMedia("(max-width: 620px").matches ? `center no-repeat url("${bannerImgMobile}")` : `center no-repeat url("${bannerImg}")`, backgroundSize: "cover"}}>
+             style={{  background: window.matchMedia("(max-width: 620px)").matches ? `center no-repeat url("${bannerImgMobile}")` : `center no-repeat url("${bannerImg}")`, backgroundSize: "cover"}}>
             <div className={s.container}>
                 <div className={!blackFont ? s.headings : s.headings + ' ' + s.black}>
                     <h2>{titles[0]}</h2>
@@ -29,16 +29,16 @@ const EventPageBanner = ({mobileFontSize, fontSize, titles, icons, bannerImg, ba
 
                 <div className={!blackFont ? s.icons : s.icons + ' ' + s.black}>
                     <div className={s.icon}>
-                        <img src={iconCapacity} alt="Вместимость"/>
+                        <img src={icons[0].img} alt="Вместимость"/>
                         <p dangerouslySetInnerHTML={{__html: icons[0].descr}}/>
                     </div>
                     <div className={s.icon}>
-                        <img src={iconPhotozone} alt="Фотозоны"/>
+                        <img src={icons[1].img} alt="Фотозоны"/>
                         <p dangerouslySetInnerHTML={{__html: icons[1].descr}}/>
 
                     </div>
                     <div className={s.icon}>
-                        <img src={iconThematic} alt="Оформление"/>
+                        <img src={icons[2].img} alt="Оформление"/>
                         <p dangerouslySetInnerHTML={{__html: icons[2].descr}}/>
 
                     </div>

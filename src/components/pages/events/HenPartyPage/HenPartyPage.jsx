@@ -4,7 +4,8 @@ import {eventPagesData} from "../../../../data";
 import decisionBlockImg from "../../../../img/events/wedding/decision.jpg";
 import bannerImg from "../../../../img/events/hen-party/hen-party-banner.jpg";
 import bannerImgMobile from "../../../../img/events/hen-party/hen-party-banner.jpg";
-import textImgBlockImg from "../../../../img/events/wedding/wedding.jpg";
+import textImgBlockImg from "../../../../img/events/hen-party/girls.jpg";
+import kitchenImg from "../../../../img/events/birthday/kitchen.jpg";
 
 import EventPageBanner from "../EventPageBanner/EventPageBanner";
 import Headline from "../../../shared/Headline/Headline";
@@ -57,7 +58,7 @@ const HenPartyPage = () => {
         {/* Вас ждет изысканная еда */}
 
         <section className='section'>
-            <KitchenBlock/>
+            <KitchenBlock firstImg={kitchenImg}/>
         </section>
 
         {/* Дополнительные услуги */}

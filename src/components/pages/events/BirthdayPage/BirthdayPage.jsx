@@ -5,6 +5,7 @@ import decisionBlockImg from "../../../../img/events/wedding/decision.jpg";
 import bannerImg from "../../../../img/events/birthday/birthdayBanner.jpg";
 import bannerImgMobile from "../../../../img/events/birthday/birthdayBanner-mob.jpg";
 import textImgBlockImg from "../../../../img/events/birthday/text-img-block.jpg";
+import kitchenImg from "../../../../img/events/birthday/kitchen.jpg";
 
 import EventPageBanner from "../EventPageBanner/EventPageBanner";
 import Headline from "../../../shared/Headline/Headline";
@@ -82,7 +83,7 @@ const BirthdayPage = () => {
         {/* Вас ждет изысканная еда */}
 
         <section className='section'>
-            <KitchenBlock/>
+            <KitchenBlock firstImg={kitchenImg}/>
         </section>
 
         {/* Дополнительные услуги */}

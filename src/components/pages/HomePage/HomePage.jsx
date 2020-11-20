@@ -21,7 +21,7 @@ const HomePage = () => {
         </section>
 
         <section className='section'>
-            <CenteredSlider title={'Сегодня в программе'} slides={homePageData.centeredSlides}/>
+            <CenteredSlider title={'Сегодня в программе'} slides={homePageData.centeredSlides} type={'home-page'}/>
         </section>
 
         <section className='section'>
