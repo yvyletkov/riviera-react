@@ -22,7 +22,7 @@ const BirthdayPage = () => {
 
     return <>
 
-        <EventPageBanner fontSize={['75px', '75px', '52px']} mobileFontSize={['11.7vw', '13vw', '6.2vw']}
+        <EventPageBanner fontSize={['75px', '75px', '52px']} mobileFontSize={['11.7vw', '13vw', '8.2vw']}
                          titles={['Незабываемый', 'день', 'рождения', 'в Крыму']}
                          icons={eventPagesData.birthdayPage.birthdayBannerIcons}
                          bannerImg={bannerImg}

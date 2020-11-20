@@ -24,6 +24,7 @@ import EventTourismPage from "./components/pages/mice/EventTourismPage/EventTour
 import TrainingsPage from "./components/pages/mice/TraningsPage/TrainingsPage";
 import IntensivePage from "./components/pages/mice/IntensivePage/IntensivePage";
 import TeamBuildingPage from "./components/pages/mice/TeamBuildingPage/TeamBuildingPage";
+import BachelorPartyPage from "./components/pages/events/BachelorPartyPage/BachelorPartyPage";
 
 function App() {
 
@@ -37,6 +38,9 @@ function App() {
 
                 <Route path='/trainings' exact
                        component={() => <TrainingsPage/>}/>
+
+                <Route path='/bachelor-party' exact
+                       component={() => <BachelorPartyPage/>}/>
 
                 <Route path='/hen-party' exact
                        component={() => <HenPartyPage/>}/>
