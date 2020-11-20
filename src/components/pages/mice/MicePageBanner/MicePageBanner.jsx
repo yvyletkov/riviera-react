@@ -36,19 +36,9 @@ const MicePageBanner = ({subtitle,
                         <span style={title1Style}>{title1}</span>
                         <span style={title2Style}>{title2}</span>
                         <span style={title3Style}>{title3}</span>
-                        <div className={s.cirqleTipWrapper} style={styleCirqleTip}>
-                            <CirqleTip onClick={() => setAccordeonStatus(!accordeonStatus)} accordeonStatus={accordeonStatus}/>
-                        </div>
                     </h1>
-                    <div className={s.descriptionWrapper}>
-                        <div className={accordeonStatus ? s.description + ' ' + s.shown : s.description}>
-                            <p>Riviera Sunrise Resort & SPA объединяет в себе все, что необходимо для проведения
-                                качественного мероприятия, включая просторные залы повышенной комфортности с современным
-                                оборудованием, комфортные номера премиум-класса, безупречный сервис и множество опций,
-                                позволяющие провести конференцию на высшем уровне. К каждой группе у нас индивидуальный
-                                подход, а также персональный менеджер для решения всех вопросов и пожеланий заказчика.
-                            </p>
-                        </div>
+                    <div className={s.cirqleTipWrapper} style={styleCirqleTip}>
+                        <CirqleTip onClick={() => setAccordeonStatus(!accordeonStatus)} accordeonStatus={accordeonStatus}/>
                     </div>
                 </div>
                 <div className={s.icons}>
@@ -65,6 +55,16 @@ const MicePageBanner = ({subtitle,
                         zIndex: "1",
                         position: "relative"}}
                             text={"Получить смету"}/>
+            </div>
+            <div className={s.descriptionWrapper}>
+                <div className={accordeonStatus ? s.description + ' ' + s.shown : s.description}>
+                    <p>Riviera Sunrise Resort & SPA объединяет в себе все, что необходимо для проведения
+                        качественного мероприятия, включая просторные залы повышенной комфортности с современным
+                        оборудованием, комфортные номера премиум-класса, безупречный сервис и множество опций,
+                        позволяющие провести конференцию на высшем уровне. К каждой группе у нас индивидуальный
+                        подход, а также персональный менеджер для решения всех вопросов и пожеланий заказчика.
+                    </p>
+                </div>
             </div>
             </div>
     )
