@@ -273,6 +273,13 @@ export  const micePagesData = {
         {img: iconExcursions, text: 'Экскурсии и тимбилдинги', key:3, desc:"Экскурсии"},
         {img: iconResidence, text: 'Предложение на проживание в отеле', key:4, desc:"Проживание"},
     ],
+    teamBuildingIconsBanner: [
+        {img: iconHalls, text: '9 оборудованных залов', key:1, desc:"9 залов"},
+        {img: iconEquipment, text: 'Оборудование для выступлений', key:2, desc:"Оборудование"},
+        {img: iconExcursions, text: 'Экскурсии и тимбилдинги', key:3, desc:"Экскурсии"},
+        {img: iconResidence, text: 'Предложение на проживание в отеле', key:4, desc:"Проживание"},
+    ]
+    
 }
 
 const commonSpecialsSlides = [
