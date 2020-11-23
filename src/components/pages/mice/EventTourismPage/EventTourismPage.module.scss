@@ -166,9 +166,33 @@
         font-size: 25px;
       }
 
-      @media screen and (max-width: 1200px) {
-        //margin:0 auto;
+      @media screen and (max-width: 580px) {
+        .hashtag {
+          display: none;
+        }
+
+        .text {
+          margin:25px 0 0;
+        }
       }
+    }
+
+    @media screen and (max-width: 580px) {
+      height: auto;
+    }
+  }
+
+  .imageMobile {
+    display: none;
+  }
+
+
+  @media screen and (max-width: 580px) {
+    background: none;
+
+    .imageMobile {
+      display: flex;
+      width: 100%;
     }
   }
 }
