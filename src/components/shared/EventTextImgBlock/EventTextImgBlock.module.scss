@@ -71,6 +71,9 @@
       &.wide {
         width: 650px;
       }
+      @media (max-width: 768px) {
+        border-radius: 0;
+      }
     }
 
   }
