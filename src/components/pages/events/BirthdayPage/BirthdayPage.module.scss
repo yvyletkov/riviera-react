@@ -10,7 +10,7 @@
 
     @media (max-width: 500px) {
       height: unset;
-      background: center no-repeat url(../../../../img/events/wedding/weddingPriceBlock-mob.jpg);
+      background: center no-repeat url(../../../../img/events/birthday/planning-mob.jpg);
       background-size: cover;
     }
 
@@ -223,6 +223,7 @@
 
       .textBlock {
         padding: 0 20px;
+        overflow: hidden;
       }
 
       .textBlock button {

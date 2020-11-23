@@ -3,7 +3,7 @@ import s from "./BachelorPartyPage.module.scss";
 import {eventPagesData} from "../../../../data";
 import decisionBlockImg from "../../../../img/events/wedding/decision.jpg";
 import bannerImg from "../../../../img/events/bachelor-party/banner.jpg";
-import bannerImgMobile from "../../../../img/events/bachelor-party/banner.jpg";
+import bannerImgMobile from "../../../../img/events/bachelor-party/banner-mob.jpg";
 import textImgBlockImg from "../../../../img/events/bachelor-party/guys.jpg";
 import kitchenImg from "../../../../img/events/birthday/kitchen.jpg";
 
@@ -89,7 +89,7 @@ const BachelorPartyPage = () => {
 
                                 <form className={'form'}>
                                     <input className={'formInput'} placeholder={'Введите Ваше имя'} type="text"/>
-                                    <input className={'formInput'} placeholder={'Введите Вашу почту'} type="text"/>
+                                    <input className={'formInput'} placeholder={'Введите Вашу почту'} type="email"/>
                                     <Button text={'Скачать коммерческое предложение'}/>
                                 </form>
 

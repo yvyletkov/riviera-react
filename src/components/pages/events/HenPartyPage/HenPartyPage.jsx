@@ -3,7 +3,7 @@ import s from "./HenPartyPage.module.scss";
 import {eventPagesData} from "../../../../data";
 import decisionBlockImg from "../../../../img/events/wedding/decision.jpg";
 import bannerImg from "../../../../img/events/hen-party/hen-party-banner.jpg";
-import bannerImgMobile from "../../../../img/events/hen-party/hen-party-banner.jpg";
+import bannerImgMobile from "../../../../img/events/hen-party/hen-party-banner-mob.jpg";
 import textImgBlockImg from "../../../../img/events/hen-party/girls.jpg";
 import kitchenImg from "../../../../img/events/birthday/kitchen.jpg";
 
