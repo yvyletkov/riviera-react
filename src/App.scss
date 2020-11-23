@@ -110,9 +110,7 @@ section.section.last {
 
 
 //FORM start
-form.form {
-
-  input {
+input.input, form.form input {
     box-sizing: border-box;
     border: none;
     width: available;
@@ -135,8 +133,15 @@ form.form {
       box-shadow: inset 0px 0px 19px -6px rgba(194, 194, 194, 1);
     }
 
+    .error {
+      background: #ff6844;
+      padding: 5px 20px;
+      position: absolute;
+      bottom: -20px;
+      color: #fff
+    }
+
   }
-}
 
 .swal2-popup {
   border-radius: .6125em !important;

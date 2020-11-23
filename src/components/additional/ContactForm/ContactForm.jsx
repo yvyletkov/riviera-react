@@ -10,6 +10,19 @@ const Schema = Yup.object().shape({
     email: Yup.string().email('Invalid email').required('Required'),
 });
 
+const Input = ({
+                                  field, // { name, value, onChange, onBlur }
+                                  form: { touched, errors }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
+                                  ...props
+                              }) => (
+    <div>
+        <input type="text" className='input' {...field} {...props} />
+        {touched[field.name] &&
+        errors[field.name] && <div className="error">{errors[field.name]}</div>}
+    </div>
+);
+
+
 export const ContactForm = ({submitBtnText}) => (
         <Formik
             initialValues={{
@@ -22,17 +35,13 @@ export const ContactForm = ({submitBtnText}) => (
                 console.log('ZNACHENIYA', values);
             }}
         >
-            {({ errors, touched }) => (
+
                 <Form>
-                    <Field name="firstName"/>
-                    {errors.name && touched.name ? (
-                        <div>{errors.name}</div>
-                    ) : null}
-                    <Field name="email" type="email" />
-                    {errors.email && touched.email ? <div>{errors.email}</div> : null}
+                    <Field component={Input} name="name" placeholder={'Введите Ваше имя'}/>
+                    <Field component={Input} name="email" placeholder={'Введите Ваш Email'} />
                     <button type="submit">{submitBtnText}</button>
                 </Form>
-            )}
+
         </Formik>
 );
 

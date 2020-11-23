@@ -20,6 +20,7 @@ import KitchenBlock from "../../../shared/KitchenBlock/KitchenBlock";
 import BlackBlock from "../../../shared/BlackBlock/BlackBlock";
 import EventTextImgBlock from "../../../shared/EventTextImgBlock/EventTextImgBlock";
 import EventSquaresSlider from "../../../shared/sliders/EventSquaresSlider/EventSquaresSlider";
+import ContactForm from "../../../additional/ContactForm/ContactForm";
 
 const WeddingPage = () => {
 
@@ -59,11 +60,7 @@ const WeddingPage = () => {
                         </h4>
                         <p>Оставьте свою почту и мы вышлем вам подробный
                             прайс с описанием</p>
-                        <form className={'form'}>
-                            <input className={'formInput'} placeholder={'Введите Ваше имя'} type="text"/>
-                            <input className={'formInput'} placeholder={'Введите Вашу почту'} type="text"/>
-                            <Button text={'Получить прайс'}/>
-                        </form>
+                        <ContactForm submitBtnText={'Получить прайс'}/>
                     </div>
                 </div>
             </div>
