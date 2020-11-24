@@ -26,6 +26,7 @@ import IntensivePage from "./components/pages/mice/IntensivePage/IntensivePage";
 import TeamBuildingPage from "./components/pages/mice/TeamBuildingPage/TeamBuildingPage";
 import BachelorPartyPage from "./components/pages/events/BachelorPartyPage/BachelorPartyPage";
 import ExhibitionPage from "./components/pages/mice/ExhibitionPage/ExhibitionPage";
+import NotFoundPage from "./components/additional/NotFoundPage/NotFoundPage";
 
 function App() {
 
@@ -90,6 +91,8 @@ function App() {
 
             <Route path='/' exact
                    component={() => <HomePage/>}/>
+
+            <Route path="*" component={NotFoundPage} />
 
             <Footer/>
 

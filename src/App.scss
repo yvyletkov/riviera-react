@@ -118,27 +118,35 @@ section.section.last {
 input.input, form.form input {
   position: relative;
   box-sizing: border-box;
-  border: none;
   border-radius: 5px;
   width: 100%;
   display: block;
   padding: 20px 40px;
   font-size: 16px;
   box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.07);
+  transition: all 200ms;
+  border: 0px solid transparent;
 
   &.error {
-    //border: 1px solid rgba(255, 21, 0, 0.5);
+    padding: 15px 40px 25px;
+    border: 1px solid rgb(254, 218, 206);
   }
 
-  &.success:after {
+  &.success{
+    background: #f8fff7;
+    border: 1px solid rgba(0, 217, 0, 0.55);
+  }
+
+  &:after {
     content: "";
-    background: black url(img/check.svg);
-    position: absolute;
-    width: 50px;
-    height: 50px;
     display: block;
-    top: 0;
-    left: 0;
+    position: absolute;
+    z-index: 10000;
+    width: 30px;
+    height: 30px;
+    background: #000;
+    top:0;
+    right: 0;
   }
 
   &::placeholder {
@@ -147,24 +155,27 @@ input.input, form.form input {
   }
 
   @media screen and (max-width: 490px) {
-    padding: 24px 40px;
+    padding: 24px 40px !important;
     box-sizing: border-box;
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
+    &.error {
+      padding: 19px 40px 29px !important;
+
+    }
   }
 
   & + .error {
     box-sizing: border-box;
     font-size: 12px;
-    background: rgb(255, 126, 118);
-    background: rgb(255, 70, 63);
+    background: rgb(254, 218, 206);
     padding: 2px 20px;
     position: absolute;
-    bottom: -7px;
+    bottom: 0px;
     width: 100% !important;
     text-align: center;
-    color: #fff;
-    border-radius: 5px;
+    color: #000;
+    border-radius: 0 0 5px 5px;
     margin-bottom: 0 !important;
   }
 }

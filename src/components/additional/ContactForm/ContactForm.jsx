@@ -23,15 +23,26 @@ const Input = ({
 
 const ContactForm = ({submitBtnText, withEmail, withPhone, formName, swalText = 'Мы получили вашу заявку 😌', ...props}) => {
 
+    const rePhoneNumber = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
+    Yup.addMethod(Yup.string, "phone", function() {
+        return this.test("phone", "Некорректный номер", value =>
+            rePhoneNumber.test(value)
+        );
+    });
+
     const Schema = Yup.object().shape({
         name: Yup.string()
             .min(2, 'Слишком короткое имя 😢')
-            .max(50, 'Слишком длинное имя 😢')
+            .max(25, 'Слишком длинное имя 😢')
             .required('Пожалуйста, введите имя'),
         phone: withPhone ? Yup.string()
-            .min(11, 'Введите телефон в формате +7 999 999 99 99')
-            .required('Пожалуйста, введите номер телефона') : null,
-        email: withEmail ? Yup.string().email('E-mail введен некорректно').required('Пожалуйста, введите E-mail') : null,
+            .min(11, 'Пожалуйста, в формате +7xxxxxxxxxx')
+            .max(16, 'Слишком длинный номер телефона 😢')
+            .phone()
+            .required('Это поле тоже обязательное') : null,
+        email: withEmail ? Yup.string()
+            .email('E-mail введен некорректно')
+            .required('Это поле тоже обязательное') : null,
     });
 
     const data = {};
