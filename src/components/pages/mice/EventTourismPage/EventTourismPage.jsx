@@ -12,6 +12,7 @@ import decisionBlockImg from "../../../../img/mice/conference/14.jpg";
 import MapSection from "../../../shared/MapSection/MapSection";
 import imageBanner from "../../../../img/mice/event-tourism/2.jpg";
 import ContactForm from "../../../additional/ContactForm/ContactForm";
+import imageMobile from "../../../../img/mice/event-tourism/3.jpg"
 
 
 const EventTourismPage = () => {
@@ -46,6 +47,7 @@ const EventTourismPage = () => {
                             <p className={s.hashtag}>#соберёмланчбокс</p>
                         </div>
                     </div>
+                    <img className={s.imageMobile} src={imageMobile} alt="Фото еды" />
                 </div>
             </section>
             <section className="section">
