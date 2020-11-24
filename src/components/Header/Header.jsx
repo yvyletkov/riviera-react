@@ -83,7 +83,7 @@ const Header = () => {
                             <Link title={"Новости"} icon={microphone} link={"#"}/>
                         </div>
                         <div className={s.logo}>
-                            <img src={logo} alt="Riviera Sunrise"/>
+                            <NavLink to={'/'}><img src={logo} alt="Riviera Sunrise"/></NavLink>
                         </div>
                         <div className={s.rightBlock}>
                             <Link icon={search} extraClass={s.searchIcon} link={"#"}/>

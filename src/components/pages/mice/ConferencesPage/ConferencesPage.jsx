@@ -7,7 +7,6 @@ import WidthSpecialsSlider from "../../../shared/sliders/WidthSpecialsSlider/Wid
 import RoomsSlider from "../../../shared/sliders/RoomsSlider/RoomsSlider";
 import s from "./ConferencesPage.module.scss";
 import Headline from "../../../shared/Headline/Headline";
-import Button from "../../../shared/Button/Button";
 import SpecialsSlider from "../../../shared/sliders/SpecialsSlider/SpecialsSlider";
 import CirqleTip from "../../../shared/CirqleTip/CirqleTip";
 import Accordeon from "../../../shared/Accordeon/Accordeon";
@@ -19,6 +18,7 @@ import AdvantagesBlock from "../../../shared/AdvantagesBlock/AdvantagesBlock";
 import LogosSlider from "../../../shared/sliders/LogosSlider/LogosSlider";
 import imageBanner from "../../../../img/mice/conference/1.jpg";
 import SpecialTask from "../../../shared/SpecialTask/SpecialTask";
+import ContactForm from "../../../additional/ContactForm/ContactForm";
 
 const ConferencesPage = () => {
     let [accordeonStatus, setAccordeonStatus] = React.useState(false);
@@ -152,11 +152,12 @@ const ConferencesPage = () => {
                                     <p>Для предметного обсуждения мы подготовили каталог со всеми нашими залами и
                                         возможностями для вашего мероприятия.</p>
                                     <p>Подберите идеальное сочетание услуг!</p>
-                                    <form className={'form'}>
-                                        <input className={'formInput'} placeholder={'Введите Ваше имя'} type="text"/>
-                                        <input className={'formInput'} placeholder={'Введите Вашу почту'} type="text"/>
-                                        <Button text={'Скачать коммерческое предложение'}/>
-                                    </form>
+
+                                    <ContactForm withEmail
+                                                 formName={'Форма из блока "Хотите посоветоваться с коллегами?" (Скачать коммерческое предложение)'}
+                                                 swalText={'сейчас мы отправим всю необходимую информацию Вам на почту'}
+                                                 submitBtnText={'Скачать коммерческое предложение'}/>
+
 
                                 </div>
 
