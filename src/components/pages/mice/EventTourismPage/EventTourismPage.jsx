@@ -11,6 +11,7 @@ import SpecialsSlider from "../../../shared/sliders/SpecialsSlider/SpecialsSlide
 import decisionBlockImg from "../../../../img/mice/conference/14.jpg";
 import MapSection from "../../../shared/MapSection/MapSection";
 import imageBanner from "../../../../img/mice/event-tourism/2.jpg";
+import ContactForm from "../../../additional/ContactForm/ContactForm";
 
 
 const EventTourismPage = () => {
@@ -70,11 +71,10 @@ const EventTourismPage = () => {
                                     <Headline subtitle={'Хотите посоветоваться'} title={'С коллегами?'}/>
                                     <p>Для предметного обсуждения мы подготовили каталог со всеми нашими залами и возможностями для вашего мероприятия.</p>
                                     <p>Подберите идеальное сочетание услуг!</p>
-                                    <form className={'form'}>
-                                        <input className={'formInput'} placeholder={'Введите Ваше имя'} type="text"/>
-                                        <input className={'formInput'} placeholder={'Введите Вашу почту'} type="text"/>
-                                        <Button text={'Скачать коммерческое предложение'}/>
-                                    </form>
+                                    <ContactForm withEmail
+                                                 formName={'Форма из блока "Хотите посоветоваться с коллегами?" (Скачать коммерческое предложение)'}
+                                                 swalText={'сейчас мы отправим всю необходимую информацию Вам на почту'}
+                                                 submitBtnText={'Скачать коммерческое предложение'}/>
 
                                 </div>
 

@@ -21,7 +21,7 @@ const Input = ({
     </div>
 };
 
-export const ContactForm = ({submitBtnText, withEmail, withPhone, formName, swalText = 'Мы получили вашу заявку 😌', ...props}) => {
+const ContactForm = ({submitBtnText, withEmail, withPhone, formName, swalText = 'Мы получили вашу заявку 😌', ...props}) => {
 
     const Schema = Yup.object().shape({
         name: Yup.string()
