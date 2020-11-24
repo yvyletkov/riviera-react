@@ -16,6 +16,7 @@ import MapSection from "../../../shared/MapSection/MapSection";
 import AdvantagesBlock from "../../../shared/AdvantagesBlock/AdvantagesBlock";
 import KitchenBlock from "../../../shared/KitchenBlock/KitchenBlock";
 import EventTextImgBlock from "../../../shared/EventTextImgBlock/EventTextImgBlock";
+import ContactForm from "../../../additional/ContactForm/ContactForm";
 
 const HenPartyPage = () => {
 
@@ -88,11 +89,8 @@ const HenPartyPage = () => {
                                     необходимые материалы для принятия решения о проведении девичника в нашем отеле.
                                 </p>
 
-                                <form className={'form'}>
-                                    <input className={'formInput'} placeholder={'Введите Ваше имя'} type="text"/>
-                                    <input className={'formInput'} placeholder={'Введите Вашу почту'} type="text"/>
-                                    <Button text={'Скачать коммерческое предложение'}/>
-                                </form>
+                                <ContactForm submitBtnText={'Скачать коммерческое предложение'} formName={`Форма "Вам предстоит легкое решение" (скачать коммерческое предложение)`} withEmail
+                                             swalText={'мы отправим всю необходимую информацию на указанную Вами почту в самое ближайшее время!'}/>
 
                             </div>
                         </div>

@@ -5,8 +5,16 @@ import kitchenImg2 from "../../../img/events/wedding/kitchen2.jpg";
 import menuPriceImg from "../../../img/events/wedding/menuPrice.png";
 import Headline from "../Headline/Headline";
 import Button from "../Button/Button";
+import Rodal from 'rodal';
+import 'rodal/lib/rodal.css';
+import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
+import ContactForm from "../../additional/ContactForm/ContactForm";
 
 const KitchenBlock = ({firstImg = kitchenImg1}) => {
+
+    let [popupOpen, setPopupOpen] = React.useState(false);
+
+
     return <div className={s.wrapper}>
         <div className={s.container}>
             <img className={s.rightImg} src={kitchenImg2} alt=""/>
@@ -22,8 +30,16 @@ const KitchenBlock = ({firstImg = kitchenImg1}) => {
                 <img className={s.leftImg} src={firstImg} alt=""/>
 
                 <p><b>Получите на свою почту полное меню банкета!</b></p>
-                <Button text={"Получить меню"}
+                <Button text={"Получить меню"} onClick={() => setPopupOpen(true)}
                         style={!window.matchMedia("(max-width: 768px").matches ? {width: "230px"} : {}}/>
+
+                <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
+                                  popupTitleText={'Для этого, пожалуйста, оставьте свои контактные данные️'}
+                                  submitBtnText='Держите'
+                                  formName={`Форма из блока "Вас ожидает изысканная кухня" (получить меню)`}
+                                  swalText={'мы отправим всю необходимую информацию на указанную Вами почту в самое ближайшее время!'}
+                                  withEmail/>
+
             </div>
         </div>
     </div>

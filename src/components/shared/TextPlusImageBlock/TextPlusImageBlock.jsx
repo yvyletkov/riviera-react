@@ -4,6 +4,7 @@ import Headline from "../Headline/Headline";
 import img from "./../../../img/home-page/textimg.png"
 import Button from "../Button/Button";
 import Accordeon from "../Accordeon/Accordeon";
+import ContactForm from "../../additional/ContactForm/ContactForm";
 
 const TextPlusImageBlock = ({subtitle = 'Какой-то', title = 'заголовок', withForm = false}) => {
     return (
@@ -12,11 +13,8 @@ const TextPlusImageBlock = ({subtitle = 'Какой-то', title = 'заголо
 
                 <div className={s.imageBlock}>
                     <img src={img} alt="Riviera Sunrise"/>
-                    {withForm && <form className={'form'}>
-                        <input type="text" placeholder={'Имя'} name={'name'}/>
-                        <input type="number" placeholder={'Телефон'} name={'phone'}/>
-                        <Button text={'Заказать звонок'}/>
-                    </form>}
+                    {withForm && <ContactForm submitBtnText={'Заказать звонок'} formName={`Форма "Заказать звонок"`} withPhone
+                                                          swalText={'мы перезвоним Вам в самое ближайшее время!'}/>}
                 </div>
 
                 <div className={s.textBlock}>
