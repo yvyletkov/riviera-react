@@ -65,10 +65,11 @@ export const ContactForm = ({submitBtnText, withEmail, withPhone, formName, swal
         request(data)
             .then((response) => {
                 if (response.status === 200) {
-                    const text = values.name + ', ' + swalText;
+                    const name = values.name[0].toUpperCase() + values.name.slice(1);
+                    // const text = values.name + ', ' + swalText;
                     swal.fire({
-                        title: 'Спасибо!',
-                        text: text,
+                        title: `Спасибо, ${name}!`,
+                        text: swalText,
                         icon: 'success',
                         confirmButtonText: 'Хорошо'
                     })

@@ -2,8 +2,10 @@ import React, {useState} from "react";
 import s from "./MicePageBanner.module.scss";
 import Button from "../../../shared/Button/Button";
 import CirqleTip from "../../../shared/CirqleTip/CirqleTip";
+import PopupContactForm from "../../../additional/ContactForm/PopupContactForm";
 
-const MicePageBanner = ({subtitle,
+const MicePageBanner = ({
+                            subtitle,
                             title1,
                             title2,
                             title3,
@@ -12,11 +14,13 @@ const MicePageBanner = ({subtitle,
                             title3Style,
                             icons,
                             backgroundStyle,
-                            styleCirqleTip }) => {
+                            styleCirqleTip
+                        }) => {
     const [accordeonStatus, setAccordeonStatus] = useState(false);
+    const [popupOpen, setPopupOpen] = React.useState(false);
     // {background: 'left no-repeat url("../../../../img/mice/conference/1.jpg")'}
 
-    icons = icons.map((icon)=> {
+    icons = icons.map((icon) => {
         return (
             <div className={s.icon} key={icon.key}>
                 <img src={icon.img} alt={icon.desc}/>
@@ -38,23 +42,34 @@ const MicePageBanner = ({subtitle,
                         <span style={title3Style}>{title3}</span>
                     </h1>
                     <div className={s.cirqleTipWrapper} style={styleCirqleTip}>
-                        <CirqleTip onClick={() => setAccordeonStatus(!accordeonStatus)} accordeonStatus={accordeonStatus}/>
+                        <CirqleTip onClick={() => setAccordeonStatus(!accordeonStatus)}
+                                   accordeonStatus={accordeonStatus}/>
                     </div>
                 </div>
                 <div className={s.icons}>
                     {icons}
                 </div>
-                    <Button style={window.matchMedia("(min-width:426px) and (max-width:1201px)").matches ? {
-                        maxWidth: "200px",
-                        zIndex: "1",
-                        position: "relative",
-                        marginTop: '15px',
-                        marginLeft:'50px',
-                    } : {marginBottom: '15vh',
-                        maxWidth: "200px",
-                        zIndex: "1",
-                        position: "relative"}}
-                            text={"Получить смету"}/>
+                <Button style={window.matchMedia("(min-width:426px) and (max-width:1201px)").matches ? {
+                    maxWidth: "200px",
+                    zIndex: "1",
+                    position: "relative",
+                    marginTop: '15px',
+                    marginLeft: '50px',
+                } : {
+                    marginBottom: '15vh',
+                    maxWidth: "200px",
+                    zIndex: "1",
+                    position: "relative"
+                }}
+                        text={"Получить смету"} onClick={() => setPopupOpen(true)}/>
+
+                <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
+                                  popupTitleText={'Чтобы получить смету и другую информацию, пожалуйста, оставьте свои контактные данные️'}
+                                  submitBtnText='Хорошо'
+                                  formName={`Форма с главного баннера страницы MICE (получить смету)`}
+                                  swalText={'мы отправим всю необходимую информацию на указанную Вами почту в самое ближайшее время!'}
+                                  withEmail
+                                  withPhone/>
             </div>
             <div className={s.descriptionWrapper}>
                 <div className={accordeonStatus ? s.description + ' ' + s.shown : s.description}>
@@ -66,7 +81,7 @@ const MicePageBanner = ({subtitle,
                     </p>
                 </div>
             </div>
-            </div>
+        </div>
     )
 };
 

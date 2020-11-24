@@ -7,6 +7,7 @@ import Headline from "../../Headline/Headline";
 import arrowImg from "../../../../img/icons/right-arrow.svg";
 import {NextArrow, PrevArrow} from "../SliderArrows/sliderArrowButtons";
 import Button from "../../Button/Button";
+import PopupContactForm from "../../../additional/ContactForm/PopupContactForm";
 
 const SliderStyles = styled(Slider)`
   .slick-next:before,
@@ -45,7 +46,9 @@ const SliderStyles = styled(Slider)`
 }
 `;
 
-const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-то", textLink = "#", slides, text, btnText = 'Смотреть все предложения'}) => {
+const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-то", btnLink, btnOnClick, slides, text, btnText = 'Смотреть все предложения'}) => {
+
+    let [popupOpen, setPopupOpen] = React.useState(false);
 
     if (!text) text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut\n' +
         '                        labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra\n' +
@@ -94,8 +97,16 @@ const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-�
                 <div className={s.leftBlock}>
                     <Headline subtitle={subtitle} title={title}/>
                     <p>{text}</p>
-                    <Button text={btnText} style={!window.matchMedia("(max-width: 768px)").matches ? {width: "210px"} : {}} link={textLink}/>
-                    {/*<a href={textLink}>Cмотреть все предложения <img src={arrowImg} alt=""/></a>*/}
+
+                    <Button text={btnText} onClick={!btnLink ? () => setPopupOpen(true) : null} link={btnLink ? btnLink : null} style={!window.matchMedia("(max-width: 768px)").matches ? {width: "210px"} : {}}/>
+
+                    <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
+                                      popupTitleText={'Для этого, пожалуйста, оставьте свои контактные данные️'}
+                                      submitBtnText='Держите'
+                                      formName={`Форма из блока "Дополнительные услуги" (получить прайс по услугам)`}
+                                      swalText={'мы отправим всю необходимую информацию на указанную Вами почту в самое ближайшее время!'}
+                                      withEmail/>
+
                 </div>
                 <div className={s.rightBlock}>
                     <SliderStyles>

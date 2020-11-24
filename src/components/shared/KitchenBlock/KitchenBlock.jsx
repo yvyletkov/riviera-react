@@ -5,10 +5,8 @@ import kitchenImg2 from "../../../img/events/wedding/kitchen2.jpg";
 import menuPriceImg from "../../../img/events/wedding/menuPrice.png";
 import Headline from "../Headline/Headline";
 import Button from "../Button/Button";
-import Rodal from 'rodal';
 import 'rodal/lib/rodal.css';
 import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
-import ContactForm from "../../additional/ContactForm/ContactForm";
 
 const KitchenBlock = ({firstImg = kitchenImg1}) => {
 
