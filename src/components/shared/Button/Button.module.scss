@@ -1,6 +1,7 @@
 $orange: #ff6c39;
 
 .button {
+  cursor: pointer;
   display: block;
   font-family: "Helvetica Neue Roman";
   background-color: $orange;
@@ -30,6 +31,7 @@ a.button:visited {
     box-sizing: border-box;
     width: 100%;
     box-shadow: -1.71px 4.698px 16px 0px rgba(23, 23, 23, 0.17);
+    font-size: 13px!important;
   }
   .button span {
     font-size: 13px;

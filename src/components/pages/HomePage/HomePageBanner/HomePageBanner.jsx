@@ -12,8 +12,8 @@ const HomePageBanner = () => {
                     <div className={s.leftSide}>
                         <div className={s.textBlock}>
                             <h2>Рассвет совершенного сервиса</h2>
-                            <h1>Riviera</h1>
-                            <h1>Sunrise</h1>
+                            <h1>Riviera
+                           <span>Sunrise</span></h1>
                             <div>RESORT & SPA</div>
                         </div>
                         <div className={s.playBtn}>

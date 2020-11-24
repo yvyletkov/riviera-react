@@ -1384,9 +1384,9 @@ export const eventPagesData = {
             {img: iconThematic, descr: 'Тематическое<br/>оформление<br/>свадьбы'},
         ],
         weddingCeremonyBannerIcons: [
-            {descr: 'Более<br/>7 площадок<br/>для свадьбы'},
-            {descr: 'Более 100<br/>вариантов<br/>фотозон'},
-            {descr: 'Тематическое<br/>оформление<br/>свадьбы'},
+            {img: iconCapacityBanner, descr: 'Более<br/>7 площадок<br/>для свадьбы'},
+            {img: iconPhotozone, descr: 'Более 100<br/>вариантов<br/>фотозон'},
+            {img: iconThematic, descr: 'Тематическое<br/>оформление<br/>свадьбы'},
         ],
     },
     birthdayPage: {

@@ -20,6 +20,7 @@ import KitchenBlock from "../../../shared/KitchenBlock/KitchenBlock";
 import BlackBlock from "../../../shared/BlackBlock/BlackBlock";
 import EventTextImgBlock from "../../../shared/EventTextImgBlock/EventTextImgBlock";
 import EventSquaresSlider from "../../../shared/sliders/EventSquaresSlider/EventSquaresSlider";
+import ContactForm from "../../../additional/ContactForm/ContactForm";
 
 const WeddingPage = () => {
 
@@ -56,11 +57,10 @@ const WeddingPage = () => {
                         </h4>
                         <p>Оставьте свою почту и мы вышлем вам подробный
                             прайс с описанием</p>
-                        <form className={'form'}>
-                            <input className={'formInput'} placeholder={'Введите Ваше имя'} type="text"/>
-                            <input className={'formInput'} placeholder={'Введите Вашу почту'} type="text"/>
-                            <Button text={'Получить прайс'}/>
-                        </form>
+
+                        <ContactForm submitBtnText={'Получить прайс'} formName={`Форма "Хотите знать, сколько стоит выездная церемония"`} withEmail
+                                     swalText={'мы отправим прайс-лист на указанную Вами почту в самое ближайшее время!'}/>
+
                     </div>
                 </div>
             </div>
@@ -84,12 +84,12 @@ const WeddingPage = () => {
                                 <span>организацией</span>
                                 <span>Вашей свадьбы</span>
                             </h4>
-                            <form className={'form'}>
-                                <input className={'formInput'} placeholder={'Введите Ваше имя'} type="text"/>
-                                <input className={'formInput'} placeholder={'Введите Вашу почту'} type="text"/>
-                                <Button
-                                    text={window.matchMedia("(max-width: 768px").matches ? 'Узнать подробности' : 'Узнать подробности об организации свадьбы'}/>
-                            </form>
+
+                            <ContactForm submitBtnText={window.matchMedia("(max-width: 768px").matches ? 'Узнать подробности' : 'Узнать подробности об организации свадьбы'}
+                                         formName={`Форма "Приезжайте и наслаждайтесь безупречной организацией" (Узнать подробности об организации свадьбы)`} withEmail
+                                         swalText={'скоро подробности будут на указанной Вами почте!'}/>
+
+
                         </div>
                     </div>
                 </div>
@@ -167,11 +167,9 @@ const WeddingPage = () => {
                                     необходимые материалы для принятия решения о проведении свадьбы в нашем отеле.
                                 </p>
 
-                                <form className={'form'}>
-                                    <input className={'formInput'} placeholder={'Введите Ваше имя'} type="text"/>
-                                    <input className={'formInput'} placeholder={'Введите Вашу почту'} type="text"/>
-                                    <Button text={'Скачать коммерческое предложение'}/>
-                                </form>
+                                <ContactForm submitBtnText={'Скачать коммерческое предложение'} formName={`Форма "Вам предстоит ответсвенное решение" (скачать коммерческое предложение)`} withEmail
+                                             swalText={'мы отправим всю необходимую информацию на указанную Вами почту в самое ближайшее время!'}/>
+
 
                             </div>
 

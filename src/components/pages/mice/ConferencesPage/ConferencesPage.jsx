@@ -46,19 +46,21 @@ const ConferencesPage = () => {
                             title3={'В крыму'}
                             icons={micePagesData.conferenceIconsBanner}
                             backgroundStyle={{
-                                backgroundImage:`url(${imageBanner})`,
-                                backgroundPosition: window.matchMedia('(max-width: 500px)').matches ? '-190px' : '0'}}/>
+                                backgroundImage: `url(${imageBanner})`,
+                                backgroundPosition: window.matchMedia('(max-width: 500px)').matches ? '-190px' : '0'
+                            }}/>
             {window.matchMedia('(min-width:769px)').matches &&
             <section className="section">
                 <TextBlock style={{marginTop: '-100px'}}/>
             </section>
             }
             <section className={window.matchMedia('(max-width: 768px)').matches ? 'section first' : 'section'}
-                     style={window.matchMedia('(min-width: 768px)').matches ? {marginBottom:'30px'} : {}}>
-                <AdvantagesBlock title={'Какие мероприятия мы организуем'} icons={micePagesData.conferenceIconsAdvantages}/>
+                     style={window.matchMedia('(min-width: 768px)').matches ? {marginBottom: '30px'} : {}}>
+                <AdvantagesBlock title={'Какие мероприятия мы организуем'}
+                                 icons={micePagesData.conferenceIconsAdvantages}/>
             </section>
             <section className="section">
-                <CenteredSlider slides={micePagesData.centeredSlides} title={"Что мы берем на себя"} type={2} />
+                <CenteredSlider slides={micePagesData.centeredSlides} title={"Что мы берем на себя"} type={2}/>
             </section>
             <section className="section">
                 <WidthSpecialsSlider slides={micePagesData.widthSpecialsSlider} title={"Наши залы"}/>
@@ -68,10 +70,11 @@ const ConferencesPage = () => {
                              data={roomsAndPricesPageData.modernSlides}/>
 
                 <RoomsSlider lastOfTwo={true} subtitle={'Корпус'} title={'Классик'}
-                             textContent={roomsAndPricesPageData.classicDescr} data={roomsAndPricesPageData.classicSlides}/>
+                             textContent={roomsAndPricesPageData.classicDescr}
+                             data={roomsAndPricesPageData.classicSlides}/>
             </section>
             <section className='section'>
-                <SpecialTask />
+                <SpecialTask/>
             </section>
             <section className="section">
                 <LogosSlider title={"С кем мы сотрудничали"} icons={micePagesData.conferenceIcons}/>
@@ -81,7 +84,7 @@ const ConferencesPage = () => {
                                 subtitle={"Дополнительные"}
                                 text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis."}
                                 slides={micePagesData.wideSliderServices}
-                                textLink={'#'}
+                                btnLink={'/promotions'}
                 />
             </section>
             <section className='section'>
@@ -132,7 +135,7 @@ const ConferencesPage = () => {
 
             {window.matchMedia('(max-width:768px)').matches &&
             <section className="section">
-                <TextBlock />
+                <TextBlock/>
             </section>
             }
 
@@ -146,7 +149,8 @@ const ConferencesPage = () => {
                             <div className={s.textBlock}>
                                 <div className={s.textContent}>
                                     <Headline subtitle={'Хотите посоветоваться'} title={'С коллегами?'}/>
-                                    <p>Для предметного обсуждения мы подготовили каталог со всеми нашими залами и возможностями для вашего мероприятия.</p>
+                                    <p>Для предметного обсуждения мы подготовили каталог со всеми нашими залами и
+                                        возможностями для вашего мероприятия.</p>
                                     <p>Подберите идеальное сочетание услуг!</p>
                                     <form className={'form'}>
                                         <input className={'formInput'} placeholder={'Введите Ваше имя'} type="text"/>
@@ -165,7 +169,7 @@ const ConferencesPage = () => {
             </section>
 
             <section className="section">
-                <MapSection />
+                <MapSection/>
             </section>
         </>
     )

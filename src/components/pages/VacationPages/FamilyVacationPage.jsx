@@ -48,7 +48,7 @@ const FamilyVacationPage = () => {
         </section>
 
         <section className='section'>
-            <SpecialsSlider subtitle={'Лучшие'} title={'спецпредложения'} slides={vacationPagesData.specialsSlides}/>
+            <SpecialsSlider subtitle={'Лучшие'} title={'спецпредложения'} btnLink={'/promotions'} slides={vacationPagesData.specialsSlides}/>
         </section>
 
         <section className='section'>
