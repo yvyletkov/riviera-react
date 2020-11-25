@@ -115,17 +115,18 @@ section.section.last {
 
 
 //FORM start
-input.input, form.form input {
+input.input, textarea {
   position: relative;
   box-sizing: border-box;
   border-radius: 5px;
-  width: 100%;
+  width: 100% !important;
   display: block;
   padding: 20px 40px;
   font-size: 16px;
   box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.07);
   transition: all 200ms;
   border: 0px solid transparent;
+  resize: none;
 
   &.error {
     padding: 15px 40px 25px;
@@ -177,6 +178,10 @@ input.input, form.form input {
     color: #000;
     border-radius: 0 0 5px 5px;
     margin-bottom: 0 !important;
+  }
+
+  textarea.input {
+    min-height: 7em !important;
   }
 }
 

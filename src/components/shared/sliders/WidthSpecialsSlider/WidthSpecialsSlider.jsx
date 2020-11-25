@@ -42,10 +42,6 @@ const SliderStyles = styled(Slider)`
 
 const WidthSpecialsSlider = ({title = "Заголовок", subtitle = "Какой-то", textLink = "#", slides, text, btnText = 'Смотреть все предложения'}) => {
 
-    if (!text) text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut\n' +
-        '                        labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra\n' +
-        '                        maecenas accumsan lacus vel facilisis. '
-
     const [currentSlideIndex, setCurrentSludeIndex] = useState(0);
 
     const afterChangeHandler = (index) => setCurrentSludeIndex(index);

@@ -1528,4 +1528,11 @@ export const eventPagesData = {
 };
 
 
+// Страница "Специальные предложения"
+export const promotionsPageData = {
+    slides: commonSpecialsSlides,
+    pastSlides: commonSpecialsSlides
+}
+
+
 

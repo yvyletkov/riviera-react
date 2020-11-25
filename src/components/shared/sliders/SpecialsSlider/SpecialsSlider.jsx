@@ -46,7 +46,7 @@ const SliderStyles = styled(Slider)`
 }
 `;
 
-const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-то", btnLink, btnOnClick, slides, text, btnText = 'Смотреть все предложения'}) => {
+const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-то", btnLink, btnOnClick, slides, text, btnText = 'Смотреть все предложения', fullWidth}) => {
 
     let [popupOpen, setPopupOpen] = React.useState(false);
 
@@ -93,7 +93,7 @@ const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-�
 
     return (
         <div className={s.wrapper}>
-            <div className={s.container}>
+            <div className={fullWidth ? s.container + ' ' + s.fullWidth : s.container}>
                 <div className={s.leftBlock}>
                     <Headline subtitle={subtitle} title={title}/>
                     <p>{text}</p>
@@ -106,6 +106,7 @@ const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-�
                                       formName={`Форма из блока "Дополнительные услуги" (получить прайс по услугам)`}
                                       swalText={'мы отправим всю необходимую информацию на указанную Вами почту в самое ближайшее время!'}
                                       withEmail/>
+
 
                 </div>
                 <div className={s.rightBlock}>

@@ -1,0 +1,211 @@
+.wrapper {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 190px;
+
+  .container {
+    position: relative;
+    box-sizing: border-box;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+
+    .topRow {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px 0 30px;
+
+      h4.title {
+        //display: inline-block;
+        width: 480px;
+
+        span {
+          text-transform: uppercase;
+          display: block;
+          line-height: 1.6;
+        }
+
+        span:first-of-type {
+          text-transform: none;
+          font-family: "Helvetica Neue Medium";
+          font-size: 23px;
+          position: relative;
+          width: fit-content;
+
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 60px;
+            height: 1px;
+            background-color: #171717;
+            top: 40%;
+            right: -70px;
+          }
+        }
+
+        span:nth-child(2) {
+          font-family: "Helvetica Neue Black";
+          font-size: 34px;
+          line-height: 1.1;
+        }
+
+        span:last-of-type {
+          font-family: "Helvetica Neue Black";
+          font-size: 47px;
+          line-height: 1.1;
+        }
+
+        @media (max-width: 500px) {
+          width: fit-content;
+
+          span:first-of-type {
+            font-size: 18px;
+          }
+          span:last-of-type {
+            font-size: 11.2vw;
+          }
+        }
+
+        @media (max-width: 1024px) {
+          margin-bottom: 20px;
+        }
+
+      }
+
+      .textContent {
+        padding: 0 20px;
+        text-align: justify;
+        width: 60%;
+        position: relative;
+
+        p:first-child {
+          margin-bottom: 20px;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        display: block;
+        padding: 0 20px;
+        .textContent {
+          box-sizing: border-box;
+          width: 100%;
+          padding: 0 20px;
+        }
+        h4.title {
+          display: inline-block;
+          width: fit-content;
+          padding-left: 20px;
+        }
+      }
+
+      @media (max-width: 500px) {
+        padding: 0;
+        display: block;
+      }
+
+    }
+
+    .flexWrapper {
+      box-sizing: border-box;
+      display: flex;
+      margin-top: 135px;
+      padding: 0 30px;
+
+      .col {
+        margin-right: 60px;
+        @media (max-width: 700px) {
+          margin-bottom: 50px;
+          width: 100%;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+
+        @media (min-width: 700px) and (max-width: 1024px) {
+          &:first-child {
+            margin-bottom: 30px;
+          }
+        }
+      }
+
+      @media (max-width: 1024px) {
+        padding: 0 20px;
+        flex-wrap: wrap;
+        max-width: 850px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .formWrapper {
+        form {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+
+          div {
+            width: 49%;
+            margin-bottom: 10px;
+          }
+
+          div:last-of-type {
+            width: 100%;
+          }
+
+          a {
+            flex-grow: 1;
+          }
+
+          @media (max-width: 500px) {
+            width: 100%;
+
+            div {
+              width: 100%;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 1024px) {
+        margin-top: 55px;
+      }
+    }
+  }
+
+  .sliderContainer {
+
+    margin: 50px auto 0;
+    overflow: hidden;
+    max-width: 1470px;
+    width: 100%;
+    //height: 640px;
+
+    @media screen and (max-width: 1200px) {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: unset;
+      bottom: unset;
+      right: unset;
+    }
+
+    .sliderTitle {
+      max-width: 1200px;
+      height: 20px;
+      box-sizing: border-box;
+      width: 100%;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-family: "Helvetica Neue Roman";
+      text-align: right;
+      margin: 0 auto;
+      padding: 0 40px;
+      margin-bottom: -40px;
+    }
+
+  }
+}
+

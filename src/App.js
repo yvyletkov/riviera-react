@@ -5,7 +5,7 @@ import Header from "./components/Header/Header";
 import "./style/normalize.css";
 import "./style/fonts.css";
 import HomePage from "./components/pages/HomePage/HomePage";
-import {Route} from "react-router-dom";
+import {Route, Switch} from "react-router-dom";
 import BottomMenu from "./components/shared/BottomMenu/BottomMenu";
 import RoomsAndPricesPage from "./components/pages/RoomsAndPricesPage/RoomsAndPricesPage";
 import RoomPage from "./components/pages/RoomPage/RoomPage";
@@ -27,19 +27,30 @@ import TeamBuildingPage from "./components/pages/mice/TeamBuildingPage/TeamBuild
 import BachelorPartyPage from "./components/pages/events/BachelorPartyPage/BachelorPartyPage";
 import ExhibitionPage from "./components/pages/mice/ExhibitionPage/ExhibitionPage";
 import NotFoundPage from "./components/additional/NotFoundPage/NotFoundPage";
+import ContactsPage from "./components/pages/СontactsPage/ContactsPage";
+import PromotionsPage from "./components/pages/PromotionsPage/PromotionsPage";
 
 function App() {
 
     return (<>
-                <Header/>
+            <Header/>
+
+            <Switch>
+
+                <Route path='/promotions' exact
+                       component={() => <PromotionsPage/>}/>
+
+                <Route path='/contacts' exact
+                       component={() => <ContactsPage/>}/>
+
                 <Route path='/exhibition' exact
-                   component={() => <ExhibitionPage/>}/>
+                       component={() => <ExhibitionPage/>}/>
 
                 <Route path='/team-building' exact
-                   component={() => <TeamBuildingPage/>}/>
+                       component={() => <TeamBuildingPage/>}/>
 
                 <Route path='/intensive' exact
-                   component={() => <IntensivePage/>}/>
+                       component={() => <IntensivePage/>}/>
 
                 <Route path='/trainings' exact
                        component={() => <TrainingsPage/>}/>
@@ -49,7 +60,7 @@ function App() {
 
                 <Route path='/hen-party' exact
                        component={() => <HenPartyPage/>}/>
- 
+
                 <Route path='/birthday' exact
                        component={() => <BirthdayPage/>}/>
 
@@ -71,29 +82,30 @@ function App() {
                 <Route path='/family-vacation' exact
                        component={() => <FamilyVacationPage/>}/>
 
-            <Route path='/vacation-for-yourself' exact
-                   component={() => <VacationForYourselfPage/>}/>
+                <Route path='/vacation-for-yourself' exact
+                       component={() => <VacationForYourselfPage/>}/>
 
-            <Route path='/romantic-vacation' exact
-                   component={() => <RomanticVacationPage/>}/>
+                <Route path='/romantic-vacation' exact
+                       component={() => <RomanticVacationPage/>}/>
 
-            <Route path='/vacation-with-friends' exact
-                   component={() => <VacationWithFriendsPage/>}/>
+                <Route path='/vacation-with-friends' exact
+                       component={() => <VacationWithFriendsPage/>}/>
 
-            <Route path='/modern/standart' exact
-                   component={() => <RoomPage data={roomPageData.modernStandart}/>}/>
+                <Route path='/modern/standart' exact
+                       component={() => <RoomPage data={roomPageData.modernStandart}/>}/>
 
-            <Route path='/modern/semi-lux' exact
-                   component={() => <RoomPage data={roomPageData.modernSemiLux}/>}/>
+                <Route path='/modern/semi-lux' exact
+                       component={() => <RoomPage data={roomPageData.modernSemiLux}/>}/>
 
-            <Route path='/rooms-and-prices' exact
-                   component={() => <RoomsAndPricesPage/>}/>
+                <Route path='/rooms-and-prices' exact
+                       component={() => <RoomsAndPricesPage/>}/>
 
-            <Route path='/' exact
-                   component={() => <HomePage/>}/>
+                <Route path='/' exact
+                       component={() => <HomePage/>}/>
 
-            <Route path="*" component={NotFoundPage} />
+                <Route component={NotFoundPage}/>
 
+            </Switch>
             <Footer/>
 
             <BottomMenu/>
