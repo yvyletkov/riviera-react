@@ -8,7 +8,7 @@ import HomePage from "./components/pages/HomePage/HomePage";
 import {Route, Switch} from "react-router-dom";
 import BottomMenu from "./components/shared/BottomMenu/BottomMenu";
 import RoomsAndPricesPage from "./components/pages/RoomsAndPricesPage/RoomsAndPricesPage";
-import RoomPage from "./components/pages/RoomPage/RoomPage";
+import SingleRoomPage from "./components/pages/SingleRoomPage/SingleRoomPage";
 import {roomPageData} from "./data";
 import FamilyVacationPage from "./components/pages/VacationPages/FamilyVacationPage";
 import VacationForYourselfPage from "./components/pages/VacationPages/VacationForYourselfPage";
@@ -29,6 +29,7 @@ import ExhibitionPage from "./components/pages/mice/ExhibitionPage/ExhibitionPag
 import NotFoundPage from "./components/additional/NotFoundPage/NotFoundPage";
 import ContactsPage from "./components/pages/СontactsPage/ContactsPage";
 import PromotionsPage from "./components/pages/PromotionsPage/PromotionsPage";
+import SinglePromotionPage from "./components/pages/PromotionsPage/SinglePromotionPage/SinglePromotionPage";
 
 function App() {
 
@@ -36,6 +37,8 @@ function App() {
             <Header/>
 
             <Switch>
+                <Route path='/promotions/barhatnyi-sezon' exact
+                       component={() => <SinglePromotionPage/>}/>
 
                 <Route path='/promotions' exact
                        component={() => <PromotionsPage/>}/>
@@ -92,10 +95,10 @@ function App() {
                        component={() => <VacationWithFriendsPage/>}/>
 
                 <Route path='/modern/standart' exact
-                       component={() => <RoomPage data={roomPageData.modernStandart}/>}/>
+                       component={() => <SingleRoomPage data={roomPageData.modernStandart}/>}/>
 
                 <Route path='/modern/semi-lux' exact
-                       component={() => <RoomPage data={roomPageData.modernSemiLux}/>}/>
+                       component={() => <SingleRoomPage data={roomPageData.modernSemiLux}/>}/>
 
                 <Route path='/rooms-and-prices' exact
                        component={() => <RoomsAndPricesPage/>}/>

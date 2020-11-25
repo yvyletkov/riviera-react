@@ -2,7 +2,6 @@ import React from "react";
 import s from "./SpecialsSliderItem.module.scss";
 import {NavLink} from "react-router-dom";
 
-
 const SpecialsSliderItem = (props) => {
     const {img, active, title, subtitle, link, decolorized} = props;
 
@@ -19,7 +18,7 @@ const SpecialsSliderItem = (props) => {
                     <div className={s.content}>
                         <p className={s.subtitle}>{subtitle}</p>
                         <p className={s.title}>{title}</p>
-                        <a href="">Подробнее →</a>
+                        <div>Подробнее →</div>
                     </div>
                 </div>
             </NavLink>
