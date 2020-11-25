@@ -9,8 +9,8 @@ import swal from 'sweetalert2';
 
 
 const Input = ({
-                   field, // { name, value, onChange, onBlur }
-                   form: {touched, errors}, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
+                   field,
+                   form: {touched, errors},
                    ...props
                }) => {
     const classNames = cx('input', {'success': touched[field.name] && !errors[field.name]}, {'error': touched[field.name] && errors[field.name]})
@@ -21,7 +21,20 @@ const Input = ({
     </div>
 };
 
-const ContactForm = ({submitBtnText, withEmail, withPhone, formName, swalText = 'Мы получили вашу заявку 😌', ...props}) => {
+const Textarea = ({
+                   field,
+                   form: {touched, errors},
+                   ...props
+               }) => {
+    const classNames = cx('input', {'success': touched[field.name] && !errors[field.name]}, {'error': touched[field.name] && errors[field.name]})
+    return <div style={{position: 'relative'}}>
+        <textarea rows={6} className={classNames} {...field} {...props} />
+        {touched[field.name] &&
+        errors[field.name] && <div className="error">{errors[field.name]}</div>}
+    </div>
+};
+
+const ContactForm = ({submitBtnText, withEmail, withPhone, withMessage, formName, swalText = 'Мы получили вашу заявку 😌', ...props}) => {
 
     const rePhoneNumber = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
     Yup.addMethod(Yup.string, "phone", function() {
@@ -43,6 +56,10 @@ const ContactForm = ({submitBtnText, withEmail, withPhone, formName, swalText = 
         email: withEmail ? Yup.string()
             .email('E-mail введен некорректно')
             .required('Это поле тоже обязательное') : null,
+        message: Yup.string()
+            .min(2, 'Слишком мало букв 😢')
+            .max(3000, 'Слишком много букв 😢')
+            .required('Пожалуйста, введите текст сообщения'),
     });
 
     const data = {};
@@ -70,6 +87,13 @@ const ContactForm = ({submitBtnText, withEmail, withPhone, formName, swalText = 
             {
                 "alias": "E-mail",
                 "value": values.email,
+            },
+        ];
+        if (withMessage) data.inputs = [
+            ...data.inputs,
+            {
+                "alias": "Сообщение",
+                "value": values.message,
             },
         ];
 
@@ -115,6 +139,7 @@ const ContactForm = ({submitBtnText, withEmail, withPhone, formName, swalText = 
             <Field component={Input} name="name" placeholder={'Введите Ваше имя'}/>
             {withEmail && <Field component={Input} name="email" placeholder={'Введите Ваш E-mail'}/>}
             {withPhone && <Field component={Input} name="phone" placeholder={'Введите Ваш телефон'}/>}
+            {withMessage && <Field component={Textarea} name="message" placeholder={'Введите Ваше сообщение'}/>}
 
             <button style={{width: '100%'}} className={s.button} type="submit">{submitBtnText}</button>
         </Form>
