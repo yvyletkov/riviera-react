@@ -23,7 +23,10 @@ const EventTourismPage = () => {
                             title1Style={{fontSize:'30px', margin:'25px 0 10px'}}
                             title2={'Форума'}
                             title3={'Созвездия'}
-                            title3Style={{fontSize:'32px', backgroundColor:"#ffbb28", padding:'5px 10px'}}
+                            title3Style={{fontSize:'32px',
+                                          backgroundColor:"#ffbb28",
+                                          padding:'5px 10px',
+                                          marginTop:'25px'}}
                             icons={micePagesData.conferenceIconsBanner}
                             backgroundStyle={{
                                 backgroundImage:`url(${imageBanner})`}}/>

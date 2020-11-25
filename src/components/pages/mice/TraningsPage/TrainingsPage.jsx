@@ -76,7 +76,7 @@ const TrainingsPage = () => {
                 <SpecialTask />
             </section>
             <section className="section">
-                <LogosSlider title={"С кем мы сотрудничали"} icons={micePagesData.forumIcons}/>
+                <LogosSlider title={"С кем мы сотрудничали"} icons={micePagesData.conferenceIcons}/>
             </section>
             <section className="section">
                 <SpecialsSlider title={"Услуги"}

@@ -268,11 +268,11 @@ export const micePagesData = {
         {img: forumIcon5},
     ],
     conferenceIconsAdvantages: [
-        {img: conferenceIcon5, text: "Съезд руководителей"},
-        {img: conferenceIcon6, text: "Международная премия"},
-        {img: conferenceIcon7, text: "Экспертный форум"},
-        {img: conferenceIcon8, text: "Конференции для компаний"},
-        {img: conferenceIcon9, text: "Показ мод"},
+        {img: conferenceIcon5, text: "Съезд<br>руководителей"},
+        {img: conferenceIcon6, text: "Международная<br>премия"},
+        {img: conferenceIcon7, text: "Экспертный<br>форум"},
+        {img: conferenceIcon8, text: "Конференции<br>для компаний"},
+        {img: conferenceIcon9, text: "Показ<br>мод"},
     ],
     conferenceIconsBanner: [
         {img: iconHalls, text: '9 оборудованных залов', key: 1, desc: "9 залов"},
