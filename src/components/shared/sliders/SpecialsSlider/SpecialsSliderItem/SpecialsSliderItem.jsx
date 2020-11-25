@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 
 
 const SpecialsSliderItem = (props) => {
-    const {img, active, title, subtitle, link} = props;
+    const {img, active, title, subtitle, link, decolorized} = props;
 
     let [lifted, setLifted] = React.useState(active);
 
@@ -15,7 +15,7 @@ const SpecialsSliderItem = (props) => {
                     className={lifted ? `${s.card} ${s.lifted}` : s.card}
                     onMouseEnter={() => setLifted(true)}
                     onMouseLeave={() => setLifted(false)}>
-                    <img className={s.img} src={img} alt="Афиша"/>
+                    <img className={decolorized ? s.img + ' ' + s.decolorized : s.img} src={img} alt="Афиша"/>
                     <div className={s.content}>
                         <p className={s.subtitle}>{subtitle}</p>
                         <p className={s.title}>{title}</p>

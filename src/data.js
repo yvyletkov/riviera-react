@@ -322,6 +322,20 @@ const commonSpecialsSlides = [
         link: '#',
         key: 4,
     },
+    {
+        img: img1,
+        title: "Cкидка 50%",
+        subtitle: "На что-то",
+        link: '#',
+        key: 5,
+    },
+    {
+        img: img2,
+        title: "Cкидка 60%",
+        subtitle: "На что-то",
+        link: '#',
+        key: 6,
+    },
 ];
 const commonAfishaSlides = [
     {
