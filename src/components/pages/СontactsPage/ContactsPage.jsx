@@ -2,12 +2,13 @@ import React from "react";
 import s from "./ContactsPage.module.scss";
 import ContactForm from "../../additional/ContactForm/ContactForm";
 import busImg from "./../../../img/school-bus.png"
+import MapSection from "../../shared/MapSection/MapSection";
 
 const ContactsPage = () => {
 
     const [showDescr, setShowDescr] = React.useState(false);
 
-    return (
+    return ( <>
         <section className='section'>
             <div className={s.wrapper}>
                 <div className={s.container}>
@@ -115,6 +116,10 @@ const ContactsPage = () => {
                 </div>
             </div>
         </section>
+        <section className='section last'>
+            <MapSection/>
+        </section>
+        </>
     );
 }
 

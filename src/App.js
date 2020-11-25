@@ -28,6 +28,7 @@ import BachelorPartyPage from "./components/pages/events/BachelorPartyPage/Bache
 import ExhibitionPage from "./components/pages/mice/ExhibitionPage/ExhibitionPage";
 import NotFoundPage from "./components/additional/NotFoundPage/NotFoundPage";
 import ContactsPage from "./components/pages/СontactsPage/ContactsPage";
+import PromotionsPage from "./components/pages/PromotionsPage/PromotionsPage";
 
 function App() {
 
@@ -35,6 +36,9 @@ function App() {
             <Header/>
 
             <Switch>
+
+                <Route path='/promotions' exact
+                       component={() => <PromotionsPage/>}/>
 
                 <Route path='/contacts' exact
                        component={() => <ContactsPage/>}/>

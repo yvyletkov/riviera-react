@@ -1,94 +1,127 @@
 import React from "react";
-import s from "./ContactsPage.module.scss";
-import ContactForm from "../../additional/ContactForm/ContactForm";
-import busImg from "./../../../img/school-bus.png"
-
-const ContactsPage = () => {
-
-    const [showDescr, setShowDescr] = React.useState(false);
-
-    return (
-        <section className='section'>
-            <div className={s.wrapper}>
-                <div className={s.container}>
-                    <div className={s.topRow}>
-                        <h4 className={s.title}>
-                            <span>Наши</span>
-                            <span>контакты</span>
-                        </h4>
-                        <div className={s.textContent}>
-                            <p>ул. Ленина 2, Алушта, Крым</p>
-                            <p>GPS координаты: 44.667638, 34.411936</p>
-                            <p>Воспользуйтесь услугой трансфер, заказать вы можете по телефону <b><a href="tel:8 800 550 98 24" target={'_blank'}>8 800 550 98 24</a></b>
-                            </p>
-                            <div className={s.btn} onClick={() => setShowDescr(!showDescr)}><b>Как к нам добраться?</b>
-                            </div>
-                            <div className={showDescr ? s.description + ' ' + s.active : s.description}>
-                                <img src={busImg} alt="Автобус"/>
-                                <p><b>Общественным автотранспортом:</b></p>
-                                <ul>
-                                    <li>Из автовокзала г. Симферополь ежедневный рейсы автобусов Симферополь — Алушта
-                                    </li>
-                                    <li>Из троллейбусного парка г. Симферополь ежедневное рейсы троллейбусов Симферополь
-                                        -
-                                        Алушта. № троллейбуса 51,52
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={s.flexWrapper}>
-
-                        <div className={s.col}>
-
-                            <div className={s.contactsItem}>
-                                <h5>Riviera Sunrise Resort & SPA</h5>
-                                <p>Адрес: 298500 Республика Крым,
-                                    <span>г. Алушта, ул. Ленина 2</span></p>
-                            </div>
-
-                            <div className={s.contactsItem}>
-                                <h5>Ресепшен</h5>
-                                <p><a target={'_blank'}
-                                      href="mailto:info.alushta@rivierasunrise.com">info.alushta@rivierasunrise.com</a>
-                                    <span><a href="tel:8 800 550 98 24">8 800 550 98 24</a></span></p>
-                            </div>
-
-                            <div className={s.contactsItem}>
-                                <h5>Конференц-сервис</h5>
-                                <p><a target={'_blank'}
-                                      href="mailto:mice@rivierasunrise.com">mice@rivierasunrise.com</a>
-                                    <span><a href="tel:8 978 900 20 58">8 978 900 20 58</a></span></p>
-                                <p><a target={'_blank'}
-                                      href="mailto:event@rivierasunrise.com">event@rivierasunrise.com</a>
-                                    <span><a href="tel:8 978 934 13 74">8 978 934 13 74</a></span></p>
-                            </div>
-
-                            <div className={s.contactsItem}>
-                                <h5>Отдел по работе с<br/>
-                                    Туроператорами</h5>
-                                <p><a target={'_blank'}
-                                      href="mailto:reservation1@rivierasunrise.com">reservation1@rivierasunrise.com</a>
-                                </p>
-                            </div>
-
-                        </div>
+import s from "./PromotionsPage.module.scss";
+import {promotionsPageData} from "../../../data";
+import Slider from "react-slick";
+import styled from "styled-components";
+import {NextArrow, PrevArrow} from "../../shared/sliders/SliderArrows/sliderArrowButtons";
+import SpecialsSliderItem from "../../shared/sliders/SpecialsSlider/SpecialsSliderItem/SpecialsSliderItem";
+import MapSection from "../../shared/MapSection/MapSection";
 
 
-                        <div className={s.formWrapper}>
-                            <ContactForm withEmail
-                                         withMessage
-                                         formName={'Форма со страницы Контакты" (Обратная связь)'}
-                                         swalText={'мы внимательно изучим Ваше сообщение и свяжемся с Вами при необходимости'}
-                                         submitBtnText={'Отправить'}/>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+const SliderStyles = styled(Slider)`
+  .slick-next:before,
+  .slick-prev:before {
+    color: #000;
+  }
+  .slick-list {
+    transition: all 0.3s;
+    overflow: visible;
+  }
+  .slick-slider {
+    margin-top: 90px;
+  }
+  .slick-dots li {
+    margin: 0
+  }
+  
+.slick-slide img {
+  width: 100%;
+  margin: 0 40px 0 0;
 }
 
-export default ContactsPage;
+.slick-track {
+  margin: 0 auto;
+}
+@media screen and (max-width: 1200px){
+  .slick-slider {
+    margin-top: 0;
+  }
+}
+`;
+
+const PromotionsPage = () => {
+
+    const settings = {
+        infinite: true,
+        centerPadding: "60px",
+        variableWidth: true,
+        speed: 500,
+        nextArrow: <NextArrow positionStyles={{
+            bottom: "15px",
+            right: "calc(50% - 60px)"
+        }}/>,
+        prevArrow: <PrevArrow positionStyles={{
+            bottom: "15px",
+            left: "calc(50% - 60px)"
+        }}/>,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    dots: true,
+                    arrows: false
+                }
+            },
+        ]
+    };
+
+    const items = promotionsPageData.slides.map((item, index) => {
+        const {img, title, subtitle, key, link} = item;
+        return (
+            <div className="SliderElement" key={key}>
+                <SpecialsSliderItem
+                    img={img}
+                    title={title}
+                    subtitle={subtitle}
+                    active={index === 1}
+                    link={link}
+                />
+            </div>
+        );
+    });
+
+    return (<>
+            <section className='section'>
+                <div className={s.wrapper}>
+                    <div className={s.container}>
+
+                        <div className={s.topRow}>
+                            <h4 className={s.title}>
+                                <span>Акции</span>
+                                <span>и специальные</span>
+                                <span>предложения</span>
+                            </h4>
+                            <div className={s.textContent}>
+                                <p><b>Воспользуйтесь специальными предложениями от отеля Riviera Sunrise!</b></p>
+                                <p>Интересные акции, новинки и скидки – позволят Вам отдохнуть еще выгоднее. Планируйте
+                                    свой отдых, приезжайте и получайте максимум приятных эмоций от времени, проведенного
+                                    вместе с нами!</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div className={s.sliderContainer}>
+                        <div className={s.sliderTitle}>Активные спецпредложения</div>
+                        <SliderStyles>
+                            <Slider {...settings}>{items}</Slider>
+                        </SliderStyles>
+                    </div>
+
+                    <div className={s.sliderContainer}>
+                        <div className={s.sliderTitle}>Прошедшие спецпредложения</div>
+                        <SliderStyles>
+                            <Slider {...settings}>{items}</Slider>
+                        </SliderStyles>
+                    </div>
+                </div>
+            </section>
+
+            <section className='section last'>
+                <MapSection/>
+            </section>
+        </>
+    );
+};
+
+export default PromotionsPage;
