@@ -89,7 +89,7 @@ const WidthSpecialsSlider = ({title = "Заголовок", subtitle = "Како
 
     return (
         <div className={s.wrapper}>
-            <HeadlineCenter title={title} />
+            <HeadlineCenter title={title} style={{marginBottom:'30px'}} />
             <div className={s.container}>
                     <SliderStyles>
                         <Slider {...settings}>{items}</Slider>
