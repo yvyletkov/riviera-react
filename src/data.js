@@ -142,6 +142,22 @@ import iconSPA from "./img/mice/team-building/icons/2.png";
 import iconExhibition from "./img/mice/exhibition/icons/1.png";
 import iconEscort from "./img/mice/exhibition/icons/2.png";
 import iconBonuses from "./img/mice/exhibition/icons/3.png";
+import weddingImgGrid from "./img/events/grid-slider/1.jpg";
+import ceremonyImgGrid from "./img/events/grid-slider/2.jpg";
+import birthdayImgGrid from "./img/events/grid-slider/3.jpg";
+import henPartyImgGrid from "./img/events/grid-slider/4.jpg";
+import bachelorPartyImgGrid from "./img/events/grid-slider/5.jpg";
+import conferenceImgGrid from "./img/mice/grid-slider/1.jpg";
+import forumImgGrid from "./img/mice/grid-slider/2.jpg";
+import exhibitionImgGrid from "./img/mice/grid-slider/3.jpg";
+import intensiveImgGrid from "./img/mice/grid-slider/4.jpg";
+import trainingsImgGrid from "./img/mice/grid-slider/5.jpg";
+import teamImgGrid from "./img/mice/grid-slider/6.jpg";
+import tourismImgGrid from "./img/mice/grid-slider/7.jpg";
+import childrenAnimImg from "./img/family-holiday/1.jpg";
+import childrenPoolImg from "./img/family-holiday/2.jpg";
+import birthdayImg from "./img/family-holiday/3.jpg";
+import playgroundImg from "./img/family-holiday/4.jpg";
 
 //страницы майса
 export const micePagesData = {
@@ -452,15 +468,105 @@ export const homePageData = {
     gridSlides: [
         {
             name: "Курортный отдых",
-            firstRow: [{title: "Семейный отдых", img: gridKurortImg1, href: '#'}, {
-                title: "Номера и цены",
-                img: gridKurortImg2,
-                href: '#'
-            }, {title: "Отдых без детей", img: gridKurortImg3, href: '#'}, {
-                title: "Отдых с друзьями",
-                img: gridKurortImg4,
-                href: '#'
-            }],
+            firstRow: [
+                {
+                    title: "Семейный отдых",
+                    img: gridKurortImg1,
+                    href: '/family-vacation'
+                },
+                {
+                    title: "Номера и цены",
+                    img: gridKurortImg2,
+                    href: '/rooms-and-prices'
+                },
+                {
+                    title: "Отдых без детей",
+                    img: gridKurortImg3,
+                    href: '/vacation-for-yourself'
+                },
+                {
+                    title: "Отдых с друзьями",
+                    img: gridKurortImg4,
+                    href: '/vacation-with-friends'
+                }
+            ],
+            secondRow: [
+                {
+                    title: "Турпакет",
+                    img: gridKurortImg5,
+                    href: '#'
+                },
+                {
+                    title: "Medical Spa",
+                    img: gridKurortImg6,
+                    href: '#'
+                },
+                {
+                    title: "Командировка",
+                    img: gridKurortImg7,
+                    href: '#'
+                },
+                {
+                    title: "Романтический отдых",
+                    img: gridKurortImg8,
+                    href: '/romantic-vacation'
+                }],
+        },
+        {
+            name: "Праздники",
+            firstRow: [
+                {
+                    title: "Свадьба",
+                    img: weddingImgGrid,
+                    href: '/wedding'
+                },
+                {
+                    title: "Выездная церемония",
+                    img: ceremonyImgGrid,
+                    href: '/visiting-ceremony'
+                },
+                {
+                    title: "День рождения",
+                    img: birthdayImgGrid,
+                    href: '/birthday'
+                }],
+            secondRow: [
+                {
+                    title: "Девичник",
+                    img: henPartyImgGrid,
+                    href: '/hen-party'
+                },
+                {
+                    title: "Мальчишник",
+                    img: bachelorPartyImgGrid,
+                    href: '/bachelor-party'
+                },
+            ],
+        },
+        {
+            name: "Курортный отдых",
+            firstRow: [
+                {
+                    title: "Семейный отдых",
+                    img: gridKurortImg1,
+                    href: '#'
+                },
+                {
+                    title: "Номера и цены",
+                    img: gridKurortImg2,
+                    href: '#'
+                },
+                {
+                    title: "Отдых без детей",
+                    img: gridKurortImg3,
+                    href: '#'
+                },
+                {
+                    title: "Отдых с друзьями",
+                    img: gridKurortImg4,
+                    href: '#'
+                }
+            ],
             secondRow: [{title: "Турпакет", img: gridKurortImg5, href: '#'}, {
                 title: "Medical Spa",
                 img: gridKurortImg6,
@@ -472,68 +578,47 @@ export const homePageData = {
             }],
         },
         {
-            name: "Развлечения",
-            firstRow: [{title: "Семейный отдых", img: gridKurortImg1, href: '#'}, {
-                title: "Что-то другое",
-                img: gridKurortImg2,
-                href: '#'
-            }, {title: "Отдых без детей", img: gridKurortImg3, href: '#'}, {
-                title: "Что-то другое",
-                img: gridKurortImg4,
-                href: '#'
-            }],
-            secondRow: [{title: "Турпакет", img: gridKurortImg5, href: '#'}, {
-                title: "Что-то другое",
-                img: gridKurortImg6,
-                href: '#'
-            }, {title: "Командировка", img: gridKurortImg7, href: '#'}, {
-                title: "Что-то другое",
-                img: gridKurortImg8,
-                href: '#'
-            }],
+            name: "Деловые мероприятия",
+            firstRow: [
+                {
+                    title: "Конференция",
+                    img: conferenceImgGrid,
+                    href: '/conference'
+                },
+                {
+                    title: "Форум",
+                    img: forumImgGrid,
+                    href: '/forum'
+                },
+                {
+                    title: "Выставка",
+                    img: exhibitionImgGrid,
+                    href: '/exhibition'
+                },
+                {
+                    title: "Интенсив",
+                    img: intensiveImgGrid,
+                    href: '/intensive'
+                }
+            ],
+            secondRow: [
+                {
+                    title: "Семинар/Тренинги",
+                    img: trainingsImgGrid,
+                    href: '/trainings'
+                },
+                {
+                    title: "Тимбилдинг",
+                    img: teamImgGrid,
+                    href: '/team-building'
+                },
+                {
+                    title: "Событийный туризм",
+                    img: tourismImgGrid,
+                    href: '/event-tourism'
+                },
+            ],
         },
-        {
-            name: "Инфраструктура",
-            firstRow: [{title: "Семейный отдых", img: gridKurortImg1, href: '#'}, {
-                title: "Еще один слайд",
-                img: gridKurortImg2,
-                href: '#'
-            }, {title: "Отдых без детей", img: gridKurortImg3, href: '#'}, {
-                title: "Еще один слайд",
-                img: gridKurortImg4,
-                href: '#'
-            }],
-            secondRow: [{title: "Турпакет", img: gridKurortImg5, href: '#'}, {
-                title: "Еще один слайд",
-                img: gridKurortImg6,
-                href: '#'
-            }, {title: "Командировка", img: gridKurortImg7, href: '#'}, {
-                title: "Еще один слайд",
-                img: gridKurortImg8,
-                href: '#'
-            }],
-        },
-        {
-            name: "Четвертый слайд",
-            firstRow: [{title: "Семейный отдых", img: gridKurortImg1, href: '#'}, {
-                title: "Еще один слайд",
-                img: gridKurortImg2,
-                href: '#'
-            }, {title: "Отдых без детей", img: gridKurortImg3, href: '#'}, {
-                title: "Еще один слайд",
-                img: gridKurortImg4,
-                href: '#'
-            }],
-            secondRow: [{title: "Турпакет", img: gridKurortImg5, href: '#'}, {
-                title: "Еще один слайд",
-                img: gridKurortImg6,
-                href: '#'
-            }, {title: "Командировка", img: gridKurortImg7, href: '#'}, {
-                title: "Еще один слайд",
-                img: gridKurortImg8,
-                href: '#'
-            }],
-        }
     ],
     centeredSlides: commonAfishaSlides,
     specialsSlides: commonSpecialsSlides,
@@ -1226,25 +1311,25 @@ export const vacationPagesData = {
     ],
     wideSlides: [
         {
-            img: classic1img,
+            img: childrenAnimImg,
             title: "Детская анимация",
             link: "#",
             bookingLink: "",
         },
         {
-            img: classic2img,
+            img: childrenPoolImg,
             title: "Детская зона бассейна",
             link: "#",
             bookingLink: "",
         },
         {
-            img: classic3img,
+            img: birthdayImg,
             title: "День рождения",
             link: "#",
             bookingLink: "",
         },
         {
-            img: classic2img,
+            img: playgroundImg,
             title: "Игровая площадка",
             link: "#",
             bookingLink: "",
