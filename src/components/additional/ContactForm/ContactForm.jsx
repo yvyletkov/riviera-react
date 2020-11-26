@@ -65,7 +65,6 @@ const ContactForm = ({submitBtnText, withEmail, withPhone, withMessage, formName
     const data = {};
 
     const onSubmit = (values, {resetForm}) => {
-        debugger
         data.form = {
             "url": `https://rivierasunrise.com${props.location.pathname}`,
             "alias": formName
