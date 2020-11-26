@@ -33,7 +33,7 @@ const KitchenBlock = ({firstImg = kitchenImg1}) => {
 
                 <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
                                   popupTitleText={'Для этого, пожалуйста, оставьте свои контактные данные️'}
-                                  submitBtnText='Держите'
+                                  submitBtnText='Получить меню'
                                   formName={`Форма из блока "Вас ожидает изысканная кухня" (получить меню)`}
                                   swalText={'мы отправим всю необходимую информацию на указанную Вами почту в самое ближайшее время!'}
                                   withEmail/>

@@ -64,8 +64,8 @@ const MicePageBanner = ({
                         text={"Получить смету"} onClick={() => setPopupOpen(true)}/>
 
                 <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
-                                  popupTitleText={'Чтобы получить смету и другую информацию, пожалуйста, оставьте свои контактные данные️'}
-                                  submitBtnText='Хорошо'
+                                  popupTitleText={'Для этого, пожалуйста, оставьте свои контактные данные️'}
+                                  submitBtnText='Получить смету'
                                   formName={`Форма с главного баннера страницы MICE (получить смету)`}
                                   swalText={'мы отправим всю необходимую информацию на указанную Вами почту в самое ближайшее время!'}
                                   withEmail

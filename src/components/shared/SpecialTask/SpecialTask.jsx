@@ -36,7 +36,7 @@ const SpecialTask = () => {
 
                     <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
                                       popupTitleText={'Чтобы записаться на консультацию, пожалуйста, оставьте свои контактные данные️'}
-                                      submitBtnText='Хорошо'
+                                      submitBtnText='Оставить заявку'
                                       formName={`Форма из блока "Ваша задача особенная" (Оставить заявку)`}
                                       swalText={'скоро наши менеджеры свяжутся с Ваши'}
                                       withEmail
