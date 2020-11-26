@@ -98,37 +98,37 @@ const Header = () => {
 
                                 <div className={s.list}>
 
-                                    <NavLink to={"/"}>
+                                    <NavLink to={"/rooms-and-prices"}>
                                         <div className={s.listItem} onClick={toggleMenu}>
                                             Номера корпуса Модерн
                                         </div>
                                     </NavLink>
 
-                                    <NavLink to={"/"}>
+                                    <NavLink to={"/rooms-and-prices"}>
                                         <div className={s.listItem} onClick={toggleMenu}>
                                             Номера корпуса Классик
                                         </div>
                                     </NavLink>
 
-                                    <NavLink to={"/"}>
+                                    <NavLink to={"/family-vacation"}>
                                         <div className={s.listItem} onClick={toggleMenu}>
                                             Семейный отдых
                                         </div>
                                     </NavLink>
 
-                                    <NavLink to={"/"}>
+                                    <NavLink to={"/vacation-for-yourself"}>
                                         <div className={s.listItem} onClick={toggleMenu}>
                                             Отдых без детей
                                         </div>
                                     </NavLink>
 
-                                    <NavLink to={"/"}>
+                                    <NavLink to={"/romantic-vacation"}>
                                         <div className={s.listItem} onClick={toggleMenu}>
                                             Романтический отдых
                                         </div>
                                     </NavLink>
 
-                                    <NavLink to={"/"}>
+                                    <NavLink to={"/vacation-with-friends"}>
                                         <div className={s.listItem} onClick={toggleMenu}>
                                             Отдых с друзьями
                                         </div>
@@ -144,48 +144,48 @@ const Header = () => {
                                 </p>
                                 <img src={arrowIcon} onClick={toggleMice}
                                      className={!miceOpened ? s.arrow + ' ' + s.rotated : s.arrow}
-                                     alt=""/>
+                                     alt="a"/>
 
 
                                 <div className={s.list}>
 
-                                    <NavLink to={"/"}>
+                                    <NavLink to={"/conference"}>
                                         <div className={s.listItem} onClick={toggleMenu}>
                                             Конференция
                                         </div>
                                     </NavLink>
 
-                                    <NavLink to={"/"}>
+                                    <NavLink to={"/forum"}>
                                         <div className={s.listItem} onClick={toggleMenu}>
                                             Форум
                                         </div>
                                     </NavLink>
 
-                                    <NavLink to={"/"}>
+                                    <NavLink to={"/event-tourism"}>
                                         <div className={s.listItem} onClick={toggleMenu}>
                                             Событийный туризм
                                         </div>
                                     </NavLink>
 
-                                    <NavLink to={"/"}>
+                                    <NavLink to={"/trainings"}>
                                         <div className={s.listItem} onClick={toggleMenu}>
                                             Семинар/Тренинг
                                         </div>
                                     </NavLink>
 
-                                    <NavLink to={"/"}>
+                                    <NavLink to={"/intensive"}>
                                         <div className={s.listItem} onClick={toggleMenu}>
                                             Интенсив
                                         </div>
                                     </NavLink>
 
-                                    <NavLink to={"/"}>
+                                    <NavLink to={"/team-building"}>
                                         <div className={s.listItem} onClick={toggleMenu}>
                                             Тимбилдинг
                                         </div>
                                     </NavLink>
 
-                                    <NavLink to={"/"}>
+                                    <NavLink to={"/exhibition"}>
                                         <div className={s.listItem} onClick={toggleMenu}>
                                             Выставки
                                         </div>
@@ -322,10 +322,13 @@ const Header = () => {
                             </div>
                             <div className={s.phone}>
                                 <img src={logoPhone} alt="Телефон"/>
-                                8 800 300 68 41
+                                <a href='tel:8 800 300 68 41'>8 800 300 68 41</a>
                             </div>
                             <div className={s.icons}>
-                                <img src={logoInst} alt="Instagram"/>
+                                <a href="https://vk.com" target='_blank'><img src={logoInst} alt="Instagram"/></a>
+                                <a href="https://fb.com" target='_blank'><img src={logoFb} alt="Facebook"/></a>
+                                <a href="https://youtube.com" target='_blank'><img src={logoYt} alt="Youtube"/></a>
+                                <a href="https://vk.com" target='_blank'><img src={logoVk} alt="VK"/></a>
                             </div>
 
                         </div>

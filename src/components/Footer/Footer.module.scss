@@ -30,6 +30,7 @@
 }
 
 .footerFlex img {
+  height: 20px;
   object-fit: contain;
 }
 
@@ -100,6 +101,10 @@
 
 .icons {
   display: flex;
+
+  img {
+    height: 20px;
+  }
 }
 
 .icons > img:not(:last-child) {
