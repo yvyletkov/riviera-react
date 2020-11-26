@@ -195,6 +195,41 @@ a:hover {
   .flexContainer {
     display: flex;
 
+    .col {
+      .callUs {
+        position: relative;
+        padding-top: 12px;
+        font-family: "Helvetica Neue Medium";
+        font-size: 22px;
+        margin-bottom: 13px;
+        &:before {
+          content: "";
+          position: absolute;
+          width: 15px;
+          height: 3px;
+          background-color: #ff6c39;
+          left: 0;
+          top: 0px;
+        }
+
+      }
+
+
+      img {
+        display: inline;
+        margin-right: 10px;
+      }
+
+      .location {
+        white-space: nowrap;
+        margin-bottom: 10px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 80px;
+      }
+    }
+
     .menuItem {
 
       a, p {

@@ -9,6 +9,12 @@ import phone from "../../img/header/phone.png"
 import Button from "../shared/Button/Button";
 import {NavLink} from "react-router-dom";
 import arrowIcon from "../../img/arrow-accordeon.png";
+import logoVk from "../../img/footer/vk.png";
+import logoFb from "../../img/footer/facebook.png";
+import logoInst from "../../img/footer/inst.png";
+import logoYt from "../../img/footer/youtube.png";
+import logoPin from "../../img/footer/pin.png";
+import logoPhone from "../../img/footer/phone.png";
 
 
 const Link = ({title, icon, link = '#', extraClass = null}) => {
@@ -27,25 +33,17 @@ const Header = () => {
 
     const toggleResortVacation = () => {
         setMiceOpened(false);
-        setEventOpened(false);
-        setInfrastructureOpened(false);
         setResortVacationOpened(!resortVacationOpened)
     };
     const toggleMice = () => {
         setResortVacationOpened(false);
-        setEventOpened(false);
-        setInfrastructureOpened(false);
         setMiceOpened(!miceOpened)
     };
     const toggleEvent = () => {
-        setResortVacationOpened(false);
-        setMiceOpened(false);
         setInfrastructureOpened(false);
         setEventOpened(!eventOpened)
     };
     const toggleInfrastructure = () => {
-        setResortVacationOpened(false);
-        setMiceOpened(false);
         setEventOpened(false);
         setInfrastructureOpened(!infrastructureOpened)
     };
@@ -197,10 +195,138 @@ const Header = () => {
 
                             </div>
 
+                        </div>
+
+                        <div className={s.col}>
+
+                            <div className={!eventOpened ? `${s.menuItem}` : `${s.menuItem} ${s.opened}`}>
+                                <p onClick={toggleEvent}>
+                                    События
+                                </p>
+                                <img src={arrowIcon} onClick={toggleEvent}
+                                     className={!eventOpened ? s.arrow + ' ' + s.rotated : s.arrow}
+                                     alt=""/>
+
+
+                                <div className={s.list}>
+
+                                    <NavLink to={"/wedding"}>
+                                        <div className={s.listItem} onClick={toggleMenu}>
+                                            Свадьба
+                                        </div>
+                                    </NavLink>
+
+                                    <NavLink to={"/visiting-ceremony"}>
+                                        <div className={s.listItem} onClick={toggleMenu}>
+                                            Выездная церемония
+                                        </div>
+                                    </NavLink>
+
+                                    <NavLink to={"/birthday"}>
+                                        <div className={s.listItem} onClick={toggleMenu}>
+                                            День рождения
+                                        </div>
+                                    </NavLink>
+
+                                    <NavLink to={"/bachelor-party"}>
+                                        <div className={s.listItem} onClick={toggleMenu}>
+                                            Мальчишник
+                                        </div>
+                                    </NavLink>
+
+                                    <NavLink to={"/hen-party"}>
+                                        <div className={s.listItem} onClick={toggleMenu}>
+                                            Девичник
+                                        </div>
+                                    </NavLink>
+
+                                </div>
 
                             </div>
 
+                            <div className={!infrastructureOpened ? `${s.menuItem}` : `${s.menuItem} ${s.opened}`}>
+                                <p onClick={toggleInfrastructure}>
+                                    Инфраструктура
+                                </p>
+                                <img src={arrowIcon} onClick={toggleInfrastructure}
+                                     className={!infrastructureOpened ? s.arrow + ' ' + s.rotated : s.arrow}
+                                     alt=""/>
+
+
+                                <div className={s.list}>
+
+                                    <NavLink to={"/"}>
+                                        <div className={s.listItem} onClick={toggleMenu}>
+                                            Бассейны и пляж
+                                        </div>
+                                    </NavLink>
+
+                                    <NavLink to={"/"}>
+                                        <div className={s.listItem} onClick={toggleMenu}>
+                                            SPA комплекс
+                                        </div>
+                                    </NavLink>
+
+                                    <NavLink to={"/"}>
+                                        <div className={s.listItem} onClick={toggleMenu}>
+                                            Рестораны
+                                        </div>
+                                    </NavLink>
+
+                                    <NavLink to={"/rooms-and-prices"}>
+                                        <div className={s.listItem} onClick={toggleMenu}>
+                                            Номера
+                                        </div>
+                                    </NavLink>
+
+
+                                </div>
+
+                            </div>
+
+                            <div className={s.menuItem} onClick={toggleMenu}>
+                                <NavLink to={"/promotions"}>
+                                    Спецпредложения
+                                </NavLink>
+                            </div>
+
+                        </div>
+
                         <div className={s.col}>
+
+                            <div className={s.menuItem} onClick={toggleMenu}>
+                                <NavLink to={"/"}>
+                                    Отзывы
+                                </NavLink>
+                            </div>
+
+                            <div className={s.menuItem} onClick={toggleMenu}>
+                                <NavLink to={"/"}>
+                                    Анимация
+                                </NavLink>
+                            </div>
+
+                            <div className={s.menuItem} onClick={toggleMenu}>
+                                <NavLink to={"/contacts"}>
+                                    Контакты
+                                </NavLink>
+                            </div>
+
+                        </div>
+
+                        <div className={`${s.col}`}>
+                            <div className={s.callUs}>Свяжитесь с нами</div>
+                            <div className={s.location}>
+                                <img src={logoPin} alt="Локация"/>
+                                ул. Ленина 2, Алушта, Крым
+                            </div>
+                            <div className={s.phone}>
+                                <img src={logoPhone} alt="Телефон"/>
+                                8 800 300 68 41
+                            </div>
+                            <div className={s.icons}>
+                                <img src={logoInst} alt="Instagram"/>
+                            </div>
 
                         </div>
 
