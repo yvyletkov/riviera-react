@@ -35,7 +35,7 @@ const EventPageBanner = ({mobileFontSize, fontSize, titles, icons, bannerImg, ba
 
                     <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
                                       popupTitleText={'Чтобы получить точную информацию о стоимости, позвольте нам связаться с Вами'}
-                                      submitBtnText='Хорошо'
+                                      submitBtnText='Узнать стоимость'
                                       formName={`Форма с главного баннера (узнать стоимость)`}
                                       swalText={'очень скоро наши менеджеры с Вами свяжутся. Также не забывайте проверять указанную почту :)'}
                                       withEmail

@@ -80,6 +80,22 @@ const PromotionsPage = () => {
         );
     });
 
+    const itemsDecolorized = promotionsPageData.slides.map((item, index) => {
+        const {img, title, subtitle, key, link} = item;
+        return (
+            <div className="SliderElement" key={key}>
+                <SpecialsSliderItem
+                    img={img}
+                    title={title}
+                    subtitle={subtitle}
+                    active={index === 1}
+                    link={link}
+                    decolorized={true}
+                />
+            </div>
+        );
+    });
+
     return (<>
             <section className='section'>
                 <div className={s.wrapper}>
@@ -111,7 +127,7 @@ const PromotionsPage = () => {
                     <div className={s.sliderContainer}>
                         <div className={s.sliderTitle}>Прошедшие спецпредложения</div>
                         <SliderStyles>
-                            <Slider {...settings}>{items}</Slider>
+                            <Slider {...settings}>{itemsDecolorized}</Slider>
                         </SliderStyles>
                     </div>
                 </div>

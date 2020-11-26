@@ -1,0 +1,15 @@
+.wrapper {
+  max-width: 1920px;
+  width: 100%;
+  height: calc(100vh - 90px);
+  max-height: 750px;
+  margin: 0 auto;
+  margin-top: 90px;
+  @media (max-width: 1200px) {
+    margin-top: 70px;
+    height: calc(100vh - 70px);
+
+  }
+  background-position: center;
+  background-size: cover;
+}

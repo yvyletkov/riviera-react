@@ -13,6 +13,9 @@
 }
 
 .card img {
+  &.decolorized {
+    filter: saturate(0);
+  }
   height: 331px;
   object-fit: cover;
 }

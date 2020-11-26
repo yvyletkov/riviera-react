@@ -64,7 +64,7 @@ $black: #171717;
   display: block;
   text-transform: uppercase;
   font-family: "Helvetica Neue Black";
-  font-size: 123px;
+  font-size: 110px;
   line-height: 0.9;
 }
 
@@ -74,8 +74,8 @@ $black: #171717;
 }
 
 .rightSide {
-  position: relative;
-  left: -75px;
+  position: absolute;
+  left: 45%;
 }
 
 .cirqles {
@@ -104,8 +104,8 @@ $black: #171717;
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 298px;
-  right: 10px;
+  bottom: -40px;
+  right: -60px;
   border-radius: 50%;
   box-shadow: -10.261px 28.191px 57px 0px rgba(255, 108, 57, 0.41);
   width: 65px;

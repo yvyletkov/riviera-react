@@ -56,10 +56,10 @@ const ContactForm = ({submitBtnText, withEmail, withPhone, withMessage, formName
         email: withEmail ? Yup.string()
             .email('E-mail введен некорректно')
             .required('Это поле тоже обязательное') : null,
-        message: Yup.string()
+        message: withMessage ? Yup.string()
             .min(2, 'Слишком мало букв 😢')
             .max(3000, 'Слишком много букв 😢')
-            .required('Пожалуйста, введите текст сообщения'),
+            .required('Пожалуйста, введите текст сообщения') : null,
     });
 
     const data = {};

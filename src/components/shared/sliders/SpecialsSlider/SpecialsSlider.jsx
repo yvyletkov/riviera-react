@@ -93,7 +93,7 @@ const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-�
 
     return (
         <div className={s.wrapper}>
-            <div className={fullWidth ? s.container + ' ' + s.fullWidth : s.container}>
+            <div className={s.container}>
                 <div className={s.leftBlock}>
                     <Headline subtitle={subtitle} title={title}/>
                     <p>{text}</p>
@@ -102,7 +102,7 @@ const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-�
 
                     <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
                                       popupTitleText={'Для этого, пожалуйста, оставьте свои контактные данные️'}
-                                      submitBtnText='Держите'
+                                      submitBtnText={btnText}
                                       formName={`Форма из блока "Дополнительные услуги" (получить прайс по услугам)`}
                                       swalText={'мы отправим всю необходимую информацию на указанную Вами почту в самое ближайшее время!'}
                                       withEmail/>

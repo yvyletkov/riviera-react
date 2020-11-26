@@ -6,7 +6,7 @@ import LargeGallerySlider from "../../shared/sliders/LargeGallerySlider/LargeGal
 import SpecialsSlider from "../../shared/sliders/SpecialsSlider/SpecialsSlider";
 import MapSection from "../../shared/MapSection/MapSection";
 
-const RoomPage = ({data}) => {
+const SingleRoomPage = ({data}) => {
     return <>
         <RoomPageBanner campusName={data.campusName} roomName={data.roomName} roomNameFontSize={data.roomNameFontSize}/>
 
@@ -33,5 +33,5 @@ const RoomPage = ({data}) => {
 
 };
 
-export default RoomPage;
+export default SingleRoomPage;
 
