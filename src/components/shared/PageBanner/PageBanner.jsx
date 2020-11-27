@@ -25,7 +25,7 @@ const PageBanner = ({fontSize, fontSizeMobile, subtitle, topLine, bottomLine, ba
                         <div className={s.pageNameBlock}>
                             <h2>{subtitle}</h2>
                             <h1 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? fontSizeMobile[0] : fontSize[0]}}>{topLine}</h1>
-                            <h1 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? fontSizeMobile[1] : fontSize[1]}}>{bottomLine}</h1>
+                            <h1 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? fontSizeMobile[1] : fontSize[1]}} dangerouslySetInnerHTML={{__html: bottomLine}}/>
                             {extraLine && <h3 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? extraLine[1] : extraLine[2]}} className={s.extraline}>{extraLine[0]}</h3>}
                         </div>
                         <div className={descriptionShown ? s.descriptionBtn + ' ' + s.active : s.descriptionBtn} onClick={() => setDescriptionShown(!descriptionShown)}>

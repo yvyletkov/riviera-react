@@ -40,7 +40,7 @@ const BirthdayPage = () => {
         {/* Выберите место празднования */}
 
         <section className='section'>
-            <EventMainSlider slides={eventPagesData.birthdayPage.birthdayMainSlides} title={'Выберите место празднования'} titleMobile={'Выберите место'}/>
+            <EventMainSlider initialSlideIndex={1} manySlides slides={eventPagesData.birthdayPage.birthdayMainSlides} title={'Выберите место празднования'} titleMobile={'Выберите место'}/>
         </section>
 
         {/* Планировать свой праздник лучше заранее */}

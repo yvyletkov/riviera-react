@@ -10,16 +10,16 @@ import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
 
 const VacationWithFriendsPage = () => {
     return <>
-        <PageBanner fontSize={["40px", "71px"]}
-                    fontSizeMobile={["6vw", "10.4vw"]}
+        <PageBanner fontSize={["82px", "60px"]}
+                    fontSizeMobile={["15vw", "10.4vw"]}
                     subtitle={'Отдых c друзьями'}
-                    topLine={"Отдых, который вы"}
-                    bottomLine={"планировали"}
+                    topLine={"Отдых,"}
+                    bottomLine={"который Вы</br>планировали"}
                     bannerImg={vacationPagesData.vacationWithFriendsBannerImg}
                     bannerMobileImg={vacationPagesData.vacationWithFriendsBannerMobileImg}
                     descr={'Сделай отдых особенным для себя и друзьей!<br/>Один из лучших курортных отелей Riviera Sunrise Resort & SPA, г. Алушта, приглашает вас в Крым на крутой отдых с друзьями.<br/>В гостиничном комплексе 209 номеров различных категорий: от «Стандарта» до «Президентского люкса». Отличный климат, элегантный дизайн, современное оснащение номеров, высококлассный сервис, анимация для взрослых и многое другое – создают идеальные условия для Вашего комфортного отдыха. '}/>
 
-        <section className='section'>
+        <section className='section first'>
             <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={vacationPagesData.modernDescr}
                          data={vacationPagesData.modernSlides}/>
 

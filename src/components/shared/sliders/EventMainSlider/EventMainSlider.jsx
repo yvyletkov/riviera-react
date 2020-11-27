@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import s from "./EventMainSlider.module.scss";
 import styled from "styled-components";
 import HeadlineCenter from "../../HeadlineCenter/HeadlineCenter";
+import {NextArrow, PrevArrow} from "../SliderArrows/sliderArrowButtons";
 
 const SliderStyles = styled(Slider)`
   .slick-next:before,
@@ -31,20 +32,60 @@ const SliderStyles = styled(Slider)`
 }
 `;
 
+const SliderStylesManySlider = styled(Slider)`
+  .slick-next:before,
+  .slick-prev:before {
+    color: #000;
+  }
+  .slick-list {
+    overflow: visible;
+  }
+
+.slick-track {
+  margin: 0 auto;
+  display: flex;
+  justify-content: start;
+}
+@media screen and (min-width: 481px){
+ .slick-slider {
+    height: unset;
+    padding-bottom: 40px;
+  }
+}
+@media screen and (max-width: 1200px){
+  .slick-slider {
+    height: unset
+  }
+}
+`;
 
 
-const EventMainSlider = ({slides, title, titleMobile}) => {
+// const SliderStylesManySlider = str.replace("Microsoft", "W3Schools");
+
+
+const EventMainSlider = ({slides, title, titleMobile, initialSlideIndex = 0, manySlides = false}) => {
 
     const settings = {
+        initialSlide: initialSlideIndex,
         infinite: false,
         slidesToShow: 3,
         centerMode: true,
-        arrows: false,
+        arrows: manySlides,
         variableWidth: true,
+        nextArrow: <NextArrow positionStyles={{
+            bottom: "-30px",
+            right: "50%",
+            transform: "translateX(120%)"
+        }}/>,
+        prevArrow: <PrevArrow positionStyles={{
+            bottom: "-30px",
+            left: "50%",
+            transform: "translateX(-120%)"
+        }}/>,
         speed: 500,
         responsive: [
             {
-                breakpoint: 480,
+                breakpoint: 1024,
                 settings: {
                     slidesToShow: 1,
                     initialSlide: 0,
@@ -72,11 +113,13 @@ const EventMainSlider = ({slides, title, titleMobile}) => {
 
     return (
         <div className={s.wrapper}>
-            <div className={s.container}>
+            <div className={!manySlides ? s.container : s.container + ' ' + s.withPadding}>
                 <HeadlineCenter title={window.matchMedia('(max-width: 490px').matches ? titleMobile : title}/>
-                <SliderStyles>
-                    <Slider {...settings}>{items}</Slider>
-                </SliderStyles>
+                {manySlides ? <SliderStylesManySlider><Slider {...settings}>{items}</Slider></SliderStylesManySlider>
+                    :
+                    <SliderStyles>
+                        <Slider {...settings}>{items}</Slider>
+                    </SliderStyles>}
             </div>
         </div>
     );
@@ -91,7 +134,7 @@ const WeddingSliderItem = (props) => {
     let [showDescr, setShowDescr] = React.useState(active);
 
     return (
-        <div className={showDescr ? s.card + ' ' + s.active : s.card }>
+        <div className={showDescr ? s.card + ' ' + s.active : s.card}>
 
             <img className={s.img} src={img} alt=""/>
 

@@ -222,7 +222,7 @@ input.input, textarea {
   .rodal-dialog {
     box-sizing: border-box;
     border-radius: .6125em !important;
-    padding: 2.6em 4.75em 1.75em !important;
+    padding: 2.9em 4.75em 2.45em !important;
     max-width: 430px !important;
     width: 100% !important;
     height: fit-content !important;
@@ -242,7 +242,7 @@ input.input, textarea {
 
   form {
     input {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       @media (max-width: 768px) {
         padding: 16px 40px;
       }
