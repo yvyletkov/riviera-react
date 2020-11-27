@@ -10,7 +10,7 @@ import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
 
 const RomanticVacationPage = () => {
     return <>
-        <PageBanner fontSize={["84px", "57px"]}
+        <PageBanner fontSize={["75px", "47px"]}
                     fontSizeMobile={["15.6vw", "8.7vw"]}
                     extraLine={['отдых любимому человеку', '5vw', '30px',]}
                     subtitle={'Отдых c любимым'}
@@ -20,7 +20,7 @@ const RomanticVacationPage = () => {
                     bannerMobileImg={vacationPagesData.romanticVacationBannerMobileImg}
                     descr={'Что может быть лучше отдыха с любимым человеком? Если читаете эти строки значит Вы хотели бы сделать необычный и безумно приятный подарок себе и второй половинке с чем вам поможет один из лучших курортных отелей Riviera Sunrise Resort & SPA, г. Алушта.<br/>В гостиничном комплексе 209 номеров различных категорий: от «Стандарта» до «Президентского люкса». Отличный климат, элегантный дизайн, современное оснащение номеров, высококлассный сервис, романтические ужины, SPA процедуры, анимация для взрослых и многое другое – создают идеальные условия для Вашего комфортного отдыха.'}/>
 
-        <section className='section'>
+        <section className='section first'>
             <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={vacationPagesData.modernDescr}
                          data={vacationPagesData.modernSlides}/>
 

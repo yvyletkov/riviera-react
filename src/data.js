@@ -328,6 +328,161 @@ export const micePagesData = {
     ]
 }
 
+const commonGridSlides = [
+    {
+        name: "Курортный отдых",
+        firstRow: [
+            {
+                title: "Семейный отдых",
+                img: gridKurortImg1,
+                href: '/family-vacation'
+            },
+            {
+                title: "Номера и цены",
+                img: gridKurortImg2,
+                href: '/rooms-and-prices'
+            },
+            {
+                title: "Отдых без детей",
+                img: gridKurortImg3,
+                href: '/vacation-for-yourself'
+            },
+            {
+                title: "Отдых с друзьями",
+                img: gridKurortImg4,
+                href: '/vacation-with-friends'
+            }
+        ],
+        secondRow: [
+            {
+                title: "Турпакет",
+                img: gridKurortImg5,
+                href: '#'
+            },
+            {
+                title: "Medical Spa",
+                img: gridKurortImg6,
+                href: '#'
+            },
+            {
+                title: "Командировка",
+                img: gridKurortImg7,
+                href: '#'
+            },
+            {
+                title: "Романтический отдых",
+                img: gridKurortImg8,
+                href: '/romantic-vacation'
+            }],
+    },
+    {
+        name: "Праздники",
+        firstRow: [
+            {
+                title: "Свадьба",
+                img: weddingImgGrid,
+                href: '/wedding'
+            },
+            {
+                title: "Выездная церемония",
+                img: ceremonyImgGrid,
+                href: '/visiting-ceremony'
+            },
+            {
+                title: "День рождения",
+                img: birthdayImgGrid,
+                href: '/birthday'
+            }],
+        secondRow: [
+            {
+                title: "Девичник",
+                img: henPartyImgGrid,
+                href: '/hen-party'
+            },
+            {
+                title: "Мальчишник",
+                img: bachelorPartyImgGrid,
+                href: '/bachelor-party'
+            },
+        ],
+    },
+    {
+        name: "Мероприятия",
+        firstRow: [
+            {
+                title: "Конференция",
+                img: conferenceImgGrid,
+                href: '/conference'
+            },
+            {
+                title: "Форум",
+                img: forumImgGrid,
+                href: '/forum'
+            },
+            {
+                title: "Выставка",
+                img: exhibitionImgGrid,
+                href: '/exhibition'
+            },
+            {
+                title: "Интенсив",
+                img: intensiveImgGrid,
+                href: '/intensive'
+            }
+        ],
+        secondRow: [
+            {
+                title: "Семинар/Тренинги",
+                img: trainingsImgGrid,
+                href: '/trainings'
+            },
+            {
+                title: "Тимбилдинг",
+                img: teamImgGrid,
+                href: '/team-building'
+            },
+            {
+                title: "Событийный туризм",
+                img: tourismImgGrid,
+                href: '/event-tourism'
+            },
+        ],
+    },
+    {
+        name: "Курортный отдых",
+        firstRow: [
+            {
+                title: "Семейный отдых",
+                img: gridKurortImg1,
+                href: '#'
+            },
+            {
+                title: "Номера и цены",
+                img: gridKurortImg2,
+                href: '#'
+            },
+            {
+                title: "Отдых без детей",
+                img: gridKurortImg3,
+                href: '#'
+            },
+            {
+                title: "Отдых с друзьями",
+                img: gridKurortImg4,
+                href: '#'
+            }
+        ],
+        secondRow: [{title: "Турпакет", img: gridKurortImg5, href: '#'}, {
+            title: "Medical Spa",
+            img: gridKurortImg6,
+            href: '#'
+        }, {title: "Командировка", img: gridKurortImg7, href: '#'}, {
+            title: "Романтический отдых",
+            img: gridKurortImg8,
+            href: '#'
+        }],
+    },
+];
 const commonSpecialsSlides = [
     {
         img: promoImg1,
@@ -494,282 +649,128 @@ const commonModernDescr = [
     '146 номеров в современном дизайне',
     'Дизайн интерьера выдержан в стиле Модерн и выполнен в концепции Natural Cool и Ocean Style. Современная эксклюзивная дизайнерская мебель в натуральных тонах создает лучшие условия для комфорта и уюта.'
 ];
+const commonGallerySlides = [
+    {
+        img: promoImg1,
+        title: "Корпус Modern",
+        description: "Номер: стандарт улучшенный двухместный",
+        href: "#",
+        key: 1,
+    },
+    {
+        img: promoImg2,
+        title: "Корпус Modern",
+        description: "Номер: стандарт улучшенный двухместный",
+        href: "#",
+        key: 2,
+    },
+    {
+        img: promoImg3,
+        title: "Корпус Modern",
+        description: "Номер: стандарт улучшенный двухместный",
+        href: "#",
+        key: 3,
+    },
+    {
+        img: img4,
+        title: "Корпус Modern",
+        description: "Номер: стандарт улучшенный двухместный",
+        href: "#",
+        key: 4,
+    },
+    {
+        img: img5,
+        title: "Корпус Modern",
+        description: "Номер: стандарт улучшенный двухместный",
+        href: "#",
+        key: 5,
+    },
+    {
+        img: img6,
+        title: "Корпус Modern",
+        description: "Номер: стандарт улучшенный двухместный",
+        href: "#",
+        key: 6,
+    },
+    {
+        img: img7,
+        title: "Корпус Modern",
+        description: "Номер: стандарт улучшенный двухместный",
+        href: "#",
+        key: 7,
+    },
+    {
+        img: img8,
+        title: "Корпус Modern",
+        description: "Номер: стандарт улучшенный двухместный",
+        href: "#",
+        key: 8,
+    },
+    {
+        img: img9,
+        title: "Корпус Modern",
+        description: "Номер: стандарт улучшенный двухместный",
+        href: "#",
+        key: 9,
+    },
+    {
+        img: img10,
+        title: "Корпус Modern",
+        description: "Номер: стандарт улучшенный двухместный",
+        href: "#",
+        key: 10,
+    },
+    {
+        img: img11,
+        title: "Корпус Modern",
+        description: "Номер: стандарт улучшенный двухместный",
+        href: "#",
+        key: 11,
+    },
+    {
+        img: img12,
+        title: "Корпус Modern",
+        description: "Номер: стандарт улучшенный двухместный",
+        href: "#",
+        key: 12,
+    },
+    {
+        img: img13,
+        title: "Корпус Modern",
+        description: "Номер: стандарт улучшенный двухместный",
+        href: "#",
+        key: 13,
+    },
+    {
+        img: img14,
+        title: "Корпус Modern",
+        description: "Номер: стандарт улучшенный двухместный",
+        href: "#",
+        key: 14,
+    },
+    {
+        img: img15,
+        title: "Корпус Modern",
+        description: "Номер: стандарт улучшенный двухместный",
+        href: "#",
+        key: 15,
+    },
+    {
+        img: img16,
+        title: "Корпус Modern",
+        description: "Номер: стандарт улучшенный двухместный",
+        href: "#",
+        key: 16,
+    },
+];
 
 
 // Домашняя страница
 export const homePageData = {
-    gridSlides: [
-        {
-            name: "Курортный отдых",
-            firstRow: [
-                {
-                    title: "Семейный отдых",
-                    img: gridKurortImg1,
-                    href: '/family-vacation'
-                },
-                {
-                    title: "Номера и цены",
-                    img: gridKurortImg2,
-                    href: '/rooms-and-prices'
-                },
-                {
-                    title: "Отдых без детей",
-                    img: gridKurortImg3,
-                    href: '/vacation-for-yourself'
-                },
-                {
-                    title: "Отдых с друзьями",
-                    img: gridKurortImg4,
-                    href: '/vacation-with-friends'
-                }
-            ],
-            secondRow: [
-                {
-                    title: "Турпакет",
-                    img: gridKurortImg5,
-                    href: '#'
-                },
-                {
-                    title: "Medical Spa",
-                    img: gridKurortImg6,
-                    href: '#'
-                },
-                {
-                    title: "Командировка",
-                    img: gridKurortImg7,
-                    href: '#'
-                },
-                {
-                    title: "Романтический отдых",
-                    img: gridKurortImg8,
-                    href: '/romantic-vacation'
-                }],
-        },
-        {
-            name: "Праздники",
-            firstRow: [
-                {
-                    title: "Свадьба",
-                    img: weddingImgGrid,
-                    href: '/wedding'
-                },
-                {
-                    title: "Выездная церемония",
-                    img: ceremonyImgGrid,
-                    href: '/visiting-ceremony'
-                },
-                {
-                    title: "День рождения",
-                    img: birthdayImgGrid,
-                    href: '/birthday'
-                }],
-            secondRow: [
-                {
-                    title: "Девичник",
-                    img: henPartyImgGrid,
-                    href: '/hen-party'
-                },
-                {
-                    title: "Мальчишник",
-                    img: bachelorPartyImgGrid,
-                    href: '/bachelor-party'
-                },
-            ],
-        },
-        {
-            name: "Курортный отдых",
-            firstRow: [
-                {
-                    title: "Семейный отдых",
-                    img: gridKurortImg1,
-                    href: '#'
-                },
-                {
-                    title: "Номера и цены",
-                    img: gridKurortImg2,
-                    href: '#'
-                },
-                {
-                    title: "Отдых без детей",
-                    img: gridKurortImg3,
-                    href: '#'
-                },
-                {
-                    title: "Отдых с друзьями",
-                    img: gridKurortImg4,
-                    href: '#'
-                }
-            ],
-            secondRow: [{title: "Турпакет", img: gridKurortImg5, href: '#'}, {
-                title: "Medical Spa",
-                img: gridKurortImg6,
-                href: '#'
-            }, {title: "Командировка", img: gridKurortImg7, href: '#'}, {
-                title: "Романтический отдых",
-                img: gridKurortImg8,
-                href: '#'
-            }],
-        },
-        {
-            name: "Деловые мероприятия",
-            firstRow: [
-                {
-                    title: "Конференция",
-                    img: conferenceImgGrid,
-                    href: '/conference'
-                },
-                {
-                    title: "Форум",
-                    img: forumImgGrid,
-                    href: '/forum'
-                },
-                {
-                    title: "Выставка",
-                    img: exhibitionImgGrid,
-                    href: '/exhibition'
-                },
-                {
-                    title: "Интенсив",
-                    img: intensiveImgGrid,
-                    href: '/intensive'
-                }
-            ],
-            secondRow: [
-                {
-                    title: "Семинар/Тренинги",
-                    img: trainingsImgGrid,
-                    href: '/trainings'
-                },
-                {
-                    title: "Тимбилдинг",
-                    img: teamImgGrid,
-                    href: '/team-building'
-                },
-                {
-                    title: "Событийный туризм",
-                    img: tourismImgGrid,
-                    href: '/event-tourism'
-                },
-            ],
-        },
-    ],
+    gridSlides: commonGridSlides,
     centeredSlides: commonAfishaSlides,
     specialsSlides: commonSpecialsSlides,
-    gallerySlides: [
-        {
-            img: promoImg1,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 1,
-        },
-        {
-            img: promoImg2,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 2,
-        },
-        {
-            img: promoImg3,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 3,
-        },
-        {
-            img: img4,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 4,
-        },
-        {
-            img: img5,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 5,
-        },
-        {
-            img: img6,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 6,
-        },
-        {
-            img: img7,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 7,
-        },
-        {
-            img: img8,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 8,
-        },
-        {
-            img: img9,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 9,
-        },
-        {
-            img: img10,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 10,
-        },
-        {
-            img: img11,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 11,
-        },
-        {
-            img: img12,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 12,
-        },
-        {
-            img: img13,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 13,
-        },
-        {
-            img: img14,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 14,
-        },
-        {
-            img: img15,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 15,
-        },
-        {
-            img: img16,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 16,
-        },
-
-    ],
+    gallerySlides: commonGallerySlides,
 }
 
 
@@ -1155,229 +1156,29 @@ export const vacationPagesData = {
     modernSlides: commonModernCampusSlides,
     modernDescr: commonModernDescr,
     classicDescr: commonClassicDescr,
-    gridSlides: [
-        {
-            name: "SPA комплекс",
-            firstRow: [{title: "Финская сауна", img: gridSpaImg1, href: '#'}, {
-                title: "Русская баня",
-                img: gridSpaImg2,
-                href: '#'
-            }, {title: "Римская сауна", img: gridSpaImg3, href: '#'}, {
-                title: "Хаммам",
-                img: gridSpaImg4,
-                href: '#'
-            }],
-            secondRow: [{title: `Процедурный кабинет "Расул"`, img: gridSpaImg5, href: '#'}, {
-                title: "Соляная пещера",
-                img: gridSpaImg6,
-                href: '#'
-            }, {title: "Крытый бассейн", img: gridSpaImg7, href: '#'},
-            ],
-        },
-        {
-            name: "Аква-зона",
-            firstRow: [{title: "Семейный отдых", img: gridKurortImg1, href: '#'}, {
-                title: "Что-то другое",
-                img: gridKurortImg2,
-                href: '#'
-            }, {title: "Отдых без детей", img: gridKurortImg3, href: '#'}, {
-                title: "Что-то другое",
-                img: gridKurortImg4,
-                href: '#'
-            }],
-            secondRow: [{title: "Турпакет", img: gridKurortImg5, href: '#'}, {
-                title: "Что-то другое",
-                img: gridKurortImg6,
-                href: '#'
-            }, {title: "Командировка", img: gridKurortImg7, href: '#'}, {
-                title: "Что-то другое",
-                img: gridKurortImg8,
-                href: '#'
-            }],
-        },
-        {
-            name: "Изысканная еда",
-            firstRow: [{title: "Семейный отдых", img: gridKurortImg1, href: '#'}, {
-                title: "Еще один слайд",
-                img: gridKurortImg2,
-                href: '#'
-            }, {title: "Отдых без детей", img: gridKurortImg3, href: '#'}, {
-                title: "Еще один слайд",
-                img: gridKurortImg4,
-                href: '#'
-            }],
-            secondRow: [{title: "Турпакет", img: gridKurortImg5, href: '#'}, {
-                title: "Еще один слайд",
-                img: gridKurortImg6,
-                href: '#'
-            }, {title: "Командировка", img: gridKurortImg7, href: '#'}, {
-                title: "Еще один слайд",
-                img: gridKurortImg8,
-                href: '#'
-            }],
-        },
-        {
-            name: "Анимация",
-            firstRow: [{title: "Семейный отдых", img: gridKurortImg1, href: '#'}, {
-                title: "Еще один слайд",
-                img: gridKurortImg2,
-                href: '#'
-            }, {title: "Отдых без детей", img: gridKurortImg3, href: '#'}, {
-                title: "Еще один слайд",
-                img: gridKurortImg4,
-                href: '#'
-            }],
-            secondRow: [{title: "Турпакет", img: gridKurortImg5, href: '#'}, {
-                title: "Еще один слайд",
-                img: gridKurortImg6,
-                href: '#'
-            }, {title: "Командировка", img: gridKurortImg7, href: '#'}, {
-                title: "Еще один слайд",
-                img: gridKurortImg8,
-                href: '#'
-            }],
-        }
-    ],
+    gridSlides: commonGridSlides,
     centeredSlides: commonAfishaSlides,
     specialsSlides: commonSpecialsSlides,
-    gallerySlides: [
-        {
-            img: promoImg1,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 1,
-        },
-        {
-            img: promoImg2,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 2,
-        },
-        {
-            img: promoImg3,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 3,
-        },
-        {
-            img: img4,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 4,
-        },
-        {
-            img: img5,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 5,
-        },
-        {
-            img: img6,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 6,
-        },
-        {
-            img: img7,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 7,
-        },
-        {
-            img: img8,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 8,
-        },
-        {
-            img: img9,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 9,
-        },
-        {
-            img: img10,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 10,
-        },
-        {
-            img: img11,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 11,
-        },
-        {
-            img: img12,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 12,
-        },
-        {
-            img: img13,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 13,
-        },
-        {
-            img: img14,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 14,
-        },
-        {
-            img: img15,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 15,
-        },
-        {
-            img: img16,
-            title: "Корпус Modern",
-            description: "Номер: стандарт улучшенный двухместный",
-            href: "#",
-            key: 16,
-        },
-
-    ],
+    gallerySlides: commonGallerySlides,
     wideSlides: [
         {
             img: childrenAnimImg,
             title: "Детская анимация",
-            link: "#",
             bookingLink: "",
         },
         {
             img: childrenPoolImg,
             title: "Детская зона бассейна",
-            link: "#",
             bookingLink: "",
         },
         {
             img: birthdayImg,
             title: "День рождения",
-            link: "#",
             bookingLink: "",
         },
         {
             img: playgroundImg,
             title: "Игровая площадка",
-            link: "#",
             bookingLink: "",
         },
     ],

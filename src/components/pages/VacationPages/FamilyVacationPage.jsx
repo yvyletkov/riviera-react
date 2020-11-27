@@ -12,7 +12,7 @@ import WideSlider from "../../shared/sliders/WideSlider/WideSlider";
 
 const FamilyVacationPage = () => {
     return <>
-        <PageBanner fontSize={["84px", "71px"]}
+        <PageBanner fontSize={["70px", "57px"]}
                     fontSizeMobile={["16.7vw", "10.5vw"]}
                     subtitle={'Рассвет совершенного сервиса'}
                     topLine={"Лучшее"}
@@ -26,7 +26,7 @@ const FamilyVacationPage = () => {
                     ' номеров, высококлассный сервис, анимация для детей и взрослых и многое другое – создают\n' +
                     ' идеальные условия для Вашего комфортного отдыха.'}/>
 
-        <section className='section'>
+        <section className='section first'>
             <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={vacationPagesData.modernDescr}
                          data={vacationPagesData.modernSlides}/>
 

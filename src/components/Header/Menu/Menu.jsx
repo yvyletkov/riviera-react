@@ -162,7 +162,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
 
                             <div className={!eventOpened ? `${s.menuItem}` : `${s.menuItem} ${s.opened}`}>
                                 <p onClick={toggleEvent}>
-                                    События
+                                    Праздники
                                 </p>
                                 <img src={arrowIcon} onClick={toggleEvent}
                                      className={!eventOpened ? s.arrow + ' ' + s.rotated : s.arrow}
