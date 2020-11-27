@@ -16,8 +16,8 @@ const SpecialsSliderItem = (props) => {
                     onMouseLeave={() => setLifted(false)}>
                     <img className={decolorized ? s.img + ' ' + s.decolorized : s.img} src={img} alt="Афиша"/>
                     <div className={s.content}>
-                        <p className={s.subtitle}>{subtitle}</p>
-                        <p className={s.title}>{title}</p>
+                        <p dangerouslySetInnerHTML={{__html: subtitle}} className={s.subtitle}/>
+                        <p dangerouslySetInnerHTML={{__html: title}} className={s.title}/>
                         <div>Подробнее →</div>
                     </div>
                 </div>

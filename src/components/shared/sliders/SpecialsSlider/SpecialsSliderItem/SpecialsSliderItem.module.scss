@@ -10,6 +10,7 @@
   position: relative;
   transition: all 300ms ease-out;
   overflow: visible;
+
 }
 
 .card img {
@@ -18,6 +19,8 @@
   }
   height: 331px;
   object-fit: cover;
+  box-shadow: -6.156px 16.914px 27px 0px rgba(23, 23, 23, 0.05);
+
 }
 
 .card.lifted {
@@ -48,7 +51,7 @@
     object-fit: cover;
   }
   .card, .card.lifted, .cardWrapper {
-    height: calc(65vw * 1.48 + 80px);
+    height: calc(65vw * 1.48 + 85px);
   }
 }
 
@@ -71,19 +74,19 @@
 .title {
   text-transform: uppercase;
   font-family: "Helvetica Neue Black";
-  font-size: 20px;
+  font-size: 18.6px;
   margin-bottom: 8px;
   margin-top: 5px;
 }
 
-.title + a {
+.title + div {
   text-transform: none;
 }
 
 .subtitle {
   text-transform: uppercase;
   font-family: "Helvetica Neue Roman";
-  font-size: 14px;
+  font-size: 12.3px;
   margin-bottom: 5px;
   margin-top: 5px;
 }

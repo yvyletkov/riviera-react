@@ -11,10 +11,18 @@ import afisha2 from "./img/centered-slider/home-page/afisha2.png";
 import afisha3 from "./img/centered-slider/home-page/afisha3.png";
 import afisha4 from "./img/centered-slider/home-page/afisha4.png";
 import afisha5 from "./img/centered-slider/home-page/afisha5.png";
-import img1 from "./img/specials-slider/home-page/spetspredlozheniya1.jpg";
-import img2 from "./img/specials-slider/home-page/spetspredlozheniya2.jpg";
-import img3 from "./img/specials-slider/home-page/spetspredlozheniya3.jpg";
-import img4 from "./img/specials-slider/home-page/spetspredlozheniya4.jpg";
+import promoImg1 from "./img/promos/promo1.jpg";
+import promoImg2 from "./img/promos/promo2.jpg";
+import promoImg3 from "./img/promos/promo3.jpg";
+import promoImg4 from "./img/promos/promo4.jpg";
+import promoImg5 from "./img/promos/promo5.jpg";
+import promoImg6 from "./img/promos/promo6.jpg";
+import promoImg7 from "./img/promos/promo7.jpg";
+import promoImg8 from "./img/promos/promo8.jpg";
+import promoImg9 from "./img/promos/promo9.jpg";
+import promoImg10 from "./img/promos/promo10.jpg";
+import promoImg11 from "./img/promos/promo11.jpg";
+import img4 from "./img/promos/promo1.jpg";
 import img5 from "./img/gallery-slider/home-page/fotogalereya5.jpg";
 import img6 from "./img/gallery-slider/home-page/fotogalereya6.jpg";
 import img7 from "./img/gallery-slider/home-page/fotogalereya7.jpg";
@@ -311,44 +319,44 @@ export const micePagesData = {
 
 const commonSpecialsSlides = [
     {
-        img: img1,
-        title: "Cкидка 10%",
-        subtitle: "На что-то",
+        img: promoImg1,
+        subtitle: "Летний отдых",
+        title: "С выгодой до 20%",
         link: '#',
         key: 1,
     },
     {
-        img: img2,
-        title: "Cкидка 20%",
-        subtitle: "На что-то",
+        img: promoImg2,
+        subtitle: "План \"Б\"",
+        title: "Опережай время",
         link: '#',
         key: 2,
     },
     {
-        img: img3,
-        title: "Cкидка 30%",
-        subtitle: "На что-то",
+        img: promoImg3,
+        subtitle: "Длительное проживание 2021",
+        title: "С выгодой до 25%",
         link: '#',
         key: 3,
     },
     {
-        img: img4,
-        title: "Cкидка 40%",
-        subtitle: "На что-то",
+        img: promoImg4,
+        subtitle: "Отдых",
+        title: "Для кымчан",
         link: '#',
         key: 4,
     },
     {
-        img: img1,
-        title: "Cкидка 50%",
-        subtitle: "На что-то",
+        img: promoImg5,
+        subtitle: "",
+        title: "Бархатный<br/>сезон",
         link: '#',
         key: 5,
     },
     {
-        img: img2,
-        title: "Cкидка 60%",
-        subtitle: "На что-то",
+        img: promoImg6,
+        subtitle: "",
+        title: "Онлайн</br>конференция",
         link: '#',
         key: 6,
     },
@@ -638,21 +646,21 @@ export const homePageData = {
     specialsSlides: commonSpecialsSlides,
     gallerySlides: [
         {
-            img: img1,
+            img: promoImg1,
             title: "Корпус Modern",
             description: "Номер: стандарт улучшенный двухместный",
             href: "#",
             key: 1,
         },
         {
-            img: img2,
+            img: promoImg2,
             title: "Корпус Modern",
             description: "Номер: стандарт улучшенный двухместный",
             href: "#",
             key: 2,
         },
         {
-            img: img3,
+            img: promoImg3,
             title: "Корпус Modern",
             description: "Номер: стандарт улучшенный двухместный",
             href: "#",
@@ -855,15 +863,15 @@ export const roomPageData = {
         roomNameFontSize: ["14.8vw", "95px"],
         largeGallerySlides: [
             {
-                img: img1,
+                img: promoImg1,
                 key: 1,
             },
             {
-                img: img2,
+                img: promoImg2,
                 key: 2,
             },
             {
-                img: img3,
+                img: promoImg3,
                 key: 3,
             },
             {
@@ -984,15 +992,15 @@ export const roomPageData = {
         roomNameFontSize: ["13.4vw", "86px"],
         largeGallerySlides: [
             {
-                img: img1,
+                img: promoImg1,
                 key: 1,
             },
             {
-                img: img2,
+                img: promoImg2,
                 key: 2,
             },
             {
-                img: img3,
+                img: promoImg3,
                 key: 3,
             },
             {
@@ -1210,21 +1218,21 @@ export const vacationPagesData = {
     specialsSlides: commonSpecialsSlides,
     gallerySlides: [
         {
-            img: img1,
+            img: promoImg1,
             title: "Корпус Modern",
             description: "Номер: стандарт улучшенный двухместный",
             href: "#",
             key: 1,
         },
         {
-            img: img2,
+            img: promoImg2,
             title: "Корпус Modern",
             description: "Номер: стандарт улучшенный двухместный",
             href: "#",
             key: 2,
         },
         {
-            img: img3,
+            img: promoImg3,
             title: "Корпус Modern",
             description: "Номер: стандарт улучшенный двухместный",
             href: "#",
