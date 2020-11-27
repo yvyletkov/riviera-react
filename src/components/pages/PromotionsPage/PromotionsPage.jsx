@@ -80,7 +80,7 @@ const PromotionsPage = () => {
         );
     });
 
-    const itemsDecolorized = promotionsPageData.slides.map((item, index) => {
+    const itemsDecolorized = promotionsPageData.pastSlides.map((item, index) => {
         const {img, title, subtitle, key, link} = item;
         return (
             <div className="SliderElement" key={key}>

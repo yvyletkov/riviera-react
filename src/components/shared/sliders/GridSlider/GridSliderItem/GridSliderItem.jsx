@@ -41,15 +41,22 @@ const InnerSlider = ({firstRowItems, secondRowItems}) => {
 const GridSliderItem = ({firstRow, secondRow}) => {
 
 
+
     const firstRowItems = firstRow.map((item, index) => {
-        return <NavLink to={item.href} key={item.title + index} className={s.block}>
+        const handleLinkClick = (e) => {
+            if (!item.href) e.preventDefault()
+        }
+        return <NavLink onClick={handleLinkClick} to={item.href ? item.href : '#'} key={item.title + index} className={s.block}>
             <div style={{backgroundImage: 'url(' + item.img + ')', backgroundSize: 'cover', height: "100%", borderRadius: "5px", backgroundPosition: "center"}}>
                 <div className={s.content}><p>{item.title}</p></div>
             </div>
         </NavLink>
     });
     const secondRowItems = secondRow.map((item, index) => {
-        return <NavLink to={item.href} key={item.title + index} className={s.block} href={item.href}>
+        const handleLinkClick = (e) => {
+            if (!item.href) e.preventDefault()
+        }
+        return <NavLink onClick={handleLinkClick} to={item.href ? item.href : '#'} className={s.block} href={item.href}>
             <div style={{backgroundImage: 'url(' + item.img + ')', backgroundSize: 'cover', height: "100%", borderRadius: "5px", backgroundPosition: "center"}}>
                 <div className={s.content}><p>{item.title}</p></div>
             </div>

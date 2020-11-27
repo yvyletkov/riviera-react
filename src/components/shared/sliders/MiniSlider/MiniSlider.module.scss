@@ -1,6 +1,6 @@
 .wrapper {
   position: relative;
-  max-width: 470px;
+  max-width: 500px;
   width: 100%;
   overflow: visible;
   align-self: flex-end;
@@ -15,7 +15,8 @@
   text-transform: uppercase;
   font-size: 13px;
   display: flex;
-  align-items: center
+  align-items: center;
+  white-space: nowrap;
 }
 
 .miniSliderItem.active {

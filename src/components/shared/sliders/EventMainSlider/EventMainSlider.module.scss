@@ -7,9 +7,16 @@
 .container {
   box-sizing: border-box;
   position: relative;;
-  max-width: 1200px;
+  max-width: 1060px;
   width: 100%;
   margin: 0 auto;
+  overflow: hidden;
+
+  &.withPadding {
+    @media (min-width: 1025px) {
+      padding-bottom: 50px;
+    }
+  }
 }
 
 

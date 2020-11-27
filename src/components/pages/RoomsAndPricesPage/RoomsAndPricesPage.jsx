@@ -10,7 +10,7 @@ const RoomsAndPricesPage = () => {
     return <>
         <RoomsAndPricesPageBanner/>
 
-        <section className='section first'>
+        <section className='section'>
             <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={roomsAndPricesPageData.modernDescr}
                          data={roomsAndPricesPageData.modernSlides}/>
 
@@ -18,13 +18,15 @@ const RoomsAndPricesPage = () => {
                          textContent={roomsAndPricesPageData.classicDescr} data={roomsAndPricesPageData.classicSlides}/>
         </section>
 
+
         <section className='section'>
-            <CenteredSlider title={'Сегодня в программе'} slides={roomsAndPricesPageData.centeredSlides}/>
+            <GridSlider slides={roomsAndPricesPageData.gridSlides}/>
         </section>
 
         <section className='section last'>
-            <GridSlider slides={roomsAndPricesPageData.gridSlides}/>
+            <CenteredSlider title={'Сегодня в программе'} slides={roomsAndPricesPageData.centeredSlides}/>
         </section>
+
     </>
 
 };

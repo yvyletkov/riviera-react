@@ -6,6 +6,17 @@ import gridKurortImg5 from "./img/grid-slider/resort-vacation/5.jpg";
 import gridKurortImg6 from "./img/grid-slider/resort-vacation/6.jpg";
 import gridKurortImg7 from "./img/grid-slider/resort-vacation/7.jpg";
 import gridKurortImg8 from "./img/grid-slider/resort-vacation/8.jpg";
+import gridKitchen1 from "./img/grid-slider/kitchen/kitchen1.jpg";
+import gridKitchen2 from "./img/grid-slider/kitchen/kitchen2.jpg";
+import gridKitchen3 from "./img/grid-slider/kitchen/kitchen3.jpg";
+import gridKitchen4 from "./img/grid-slider/kitchen/kitchen4.jpg";
+import gridKitchen5 from "./img/grid-slider/kitchen/kitchen5.jpg";
+import gridKitchen6 from "./img/grid-slider/kitchen/kitchen6.jpg";
+import gridKitchen7 from "./img/grid-slider/kitchen/kitchen7.jpg";
+import gridAqua1 from "./img/grid-slider/aqua/aqua1.jpg";
+import gridAqua2 from "./img/grid-slider/aqua/aqua2.jpg";
+import gridAqua3 from "./img/grid-slider/aqua/aqua3.jpg";
+import gridAqua4 from "./img/grid-slider/aqua/aqua4.jpg";
 import afisha1 from "./img/centered-slider/home-page/afisha1.png";
 import afisha2 from "./img/centered-slider/home-page/afisha2.png";
 import afisha3 from "./img/centered-slider/home-page/afisha3.png";
@@ -305,15 +316,15 @@ export const micePagesData = {
         {img: iconResidence, text: 'Предложение на проживание в отеле', key: 4, desc: "Проживание"},
     ],
     teamBuildingIconsBanner: [
-        {img: iconPrograms, text: 'Разные программы тимбилдинга', key:1, desc:"Программы тимбилдинга"},
-        {img: iconSPA, text: 'SPA-комплекс THE SHORE SPA', key:2, desc:"SPA"},
-        {img: iconExcursions, text: 'Экскурсии и тимбилдинги', key:3, desc:"Экскурсии"},
-        {img: iconResidence, text: 'Предложение на проживание в отеле', key:4, desc:"Проживание"},
+        {img: iconPrograms, text: 'Разные программы тимбилдинга', key: 1, desc: "Программы тимбилдинга"},
+        {img: iconSPA, text: 'SPA-комплекс THE SHORE SPA', key: 2, desc: "SPA"},
+        {img: iconExcursions, text: 'Экскурсии и тимбилдинги', key: 3, desc: "Экскурсии"},
+        {img: iconResidence, text: 'Предложение на проживание в отеле', key: 4, desc: "Проживание"},
     ],
     exhibitionIconsBanner: [
-        {img: iconExhibition, text: 'Выставочные пространства', key:1, desc:"Пространства"},
-        {img: iconEscort, text: 'Организационное сопровождение', key:2, desc:"Сопровождение"},
-        {img: iconBonuses, text: 'Бонусы для организаторов', key:3, desc:"Бонусы"},
+        {img: iconExhibition, text: 'Выставочные пространства', key: 1, desc: "Пространства"},
+        {img: iconEscort, text: 'Организационное сопровождение', key: 2, desc: "Сопровождение"},
+        {img: iconBonuses, text: 'Бонусы для организаторов', key: 3, desc: "Бонусы"},
     ]
 }
 
@@ -788,68 +799,81 @@ export const roomsAndPricesPageData = {
             ],
         },
         {
-            name: "Аква-зона",
-            firstRow: [{title: "Семейный отдых", img: gridKurortImg1, href: '#'}, {
-                title: "Что-то другое",
-                img: gridKurortImg2,
-                href: '#'
-            }, {title: "Отдых без детей", img: gridKurortImg3, href: '#'}, {
-                title: "Что-то другое",
-                img: gridKurortImg4,
-                href: '#'
-            }],
-            secondRow: [{title: "Турпакет", img: gridKurortImg5, href: '#'}, {
-                title: "Что-то другое",
-                img: gridKurortImg6,
-                href: '#'
-            }, {title: "Командировка", img: gridKurortImg7, href: '#'}, {
-                title: "Что-то другое",
-                img: gridKurortImg8,
-                href: '#'
-            }],
-        },
-        {
             name: "Изысканная еда",
-            firstRow: [{title: "Семейный отдых", img: gridKurortImg1, href: '#'}, {
-                title: "Еще один слайд",
-                img: gridKurortImg2,
+            firstRow: [
+                {
+                    title: "Шведский стол",
+                    img: gridKitchen1,
+                    href: '#'
+                },
+                {
+                    title: "Ресторан \"Tavrica\"",
+                    img: gridKitchen2,
+                    href: '#'
+                },
+                {
+                    title: "Лобби-лаундж",
+                    img: gridKitchen3,
+                    href: '#'
+                },
+                {
+                    title: "Pool-бар",
+                    img: gridKitchen4,
+                    href: '#'
+                }
+            ],
+            secondRow: [{title: "Ресторан \"La Veranda\"", img: gridKitchen5, href: '#'}, {
+                title: "Мангал в саду",
+                img: gridKitchen6,
                 href: '#'
-            }, {title: "Отдых без детей", img: gridKurortImg3, href: '#'}, {
-                title: "Еще один слайд",
-                img: gridKurortImg4,
-                href: '#'
-            }],
-            secondRow: [{title: "Турпакет", img: gridKurortImg5, href: '#'}, {
-                title: "Еще один слайд",
-                img: gridKurortImg6,
-                href: '#'
-            }, {title: "Командировка", img: gridKurortImg7, href: '#'}, {
-                title: "Еще один слайд",
-                img: gridKurortImg8,
-                href: '#'
-            }],
+            }, {title: "Лобби-бар \"Mangup\"", img: gridKitchen7, href: '#'}],
         },
         {
-            name: "Анимация",
-            firstRow: [{title: "Семейный отдых", img: gridKurortImg1, href: '#'}, {
-                title: "Еще один слайд",
-                img: gridKurortImg2,
-                href: '#'
-            }, {title: "Отдых без детей", img: gridKurortImg3, href: '#'}, {
-                title: "Еще один слайд",
-                img: gridKurortImg4,
-                href: '#'
-            }],
-            secondRow: [{title: "Турпакет", img: gridKurortImg5, href: '#'}, {
-                title: "Еще один слайд",
-                img: gridKurortImg6,
-                href: '#'
-            }, {title: "Командировка", img: gridKurortImg7, href: '#'}, {
-                title: "Еще один слайд",
-                img: gridKurortImg8,
-                href: '#'
-            }],
-        }
+            name: "AQUA зона",
+            firstRow: [
+                {
+                    title: "Пляж (первая береговая линия)",
+                    img: gridAqua1,
+                },
+                {
+                    title: "Бассейн с подогревом",
+                    img: gridAqua2,
+                },
+            ],
+            secondRow: [
+                {
+                    title: "Бассейн возле моря",
+                    img: gridAqua3,
+                },
+                {
+                    title: "Крытый бассейн",
+                    img: gridAqua4,
+                },
+            ],
+        },
+        {
+            name: "AQUA зона",
+            firstRow: [
+                {
+                    title: "Пляж (первая береговая линия)",
+                    img: gridAqua1,
+                },
+                {
+                    title: "Бассейн с подогревом",
+                    img: gridAqua2,
+                },
+            ],
+            secondRow: [
+                {
+                    title: "Бассейн возле моря",
+                    img: gridAqua3,
+                },
+                {
+                    title: "Крытый бассейн",
+                    img: gridAqua4,
+                },
+            ],
+        },
     ],
     centeredSlides: commonAfishaSlides,
 }
@@ -1379,7 +1403,7 @@ export const eventPagesData = {
             {
                 img: weddingSliderImg3,
                 title: "Пляж",
-                descr: 'Площадка с аккуратным мостиком, подсветкой бассейна, с видом на реликтовый парк и морское побережье позволит создать дополнительную атмосферу романтики и уюта.',
+                descr: 'Свадьба на пляже принесет массу положительных эмоций и оставит самые светлые воспоминания. Количество гостей до 60 человек',
                 key: 3,
             },
         ],
@@ -1506,7 +1530,7 @@ export const eventPagesData = {
             {
                 img: birthdayTavrika,
                 title: "Ресторан Tavrika",
-                descr: 'Зал вместит до 120 гостей, его можно украсить в соответствии с общей тональностью мероприятия, подойдет для праздника в любое время года и в любую погоду. Имеет отдельный вход и зону для приветственного фуршета. Есть возможность организации танцпола.',
+                descr: 'Подойдет для небольшой дружеской компании',
                 key: 1,
             },
             {
@@ -1518,8 +1542,26 @@ export const eventPagesData = {
             {
                 img: birthdayGreenTerrase,
                 title: "Зеленая терраса",
-                descr: 'Зал вместит до 120 гостей, его можно украсить в соответствии с общей тональностью мероприятия, подойдет для праздника в любое время года и в любую погоду. Имеет отдельный вход и зону для приветственного фуршета. Есть возможность организации танцпола.',
+                descr: 'Зеленая Терраса под открытым небом на втором этаже отеля – идеальное место для летнего праздника в любой компании. Вмещает более 200 чел.',
                 key: 3,
+            },
+            {
+                img: birthdayGreenTerrase,
+                title: "Круглая Терраса",
+                descr: 'Зал вместит до 120 гостей, его можно украсить в соответствии с общей тональностью мероприятия, подойдет для праздника в любое время года и в любую погоду. Имеет отдельный вход и зону для приветственного фуршета. Есть возможность организации танцпола.',
+                key: 4,
+            },
+            {
+                img: birthdayGreenTerrase,
+                title: "Верхняя палуба",
+                descr: 'Верхняя палуба обладает прекрасным видом на бескрайнее Черное море ',
+                key: 5,
+            },
+            {
+                img: birthdayGreenTerrase,
+                title: "Ресторан LaVeranda",
+                descr: 'Ресторан в неувядающем классическом стиле с лучшим видом на парк и море: вечернее солнце и все оттенки неба и моря будут служить прекрасным фоном для вашего праздника.',
+                key: 6,
             },
         ],
         centeredSlides: [
@@ -1601,33 +1643,61 @@ export const eventPagesData = {
     specialsSlides: [
         {
             img: weddingSpecial1,
-            title: "Cкидка 10%",
-            subtitle: "На что-то",
+            title: "Medical<br/>SPA",
+            subtitle: "",
             link: '#',
             key: 1,
         },
         {
             img: weddingSpecial2,
-            title: "Программы",
-            subtitle: "Экскурсионные",
+            title: "Экскурсионные<br>программы",
+            subtitle: "",
             link: '#',
             key: 2,
         },
         {
             img: weddingSpecial3,
-            title: "Cкидка 30%",
-            subtitle: "На что-то",
+            title: "Оформление<br/>залов",
+            subtitle: "",
             link: '#',
             key: 3,
         },
         {
             img: weddingSpecial4,
-            title: "Cкидка 40%",
-            subtitle: "На что-то",
+            title: "Дегустации",
+            subtitle: "",
             link: '#',
             key: 4,
         },
-    ],
+        {
+            img: weddingSpecial4,
+            title: "Тимбилдинг",
+            subtitle: "",
+            link: '#',
+            key: 5,
+        },
+        {
+            img: weddingSpecial4,
+            title: "Развлекательные<br/>программы",
+            subtitle: "",
+            link: '#',
+            key: 5,
+        },
+        {
+            img: weddingSpecial4,
+            title: "Трансфер",
+            subtitle: "",
+            link: '#',
+            key: 5,
+        },
+        {
+            img: weddingSpecial4,
+            title: "Фото-</br>и видео-сопровождение",
+            subtitle: "",
+            link: '#',
+            key: 6,
+        },
+    ], // доп услуги
     classicSlides: commonClassicCampusSlides,
     modernSlides: commonModernCampusSlides,
     modernDescr: commonModernDescr,
@@ -1638,7 +1708,50 @@ export const eventPagesData = {
 // Страница "Специальные предложения"
 export const promotionsPageData = {
     slides: commonSpecialsSlides,
-    pastSlides: commonSpecialsSlides
+    pastSlides: [
+        {
+            img: promoImg7,
+            subtitle: "",
+            title: "Трансфер<br/>в подарок",
+            link: '#',
+            key: 1,
+        },
+        {
+            img: promoImg8,
+            subtitle: "Получи",
+            title: "Кешбэк на отдых",
+            link: '#',
+            key: 2,
+        },
+        {
+            img: promoImg9,
+            subtitle: "Долгожданный отдых",
+            title: "С выгодой 10%",
+            link: '#',
+            key: 3,
+        },
+        {
+            img: promoImg10,
+            subtitle: "",
+            title: "Английские<br/>каникулы",
+            link: '#',
+            key: 4,
+        },
+        {
+            img: promoImg11,
+            subtitle: "Акция",
+            title: "Море ждет",
+            link: '#',
+            key: 5,
+        },
+        {
+            img: promoImg7,
+            subtitle: "",
+            title: "Бархатный<br/>сезон",
+            link: '#',
+            key: 6,
+        },
+    ],
 }
 
 
