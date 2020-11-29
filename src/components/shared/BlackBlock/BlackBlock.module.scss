@@ -21,14 +21,14 @@
         color: #fff;
 
         p:first-of-type {
-          font-family: "Helvetica Neue Bold";
+          font-family: "Helvetica Neue Bold", sans-serif;
           text-transform: uppercase;
           margin-bottom: 10px;
           font-size: 24.5px;
         }
 
         p:last-of-type {
-          font-family: "Helvetica Neue Light";
+          font-family: "Helvetica Neue Light", sans-serif;
           font-size: 17px;
         }
       }

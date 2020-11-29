@@ -35,7 +35,7 @@ $black: #171717;
 }
 
 .textBlock h2 {
-  font-family: "Helvetica Neue Medium";
+  font-family: "Helvetica Neue Medium", sans-serif;
   font-size: 27px;
   margin-bottom: 18px;
   position: relative;
@@ -56,20 +56,20 @@ $black: #171717;
 .textBlock h1 {
   display: block;
   text-transform: uppercase;
-  font-family: "Helvetica Neue Black";
+  font-family: "Helvetica Neue Black", sans-serif;
   font-size: 84px;
 }
 
 .textBlock h1 span {
   display: block;
   text-transform: uppercase;
-  font-family: "Helvetica Neue Black";
+  font-family: "Helvetica Neue Black", sans-serif;
   font-size: 110px;
   line-height: 0.9;
 }
 
 .textBlock div {
-  font-family: "Helvetica Neue Bold";
+  font-family: "Helvetica Neue Bold", sans-serif;
   font-size: 34px;
 }
 
