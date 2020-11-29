@@ -46,13 +46,11 @@ const SliderStyles = styled(Slider)`
 }
 `;
 
-const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-то", btnLink, btnOnClick, slides, text, btnText = 'Смотреть все предложения', fullWidth}) => {
+const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-то", btnLink, slides, text, btnText = 'Смотреть все предложения'}) => {
 
     let [popupOpen, setPopupOpen] = React.useState(false);
 
-    if (!text) text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut\n' +
-        '                        labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra\n' +
-        '                        maecenas accumsan lacus vel facilisis. '
+    if (!text) text = 'Отель Riviera Sunrise Resort&SPA предлагает вашему вниманию выгодные предложения, которые позволят сделать ваш отдых не только прекрасным и насыщенным, но и оптимальным по цене!'
 
     const settings = {
         infinite: true,
