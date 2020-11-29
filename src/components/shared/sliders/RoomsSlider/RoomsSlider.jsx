@@ -130,7 +130,7 @@ const RoomsSlider = ({title = "Заголовок", subtitle = "Какой-то"
                     <Headline subtitle={subtitle} title={title}/>
                     <CirqleTip onClick={cirqleTipHandler} accordeonStatus={accordeonStatus}/>
                     <p><b>{textContent[0]}</b></p>
-                    <Accordeon withBtn={false} zeroHeight={true} status={accordeonStatus}>{textContent[1]}</Accordeon>
+                    <Accordeon withBtn={false} zeroHeight={true} status={accordeonStatus}><p>{textContent[1]}</p></Accordeon>
                 </div>
                 <div className={s.rightBlock}>
                     <div className={s.miniSliderWrapper}>

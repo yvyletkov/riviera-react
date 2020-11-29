@@ -11,6 +11,16 @@
   transition: all 300ms ease-out;
   overflow: visible;
 
+  &.lifted {
+    position: relative;
+    margin-top: -90px;
+    height: 421px;
+    transition: all 500ms;
+    &.noLink {
+      margin-top: -70px;
+      height: 402px;
+    }
+  }
 }
 
 .card img {
@@ -23,19 +33,16 @@
 
 }
 
-.card.lifted {
-  position: relative;
-  margin-top: -90px;
-  height: 421px;
-  transition: all 500ms;
-}
-
 @media screen and (max-width: 1200px){
   .card, .card.lifted {
     position: relative;
     margin-top: 0;
     height: 421px;
     transition: all 500ms;
+    &.noLink {
+      height: 402px;
+      margin-top: 0;
+    }
   }
   .card .content a, .card.lifted .content a {
     display: none;
@@ -52,6 +59,9 @@
   }
   .card, .card.lifted, .cardWrapper {
     height: calc(65vw * 1.48 + 85px);
+    &.noLink {
+      height: calc(65vw * 1.48 + 75px);
+    }
   }
 }
 
@@ -73,10 +83,11 @@
 
 .title {
   text-transform: uppercase;
-  font-family: "Helvetica Neue Black";
+  font-family: "Helvetica Neue Black", sans-serif;
   font-size: 18.6px;
   margin-bottom: 8px;
   margin-top: 5px;
+  white-space: nowrap;
 }
 
 .title + div {
@@ -85,7 +96,7 @@
 
 .subtitle {
   text-transform: uppercase;
-  font-family: "Helvetica Neue Roman";
+  font-family: "Helvetica Neue Roman", sans-serif;
   font-size: 12.3px;
   margin-bottom: 5px;
   margin-top: 5px;

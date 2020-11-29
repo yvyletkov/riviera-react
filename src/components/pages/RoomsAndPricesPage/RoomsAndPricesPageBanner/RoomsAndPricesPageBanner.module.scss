@@ -53,7 +53,7 @@ $black: #171717;
 }
 
 .textBlock h2 {
-  font-family: "Helvetica Neue Medium";
+  font-family: "Helvetica Neue Medium", sans-serif;
   font-size: 27px;
   margin-bottom: 18px;
   position: relative;
@@ -73,14 +73,14 @@ $black: #171717;
 
 .textBlock h1:first-of-type {
   text-transform: uppercase;
-  font-family: "Helvetica Neue Black";
+  font-family: "Helvetica Neue Black", sans-serif;
   font-size: 78px;
 }
 
 .textBlock h1:last-of-type {
   white-space: nowrap;
   text-transform: uppercase;
-  font-family: "Helvetica Neue Black";
+  font-family: "Helvetica Neue Black", sans-serif;
   font-size: 115px;
   line-height: 0.9;
 }
@@ -89,7 +89,7 @@ $black: #171717;
   position: relative;
   width: fit-content;
   cursor: pointer;
-  font-family: "Helvetica Neue Bold";
+  font-family: "Helvetica Neue Bold", sans-serif;
   margin-top: 20px;
   font-size: 22px;
   transition: all 300ms;
@@ -106,7 +106,7 @@ $black: #171717;
   top: 15px;
   left: 40px;
   padding: 40px 50px;
-  font-family: "Helvetica Neue Light";
+  font-family: "Helvetica Neue Light", sans-serif;
   font-size: 16px;
   transition: all 300ms;
   cursor: default;
@@ -142,7 +142,7 @@ $black: #171717;
 
 @media screen and (max-width: 768px) {
   .textBlock .descriptionBtn {
-    font-family: "Helvetica Neue";
+    font-family: "Helvetica Neue", sans-serif;
     font-size: 16px !important;
     color: #fff;
   }
@@ -158,7 +158,7 @@ $black: #171717;
   }
 
   .textBlock h2 {
-    font-family: "Helvetica Neue Medium";
+    font-family: "Helvetica Neue Medium", sans-serif;
     font-size: 22px;
     margin-bottom: 10px;
   }

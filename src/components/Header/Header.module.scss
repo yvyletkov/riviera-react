@@ -69,7 +69,7 @@ a:hover {
 }
 
 .link.number {
-  font-family: "Helvetica Neue Medium" !important;
+  font-family: "Helvetica Neue Medium", sans-serif !important;
   margin-right: 0;
   text-align: right;
   font-size: 20px;
@@ -221,7 +221,7 @@ a:hover {
       .callUs {
         position: relative;
         padding-top: 12px;
-        font-family: "Helvetica Neue Medium";
+        font-family: "Helvetica Neue Medium", sans-serif;
         font-size: 22px;
         //margin-top: -12px;
         margin-bottom: 15px;
@@ -278,7 +278,7 @@ a:hover {
         cursor: pointer;
         display: inline-block;
         font-size: 26px;
-        font-family: "Helvetica Neue Medium";
+        font-family: "Helvetica Neue Medium", sans-serif;
         margin-bottom: 15px;
       }
 
@@ -305,7 +305,7 @@ a:hover {
 
           .listItem {
             position: relative;
-            font-family: "Helvetica Neue Light", Arial, serif;
+            font-family: "Helvetica Neue Light", Arial, sans-serif;
             font-size: 20px;
             padding-left: 30px;
 

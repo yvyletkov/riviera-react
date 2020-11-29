@@ -8,7 +8,7 @@
 
 .link {
   float: right;
-  font-family: "Helvetica Neue Roman";
+  font-family: "Helvetica Neue Roman", sans-serif;
   font-size: 14px;
 }
 
@@ -34,12 +34,12 @@
 }
 
 .leftBlock p {
-  font-family: "Helvetica Neue Light";
+  font-family: "Helvetica Neue Light", sans-serif;
   font-size: 16px;
 }
 
 .leftBlock p b {
-  font-family: "Helvetica Neue Medium";
+  font-family: "Helvetica Neue Medium", sans-serif;
   font-size: 18px;
 }
 
@@ -71,7 +71,7 @@
   display: flex;
   align-items: center;
   font-size: 19px;
-  font-family: "Helvetica Neue Medium";
+  font-family: "Helvetica Neue Medium", sans-serif;
 }
 
 
@@ -152,7 +152,7 @@
     font-size: 14px;
   }
   .iconsPart, .icon p {
-    font-family: "Helvetica Neue Medium";
+    font-family: "Helvetica Neue Medium", sans-serif;
   }
   .iconsPart .icon img {
     margin: 0 auto;
@@ -184,11 +184,11 @@
     flex: unset;
   }
   .leftBlock p b {
-    font-family: "Helvetica Neue Medium";
+    font-family: "Helvetica Neue Medium", sans-serif;
     font-size: 16px;
   }
   .leftBlock p {
-    font-family: "Helvetica Neue Light";
+    font-family: "Helvetica Neue Light", sans-serif;
     font-size: 14px;
   }
   .leftBlock .firstCol .colTitle {

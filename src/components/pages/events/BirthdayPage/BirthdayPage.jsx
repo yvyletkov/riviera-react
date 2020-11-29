@@ -90,6 +90,7 @@ const BirthdayPage = () => {
 
         <section className='section'>
             <SpecialsSlider subtitle={'Дополнительные'} title={'услуги'} btnText={'Получить прайс по услугам'}
+                            text={"Какой-то текст"}
                             slides={eventPagesData.specialsSlides}/>
         </section>
 

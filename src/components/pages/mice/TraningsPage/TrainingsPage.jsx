@@ -79,12 +79,9 @@ const TrainingsPage = () => {
                 <LogosSlider title={"С кем мы сотрудничали"} icons={micePagesData.conferenceIcons}/>
             </section>
             <section className="section">
-                <SpecialsSlider title={"Услуги"}
-                                subtitle={"Дополнительные"}
-                                text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis."}
-                                slides={micePagesData.wideSliderServices}
-                                btnLink={'/promotions'}
-                />
+                <SpecialsSlider subtitle={'Дополнительные'} title={'услуги'} btnText={'Получить прайс по услугам'}
+                                text={"Какой-то текст"}
+                                slides={micePagesData.specialsSlides}/>
             </section>
             <section className='section'>
                 <div className={s.forumPlacesBlock}>
@@ -100,10 +97,7 @@ const TrainingsPage = () => {
                                            onClick={() => setAccordeonStatus(!accordeonStatus)}/>
                                 <div className={s.textContent}>
                                     <Accordeon withBtn={false} zeroHeight={true} status={accordeonStatus}>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
-                                            ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
-                                            facilisis.</p>
+                                        <p>Пространства для мероприятий бывают абсолютно разными. При выборе обнаруживается множество нюансов, которые нужно обязательно учесть. Наши организаторы с многолетним опытом точно знают, какая площадка может идеально подойти под ваши задачи. Они подготовили чек-лист из 17 пунктов, по которому вы легко сможете проверить выбранную площадку.</p>
                                     </Accordeon>
                                 </div>
                             </div>
