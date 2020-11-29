@@ -106,7 +106,7 @@
     position: relative;
     width: fit-content;
     font-size: 34.5px;
-    font-family: "Helvetica Neue";
+    font-family: "Helvetica Neue", sans-serif;
     color: #fff;
     margin-bottom: 15px;
     font-weight: 400;
@@ -130,19 +130,19 @@
 
     span {
       display: block;
-      font-family: "Helvetica Neue";
+      font-family: "Helvetica Neue", sans-serif;
       line-height: 1;
       font-weight: 700;
     }
 
     span:first-of-type {
       font-size: 70px;
-      font-family: "Helvetica Neue Black";
+      font-family: "Helvetica Neue Black", sans-serif;
     }
 
     span:nth-child(2) {
       font-size: 56px;
-      font-family: 'Helvetica Neue Black';
+      font-family: 'Helvetica Neue Black', sans-serif;
       font-weight: 900;
     }
 
@@ -176,7 +176,7 @@
 
       span:last-of-type {
         font-size: 5.2vw;
-        font-family: "Helvetica Neue";
+        font-family: "Helvetica Neue", sans-serif;
       }
     }
   }
@@ -203,7 +203,7 @@
 
       span:last-of-type {
         font-size: 6.2vw;
-        font-family: "Helvetica Neue";
+        font-family: "Helvetica Neue", sans-serif;
       }
     }
   }
@@ -266,7 +266,7 @@
   top: 15px;
   left: 40px;
   padding: 40px 50px;
-  font-family: "Helvetica Neue Light";
+  font-family: "Helvetica Neue Light", sans-serif;
   font-size: 16px;
   transition: all 300ms;
   cursor: default;

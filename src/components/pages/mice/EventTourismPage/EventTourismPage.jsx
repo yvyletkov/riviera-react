@@ -56,12 +56,9 @@ const EventTourismPage = () => {
                 <TextBlock/>
             </section>
             <section className="section">
-                <SpecialsSlider title={"Услуги"}
-                                subtitle={"Дополнительные"}
-                                text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis."}
-                                slides={micePagesData.wideSliderServices}
-                                btnLink={'/promotions'}
-                />
+                <SpecialsSlider subtitle={'Дополнительные'} title={'услуги'} btnText={'Получить прайс по услугам'}
+                                text={"Какой-то текст"}
+                                slides={micePagesData.specialsSlides}/>
             </section>
             <section className='section'>
                 <div className={s.conferencesDecisionBlock}>

@@ -67,7 +67,7 @@ const EventMainSlider = ({slides, title, titleMobile, initialSlideIndex = 0, man
 
     const settings = {
         initialSlide: initialSlideIndex,
-        infinite: false,
+        infinite: true,
         slidesToShow: 3,
         centerMode: true,
         arrows: manySlides,

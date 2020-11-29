@@ -81,10 +81,14 @@ import weddingSliderIcon2 from "./img/events/wedding/icon2.png";
 import weddingSliderIcon3 from "./img/events/wedding/icon3.png";
 import weddingSliderIcon4 from "./img/events/wedding/icon4.png";
 import weddingSliderIcon5 from "./img/events/wedding/icon5.png";
-import weddingSpecial1 from "./img/events/wedding/specials/1.jpg";
-import weddingSpecial2 from "./img/events/wedding/specials/2.jpg";
-import weddingSpecial3 from "./img/events/wedding/specials/3.jpg";
-import weddingSpecial4 from "./img/events/wedding/specials/4.jpg";
+import extraService1 from "./img/extra-services/1.jpg";
+import extraService2 from "./img/extra-services/2.jpg";
+import extraService3 from "./img/extra-services/3.jpg";
+import extraService4 from "./img/extra-services/4.jpg";
+import extraService5 from "./img/extra-services/5.jpg";
+import extraService6 from "./img/extra-services/6.jpg";
+import extraService7 from "./img/extra-services/7.jpg";
+import extraService8 from "./img/extra-services/8.jpg";
 import placesIcon1 from "./img/events/wedding/placesIcon1.png";
 import placesIcon2 from "./img/events/wedding/placesIcon2.png";
 import placesIcon3 from "./img/events/wedding/placesIcon3.png";
@@ -145,7 +149,10 @@ import birthdayCentered4 from './img/events/birthday/centered/4.jpg';
 import birthdayCentered5 from './img/events/birthday/centered/5.jpg';
 import birthdayTavrika from './img/events/birthday/tavrika.jpg';
 import birthdayBallroom from './img/events/birthday/ballroom.jpg';
-import birthdayGreenTerrase from './img/events/birthday/greenterrase.jpg';
+import birthdayCircleTerrase from './img/events/birthday/circleterrase.jpg';
+import birthdayGreenTerrase from './img/events/birthday/terrase.jpg';
+import birthdayPaluba from './img/events/birthday/paluba.jpg';
+import birthdayLaVeranda from './img/events/birthday/la-veranda.jpg';
 import iconPhotozone from "./img/events/wedding/icon-photozone.png";
 import iconThematic from "./img/events/wedding/icon-thematic.png";
 import iconSpa from "./img/events/hen-party/icon1.png";
@@ -177,156 +184,6 @@ import childrenAnimImg from "./img/family-holiday/1.jpg";
 import childrenPoolImg from "./img/family-holiday/2.jpg";
 import birthdayImg from "./img/family-holiday/3.jpg";
 import playgroundImg from "./img/family-holiday/4.jpg";
-
-//страницы майса
-export const micePagesData = {
-    centeredSlides: [
-        {
-            img: forumImg,
-            title: 'Кофебрейки',
-            subtitle: 'Финальный',
-            subsubtitle: 'Фуршет',
-            fontsizeSubsubtitle: '69px',
-            key: 1,
-        },
-        {
-            img: forumImg1,
-            title: 'Настройка',
-            subtitle: 'Мультимедиа',
-            subsubtitle: 'Оборудования',
-            fontsizeSubsubtitle: '49px',
-            key: 2,
-        },
-        {
-            img: forumImg2,
-            title: 'Подготовка',
-            subtitle: 'Оформление',
-            subsubtitle: 'Площадки',
-            fontsizeSubsubtitle: '69px',
-            key: 3,
-        },
-        {
-            img: forumImg3,
-            title: 'Полный',
-            subtitle: 'Конференц',
-            subsubtitle: 'Набор',
-            fontsizeSubsubtitle: '69px',
-            key: 4,
-        },
-        {
-            img: forumImg4,
-            title: 'Трансфер',
-            subtitle: 'Участников',
-            subsubtitle: 'На место',
-            fontsizeSubsubtitle: '69px',
-            key: 5,
-        },
-    ],
-    widthSpecialsSlider: [
-        {
-            img: widthForumImg5,
-            title: 'Кофебрейки',
-            subtitle: 'Финальный',
-            link: '#',
-            key: 1,
-        },
-        {
-            img: widthForumImg6,
-            title: 'Настройка',
-            subtitle: 'Мультимедиа',
-            link: '#',
-            key: 2,
-        },
-        {
-            img: widthForumImg7,
-            title: 'Подготовка',
-            subtitle: 'Оформление',
-            link: '#',
-            key: 3,
-        },
-        {
-            img: widthForumImg7,
-            title: 'Подготовка',
-            subtitle: 'Оформление',
-            link: '#',
-            key: 4,
-        },
-        {
-            img: widthForumImg7,
-            title: 'Подготовка',
-            subtitle: 'Оформление',
-            link: '#',
-            key: 5,
-        },
-    ],
-    wideSliderServices: [
-        {
-            img: weddingSpecial1,
-            title: "Cкидка 10%",
-            subtitle: "На что-то",
-            link: '#',
-            key: 1,
-        },
-        {
-            img: weddingSpecial2,
-            title: "Программы",
-            subtitle: "Экскурсионные",
-            link: '#',
-            key: 2,
-        },
-        {
-            img: weddingSpecial3,
-            title: "Cкидка 30%",
-            subtitle: "На что-то",
-            link: '#',
-            key: 3,
-        },
-        {
-            img: weddingSpecial4,
-            title: "Cкидка 40%",
-            subtitle: "На что-то",
-            link: '#',
-            key: 4,
-        },
-    ],
-    conferenceIcons: [
-        {img: conferenceIcon1},
-        {img: conferenceIcon2},
-        {img: conferenceIcon3},
-        {img: conferenceIcon4},
-    ],
-    forumIcons: [
-        {img: forumIcon1},
-        {img: forumIcon2},
-        {img: forumIcon3},
-        {img: forumIcon4},
-        {img: forumIcon5},
-    ],
-    conferenceIconsAdvantages: [
-        {img: conferenceIcon5, text: "Съезд<br>руководителей"},
-        {img: conferenceIcon6, text: "Международная<br>премия"},
-        {img: conferenceIcon7, text: "Экспертный<br>форум"},
-        {img: conferenceIcon8, text: "Конференции<br>для компаний"},
-        {img: conferenceIcon9, text: "Показ<br>мод"},
-    ],
-    conferenceIconsBanner: [
-        {img: iconHalls, text: '9 оборудованных залов', key: 1, desc: "9 залов"},
-        {img: iconEquipment, text: 'Оборудование для выступлений', key: 2, desc: "Оборудование"},
-        {img: iconExcursions, text: 'Экскурсии и тимбилдинги', key: 3, desc: "Экскурсии"},
-        {img: iconResidence, text: 'Предложение на проживание в отеле', key: 4, desc: "Проживание"},
-    ],
-    teamBuildingIconsBanner: [
-        {img: iconPrograms, text: 'Разные программы тимбилдинга', key: 1, desc: "Программы тимбилдинга"},
-        {img: iconSPA, text: 'SPA-комплекс THE SHORE SPA', key: 2, desc: "SPA"},
-        {img: iconExcursions, text: 'Экскурсии и тимбилдинги', key: 3, desc: "Экскурсии"},
-        {img: iconResidence, text: 'Предложение на проживание в отеле', key: 4, desc: "Проживание"},
-    ],
-    exhibitionIconsBanner: [
-        {img: iconExhibition, text: 'Выставочные пространства', key: 1, desc: "Пространства"},
-        {img: iconEscort, text: 'Организационное сопровождение', key: 2, desc: "Сопровождение"},
-        {img: iconBonuses, text: 'Бонусы для организаторов', key: 3, desc: "Бонусы"},
-    ]
-}
 
 const commonGridSlides = [
     {
@@ -527,6 +384,56 @@ const commonSpecialsSlides = [
         key: 6,
     },
 ];
+const commonExtraServicesSlides =  [
+        {
+            img: extraService1,
+            title: "Medical<br/>SPA",
+            subtitle: "",
+            key: 1,
+        },
+        {
+            img: extraService2,
+            title: "Экскурсионные<br>программы",
+            subtitle: "",
+            key: 2,
+        },
+        {
+            img: extraService3,
+            title: "Оформление<br/>залов",
+            subtitle: "",
+            key: 3,
+        },
+        {
+            img: extraService4,
+            title: "Дегустации",
+            subtitle: "",
+            key: 4,
+        },
+        {
+            img: extraService5,
+            title: "Организация<br/>тимбилдинга",
+            subtitle: "",
+            key: 5,
+        },
+        {
+            img: extraService6,
+            title: "Развлекательные<br/>программы",
+            subtitle: "",
+            key: 5,
+        },
+        {
+            img: extraService7,
+            title: "Наличие<br/>трансфера",
+            subtitle: "",
+            key: 5,
+        },
+        {
+            img: extraService8,
+            title: "Фото- и видео-</br>сопровождение",
+            subtitle: "",
+            key: 6,
+        },
+    ]; // доп услуги
 const commonAfishaSlides = [
     {
         img: afisha1,
@@ -764,6 +671,128 @@ const commonGallerySlides = [
     },
 ];
 
+
+
+//страницы майса
+export const micePagesData = {
+    centeredSlides: [
+        {
+            img: forumImg,
+            title: 'Кофебрейки',
+            subtitle: 'Финальный',
+            subsubtitle: 'Фуршет',
+            fontsizeSubsubtitle: '69px',
+            key: 1,
+        },
+        {
+            img: forumImg1,
+            title: 'Настройка',
+            subtitle: 'Мультимедиа',
+            subsubtitle: 'Оборудования',
+            fontsizeSubsubtitle: '49px',
+            key: 2,
+        },
+        {
+            img: forumImg2,
+            title: 'Подготовка',
+            subtitle: 'Оформление',
+            subsubtitle: 'Площадки',
+            fontsizeSubsubtitle: '69px',
+            key: 3,
+        },
+        {
+            img: forumImg3,
+            title: 'Полный',
+            subtitle: 'Конференц',
+            subsubtitle: 'Набор',
+            fontsizeSubsubtitle: '69px',
+            key: 4,
+        },
+        {
+            img: forumImg4,
+            title: 'Трансфер',
+            subtitle: 'Участников',
+            subsubtitle: 'На место',
+            fontsizeSubsubtitle: '69px',
+            key: 5,
+        },
+    ],
+    widthSpecialsSlider: [
+        {
+            img: widthForumImg5,
+            title: 'Кофебрейки',
+            subtitle: 'Финальный',
+            link: '#',
+            key: 1,
+        },
+        {
+            img: widthForumImg6,
+            title: 'Настройка',
+            subtitle: 'Мультимедиа',
+            link: '#',
+            key: 2,
+        },
+        {
+            img: widthForumImg7,
+            title: 'Подготовка',
+            subtitle: 'Оформление',
+            link: '#',
+            key: 3,
+        },
+        {
+            img: widthForumImg7,
+            title: 'Подготовка',
+            subtitle: 'Оформление',
+            link: '#',
+            key: 4,
+        },
+        {
+            img: widthForumImg7,
+            title: 'Подготовка',
+            subtitle: 'Оформление',
+            link: '#',
+            key: 5,
+        },
+    ],
+    specialsSlides: commonExtraServicesSlides,
+    conferenceIcons: [
+        {img: conferenceIcon1},
+        {img: conferenceIcon2},
+        {img: conferenceIcon3},
+        {img: conferenceIcon4},
+    ],
+    forumIcons: [
+        {img: forumIcon1},
+        {img: forumIcon2},
+        {img: forumIcon3},
+        {img: forumIcon4},
+        {img: forumIcon5},
+    ],
+    conferenceIconsAdvantages: [
+        {img: conferenceIcon5, text: "Съезд<br>руководителей"},
+        {img: conferenceIcon6, text: "Международная<br>премия"},
+        {img: conferenceIcon7, text: "Экспертный<br>форум"},
+        {img: conferenceIcon8, text: "Конференции<br>для компаний"},
+        {img: conferenceIcon9, text: "Показ<br>мод"},
+    ],
+    conferenceIconsBanner: [
+        {img: iconHalls, text: '9 оборудованных залов', key: 1, desc: "9 залов"},
+        {img: iconEquipment, text: 'Оборудование для выступлений', key: 2, desc: "Оборудование"},
+        {img: iconExcursions, text: 'Экскурсии и тимбилдинги', key: 3, desc: "Экскурсии"},
+        {img: iconResidence, text: 'Предложение на проживание в отеле', key: 4, desc: "Проживание"},
+    ],
+    teamBuildingIconsBanner: [
+        {img: iconPrograms, text: 'Разные программы тимбилдинга', key: 1, desc: "Программы тимбилдинга"},
+        {img: iconSPA, text: 'SPA-комплекс THE SHORE SPA', key: 2, desc: "SPA"},
+        {img: iconExcursions, text: 'Экскурсии и тимбилдинги', key: 3, desc: "Экскурсии"},
+        {img: iconResidence, text: 'Предложение на проживание в отеле', key: 4, desc: "Проживание"},
+    ],
+    exhibitionIconsBanner: [
+        {img: iconExhibition, text: 'Выставочные пространства', key: 1, desc: "Пространства"},
+        {img: iconEscort, text: 'Организационное сопровождение', key: 2, desc: "Сопровождение"},
+        {img: iconBonuses, text: 'Бонусы для организаторов', key: 3, desc: "Бонусы"},
+    ]
+}
 
 // Домашняя страница
 export const homePageData = {
@@ -1331,7 +1360,7 @@ export const eventPagesData = {
             {
                 img: birthdayTavrika,
                 title: "Ресторан Tavrika",
-                descr: 'Подойдет для небольшой дружеской компании',
+                descr: 'Подойдет для небольшой дружеской компании.',
                 key: 1,
             },
             {
@@ -1341,26 +1370,26 @@ export const eventPagesData = {
                 key: 2,
             },
             {
-                img: birthdayGreenTerrase,
-                title: "Зеленая терраса",
-                descr: 'Зеленая Терраса под открытым небом на втором этаже отеля – идеальное место для летнего праздника в любой компании. Вмещает более 200 чел.',
+                img: birthdayCircleTerrase,
+                title: "Круглая терраса",
+                descr: 'Зал вместит до 120 гостей, его можно украсить в соответствии с общей тональностью мероприятия, подойдет для праздника в любое время года и в любую погоду. Имеет отдельный вход и зону для приветственного фуршета. Есть возможность организации танцпола.',
                 key: 3,
             },
             {
                 img: birthdayGreenTerrase,
-                title: "Круглая Терраса",
-                descr: 'Зал вместит до 120 гостей, его можно украсить в соответствии с общей тональностью мероприятия, подойдет для праздника в любое время года и в любую погоду. Имеет отдельный вход и зону для приветственного фуршета. Есть возможность организации танцпола.',
+                title: "Зеленая Терраса",
+                descr: 'Зеленая Терраса под открытым небом на втором этаже отеля – идеальное место для летнего праздника в любой компании. Вмещает более 200 чел.',
                 key: 4,
             },
             {
-                img: birthdayGreenTerrase,
+                img: birthdayPaluba,
                 title: "Верхняя палуба",
-                descr: 'Верхняя палуба обладает прекрасным видом на бескрайнее Черное море ',
+                descr: 'Верхняя палуба обладает прекрасным видом на бескрайнее Черное море.',
                 key: 5,
             },
             {
-                img: birthdayGreenTerrase,
-                title: "Ресторан LaVeranda",
+                img: birthdayLaVeranda,
+                title: "Ресторан La Veranda",
                 descr: 'Ресторан в неувядающем классическом стиле с лучшим видом на парк и море: вечернее солнце и все оттенки неба и моря будут служить прекрасным фоном для вашего праздника.',
                 key: 6,
             },
@@ -1441,64 +1470,7 @@ export const eventPagesData = {
             {img: iconList, text: "Сценарий от<br/>команды<br/>организаторов"},
         ],
     },
-    specialsSlides: [
-        {
-            img: weddingSpecial1,
-            title: "Medical<br/>SPA",
-            subtitle: "",
-            link: '#',
-            key: 1,
-        },
-        {
-            img: weddingSpecial2,
-            title: "Экскурсионные<br>программы",
-            subtitle: "",
-            link: '#',
-            key: 2,
-        },
-        {
-            img: weddingSpecial3,
-            title: "Оформление<br/>залов",
-            subtitle: "",
-            link: '#',
-            key: 3,
-        },
-        {
-            img: weddingSpecial4,
-            title: "Дегустации",
-            subtitle: "",
-            link: '#',
-            key: 4,
-        },
-        {
-            img: weddingSpecial4,
-            title: "Тимбилдинг",
-            subtitle: "",
-            link: '#',
-            key: 5,
-        },
-        {
-            img: weddingSpecial4,
-            title: "Развлекательные<br/>программы",
-            subtitle: "",
-            link: '#',
-            key: 5,
-        },
-        {
-            img: weddingSpecial4,
-            title: "Трансфер",
-            subtitle: "",
-            link: '#',
-            key: 5,
-        },
-        {
-            img: weddingSpecial4,
-            title: "Фото-</br>и видео-сопровождение",
-            subtitle: "",
-            link: '#',
-            key: 6,
-        },
-    ], // доп услуги
+    specialsSlides: commonExtraServicesSlides,
     classicSlides: commonClassicCampusSlides,
     modernSlides: commonModernCampusSlides,
     modernDescr: commonModernDescr,
