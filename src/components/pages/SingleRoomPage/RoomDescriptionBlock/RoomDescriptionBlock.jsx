@@ -7,7 +7,7 @@ import arrowIcon from "../../../../img/arrow-accordeon.png";
 import {NavLink} from "react-router-dom";
 
 
-const RoomDescriptionBlock = ({data}) => {
+const RoomDescriptionBlock = ({data, img}) => {
 
     let [accordeonStatus, setAccordeonStatus] = React.useState(false);
     let [includedInPriceAccordeonStatus, setIncludedInPriceAccordeonStatus] = React.useState(false);
@@ -56,14 +56,14 @@ const RoomDescriptionBlock = ({data}) => {
 
                         </div>
                     </div>
-                    <div className={s.rightBlock}></div>
+                    <img src={img} alt={"Фотография корпуса"} className={s.rightBlock}/>
                 </div>
 
                 <div className={s.iconsPart}>
 
                     {data.features.map((item, index) => <div key={index} className={s.icon}>
                         <img src={item.icon} alt=""/>
-                        <p dangerouslySetInnerHTML={{__html: item.desc}}></p>
+                        <p dangerouslySetInnerHTML={{__html: item.desc}}/>
                     </div>)}
 
                 </div>

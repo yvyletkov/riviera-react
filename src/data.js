@@ -67,6 +67,7 @@ import gridSpaImg7 from "./img/grid-slider/spa/7.jpg";
 import iconFloor from "./img/room-page/floor.png";
 import iconCapacity from "./img/room-page/guys.png";
 import iconView from "./img/room-page/mountains.png";
+import iconSea from "./img/room-page/sea.png";
 import iconShower from "./img/room-page/shower.png";
 import iconSpace from "./img/room-page/ploshchad.png";
 import iconConnected from "./img/room-page/connected.png";
@@ -189,6 +190,83 @@ import childrenAnimImg from "./img/family-holiday/1.jpg";
 import childrenPoolImg from "./img/family-holiday/2.jpg";
 import birthdayImg from "./img/family-holiday/3.jpg";
 import playgroundImg from "./img/family-holiday/4.jpg";
+// roomsImports
+import otherRoomsModernStandart from "./img/rooms/modern/other-rooms/стандарт-мини.jpg"
+import otherRoomsModernImproved from "./img/rooms/modern/other-rooms/улучшенный_мини.jpg"
+import otherRoomsModernSemiLux from "./img/rooms/modern/other-rooms/полулюкс 2.jpg"
+import otherRoomsModernLux from "./img/rooms/modern/other-rooms/люкс 1.jpg"
+import otherRoomsModernSpa from "./img/rooms/modern/other-rooms/спа_мини.jpg"
+import otherRoomsModernDisabled from "./img/rooms/modern/other-rooms/огр мини.jpg"
+import otherRoomsModernPresident from "./img/rooms/modern/other-rooms/president.jpg"
+
+import modernStandartHero from "./img/rooms-and-prices-page/banner-bg.jpg";
+import modernStandart1 from "./img/rooms/modern/standart/main_slider_1.jpg";
+import modernStandart2 from "./img/rooms/modern/standart/main_slider_2.jpg";
+import modernStandart3 from "./img/rooms/modern/standart/main_slider_3.jpg";
+
+import modernImprovedHero from "./img/rooms/modern/improved/hero.jpg";
+import modernImproved1 from "./img/rooms/modern/improved/main_slider_1.jpg";
+import modernImproved2 from "./img/rooms/modern/improved/main_slider_2.jpg";
+import modernImproved3 from "./img/rooms/modern/improved/main_slider_3.jpg";
+
+import modernSemiluxHero from "./img/rooms/modern/semi-lux/hero.jpg";
+import modernSemilux1 from "./img/rooms/modern/semi-lux/main_slider_1.jpg";
+import modernSemilux2 from "./img/rooms/modern/semi-lux/main_slider_2.jpg";
+import modernSemilux3 from "./img/rooms/modern/semi-lux/main_slider_3.jpg";
+
+import modernLuxHero from "./img/rooms/modern/lux/hero.jpg";
+import modernLux1 from "./img/rooms/modern/lux/main_slider_1.jpg";
+import modernLux2 from "./img/rooms/modern/lux/main_slider_2.jpg";
+import modernLux3 from "./img/rooms/modern/lux/main_slider_3.jpg";
+
+import modernSpaSuiteHero from "./img/rooms/modern/spa-suite/hero.jpg";
+import modernSpaSuite1 from "./img/rooms/modern/spa-suite/main_slider_1.jpg";
+import modernSpaSuite2 from "./img/rooms/modern/spa-suite/main_slider_2.jpg";
+import modernSpaSuite3 from "./img/rooms/modern/spa-suite/main_slider_3.jpg";
+
+import modernDisabledHero from "./img/rooms/modern/disabled/hero.jpg";
+import modernDisabled1 from "./img/rooms/modern/disabled/main_slider_1.jpg";
+import modernDisabled2 from "./img/rooms/modern/disabled/main_slider_2.jpg";
+import modernDisabled3 from "./img/rooms/modern/disabled/main_slider_3.jpg";
+
+import modernPresidentHero from "./img/rooms/modern/president/hero.jpg";
+import modernPresident1 from "./img/rooms/modern/president/main_slider_1.jpg";
+import modernPresident2 from "./img/rooms/modern/president/main_slider_2.jpg";
+import modernPresident3 from "./img/rooms/modern/president/main_slider_3.jpg";
+
+import otherRoomsClassicStandart from "./img/rooms/classic/other-rooms/standart.jpg";
+import otherRoomsClassicImproved from "./img/rooms/classic/other-rooms/uluch.jpg";
+import otherRoomsClassicSemilux from "./img/rooms/classic/other-rooms/half-lux.jpg";
+import otherRoomsClassicLux from "./img/rooms/classic/other-rooms/lux.jpg";
+import otherRoomsClassicPresident from "./img/rooms/classic/other-rooms/prezident.jpg";
+
+import classicStandartHero from "./img/rooms/classic/standart/hero.jpg";
+import classicStandart1 from "./img/rooms/classic/standart/main_slider_1.jpg";
+import classicStandart2 from "./img/rooms/classic/standart/main_slider_2.jpg";
+import classicStandart3 from "./img/rooms/classic/standart/main_slider_3.jpg";
+
+import classicImprovedHero from "./img/rooms/classic/improved/hero.jpg";
+import classicImproved1 from "./img/rooms/classic/improved/main_slider_1.jpg";
+import classicImproved2 from "./img/rooms/classic/improved/main_slider_2.jpg";
+import classicImproved3 from "./img/rooms/classic/improved/main_slider_3.jpg";
+
+import classicSemiLuxHero from "./img/rooms/classic/semi-lux/hero.jpg";
+import classicSemiLux1 from "./img/rooms/classic/semi-lux/main_slider_1.jpg";
+import classicSemiLux2 from "./img/rooms/classic/semi-lux/main_slider_2.jpg";
+import classicSemiLux3 from "./img/rooms/classic/semi-lux/main_slider_3.jpg";
+
+import classicLuxHero from "./img/rooms/classic/lux/hero.jpg";
+import classicLux1 from "./img/rooms/classic/lux/main_slider_1.jpg";
+import classicLux2 from "./img/rooms/classic/lux/main_slider_2.jpg";
+import classicLux3 from "./img/rooms/classic/lux/main_slider_3.jpg";
+
+import classicPresidentLuxHero from "./img/rooms/classic/president/hero.jpg";
+import classicPresidentLux1 from "./img/rooms/classic/president/main_slider_1.jpg";
+import classicPresidentLux2 from "./img/rooms/classic/president/main_slider_2.jpg";
+import classicPresidentLux3 from "./img/rooms/classic/president/main_slider_3.jpg";
+
+
+// END roomsImports
 
 const commonGridSlides = [
     {
@@ -682,8 +760,6 @@ const commonGallerySlides = [
     },
 ];
 
-
-
 //страницы майса
 export const micePagesData = {
     centeredSlides: [
@@ -803,7 +879,6 @@ export const homePageData = {
     gallerySlides: commonGallerySlides,
 }
 
-
 // Старница "Номера и Цены"
 export const roomsAndPricesPageData = {
     classicSlides: commonClassicCampusSlides,
@@ -901,38 +976,142 @@ export const roomsAndPricesPageData = {
     centeredSlides: commonAfishaSlides,
 }
 
-
 // Страницы номеров
+const modernOtherRoomsSlides = [
+    {
+        img: otherRoomsModernStandart,
+        subtitle: 'номер',
+        title: 'Стандарт',
+        capacity: "2 человека",
+        area: "25",
+        link: '/modern/standart',
+        key: 1,
+    },
+    {
+        img: otherRoomsModernImproved,
+        subtitle: 'номер',
+        title: 'Улучшенный',
+        capacity: "2 человека",
+        area: "25",
+        link: '/modern/improved',
+        key: 2,
+    },
+    {
+        img: otherRoomsModernSemiLux,
+        subtitle: 'номер',
+        title: 'Полулюкс',
+        capacity: "2 человека",
+        area: "50",
+        link: '/modern/semilux',
+        key: 3,
+    },
+    {
+        img: otherRoomsModernLux,
+        subtitle: 'номер',
+        title: 'Люкс',
+        capacity: "2 человека",
+        area: "50",
+        link: '/modern/lux',
+        key: 4,
+    },
+    {
+        img: otherRoomsModernSpa,
+        subtitle: 'номер',
+        title: 'SPA-Suite',
+        capacity: "2 человека",
+        area: "117",
+        link: '/modern/spa-suite',
+        key: 5,
+    },
+    {
+        img: otherRoomsModernDisabled,
+        subtitle: 'номер для людей с ограниченными',
+        title: 'Возможностями',
+        capacity: "2 человека",
+        area: "25",
+        link: '/modern/disabled',
+        key: 6,
+    },
+    {
+        img: otherRoomsModernPresident,
+        subtitle: 'номер',
+        title: 'Президентский люкс',
+        capacity: "4 человека",
+        area: "110",
+        link: '/modern/president-lux',
+        key: 6,
+    },
+];
+const classicOtherRoomsSlides = [
+    {
+        img: otherRoomsClassicStandart,
+        subtitle: 'номер',
+        title: 'Cтандарт',
+        capacity: "2 человека",
+        area: "20-25",
+        link: '/classic/standart',
+        key: 1,
+    },
+    {
+        img: otherRoomsClassicImproved,
+        subtitle: 'номер',
+        title: 'Улучшенный',
+        capacity: "2 человека",
+        area: "20-25",
+        link: '/classic/improved',
+        key: 2,
+    },
+    {
+        img: otherRoomsClassicSemilux,
+        subtitle: 'номер',
+        title: 'Полулюкс',
+        capacity: "2 человека",
+        area: "20-25",
+        link: '/classic/semi-lux',
+        key: 3,
+    },
+    {
+        img: otherRoomsClassicLux,
+        subtitle: 'номер',
+        title: 'Люкс',
+        capacity: "2 человека",
+        area: "45-50",
+        link: '/classic/lux',
+        key: 4,
+    },
+    {
+        img: otherRoomsClassicPresident,
+        subtitle: 'номер',
+        title: 'Президентский люкс',
+        capacity: "2 человека",
+        area: "130",
+        link: '/classic/president-lux',
+        key: 5,
+    },
+];
+const modernTopBlockImg = modern1img;
+const classicTopBlockImg = classic1img;
+
 export const roomPageData = {
     modernStandart: {
+        bannerImg: modernStandartHero,
         campusName: 'Модерн',
         roomName: 'Стандарт',
         roomNameFontSize: ["14.8vw", "95px"],
         largeGallerySlides: [
             {
-                img: promoImg1,
+                img: modernStandart1,
                 key: 1,
             },
             {
-                img: promoImg2,
+                img: modernStandart2,
                 key: 2,
             },
             {
-                img: promoImg3,
+                img: modernStandart3,
                 key: 3,
             },
-            {
-                img: img4,
-                key: 4,
-            },
-            {
-                img: img5,
-                key: 5,
-            },
-            {
-                img: img6,
-                key: 6,
-            },
+
         ],
         descriptionBlockData: {
             includedInPrice: [
@@ -969,85 +1148,553 @@ export const roomPageData = {
             ],
             roomDescription: 'Однокомнатный номер представлен спальней комнатой с одной двуспальной или двумя раздельными кроватями, гостевой зоной с мягким креслом и журнальным столиком, а также комфортной ванной комнатой.<br/><br/>Все номера данной категории имеют выход на балкон <b>с видом на величественные Крымские горы и город.</b> Для Вашего комфорта балкон оснащен столом и стульями, наслаждайтесь кофе на свежем воздухе c невероятно красивыми видами!'
         },
-        centeredSlides: [
+        centeredSlides: modernOtherRoomsSlides,
+        specialsSlides: commonSpecialsSlides,
+        topBlockImg: modernTopBlockImg
+    },
+    modernImproved: {
+        bannerImg: modernImprovedHero,
+        campusName: 'Модерн',
+        roomName: 'Улучшенный',
+        roomNameFontSize: ["13.4vw", "86px"],
+        largeGallerySlides: [
             {
-                img: afisha1,
-                title: "Караоке бар",
-                subtitle: "Green Stage",
-                time: "21:00",
-                date: "8 августа",
-                campus: "Корпус",
-                campusName: "Classic",
+                img: modernImproved1,
                 key: 1,
             },
             {
-                img: afisha2,
-                title: "Караоке бар",
-                subtitle: "Green Stage",
-                time: "21:00",
-                date: "8 августа",
-                campus: "Корпус",
-                campusName: "Classic",
+                img: modernImproved2,
                 key: 2,
             },
             {
-                img: afisha3,
-                title: "Караоке бар",
-                subtitle: "Green Stage",
-                time: "21:00",
-                date: "8 августа",
-                campus: "Корпус",
-                campusName: "Classic",
+                img: modernImproved3,
                 key: 3,
             },
-            {
-                img: afisha4,
-                title: "Караоке бар",
-                subtitle: "Green Stage",
-                time: "21:00",
-                date: "8 августа",
-                campus: "Корпус",
-                campusName: "Classic",
-                key: 4,
-            },
-            {
-                img: afisha5,
-                title: "Караоке бар",
-                subtitle: "Green Stage",
-                time: "21:00",
-                date: "8 августа",
-                campus: "Корпус",
-                campusName: "Classic",
-                key: 5,
-            },
-            {
-                img: afisha5,
-                title: "Караоке бар",
-                subtitle: "Green Stage",
-                time: "21:00",
-                date: "8 августа",
-                campus: "Корпус",
-                campusName: "Classic",
-                key: 6,
-            },
         ],
+        descriptionBlockData: {
+            includedInPrice: [
+                'Завтрак «Шведский стол»',
+                'Фитнес-зал',
+                'Джакузи в SPA',
+                'Детский бассейн',
+                'Крытый бассейн с противотоками',
+                'Финская сауна',
+                'Римская парная',
+                'Соляная комната',
+                'Уборка в номере',
+                'Гладильная (на этаже)',
+                'Парковка',
+            ],
+            roomEquipment: [
+                'Wi-Fi, Телефон',
+                'Телевизор',
+                'Кондиционер',
+                'Сейф',
+                'Фен, Полотенца, Гардероб',
+                'Халат (вафельный) + тапочки',
+                'Набор принадлежностей для ванны',
+                'Чайник, Чай, кофе, сахар',
+                'Стаканы, бокалы, чашки, ложки, штопор',
+            ],
+            features: [
+                {icon: iconFloor, desc: 'Номера<br/>с 4 по 10 этаж'},
+                {icon: iconCapacity, desc: '2 человека,<br/>2 доп. места*'},
+                {icon: iconSea, desc: 'Вид из номера<br/>на море'},
+                {icon: iconSpace, desc: 'Площадь<br/>25 м²'},
+                {icon: iconShower, desc: 'Ванная комната:<br/>Душ'},
+                {icon: iconConnected, desc: 'Есть номера<br/>connected**'},
+            ],
+            roomDescription: 'Однокомнатный номер представлен спальней комнатой с одной двуспальной или двумя раздельными кроватями, гостевой зоной с мягким креслом и журнальным столиком, а также комфортной ванной комнатой.<br/><br/>Все номера данной категории имеют выход на балкон, с которого открывается <b>великолепный вид на просторы Черного моря.</b> Для Вашего комфорта балкон оснащен столом и стульями, наслаждайтесь кофе на свежем воздухе c невероятно красивыми видами!'
+        },
+        centeredSlides: modernOtherRoomsSlides,
         specialsSlides: commonSpecialsSlides,
+        topBlockImg: modernTopBlockImg
     },
-    modernSemiLux: {
+    modernSemilux: {
+        bannerImg: modernSemiluxHero,
         campusName: 'Модерн',
         roomName: 'Полулюкс',
         roomNameFontSize: ["13.4vw", "86px"],
         largeGallerySlides: [
             {
-                img: promoImg1,
+                img: modernSemilux1,
                 key: 1,
             },
             {
-                img: promoImg2,
+                img: modernSemilux2,
                 key: 2,
             },
             {
-                img: promoImg3,
+                img: modernSemilux3,
+                key: 3,
+            },
+        ],
+        descriptionBlockData: {
+            includedInPrice: [
+                'Завтрак «Шведский стол»',
+                'Фитнес-зал',
+                'Джакузи в SPA',
+                'Детский бассейн',
+                'Крытый бассейн с противотоками',
+                'Финская сауна',
+                'Римская парная',
+                'Соляная комната',
+                'Уборка в номере',
+                'Гладильная (на этаже)',
+                'Парковка',
+            ],
+            roomEquipment: [
+                'Wi-Fi, Телефон',
+                'Телевизор',
+                'Кондиционер',
+                'Сейф',
+                'Фен, Полотенца, Гардероб',
+                'Халат (вафельный) + тапочки',
+                'Набор принадлежностей для ванны',
+                'Чайник, Чай, кофе, сахар',
+                'Стаканы, бокалы, чашки, ложки, штопор',
+            ],
+            features: [
+                {icon: iconFloor, desc: 'Номера<br/>с 4 по 10 этаж'},
+                {icon: iconCapacity, desc: '2 человека,<br/>2 доп. места*'},
+                {icon: iconView, desc: 'Вид из номера<br/>на город и горы'},
+                {icon: iconSpace, desc: 'Площадь<br/>50 м²'},
+                {icon: iconShower, desc: 'Ванная комната:<br/>Душ'},
+                {icon: iconConnected, desc: 'Есть номера<br/>connected**'},
+            ],
+                roomDescription: 'Просторный однокомнатный номер представлен спальней комнатой с одной двуспальной кроватью и гостиной с раскладным диваном или софой для уютного отдыха. Номера идеально подходят для семейного отдыха и длительного пребывания в нашем отеле.<br/><br/>Все номера данной категории имеют выход на балкон, с которого открывается <b>вид на величественные Крымские горы и город</b>. Для Вашего комфорта балкон и террасы оснащены столом и стульями, наслаждайтесь кофе на свежем воздухе и невероятно красивыми видами!'
+        },
+        centeredSlides: modernOtherRoomsSlides,
+        specialsSlides: commonSpecialsSlides,
+        topBlockImg: modernTopBlockImg
+    },
+    modernLux: {
+        bannerImg: modernLuxHero,
+        campusName: 'Модерн',
+        roomName: 'Люкс',
+        roomNameFontSize: ["13.4vw", "110px"],
+        largeGallerySlides: [
+            {
+                img: modernLux1,
+                key: 1,
+            },
+            {
+                img: modernLux2,
+                key: 2,
+            },
+            {
+                img: modernLux3,
+                key: 3,
+            },
+        ],
+        descriptionBlockData: {
+            includedInPrice: [
+                'Завтрак «Шведский стол»',
+                'Фитнес-зал',
+                'Джакузи в SPA',
+                'Детский бассейн',
+                'Крытый бассейн с противотоками',
+                'Финская сауна',
+                'Римская парная',
+                'Соляная комната',
+                'Уборка в номере',
+                'Гладильная (на этаже)',
+                'Парковка',
+            ],
+            roomEquipment: [
+                'Wi-Fi, Телефон',
+                'Телевизор',
+                'Кондиционер',
+                'Сейф',
+                'Фен, Полотенца, Гардероб',
+                'Халат (вафельный) + тапочки',
+                'Набор принадлежностей для ванны',
+                'Чайник, Чай, кофе, сахар',
+                'Стаканы, бокалы, чашки, ложки, штопор',
+                'Кофе машина капсульного типа (капсулы включены)'
+            ],
+            features: [
+                {icon: iconFloor, desc: 'Номера<br/>с 4 по 10 этаж'},
+                {icon: iconCapacity, desc: '2 человека,<br/>2 доп. места*'},
+                {icon: iconSea, desc: 'Вид из номера<br/>на море'},
+                {icon: iconSpace, desc: 'Площадь<br/>50 м²'},
+                {icon: iconShower, desc: 'Ванная комната:<br/>Душ'},
+                {icon: iconConnected, desc: 'Есть номера<br/>connected**'},
+            ],
+            roomDescription: 'Просторный двухкомнатный номер либо студия представлены элегантной спальней комнатой с двуспальной кроватью, гостиной с комфортабельным диваном и столовой зоной — идеальное сочетание для ценителей уюта и комфорта. Номера идеально подходят для семейного отдыха и длительного пребывания в нашем отеле.<br/><br/>Все номера данной категории имеют выход на балкон, с которого открывается <b>великолепный вид на просторы Черного моря</b>. Для Вашего комфорта балкон и террасы оснащены столом и стульями, наслаждайтесь кофе на свежем воздухе и невероятно красивыми видами!'
+        },
+        centeredSlides: modernOtherRoomsSlides,
+        specialsSlides: commonSpecialsSlides,
+        topBlockImg: modernTopBlockImg
+    },
+    modernDisabled: {
+        bannerImg: modernDisabledHero,
+        campusName: 'Модерн',
+        roomName: 'Для людей с ограниченными возможностями',
+        roomNameFontSize: ["12.4vw", "40px"],
+        largeGallerySlides: [
+            {
+                img: modernDisabled1,
+                key: 1,
+            },
+            {
+                img: modernDisabled2,
+                key: 2,
+            },
+            {
+                img: modernDisabled3,
+                key: 3,
+            },
+        ],
+        descriptionBlockData: {
+            includedInPrice: [
+                'Завтрак «Шведский стол»',
+                'Фитнес-зал',
+                'Джакузи в SPA',
+                'Детский бассейн',
+                'Крытый бассейн с противотоками',
+                'Финская сауна',
+                'Римская парная',
+                'Соляная комната',
+                'Уборка в номере',
+                'Гладильная (на этаже)',
+                'Парковка',
+            ],
+            roomEquipment: [
+                'Wi-Fi, Телефон',
+                'Телевизор',
+                'Кондиционер',
+                'Сейф',
+                'Фен, Полотенца, Гардероб',
+                'Халат (вафельный) + тапочки',
+                'Набор принадлежностей для ванны',
+                'Чайник, Чай, кофе, сахар',
+                'Стаканы, бокалы, чашки, ложки, штопор',
+                'Кофе машина капсульного типа (капсулы включены) '
+            ],
+            features: [
+                {icon: iconFloor, desc: 'Номера<br/>на 4 и 5 этажах'},
+                {icon: iconCapacity, desc: '2 человека,<br/>2 доп. места*'},
+                {icon: iconView, desc: 'Вид из номера<br/>на город и горы'},
+                {icon: iconSpace, desc: 'Площадь<br/>25 м²'},
+                {icon: iconShower, desc: 'Ванная комната:<br/>Душ'},
+                {icon: iconConnected, desc: 'Номера только<br/>connected**'},
+            ],
+            roomDescription: 'Специально спроектированный однокомнатный номер представлен спальней комнатой с одной двуспальной кроватью, гостевой зоной с мягким креслом и журнальным столиком, а также оснащены всем необходимым: ' +
+                '<ul><li>удобной ванной комнатой;</li><li>дополнительными поручнями;</li><li>расширенными дверными проемами;</li><li>соединением в соседний номер для сопровождающих.</li></ul>Для людей с ограниченными возможностями бесплатно предоставляется коляска!<br/><br/>' +
+                'Номера имеют выход на балкон с захватывающим видом на живописные Крымские горы и город. Для Вашего комфорта балкон и террасы оснащены столом и стульями, наслаждайтесь кофе на свежем воздухе и невероятно красивыми видами. \n'
+        },
+        centeredSlides: modernOtherRoomsSlides,
+        specialsSlides: commonSpecialsSlides,
+        topBlockImg: modernTopBlockImg
+    },
+    modernPresidentLux: {
+        bannerImg: modernPresidentHero,
+        campusName: 'Модерн',
+        roomName: 'Президентский люкс',
+        roomNameFontSize: ["14.8vw", "90px"],
+        largeGallerySlides: [
+            {
+                img: modernPresident1,
+                key: 1,
+            },
+            {
+                img: modernPresident2,
+                key: 2,
+            },
+            {
+                img: modernPresident3,
+                key: 3,
+            },
+        ],
+        descriptionBlockData: {
+            includedInPrice: [
+                'Завтрак «Шведский стол»',
+                'Фитнес-зал',
+                'Джакузи в SPA',
+                'Детский бассейн',
+                'Крытый бассейн с противотоками',
+                'Финская сауна',
+                'Римская парная',
+                'Соляная комната',
+                'Уборка в номере',
+                'Гладильная (на этаже)',
+                'Парковка',
+            ],
+            roomEquipment: [
+                'Wi-Fi, Телефон',
+                'Телевизор',
+                'Кондиционер',
+                'Сейф',
+                'Фен, Полотенца, Гардероб',
+                'Халат (вафельный) + тапочки',
+                'Набор принадлежностей для ванны',
+                'Чайник, Чай, кофе, сахар',
+                'Стаканы, бокалы, чашки, ложки, штопор',
+            ],
+            features: [
+                {icon: iconFloor, desc: 'Номера<br/>на 9 и 10 этажах'},
+                {icon: iconCapacity, desc: '4 человека,<br/>2 доп. места*'},
+                {icon: iconSea, desc: 'Вид из номера<br/>на море'},
+                {icon: iconSpace, desc: 'Площадь<br/>110 м²'},
+                {icon: iconShower, desc: 'Ванная комната:<br/>ванна и душ'},
+                {icon: iconConnected, desc: 'Есть номера<br/>connected**'},
+            ],
+            roomDescription: 'Изысканный трехкомнатный номер включает в себя две просторные светлые спальни большую гостиную-лаунж с зоной столовой, две ванные комнаты и гостевой санузел, кухню с отдельным входом для персонала. Чтобы отдых стал по-настоящему идеальный номера данной категории продумана каждая деталь, от дизайна интерьера до комплектации, чтобы отдых стал по-настоящему идеальный!<br/><br/>Все номера данной категории имеют выход на балкон, с которого открывается великолепный вид на просторы Черного моря. Для Вашего комфорта балкон и террасы оснащены столом и стульями, наслаждайтесь кофе на свежем воздухе и невероятно красивыми видами.'
+        },
+        centeredSlides: modernOtherRoomsSlides,
+        specialsSlides: commonSpecialsSlides,
+        topBlockImg: modernTopBlockImg
+    },
+
+    classicStandart: {
+        bannerImg: classicStandartHero,
+        campusName: 'Классик',
+        roomName: 'Стандарт',
+        roomNameFontSize: ["14.8vw", "95px"],
+        largeGallerySlides: [
+            {
+                img: classicStandart1,
+                key: 1,
+            },
+            {
+                img: classicStandart2,
+                key: 2,
+            },
+            {
+                img: classicStandart3,
+                key: 3,
+            },
+        ],
+        descriptionBlockData: {
+            includedInPrice: [
+                'Завтрак «Шведский стол»',
+                'Фитнес-зал',
+                'Джакузи в SPA',
+                'Детский бассейн',
+                'Крытый бассейн с противотоками',
+                'Финская сауна',
+                'Римская парная',
+                'Соляная комната',
+                'Уборка в номере',
+                'Гладильная (на этаже)',
+                'Парковка',
+            ],
+            roomEquipment: [
+                'Wi-Fi, Телефон',
+                'Телевизор',
+                'Кондиционер',
+                'Сейф',
+                'Фен, Полотенца, Гардероб',
+                'Халат (вафельный) + тапочки',
+                'Набор принадлежностей для ванны',
+                'Чайник, Чай, кофе, сахар',
+                'Стаканы, бокалы, чашки, ложки, штопор',
+            ],
+            features: [
+                {icon: iconFloor, desc: 'Номера<br/>на 1 и 2 этажах'},
+                {icon: iconCapacity, desc: '2 человека,<br/>2 доп. места*'},
+                {icon: iconView, desc: 'Вид из номера<br/>на город'},
+                {icon: iconSpace, desc: 'Площадь<br/>20-25 м²'},
+                {icon: iconShower, desc: 'Ванная комната:<br/>Душ'},
+                {icon: iconConnected, desc: 'Есть номера<br/>connected**'},
+            ],
+            roomDescription: 'Однокомнатный номер представлен спальней комнатой с одной двуспальной или двумя раздельными кроватями, гостевой зоной с мягким креслом и журнальным столиком, а также комфортной ванной комнатой. Классический дизайн и итальянская мебель создают чувство изящества и комфорта.<br/><br/>Все номера данной категории имеют выход на просторный балкон с видом на парк или Алуштинскую улочку. Для Вашего комфорта балкон оснащен столом и стульями, наслаждайтесь кофе на свежем воздухе и невероятно красивыми видами!'
+        },
+        centeredSlides: classicOtherRoomsSlides,
+        specialsSlides: commonSpecialsSlides,
+        topBlockImg: classicTopBlockImg
+    },
+    classicImproved: {
+        bannerImg: classicImprovedHero,
+        campusName: 'Классик',
+        roomName: 'Улучшенный',
+        roomNameFontSize: ["14.8vw", "95px"],
+        largeGallerySlides: [
+            {
+                img: classicImproved1,
+                key: 1,
+            },
+            {
+                img: classicImproved2,
+                key: 2,
+            },
+            {
+                img: classicImproved3,
+                key: 3,
+            },
+        ],
+        descriptionBlockData: {
+            includedInPrice: [
+                'Завтрак «Шведский стол»',
+                'Фитнес-зал',
+                'Джакузи в SPA',
+                'Детский бассейн',
+                'Крытый бассейн с противотоками',
+                'Финская сауна',
+                'Римская парная',
+                'Соляная комната',
+                'Уборка в номере',
+                'Гладильная (на этаже)',
+                'Парковка',
+            ],
+            roomEquipment: [
+                'Wi-Fi, Телефон',
+                'Телевизор',
+                'Кондиционер',
+                'Сейф',
+                'Фен, Полотенца, Гардероб',
+                'Халат (вафельный) + тапочки',
+                'Набор принадлежностей для ванны',
+                'Чайник, Чай, кофе, сахар',
+                'Стаканы, бокалы, чашки, ложки, штопор',
+            ],
+            features: [
+                {icon: iconFloor, desc: 'Номера<br/>на 1, 2 и 3 этажах'},
+                {icon: iconCapacity, desc: '2 человека,<br/>2 доп. места*'},
+                {icon: iconView, desc: 'Вид из номера<br/>на город'},
+                {icon: iconSpace, desc: 'Площадь<br/>20-25 м²'},
+                {icon: iconShower, desc: 'Ванная комната:<br/>Душ'},
+                {icon: iconConnected, desc: 'Есть номера<br/>connected**'},
+            ],
+            roomDescription: 'Однокомнатный номер представлен спальней комнатой с одной двуспальной или двумя раздельными кроватями, гостевой зоной с мягким креслом и журнальным столиком, а также комфортной ванной комнатой. Классический дизайн и итальянская мебель создают чувство изящества и комфорта.<br/><br/>Все номера данной категории имеют выход на балкон, с которого открывается великолепный вид на просторы Черного моря и реликтовый парк. Для Вашего комфорта балкон оснащен столом и стульями, наслаждайтесь кофе на свежем воздухе и невероятно красивыми видами!'
+        },
+        centeredSlides: classicOtherRoomsSlides,
+        specialsSlides: commonSpecialsSlides,
+        topBlockImg: classicTopBlockImg
+    },
+    classicSemilux: {
+        bannerImg: classicSemiLuxHero,
+        campusName: 'Классик',
+        roomName: 'Полулюкс',
+        roomNameFontSize: ["14.8vw", "95px"],
+        largeGallerySlides: [
+            {
+                img: classicSemiLux1,
+                key: 1,
+            },
+            {
+                img: classicSemiLux2,
+                key: 2,
+            },
+            {
+                img: classicSemiLux3,
+                key: 3,
+            },
+        ],
+        descriptionBlockData: {
+            includedInPrice: [
+                'Завтрак «Шведский стол»',
+                'Фитнес-зал',
+                'Джакузи в SPA',
+                'Детский бассейн',
+                'Крытый бассейн с противотоками',
+                'Финская сауна',
+                'Римская парная',
+                'Соляная комната',
+                'Уборка в номере',
+                'Гладильная (на этаже)',
+                'Парковка',
+            ],
+            roomEquipment: [
+                'Wi-Fi, Телефон',
+                'Телевизор',
+                'Кондиционер',
+                'Сейф',
+                'Фен, Полотенца, Гардероб',
+                'Халат (вафельный) + тапочки',
+                'Набор принадлежностей для ванны',
+                'Чайник, Чай, кофе, сахар',
+                'Стаканы, бокалы, чашки, ложки, штопор',
+            ],
+            features: [
+                {icon: iconFloor, desc: 'Номера<br/>на 1, 2 и 3 этажах'},
+                {icon: iconCapacity, desc: '2 человека,<br/>2 доп. места*'},
+                {icon: iconView, desc: 'Вид из номера<br/>на город'},
+                {icon: iconSpace, desc: 'Площадь<br/>20-25 м²'},
+                {icon: iconShower, desc: 'Ванная комната:<br/>Душ'},
+                {icon: iconConnected, desc: 'Есть номера<br/>connected**'},
+            ],
+            roomDescription: 'Просторный двухкомнатный номер либо студия представлены элегантной спальней комнатой с двуспальной кроватью, гостиной с комфортабельным диваном или софой — идеальное сочетание для ценителей уюта и комфорта. Номера идеально подходят для семейного отдыха и длительного пребывания в нашем отеле.<br/><br/>Все номера данной категории имеют выход на балкон, с которого открывается великолепный вид на просторы Черного моря и реликтовый парк. Для Вашего комфорта балкон оснащен столом и стульями, наслаждайтесь кофе на свежем воздухе и невероятно красивыми видами!'
+        },
+        centeredSlides: classicOtherRoomsSlides,
+        specialsSlides: commonSpecialsSlides,
+        topBlockImg: classicTopBlockImg
+    },
+    classicLux: {
+        bannerImg: classicLuxHero,
+        campusName: 'Классик',
+        roomName: 'Люкс',
+        roomNameFontSize: ["14.8vw", "95px"],
+        largeGallerySlides: [
+            {
+                img: classicLux1,
+                key: 1,
+            },
+            {
+                img: classicLux2,
+                key: 2,
+            },
+            {
+                img: classicLux3,
+                key: 3,
+            },
+        ],
+        descriptionBlockData: {
+            includedInPrice: [
+                'Завтрак «Шведский стол»',
+                'Фитнес-зал',
+                'Джакузи в SPA',
+                'Детский бассейн',
+                'Крытый бассейн с противотоками',
+                'Финская сауна',
+                'Римская парная',
+                'Соляная комната',
+                'Уборка в номере',
+                'Гладильная (на этаже)',
+                'Парковка',
+            ],
+            roomEquipment: [
+                'Wi-Fi, Телефон',
+                'Телевизор',
+                'Кондиционер',
+                'Сейф',
+                'Фен, Полотенца, Гардероб',
+                'Халат (вафельный) + тапочки',
+                'Набор принадлежностей для ванны',
+                'Чайник, Чай, кофе, сахар',
+                'Стаканы, бокалы, чашки, ложки, штопор',
+            ],
+            features: [
+                {icon: iconFloor, desc: 'Номера<br/>на 1, 2 и 3 этажах'},
+                {icon: iconCapacity, desc: '2 человека,<br/>2 доп. места*'},
+                {icon: iconView, desc: 'Вид из номера<br/>на город'},
+                {icon: iconSpace, desc: 'Площадь<br/>45-50 м²'},
+                {icon: iconShower, desc: 'Ванная комната:<br/>Ванна'},
+                {icon: iconConnected, desc: 'Есть номера<br/>connected**'},
+            ],
+            roomDescription: 'Просторный двухкомнатный номер либо студия представлены элегантной спальней комнатой с двуспальной кроватью, гостиной с комфортабельным диваном и столовой зоной — идеальное сочетание для ценителей уюта и комфорта. Номера идеально подходят для семейного отдыха и длительного пребывания в нашем отеле.<br/><br/>Все номера данной категории имеют выход на балкон, с которого открывается великолепный вид на просторы Черного моря и реликтовый парк. Для Вашего комфорта балкон оснащен столом и стульями, наслаждайтесь кофе на свежем воздухе и невероятно красивыми видами!'
+        },
+        centeredSlides: classicOtherRoomsSlides,
+        specialsSlides: commonSpecialsSlides,
+        topBlockImg: classicTopBlockImg
+    },
+    classicPresidentLux: {
+        bannerImg: classicPresidentLuxHero,
+        campusName: 'Классик',
+        roomName: 'Президентский Люкс',
+        roomNameFontSize: ["14.8vw", "95px"],
+        largeGallerySlides: [
+            {
+                img: classicPresidentLux1,
+                key: 1,
+            },
+            {
+                img: classicPresidentLux2,
+                key: 2,
+            },
+            {
+                img: classicPresidentLux3,
                 key: 3,
             },
             {
@@ -1087,82 +1734,84 @@ export const roomPageData = {
                 'Набор принадлежностей для ванны',
                 'Чайник, Чай, кофе, сахар',
                 'Стаканы, бокалы, чашки, ложки, штопор',
+                'Кофе машина капсульного типа (капсулы включены)'
             ],
             features: [
-                {icon: iconFloor, desc: 'Номера<br/>с 4 по 10 этаж'},
+                {icon: iconFloor, desc: 'Номера<br/>на 3 этаже'},
                 {icon: iconCapacity, desc: '2 человека,<br/>2 доп. места*'},
-                {icon: iconView, desc: 'Вид из номера<br/>на город и горы'},
-                {icon: iconSpace, desc: 'Площадь<br/>25 м²'},
-                {icon: iconShower, desc: 'Ванная комната:<br/>Душ'},
+                {icon: iconSea, desc: 'Вид из номера<br/>море и парк'},
+                {icon: iconSpace, desc: 'Площадь<br/>130 м²'},
+                {icon: iconShower, desc: 'Ванная комната:<br/>Ванна'},
                 {icon: iconConnected, desc: 'Есть номера<br/>connected**'},
             ],
-            roomDescription: 'Однокомнатный номер представлен спальней комнатой с одной двуспальной или двумя раздельными кроватями, гостевой зоной с мягким креслом и журнальным столиком, а также комфортной ванной комнатой.<br/><br/>Все номера данной категории имеют выход на балкон <b>с видом на величественные Крымские горы и город.</b> Для Вашего комфорта балкон оснащен столом и стульями, наслаждайтесь кофе на свежем воздухе c невероятно красивыми видами!'
+            roomDescription: 'Изысканный четырехкомнатный номер включает в себя просторную и светлую спальную комнату с двуспальной кроватью, большую гостиную-лаунж с зоной с панорамным окном, соловую зону, гардеробную с отдельным входом для персонала, рабочий кабинет. Чтобы отдых стал по-настоящему идеальный номера данной категории продумана каждая деталь, от дизайна интерьера до комплектации, чтобы отдых стал по-настоящему идеальный!<br/><br/>Все номера данной категории имеют выход на балкон, с которого открывается великолепный вид на просторы Черного мор и реликтовый парк. Для Вашего комфорта балкон и террасы оснащены столом и стульями, наслаждайтесь кофе на свежем воздухе и невероятно красивыми видами.'
         },
-        centeredSlides: [
+        centeredSlides: classicOtherRoomsSlides,
+        specialsSlides: commonSpecialsSlides,
+        topBlockImg: classicTopBlockImg
+    },
+
+    spaSuite: {
+        bannerImg: modernSpaSuiteHero,
+        campusName: 'Модерн',
+        roomName: 'SPA-Suite',
+        roomNameFontSize: ["13.4vw", "100px"],
+        largeGallerySlides: [
             {
-                img: afisha1,
-                title: "Караоке бар",
-                subtitle: "Green Stage",
-                time: "21:00",
-                date: "8 августа",
-                campus: "Корпус",
-                campusName: "Classic",
+                img: modernSpaSuite1,
                 key: 1,
             },
             {
-                img: afisha2,
-                title: "Караоке бар",
-                subtitle: "Green Stage",
-                time: "21:00",
-                date: "8 августа",
-                campus: "Корпус",
-                campusName: "Classic",
+                img: modernSpaSuite2,
                 key: 2,
             },
             {
-                img: afisha3,
-                title: "Караоке бар",
-                subtitle: "Green Stage",
-                time: "21:00",
-                date: "8 августа",
-                campus: "Корпус",
-                campusName: "Classic",
+                img: modernSpaSuite3,
                 key: 3,
             },
-            {
-                img: afisha4,
-                title: "Караоке бар",
-                subtitle: "Green Stage",
-                time: "21:00",
-                date: "8 августа",
-                campus: "Корпус",
-                campusName: "Classic",
-                key: 4,
-            },
-            {
-                img: afisha5,
-                title: "Караоке бар",
-                subtitle: "Green Stage",
-                time: "21:00",
-                date: "8 августа",
-                campus: "Корпус",
-                campusName: "Classic",
-                key: 5,
-            },
-            {
-                img: afisha5,
-                title: "Караоке бар",
-                subtitle: "Green Stage",
-                time: "21:00",
-                date: "8 августа",
-                campus: "Корпус",
-                campusName: "Classic",
-                key: 6,
-            },
         ],
+        descriptionBlockData: {
+            includedInPrice: [
+                'Завтрак «Шведский стол»',
+                'Фитнес-зал',
+                'Джакузи в SPA',
+                'Детский бассейн',
+                'Крытый бассейн с противотоками',
+                'Финская сауна',
+                'Римская парная',
+                'Соляная комната',
+                'Уборка в номере',
+                'Гладильная (на этаже)',
+                'Парковка',
+            ],
+            roomEquipment: [
+                'Wi-Fi, Телефон',
+                'Телевизор',
+                'Кондиционер',
+                'Сейф',
+                'Фен, Полотенца, Гардероб',
+                'Халат (вафельный) + тапочки',
+                'Набор принадлежностей для ванны',
+                'Чайник, Чай, кофе, сахар',
+                'Стаканы, бокалы, чашки, ложки, штопор',
+                'Кофе машина капсульного типа (капсулы включены)'
+            ],
+            features: [
+                {icon: iconFloor, desc: 'Номера расположены<br/>в SPA-комплексе'},
+                {icon: iconCapacity, desc: '2 человека,<br/>2 доп. места*'},
+                {icon: iconSea, desc: 'Вид на море<br/>и реликтовый парк'},
+                {icon: iconSpace, desc: 'Площадь<br/>117 м²'},
+                {icon: iconShower, desc: 'Ванная комната:<br/>Душ'},
+                {icon: iconConnected, desc: 'Есть номера<br/>connected**'},
+            ],
+            roomDescription: 'Отдых в номере SPA-Suite — <b>отдых для избранных?</b><br/><br/>Номер SPA-Suite представлен пятью комфортно организованными зонами совершенного отдыха: гостиная, спальная комната, СПА-зона для проведения процедур по уходу за телом, римская парная с зоной отдыха, открытая веранда с джакузи и прекрасным видом на море и реликтовый парк отеля.<br/><br/>Номер расположен в SPA-комплексе отдельно от других номеров, и отличается особой атмосферой изысканного отдыха, комфортной и уединенной обстановки номера и изысканным интерьером.'
+        },
+        centeredSlides: [...modernOtherRoomsSlides, ...classicOtherRoomsSlides],
         specialsSlides: commonSpecialsSlides,
+        topBlockImg: modernTopBlockImg
     },
-}
+
+};
 
 // Страницы "Cемейный отдых", "Отдых для себя", "Отдых с друзьями", "Романтический отдых"
 export const vacationPagesData = {

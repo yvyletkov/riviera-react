@@ -139,5 +139,36 @@
   }
 }
 
+.roomSubtitle {
+  font-family: "Bebas Neue Book", sans-serif;
+  font-size: 20px;
+}
+
+.roomTitle {
+  font-family: "Bebas Neue Bold", sans-serif;
+  font-size: 43px;
+  margin-bottom: 8px;
+  line-height: 1;
+}
+
+.imgContainer {
+  text-transform: none;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  align-items: center;
+  &:first-of-type {
+    margin-right: 23px !important;
+  }
+  img {
+    margin-right: 10px !important;
+    width: 30px !important;
+  }
+  sup {
+    font-family: "Helvetica Neue", sans-serif;
+  }
+}
+
 
 
