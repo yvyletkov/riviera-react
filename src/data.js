@@ -6,6 +6,11 @@ import gridKurortImg5 from "./img/grid-slider/resort-vacation/5.jpg";
 import gridKurortImg6 from "./img/grid-slider/resort-vacation/6.jpg";
 import gridKurortImg7 from "./img/grid-slider/resort-vacation/7.jpg";
 import gridKurortImg8 from "./img/grid-slider/resort-vacation/8.jpg";
+import confrerenceRoomsImg1 from "./img/mice/conference/ballrom.jpg";
+import confrerenceRoomsImg2 from "./img/mice/conference/room1.jpg";
+import confrerenceRoomsImg3 from "./img/mice/conference/room2.jpg";
+import confrerenceRoomsImg4 from "./img/mice/conference/room3.jpg";
+import confrerenceRoomsImg5 from "./img/mice/conference/room4.jpg";
 import gridKitchen1 from "./img/grid-slider/kitchen/kitchen1.jpg";
 import gridKitchen2 from "./img/grid-slider/kitchen/kitchen2.jpg";
 import gridKitchen3 from "./img/grid-slider/kitchen/kitchen3.jpg";
@@ -719,38 +724,28 @@ export const micePagesData = {
     ],
     widthSpecialsSlider: [
         {
-            img: widthForumImg5,
-            title: 'Кофебрейки',
-            subtitle: 'Финальный',
-            link: '#',
+            img: confrerenceRoomsImg1,
+            title: 'Ball Room',
             key: 1,
         },
         {
-            img: widthForumImg6,
-            title: 'Настройка',
-            subtitle: 'Мультимедиа',
-            link: '#',
+            img: confrerenceRoomsImg2,
+            title: 'Конференц-зал 1',
             key: 2,
         },
         {
-            img: widthForumImg7,
-            title: 'Подготовка',
-            subtitle: 'Оформление',
-            link: '#',
+            img: confrerenceRoomsImg3,
+            title: 'Конференц-зал 2',
             key: 3,
         },
         {
-            img: widthForumImg7,
-            title: 'Подготовка',
-            subtitle: 'Оформление',
-            link: '#',
+            img: confrerenceRoomsImg4,
+            title: 'Конференц-зал 3',
             key: 4,
         },
         {
-            img: widthForumImg7,
-            title: 'Подготовка',
-            subtitle: 'Оформление',
-            link: '#',
+            img: confrerenceRoomsImg5,
+            title: 'Конференц-зал 4',
             key: 5,
         },
     ],

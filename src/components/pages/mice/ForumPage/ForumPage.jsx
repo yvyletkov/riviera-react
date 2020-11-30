@@ -80,7 +80,7 @@ const ForumPage = () => {
             </section>
             <section className="section">
                 <SpecialsSlider subtitle={'Дополнительные'} title={'услуги'} btnText={'Получить прайс по услугам'}
-                                text={"Какой-то текст"}
+                                text={"Для успешной организации мероприятия в отеле Riviera Sunrise Resort & SPA, вы можете воспользоваться дополнительными услугами. Мы создавали их с желанием сделать ваше мероприятие ещё более насыщенным и подарить гостям комфорт и удивительные впечатления!"}
                                 slides={micePagesData.specialsSlides}/>
             </section>
             <section className='section'>

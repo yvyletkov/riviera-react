@@ -6,16 +6,20 @@ import {NavLink} from "react-router-dom";
 const WidthSpecialsSliderItem = (props) => {
     const {img, isActive, title, subtitle, link} = props;
 
+    const handleLinkClick = (e) => {
+        if (!link) e.preventDefault()
+    }
+
     return (
         <div className={s.cardWrapper}>
-            <NavLink to={link}>
+            <NavLink onClick={handleLinkClick} to={link ? link : '#'}>
                 <div
                     className={isActive ? `${s.card} ${s.lifted}` : s.card}>
                     <img className={s.img} src={img} alt="Афиша"/>
                     <div className={s.content}>
                         <p className={s.title}>{title}</p>
                         <p className={s.subtitle}>{subtitle}</p>
-                        <a href="">Подробнее →</a>
+                        { link && <a href="">Подробнее →</a> }
                     </div>
                 </div>
             </NavLink>

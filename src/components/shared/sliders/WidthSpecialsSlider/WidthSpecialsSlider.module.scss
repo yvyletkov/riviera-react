@@ -44,8 +44,7 @@
 @media screen and (max-width: 1200px) {
 
   .wrapper:before {
-    background-image: url(../../../../img/specials-slider/specials-bg-mobile.jpg);
-    background-position: left bottom;
+    background: url(../../../../img/specials-slider/specials-bg-mobile.jpg) no-repeat left bottom;
     background-size: contain;
     opacity: 0.3;
   }
