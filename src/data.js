@@ -264,8 +264,6 @@ import classicPresidentLuxHero from "./img/rooms/classic/president/hero.jpg";
 import classicPresidentLux1 from "./img/rooms/classic/president/main_slider_1.jpg";
 import classicPresidentLux2 from "./img/rooms/classic/president/main_slider_2.jpg";
 import classicPresidentLux3 from "./img/rooms/classic/president/main_slider_3.jpg";
-
-
 // END roomsImports
 
 const commonGridSlides = [
@@ -434,42 +432,42 @@ const commonSpecialsSlides = [
         img: promoImg1,
         subtitle: "Летний отдых",
         title: "С выгодой до 20%",
-        link: '#',
+        // link: '#',
         key: 1,
-    },
-    {
-        img: promoImg2,
-        subtitle: "План \"Б\"",
-        title: "Опережай время",
-        link: '#',
-        key: 2,
-    },
-    {
-        img: promoImg3,
-        subtitle: "Длительное проживание 2021",
-        title: "С выгодой до 25%",
-        link: '#',
-        key: 3,
-    },
-    {
-        img: promoImg4,
-        subtitle: "Отдых",
-        title: "Для крымчан",
-        link: '#',
-        key: 4,
     },
     {
         img: promoImg5,
         subtitle: "",
         title: "Бархатный<br/>сезон",
-        link: '#',
+        link: '/promotions/barhatnyi-sezon',
+        key: 2,
+    },
+    {
+        img: promoImg2,
+        subtitle: "План \"Б\"",
+        title: "Опережай время",
+        // link: '#',
+        key: 3,
+    },
+    {
+        img: promoImg3,
+        subtitle: "Длительное проживание 2021",
+        title: "С выгодой до 25%",
+        // link: '#',
+        key: 4,
+    },
+    {
+        img: promoImg4,
+        subtitle: "Отдых",
+        title: "Для крымчан",
+        // link: '#',
         key: 5,
     },
     {
         img: promoImg6,
         subtitle: "",
         title: "Онлайн</br>конференция",
-        link: '#',
+        // link: '#',
         key: 6,
     },
 ];
@@ -589,25 +587,36 @@ const commonClassicCampusSlides = [
     {
         img: classic1img,
         title: "Корпуса классик",
-        link: "",
         bookingLink: "",
     },
     {
-        img: classic2img,
+        img: classicStandart1,
         title: "Стандарт",
         link: "/classic/standart",
         bookingLink: "",
     },
     {
-        img: classic3img,
-        title: "Полулюкс Классик",
-        link: "/classic/polulyuks-classic",
+        img: classicImproved1,
+        title: "Улучшенный",
+        link: "/classic/improved",
         bookingLink: "",
     },
     {
-        img: classic2img,
-        title: "Какой-то номер",
-        link: "/classic/",
+        img: classicSemiLux2,
+        title: "Полулюкс",
+        link: "/classic/semi-lux",
+        bookingLink: "",
+    },
+    {
+        img: classicLux2,
+        title: "Люкс",
+        link: "/classic/lux",
+        bookingLink: "",
+    },
+    {
+        img: classicPresidentLux1,
+        title: "Президентский люкс",
+        link: "/classic/president-lux",
         bookingLink: "",
     },
 ];
@@ -615,25 +624,42 @@ const commonModernCampusSlides = [
     {
         img: modern1img,
         title: "Корпус Модерн",
-        link: "",
         bookingLink: "",
     },
     {
-        img: modern2img,
+        img: modernStandart1,
         title: "Стандарт",
         link: "/modern/standart",
         bookingLink: "",
     },
     {
-        img: modern3img,
-        title: "Полулюкс модерн",
-        link: "/modern/polulyuks-modern",
+        img: modernImproved1,
+        title: "Улучшенный",
+        link: "/modern/improved",
         bookingLink: "",
     },
     {
-        img: modern2img,
-        title: "Какой-то номер",
-        link: "/modern/",
+        img: modernSemilux1,
+        title: "Полулюкс",
+        link: "/modern/semi-lux",
+        bookingLink: "",
+    },
+    {
+        img: modernLux1,
+        title: "Люкс",
+        link: "/modern/lux",
+        bookingLink: "",
+    },
+    {
+        img: modernSpaSuite1,
+        title: "SPA-Suite",
+        link: "/spa-suite",
+        bookingLink: "",
+    },
+    {
+        img: modernPresident2,
+        title: "Президентский люкс",
+        link: "/modern/president-lux",
         bookingLink: "",
     },
 ];
@@ -1020,7 +1046,7 @@ const modernOtherRoomsSlides = [
         title: 'SPA-Suite',
         capacity: "2 человека",
         area: "117",
-        link: '/modern/spa-suite',
+        link: '/spa-suite',
         key: 5,
     },
     {
@@ -1272,7 +1298,7 @@ export const roomPageData = {
         bannerImg: modernLuxHero,
         campusName: 'Модерн',
         roomName: 'Люкс',
-        roomNameFontSize: ["13.4vw", "110px"],
+        roomNameFontSize: ["21.3vw", "110px"],
         largeGallerySlides: [
             {
                 img: modernLux1,
@@ -1330,8 +1356,8 @@ export const roomPageData = {
     modernDisabled: {
         bannerImg: modernDisabledHero,
         campusName: 'Модерн',
-        roomName: 'Для людей с ограниченными возможностями',
-        roomNameFontSize: ["12.4vw", "40px"],
+        roomName: 'Для людей<br/>с ограниченными<br/>возможностями',
+        roomNameFontSize: ["7.6vw", "45px"],
         largeGallerySlides: [
             {
                 img: modernDisabled1,
@@ -1381,7 +1407,7 @@ export const roomPageData = {
                 {icon: iconConnected, desc: 'Номера только<br/>connected**'},
             ],
             roomDescription: 'Специально спроектированный однокомнатный номер представлен спальней комнатой с одной двуспальной кроватью, гостевой зоной с мягким креслом и журнальным столиком, а также оснащены всем необходимым: ' +
-                '<ul><li>удобной ванной комнатой;</li><li>дополнительными поручнями;</li><li>расширенными дверными проемами;</li><li>соединением в соседний номер для сопровождающих.</li></ul>Для людей с ограниченными возможностями бесплатно предоставляется коляска!<br/><br/>' +
+                '<ul><li>удобной ванной комнатой;</li><li>дополнительными поручнями;</li><li>расширенными дверными проемами;</li><li>соединением в соседний номер для сопровождающих.</li></ul><br/>Для людей с ограниченными возможностями бесплатно предоставляется коляска!<br/><br/>' +
                 'Номера имеют выход на балкон с захватывающим видом на живописные Крымские горы и город. Для Вашего комфорта балкон и террасы оснащены столом и стульями, наслаждайтесь кофе на свежем воздухе и невероятно красивыми видами. \n'
         },
         centeredSlides: modernOtherRoomsSlides,
@@ -1391,7 +1417,7 @@ export const roomPageData = {
     modernPresidentLux: {
         bannerImg: modernPresidentHero,
         campusName: 'Модерн',
-        roomName: 'Президентский люкс',
+        roomName: 'Президентский<br/>люкс',
         roomNameFontSize: ["14.8vw", "90px"],
         largeGallerySlides: [
             {
@@ -1625,7 +1651,7 @@ export const roomPageData = {
         bannerImg: classicLuxHero,
         campusName: 'Классик',
         roomName: 'Люкс',
-        roomNameFontSize: ["14.8vw", "95px"],
+        roomNameFontSize: ["21.3vw", "110px"],
         largeGallerySlides: [
             {
                 img: classicLux1,
@@ -1682,8 +1708,8 @@ export const roomPageData = {
     classicPresidentLux: {
         bannerImg: classicPresidentLuxHero,
         campusName: 'Классик',
-        roomName: 'Президентский Люкс',
-        roomNameFontSize: ["14.8vw", "95px"],
+        roomName: 'Президентский<br/>Люкс',
+        roomNameFontSize: ["14.8vw", "90px"],
         largeGallerySlides: [
             {
                 img: classicPresidentLux1,
@@ -2128,42 +2154,42 @@ export const promotionsPageData = {
             img: promoImg7,
             subtitle: "",
             title: "Трансфер<br/>в подарок",
-            link: '#',
+            // link: '#',
             key: 1,
         },
         {
             img: promoImg8,
             subtitle: "Получи",
             title: "Кешбэк на отдых",
-            link: '#',
+            // link: '#',
             key: 2,
         },
         {
             img: promoImg9,
             subtitle: "Долгожданный отдых",
             title: "С выгодой 10%",
-            link: '#',
+            // link: '#',
             key: 3,
         },
         {
             img: promoImg10,
             subtitle: "",
             title: "Английские<br/>каникулы",
-            link: '#',
+            // link: '#',
             key: 4,
         },
         {
             img: promoImg11,
             subtitle: "Акция",
             title: "Море ждет",
-            link: '#',
+            // link: '#',
             key: 5,
         },
         {
             img: promoImg7,
             subtitle: "",
             title: "Бархатный<br/>сезон",
-            link: '#',
+            // link: '#',
             key: 6,
         },
     ],

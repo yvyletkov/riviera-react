@@ -2,11 +2,16 @@ import React from "react";
 import s from "./CenteredSliderItem.module.scss";
 import capacityImg from "./../../../../../img/room-page/capacity-white.png";
 import areaImg from "./../../../../../img/room-page/ploshchad-white.png";
+import {NavLink} from "react-router-dom";
 
 
 const CenteredSliderItem = (props) => {
-    const {img, title, subtitle, time, date, campus, campusName, type = "home-page", subsubtitle, fontsizeSubsubtitle, active, capacity, area} = props;
-    console.log(capacity, area)
+    const {img, link, title, subtitle, time, date, campus, campusName, type = "home-page", subsubtitle, fontsizeSubsubtitle, active, capacity, area} = props;
+
+    const handleLinkClick = (e) => {
+        if (!link) e.preventDefault()
+    }
+
     switch (type) {
         case "home-page":
             return (
@@ -30,28 +35,30 @@ const CenteredSliderItem = (props) => {
                     <div className={s.content}>
                         <p className={s.title}>{title}</p>
                         <p className={s.subtitle1}>{subtitle}</p>
-                        <p className={s.subsubtitle} style={{fontSize:fontsizeSubsubtitle}}>{subsubtitle}</p>
+                        <p className={s.subsubtitle} style={{fontSize: fontsizeSubsubtitle}}>{subsubtitle}</p>
                     </div>
                 </div>
             );
         case 'room' :
             return (
                 <div className={active ? s.card + ' ' + s.active : s.card}>
-                    <img className={s.img} src={img} alt={title}/>
-                    <div className={s.content}>
-                        <p className={s.roomSubtitle}>{subtitle}</p>
-                        <p className={s.roomTitle}>{title}</p>
+                    <NavLink onClick={handleLinkClick} to={link ? link : '#'}>
+                        <img className={s.img} src={img} alt={title}/>
+                        <div className={s.content}>
+                            <p className={s.roomSubtitle}>{subtitle}</p>
+                            <p className={s.roomTitle}>{title}</p>
 
-                        <div className={s.imgContainer}>
-                            <img src={areaImg} alt='Площадь номера'/>
-                            {area} м<sup>2</sup>
-                        </div>
+                            <div className={s.imgContainer}>
+                                <img src={areaImg} alt='Площадь номера'/>
+                                {area} м<sup>2</sup>
+                            </div>
 
-                        <div className={s.imgContainer}>
-                            <img src={capacityImg} alt='Вместимость'/>
-                            {capacity}
+                            <div className={s.imgContainer}>
+                                <img src={capacityImg} alt='Вместимость'/>
+                                {capacity}
+                            </div>
                         </div>
-                    </div>
+                    </NavLink>
                 </div>
             );
         default :
