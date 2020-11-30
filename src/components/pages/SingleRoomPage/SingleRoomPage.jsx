@@ -8,18 +8,18 @@ import MapSection from "../../shared/MapSection/MapSection";
 
 const SingleRoomPage = ({data}) => {
     return <>
-        <RoomPageBanner campusName={data.campusName} roomName={data.roomName} roomNameFontSize={data.roomNameFontSize}/>
+        <RoomPageBanner bannerImg={data.bannerImg} campusName={data.campusName} roomName={data.roomName} roomNameFontSize={data.roomNameFontSize}/>
 
         <section className='section first'>
-            <RoomDescriptionBlock data={data.descriptionBlockData}/>
+            <RoomDescriptionBlock data={data.descriptionBlockData} img={data.topBlockImg}/>
         </section>
 
         <section className='section'>
-            <LargeGallerySlider slideTitle={data.campusName + ' ' + data.roomName} slides={data.largeGallerySlides}/>
+            <LargeGallerySlider blockName={'Фотографии номера'} slideTitle={data.campusName + ' ' + data.roomName} slides={data.largeGallerySlides}/>
         </section>
 
         <section className='section'>
-            <CenteredSlider title={'Другие номера'} slides={data.centeredSlides}/>
+            <CenteredSlider title={'Другие номера'} type={"room"} slides={data.centeredSlides}/>
         </section>
 
         <section className='section'>

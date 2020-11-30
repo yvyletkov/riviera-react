@@ -94,11 +94,43 @@ function App() {
                 <Route path='/vacation-with-friends' exact
                        component={() => <VacationWithFriendsPage/>}/>
 
+                {/* MODERN ROOMS*/}
                 <Route path='/modern/standart' exact
                        component={() => <SingleRoomPage data={roomPageData.modernStandart}/>}/>
 
+                <Route path='/modern/improved' exact
+                       component={() => <SingleRoomPage data={roomPageData.modernImproved}/>}/>
+
                 <Route path='/modern/semi-lux' exact
-                       component={() => <SingleRoomPage data={roomPageData.modernSemiLux}/>}/>
+                       component={() => <SingleRoomPage data={roomPageData.modernSemilux}/>}/>
+
+                <Route path='/modern/lux' exact
+                    component={() => <SingleRoomPage data={roomPageData.modernLux}/>}/>
+
+                <Route path='/spa-suite' exact
+                       component={() => <SingleRoomPage data={roomPageData.spaSuite}/>}/>
+
+                <Route path='/modern/disabled' exact
+                       component={() => <SingleRoomPage data={roomPageData.modernDisabled}/>}/>
+
+                <Route path='/modern/president-lux' exact
+                       component={() => <SingleRoomPage data={roomPageData.modernPresidentLux}/>}/>
+
+                {/* CLASSIC ROOMS */}
+                <Route path='/classic/standart' exact
+                       component={() => <SingleRoomPage data={roomPageData.classicStandart}/>}/>
+
+                <Route path='/classic/improved' exact
+                       component={() => <SingleRoomPage data={roomPageData.classicImproved}/>}/>
+
+                <Route path='/classic/semi-lux' exact
+                       component={() => <SingleRoomPage data={roomPageData.classicSemilux}/>}/>
+
+                <Route path='/classic/lux' exact
+                       component={() => <SingleRoomPage data={roomPageData.classicLux}/>}/>
+
+                <Route path='/classic/president-lux' exact
+                       component={() => <SingleRoomPage data={roomPageData.classicPresidentLux}/>}/>
 
                 <Route path='/rooms-and-prices' exact
                        component={() => <RoomsAndPricesPage/>}/>

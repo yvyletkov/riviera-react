@@ -10,8 +10,12 @@ const RoomsSliderItem = (props) => {
     const padding = window.innerWidth <= 768 ? "10px 10px" : "18px 40px";
     const style = {position: "absolute", bottom: "36px", left: "18px", maxWidth: "60%", padding: padding};
 
+    const handleLinkClick = (e) => {
+        if (!link) e.preventDefault()
+    }
+
     return (
-        <NavLink to={link}>
+       <NavLink onClick={handleLinkClick} to={link ? link : '#'}>
             <div className={isFirst ? s.card + ' ' + s.defaultCursor : s.card}>
                 <img className={s.img} src={img} alt={title}/>
                 <div className={s.content}>{title}{!isFirst && ' →'}</div>

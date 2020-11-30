@@ -110,17 +110,18 @@ const GridSlider = ({slides}) => {
     let [swipedVertically, setSwipedVertically] = React.useState(0);
 
     const disableScroll = () => {
-        console.log(bodyEl);
-        console.log(bodyEl.classList.add);
         bodyEl.classList.add("fixed");
     }
-    const enableScroll = () => bodyEl.classList.remove("fixed");
 
+    const enableScroll = () => {
+        console.log('enabled!')
+        bodyEl.classList.remove("fixed");
+    }
 
     const afterChangeHandler = (index) => setCurrentSlideIndex(index);
 
     const items = slides.map((item, index) => <GridSliderItem key={item.name + index} firstRow={item.firstRow}
-                                                              secondRow={item.secondRow}/>);
+                                                              disableScroll={disableScroll} secondRow={item.secondRow}/>);
     const onSwipeMove = (position, event) => {
         // console.log(`Moved ${position.y} pixels vertically`, event);
         setSwipedVertically(position.y)
@@ -159,11 +160,13 @@ const GridSlider = ({slides}) => {
 
     React.useEffect(() => {
         if (swipedVertically > 90) {
+            setTimeout(enableScroll, 1000);
             if (currentSlideIndex === 0)
                 // sliderRef.current.slickGoTo(slides.length);
                 return;
             else sliderRef.current.slickPrev();
         } else if (swipedVertically < -90) {
+            setTimeout(enableScroll, 1000);
             if (currentSlideIndex === slides.length - 1)
                 // sliderRef.current.slickGoTo(0);
                 return;

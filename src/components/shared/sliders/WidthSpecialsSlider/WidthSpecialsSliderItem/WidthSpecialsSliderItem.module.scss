@@ -19,8 +19,8 @@
 
 .card.lifted {
   position: relative;
-  margin-top: -70px;
-  height: 405px;
+  margin-top: -50px;
+  height: 390px;
   transition: all 500ms;
 }
 
@@ -46,7 +46,7 @@
     object-fit: cover;
   }
   .card, .card.lifted, .cardWrapper {
-    height: calc(53vw + 80px);
+    height: calc(53vw + 60px);
   }
 }
 

@@ -8,6 +8,7 @@ import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
 import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
 import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
 import WideSlider from "../../shared/sliders/WideSlider/WideSlider";
+import FoodBlock from "../../shared/FoodBlock/FoodBlock";
 
 
 const FamilyVacationPage = () => {
@@ -49,6 +50,10 @@ const FamilyVacationPage = () => {
 
         <section className='section'>
             <SpecialsSlider subtitle={'Лучшие'} title={'спецпредложения'} btnLink={'/promotions'} slides={vacationPagesData.specialsSlides}/>
+        </section>
+
+        <section className='section'>
+            <FoodBlock/>
         </section>
 
         <section className='section'>
