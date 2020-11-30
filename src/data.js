@@ -58,7 +58,7 @@ import modern1img from "./img/rooms-slider/rooms-and-prices-page/modern1.jpg";
 import modern2img from "./img/rooms-slider/rooms-and-prices-page/modern2.jpg";
 import modern3img from "./img/rooms-slider/rooms-and-prices-page/modern3.jpg";
 import gridSpaImg1 from "./img/grid-slider/spa/1.jpg";
-import gridSpaImg2 from "./img/grid-slider/spa/2.jpg";
+import gridSpaImg2 from "./img/grid-slider/spa/2.jpeg";
 import gridSpaImg3 from "./img/grid-slider/spa/3.jpg";
 import gridSpaImg4 from "./img/grid-slider/spa/4.jpg";
 import gridSpaImg5 from "./img/grid-slider/spa/5.jpg";
@@ -219,17 +219,14 @@ const commonGridSlides = [
             {
                 title: "Турпакет",
                 img: gridKurortImg5,
-                href: '#'
             },
             {
                 title: "Medical Spa",
                 img: gridKurortImg6,
-                href: '#'
             },
             {
                 title: "Командировка",
                 img: gridKurortImg7,
-                href: '#'
             },
             {
                 title: "Романтический отдых",
@@ -316,33 +313,42 @@ const commonGridSlides = [
             {
                 title: "Семейный отдых",
                 img: gridKurortImg1,
-                href: '#'
+                href: '/family-vacation'
             },
             {
                 title: "Номера и цены",
                 img: gridKurortImg2,
-                href: '#'
+                href: '/rooms-and-prices'
             },
             {
                 title: "Отдых без детей",
                 img: gridKurortImg3,
-                href: '#'
+                href: '/vacation-for-yourself'
             },
             {
                 title: "Отдых с друзьями",
                 img: gridKurortImg4,
-                href: '#'
+                href: '/vacation-with-friends'
             }
         ],
-        secondRow: [{title: "Турпакет", img: gridKurortImg5, href: '#'}, {
-            title: "Medical Spa",
-            img: gridKurortImg6,
-            href: '#'
-        }, {title: "Командировка", img: gridKurortImg7, href: '#'}, {
-            title: "Романтический отдых",
-            img: gridKurortImg8,
-            href: '#'
-        }],
+        secondRow: [
+            {
+                title: "Турпакет",
+                img: gridKurortImg5,
+            },
+            {
+                title: "Medical Spa",
+                img: gridKurortImg6,
+            },
+            {
+                title: "Командировка",
+                img: gridKurortImg7,
+            },
+            {
+                title: "Романтический отдых",
+                img: gridKurortImg8,
+                href: '/romantic-vacation'
+            }],
     },
 ];
 const commonSpecialsSlides = [
@@ -370,7 +376,7 @@ const commonSpecialsSlides = [
     {
         img: promoImg4,
         subtitle: "Отдых",
-        title: "Для кымчан",
+        title: "Для крымчан",
         link: '#',
         key: 4,
     },
@@ -807,20 +813,17 @@ export const roomsAndPricesPageData = {
     gridSlides: [
         {
             name: "SPA комплекс",
-            firstRow: [{title: "Финская сауна", img: gridSpaImg1, href: '#'}, {
+            firstRow: [{title: "Финская сауна", img: gridSpaImg1}, {
                 title: "Русская баня",
                 img: gridSpaImg2,
-                href: '#'
-            }, {title: "Римская сауна", img: gridSpaImg3, href: '#'}, {
+            }, {title: "Римская сауна", img: gridSpaImg3}, {
                 title: "Хаммам",
                 img: gridSpaImg4,
-                href: '#'
             }],
-            secondRow: [{title: `Процедурный кабинет "Расул"`, img: gridSpaImg5, href: '#'}, {
+            secondRow: [{title: `Процедурный кабинет "Расул"`, img: gridSpaImg5}, {
                 title: "Соляная пещера",
                 img: gridSpaImg6,
-                href: '#'
-            }, {title: "Крытый бассейн", img: gridSpaImg7, href: '#'},
+            }, {title: "Крытый бассейн", img: gridSpaImg7},
             ],
         },
         {
@@ -829,29 +832,24 @@ export const roomsAndPricesPageData = {
                 {
                     title: "Шведский стол",
                     img: gridKitchen1,
-                    href: '#'
                 },
                 {
                     title: "Ресторан \"Tavrica\"",
                     img: gridKitchen2,
-                    href: '#'
                 },
                 {
                     title: "Лобби-лаундж",
                     img: gridKitchen3,
-                    href: '#'
                 },
                 {
                     title: "Pool-бар",
                     img: gridKitchen4,
-                    href: '#'
                 }
             ],
-            secondRow: [{title: "Ресторан \"La Veranda\"", img: gridKitchen5, href: '#'}, {
+            secondRow: [{title: "Ресторан \"La Veranda\"", img: gridKitchen5}, {
                 title: "Мангал в саду",
                 img: gridKitchen6,
-                href: '#'
-            }, {title: "Лобби-бар \"Mangup\"", img: gridKitchen7, href: '#'}],
+            }, {title: "Лобби-бар \"Mangup\"", img: gridKitchen7}],
         },
         {
             name: "AQUA зона",

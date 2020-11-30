@@ -7,6 +7,7 @@ import PageBanner from "../../shared/PageBanner/PageBanner";
 import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
 import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
 import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
+import FoodBlock from "../../shared/FoodBlock/FoodBlock";
 
 const VacationWithFriendsPage = () => {
     return <>
@@ -37,6 +38,11 @@ const VacationWithFriendsPage = () => {
 
         <section className='section'>
             <SpecialsSlider subtitle={'Лучшие'} title={'спецпредложения'} btnLink={'/promotions'} slides={vacationPagesData.specialsSlides}/>
+        </section>
+
+
+        <section className='section'>
+            <FoodBlock/>
         </section>
 
         <section className='section'>
