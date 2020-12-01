@@ -31,7 +31,7 @@ const EventTourismPage = () => {
                             icons={micePagesData.conferenceIconsBanner}
                             backgroundStyle={{
                                 backgroundImage:`url(${imageBanner})`}}/>
-            <section className='section first'>
+            <section className='section'>
                 <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={roomsAndPricesPageData.modernDescr}
                              data={roomsAndPricesPageData.modernSlides}/>
 

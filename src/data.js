@@ -586,7 +586,7 @@ const commonAfishaSlides = [
 const commonClassicCampusSlides = [
     {
         img: classic1img,
-        title: "Корпуса классик",
+        title: "Корпус классик",
         bookingLink: "",
     },
     {
