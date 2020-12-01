@@ -32,7 +32,7 @@ const SpecialTask = () => {
                          src={window.matchMedia("(max-width: 768px").matches ? imgAbout2 : imgAbout1} alt=""/>
 
                     <Button text={"Оставить заявку"} onClick={() => setPopupOpen(true)}
-                            style={!window.matchMedia("(max-width: 768px").matches ? {width: "230px"} : {}}/>
+                            style={!window.matchMedia("(max-width: 768px").matches ? {width: "100%"} : {}}/>
 
                     <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
                                       popupTitleText={'Чтобы записаться на консультацию, пожалуйста, оставьте свои контактные данные️'}
