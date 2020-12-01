@@ -1,15 +1,15 @@
-import React from "react";
+import React, {lazy, Suspense} from "react";
+import {Route, Switch} from "react-router-dom";
+import {roomPageData} from "./data";
 import "./App.scss";
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
 import "./style/normalize.css";
 import "./style/fonts.css";
-import HomePage from "./components/pages/HomePage/HomePage";
-import {Route, Switch} from "react-router-dom";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+// import HomePage from "./components/pages/HomePage/HomePage";
 import BottomMenu from "./components/shared/BottomMenu/BottomMenu";
 import RoomsAndPricesPage from "./components/pages/RoomsAndPricesPage/RoomsAndPricesPage";
 import SingleRoomPage from "./components/pages/SingleRoomPage/SingleRoomPage";
-import {roomPageData} from "./data";
 import FamilyVacationPage from "./components/pages/VacationPages/FamilyVacationPage";
 import VacationForYourselfPage from "./components/pages/VacationPages/VacationForYourselfPage";
 import RomanticVacationPage from "./components/pages/VacationPages/RomanticVacationPage";
@@ -30,6 +30,9 @@ import NotFoundPage from "./components/additional/NotFoundPage/NotFoundPage";
 import ContactsPage from "./components/pages/СontactsPage/ContactsPage";
 import PromotionsPage from "./components/pages/PromotionsPage/PromotionsPage";
 import SinglePromotionPage from "./components/pages/PromotionsPage/SinglePromotionPage/SinglePromotionPage";
+
+const HomePage = lazy(() => import('./components/pages/HomePage/HomePage'));
+
 
 function App() {
 
@@ -105,7 +108,7 @@ function App() {
                        component={() => <SingleRoomPage data={roomPageData.modernSemilux}/>}/>
 
                 <Route path='/modern/lux' exact
-                    component={() => <SingleRoomPage data={roomPageData.modernLux}/>}/>
+                       component={() => <SingleRoomPage data={roomPageData.modernLux}/>}/>
 
                 <Route path='/spa-suite' exact
                        component={() => <SingleRoomPage data={roomPageData.spaSuite}/>}/>
@@ -135,8 +138,10 @@ function App() {
                 <Route path='/rooms-and-prices' exact
                        component={() => <RoomsAndPricesPage/>}/>
 
-                <Route path='/' exact
-                       component={() => <HomePage/>}/>
+                <Suspense fallback={<div>Загрузка...</div>}>
+                    <Route path='/' exact
+                           render={() => <HomePage/>}/>
+                </Suspense>
 
                 <Route component={NotFoundPage}/>
 
