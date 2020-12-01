@@ -1,4 +1,4 @@
-import React, {lazy, Suspense} from "react";
+import React, { Suspense} from "react";
 import {Route, Switch} from "react-router-dom";
 import {roomPageData} from "./data";
 import "./App.scss";
@@ -31,7 +31,7 @@ import ContactsPage from "./components/pages/СontactsPage/ContactsPage";
 import PromotionsPage from "./components/pages/PromotionsPage/PromotionsPage";
 import SinglePromotionPage from "./components/pages/PromotionsPage/SinglePromotionPage/SinglePromotionPage";
 
-const HomePage = lazy(() => import('./components/pages/HomePage/HomePage'));
+const HomePage = React.lazy(() => import('./components/pages/HomePage/HomePage'));
 
 
 function App() {
@@ -140,7 +140,7 @@ function App() {
 
                 <Suspense fallback={<div>Загрузка...</div>}>
                     <Route path='/' exact
-                           render={() => <HomePage/>}/>
+                           render={() => <HomePage />}/>
                 </Suspense>
 
                 <Route component={NotFoundPage}/>

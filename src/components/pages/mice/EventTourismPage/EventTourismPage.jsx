@@ -30,7 +30,8 @@ const EventTourismPage = () => {
                                           marginTop:'25px'}}
                             icons={micePagesData.conferenceIconsBanner}
                             backgroundStyle={{
-                                backgroundImage:`url(${imageBanner})`}}/>
+                                backgroundImage:`url(${imageBanner})`}}
+                            styleCirqleTip={{left:'220px', bottom:'4px'}}/>
             <section className='section first'>
                 <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={roomsAndPricesPageData.modernDescr}
                              data={roomsAndPricesPageData.modernSlides}/>
