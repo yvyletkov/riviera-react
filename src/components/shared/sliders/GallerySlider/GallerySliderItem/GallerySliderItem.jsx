@@ -1,5 +1,6 @@
 import React from "react";
 import s from "./GallerySliderItem.module.scss";
+import LazyImage from "../../../../additional/LazyImg";
 
 
 const GallerySliderItem = ({img, title, description, href}) => {
@@ -9,7 +10,7 @@ const GallerySliderItem = ({img, title, description, href}) => {
         <div onMouseEnter={() => setShowDescription(true)}
              onMouseLeave={() => setShowDescription(false)}
              className={s.photo}>
-            <img className={s.img} src={img} alt={title}/>
+            <LazyImage className={s.img} src={img} alt={title}/>
             <div className={showDescription ? `${s.description} ${s.shown}` : s.description}>
                 {/*<div className={s.title}>{title}</div>*/}
                 {/*<div className={s.text}>{description}</div>*/}

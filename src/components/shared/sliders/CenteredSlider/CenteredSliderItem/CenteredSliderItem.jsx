@@ -3,6 +3,7 @@ import s from "./CenteredSliderItem.module.scss";
 import capacityImg from "./../../../../../img/room-page/capacity-white.png";
 import areaImg from "./../../../../../img/room-page/ploshchad-white.png";
 import {NavLink} from "react-router-dom";
+import LazyImage from "../../../../additional/LazyImg";
 
 
 const CenteredSliderItem = (props) => {
@@ -16,7 +17,7 @@ const CenteredSliderItem = (props) => {
         case "home-page":
             return (
                 <div className={active ? s.card + ' ' + s.active : s.card}>
-                    <img className={s.img} src={img} alt={title}/>
+                    <LazyImage className={s.img} src={img} alt={title}/>
                     <div className={s.content}>
                         <p className={s.title}>{title}</p>
                         <p className={s.subtitle}>{subtitle}</p>
@@ -31,7 +32,7 @@ const CenteredSliderItem = (props) => {
         case 2 :
             return (
                 <div className={active ? s.card + ' ' + s.active : s.card}>
-                    <img className={s.img} src={img} alt={title}/>
+                    <LazyImage className={s.img} src={img} alt={title}/>
                     <div className={s.content}>
                         <p className={s.title}>{title}</p>
                         <p className={s.subtitle1}>{subtitle}</p>
@@ -43,7 +44,7 @@ const CenteredSliderItem = (props) => {
             return (
                 <div className={active ? s.card + ' ' + s.active : s.card}>
                     <NavLink onClick={handleLinkClick} to={link ? link : '#'}>
-                        <img className={s.img} src={img} alt={title}/>
+                        <LazyImage className={s.img} src={img} alt={title}/>
                         <div className={s.content}>
                             <p className={s.roomSubtitle}>{subtitle}</p>
                             <p className={s.roomTitle}>{title}</p>

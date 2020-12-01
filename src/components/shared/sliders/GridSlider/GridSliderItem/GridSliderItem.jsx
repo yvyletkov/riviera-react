@@ -3,6 +3,7 @@ import s from "./GridSliderItem.module.scss";
 import Slider from "react-slick";
 import styled from "styled-components";
 import {NavLink} from "react-router-dom";
+import LazyImage from "../../../../additional/LazyImg";
 
 const InnerSliderStyles = styled.div`
   .slick-list { 
@@ -41,15 +42,14 @@ const InnerSlider = ({firstRowItems, secondRowItems}) => {
 const GridSliderItem = ({firstRow, secondRow}) => {
 
 
-
     const firstRowItems = firstRow.map((item, index) => {
         const handleLinkClick = (e) => {
             if (!item.href) e.preventDefault()
         }
-        return <NavLink onClick={handleLinkClick} to={item.href ? item.href : '#'} key={item.title + index} className={s.block}>
-            <div style={{backgroundImage: 'url(' + item.img + ')', backgroundSize: 'cover', height: "100%", borderRadius: "5px", backgroundPosition: "center"}}>
-                <div className={s.content}><p>{item.title}</p></div>
-            </div>
+        return <NavLink onClick={handleLinkClick} to={item.href ? item.href : '#'} key={item.title + index}
+                        className={s.block}>
+            <LazyImage className={s.img} src={item.img} alt={item.title} style={{borderRadius: "5px"}}/>
+            <div className={s.content}><p>{item.title}</p></div>
         </NavLink>
     });
     const secondRowItems = secondRow.map((item, index) => {
@@ -57,9 +57,9 @@ const GridSliderItem = ({firstRow, secondRow}) => {
             if (!item.href) e.preventDefault()
         }
         return <NavLink onClick={handleLinkClick} to={item.href ? item.href : '#'} className={s.block} href={item.href}>
-            <div style={{backgroundImage: 'url(' + item.img + ')', backgroundSize: 'cover', height: "100%", borderRadius: "5px", backgroundPosition: "center"}}>
-                <div className={s.content}><p>{item.title}</p></div>
-            </div>
+            <LazyImage className={s.img} src={item.img} alt={item.title} style={{borderRadius: "5px"}}/>
+            <div className={s.content}><p>{item.title}</p></div>
+
         </NavLink>
     });
 
