@@ -43,7 +43,7 @@ const IntensivePage = () => {
         <>
             <MicePageBanner subtitle={'Организация'}
                             title1={'Корпоративного'}
-                            title1Style={{fontSize: window.matchMedia('(max-width: 500px)').matches ? '8.7vw' : '50px'}}
+                            title1Style={{fontSize: window.matchMedia('(max-width: 500px)').matches ? '7.7vw' : '50px'}}
                             title2={'Мероприятия'}
                             title2Style={{fontSize: window.matchMedia('(max-width: 500px)').matches ? '8.7vw' : '50px'}}
                             title3={'В крыму'}
