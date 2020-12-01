@@ -160,13 +160,11 @@ const GridSlider = ({slides}) => {
 
     React.useEffect(() => {
         if (swipedVertically > 90) {
-            setTimeout(enableScroll, 1000);
             if (currentSlideIndex === 0)
                 // sliderRef.current.slickGoTo(slides.length);
                 return;
             else sliderRef.current.slickPrev();
         } else if (swipedVertically < -90) {
-            setTimeout(enableScroll, 1000);
             if (currentSlideIndex === slides.length - 1)
                 // sliderRef.current.slickGoTo(0);
                 return;
@@ -191,7 +189,7 @@ const GridSlider = ({slides}) => {
                                     slideNames={slideNames}/>
                     </div>
                 </div>
-                <SliderStyles onTouchStart={disableScroll}>
+                <SliderStyles onTouchStart={disableScroll} onTouchEnd={ () => setTimeout( enableScroll, 1500)}>
                     {/*<SliderStyles>*/}
                     <Swipe onSwipeMove={onSwipeMove}>
                         <Slider {...settings} ref={sliderRef}>

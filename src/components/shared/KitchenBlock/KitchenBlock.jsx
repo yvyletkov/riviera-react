@@ -29,7 +29,7 @@ const KitchenBlock = ({firstImg = kitchenImg1}) => {
 
                 <p><b>Получите на свою почту полное меню банкета!</b></p>
                 <Button text={"Получить меню"} onClick={() => setPopupOpen(true)}
-                        style={!window.matchMedia("(max-width: 768px").matches ? {width: "230px"} : {}}/>
+                        style={window.matchMedia("screen and (max-width: 768px)").matches ? {width: "100%"} : {width: "230px"}}/>
 
                 <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
                                   popupTitleText={'Для этого, пожалуйста, оставьте свои контактные данные️'}

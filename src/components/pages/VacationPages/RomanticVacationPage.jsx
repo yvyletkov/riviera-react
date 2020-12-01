@@ -12,8 +12,8 @@ import FoodBlock from "../../shared/FoodBlock/FoodBlock";
 const RomanticVacationPage = () => {
     return <>
         <PageBanner fontSize={["75px", "47px"]}
-                    fontSizeMobile={["15.6vw", "8.7vw"]}
-                    extraLine={['отдых любимому человеку', '5vw', '30px',]}
+                    fontSizeMobile={["15.6vw", "8.2vw"]}
+                    extraLine={['отдых любимому человеку', '4.6vw', '30px',]}
                     subtitle={'Отдых c любимым'}
                     topLine={"Подари"}
                     bottomLine={"романтический"}

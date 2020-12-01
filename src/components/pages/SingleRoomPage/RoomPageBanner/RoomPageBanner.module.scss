@@ -144,6 +144,17 @@ $black: #171717;
 
 }
 
+.mobileBg {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.7);
+  z-index: -1;
+}
+
 @media screen and (max-width: 1100px) {
   .bannerImgTop {
     display: none;
@@ -213,17 +224,8 @@ $black: #171717;
     background: none;
     overflow: visible;
   }
-  .container:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: center url(../../../../img/rooms-and-prices-page/banner-bg.jpg);
-    background-size: cover;
-    filter: brightness(0.7);
-    z-index: -1;
+  .mobileBg {
+    display: block;
   }
 
   .bookingBlock {

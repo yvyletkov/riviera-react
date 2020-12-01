@@ -12,7 +12,7 @@ import FoodBlock from "../../shared/FoodBlock/FoodBlock";
 const VacationWithFriendsPage = () => {
     return <>
         <PageBanner fontSize={["82px", "60px"]}
-                    fontSizeMobile={["15vw", "10.4vw"]}
+                    fontSizeMobile={["15vw", "10vw"]}
                     subtitle={'Отдых c друзьями'}
                     topLine={"Отдых,"}
                     bottomLine={"который Вы</br>планировали"}

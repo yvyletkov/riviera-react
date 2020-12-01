@@ -1182,7 +1182,7 @@ export const roomPageData = {
         bannerImg: modernImprovedHero,
         campusName: 'Модерн',
         roomName: 'Улучшенный',
-        roomNameFontSize: ["13.4vw", "86px"],
+        roomNameFontSize: ["10.6vw", "86px"],
         largeGallerySlides: [
             {
                 img: modernImproved1,
@@ -1418,7 +1418,7 @@ export const roomPageData = {
         bannerImg: modernPresidentHero,
         campusName: 'Модерн',
         roomName: 'Президентский<br/>люкс',
-        roomNameFontSize: ["14.8vw", "90px"],
+        roomNameFontSize: ["8.6vw", "90px"],
         largeGallerySlides: [
             {
                 img: modernPresident1,
@@ -1535,7 +1535,7 @@ export const roomPageData = {
         bannerImg: classicImprovedHero,
         campusName: 'Классик',
         roomName: 'Улучшенный',
-        roomNameFontSize: ["14.8vw", "95px"],
+        roomNameFontSize: ["10.5vw", "95px"],
         largeGallerySlides: [
             {
                 img: classicImproved1,
@@ -1593,7 +1593,7 @@ export const roomPageData = {
         bannerImg: classicSemiLuxHero,
         campusName: 'Классик',
         roomName: 'Полулюкс',
-        roomNameFontSize: ["14.8vw", "95px"],
+        roomNameFontSize: ["13.4vw", "95px"],
         largeGallerySlides: [
             {
                 img: classicSemiLux1,
@@ -1709,7 +1709,7 @@ export const roomPageData = {
         bannerImg: classicPresidentLuxHero,
         campusName: 'Классик',
         roomName: 'Президентский<br/>Люкс',
-        roomNameFontSize: ["14.8vw", "90px"],
+        roomNameFontSize: ["8.6vw", "90px"],
         largeGallerySlides: [
             {
                 img: classicPresidentLux1,
