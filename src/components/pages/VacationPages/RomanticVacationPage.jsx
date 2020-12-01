@@ -21,7 +21,7 @@ const RomanticVacationPage = () => {
                     bannerMobileImg={vacationPagesData.romanticVacationBannerMobileImg}
                     descr={'Что может быть лучше отдыха с любимым человеком? Если читаете эти строки значит Вы хотели бы сделать необычный и безумно приятный подарок себе и второй половинке с чем вам поможет один из лучших курортных отелей Riviera Sunrise Resort & SPA, г. Алушта.<br/>В гостиничном комплексе 209 номеров различных категорий: от «Стандарта» до «Президентского люкса». Отличный климат, элегантный дизайн, современное оснащение номеров, высококлассный сервис, романтические ужины, SPA процедуры, анимация для взрослых и многое другое – создают идеальные условия для Вашего комфортного отдыха.'}/>
 
-        <section className='section first'>
+        <section className='section'>
             <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={vacationPagesData.modernDescr}
                          data={vacationPagesData.modernSlides}/>
 

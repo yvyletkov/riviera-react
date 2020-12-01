@@ -121,7 +121,10 @@ const RoomsSlider = ({title = "Заголовок", subtitle = "Какой-то"
         );
     });
 
-    const miniSliderItems = data.map(item => item.title);
+    const miniSliderItems = data.map(item => {
+        const name = item.title.split(' ')[1] ? item.title.split(' ')[1] : item.title.split(' ')[0]
+        return name;
+    });
 
     return (
         <div ref={sliderWrapperRef} className={lastOfTwo ? s.wrapper + ' ' + s.lastOfTwo : s.wrapper}>

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@loadable/component": "^5.14.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -12,7 +13,7 @@
     "netlify-cli": "^2.65.6",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
-    "react": "^16.13.1",
+    "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-easy-swipe": "^0.0.21",
     "react-fancybox": "^0.2.5",

@@ -12,6 +12,7 @@ import FoodBlock from "../../shared/FoodBlock/FoodBlock";
 
 
 const FamilyVacationPage = () => {
+
     return <>
         <PageBanner fontSize={["70px", "57px"]}
                     fontSizeMobile={["16.7vw", "10.5vw"]}
@@ -27,7 +28,7 @@ const FamilyVacationPage = () => {
                     ' номеров, высококлассный сервис, анимация для детей и взрослых и многое другое – создают\n' +
                     ' идеальные условия для Вашего комфортного отдыха.'}/>
 
-        <section className='section first'>
+        <section className='section'>
             <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={vacationPagesData.modernDescr}
                          data={vacationPagesData.modernSlides}/>
 
