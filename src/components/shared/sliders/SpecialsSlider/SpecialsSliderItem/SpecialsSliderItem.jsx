@@ -2,6 +2,7 @@ import React from "react";
 import s from "./SpecialsSliderItem.module.scss";
 import {NavLink} from "react-router-dom";
 import cx from "classnames";
+import LazyImage from "../../../../additional/LazyImg";
 
 const SpecialsSliderItem = (props) => {
     const {img, active, title, subtitle, link, decolorized} = props;
@@ -21,7 +22,7 @@ const SpecialsSliderItem = (props) => {
                     className={cardClassNames}
                     onMouseEnter={() => setLifted(true)}
                     onMouseLeave={() => setLifted(false)}>
-                    <img className={decolorized ? s.img + ' ' + s.decolorized : s.img} src={img} alt="Афиша"/>
+                    <LazyImage className={decolorized ? s.img + ' ' + s.decolorized : s.img} src={img} alt="Афиша"/>
                     <div className={s.content}>
                         <p dangerouslySetInnerHTML={{__html: subtitle}} className={s.subtitle}/>
                         <p dangerouslySetInnerHTML={{__html: title}} className={s.title}/>

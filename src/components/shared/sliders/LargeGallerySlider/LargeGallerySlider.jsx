@@ -4,6 +4,7 @@ import s from "./LargeGallerySlider.module.scss";
 import styled from "styled-components";
 import HeadlineCenter from "../../HeadlineCenter/HeadlineCenter";
 import {NextArrow, PrevArrow} from "../SliderArrows/sliderArrowButtons";
+import LazyImage from "../../../additional/LazyImg";
 
 const SliderStyles = styled.div`
   .slick-next:before,
@@ -80,7 +81,7 @@ const LargeGallerySlider = ({blockName = "Фотогалерея", slides, slide
         slides.map((item) => {
             const {img, key} = item;
             return <div key={key}>
-                <img className={s.item} alt={slideTitle} key={key} src={img}/>
+                <LazyImage className={s.item} alt={slideTitle} key={key} src={img}/>
             </div>
         }) :
         slides.map((item) => {

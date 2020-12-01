@@ -2,6 +2,7 @@ import React from "react";
 import s from "./RoomsSliderItem.module.scss";
 import Button from "../../../Button/Button";
 import {NavLink} from "react-router-dom";
+import LazyImage from "../../../../additional/LazyImg";
 
 
 const RoomsSliderItem = (props) => {
@@ -17,7 +18,7 @@ const RoomsSliderItem = (props) => {
     return (
        <NavLink onClick={handleLinkClick} to={link ? link : '#'}>
             <div className={isFirst ? s.card + ' ' + s.defaultCursor : s.card}>
-                <img className={s.img} src={img} alt={title}/>
+                <LazyImage className={s.img} src={img} alt={title}/>
                 <div className={s.content}>{title}{!isFirst && ' →'}</div>
                 {!isFirst && <Button style={style} link={bookingLink}
                         text={'Забронировать'}/> }
