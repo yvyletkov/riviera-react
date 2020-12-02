@@ -17,7 +17,7 @@ const CenteredSliderItem = (props) => {
         case "home-page":
             return (
                 <div className={active ? s.card + ' ' + s.active : s.card}>
-                    <LazyImage className={s.img} src={img} alt={title}/>
+                    <img className={s.img} src={img} alt={title}/>
                     <div className={s.content}>
                         <p className={s.title}>{title}</p>
                         <p className={s.subtitle}>{subtitle}</p>
@@ -32,7 +32,7 @@ const CenteredSliderItem = (props) => {
         case 2 :
             return (
                 <div className={active ? s.card + ' ' + s.active : s.card}>
-                    <LazyImage className={s.img} src={img} alt={title}/>
+                    <img className={s.img} src={img} alt={title}/>
                     <div className={s.content}>
                         <p className={s.title}>{title}</p>
                         <p className={s.subtitle1}>{subtitle}</p>
@@ -44,7 +44,7 @@ const CenteredSliderItem = (props) => {
             return (
                 <div className={active ? s.card + ' ' + s.active : s.card}>
                     <NavLink onClick={handleLinkClick} to={link ? link : '#'}>
-                        <LazyImage className={s.img} src={img} alt={title}/>
+                        <img className={s.img} src={img} alt={title}/>
                         <div className={s.content}>
                             <p className={s.roomSubtitle}>{subtitle}</p>
                             <p className={s.roomTitle}>{title}</p>

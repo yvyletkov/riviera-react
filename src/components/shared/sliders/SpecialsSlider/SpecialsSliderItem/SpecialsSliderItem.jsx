@@ -22,7 +22,7 @@ const SpecialsSliderItem = (props) => {
                     className={cardClassNames}
                     onMouseEnter={() => setLifted(true)}
                     onMouseLeave={() => setLifted(false)}>
-                    <LazyImage className={decolorized ? s.img + ' ' + s.decolorized : s.img} src={img} alt="Афиша"/>
+                    <img className={decolorized ? s.img + ' ' + s.decolorized : s.img} src={img} alt="Афиша"/>
                     <div className={s.content}>
                         <p dangerouslySetInnerHTML={{__html: subtitle}} className={s.subtitle}/>
                         <p dangerouslySetInnerHTML={{__html: title}} className={s.title}/>
