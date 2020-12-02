@@ -427,6 +427,94 @@ const commonGridSlides = [
             }],
     },
 ];
+const commonVacationGridSlides = [
+    {
+        name: "SPA комплекс",
+        firstRow: [{title: "Финская сауна", img: gridSpaImg1}, {
+            title: "Русская баня",
+            img: gridSpaImg2,
+        }, {title: "Римская сауна", img: gridSpaImg3}, {
+            title: "Хаммам",
+            img: gridSpaImg4,
+        }],
+        secondRow: [{title: `Процедурный кабинет "Расул"`, img: gridSpaImg5}, {
+            title: "Соляная пещера",
+            img: gridSpaImg6,
+        }, {title: "Крытый бассейн", img: gridSpaImg7},
+        ],
+    },
+    {
+        name: "Изысканная еда",
+        firstRow: [
+            {
+                title: "Шведский стол",
+                img: gridKitchen1,
+            },
+            {
+                title: "Ресторан \"Tavrica\"",
+                img: gridKitchen2,
+            },
+            {
+                title: "Лобби-лаундж",
+                img: gridKitchen3,
+            },
+            {
+                title: "Pool-бар",
+                img: gridKitchen4,
+            }
+        ],
+        secondRow: [{title: "Ресторан \"La Veranda\"", img: gridKitchen5}, {
+            title: "Мангал в саду",
+            img: gridKitchen6,
+        }, {title: "Лобби-бар \"Mangup\"", img: gridKitchen7}],
+    },
+    {
+        name: "AQUA зона",
+        firstRow: [
+            {
+                title: "Пляж (первая береговая линия)",
+                img: gridAqua1,
+            },
+            {
+                title: "Бассейн с подогревом",
+                img: gridAqua2,
+            },
+        ],
+        secondRow: [
+            {
+                title: "Бассейн возле моря",
+                img: gridAqua3,
+            },
+            {
+                title: "Крытый бассейн",
+                img: gridAqua4,
+            },
+        ],
+    },
+    {
+        name: "AQUA зона",
+        firstRow: [
+            {
+                title: "Пляж (первая береговая линия)",
+                img: gridAqua1,
+            },
+            {
+                title: "Бассейн с подогревом",
+                img: gridAqua2,
+            },
+        ],
+        secondRow: [
+            {
+                title: "Бассейн возле моря",
+                img: gridAqua3,
+            },
+            {
+                title: "Крытый бассейн",
+                img: gridAqua4,
+            },
+        ],
+    },
+];
 const commonSpecialsSlides = [
     {
         img: promoImg1,
@@ -911,94 +999,7 @@ export const roomsAndPricesPageData = {
     modernSlides: commonModernCampusSlides,
     modernDescr: commonModernDescr,
     classicDescr: commonClassicDescr,
-    gridSlides: [
-        {
-            name: "SPA комплекс",
-            firstRow: [{title: "Финская сауна", img: gridSpaImg1}, {
-                title: "Русская баня",
-                img: gridSpaImg2,
-            }, {title: "Римская сауна", img: gridSpaImg3}, {
-                title: "Хаммам",
-                img: gridSpaImg4,
-            }],
-            secondRow: [{title: `Процедурный кабинет "Расул"`, img: gridSpaImg5}, {
-                title: "Соляная пещера",
-                img: gridSpaImg6,
-            }, {title: "Крытый бассейн", img: gridSpaImg7},
-            ],
-        },
-        {
-            name: "Изысканная еда",
-            firstRow: [
-                {
-                    title: "Шведский стол",
-                    img: gridKitchen1,
-                },
-                {
-                    title: "Ресторан \"Tavrica\"",
-                    img: gridKitchen2,
-                },
-                {
-                    title: "Лобби-лаундж",
-                    img: gridKitchen3,
-                },
-                {
-                    title: "Pool-бар",
-                    img: gridKitchen4,
-                }
-            ],
-            secondRow: [{title: "Ресторан \"La Veranda\"", img: gridKitchen5}, {
-                title: "Мангал в саду",
-                img: gridKitchen6,
-            }, {title: "Лобби-бар \"Mangup\"", img: gridKitchen7}],
-        },
-        {
-            name: "AQUA зона",
-            firstRow: [
-                {
-                    title: "Пляж (первая береговая линия)",
-                    img: gridAqua1,
-                },
-                {
-                    title: "Бассейн с подогревом",
-                    img: gridAqua2,
-                },
-            ],
-            secondRow: [
-                {
-                    title: "Бассейн возле моря",
-                    img: gridAqua3,
-                },
-                {
-                    title: "Крытый бассейн",
-                    img: gridAqua4,
-                },
-            ],
-        },
-        {
-            name: "AQUA зона",
-            firstRow: [
-                {
-                    title: "Пляж (первая береговая линия)",
-                    img: gridAqua1,
-                },
-                {
-                    title: "Бассейн с подогревом",
-                    img: gridAqua2,
-                },
-            ],
-            secondRow: [
-                {
-                    title: "Бассейн возле моря",
-                    img: gridAqua3,
-                },
-                {
-                    title: "Крытый бассейн",
-                    img: gridAqua4,
-                },
-            ],
-        },
-    ],
+    gridSlides: commonVacationGridSlides,
     centeredSlides: commonAfishaSlides,
 }
 
@@ -1853,7 +1854,7 @@ export const vacationPagesData = {
     modernSlides: commonModernCampusSlides,
     modernDescr: commonModernDescr,
     classicDescr: commonClassicDescr,
-    gridSlides: commonGridSlides,
+    gridSlides: commonVacationGridSlides,
     centeredSlides: commonAfishaSlides,
     specialsSlides: commonSpecialsSlides,
     gallerySlides: commonGallerySlides,

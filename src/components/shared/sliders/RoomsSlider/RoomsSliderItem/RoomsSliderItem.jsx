@@ -18,7 +18,7 @@ const RoomsSliderItem = (props) => {
     return (
        <NavLink onClick={handleLinkClick} to={link ? link : '#'}>
             <div className={isFirst ? s.card + ' ' + s.defaultCursor : s.card}>
-                <LazyImage className={s.img} src={img} alt={title}/>
+                <img className={s.img} src={img} alt={title}/>
                 <div className={s.content}>{title}{!isFirst && ' →'}</div>
                 {!isFirst && <Button style={style} link={bookingLink}
                         text={'Забронировать'}/> }
