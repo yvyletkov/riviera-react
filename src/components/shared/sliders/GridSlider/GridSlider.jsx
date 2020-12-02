@@ -82,7 +82,14 @@ function PrevArrow({style, onClick}) {
 
 const GridSlider = ({slides}) => {
 
+    let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
+    let [swipedVertically, setSwipedVertically] = React.useState(0);
+
     const bodyEl = document.getElementsByTagName("body")[0];
+
+    const disableScroll = () => bodyEl.classList.add("fixed");
+    const enableScroll = () => bodyEl.classList.remove("fixed");
+
     React.useEffect( function () {
         const sliderElementsObj = $("#verticalSliderWrapper *");
         const sliderElementsArr = Object.values(sliderElementsObj);
@@ -90,42 +97,27 @@ const GridSlider = ({slides}) => {
         const h2El = Object.values($('h2'));
         const h4El = Object.values($('h4'));
         const miniSliderEl = Object.values($('.miniSliderTarget'));
-        // console.log('index:', sliderElementsArr.indexOf(whiteBg));
-        // console.log('sliderElementsArr', sliderElementsArr);
 
         $(document).on('touchstart', (e) => {
-            // console.log(e.target === whiteBg);
-            // console.log('target: ', e.target);
-            // console.log(whiteBg);
+
             if (!sliderElementsArr.includes(e.target)
                 || e.target === whiteBg
                 || h2El.includes(e.target)
                 || h4El.includes(e.target)
                 || miniSliderEl.includes(e.target))
                 enableScroll()
+
         })
     }, []);
 
-    let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
-    let [swipedVertically, setSwipedVertically] = React.useState(0);
-
-    const disableScroll = () => {
-        bodyEl.classList.add("fixed");
-    }
-
-    const enableScroll = () => {
-        console.log('enabled!')
-        bodyEl.classList.remove("fixed");
-    }
-
     const afterChangeHandler = (index) => setCurrentSlideIndex(index);
 
-    const items = slides.map((item, index) => <GridSliderItem key={item.name + index} firstRow={item.firstRow}
-                                                              disableScroll={disableScroll} secondRow={item.secondRow}/>);
-    const onSwipeMove = (position, event) => {
-        // console.log(`Moved ${position.y} pixels vertically`, event);
-        setSwipedVertically(position.y)
-    }
+    const items = slides.map((item, index) => <GridSliderItem key={item.name + index}
+                                                              firstRow={item.firstRow}
+                                                              disableScroll={disableScroll}
+                                                              secondRow={item.secondRow}/>);
+
+    const onSwipeMove = (position) => setSwipedVertically(position.y)
 
     const settings = {
         afterChange: afterChangeHandler,
@@ -161,12 +153,10 @@ const GridSlider = ({slides}) => {
     React.useEffect(() => {
         if (swipedVertically > 90) {
             if (currentSlideIndex === 0)
-                // sliderRef.current.slickGoTo(slides.length);
                 return;
             else sliderRef.current.slickPrev();
         } else if (swipedVertically < -90) {
             if (currentSlideIndex === slides.length - 1)
-                // sliderRef.current.slickGoTo(0);
                 return;
             else sliderRef.current.slickNext();
         }
@@ -190,12 +180,13 @@ const GridSlider = ({slides}) => {
                     </div>
                 </div>
                 <SliderStyles onTouchStart={disableScroll} onTouchEnd={ () => setTimeout( enableScroll, 1500)}>
-                    {/*<SliderStyles>*/}
+
                     <Swipe onSwipeMove={onSwipeMove}>
                         <Slider {...settings} ref={sliderRef}>
                             {items}
                         </Slider>
                     </Swipe>
+
                 </SliderStyles>
             </div>
         </div>
