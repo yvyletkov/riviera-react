@@ -2274,7 +2274,13 @@ export const infrastructurePagesData = {
                 {img: modern1img, name: "Лавка для пресса", description: "Лавка для пресса"},
                 {img: weddingSliderImg2, name: "Тренажер \"Машина Смита\"", description: "Машина Смита"},
             ]
-        ]
+        ],
+        subscriptionsSlides: [
+            {img: placesIcon1, text: '1 посещение<br/>350 рублей'},
+            {img: placesIcon2, text: '8 посещений<br/>2 000 рублей'},
+            {img: placesIcon3, text: '12 посещений<br/>2 400 рублей'},
+            {img: placesIcon4, text: 'Безлимит<br/>3 000 рублей'},
+        ],
     }
 }
 

@@ -29,8 +29,6 @@ const SliderStyles = styled.div`
   margin: 0 auto;
 }
 
-
-
 `;
 
 
@@ -53,11 +51,11 @@ const SimpleSlider = ({slides, setCurrentSlideIndex}) => {
         speed: 500,
         infinite: false,
         nextArrow: <NextArrow positionStyles={{
-            bottom: "-60px",
+            bottom: "-70px",
             left: "60px",
         }}/>,
         prevArrow: <PrevArrow positionStyles={{
-            bottom: "-60px",
+            bottom: "-70px",
             left: "0",
         }}/>,
         responsive: [
