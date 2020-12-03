@@ -2199,6 +2199,16 @@ export const promotionsPageData = {
 
 // Страницы Инфраструктуры
 export const infrastructurePagesData = {
+    beachAndPools: {
+        bannerData: {
+            subtitleText: "Собственный",
+            headlineText: ['Пляж', 'И бассейны', 'В Riviera Sunrise'],
+            headlineFontSize: ['90px', '69px', '49px'],
+            headlineMobileFontSize: ['8vw', '10vw'],
+            descriptionText: 'К услугам гостей отеля Ривьера Санрайз, г. Алушта, собственный пляж, два открытых бассейна, детский бассейн и крытый бассейн. Один из открытых бассейнов с подогреваемой пресной водой и Pool-баром. Открытые бассейны работают в теплое время года.',
+            bgImg: modernStandartHero,
+        },
+    },
     spaPage: {
         bannerData: {
             subtitleText: "Инфраструктура",

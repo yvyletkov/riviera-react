@@ -1,14 +1,113 @@
 import React from "react";
 import InfrastructurePageBanner from "../InfrastructurePageBanner/InfrastructurePageBanner";
-import InfraMainSlider from "../../../shared/sliders/InfraMainSlider/InfraMainSlider";
 import MapSection from "../../../shared/MapSection/MapSection";
 import {infrastructurePagesData} from "../../../../data";
+import s from "./BeachAndPools.module.scss";
+import Headline from "../../../shared/Headline/Headline";
+import image1 from "../../../../img/infrastructure/beach-pools/1.jpg"
+import image2 from "../../../../img/infrastructure/beach-pools/2.jpg"
+import kitchenImg1 from "../../../../img/events/wedding/kitchen1.jpg";
+import kitchenImg2 from "../../../../img/events/wedding/kitchen2.jpg";
+import menuPriceImg from "../../../../img/events/wedding/menuPrice.png";
 
 const BeachAndPools = () => {
     return <>
-        <InfrastructurePageBanner bannerData={infrastructurePagesData.spaPage.bannerData}/>
+        <InfrastructurePageBanner bannerData={infrastructurePagesData.beachAndPools.bannerData}/>
         <section className='section first'>
-            <InfraMainSlider title={'Совершенный уровень отдыха'} slides={infrastructurePagesData.spaPage.slides}/>
+            <div className={s.poolsBlock}>
+                <div className={s.wrapper}>
+                    <div className={s.container}>
+                        <div className={s.textBlock}>
+                            <div className={s.textContent}>
+                                <Headline subtitle={'Бассейн'} title={'С подгревом'}/>
+                                <p>Уединенное расположение бассейна в окружении реликтовых деревьев является одним из
+                                    достоинств отеля. Прямо в бассейне расположен коктейльный бар. Вокруг барной стойки
+                                    стоят стулья, и посетители бассейна могут в любой момент насладиться напитками не
+                                    выходя из воды.</p>
+                            </div>
+                        </div>
+                        <img className={s.image} src={image1} alt="Бассейн"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section className='section'>
+            <div className={s.poolsBlock}>
+                <div className={s.wrapper}>
+                    <div className={s.container}>
+                        <div className={s.textBlock}>
+                            <div className={s.textContent}>
+                                <Headline subtitle={'Бассейн'} title={'Детский'}/>
+                                <p>Вы сможете наслаждаться отдыхом и загорать на солнце пока Ваши дети развлекаются
+                                    рядом в отдельном бассейне для детей. Глубина детского бассейна 60 см.</p>
+                            </div>
+                        </div>
+                        <img className={s.image} src={image1} alt="Бассейн"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section className='section'>
+            <div className={s.poolsBlock}>
+                <div className={s.wrapper}>
+                    <div className={s.container}>
+                        <div className={s.textBlock}>
+                            <div className={s.textContent}>
+                                <Headline subtitle={'Бассейн'} title={'Возле моря'}/>
+                                <p>Получить настоящее удовольствие от отдыха можно поплавав в бассейне с гидромассажными
+                                    установками, который окружен парком с породами редких деревьев.</p>
+                            </div>
+                        </div>
+                        <img className={s.image} src={image1} alt="Бассейн"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section className='section'>
+            <div className={s.closePoolBlock}>
+                <div className={s.wrapper}>
+                    <div className={s.container}>
+                        <div className={s.textBlock}>
+                            <div className={s.textContent}>
+                                <Headline subtitle={'Бассейн'} title={'Возле моря'}/>
+                                <p>Получить настоящее удовольствие от отдыха можно поплавав в бассейне с гидромассажными
+                                    установками, который окружен парком с породами редких деревьев.</p>
+                            </div>
+                        </div>
+                        <div className={s.imageBlock}>
+                            <img className={s.image} src={image2} alt="Бассейн"/>
+                            <img className={s.image} src={image2} alt="Бассейн"/>
+                            <img className={s.image} src={image2} alt="Бассейн"/>
+                            <img className={s.image} src={image2} alt="Бассейн"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section className='section'>
+            <div className={s.beachBlock}>
+                <div className={s.wrapper}>
+                    <div className={s.container}>
+                        <img className={s.rightImg} src={kitchenImg2} alt=""/>
+                        <img className={s.menuPriceImg} src={menuPriceImg} alt="Стоимость меню"/>
+
+                        <div className={s.textContent}>
+                            <Headline subtitle={'Пляж'} title={'Лучший пляж в Алуште'}/>
+                            <p>
+                                Пляж отеля Riviera Sunrise - ЛУЧШИЙ ПЛЯЖ В АЛУШТЕ высшей категории, обладающий синим
+                                флагом. Протяжённость пляжа более 100 метров. На пляже есть все необходимое для отдыха:
+                                комфортабельные шезлонги, зонтики, душевые, раздевалки, пункт медицинской помощи.
+                                Соседство пляжа с бассейнами является неоспоримым преимуществом отеля.
+                            </p>
+                            <img className={s.leftImg} src={kitchenImg1} alt=""/>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <MapSection/>
     </>
