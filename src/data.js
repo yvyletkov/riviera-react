@@ -2281,6 +2281,16 @@ export const infrastructurePagesData = {
             {img: placesIcon3, text: '12 посещений<br/>2 400 рублей'},
             {img: placesIcon4, text: 'Безлимит<br/>3 000 рублей'},
         ],
+    },
+    aquaThermalPage: {
+        bannerData: {
+            subtitleText: "THE SHORE SPA",
+            headlineText: ['Аква-', 'Термальная', 'Зона'],
+            headlineFontSize: ['80px', '80px', '60px'],
+            headlineMobileFontSize: ['17vw', '17vw', '15vw'],
+            descriptionText: 'Какой-то текст',
+            bgImg: modernSemiluxHero,
+        },
     }
 }
 

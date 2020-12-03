@@ -216,7 +216,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
 
                                 <div className={s.list}>
 
-                                    <NavLink to={"/"}>
+                                    <NavLink to={"/beach-and-pools"}>
                                         <div className={s.listItem} onClick={toggleMenu}>
                                             Бассейны и пляж
                                         </div>
