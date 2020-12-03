@@ -34,7 +34,7 @@ const ContactsPage = lazy(() => import('./components/pages/СontactsPage/Contact
 const PromotionsPage = lazy(() => import('./components/pages/PromotionsPage/PromotionsPage'));
 const SinglePromotionPage = lazy(() => import('./components/pages/PromotionsPage/SinglePromotionPage/SinglePromotionPage'));
 const SpaPage = lazy(() => import('./components/pages/Infrastructure/SpaPage'));
-
+const BeachAndPools = lazy(() => import('./components/pages/Infrastructure/BeachAndPools/BeachAndPools'))
 
 function App() {
 
@@ -45,6 +45,8 @@ function App() {
             </div>}>
 
                 <Switch>
+                    <Route path='/beach-pools' exact
+                           component={() => <BeachAndPools/>}/>
 
                     <Route path='/infrastrusture/spa-complex' exact
                            component={() => <SpaPage/>}/>
