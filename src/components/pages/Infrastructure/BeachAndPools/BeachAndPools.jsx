@@ -13,4 +13,5 @@ const BeachAndPools = () => {
         <MapSection/>
     </>
 }
+
 export default BeachAndPools;
