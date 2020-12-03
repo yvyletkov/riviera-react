@@ -17,14 +17,6 @@ const SliderStyles = styled.div`
     overflow: visible;
   }
   
-  //.slick-list, .slick-slider, .slick-track {
-  //  @media screen and (min-width: 490px) {
-  //    position: relative;
-  //    display: flex;
-  //    justify-content: center;
-  //  }
-  //}
-  
   .slick-dots {
     bottom: -32px;
   }
@@ -44,11 +36,11 @@ const SliderStyles = styled.div`
 `;
 
 
-const InfraMainSlider = ({title = "Какой-то заголовок", slides, setPickedSlideIndex, pickedSlideIndex}) => {
+const InfraMainSlider = ({title = "Какой-то заголовок", slides, setPickedSlideIndex, pickedSlideIndex = 1}) => {
 
     const items = slides.map((item, index) => {
         return (
-            <div onClick={() => setPickedSlideIndex(index)} className="sliderElement" key={index}>
+            <div onClick={() => setPickedSlideIndex && setPickedSlideIndex(index)} className="sliderElement" key={index}>
                 <InfraMainSliderItem
                     img={item.img}
                     link={item.link}

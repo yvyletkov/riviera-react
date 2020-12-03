@@ -7,10 +7,14 @@ import {infrastructurePagesData} from "../../../data";
 const SpaPage = () => {
     return <>
         <InfrastructurePageBanner bannerData={infrastructurePagesData.spaPage.bannerData}/>
+
         <section className='section first'>
             <InfraMainSlider title={'Совершенный уровень отдыха'} slides={infrastructurePagesData.spaPage.slides}/>
         </section>
-        <MapSection/>
+
+        <section className='section'>
+            <MapSection/>
+        </section>
     </>
 }
 

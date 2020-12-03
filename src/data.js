@@ -2211,19 +2211,19 @@ export const infrastructurePagesData = {
         slides: [
             {
                 img: afisha1,
-                link: 'infrastructure/aqua-thermal',
+                link: '/infrastructure/aqua-thermal',
                 firstLine: ['Аква-<br/>термальная', '40px'],
                 secondLine: ['зона', '22px']
             },
             {
                 img: afisha2,
-                link: 'infrastructure/gym',
+                link: '/infrastructure/gym',
                 firstLine: ['Фитнес-', '50px'],
                 secondLine: ['зал', '50px']
             },
             {
                 img: afisha3,
-                link: 'infrastructure/spa-services-and-prices',
+                link: '/infrastructure/spa-services-and-prices',
                 firstLine: ['SPA услуги', '48px'],
                 secondLine: ['и цены', '22px']
             },
@@ -2274,7 +2274,13 @@ export const infrastructurePagesData = {
                 {img: modern1img, name: "Лавка для пресса", description: "Лавка для пресса"},
                 {img: weddingSliderImg2, name: "Тренажер \"Машина Смита\"", description: "Машина Смита"},
             ]
-        ]
+        ],
+        subscriptionsSlides: [
+            {img: placesIcon1, text: '1 посещение<br/>350 рублей'},
+            {img: placesIcon2, text: '8 посещений<br/>2 000 рублей'},
+            {img: placesIcon3, text: '12 посещений<br/>2 400 рублей'},
+            {img: placesIcon4, text: 'Безлимит<br/>3 000 рублей'},
+        ],
     }
 }
 

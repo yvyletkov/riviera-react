@@ -222,7 +222,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
                                         </div>
                                     </NavLink>
 
-                                    <NavLink to={"/"}>
+                                    <NavLink to={"/infrastructure/spa-complex/"}>
                                         <div className={s.listItem} onClick={toggleMenu}>
                                             SPA комплекс
                                         </div>

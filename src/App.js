@@ -49,10 +49,10 @@ function App() {
                     <Route path='/beach-pools' exact
                            component={() => <BeachAndPools/>}/>
 
-                    <Route path='/infrastrusture/gym' exact
+                    <Route path='/infrastructure/gym' exact
                            component={() => <GymPage/>}/>
 
-                    <Route path='/infrastrusture/spa-complex' exact
+                    <Route path='/infrastructure/spa-complex' exact
                            component={() => <SpaPage/>}/>
 
                     <Route path='/promotions/barhatnyi-sezon' exact
