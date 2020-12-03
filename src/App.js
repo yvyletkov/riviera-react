@@ -48,6 +48,9 @@ function App() {
             </div>}>
 
                 <Switch>
+                    <Route path='/beach-pools' exact
+                           component={() => <BeachAndPools/>}/>
+
                     <Route path='/aqua-thermal' exact
                            component={() => <AquaThermalPage/>}/>
 
