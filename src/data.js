@@ -2211,19 +2211,19 @@ export const infrastructurePagesData = {
         slides: [
             {
                 img: afisha1,
-                link: 'infrastructure/aqua-thermal',
+                link: '/infrastructure/aqua-thermal',
                 firstLine: ['Аква-<br/>термальная', '40px'],
                 secondLine: ['зона', '22px']
             },
             {
                 img: afisha2,
-                link: 'infrastructure/gym',
+                link: '/infrastructure/gym',
                 firstLine: ['Фитнес-', '50px'],
                 secondLine: ['зал', '50px']
             },
             {
                 img: afisha3,
-                link: 'infrastructure/spa-services-and-prices',
+                link: '/infrastructure/spa-services-and-prices',
                 firstLine: ['SPA услуги', '48px'],
                 secondLine: ['и цены', '22px']
             },

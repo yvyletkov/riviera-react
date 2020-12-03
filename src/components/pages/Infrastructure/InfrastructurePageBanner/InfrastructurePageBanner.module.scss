@@ -3,7 +3,6 @@ $black: #171717;
 .bannerWrapper {
   position: relative;
   height: calc(100vh - 30px);
-  max-height: 800px;
   max-width: 1920px;
   width: 100%;
   overflow: hidden;
@@ -11,6 +10,10 @@ $black: #171717;
   margin-top: 30px;
   //background: url(../../../img/rooms-and-prices-page/banner-bg.jpg) center no-repeat;
   box-shadow: 0px 0px 40.94px 5.06px rgba(3, 7, 8, 0.09);
+
+  @media (min-width: 1370px) {
+    max-height: 800px;
+  }
 }
 
 .bannerImg {

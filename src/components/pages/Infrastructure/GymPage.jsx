@@ -4,9 +4,7 @@ import InfraMainSlider from "../../shared/sliders/InfraMainSlider/InfraMainSlide
 import MapSection from "../../shared/MapSection/MapSection";
 import styled from "styled-components";
 import SimpleSlider from "../../shared/sliders/SimpleSlider/SimpleSlider";
-import {eventPagesData, infrastructurePagesData} from "../../../data";
-import EventSquaresSlider from "../../shared/sliders/EventSquaresSlider/EventSquaresSlider";
-import s from "../../shared/sliders/EventSquaresSlider/EventSquaresSlider.module.scss";
+import {infrastructurePagesData} from "../../../data";
 import Slider from "react-slick";
 import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
 
@@ -76,6 +74,7 @@ const SubscriptionsStyledDiv = styled.div`
     box-sizing: border-box;
     max-width: 1200px;
     width: 100%;
+    padding: 0;
     margin: 0 auto;
     overflow: hidden;
 

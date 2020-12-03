@@ -6,11 +6,20 @@
   overflow: hidden;
   margin-bottom: -23px;
   padding-left: 20px;
+
 }
 
 @media screen and (max-width: 480px){
   .wrapper {
     padding-bottom: 37px;
     padding-left: 0;
+  }
+}
+
+
+@media screen and (max-width: 700px){
+  .wrapper {
+    margin-bottom: 65px;
+
   }
 }
