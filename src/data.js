@@ -2197,4 +2197,39 @@ export const promotionsPageData = {
 }
 
 
+// Страницы Инфраструктуры
+export const infrastructurePagesData = {
+    spaPage: {
+        bannerData: {
+            subtitleText: "Инфраструктура",
+            headlineText: ['The Shore', 'SPA'],
+            headlineFontSize: ['80px', '100px'],
+            headlineMobileFontSize: ['8vw', '10vw'],
+            descriptionText: 'Какой-то текст',
+            bgImg: modernStandartHero,
+        },
+        slides: [
+            {
+                img: afisha1,
+                link: 'infrastructure/aqua-thermal',
+                firstLine: ['Аква-<br/>термальная', '40px'],
+                secondLine: ['зона', '22px']
+            },
+            {
+                img: afisha2,
+                link: 'infrastructure/gym',
+                firstLine: ['Фитнес-', '50px'],
+                secondLine: ['зал', '50px']
+            },
+            {
+                img: afisha3,
+                link: 'infrastructure/spa-services-and-prices',
+                firstLine: ['SPA услуги', '48px'],
+                secondLine: ['и цены', '22px']
+            },
+        ]
+    }
+}
+
+
 

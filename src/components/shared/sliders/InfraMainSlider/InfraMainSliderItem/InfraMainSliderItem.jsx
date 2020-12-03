@@ -1,10 +1,10 @@
 import React from "react";
-import s from "./InfraCenteredSliderItem.module.scss";
+import s from "./InfraMainSliderItem.module.scss";
 import {NavLink} from "react-router-dom";
 // import LazyImage from "../../../../additional/LazyImg";
 
 
-const InfraCenteredSliderItem = (props) => {
+const InfraMainSliderItem = (props) => {
     const {img, link, firstLine, secondLine, active} = props;
 
     const handleLinkClick = (e) => {
@@ -26,4 +26,4 @@ const InfraCenteredSliderItem = (props) => {
 
 };
 
-export default InfraCenteredSliderItem;
+export default InfraMainSliderItem;

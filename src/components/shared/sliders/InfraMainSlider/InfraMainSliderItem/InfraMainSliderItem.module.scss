@@ -9,9 +9,13 @@
 }
 
 @media (min-width: 480px) {
-  .card.active {
+  .card.active  {
     transform: scale(1.08);
   }
+}
+
+.card:hover  {
+  filter: brightness(1.2);
 }
 
 .card .img {
@@ -28,10 +32,6 @@
   font-size: 14px;
   color: #fff;
   transform-origin: 0 100% 0;
-}
-
-.content * {
-  font-family: "Bebas Neue Book", sans-serif;
 }
 
 .firstLine, .secondLine {
@@ -71,37 +71,6 @@
 @media screen and (max-width: 320px) {
   .content {
     transform: scale(0.6);
-  }
-}
-
-.roomSubtitle {
-  font-family: "Bebas Neue Book", sans-serif;
-  font-size: 20px;
-}
-
-.roomTitle {
-  font-family: "Bebas Neue Bold", sans-serif;
-  font-size: 43px;
-  margin-bottom: 8px;
-  line-height: 1;
-}
-
-.imgContainer {
-  text-transform: none;
-  display: inline-flex;
-  flex-wrap: nowrap;
-  font-family: "Helvetica Neue", sans-serif;
-  font-size: 14px;
-  align-items: center;
-  &:first-of-type {
-    margin-right: 23px !important;
-  }
-  img {
-    margin-right: 10px !important;
-    width: 30px !important;
-  }
-  sup {
-    font-family: "Helvetica Neue", sans-serif;
   }
 }
 
