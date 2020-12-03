@@ -44,23 +44,23 @@ const SliderStyles = styled.div`
 `;
 
 
-const InfraMainSlider = ({title = "Какой-то заголовок", slides, setCurrentSlideIndex}) => {
+const InfraMainSlider = ({title = "Какой-то заголовок", slides, setPickedSlideIndex, pickedSlideIndex}) => {
 
     const items = slides.map((item, index) => {
         return (
-            <div className="sliderElement" key={index}>
+            <div onClick={() => setPickedSlideIndex(index)} className="sliderElement" key={index}>
                 <InfraMainSliderItem
                     img={item.img}
                     link={item.link}
                     firstLine={item.firstLine}
                     secondLine={item.secondLine}
-                    active={index === 1}
+                    active={index === pickedSlideIndex}
                 />
             </div>
         );
     });
 
-    const afterChangeHandler = (index) => setCurrentSlideIndex ? setCurrentSlideIndex(index) : null;
+    const afterChangeHandler = (index) => setPickedSlideIndex ? setPickedSlideIndex(index) : null;
 
     const settings = {
         afterChange: afterChangeHandler,
