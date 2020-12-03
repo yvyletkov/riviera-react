@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
-import s from "./InfraCenteredSlider.module.scss";
-import InfraCenteredSliderItem from "./InfraCenteredSliderItem/InfraCenteredSliderItem";
+import s from "./InfraMainSlider.module.scss";
+import InfraMainSliderItem from "./InfraMainSliderItem/InfraMainSliderItem";
 import styled from "styled-components";
 import HeadlineCenter from "../../HeadlineCenter/HeadlineCenter";
 import {NextArrow, PrevArrow} from "../SliderArrows/sliderArrowButtons";
@@ -16,6 +16,14 @@ const SliderStyles = styled.div`
     transition: all 0.3s;
     overflow: visible;
   }
+  
+  //.slick-list, .slick-slider, .slick-track {
+  //  @media screen and (min-width: 490px) {
+  //    position: relative;
+  //    display: flex;
+  //    justify-content: center;
+  //  }
+  //}
   
   .slick-dots {
     bottom: -32px;
@@ -36,42 +44,29 @@ const SliderStyles = styled.div`
 `;
 
 
-const InfraCenteredSlider = ({title = "Какой-то заголовок", slides}) => {
-
-    let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
+const InfraMainSlider = ({title = "Какой-то заголовок", slides, setCurrentSlideIndex}) => {
 
     const items = slides.map((item, index) => {
-        const {img, link, title, subtitle, time, date, campus, campusName, key, subsubtitle='', fontsizeSubsubtitle='', capacity, area} = item;
         return (
-            <div className="sliderElement" key={key}>
-                <InfraCenteredSliderItem
-                    active={currentSlideIndex === index}
-                    link={link}
-                    img={img}
-                    title={title}
-                    subtitle={subtitle}
-                    subsubtitle={subsubtitle}
-                    fontsizeSubsubtitle={fontsizeSubsubtitle}
-                    time={time}
-                    date={date}
-                    campus={campus}
-                    campusName={campusName}
-                    capacity={capacity}
-                    area={area}
+            <div className="sliderElement" key={index}>
+                <InfraMainSliderItem
+                    img={item.img}
+                    link={item.link}
+                    firstLine={item.firstLine}
+                    secondLine={item.secondLine}
+                    active={index === 1}
                 />
             </div>
         );
     });
 
-    const afterChangeHandler = (index) => setCurrentSlideIndex(index)
+    const afterChangeHandler = (index) => setCurrentSlideIndex ? setCurrentSlideIndex(index) : null;
 
     const settings = {
         afterChange: afterChangeHandler,
         dots: false,
-        className: "center",
-        centerMode: true,
-        infinite: true,
-        centerPadding: "60px",
+        arrows: false,
+        infinite: false,
         variableWidth: true,
         speed: 500,
         nextArrow: <NextArrow positionStyles={{
@@ -110,4 +105,4 @@ const InfraCenteredSlider = ({title = "Какой-то заголовок", slid
     );
 };
 
-export default InfraCenteredSlider;
+export default InfraMainSlider;

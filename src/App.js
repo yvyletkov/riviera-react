@@ -33,6 +33,7 @@ const NotFoundPage = lazy(() => import('./components/additional/NotFoundPage/Not
 const ContactsPage = lazy(() => import('./components/pages/СontactsPage/ContactsPage'));
 const PromotionsPage = lazy(() => import('./components/pages/PromotionsPage/PromotionsPage'));
 const SinglePromotionPage = lazy(() => import('./components/pages/PromotionsPage/SinglePromotionPage/SinglePromotionPage'));
+const SpaPage = lazy(() => import('./components/pages/Infrastructure/SpaPage'));
 
 
 function App() {
@@ -44,6 +45,10 @@ function App() {
             </div>}>
 
                 <Switch>
+
+                    <Route path='/infrastrusture/spa-complex' exact
+                           component={() => <SpaPage/>}/>
+
                     <Route path='/promotions/barhatnyi-sezon' exact
                            component={() => <SinglePromotionPage/>}/>
 

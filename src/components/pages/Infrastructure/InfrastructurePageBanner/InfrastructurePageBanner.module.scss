@@ -13,7 +13,7 @@ $black: #171717;
   box-shadow: 0px 0px 40.94px 5.06px rgba(3, 7, 8, 0.09);
 }
 
-.bannerImg, .bannerImgTop {
+.bannerImg {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -26,10 +26,6 @@ $black: #171717;
   height: 100%;
   overflow: hidden;
   object-fit: cover;
-}
-
-.bannerImgTop {
-  z-index: 2;
 }
 
 .container {
@@ -71,19 +67,17 @@ $black: #171717;
   right: -73px;
 }
 
-.textBlock h1:first-of-type {
-  text-transform: uppercase;
-  font-family: "Helvetica Neue Black", sans-serif;
-  font-size: 78px;
+.textBlock h1 {
+
+  span:nth-child(1), span:nth-child(2), span:nth-child(3) {
+    display: block;
+    text-transform: uppercase;
+    font-family: "Helvetica Neue Black", sans-serif;
+    line-height: 0.9;
+  }
+
 }
 
-.textBlock h1:last-of-type {
-  white-space: nowrap;
-  text-transform: uppercase;
-  font-family: "Helvetica Neue Black", sans-serif;
-  font-size: 115px;
-  line-height: 0.9;
-}
 
 .textBlock .descriptionBtn {
   position: relative;
