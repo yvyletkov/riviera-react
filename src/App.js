@@ -9,7 +9,6 @@ import "./style/fonts.css";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import BottomMenu from "./components/shared/BottomMenu/BottomMenu";
-import GymPage from "./components/pages/Infrastructure/GymPage";
 
 const HomePage = lazy(() => import('./components/pages/HomePage/HomePage'));
 const RoomsAndPricesPage = lazy(() => import('./components/pages/RoomsAndPricesPage/RoomsAndPricesPage'));
@@ -34,8 +33,11 @@ const NotFoundPage = lazy(() => import('./components/additional/NotFoundPage/Not
 const ContactsPage = lazy(() => import('./components/pages/СontactsPage/ContactsPage'));
 const PromotionsPage = lazy(() => import('./components/pages/PromotionsPage/PromotionsPage'));
 const SinglePromotionPage = lazy(() => import('./components/pages/PromotionsPage/SinglePromotionPage/SinglePromotionPage'));
-const SpaPage = lazy(() => import('./components/pages/Infrastructure/SpaPage'));
-const BeachAndPools = lazy(() => import('./components/pages/Infrastructure/BeachAndPools/BeachAndPools'))
+const SpaPage = lazy(() => import('./components/pages/infrastructure/SpaPage'));
+const BeachAndPools = lazy(() => import('./components/pages/infrastructure/BeachAndPools/BeachAndPools'))
+const GymPage = lazy(() => import('./components/pages/infrastructure/GymPage'))
+const AquaThermalPage = lazy(() => import('./components/pages/infrastructure/AquaThermalPage/AquaThermalPage'))
+
 
 function App() {
 
@@ -46,7 +48,10 @@ function App() {
             </div>}>
 
                 <Switch>
-                    <Route path='/beach-pools' exact
+                    <Route path='/aqua-thermal' exact
+                           component={() => <AquaThermalPage/>}/>
+
+                   <Route path='/beach-and-pools' exact
                            component={() => <BeachAndPools/>}/>
 
                     <Route path='/infrastructure/gym' exact
