@@ -1,12 +1,14 @@
 import React from "react";
 import Slider from "react-slick";
-import s from "./InfraMainSlider.module.scss";
-import InfraMainSliderItem from "./InfraMainSliderItem/InfraMainSliderItem";
 import styled from "styled-components";
-import HeadlineCenter from "../../HeadlineCenter/HeadlineCenter";
 import {NextArrow, PrevArrow} from "../SliderArrows/sliderArrowButtons";
 
 const SliderStyles = styled.div`
+  width: 100%;
+  height: 100%;
+      box-shadow: -14.444px 19.167px 27px 0px rgba(23, 23, 23, 0.10);
+
+  
   .slick-next:before,
   .slick-prev:before {
     color: #000;
@@ -14,24 +16,20 @@ const SliderStyles = styled.div`
 
   .slick-list {
     transition: all 0.3s;
-    overflow: visible;
-  }
-  
-  .slick-dots {
-    bottom: -32px;
-  }
-  .slick-dots li {
-    margin: 0
+    overflow: hidden;
   }
 
 .slick-slide img {
   width: 100%;
-  margin: 0 40px 0 0;
+  height: 400px;
+  object-fit: cover;
 }
 
 .slick-track {
   margin: 0 auto;
 }
+
+
 
 `;
 
@@ -41,13 +39,7 @@ const SimpleSlider = ({slides, setCurrentSlideIndex}) => {
     const items = slides.map((item, index) => {
         return (
             <div className="sliderElement" key={index}>
-                <InfraMainSliderItem
-                    img={item.img}
-                    link={item.link}
-                    firstLine={item.firstLine}
-                    secondLine={item.secondLine}
-                    active={index === 1}
-                />
+                <img src={item.img} alt={item.name}/>
             </div>
         );
     });
@@ -59,15 +51,14 @@ const SimpleSlider = ({slides, setCurrentSlideIndex}) => {
         dots: false,
         arrows: true,
         speed: 500,
+        infinite: false,
         nextArrow: <NextArrow positionStyles={{
-            bottom: "-90px",
-            right: "50%",
-            transform: "translateX(120%)"
+            bottom: "-60px",
+            left: "60px",
         }}/>,
         prevArrow: <PrevArrow positionStyles={{
-            bottom: "-90px",
-            left: "50%",
-            transform: "translateX(-120%)"
+            bottom: "-60px",
+            left: "0",
         }}/>,
         responsive: [
             {

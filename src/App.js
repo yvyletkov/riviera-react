@@ -9,6 +9,7 @@ import "./style/fonts.css";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import BottomMenu from "./components/shared/BottomMenu/BottomMenu";
+import GymPage from "./components/pages/Infrastructure/GymPage";
 
 const HomePage = lazy(() => import('./components/pages/HomePage/HomePage'));
 const RoomsAndPricesPage = lazy(() => import('./components/pages/RoomsAndPricesPage/RoomsAndPricesPage'));
@@ -47,6 +48,9 @@ function App() {
                 <Switch>
                     <Route path='/beach-pools' exact
                            component={() => <BeachAndPools/>}/>
+
+                    <Route path='/infrastrusture/gym' exact
+                           component={() => <GymPage/>}/>
 
                     <Route path='/infrastrusture/spa-complex' exact
                            component={() => <SpaPage/>}/>

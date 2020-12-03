@@ -2228,6 +2228,53 @@ export const infrastructurePagesData = {
                 secondLine: ['и цены', '22px']
             },
         ]
+    },
+    gymPage: {
+        bannerData: {
+            subtitleText: "THE SHORE SPA",
+            headlineText: ['Фитнес', 'Зал'],
+            headlineFontSize: ['100px', '100px'],
+            headlineMobileFontSize: ['17vw', '19vw'],
+            descriptionText: 'Какой-то текст',
+            bgImg: modernSemiluxHero,
+        },
+        mainSlides: [
+            {
+                img: afisha1,
+                firstLine: ['Кардио', '60px'],
+                secondLine: ['Тренажеры', '35px']
+            },
+            {
+                img: afisha2,
+                firstLine: ['Силовые', '55px'],
+                secondLine: ['Тренажеры', '35px']
+            },
+            {
+                img: afisha3,
+                firstLine: ['Свободные', '45px'],
+                secondLine: ['веса', '50px']
+            },
+        ],
+        apparatusesSlides: [
+            [ //кардио
+                {img: classic2img, name: "Велотренажер горизонтальный", description: "Велотренажер горизонтальный"},
+                {img: classic3img, name: "Велотренажер", description: "Велотренажер"},
+                {img: classic1img, name: "Беговая дорожка", description: "Беговая дорожка"},
+                {img: classicLuxHero, name: "Кросс-тренажер", description: "Кросс-тренажер"},
+            ],
+            [ //силовые
+                {img: img5, name: "Вертикальная тяга", description: "Вертикальная тяга"},
+                {img: img4, name: "Многофункциональный тренажер", description: "Многофункциональный тренажер"},
+                {img: img9, name: "Лавка для пресса", description: "Лавка для пресса"},
+                {img: img10, name: "Машина Смита", description: "Машина Смита"},
+                {img: img14, name: "Тренажер разгибания ног", description: "Тренажер разгибания ног"},
+            ],
+            [ //свободные веса
+                {img: modern3img, name: "Скамья для нижней части спины", description: "Скамья для нижней части спины"},
+                {img: modern1img, name: "Лавка для пресса", description: "Лавка для пресса"},
+                {img: weddingSliderImg2, name: "Тренажер \"Машина Смита\"", description: "Машина Смита"},
+            ]
+        ]
     }
 }
 
