@@ -190,6 +190,12 @@ import childrenAnimImg from "./img/family-holiday/1.jpg";
 import childrenPoolImg from "./img/family-holiday/2.jpg";
 import birthdayImg from "./img/family-holiday/3.jpg";
 import playgroundImg from "./img/family-holiday/4.jpg";
+import closePool1 from "./img/infrastructure/beach-pools/5.jpg";
+import closePool2 from "./img/infrastructure/beach-pools/6.jpg";
+import closePool3 from "./img/infrastructure/beach-pools/7.jpg";
+import closePool4 from "./img/infrastructure/beach-pools/8.jpg";
+import bannerPools from "./img/infrastructure/beach-pools/1.jpg";
+
 // roomsImports
 import otherRoomsModernStandart from "./img/rooms/modern/other-rooms/стандарт-мини.jpg"
 import otherRoomsModernImproved from "./img/rooms/modern/other-rooms/улучшенный_мини.jpg"
@@ -559,6 +565,24 @@ const commonSpecialsSlides = [
         key: 6,
     },
 ];
+const commonClosePoolsSlides =  [
+    {
+        img: closePool1,
+        key: 1,
+    },
+    {
+        img: closePool2,
+        key: 2,
+    },
+    {
+        img: closePool3,
+        key: 3,
+    },
+    {
+        img: closePool4,
+        key: 4,
+    },
+]; //крытые бассейны
 const commonExtraServicesSlides =  [
         {
             img: extraService1,
@@ -2206,8 +2230,9 @@ export const infrastructurePagesData = {
             headlineFontSize: ['90px', '69px', '49px'],
             headlineMobileFontSize: ['8vw', '10vw'],
             descriptionText: 'К услугам гостей отеля Ривьера Санрайз, г. Алушта, собственный пляж, два открытых бассейна, детский бассейн и крытый бассейн. Один из открытых бассейнов с подогреваемой пресной водой и Pool-баром. Открытые бассейны работают в теплое время года.',
-            bgImg: modernStandartHero,
+            bgImg: bannerPools,
         },
+        zoomSlides: commonClosePoolsSlides,
     },
     spaPage: {
         bannerData: {
