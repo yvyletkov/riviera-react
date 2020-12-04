@@ -2146,7 +2146,6 @@ export const eventPagesData = {
     classicDescr: commonClassicDescr,
 };
 
-
 // Страница "Специальные предложения"
 export const promotionsPageData = {
     slides: commonSpecialsSlides,
@@ -2298,9 +2297,59 @@ export const infrastructurePagesData = {
             headlineText: ['Аква-', 'Термальная', 'Зона'],
             headlineFontSize: ['80px', '80px', '60px'],
             headlineMobileFontSize: ['17vw', '17vw', '15vw'],
-            descriptionText: 'Какой-то текст',
+            descriptionText: 'На территории отеля Riviera Sunrise Resort&SPA расположен СПА-центр THE SHORE SPA площадью 2000 м². Элегантный и стильный интерьер выполнен известным скандинавским дизайнером Кристианом Люндвалем. Мы приглашаем Вас в атмосферу здоровья, красоты и гармонии.',
             bgImg: modernSemiluxHero,
         },
+        slides: [
+            {
+                img: promoImg1,
+                subtitle: "",
+                title: "Финская сауна",
+                text: 'Традиционная горячая и сухая сауна (t 90-110 С, до 20% влажности). Финская сауна благотворно влияет на состояние организма, усиливает обмен веществ, успокаивает нервную систему, восстанавливает бодрость, делает кожу упругой и красивой.',
+                // link: '#',
+                key: 1,
+            },
+            {
+                img: promoImg5,
+                subtitle: "",
+                title: "Хаммам",
+                text: 'Другой текст про хаммам до 20% влажности). Финская сауна благотворно влияет на состояние организма, усиливает обмен веществ, успокаивает нервную систему, восстанавливает бодрость, делает кожу упругой и красивой.',
+                // link: '/promotions/barhatnyi-sezon',
+                key: 2,
+            },
+            {
+                img: promoImg2,
+                subtitle: "",
+                title: "Что-то еще",
+                text: "Текст про что-то еще",
+                // link: '#',
+                key: 3,
+            },
+            {
+                img: promoImg3,
+                subtitle: "",
+                title: "Что-то еще",
+                text: "Текст про что-то еще",
+                // link: '#',
+                key: 4,
+            },
+            {
+                img: promoImg4,
+                subtitle: "",
+                title: "И что-то еще",
+                text: "И текст про что-то еще",
+                // link: '#',
+                key: 5,
+            },
+            {
+                img: promoImg6,
+                subtitle: "",
+                title: "Банька",
+                text: "Текст про баньку",
+                // link: '#',
+                key: 6,
+            },
+        ]
     }
 }
 

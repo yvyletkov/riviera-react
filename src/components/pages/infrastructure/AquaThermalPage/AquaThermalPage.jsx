@@ -5,6 +5,7 @@ import {infrastructurePagesData} from "../../../../data";
 import s from "./AquaThermalPage.module.scss";
 import decisionBlockImg from "../../../../img/events/wedding/decision.jpg";
 import Headline from "../../../shared/Headline/Headline";
+import SpecialsDynamicSlider from "../../../shared/sliders/SpecialsDynamicSlider/SpecialsDynamicSlider";
 
 const AquaThermalPage = () => {
     return <>
@@ -51,6 +52,10 @@ const AquaThermalPage = () => {
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section className='section'>
+            <SpecialsDynamicSlider slides={infrastructurePagesData.aquaThermalPage.slides}/>
         </section>
 
         <section className='section'>

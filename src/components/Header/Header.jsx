@@ -8,13 +8,6 @@ import search from "../../img/header/search.png"
 import phone from "../../img/header/phone.png"
 import Button from "../shared/Button/Button";
 import {NavLink} from "react-router-dom";
-import arrowIcon from "../../img/arrow-accordeon.png";
-import logoVk from "../../img/footer/vk.png";
-import logoFb from "../../img/footer/facebook.png";
-import logoInst from "../../img/footer/inst.png";
-import logoYt from "../../img/footer/youtube.png";
-import logoPin from "../../img/footer/pin.png";
-import logoPhone from "../../img/footer/phone.png";
 import Menu from "./Menu/Menu";
 
 
