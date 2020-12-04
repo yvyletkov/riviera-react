@@ -22,7 +22,7 @@ const BachelorPartyPage = () => {
 
     return <>
 
-        <EventPageBanner fontSize={['46px', '61px', '55px']} mobileFontSize={['8.7vw', '10.5vw', '8.2vw']}
+        <EventPageBanner fontSize={['55px', '55px', '55px']} mobileFontSize={['10.5vw', '10.5vw', '8.2vw']}
                          titles={['Организуем вам', 'настоящий', 'мальчишник', 'в Крыму']}
                          icons={eventPagesData.bachelorParty.bachelorPartyBannerIcons} bannerImg={bannerImg}
                          bannerImgMobile={bannerImgMobile}

@@ -265,6 +265,19 @@ import classicPresidentLux1 from "./img/rooms/classic/president/main_slider_1.jp
 import classicPresidentLux2 from "./img/rooms/classic/president/main_slider_2.jpg";
 import classicPresidentLux3 from "./img/rooms/classic/president/main_slider_3.jpg";
 // END roomsImports
+// infra Imports
+import spaPageHero from "./img/infrastructure/spaPage/1.jpg";
+import spaPageAquaImg from "./img/infrastructure/spaPage/2.jpg";
+import spaPageGymImg from "./img/infrastructure/spaPage/3.jpg";
+import spaPageSpaServicesImg from "./img/infrastructure/spaPage/4.jpg";
+
+import aquaThermalPageHero from "./img/infrastructure/aquaThermal/1.jpg";
+import aquaThermalPageImg1 from "./img/infrastructure/aquaThermal/3.jpg";
+import aquaThermalPageImg2 from "./img/infrastructure/aquaThermal/4.jpg";
+import aquaThermalPageImg3 from "./img/infrastructure/aquaThermal/5.jpg";
+import aquaThermalPageImg4 from "./img/infrastructure/aquaThermal/6.jpg";
+
+// END infra Imports
 
 const commonGridSlides = [
     {
@@ -1882,7 +1895,6 @@ export const vacationPagesData = {
     ],
 };
 
-
 // Страницы ивентов: "Свадьба", "Выездная церемония", "ДР', "Мальчишник", "Девичник"
 export const eventPagesData = {
     weddingPages: { // "Свадьба", "Выездная церемония"
@@ -2195,7 +2207,6 @@ export const promotionsPageData = {
     ],
 }
 
-
 // Страницы Инфраструктуры
 export const infrastructurePagesData = {
     spaPage: {
@@ -2205,26 +2216,26 @@ export const infrastructurePagesData = {
             headlineFontSize: ['80px', '100px'],
             headlineMobileFontSize: ['8vw', '10vw'],
             descriptionText: 'Какой-то текст',
-            bgImg: modernStandartHero,
+            bgImg: spaPageHero,
         },
         slides: [
             {
-                img: afisha1,
+                img: spaPageAquaImg,
                 link: '/infrastructure/aqua-thermal',
-                firstLine: ['Аква-<br/>термальная', '40px'],
-                secondLine: ['зона', '22px']
+                firstLine: ['Аква-<br/>термальная', '50px'],
+                secondLine: ['зона', '40px']
             },
             {
-                img: afisha2,
+                img: spaPageGymImg,
                 link: '/infrastructure/gym',
                 firstLine: ['Фитнес-', '50px'],
                 secondLine: ['зал', '50px']
             },
             {
-                img: afisha3,
+                img: spaPageSpaServicesImg,
                 link: '/infrastructure/spa-services-and-prices',
-                firstLine: ['SPA услуги', '48px'],
-                secondLine: ['и цены', '22px']
+                firstLine: ['SPA услуги', '50px'],
+                secondLine: ['и цены', '40px']
             },
         ]
     },
@@ -2285,14 +2296,14 @@ export const infrastructurePagesData = {
         bannerData: {
             subtitleText: "THE SHORE SPA",
             headlineText: ['Аква-', 'Термальная', 'Зона'],
-            headlineFontSize: ['80px', '80px', '60px'],
-            headlineMobileFontSize: ['17vw', '17vw', '15vw'],
-            descriptionText: 'На территории отеля Riviera Sunrise Resort&SPA расположен СПА-центр THE SHORE SPA площадью 2000 м². Элегантный и стильный интерьер выполнен известным скандинавским дизайнером Кристианом Люндвалем. Мы приглашаем Вас в атмосферу здоровья, красоты и гармонии.',
-            bgImg: modernSemiluxHero,
+            headlineFontSize: ['80px', '80px', '80px'],
+            headlineMobileFontSize: ['13.5vw', '11.4vw', '11.4vw'],
+            descriptionText: 'На территории отеля Riviera Sunrise Resort&SPA расположен СПА-центр THE SHORE SPA площадью 2000 м².<br/><br/>Элегантный и стильный интерьер выполнен известным скандинавским дизайнером Кристианом Люндвалем. Мы приглашаем Вас в атмосферу здоровья, красоты и гармонии.',
+            bgImg: aquaThermalPageHero,
         },
         slides: [
             {
-                img: promoImg1,
+                img: aquaThermalPageImg1,
                 subtitle: "",
                 title: "Финская сауна",
                 text: 'Традиционная горячая и сухая сауна (t 90-110 С, до 20% влажности). Финская сауна благотворно влияет на состояние организма, усиливает обмен веществ, успокаивает нервную систему, восстанавливает бодрость, делает кожу упругой и красивой.',
@@ -2300,7 +2311,7 @@ export const infrastructurePagesData = {
                 key: 1,
             },
             {
-                img: promoImg5,
+                img: aquaThermalPageImg2,
                 subtitle: "",
                 title: "Хаммам",
                 text: 'Другой текст про хаммам до 20% влажности). Финская сауна благотворно влияет на состояние организма, усиливает обмен веществ, успокаивает нервную систему, восстанавливает бодрость, делает кожу упругой и красивой.',
@@ -2308,7 +2319,7 @@ export const infrastructurePagesData = {
                 key: 2,
             },
             {
-                img: promoImg2,
+                img: aquaThermalPageImg3,
                 subtitle: "",
                 title: "Что-то еще",
                 text: "Текст про что-то еще",
@@ -2316,9 +2327,9 @@ export const infrastructurePagesData = {
                 key: 3,
             },
             {
-                img: promoImg3,
+                img: aquaThermalPageImg4,
                 subtitle: "",
-                title: "Что-то еще",
+                title: "Соляная пещера",
                 text: "Текст про что-то еще",
                 // link: '#',
                 key: 4,

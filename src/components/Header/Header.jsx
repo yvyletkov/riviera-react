@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./Header.module.scss";
-import logo from "../../img/logo.png"
+import logo from "../../img/logo.svg"
 import star from "../../img/header/star.png"
 import speaker from "../../img/header/speaker.png"
 import microphone from "../../img/header/microphone.png"

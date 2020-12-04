@@ -3,7 +3,8 @@ import InfrastructurePageBanner from "../InfrastructurePageBanner/Infrastructure
 import MapSection from "../../../shared/MapSection/MapSection";
 import {infrastructurePagesData} from "../../../../data";
 import s from "./AquaThermalPage.module.scss";
-import decisionBlockImg from "../../../../img/events/wedding/decision.jpg";
+import firstBlockImg from "../../../../img/infrastructure/aquaThermal/1.jpg";
+
 import Headline from "../../../shared/Headline/Headline";
 import SpecialsDynamicSlider from "../../../shared/sliders/SpecialsDynamicSlider/SpecialsDynamicSlider";
 
@@ -17,7 +18,7 @@ const AquaThermalPage = () => {
                     <div className={s.grid}>
 
                         <div className={s.imageBlock}>
-                            <img src={decisionBlockImg} alt="Riviera Sunrise"/>
+                            <img src={firstBlockImg} alt="Riviera Sunrise"/>
                         </div>
 
                         <div className={s.textBlock}>
