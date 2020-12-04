@@ -68,16 +68,23 @@ const SpecialsDynamicSlider = ({slides}) => {
         ]
     };
 
+    const sliderRef = React.useRef();
+
+    React.useEffect(() => {
+        sliderRef.current.slickGoTo(currentSlideIndex);
+    }, [currentSlideIndex]);
+
     const items = slides.map((item, index) => {
         const {img, title, subtitle, key, link} = item;
         return (
-            <div className="sliderElement" onClick={() => setCurrentSlideIndex(index)} key={key}>
+            <div className="sliderElement" onClick={() => !window.matchMedia("screen and (max-width: 1200px)").matches ? setCurrentSlideIndex(index) : null} key={key}>
                 <SpecialsSliderItem
                     img={img}
                     title={title}
                     subtitle={subtitle}
-                    active={index === 1}
+                    active={index === 0 && !window.matchMedia("screen and (max-width: 1200px)").matches}
                     link={link}
+                    oneLine
                 />
             </div>
         );
@@ -94,7 +101,7 @@ const SpecialsDynamicSlider = ({slides}) => {
                 </div>
                 <div className={s.rightBlock}>
                     <SliderStyles>
-                        <Slider {...settings}>{items}</Slider>
+                        <Slider ref={sliderRef} {...settings}>{items}</Slider>
                     </SliderStyles>
                 </div>
             </div>

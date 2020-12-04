@@ -12,15 +12,15 @@
   top: 0;
   left: 0;
   z-index: -1;
-  background: no-repeat center url(../../../../img/specials-slider/specials-bg.jpg);
+  //background: no-repeat center url(../../../../img/specials-slider/specials-bg.jpg);
 }
 
 .container {
   box-sizing: border-box;
   position: relative;;
-  padding-top: 225px;
+  padding-top: 125px;
   max-width: 1200px;
-  height: 640px;
+  height: 520px;
   width: 100%;
   margin: 0 auto;
   //border: thin solid black;
@@ -29,7 +29,7 @@
 .leftBlock {
   box-sizing: border-box;
   width: 420px;
-  padding: 0 25px 0 15px;
+  padding: 0 35px 0 0px;
 }
 
 .leftBlock p {
@@ -64,7 +64,7 @@
   position: absolute;
   overflow: hidden;
   width: 960px;
-  height: 640px;
+  height: 600px;
   bottom: 0;
   right: -180px;
   //border: thin solid red;

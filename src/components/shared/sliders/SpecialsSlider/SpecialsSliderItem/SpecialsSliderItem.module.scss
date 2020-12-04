@@ -17,8 +17,12 @@
     height: 421px;
     transition: all 500ms;
     &.noLink {
-      margin-top: -70px;
+      margin-top: -60px;
       height: 402px;
+      &.small {
+        margin-top: -48px;
+        height: 390px;
+      }
     }
   }
 }
@@ -58,9 +62,13 @@
     object-fit: cover;
   }
   .card, .card.lifted, .cardWrapper {
-    height: calc(65vw * 1.48 + 85px);
+    height: calc(65vw * 1.48 + 75px);
     &.noLink {
       height: calc(65vw * 1.48 + 75px);
+    }
+    &.small {
+      height: calc(65vw * 1.48 + 65px);
+
     }
   }
 }
