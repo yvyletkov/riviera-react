@@ -5,11 +5,9 @@ import decisionBlockImg from "../../../../img/events/wedding/decision.jpg";
 import bannerImg from "../../../../img/events/wedding/weddingPageBanner.jpg";
 import bannerImgMobile from "../../../../img/events/wedding/weddingPageBanner-mob.jpg";
 import textImgBlockImg from "../../../../img/events/wedding/wedding.jpg";
-
 import EventPageBanner from "../EventPageBanner/EventPageBanner";
 import Headline from "../../../shared/Headline/Headline";
 import EventMainSlider from "../../../shared/sliders/EventMainSlider/EventMainSlider";
-import Button from "../../../shared/Button/Button";
 import SpecialsSlider from "../../../shared/sliders/SpecialsSlider/SpecialsSlider";
 import LargeGallerySlider from "../../../shared/sliders/LargeGallerySlider/LargeGallerySlider";
 import RoomsSlider from "../../../shared/sliders/RoomsSlider/RoomsSlider";

@@ -14,12 +14,6 @@ const SliderStyles = styled(Slider)`
   .slick-prev:before {
     color: #000;
   }
-  .center .slick-center .SliderElement {
-    opacity: 1;
-    transition: all 0.3s;
-    -ms-transform: scale(1.08);
-    transform: scale(1.08);
-  }
   .slick-list {
     transition: all 0.3s;
     overflow: visible;
