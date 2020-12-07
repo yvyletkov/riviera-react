@@ -22,22 +22,20 @@ const Restaurants = () => {
       }
       
       .btnBlock {
-        padding: 0 70px 0 20px;  
+        padding: 0;
         text-align: justify;
         display: flex;
         flex-direction:column;
       }
       
       .textBlock {
-        padding: 0 70px 0 20px;  
+        padding: 0 60px 0;  
         text-align: justify;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        @media screen and (min-width: 701px) {
-          > div {
-            margin-top: -90px;
-          }
-      }
+        max-width:375px;
+     
         
         h4 {
           font-family: "Helvetica Neue Bold", sans-serif;
@@ -90,30 +88,36 @@ const Restaurants = () => {
                                         style={{marginBottom:'14px'}}/>
                                 <Button notActive={currentTab !== 1}
                                         onClick={() => setCurrentTab(1)}
-                                        text="Ресторан «La Veranda»"
+                                        text="Ресторан «Tavrika»"
                                         style={{marginBottom:'14px'}}/>
                                 <Button notActive={currentTab !== 2}
-                                        onClick={() => setCurrentTab(2)}
-                                        text="Лобби-бар «Mungup»"
-                                        style={{marginBottom:'14px'}}/>
+                                    onClick={() => setCurrentTab(2)}
+                                    text="Ресторан «La Veranda»"
+                                    style={{marginBottom:'14px'}}/>
                                 <Button notActive={currentTab !== 3}
                                         onClick={() => setCurrentTab(3)}
-                                        text="Лобби-лаундж"
+                                        text="Лобби-бар «Mungup»"
                                         style={{marginBottom:'14px'}}/>
                                 <Button notActive={currentTab !== 4}
                                         onClick={() => setCurrentTab(4)}
-                                        text="Pool-бар"
+                                        text="Лобби-лаундж"
                                         style={{marginBottom:'14px'}}/>
                                 <Button notActive={currentTab !== 5}
                                         onClick={() => setCurrentTab(5)}
+                                        text="Pool-бар"
+                                        style={{marginBottom:'14px'}}/>
+                                <Button notActive={currentTab !== 6}
+                                        onClick={() => setCurrentTab(6)}
                                         text="Мангал в саду"
+                                        style={{marginBottom:'14px'}}/>
+                                <Button notActive={currentTab !== 7}
+                                        onClick={() => setCurrentTab(7)}
+                                        text="Караоке-бар"
                                         style={{marginBottom:'14px'}}/>
                         </div>
                         <div className='textBlock'>
-                            <div>
                                 <h4>{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].name}</h4>
-                                <p>{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].name}</p>
-                            </div>
+                                <p>{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].description}</p>
                         </div>
                         <div className='sliderBlock'>
                             <SimpleSlider slides={infrastructurePagesData.restaurants.restaurantsContent[currentTab][1]}/>
