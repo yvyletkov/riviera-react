@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import InfrastructurePageBanner from "./InfrastructurePageBanner/InfrastructurePageBanner";
 import InfraMainSlider from "../../shared/sliders/InfraMainSlider/InfraMainSlider";
 import MapSection from "../../shared/MapSection/MapSection";
@@ -140,6 +140,12 @@ const GymPage = () => {
 
     let [currentTab, setCurrentTab] = React.useState(1);
     let [apparatusIndex, setApparatusIndex] = React.useState(0);
+
+    useEffect( () => {
+        console.log('before index', apparatusIndex)
+        setApparatusIndex(0)
+        console.log('after index', apparatusIndex)
+    },[currentTab]);
 
     const settings = {
         infinite: false,

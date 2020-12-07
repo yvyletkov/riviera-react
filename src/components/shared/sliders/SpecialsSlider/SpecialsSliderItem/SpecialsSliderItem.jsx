@@ -5,7 +5,7 @@ import cx from "classnames";
 import LazyImage from "../../../../additional/LazyImg";
 
 const SpecialsSliderItem = (props) => {
-    const {img, active, title, subtitle, link, decolorized, oneLine} = props;
+    const {img, active, title, subtitle, link, decolorized, oneLine, smallText} = props;
 
     let [lifted, setLifted] = React.useState(active);
 
@@ -13,7 +13,7 @@ const SpecialsSliderItem = (props) => {
         if (!link) e.preventDefault()
     }
 
-    const cardClassNames = cx(s.card, {[s.lifted]: lifted, [s.noLink]: !link, [s.small]: oneLine});
+    const cardClassNames = cx(s.card, {[s.lifted]: lifted, [s.noLink]: !link, [s.small]: oneLine, [s.smallText]: smallText});
 
     return (
         <div className={s.cardWrapper}>

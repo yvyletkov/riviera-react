@@ -272,17 +272,34 @@ import classicPresidentLux2 from "./img/rooms/classic/president/main_slider_2.jp
 import classicPresidentLux3 from "./img/rooms/classic/president/main_slider_3.jpg";
 // END roomsImports
 // infra Imports
+// infra Imports
 import spaPageHero from "./img/infrastructure/spaPage/1.jpg";
 import spaPageAquaImg from "./img/infrastructure/spaPage/2.jpg";
 import spaPageGymImg from "./img/infrastructure/spaPage/3.jpg";
 import spaPageSpaServicesImg from "./img/infrastructure/spaPage/4.jpg";
-
 import aquaThermalPageHero from "./img/infrastructure/aquaThermal/1.jpg";
-import aquaThermalPageImg1 from "./img/infrastructure/aquaThermal/3.jpg";
-import aquaThermalPageImg2 from "./img/infrastructure/aquaThermal/4.jpg";
-import aquaThermalPageImg3 from "./img/infrastructure/aquaThermal/5.jpg";
-import aquaThermalPageImg4 from "./img/infrastructure/aquaThermal/6.jpg";
-
+import aquaThermalPageFinka from "./img/infrastructure/aquaThermal/3.jpg";
+import aquaThermalHammam from "./img/infrastructure/aquaThermal/4.jpg";
+import aquaThermalRasul from "./img/infrastructure/aquaThermal/5.jpg";
+import aquaThermalPeshchera from "./img/infrastructure/aquaThermal/6.jpg";
+import gymHeroImg from "./img/infrastructure/gym/slider-fit.jpg";
+import gymImg1 from "./img/infrastructure/gym/2.jpg";
+import gymImg2 from "./img/infrastructure/gym/3.jpg";
+import gymImg3 from "./img/infrastructure/gym/4.jpg";
+import gymIcon1 from "./img/infrastructure/gym/ic1.png";
+import gymIcon2 from "./img/infrastructure/gym/ic2.png";
+import gymIcon3 from "./img/infrastructure/gym/ic3.png";
+import gymIcon4 from "./img/infrastructure/gym/ic4.png";
+import gymVeloGoriz from "./img/infrastructure/gym/кардио - велотренажер горизонтальный.jpg";
+import gymVelo from "./img/infrastructure/gym/кардио - велотренажер.JPG";
+import gymBegovaya from "./img/infrastructure/gym/кардио - дорожка беговая.jpg";
+import gymKross from "./img/infrastructure/gym/кардио - Кросс-тренажер.jpg";
+import gymVert from "./img/infrastructure/gym/силовые - вертикальная тяга.jpg";
+import gymMnogofunk from "./img/infrastructure/gym/силовые - Многофункциональный силовой тренажер.jpg";
+import gymPress from "./img/infrastructure/gym/свободные веса - скамья для пресса.jpg";
+import gymSmit from "./img/infrastructure/gym/силовые свободные веса - машина смита.jpg";
+import gymNogi from "./img/infrastructure/gym/силовые -Тренажер «разгибание ног».jpg";
+import gymSpina from "./img/infrastructure/gym/свободные веса - Лавка для нижней части спины.jpg";
 // END infra Imports
 
 const commonGridSlides = [
@@ -2292,51 +2309,51 @@ export const infrastructurePagesData = {
             headlineText: ['Фитнес', 'Зал'],
             headlineFontSize: ['100px', '100px'],
             headlineMobileFontSize: ['17vw', '19vw'],
-            descriptionText: 'Какой-то текст',
-            bgImg: modernSemiluxHero,
+            descriptionText: 'Мы приглашаем Вас в атмосферу здоровья, красоты и гармонии. Тренажерный зал оснащен современным спортивным оборудованием профессионального класса TechnoGym.',
+            bgImg: gymHeroImg,
         },
         mainSlides: [
             {
-                img: afisha1,
+                img: gymImg1,
                 firstLine: ['Кардио', '60px'],
                 secondLine: ['Тренажеры', '35px']
             },
             {
-                img: afisha2,
+                img: gymImg2,
                 firstLine: ['Силовые', '55px'],
                 secondLine: ['Тренажеры', '35px']
             },
             {
-                img: afisha3,
+                img: gymImg3,
                 firstLine: ['Свободные', '45px'],
                 secondLine: ['веса', '50px']
             },
         ],
         apparatusesSlides: [
             [ //кардио
-                {img: classic2img, name: "Велотренажер горизонтальный", description: "Велотренажер горизонтальный"},
-                {img: classic3img, name: "Велотренажер", description: "Велотренажер"},
-                {img: classic1img, name: "Беговая дорожка", description: "Беговая дорожка"},
-                {img: classicLuxHero, name: "Кросс-тренажер", description: "Кросс-тренажер"},
+                {img: gymVeloGoriz, name: "Велотренажер горизонтальный", description: "Идеальный велотренажер для умеренной кардионагрузки и дополнительного комфорта"},
+                {img: gymVelo, name: "Велотренажер", description: "Наслаждайтесь ощущением езды на дорожном велосипеде. Эргономичная конструкция, выполненная с учетом биомеханики человеческого тела, предлагает разнообразные положения, улучшая вашу производительность."},
+                {img: gymBegovaya, name: "Беговая дорожка", description: "Профессиональная беговая дорожка, на которой вы можете тренироваться просто и с удовольствием, благодаря новому пользовательскому интерфейсу с QR-кодом для руководства выполнением упражнений и новыми сенсорными датчиками для рук. Дека Long Life Deck, прочная рама и мощный двигатель обеспечивают превосходную производительность."},
+                {img: gymKross, name: "Кросс-тренажер", description: "Тренажер воспроизводит движения тела во время ходьбы или бега. Естественные движения по эллиптической траектории являются чрезвычайно эффективным кардиоупражнением."},
             ],
             [ //силовые
-                {img: img5, name: "Вертикальная тяга", description: "Вертикальная тяга"},
-                {img: img4, name: "Многофункциональный тренажер", description: "Многофункциональный тренажер"},
-                {img: img9, name: "Лавка для пресса", description: "Лавка для пресса"},
-                {img: img10, name: "Машина Смита", description: "Машина Смита"},
-                {img: img14, name: "Тренажер разгибания ног", description: "Тренажер разгибания ног"},
+                {img: gymVert, name: "Вертикальная тяга", description: "Благодаря особой конструкции и удобному сиденью ARTIS® Lat Machine идеально подходит для тренировки верхних конечностей и широчайших мышц спины, обеспечивая эффективную и безопасную подготовку в удобном сидячем положении."},
+                {img: gymMnogofunk, name: "Многофункциональный тренажер", description: "Многофункциональный тренажер, обеспечивающий выполнение многочисленных упражнений для верхних конечностей, в частности, для мышц спины. Тип упражнений зависит от заранее выбранного захвата параллельных перекладин, зафиксированных на каркасе. Нагрузка регулируется посредством платформы с противовесом, на которую становятся ногами, что позволяет уменьшить влияние веса тела в зависимости от типа выбранного упражнения. Значительно облегчает выполнение упражнений на подтягивание на руках и вертикальное отжимание для тех, кто не может их выполнять при подключении всей массы тела. При выполнении вертикальных отжиманий грифы для подтягивания на руках отводятся назад и не ограничивают движение."},
+                {img: gymPress, name: "Скамья для пресса", description: "Скамья для пресса – многофункциональная скамья для специальной проработки мышц живота, профилактики и корректировка проблем суставов позвоночного столба, улучшение осанки."},
+                {img: gymSmit, name: "Тренажер \"Машина Смита\"", description: "Основной принцип действия машины Смита – выполнение жима лежа, стоя или сидя, приседания и ряд других упражнений строго в вертикальном положении. Благодаря этому в работу включаются исключительно мышцы, участвующие в упражнении. Зато исключается действие других, таких, как, например, мышц-стабилизаторов."},
+                {img: gymNogi, name: "Тренажер для разгибания ног", description: "Эффективно и безопасно тренирует четырехглавую мышцу без вовлечения нижнего отдела спины в положении сидя. Тренажер рекомендуется для специальной проработки четырехглавых мышц; для улучшения тонуса мышц и выносливости ног."},
             ],
             [ //свободные веса
-                {img: modern3img, name: "Скамья для нижней части спины", description: "Скамья для нижней части спины"},
-                {img: modern1img, name: "Лавка для пресса", description: "Лавка для пресса"},
-                {img: weddingSliderImg2, name: "Тренажер \"Машина Смита\"", description: "Машина Смита"},
+                {img: gymSpina, name: "Лавка для нижней части спины", description: "Скамья Lower Back Bench предназначена для тренировки с акцентом на мускулатуру спины, нижний отдел спины, ягодичные мышцы; мышцы задней поверхности бедра; двуглавую мышцу бедра."},
+                {img: gymPress, name: "Скамья для пресса", description: "Скамья для пресса – многофункциональная скамья для специальной проработки мышц живота, профилактики и корректировка проблем суставов позвоночного столба, улучшение осанки."},
+                {img: gymSmit, name: "Тренажер \"Машина Смита\"", description: "Основной принцип действия машины Смита – выполнение жима лежа, стоя или сидя, приседания и ряд других упражнений строго в вертикальном положении. Благодаря этому в работу включаются исключительно мышцы, участвующие в упражнении. Зато исключается действие других, таких, как, например, мышц-стабилизаторов."},
             ]
         ],
         subscriptionsSlides: [
-            {img: placesIcon1, text: '1 посещение<br/>350 рублей'},
-            {img: placesIcon2, text: '8 посещений<br/>2 000 рублей'},
-            {img: placesIcon3, text: '12 посещений<br/>2 400 рублей'},
-            {img: placesIcon4, text: 'Безлимит<br/>3 000 рублей'},
+            {img: gymIcon1, text: '1 посещение<br/>350 рублей'},
+            {img: gymIcon2, text: '8 посещений<br/>2 000 рублей'},
+            {img: gymIcon3, text: '12 посещений<br/>2 400 рублей'},
+            {img: gymIcon4, text: 'Безлимит<br/>3 000 рублей'},
         ],
     },
     aquaThermalPage: {
@@ -2350,7 +2367,7 @@ export const infrastructurePagesData = {
         },
         slides: [
             {
-                img: aquaThermalPageImg1,
+                img: aquaThermalPageFinka,
                 subtitle: "",
                 title: "Финская сауна",
                 text: 'Традиционная горячая и сухая сауна (t 90-110 С, до 20% влажности). Финская сауна благотворно влияет на состояние организма, усиливает обмен веществ, успокаивает нервную систему, восстанавливает бодрость, делает кожу упругой и красивой.',
@@ -2358,48 +2375,44 @@ export const infrastructurePagesData = {
                 key: 1,
             },
             {
-                img: aquaThermalPageImg2,
+                img: gridSpaImg2,
                 subtitle: "",
-                title: "Хаммам",
-                text: 'Другой текст про хаммам до 20% влажности). Финская сауна благотворно влияет на состояние организма, усиливает обмен веществ, успокаивает нервную систему, восстанавливает бодрость, делает кожу упругой и красивой.',
+                title: "Русская парная",
+                text: 'Заполнена влажным, близким к 100% паром, при температуре воздуха 45-60 С. При этом происходит мягкий, не обжигающий кожу, прогрев организма, вызывающий обильное потоотделение. Прогревание улучшает обмен веществ организма, за счет раскрытия пор и удаления ороговевших клеток. Посещение Римской парной способствует укреплению сердечно-сосудистой, дыхательной и эндокринной систем. Кожа становится упругой и эластичной, снимается нервное и мышечное напряжение, восстанавливается бодрость и работоспособность.',
                 // link: '/promotions/barhatnyi-sezon',
                 key: 2,
             },
             {
-                img: aquaThermalPageImg3,
+                img: aquaThermalRasul,
                 subtitle: "",
-                title: "Что-то еще",
-                text: "Текст про что-то еще",
-                // link: '#',
+                title: "Процедурный кабинет",
+                text: 'Комфортная температура 45 С и влажность 60-80% — это, прежде всего, отличный пилинг для всего тела, омолаживающий и очищающий кожу благодаря нанесению оздоровительных составов. Благотворно Расул воздействует и на внутренние органы: вещества, содержащиеся в целебных смесях для обертывания, проникают сквозь кожу в глубинные слои, насыщая и подпитывая ткани.',
+                // link: '/promotions/barhatnyi-sezon',
                 key: 3,
             },
             {
-                img: aquaThermalPageImg4,
+                img: aquaThermalHammam,
                 subtitle: "",
-                title: "Соляная пещера",
-                text: "Текст про что-то еще",
+                title: "Хаммам",
+                text: "Помещение для мягкого прогревания, за счет подогрева стен, лавок и пола (+45 -+50 С, влажность 80-90%), а также отдельное помещение для проведения пенных процедур: отдых на горячем мраморе в облаке невесомой мыльной пены, пилинг и мыльный массаж очистят душу и тело, придадут сил и вернут хорошее настроение.",
                 // link: '#',
                 key: 4,
             },
             {
-                img: promoImg4,
+                img: aquaThermalPeshchera,
                 subtitle: "",
-                title: "И что-то еще",
-                text: "И текст про что-то еще",
+                title: "Соляная пещера",
+                text: "Лечебные свойства природных соляных пещер известны давно. Во время сеанса воздух наполняется сухим аэрозолем мелкодисперсной соли. Насыщенный ионами соли воздух проникает в легкие, в результате улучшается дренажная функция бронхов, уменьшается воспаление слизистой дыхательных путей, подавляется жизнедеятельность вредных микроорганизмов. В помещении, оснащенном звуко- и хромотерапией, создается атмосфера, способствующая глубокому расслаблению.",
                 // link: '#',
                 key: 5,
-            },
-            {
-                img: promoImg6,
-                subtitle: "",
-                title: "Банька",
-                text: "Текст про баньку",
-                // link: '#',
-                key: 6,
             },
         ]
     }
 }
+
+
+
+
 
 
 
