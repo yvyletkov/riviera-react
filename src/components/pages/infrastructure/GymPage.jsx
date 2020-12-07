@@ -141,11 +141,11 @@ const GymPage = () => {
     let [currentTab, setCurrentTab] = React.useState(1);
     let [apparatusIndex, setApparatusIndex] = React.useState(0);
 
-    useEffect( () => {
+    useEffect(() => {
         console.log('before index', apparatusIndex)
         setApparatusIndex(0)
         console.log('after index', apparatusIndex)
-    },[currentTab]);
+    }, [currentTab]);
 
     const settings = {
         infinite: false,
@@ -178,7 +178,6 @@ const GymPage = () => {
                             <h4>{apparatusesSlides[currentTab][apparatusIndex].name}</h4>
                             <p>{apparatusesSlides[currentTab][apparatusIndex].description}</p>
                         </div>
-
                     </div>
                     <div className='sliderBlock'>
                         <SimpleSlider slides={apparatusesSlides[currentTab]} setCurrentSlideIndex={setApparatusIndex}/>

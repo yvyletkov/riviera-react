@@ -9,13 +9,14 @@ const AdvantagesBlock = ({title, icons}) => {
         infinite: false,
         slidesToShow: icons.length,
         arrows: false,
-        dots:true,
+        dots:false,
         responsive: [
             {
                 breakpoint: 1000,
                 settings: {
                     variableWidth: true,
                     slidesToShow: 1,
+                    dots:true,
                 }
             },
         ]

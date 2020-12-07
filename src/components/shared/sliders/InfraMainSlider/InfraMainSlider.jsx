@@ -32,7 +32,6 @@ const SliderStyles = styled.div`
 .slick-track {
   margin: 0 auto;
 }
-
 `;
 
 
