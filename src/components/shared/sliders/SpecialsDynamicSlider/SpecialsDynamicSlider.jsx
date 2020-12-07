@@ -85,6 +85,7 @@ const SpecialsDynamicSlider = ({slides}) => {
                     active={index === 0 && !window.matchMedia("screen and (max-width: 1200px)").matches}
                     link={link}
                     oneLine
+                    smallText
                 />
             </div>
         );
