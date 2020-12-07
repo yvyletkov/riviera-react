@@ -228,7 +228,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
                                         </div>
                                     </NavLink>
 
-                                    <NavLink to={"/"}>
+                                    <NavLink to={"/restaurants"}>
                                         <div className={s.listItem} onClick={toggleMenu}>
                                             Рестораны
                                         </div>
