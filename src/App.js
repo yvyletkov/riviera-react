@@ -34,10 +34,10 @@ const ContactsPage = lazy(() => import('./components/pages/СontactsPage/Contact
 const PromotionsPage = lazy(() => import('./components/pages/PromotionsPage/PromotionsPage'));
 const SinglePromotionPage = lazy(() => import('./components/pages/PromotionsPage/SinglePromotionPage/SinglePromotionPage'));
 const SpaPage = lazy(() => import('./components/pages/infrastructure/SpaPage'));
-const BeachAndPools = lazy(() => import('./components/pages/infrastructure/BeachAndPools/BeachAndPools'))
-const GymPage = lazy(() => import('./components/pages/infrastructure/GymPage'))
-const AquaThermalPage = lazy(() => import('./components/pages/infrastructure/AquaThermalPage/AquaThermalPage'))
-
+const BeachAndPools = lazy(() => import('./components/pages/infrastructure/BeachAndPools/BeachAndPools'));
+const GymPage = lazy(() => import('./components/pages/infrastructure/GymPage'));
+const AquaThermalPage = lazy(() => import('./components/pages/infrastructure/AquaThermalPage/AquaThermalPage'));
+const Restaurants = lazy(() => import('./components/pages/infrastructure/Restaurants/Restaurants'));
 
 function App() {
 
@@ -48,13 +48,16 @@ function App() {
             </div>}>
 
                 <Switch>
-                   <Route path='/beach-pools' exact
+                    <Route path='/restaurants' exact
+                           component={() => <Restaurants/>}/>
+
+                    <Route path='/beach-pools' exact
                            component={() => <BeachAndPools/>}/>
 
-                   <Route path='/infrastructure/aqua-thermal' exact
+                    <Route path='/infrastructure/aqua-thermal' exact
                            component={() => <AquaThermalPage/>}/>
 
-                   <Route path='/beach-and-pools' exact
+                    <Route path='/beach-and-pools' exact
                            component={() => <BeachAndPools/>}/>
 
                     <Route path='/infrastructure/gym' exact
