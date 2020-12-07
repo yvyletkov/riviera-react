@@ -7,7 +7,7 @@ import MapSection from "../../../shared/MapSection/MapSection";
 const Restaurants = () => {
     return (
         <>
-            <InfrastructurePageBanner bannerData={infrastructurePagesData.beachAndPools.bannerData}/>
+            <InfrastructurePageBanner bannerData={infrastructurePagesData.restaurants.bannerData}/>
             <MapSection/>
         </>
     )
