@@ -175,7 +175,7 @@
           left: 610px;
           top: 30px;
           box-shadow: none;
-          @media (max-width: 768px) {
+          @media (max-width: 1200px) {
             display: none;
           }
         }
@@ -204,6 +204,8 @@
             max-width: 660px;
             position: relative;
             left: unset;
+            margin:0 auto;
+            display: flex;
           }
 
           &.rightImg {
@@ -239,6 +241,10 @@
           }
 
         }
+      }
+
+      @media screen and (max-width: 1200px) {
+        height: auto;
       }
 
     }
