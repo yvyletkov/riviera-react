@@ -2259,8 +2259,10 @@ export const infrastructurePagesData = {
             subtitleText: "Инфраструктура",
             headlineText: ['The Shore', 'SPA'],
             headlineFontSize: ['80px', '100px'],
-            headlineMobileFontSize: ['8vw', '10vw'],
-            descriptionText: 'Какой-то текст',
+            headlineMobileFontSize: ['13vw', '17vw'],
+            descriptionText: 'На территории отеля Riviera Sunrise Resort&SPA расположен СПА-центр THE SHORE SPA\n' +
+                'площадью 2 000 м<sup>2</sup>. Элегантный и стильный интерьер выполнен известным\n' +
+                'скандинавским дизайнером Кристианом Люндвалем. Мы приглашаем Вас в атмосферу здоровья, красоты и гармонии.',
             bgImg: spaPageHero,
         },
         slides: [

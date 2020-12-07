@@ -24,9 +24,12 @@ const ApparatusesStyledDiv = styled.div`
     text-align: justify;
     display: flex;
     align-items: center;
-    > div {
-      margin-top: -90px;
+    @media screen and (min-width: 701px) {
+      > div {
+        margin-top: -90px;
+      }
     }
+    
     h4 {
       font-family: "Helvetica Neue Bold", sans-serif;
       font-size: 21px;
