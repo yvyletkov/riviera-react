@@ -2233,6 +2233,16 @@ export const promotionsPageData = {
 
 // Страницы Инфраструктуры
 export const infrastructurePagesData = {
+    restaurants: {
+        bannerData: {
+            subtitleText: "Инфраструктура",
+            headlineText: ['Рестораны', 'И бары', 'Riviera Sunrise'],
+            headlineFontSize: ['90px', '69px', '49px'],
+            headlineMobileFontSize: ['8vw', '10vw'],
+            descriptionText: 'Рестораны и бары отеля Riviera Sunrise Resort & SPA порадуют Вас настоящей гармонией вкуса фирменных блюд от шеф-повара, неповторимыми интерьерами и качеством сервиса. В зависимости от сезона в ресторанах отеля организовано питание в формате «A la Carte» или в формате «шведский стол».',
+            bgImg: bannerPools,
+        },
+    },
     beachAndPools: {
         bannerData: {
             subtitleText: "Собственный",
