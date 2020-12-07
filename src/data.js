@@ -2259,6 +2259,62 @@ export const infrastructurePagesData = {
             descriptionText: 'Рестораны и бары отеля Riviera Sunrise Resort & SPA порадуют Вас настоящей гармонией вкуса фирменных блюд от шеф-повара, неповторимыми интерьерами и качеством сервиса. В зависимости от сезона в ресторанах отеля организовано питание в формате «A la Carte» или в формате «шведский стол».',
             bgImg: bannerPools,
         },
+         restaurantsContent: [
+             [
+                 {name: "Велотренажер горизонтальный", description: "Велотренажер горизонтальный"},
+                 [
+                     {img: classic2img, name:'ресторан'},
+                     {img: classic3img, name:'ресторан'},
+                     {img: classic1img, name:'ресторан'},
+                     {img: classicLuxHero, name:'ресторан'}
+                 ]
+             ],
+             [
+                 {name: "Вертикальная тяга", description: "Вертикальная тяга"},
+                 [
+                     {img: classic2img, name:'ресторан'},
+                     {img: classic3img, name:'ресторан'},
+                     {img: classic1img, name:'ресторан'},
+                     {img: classicLuxHero, name:'ресторан'}
+                 ]
+             ],
+             [
+                 {name: "Скамья для нижней части спины", description: "Скамья для нижней части спины"},
+                 [
+                     {img: classic2img, name:'ресторан'},
+                     {img: classic3img, name:'ресторан'},
+                     {img: classic1img, name:'ресторан'},
+                     {img: classicLuxHero, name:'ресторан'}
+                 ]
+             ],
+             [
+                 {name: "Ярик", description: "Водила"},
+                 [
+                     {img: classic2img, name:'ресторан'},
+                     {img: classic3img, name:'ресторан'},
+                     {img: classic1img, name:'ресторан'},
+                     {img: classicLuxHero, name:'ресторан'}
+                 ]
+             ],
+             [
+                 {name: "Водила", description: "Ярик"},
+                 [
+                     {img: classic2img, name:'ресторан'},
+                     {img: classic3img, name:'ресторан'},
+                     {img: classic1img, name:'ресторан'},
+                     {img: classicLuxHero, name:'ресторан'}
+                 ]
+             ],
+             [
+                 {name: "Ярик", description: "Все сделал"},
+                 [
+                     {img: classic2img, name:'ресторан'},
+                     {img: classic3img, name:'ресторан'},
+                     {img: classic1img, name:'ресторан'},
+                     {img: classicLuxHero, name:'ресторан'}
+                 ]
+             ],
+        ],
     },
     beachAndPools: {
         bannerData: {
