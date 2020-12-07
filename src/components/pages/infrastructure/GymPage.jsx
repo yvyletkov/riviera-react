@@ -4,9 +4,9 @@ import InfraMainSlider from "../../shared/sliders/InfraMainSlider/InfraMainSlide
 import MapSection from "../../shared/MapSection/MapSection";
 import styled from "styled-components";
 import SimpleSlider from "../../shared/sliders/SimpleSlider/SimpleSlider";
-import {infrastructurePagesData} from "../../../data";
 import Slider from "react-slick";
 import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
+import {infrastructurePagesData} from "../../../data";
 
 
 const ApparatusesStyledDiv = styled.div`
@@ -136,7 +136,7 @@ const SubscriptionsStyledDiv = styled.div`
 
 const GymPage = () => {
 
-    const {bannerData, mainSlides, apparatusesSlides, subscriptionsSlides} = infrastructurePagesData.gymPage
+    const {bannerData, mainSlides, apparatusesSlides, subscriptionsSlides} = infrastructurePagesData.gymPage;
 
     let [currentTab, setCurrentTab] = React.useState(1);
     let [apparatusIndex, setApparatusIndex] = React.useState(0);
