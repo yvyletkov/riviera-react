@@ -5,6 +5,9 @@ import MapSection from "../../../shared/MapSection/MapSection";
 import SimpleSlider from "../../../shared/sliders/SimpleSlider/SimpleSlider";
 import styled from "styled-components";
 import Button from "../../../shared/Button/Button";
+import iconBreakfast from "../../../../img/infrastructure/restaurant/icons/breakfast.png";
+import iconDinner from "../../../../img/infrastructure/restaurant/icons/dinner.png";
+import iconSupper from "../../../../img/infrastructure/restaurant/icons/supper.png";
 
 
 const Restaurants = () => {
@@ -17,7 +20,6 @@ const Restaurants = () => {
         max-width: 1200px;
         width: 100%;
         display: flex;
-        height:490px;
         flex-wrap: nowrap;
       }
       
@@ -26,6 +28,36 @@ const Restaurants = () => {
         text-align: justify;
         display: flex;
         flex-direction:column;
+      }
+      
+      .text-left {
+        display: flex;
+        text-align: left;
+      }
+      
+      .schedule-block {
+        display: flex;
+        width:100%;
+        margin-bottom: 30px;
+        align-items: center;
+      }
+      
+      .schedule-icon {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+      }
+      
+      .schedule-time {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .text-desc {
+        width: 100%;
+        text-align: left;
+        font-size: 16px;
+        padding-bottom: 10px;
       }
       
       .textBlock {
@@ -46,7 +78,7 @@ const Restaurants = () => {
       
       .sliderBlock {
         width: 60%;
-        height: 400px;
+        height: 546px;
         padding-bottom: 90px;
         position:absolute;
         right:-245px;
@@ -117,15 +149,48 @@ const Restaurants = () => {
                         </div>
                         <div className='textBlock'>
                                 <h4>{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].name}</h4>
-                                <p>{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].description}</p>
+                                <div className="schedule-block">
+                                    <img className="schedule-icon" src={iconBreakfast} alt="завтрак"/>
+                                    <div className="schedule-time">
+                                        <p className="text-left">Завтрак</p>
+                                        <p className="text-left">{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].timeBreakfast}</p>
+                                    </div>
+                                </div>
+                                <div className="schedule-block">
+                                    <img className="schedule-icon" src={iconDinner} alt="обед"/>
+                                    <div className="schedule-time">
+                                        <p className="text-left">Обед</p>
+                                        <p className="text-left">{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].timeDinner}</p>
+                                    </div>
+                                </div>
+                                <div className="schedule-block">
+                                    <img className="schedule-icon" src={iconSupper} alt="ужин"/>
+                                    <div className="schedule-time">
+                                        <p className="text-left">Ужин</p>
+                                        <p className="text-left">{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].timeSupper}</p>
+                                    </div>
+                                </div>
+                                <p className="text-desc"><b>
+                                    {
+                                        infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].kitchen ?
+                                        `Кухня: ${infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].kitchen}` :
+                                        `Меню: ${infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].menu}`
+                                    }
+                                </b></p>
+                                <p className="text-desc"><b>Расположение: {infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].location}</b></p>
+                                <p className="text-desc">{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].description}</p>
                         </div>
                         <div className='sliderBlock'>
-                            <SimpleSlider slides={infrastructurePagesData.restaurants.restaurantsContent[currentTab][1]}/>
+                            <SimpleSlider
+                                slides={infrastructurePagesData.restaurants.restaurantsContent[currentTab][1]}
+                                styleImg={{height:'546px'}}/>
                         </div>
                     </div>
                 </ApparatusesStyledDiv>
             </section>
-            <MapSection/>
+            <section className="section first">
+                <MapSection/>
+            </section>
         </>
     )
 }
