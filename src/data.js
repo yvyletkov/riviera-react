@@ -2710,9 +2710,3 @@ export const singlePromotionPages = {
 
     }
 }
-
-
-
-
-
-

@@ -32,13 +32,12 @@ const SliderStyles = styled.div`
 `;
 
 
-const SimpleSlider = ({slides, setCurrentSlideIndex}) => {
+const SimpleSlider = ({slides, setCurrentSlideIndex, styleImg}) => {
 
     const items = slides.map((item, index) => {
-        console.log(item)
         return (
             <div className="sliderElement" key={index}>
-                <img src={item.img} alt={item.name}/>
+                <img src={item.img} style={styleImg} alt={item.name}/>
             </div>
         );
     });
