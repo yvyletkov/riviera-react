@@ -60,11 +60,13 @@ const InfraMainSlider = ({title = "Какой-то заголовок", slides, 
         infinite: false,
         variableWidth: true,
         speed: 500,
+        draggable: false,
         nextArrow: <NextArrow positionStyles={{
             bottom: "-90px",
             right: "50%",
             transform: "translateX(120%)"
         }}/>,
+
         prevArrow: <PrevArrow positionStyles={{
             bottom: "-90px",
             left: "50%",
