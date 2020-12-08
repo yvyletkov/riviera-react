@@ -2,7 +2,7 @@
   max-width: 1920px;
   width: 100%;
   height: calc(100vh - 90px);
-  max-height: 750px;
+  max-height: 650px;
   margin: 0 auto;
   margin-top: 90px;
   @media (max-width: 1200px) {
@@ -104,7 +104,7 @@
           z-index: -1;
           opacity: 0;
           max-width: 625px;
-          width: calc(100% - 40px);
+          width: 100%;
           position: absolute;
           box-sizing: border-box;
           padding: 30px;
@@ -169,6 +169,7 @@
 
       .col {
         margin-right: 60px;
+        @media (min-width: 1025px) {max-width: 50%;}
         @media (max-width: 700px) {
           margin-bottom: 50px;
           width: 100%;

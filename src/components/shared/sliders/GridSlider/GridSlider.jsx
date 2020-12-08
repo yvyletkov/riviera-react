@@ -87,8 +87,10 @@ const GridSlider = ({slides}) => {
 
     const bodyEl = document.getElementsByTagName("body")[0];
 
-    const disableScroll = () => bodyEl.classList.add("fixed");
-    const enableScroll = () => bodyEl.classList.remove("fixed");
+    // const disableScroll = () => bodyEl.classList.add("fixed");
+    // const enableScroll = () => bodyEl.classList.remove("fixed");
+    const disableScroll = () => bodyEl.style.overflow = "hidden"
+    const enableScroll = () => bodyEl.style.overflow = "auto"
 
     React.useEffect( function () {
         const sliderElementsObj = $("#verticalSliderWrapper *");
@@ -111,13 +113,13 @@ const GridSlider = ({slides}) => {
     }, []);
 
     const afterChangeHandler = (index) => setCurrentSlideIndex(index);
+    const onSwipeMove = (position) => setSwipedVertically(position.y)
+
 
     const items = slides.map((item, index) => <GridSliderItem key={item.name + index}
                                                               firstRow={item.firstRow}
                                                               disableScroll={disableScroll}
                                                               secondRow={item.secondRow}/>);
-
-    const onSwipeMove = (position) => setSwipedVertically(position.y)
 
     const settings = {
         afterChange: afterChangeHandler,
@@ -170,7 +172,7 @@ const GridSlider = ({slides}) => {
 
             <div className={s.container}>
                 <div className={s.headlineWrapper}>
-                    <div id='whiteGridSliderBg'></div>
+                    <div id='whiteGridSliderBg'/>
 
                     <Headline subtitle={'Услуги и продукты'} title={slides[currentSlideIndex].name}/>
 
