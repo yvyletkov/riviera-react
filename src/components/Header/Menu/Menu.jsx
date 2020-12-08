@@ -216,7 +216,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
 
                                 <div className={s.list}>
 
-                                    <NavLink to={"/beach-and-pools"}>
+                                    <NavLink to={"/infrastructure/beach-and-pools"}>
                                         <div className={s.listItem} onClick={toggleMenu}>
                                             Бассейны и пляж
                                         </div>
@@ -228,7 +228,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
                                         </div>
                                     </NavLink>
 
-                                    <NavLink to={"/restaurants"}>
+                                    <NavLink to={"/infrastructure/restaurants"}>
                                         <div className={s.listItem} onClick={toggleMenu}>
                                             Рестораны
                                         </div>

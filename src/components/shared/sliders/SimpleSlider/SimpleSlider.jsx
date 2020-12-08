@@ -35,6 +35,7 @@ const SliderStyles = styled.div`
 const SimpleSlider = ({slides, setCurrentSlideIndex}) => {
 
     const items = slides.map((item, index) => {
+        console.log(item)
         return (
             <div className="sliderElement" key={index}>
                 <img src={item.img} alt={item.name}/>

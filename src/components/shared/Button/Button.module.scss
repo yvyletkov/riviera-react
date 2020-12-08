@@ -11,11 +11,32 @@ $orange: #ff6c39;
   border-radius: 6px;
   text-align: center;
   transition: all 200ms;
+  border:1px transparent solid;
 }
 
 .button:hover {
   background-color: $orange * 0.9;
   text-decoration: none;
+}
+
+.buttonNotActive:hover {
+  background-color: $orange * 0.9;
+  text-decoration: none;
+  color:#fff;
+}
+
+.buttonNotActive {
+  cursor: pointer;
+  display: block;
+  font-family: "Helvetica Neue Roman", sans-serif;
+  padding: 18px 30px;
+  font-size: 16px;
+  color: $orange;
+  border-radius: 6px;
+  text-align: center;
+  transition: all 200ms;
+  background-color: #fff;
+  border:1px $orange * 0.9 solid;
 }
 
 a.button {
