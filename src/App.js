@@ -1,6 +1,6 @@
 import React, {Suspense} from "react";
 import {Route, Switch} from "react-router-dom";
-import {roomPageData} from "./data";
+import {roomPageData, singlePromotionPages} from "./data";
 import {lazy} from '@loadable/component'
 import preloaderImg from './img/preloader.svg';
 import "./App.scss";
@@ -9,6 +9,8 @@ import "./style/fonts.css";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import BottomMenu from "./components/shared/BottomMenu/BottomMenu";
+import GridSlider from "./components/shared/sliders/GridSlider/GridSlider";
+import GridSliderPage from "./components/GridSliderPage";
 
 const HomePage = lazy(() => import('./components/pages/HomePage/HomePage'));
 const RoomsAndPricesPage = lazy(() => import('./components/pages/RoomsAndPricesPage/RoomsAndPricesPage'));
@@ -39,6 +41,7 @@ const GymPage = lazy(() => import('./components/pages/infrastructure/GymPage'));
 const AquaThermalPage = lazy(() => import('./components/pages/infrastructure/AquaThermalPage/AquaThermalPage'));
 const Restaurants = lazy(() => import('./components/pages/infrastructure/Restaurants/Restaurants'));
 
+
 function App() {
 
     return (<>
@@ -48,6 +51,10 @@ function App() {
             </div>}>
 
                 <Switch>
+
+                    <Route path='/grid' exact
+                           component={() => <GridSliderPage/>}/>
+
                     <Route path='/infrastructure/restaurants' exact
                            component={() => <Restaurants/>}/>
 
@@ -63,8 +70,17 @@ function App() {
                     <Route path='/infrastructure/spa-complex' exact
                            component={() => <SpaPage/>}/>
 
+                    <Route path='/promotions/otdyh-dlya-krymchan' exact
+                           component={() => <SinglePromotionPage {...singlePromotionPages.dlyaKrymchan}/>}/>
+
+                    <Route path='/promotions/dlitelnoe-prozhivaniye' exact
+                           component={() => <SinglePromotionPage {...singlePromotionPages.dlitelnoeProzh}/>}/>
+
                     <Route path='/promotions/barhatnyi-sezon' exact
-                           component={() => <SinglePromotionPage/>}/>
+                           component={() => <SinglePromotionPage {...singlePromotionPages.barhatnyiSezon}/>}/>
+
+                    <Route path='/promotions/letniy-otdyh' exact
+                           component={() => <SinglePromotionPage {...singlePromotionPages.letniyOtdyh}/>}/>
 
                     <Route path='/promotions' exact
                            component={() => <PromotionsPage/>}/>
