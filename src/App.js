@@ -51,7 +51,7 @@ function App() {
                     <Route path='/infrastructure/restaurants' exact
                            component={() => <Restaurants/>}/>
 
-                    <Route path='/infrastructure/beach-pools' exact
+                    <Route path='/infrastructure/beach-and-pools' exact
                            component={() => <BeachAndPools/>}/>
 
                     <Route path='/infrastructure/aqua-thermal' exact
