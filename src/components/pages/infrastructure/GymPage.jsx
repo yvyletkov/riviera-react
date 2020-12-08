@@ -138,14 +138,14 @@ const GymPage = () => {
 
     const {bannerData, mainSlides, apparatusesSlides, subscriptionsSlides} = infrastructurePagesData.gymPage;
 
-    let [currentTab, setCurrentTab] = React.useState(1);
+    // let [currentTab, setCurrentTab] = React.useState(1);
     let [apparatusIndex, setApparatusIndex] = React.useState(0);
 
-    useEffect(() => {
-        console.log('before index', apparatusIndex)
-        setApparatusIndex(0)
-        console.log('after index', apparatusIndex)
-    }, [currentTab]);
+    // useEffect(() => {
+    //     console.log('before index', apparatusIndex)
+    //     setApparatusIndex(0)
+    //     console.log('after index', apparatusIndex)
+    // }, [currentTab]);
 
     const settings = {
         infinite: false,
@@ -166,8 +166,7 @@ const GymPage = () => {
         <InfrastructurePageBanner bannerData={bannerData}/>
 
         <section className='section first'>
-            <InfraMainSlider title={'Совершенный уровень отдыха'} slides={mainSlides}
-                             setPickedSlideIndex={setCurrentTab} pickedSlideIndex={currentTab}/>
+            <InfraMainSlider title={'Совершенный уровень отдыха'} slides={mainSlides}/>
         </section>
 
         <section className='section'>
@@ -175,12 +174,12 @@ const GymPage = () => {
                 <div className='container'>
                     <div className='textBlock'>
                         <div>
-                            <h4>{apparatusesSlides[currentTab][apparatusIndex].name}</h4>
-                            <p>{apparatusesSlides[currentTab][apparatusIndex].description}</p>
+                            <h4>{apparatusesSlides[apparatusIndex].name}</h4>
+                            <p>{apparatusesSlides[apparatusIndex].description}</p>
                         </div>
                     </div>
                     <div className='sliderBlock'>
-                        <SimpleSlider slides={apparatusesSlides[currentTab]} setCurrentSlideIndex={setApparatusIndex}/>
+                        <SimpleSlider slides={apparatusesSlides} setCurrentSlideIndex={setApparatusIndex}/>
                     </div>
                 </div>
             </ApparatusesStyledDiv>
@@ -194,7 +193,7 @@ const GymPage = () => {
                         <div className='sliderWrapper'>
                             <Slider {...settings}>
                                 {subscriptionsSlides.map((item, index) => {
-                                    return <div>
+                                    return <div key={index}>
                                         <div className='sliderItemWrapper'>
                                             <div>{index + 1}</div>
                                             <img src={item.img} alt={item.text}/>
