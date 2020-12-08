@@ -1,8 +1,8 @@
 import React from "react";
-import s from "./PageBanner.module.scss";
+import s from "./VacationsPageBanner.module.scss";
 import cirqlesImg from "../../../img/home-page/cirqles.png"
 
-const PageBanner = ({fontSize, fontSizeMobile, subtitle, topLine, bottomLine, bannerImg, bannerMobileImg, descr, extraLine = []}) => {
+const VacationsPageBanner = ({fontSize, fontSizeMobile, subtitle, topLine, bottomLine, bannerImg, bannerMobileImg, descr, extraLine = []}) => {
 
     let [descriptionShown, setDescriptionShown] = React.useState(false);
     let [matches620px, setMatches620px] = React.useState(false);
@@ -33,7 +33,7 @@ const PageBanner = ({fontSize, fontSizeMobile, subtitle, topLine, bottomLine, ba
                         </div>
                     </div>
                     <div className={s.rightSide}>
-                        <img className={s.cirqles} src={cirqlesImg} alt=""/>
+                        {/*<img className={s.cirqles} src={cirqlesImg} alt=""/>*/}
                         <img src={bannerImg} alt="Riviera Sunrise"/>
                     </div>
                 </div>
@@ -49,4 +49,4 @@ const PageBanner = ({fontSize, fontSizeMobile, subtitle, topLine, bottomLine, ba
     )
 };
 
-export default PageBanner;
+export default VacationsPageBanner;
