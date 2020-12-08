@@ -3,7 +3,7 @@ import {vacationPagesData} from "../../../data";
 import CenteredSlider from "../../shared/sliders/CenteredSlider/CenteredSlider";
 import SpecialsSlider from "../../shared/sliders/SpecialsSlider/SpecialsSlider";
 import MapSection from "../../shared/MapSection/MapSection";
-import PageBanner from "../../shared/PageBanner/PageBanner";
+import VacationsPageBanner from "../../shared/VacationsPageBanner/VacationsPageBanner";
 import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
 import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
 import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
@@ -11,14 +11,14 @@ import FoodBlock from "../../shared/FoodBlock/FoodBlock";
 
 const VacationForYourselfPage = () => {
     return <>
-        <PageBanner fontSize={["95px", "71px"]}
-                    fontSizeMobile={["17.4vw", "12.6vw"]}
-                    subtitle={'Отдых для себя'}
-                    topLine={"Отдых"}
-                    bottomLine={"без детей"}
-                    bannerImg={vacationPagesData.vacationForYourselfBannerImg}
-                    bannerMobileImg={vacationPagesData.vacationForYourselfBannerMobileImg}
-                    descr={'Сделай свой отдых особенным для себя! Один из лучших курортных отелей Riviera Sunrise Resort & SPA, г. Алушта, приглашает вас на отдых без детей в Крым.<br/>В гостиничном комплексе 209 номеров различных категорий: от «Стандарта» до «Президентского люкса».<br/>Отличный климат, элегантный дизайн, современное оснащение номеров, высококлассный сервис, анимация для взрослых и многое другое – создают идеальные условия для Вашего комфортного отдыха.'}/>
+        <VacationsPageBanner fontSize={["95px", "71px"]}
+                             fontSizeMobile={["17.4vw", "12.6vw"]}
+                             subtitle={'Отдых для себя'}
+                             topLine={"Отдых"}
+                             bottomLine={"без детей"}
+                             bannerImg={vacationPagesData.vacationForYourselfBannerImg}
+                             bannerMobileImg={vacationPagesData.vacationForYourselfBannerMobileImg}
+                             descr={'Сделай свой отдых особенным для себя! Один из лучших курортных отелей Riviera Sunrise Resort & SPA, г. Алушта, приглашает вас на отдых без детей в Крым.<br/>В гостиничном комплексе 209 номеров различных категорий: от «Стандарта» до «Президентского люкса».<br/>Отличный климат, элегантный дизайн, современное оснащение номеров, высококлассный сервис, анимация для взрослых и многое другое – создают идеальные условия для Вашего комфортного отдыха.'}/>
 
         <section className='section'>
             <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={vacationPagesData.modernDescr}

@@ -3,7 +3,7 @@ import {vacationPagesData} from "../../../data";
 import CenteredSlider from "../../shared/sliders/CenteredSlider/CenteredSlider";
 import SpecialsSlider from "../../shared/sliders/SpecialsSlider/SpecialsSlider";
 import MapSection from "../../shared/MapSection/MapSection";
-import PageBanner from "../../shared/PageBanner/PageBanner";
+import VacationsPageBanner from "../../shared/VacationsPageBanner/VacationsPageBanner";
 import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
 import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
 import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
@@ -14,14 +14,14 @@ import FoodBlock from "../../shared/FoodBlock/FoodBlock";
 const FamilyVacationPage = () => {
 
     return <>
-        <PageBanner fontSize={["70px", "57px"]}
-                    fontSizeMobile={["16.7vw", "10.5vw"]}
-                    subtitle={'Рассвет совершенного сервиса'}
-                    topLine={"Лучшее"}
-                    bottomLine={"Вашей семье"}
-                    bannerImg={vacationPagesData.familyVacationBannerImg}
-                    bannerMobileImg={vacationPagesData.familyVacationBannerMobileImg}
-                    descr={'Семья — это счастье, любовь и яркие эмоций, это традиционные поездки на отдых и безудержное\n' +
+        <VacationsPageBanner fontSize={["70px", "57px"]}
+                             fontSizeMobile={["16.7vw", "10.5vw"]}
+                             subtitle={'Рассвет совершенного сервиса'}
+                             topLine={"Лучшее"}
+                             bottomLine={"Вашей семье"}
+                             bannerImg={vacationPagesData.familyVacationBannerImg}
+                             bannerMobileImg={vacationPagesData.familyVacationBannerMobileImg}
+                             descr={'Семья — это счастье, любовь и яркие эмоций, это традиционные поездки на отдых и безудержное\n' +
                     ' веселье.<br/>Один из лучших курортных отелей Riviera Sunrise Resort & SPA, г. Алушта, приглашает вас\n' +
                     ' на семейный отдых в Крым.<br/>В гостиничном комплексе 209 номеров различных категорий: от\n' +
                     ' «Стандарта» до «Президентского люкса». Отличный климат, элегантный дизайн, современное оснащение\n' +

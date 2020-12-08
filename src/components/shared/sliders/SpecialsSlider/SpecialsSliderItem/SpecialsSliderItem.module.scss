@@ -62,7 +62,7 @@
     object-fit: cover;
   }
   .card, .card.lifted, .cardWrapper {
-    height: calc(65vw * 1.48 + 75px);
+    height: calc(65vw * 1.48 + 85px);
     &.noLink {
       height: calc(65vw * 1.48 + 75px);
     }

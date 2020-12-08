@@ -23,7 +23,7 @@ const HomePageBanner = () => {
                     <div className={s.rightSide}>
 
                         <img className={s.cirqles} src={cirqlesImg} alt=""/>
-                        <img height={'800px'} src={bannerImg} alt="Riviera Sunrise"/>
+                        <img style={{height: '800px'}} src={bannerImg} alt="Riviera Sunrise"/>
                     </div>
                 </div>
             </div>
