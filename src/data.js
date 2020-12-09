@@ -306,6 +306,38 @@ import letniyOtdyhBannerImg from "./img/promos/promo-letnoo-otdyh.jpg";
 import dlitelnoeBannerImg from "./img/promos/promo-dlitelnoe.jpg";
 import dlyaKrymchanBannerImg from "./img/promos/promo-otdyh-dlya-krymchan.jpg";
 // END single promotions Imports
+// Restaurants Imports
+import bannerRestaurants from "./img/infrastructure/restaurant/LaVeranda/1.jpg";
+import buffet1 from "./img/infrastructure/restaurant/Buffet/1.jpg";
+import buffet2 from "./img/infrastructure/restaurant/Buffet/2.jpg";
+import buffet3 from "./img/infrastructure/restaurant/Buffet/3.jpg";
+import buffet4 from "./img/infrastructure/restaurant/Buffet/4.jpg";
+import buffet5 from "./img/infrastructure/restaurant/Buffet/5.jpg";
+import grillGarden1 from "./img/infrastructure/restaurant/GrillGarden/1.jpg";
+import grillGarden2 from "./img/infrastructure/restaurant/GrillGarden/2.jpg";
+import grillGarden3 from "./img/infrastructure/restaurant/GrillGarden/3.jpg";
+import grillGarden4 from "./img/infrastructure/restaurant/GrillGarden/4.jpg";
+import grillGarden5 from "./img/infrastructure/restaurant/GrillGarden/5.jpg";
+import laVeranda1 from "./img/infrastructure/restaurant/LaVeranda/1.jpg";
+import laVeranda2 from "./img/infrastructure/restaurant/LaVeranda/2.jpg";
+import laVeranda3 from "./img/infrastructure/restaurant/LaVeranda/3.jpg";
+import laVeranda4 from "./img/infrastructure/restaurant/LaVeranda/4.jpg";
+import lobbyMangup1 from "./img/infrastructure/restaurant/LobbyBarMangup/1.jpg";
+import lobbyMangup2 from "./img/infrastructure/restaurant/LobbyBarMangup/2.jpg";
+import lobbyMangup3 from "./img/infrastructure/restaurant/LobbyBarMangup/3.jpg";
+import lobbyMangup4 from "./img/infrastructure/restaurant/LobbyBarMangup/4.jpg";
+import lobbyMangup5 from "./img/infrastructure/restaurant/LobbyBarMangup/5.jpg";
+import lobbyLounge1 from "./img/infrastructure/restaurant/LobbyLounge/1.jpg";
+import lobbyLounge2 from "./img/infrastructure/restaurant/LobbyLounge/2.jpg";
+import lobbyLounge3 from "./img/infrastructure/restaurant/LobbyLounge/3.jpg";
+import poolBar1 from "./img/infrastructure/restaurant/PoolBar/1.jpg";
+import poolBar2 from "./img/infrastructure/restaurant/PoolBar/2.jpg";
+import poolBar3 from "./img/infrastructure/restaurant/PoolBar/3.jpg";
+import poolBar4 from "./img/infrastructure/restaurant/PoolBar/4.jpg";
+import tavrika1 from "./img/infrastructure/restaurant/Tavrika/1.jpg";
+import tavrika2 from "./img/infrastructure/restaurant/Tavrika/2.jpg";
+import tavrika3 from "./img/infrastructure/restaurant/Tavrika/3.jpg";
+//end Restaurants import
 
 
 const commonGridSlides = [
@@ -2260,10 +2292,10 @@ export const infrastructurePagesData = {
         bannerData: {
             subtitleText: "Инфраструктура",
             headlineText: ['Рестораны', 'И бары', 'Riviera Sunrise'],
-            headlineFontSize: ['90px', '69px', '49px'],
+            headlineFontSize: ['80px', '80px', '58px'],
             headlineMobileFontSize: ['8vw', '10vw'],
             descriptionText: 'Рестораны и бары отеля Riviera Sunrise Resort & SPA порадуют Вас настоящей гармонией вкуса фирменных блюд от шеф-повара, неповторимыми интерьерами и качеством сервиса. В зависимости от сезона в ресторанах отеля организовано питание в формате «A la Carte» или в формате «шведский стол».',
-            bgImg: bannerPools,
+            bgImg: bannerRestaurants,
         },
         restaurantsContent: [
             [
@@ -2277,10 +2309,11 @@ export const infrastructurePagesData = {
                     location: "Корпус Модерн, рестораны «The Grilled»"
                 },
                 [
-                    {img: classic2img, name:'ресторан'},
-                    {img: classic3img, name:'ресторан'},
-                    {img: classic1img, name:'ресторан'},
-                    {img: classicLuxHero, name:'ресторан'}
+                    {img: buffet1, name:'Шведский стол'},
+                    {img: buffet2, name:'Шведский стол'},
+                    {img: buffet3, name:'Шведский стол'},
+                    {img: buffet4, name:'Шведский стол'},
+                    {img: buffet5, name:'Шведский стол'}
                 ]
             ],
             [
@@ -2291,10 +2324,9 @@ export const infrastructurePagesData = {
                     kitchen: "европейская",
                     location: "Корпус Модерн"},
                 [
-                    {img: classic2img, name:'ресторан'},
-                    {img: classic3img, name:'ресторан'},
-                    {img: classic1img, name:'ресторан'},
-                    {img: classicLuxHero, name:'ресторан'}
+                    {img: tavrika1, name:'Таврика'},
+                    {img: tavrika2, name:'Таврика'},
+                    {img: tavrika3, name:'Таврика'},
                 ]
             ],
             [
@@ -2305,10 +2337,10 @@ export const infrastructurePagesData = {
                     kitchen: "локальная кухня",
                     location: "Корпус Классик"},
                 [
-                    {img: classic2img, name:'ресторан'},
-                    {img: classic3img, name:'ресторан'},
-                    {img: classic1img, name:'ресторан'},
-                    {img: classicLuxHero, name:'ресторан'}
+                    {img: laVeranda1, name:'LaVeranda'},
+                    {img: laVeranda2, name:'LaVeranda'},
+                    {img: laVeranda3, name:'LaVeranda'},
+                    {img: laVeranda4, name:'LaVeranda'}
                 ]
             ],
             [
@@ -2317,12 +2349,13 @@ export const infrastructurePagesData = {
                     description: "Лобби-бар «Mangup» — идеальное место для проведения встреч и непринужденного общения. Комфортно организованное пространство, удобная мебель, внимательное обслуживание и отличный сигнал Wi-Fi – прекрасное место для отдыха. Баре Вам всегда предложат ароматный кофе, элитные сорта виски и Крымские вина.",
                     workingHours: "10:00 — 23:00",
                     menu: "винная карта, барная карта",
-                    location: "Корпус Модерн, рестораны «The Grilled»"},
+                    location: "Корпус Модерн"},
                 [
-                    {img: classic2img, name:'ресторан'},
-                    {img: classic3img, name:'ресторан'},
-                    {img: classic1img, name:'ресторан'},
-                    {img: classicLuxHero, name:'ресторан'}
+                    {img: lobbyMangup1, name:'Bar Mungup'},
+                    {img: lobbyMangup2, name:'Bar Mungup'},
+                    {img: lobbyMangup3, name:'Bar Mungup'},
+                    {img: lobbyMangup4, name:'Bar Mungup'},
+                    {img: lobbyMangup5, name:'Bar Mungup'}
                 ]
             ],
             [
@@ -2332,12 +2365,11 @@ export const infrastructurePagesData = {
                         "Обширная винная карта, представленная знаменитыми винзаводами: Массандра, Инкерман, Сатера ТМ «Esse», а также европейские и южноамериканские вина.\n",
                     workingHours: "07:00 — 23:00 (с июня по сентябрь)",
                     menu: "винная карта, барная карта",
-                    location: "Корпус Модерн, рестораны «The Grilled»"},
+                    location: "Корпус Классик"},
                 [
-                    {img: classic2img, name:'ресторан'},
-                    {img: classic3img, name:'ресторан'},
-                    {img: classic1img, name:'ресторан'},
-                    {img: classicLuxHero, name:'ресторан'}
+                    {img: lobbyLounge1, name:'Bar Lounge'},
+                    {img: lobbyLounge2, name:'Bar Lounge'},
+                    {img: lobbyLounge3, name:'Bar Lounge'},
                 ]
             ],
             [
@@ -2347,10 +2379,10 @@ export const infrastructurePagesData = {
                     workingHours: "9:00- 20:00 (с июня по сентябрь)",
                     menu: "коктейли, винная карта, барная карта",},
                 [
-                    {img: classic2img, name:'ресторан'},
-                    {img: classic3img, name:'ресторан'},
-                    {img: classic1img, name:'ресторан'},
-                    {img: classicLuxHero, name:'ресторан'}
+                    {img: poolBar1, name:'Pool Bar'},
+                    {img: poolBar2, name:'Pool Bar'},
+                    {img: poolBar3, name:'Pool Bar'},
+                    {img: poolBar4, name:'Pool Bar'}
                 ]
             ],
             [
@@ -2359,12 +2391,13 @@ export const infrastructurePagesData = {
                     description: "«Мангал в саду» – это место для ценителей нежного, сочного, ароматного мяса, приготовленного на огне. Особенным шиком и ярким, сочным дополнением станут пряности и соусы, которые мы используем в процессе готовки. Взрыв вкуса обеспечен!",
                     workingHours: "12:00-20:00",
                     kitchen: "фьюжн",
-                    location: "Корпус Модерн, рестораны «The Grilled»"},
+                    location: "реликтовый парк"},
                 [
-                    {img: classic2img, name:'ресторан'},
-                    {img: classic3img, name:'ресторан'},
-                    {img: classic1img, name:'ресторан'},
-                    {img: classicLuxHero, name:'ресторан'}
+                    {img: grillGarden1, name:'Мангал в саду'},
+                    {img: grillGarden2, name:'Мангал в саду'},
+                    {img: grillGarden3, name:'Мангал в саду'},
+                    {img: grillGarden4, name:'Мангал в саду'},
+                    {img: grillGarden5, name:'Мангал в саду'}
                 ]
             ],
             [
@@ -2375,7 +2408,7 @@ export const infrastructurePagesData = {
                     timeDinner: "13:00 — 15:00",
                     timeSupper: "19:00 — 21:00",
                     kitchen: "европейская",
-                    location: "Корпус Модерн, рестораны «The Grilled»"},
+                },
                 [
                     {img: classic2img, name:'ресторан'},
                     {img: classic3img, name:'ресторан'},
