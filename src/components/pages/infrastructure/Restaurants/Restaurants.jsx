@@ -18,6 +18,7 @@ const Restaurants = () => {
       .container {
         max-width: 1200px;
         width: 100%;
+        height:636px;
         display: flex;
         flex-wrap: nowrap;
       }
@@ -84,6 +85,9 @@ const Restaurants = () => {
       }
       
       @media screen and (max-width: 1200px) {
+        .container {
+          height:unset;
+        }
         .btnBlock {
           max-width: 300px;
           margin: 0 auto;
@@ -218,7 +222,8 @@ const Restaurants = () => {
                         <div className='sliderBlock'>
                             <SimpleSlider
                                 slides={infrastructurePagesData.restaurants.restaurantsContent[currentTab][1]}
-                                styleImg={{height:'546px'}}/>
+                                styleImg={{height:'546px'}}
+                            />
                         </div>
                     </div>
                 </ApparatusesStyledDiv>
