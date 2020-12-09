@@ -1,16 +1,17 @@
 import React, {Suspense} from "react";
 import {Route, Switch} from "react-router-dom";
-import {roomPageData, singlePromotionPages} from "./data";
+import {medicalSpaPage, roomPageData, singlePromotionPages} from "./data";
 import {lazy} from '@loadable/component'
 import preloaderImg from './img/preloader.svg';
 import "./App.scss";
 import "./style/normalize.css";
 import "./style/fonts.css";
+import './style/rodal.css';
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import BottomMenu from "./components/shared/BottomMenu/BottomMenu";
 import GridSliderPage from "./components/GridSliderPage";
-import FAQPage from "./components/pages/FAQPage/FAQPage";
+import MedicalSpaPage from "./components/pages/MedicalSpaPage/MedicalSpaPage";
 
 const HomePage = lazy(() => import('./components/pages/HomePage/HomePage'));
 const RoomsAndPricesPage = lazy(() => import('./components/pages/RoomsAndPricesPage/RoomsAndPricesPage'));
@@ -40,7 +41,7 @@ const BeachAndPools = lazy(() => import('./components/pages/infrastructure/Beach
 const GymPage = lazy(() => import('./components/pages/infrastructure/GymPage'));
 const AquaThermalPage = lazy(() => import('./components/pages/infrastructure/AquaThermalPage/AquaThermalPage'));
 const Restaurants = lazy(() => import('./components/pages/infrastructure/Restaurants/Restaurants'));
-
+const FAQPage = lazy(() => import('./components/pages/FAQPage/FAQPage'));
 
 function App() {
 
@@ -51,6 +52,9 @@ function App() {
             </div>}>
 
                 <Switch>
+
+                    <Route path='/medical-spa' exact
+                           component={() => <MedicalSpaPage {...medicalSpaPage}/>}/>
 
                     <Route path='/faq' exact
                            component={() => <FAQPage/>}/>

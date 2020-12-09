@@ -6,7 +6,7 @@ import arrow from "../../../img/arrow-accordeon.png";
 import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
 
 
-const Question = ({title, answer = 'Ответ на это вопрос появится на сайте чуть позже. Спасибо!', key}) => {
+const Question = ({title, answer = 'Ответ на этот вопрос появится на сайте чуть позже. Спасибо!', key}) => {
     const [opened, setOpened] = React.useState(false);
 
     return <div key={key} className={opened ? s.question + ' ' + s.opened : s.question}>
@@ -36,7 +36,7 @@ const FAQPage = () => {
                             <div className={s.textContent}>
                                 <p>ул. Ленина 2, Алушта, Крым</p>
                                 <p>GPS координаты: 44.667638, 34.411936</p>
-                                <p>Воспользуйтесь услугой трансфер, заказать вы можете по телефону <b><a href="tel:8 800 550 98 24" target={'_blank'}>8 800 550 98 24</a></b>
+                                <p>Воспользуйтесь услугой трансфер, заказать вы можете по телефону <b><a style={{whiteSpace: "nowrap"}} href="tel:8 800 550 98 24" target={'_blank'}>8 800 550 98 24</a></b>
                                 </p>
 
                             </div>
