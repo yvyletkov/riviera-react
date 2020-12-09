@@ -256,6 +256,12 @@ const Menu = ({menuOpened, toggleMenu}) => {
                         <div className={s.col}>
 
                             <div className={s.menuItem} onClick={toggleMenu}>
+                                <NavLink to={"/faq"}>
+                                    Частые вопросы
+                                </NavLink>
+                            </div>
+
+                            <div className={s.menuItem} onClick={toggleMenu}>
                                 <NavLink to={"/"}>
                                     Отзывы
                                 </NavLink>

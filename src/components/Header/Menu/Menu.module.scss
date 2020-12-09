@@ -31,7 +31,7 @@
   .flexContainer {
     display: flex;
 
-    @media (max-width: 1180px) {
+    @media (max-width: 1270px) {
       .col:last-child {
         display: none;
       }
@@ -166,7 +166,8 @@
         }
         .list {
           margin-bottom: 25px;
-          margin-top: 8px;
+          margin-top: 6px;
+          @media (max-width: 768px) {margin-top: -5px;}
           a {
             height: 1.7rem;
             .listItem {

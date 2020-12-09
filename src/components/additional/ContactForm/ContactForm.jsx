@@ -34,7 +34,7 @@ const Textarea = ({
     </div>
 };
 
-const ContactForm = ({submitBtnText, withEmail, withPhone, withMessage, formName, swalText = 'Мы получили вашу заявку 😌', ...props}) => {
+const ContactForm = ({submitBtnText, withEmail, withPhone, withMessage, formName, swalText = 'Мы получили Вашу заявку 😌', textareaPlaceholder = 'Введите Ваше сообщение', ...props}) => {
 
     const rePhoneNumber = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
     Yup.addMethod(Yup.string, "phone", function() {
@@ -139,7 +139,7 @@ const ContactForm = ({submitBtnText, withEmail, withPhone, withMessage, formName
             <Field component={Input} name="name" placeholder={'Введите Ваше имя'}/>
             {withEmail && <Field component={Input} name="email" placeholder={'Введите Ваш E-mail'}/>}
             {withPhone && <Field component={Input} name="phone" placeholder={'Введите Ваш телефон'}/>}
-            {withMessage && <Field component={Textarea} name="message" placeholder={'Введите Ваше сообщение'}/>}
+            {withMessage && <Field component={Textarea} name="message" placeholder={textareaPlaceholder}/>}
 
             <button style={{width: '100%'}} className={s.button} type="submit">{submitBtnText}</button>
         </Form>
