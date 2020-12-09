@@ -6,7 +6,7 @@ import arrow from "../../../img/arrow-accordeon.png";
 import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
 
 
-const Question = ({title, answer = 'Ответ на это вопрос появится на сайте чуть позже. Спасибо!', key}) => {
+const Question = ({title, answer = 'Ответ на этот вопрос появится на сайте чуть позже. Спасибо!', key}) => {
     const [opened, setOpened] = React.useState(false);
 
     return <div key={key} className={opened ? s.question + ' ' + s.opened : s.question}>

@@ -337,8 +337,13 @@ import poolBar4 from "./img/infrastructure/restaurant/PoolBar/4.jpg";
 import tavrika1 from "./img/infrastructure/restaurant/Tavrika/1.jpg";
 import tavrika2 from "./img/infrastructure/restaurant/Tavrika/2.jpg";
 import tavrika3 from "./img/infrastructure/restaurant/Tavrika/3.jpg";
+import medicalSpaBannerIcon1 from "./img/medical-spa/bannerIcons/1.png";
+import medicalSpaBannerIcon2 from "./img/medical-spa/bannerIcons/2.png";
+import medicalSpaBannerIcon3 from "./img/medical-spa/bannerIcons/3.png";
+import medicalSpaBannerIcon4 from "./img/medical-spa/bannerIcons/4.png";
+import medicalSpaBannerIcon5 from "./img/medical-spa/bannerIcons/5.png";
+import medicalSpaBannerImg from "./img/medical-spa/1.jpg";
 //end Restaurants import
-
 
 const commonGridSlides = [
     {
@@ -2762,4 +2767,11 @@ export const singlePromotionPages = {
 
 
     }
+}
+
+// Страница "Medical SPA"
+export const medicalSpaPage = {
+    bannerImg: medicalSpaBannerImg,
+    icons: [medicalSpaBannerIcon1, medicalSpaBannerIcon2, medicalSpaBannerIcon3, medicalSpaBannerIcon4, medicalSpaBannerIcon5],
+
 }
