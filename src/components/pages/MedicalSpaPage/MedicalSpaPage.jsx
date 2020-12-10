@@ -8,15 +8,15 @@ import Button from "../../shared/Button/Button";
 import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
 import img from "../../../img/events/wedding/weddingPageBanner.jpg";
 import AnimatedMouseIcon from "../../shared/AnimatedMouseIcon/AnimatedMouseIcon";
+import AdvantagesBlock from "../../shared/AdvantagesBlock/AdvantagesBlock";
 
-const MedicalSpaPage = ({bannerImg, icons}) => {
+const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
 
     let [popupOpen, setPopupOpen] = React.useState(false);
 
     return <>
 
-        <div className={s.bannerWrapper}
-             style={{
+        <div className={s.bannerWrapper} style={{
                  background: window.matchMedia("(max-width: 620px)").matches ? `center no-repeat url("${bannerImg}")` : `center no-repeat url("${bannerImg}")`,
                  backgroundSize: "cover"
              }}>
@@ -33,12 +33,12 @@ const MedicalSpaPage = ({bannerImg, icons}) => {
                 </div>
 
                 <div className={s.icons}>
-                    {icons.map( (item, index) => <div key={index} className={s.icon}>
+                    {bannerIcons.map( (item, index) => <div key={index} className={s.icon}>
                         <img src={item} alt=""/>
                     </div>)}
                 </div>
 
-                <Button style={{width: "fit-content", marginTop: "20px"}}
+                <Button style={{width: "fit-content"}}
                         onClick={() => setPopupOpen(true)} text={"Подробнее"}/>
                 <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
                                   popupTitleText={'Чтобы получить точную информацию о стоимости, позвольте нам связаться с Вами'}
@@ -55,10 +55,13 @@ const MedicalSpaPage = ({bannerImg, icons}) => {
             </div>
         </div>
 
+        <section className='section first'>
+            <AdvantagesBlock slidesToShow={5} icons={advantagesIcons} title={'Всё лучшее в одном месте'}/>
+        </section>
 
         <section className='section'>
             <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={roomsAndPricesPageData.modernDescr}
-                         data={roomsAndPricesPageData.modernSlides}/>
+                         data={roomsAndPricesPageData.modernSlides} noPaddingTop/>
 
             <RoomsSlider lastOfTwo={true} subtitle={'Корпус'} title={'Классик'}
                          textContent={roomsAndPricesPageData.classicDescr} data={roomsAndPricesPageData.classicSlides}/>

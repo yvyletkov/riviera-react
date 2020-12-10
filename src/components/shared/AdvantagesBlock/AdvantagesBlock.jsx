@@ -2,18 +2,38 @@ import s from "./AdvantagesBlock.module.scss";
 import HeadlineCenter from "../HeadlineCenter/HeadlineCenter";
 import Slider from "react-slick";
 import React from "react";
+import arrowImg from "../../../img/sliderArrows/arrowThin.png";
 
-const AdvantagesBlock = ({title, icons}) => {
+function NextArrow({style, onClick}) {
+    return <div
+        className={s.nextArrow}
+        style={{...style, backgroundImage: 'url(' + arrowImg + ')'}}
+        onClick={onClick}
+    />
+}
+
+function PrevArrow({style, onClick}) {
+    return <div
+        className={s.prevArrow}
+        style={{...style, backgroundImage: 'url(' + arrowImg + ')'}}
+        onClick={onClick}
+    />
+}
+
+const AdvantagesBlock = ({title, icons, slidesToShow}) => {
 
     const settings = {
         infinite: false,
-        slidesToShow: icons.length,
-        arrows: false,
+        slidesToShow: slidesToShow || icons.length,
+        nextArrow: <NextArrow/>,
+        prevArrow: <PrevArrow/>,
+        arrows: true,
         dots:false,
         responsive: [
             {
                 breakpoint: 1000,
                 settings: {
+                    arrows: false,
                     variableWidth: true,
                     slidesToShow: 1,
                     dots:true,
