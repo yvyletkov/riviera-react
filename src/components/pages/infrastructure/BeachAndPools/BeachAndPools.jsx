@@ -12,6 +12,8 @@ import beachImg1 from "../../../../img/infrastructure/beach-pools/9.jpg";
 import beachImg2 from "../../../../img/infrastructure/beach-pools/10.jpg";
 import blueFlagImg from "../../../../img/infrastructure/beach-pools/blue-flag.png";
 import ZoomSlider from "../../../shared/sliders/ZoomSlider/ZoomSlider";
+import areaIcon from "../../../../img/infrastructure/beach-pools/icons/1.png";
+import temperatureIcon from "../../../../img/infrastructure/beach-pools/icons/2.png";
 
 const BeachAndPools = () => {
     return <>
@@ -29,7 +31,16 @@ const BeachAndPools = () => {
                                     выходя из воды.</p>
                             </div>
                         </div>
-                        <img className={s.image} src={poolImage1} alt="Бассейн"/>
+                            <div className={s.imageBlock}>
+                                <div className={s.iconBlock}>
+                                    <img className={s.icon} src={areaIcon} alt="Длина"/>
+                                    <p className={s.iconDesc}>605 м&sup2;</p>
+                                    <img className={s.icon} src={temperatureIcon} alt="Температура"/>
+                                    <p className={s.iconDesc}>+28 &deg;С</p>
+                                </div>
+                                <img className={s.image} src={poolImage1} alt="Бассейн"/>
+                            </div>
+
                     </div>
                 </div>
             </div>
@@ -46,7 +57,15 @@ const BeachAndPools = () => {
                                     рядом в отдельном бассейне для детей. Глубина детского бассейна 60 см.</p>
                             </div>
                         </div>
-                        <img className={s.image} src={poolImage2} alt="Бассейн"/>
+                        <div className={s.imageBlock}>
+                            <div className={s.iconBlock}>
+                                <img className={s.icon} src={areaIcon} alt="Длина"/>
+                                <p className={s.iconDesc}>35 м&sup2;</p>
+                                <img className={s.icon} src={temperatureIcon} alt="Температура"/>
+                                <p className={s.iconDesc}>+28 &deg;С</p>
+                            </div>
+                            <img className={s.image} src={poolImage2} alt="Бассейн"/>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -63,7 +82,15 @@ const BeachAndPools = () => {
                                     установками, который окружен парком с породами редких деревьев.</p>
                             </div>
                         </div>
-                        <img className={s.image} src={poolImage3} alt="Бассейн"/>
+                        <div className={s.imageBlock}>
+                            <div className={s.iconBlock}>
+                                <img className={s.icon} src={areaIcon} alt="Длина"/>
+                                <p className={s.iconDesc}>754 м&sup2;</p>
+                                <img className={s.icon} src={temperatureIcon} alt="Температура"/>
+                                <p className={s.iconDesc}>+28 &deg;С</p>
+                            </div>
+                            <img className={s.image} src={poolImage3} alt="Бассейн"/>
+                        </div>
                     </div>
                 </div>
             </div>

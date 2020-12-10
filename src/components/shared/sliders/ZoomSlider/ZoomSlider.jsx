@@ -32,6 +32,11 @@ const SliderStyles = styled(Slider)`
 .slick-slide img {
   width: 100%;
   margin: 0 40px 0 0;
+  border-radius: 5px;
+}
+
+.slick-slide img:hover {
+  cursor:zoom-in;
 }
 
 .slick-track {

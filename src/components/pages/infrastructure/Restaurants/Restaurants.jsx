@@ -18,7 +18,7 @@ const Restaurants = () => {
       .container {
         max-width: 1200px;
         width: 100%;
-        height:636px;
+        height:556px;
         display: flex;
         flex-wrap: nowrap;
       }
@@ -78,7 +78,7 @@ const Restaurants = () => {
       
       .sliderBlock {
         width: 60%;
-        height: 546px;
+        height: 476px;
         padding-bottom: 90px;
         position:absolute;
         right:-245px;
@@ -160,10 +160,6 @@ const Restaurants = () => {
                                         onClick={() => setCurrentTab(6)}
                                         text="Мангал в саду"
                                         style={{marginBottom:'14px'}}/>
-                                <Button notActive={currentTab !== 7}
-                                        onClick={() => setCurrentTab(7)}
-                                        text="Караоке-бар"
-                                        style={{marginBottom:'14px'}}/>
                         </div>
                         <div className='textBlock'>
                                 <h4>{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].name}</h4>
@@ -222,7 +218,7 @@ const Restaurants = () => {
                         <div className='sliderBlock'>
                             <SimpleSlider
                                 slides={infrastructurePagesData.restaurants.restaurantsContent[currentTab][1]}
-                                styleImg={{height:'546px'}}
+                                styleImg={{height:'476px'}}
                             />
                         </div>
                     </div>

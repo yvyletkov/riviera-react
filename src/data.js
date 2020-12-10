@@ -2405,22 +2405,6 @@ export const infrastructurePagesData = {
                     {img: grillGarden5, name:'Мангал в саду'}
                 ]
             ],
-            [
-                {
-                    name: "Караоке-бар",
-                    description: "Близится торжество? День рождения, мальчишник, девичник? Караоке-бар «Green Stage» идеально подходит, чтобы отметить любой праздник в компании близких друзей, за исполнением любимых композиций. Бар может быть полностью закрыт под Ваше мероприятие",
-                    timeBreakfast: "07:30 — 10:30",
-                    timeDinner: "13:00 — 15:00",
-                    timeSupper: "19:00 — 21:00",
-                    kitchen: "европейская",
-                },
-                [
-                    {img: classic2img, name:'ресторан'},
-                    {img: classic3img, name:'ресторан'},
-                    {img: classic1img, name:'ресторан'},
-                    {img: classicLuxHero, name:'ресторан'}
-                ]
-            ],
         ],
     },
     beachAndPools: {
