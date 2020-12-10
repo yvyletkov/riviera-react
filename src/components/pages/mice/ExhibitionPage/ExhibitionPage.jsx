@@ -70,7 +70,7 @@ const ExhibitionPage = () => {
                 <CenteredSlider slides={micePagesData.centeredSlides} title={"Что мы берем на себя"} type={2}/>
             </section>
             <section className="section">
-                <WidthSpecialsSlider slides={micePagesData.widthSpecialsSlider} title={"Наши залы"}/>
+                <WidthSpecialsSlider slides={micePagesData.widthSpecialsSliderExhibition} title={"Наши залы"}/>
             </section>
             <section className='section'>
                 <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={roomsAndPricesPageData.modernDescr}

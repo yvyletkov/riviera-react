@@ -39,7 +39,7 @@ const EventTourismPage = () => {
                              textContent={roomsAndPricesPageData.classicDescr} data={roomsAndPricesPageData.classicSlides}/>
             </section>
             <section className="section">
-                <WidthSpecialsSlider slides={micePagesData.widthSpecialsSlider} title={"Для деловых встреч"}/>
+                <WidthSpecialsSlider slides={micePagesData.widthSpecialsEventTourism} title={"Для деловых встреч"}/>
             </section>
             <section className="section">
                 <FoodBlock/>

@@ -6,11 +6,6 @@ import gridKurortImg5 from "./img/grid-slider/resort-vacation/5.jpg";
 import gridKurortImg6 from "./img/grid-slider/resort-vacation/6.jpg";
 import gridKurortImg7 from "./img/grid-slider/resort-vacation/7.jpg";
 import gridKurortImg8 from "./img/grid-slider/resort-vacation/8.jpg";
-import confrerenceRoomsImg1 from "./img/mice/conference/ballrom.jpg";
-import confrerenceRoomsImg2 from "./img/mice/conference/room1.jpg";
-import confrerenceRoomsImg3 from "./img/mice/conference/room2.jpg";
-import confrerenceRoomsImg4 from "./img/mice/conference/room3.jpg";
-import confrerenceRoomsImg5 from "./img/mice/conference/room4.jpg";
 import gridKitchen1 from "./img/grid-slider/kitchen/kitchen1.jpg";
 import gridKitchen2 from "./img/grid-slider/kitchen/kitchen2.jpg";
 import gridKitchen3 from "./img/grid-slider/kitchen/kitchen3.jpg";
@@ -354,6 +349,20 @@ import medicalSpaAdvIcon6 from "./img/medical-spa/advantagesIcons/6.png";
 import medicalSpaAdvIcon7 from "./img/medical-spa/advantagesIcons/7.png";
 import medicalSpaAdvIcon8 from "./img/medical-spa/advantagesIcons/8.png";
 // END medical spa imports
+// mice rooms imports
+import parkRoomsSlider from "./img/mice/rooms/park.jpg";
+import ballroomRoomsSlider from "./img/mice/rooms/ballrom.jpg";
+import lobbyLoungeRoomsSlider from "./img/mice/rooms/Lobby-Lounge.jpg";
+import preFunctionRoomsSlider from "./img/mice/rooms/Pre-Function.jpg";
+import confrerenceRoomsImg1RoomsSlider from "./img/mice/rooms/konf-room1.jpg";
+import confrerenceRoomsImg2RoomsSlider from "./img/mice/rooms/konf-room2.jpg";
+import confrerenceRoomsImg3RoomsSlider from "./img/mice/rooms/konf-room-3.jpg";
+import confrerenceRoomsImg4RoomsSlider from "./img/mice/rooms/konf-room4.jpg";
+import tavrikaRoomsSlider from "./img/mice/rooms/Tavrika.jpg";
+import SPAroomRoomsSlider from "./img/mice/rooms/The-Shore-SPA.jpg";
+import beachRoomRoomsSlider from "./img/mice/rooms/beach.jpg";
+import aroundTerRoomsSlider from "./img/mice/rooms/around-ter.jpg";
+import aquaZoneRoomsSlider from "./img/mice/rooms/aqua-area.jpg";
 
 const commonGridSlides = [
     {
@@ -1026,30 +1035,247 @@ export const micePagesData = {
             key: 5,
         },
     ],
-    widthSpecialsSlider: [
+    widthSpecialsSliderExhibition: [
         {
-            img: confrerenceRoomsImg1,
+            img: parkRoomsSlider,
+            title: 'Реликтовый-парк',
+            key: 1,
+        },
+        {
+            img: ballroomRoomsSlider,
+            title: 'Ballroom',
+            key: 2,
+        },
+        {
+            img: lobbyLoungeRoomsSlider,
+            title: 'Lobby-Lounge',
+            key: 3,
+        },
+        {
+            img: preFunctionRoomsSlider,
+            title: 'Pre-Function-зона',
+            key: 4,
+        },
+    ],
+    widthSpecialsSliderTeamBuilding: [
+        {
+            img: aquaZoneRoomsSlider,
+            title: 'Аквазона',
+            key: 1,
+        },
+        {
+            img: ballroomRoomsSlider,
+            title: 'Ballroom',
+            key: 2,
+        },
+        {
+            img: confrerenceRoomsImg1RoomsSlider,
+            title: 'Конференц-зал 1',
+            key: 3,
+        },
+        {
+            img: confrerenceRoomsImg2RoomsSlider,
+            title: 'Конференц-зал 2',
+            key: 4,
+        },
+        {
+            img: confrerenceRoomsImg3RoomsSlider,
+            title: 'Конференц-зал 3',
+            key: 5,
+        },
+        {
+            img: confrerenceRoomsImg4RoomsSlider,
+            title: 'Конференц-зал 4',
+            key: 6,
+        },
+        {
+            img: SPAroomRoomsSlider,
+            title: 'The-Shore-SPA',
+            key: 7,
+        },
+        {
+            img: tavrikaRoomsSlider,
+            title: 'ресторан-Tavrika',
+            key: 8,
+        },
+    ],
+    widthSpecialsEventTourism: [
+        {
+            img: ballroomRoomsSlider,
             title: 'Ball Room',
             key: 1,
         },
         {
-            img: confrerenceRoomsImg2,
+            img: confrerenceRoomsImg1RoomsSlider,
             title: 'Конференц-зал 1',
             key: 2,
         },
         {
-            img: confrerenceRoomsImg3,
+            img: confrerenceRoomsImg2RoomsSlider,
             title: 'Конференц-зал 2',
             key: 3,
         },
         {
-            img: confrerenceRoomsImg4,
+            img: confrerenceRoomsImg3RoomsSlider,
             title: 'Конференц-зал 3',
             key: 4,
         },
         {
-            img: confrerenceRoomsImg5,
+            img: confrerenceRoomsImg4RoomsSlider,
             title: 'Конференц-зал 4',
+            key: 5,
+        },
+        {
+            img: tavrikaRoomsSlider,
+            title: 'ресторан-Tavrika',
+            key: 6,
+        },
+        {
+            img: aroundTerRoomsSlider,
+            title: 'круглая-терасса',
+            key: 7,
+        },
+    ],
+    widthSpecialsSliderForum: [
+        {
+            img: ballroomRoomsSlider,
+            title: 'Ball Room',
+            key: 1,
+        },
+        {
+            img: confrerenceRoomsImg1RoomsSlider,
+            title: 'Конференц-зал 1',
+            key: 2,
+        },
+        {
+            img: confrerenceRoomsImg2RoomsSlider,
+            title: 'Конференц-зал 2',
+            key: 3,
+        },
+        {
+            img: confrerenceRoomsImg3RoomsSlider,
+            title: 'Конференц-зал 3',
+            key: 4,
+        },
+        {
+            img: confrerenceRoomsImg4RoomsSlider,
+            title: 'Конференц-зал 4',
+            key: 5,
+        },
+        {
+            img: preFunctionRoomsSlider,
+            title: 'Pre-function зона',
+            key: 6,
+        },
+        {
+            img: parkRoomsSlider,
+            title: 'реликтовый-парк',
+            key: 7,
+        },
+    ],
+    widthSpecialsSliderConference: [
+        {
+            img: ballroomRoomsSlider,
+            title: 'Ball Room',
+            key: 1,
+        },
+        {
+            img: confrerenceRoomsImg1RoomsSlider,
+            title: 'Конференц-зал 1',
+            key: 2,
+        },
+        {
+            img: confrerenceRoomsImg2RoomsSlider,
+            title: 'Конференц-зал 2',
+            key: 3,
+        },
+        {
+            img: confrerenceRoomsImg3RoomsSlider,
+            title: 'Конференц-зал 3',
+            key: 4,
+        },
+        {
+            img: confrerenceRoomsImg4RoomsSlider,
+            title: 'Конференц-зал 4',
+            key: 5,
+        },
+        {
+            img: preFunctionRoomsSlider,
+            title: 'Pre-function зона',
+            key: 6,
+        },
+    ],
+    widthSpecialsSliderTrainings: [
+        {
+            img: aquaZoneRoomsSlider,
+            title: 'Аквазона',
+            key: 1,
+        },
+        {
+            img: aroundTerRoomsSlider,
+            title: 'круглая-терасса',
+            key: 2,
+        },
+        {
+            img: confrerenceRoomsImg1RoomsSlider,
+            title: 'Конференц-зал 1',
+            key: 3,
+        },
+        {
+            img: confrerenceRoomsImg2RoomsSlider,
+            title: 'Конференц-зал 2',
+            key: 4,
+        },
+        {
+            img: confrerenceRoomsImg3RoomsSlider,
+            title: 'Конференц-зал 3',
+            key: 5,
+        },
+        {
+            img: confrerenceRoomsImg4RoomsSlider,
+            title: 'Конференц-зал 4',
+            key: 6,
+        },
+        {
+            img: lobbyLoungeRoomsSlider,
+            title: 'Lobby-Lounge',
+            key: 7,
+        },
+        {
+            img: tavrikaRoomsSlider,
+            title: 'ресторан-Tavrika',
+            key: 8,
+        },
+        {
+            img: preFunctionRoomsSlider,
+            title: 'Pre-Function-зона',
+            key: 9,
+        },
+    ],
+    widthSpecialsSliderIntensive: [
+        {
+            img: ballroomRoomsSlider,
+            title: 'Ball Room',
+            key: 1,
+        },
+        {
+            img: aquaZoneRoomsSlider,
+            title: 'Аквазона',
+            key: 2,
+        },
+        {
+            img: beachRoomRoomsSlider,
+            title: 'пляж-1-береговая-линия',
+            key: 3,
+        },
+        {
+            img: parkRoomsSlider,
+            title: 'реликтовый-парк',
+            key: 4,
+        },
+        {
+            img: tavrikaRoomsSlider,
+            title: 'ресторан-Tavrika',
             key: 5,
         },
     ],

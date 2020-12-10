@@ -8,6 +8,7 @@ import Button from "../../../shared/Button/Button";
 import iconBreakfast from "../../../../img/infrastructure/restaurant/icons/breakfast.png";
 import iconDinner from "../../../../img/infrastructure/restaurant/icons/dinner.png";
 import iconSupper from "../../../../img/infrastructure/restaurant/icons/supper.png";
+import iconTime from "../../../../img/infrastructure/restaurant/icons/time.png";
 
 
 const Restaurants = () => {
@@ -174,7 +175,7 @@ const Restaurants = () => {
                                         </div>
                                         :
                                         <div className="schedule-block">
-                                            <img className="schedule-icon" src={iconSupper} alt="ужин"/>
+                                            <img className="schedule-icon" src={iconTime} alt="Время"/>
                                             <div className="schedule-time">
                                                 <p className="text-left">Время работы</p>
                                                 <p className="text-left">{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].workingHours}</p>
