@@ -388,6 +388,7 @@ const commonGridSlides = [
             {
                 title: "Medical Spa",
                 img: gridKurortImg6,
+                href: '/medical-spa'
             },
             {
                 title: "Командировка",
