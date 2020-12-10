@@ -63,7 +63,7 @@ const ConferencesPage = () => {
                 <CenteredSlider slides={micePagesData.centeredSlides} title={"Что мы берем на себя"} type={2}/>
             </section>
             <section className="section">
-                <WidthSpecialsSlider slides={micePagesData.widthSpecialsSlider} title={"Наши залы"}/>
+                <WidthSpecialsSlider slides={micePagesData.widthSpecialsSliderConference} title={"Наши залы"}/>
             </section>
             <section className='section'>
                 <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={roomsAndPricesPageData.modernDescr}
@@ -151,13 +151,8 @@ const ConferencesPage = () => {
                                                  formName={'Форма из блока "Хотите посоветоваться с коллегами?" (Скачать коммерческое предложение)'}
                                                  swalText={'сейчас мы отправим всю необходимую информацию Вам на почту'}
                                                  submitBtnText={'Скачать коммерческое предложение'}/>
-
-
                                 </div>
-
-
                             </div>
-
                         </div>
                     </div>
                 </div>
