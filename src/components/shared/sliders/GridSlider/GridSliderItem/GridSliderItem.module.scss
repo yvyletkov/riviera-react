@@ -62,6 +62,10 @@
   margin-top: 18px;
   position: relative;
   transition: all 500ms ease-out;
+  @media (max-width: 768px) {
+    font-size: 14px;
+
+  }
 }
 
 .block .content p:after {

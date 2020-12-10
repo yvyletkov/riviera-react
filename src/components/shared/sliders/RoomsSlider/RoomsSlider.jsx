@@ -8,6 +8,7 @@ import {NextArrow, PrevArrow} from "../SliderArrows/sliderArrowButtons";
 import MiniSlider from "../MiniSlider/MiniSlider";
 import Accordeon from "../../Accordeon/Accordeon";
 import CirqleTip from "../../CirqleTip/CirqleTip";
+import cx from 'classnames';
 
 
 const SliderStyles = styled(Slider)`
@@ -31,7 +32,7 @@ const SliderStyles = styled(Slider)`
 }
 `;
 
-const RoomsSlider = ({title = "Заголовок", subtitle = "Какой-то", textContent = 'Немного какого-то текста', data, lastOfTwo}) => {
+const RoomsSlider = ({title = "Заголовок", subtitle = "Какой-то", textContent = 'Немного какого-то текста', data, lastOfTwo, noPaddingTop}) => {
 
 
     let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
@@ -126,8 +127,10 @@ const RoomsSlider = ({title = "Заголовок", subtitle = "Какой-то"
         return name;
     });
 
+    const classnames = cx(s.wrapper, {[s.lastOfTwo]: lastOfTwo, [s.noPaddingTop]: noPaddingTop})
+
     return (
-        <div ref={sliderWrapperRef} className={lastOfTwo ? s.wrapper + ' ' + s.lastOfTwo : s.wrapper}>
+        <div ref={sliderWrapperRef} className={classnames}>
             <div className={s.container}>
                 <div className={s.leftBlock}>
                     <Headline subtitle={subtitle} title={title}/>

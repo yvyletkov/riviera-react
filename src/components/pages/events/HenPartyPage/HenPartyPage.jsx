@@ -50,7 +50,7 @@ const HenPartyPage = () => {
 
         <section className='section'>
             <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={eventPagesData.modernDescr}
-                         data={eventPagesData.modernSlides}/>
+                         data={eventPagesData.modernSlides} noPaddingTop/>
 
             <RoomsSlider lastOfTwo={true} subtitle={'Корпус'} title={'Классик'}
                          textContent={eventPagesData.classicDescr} data={eventPagesData.classicSlides}/>

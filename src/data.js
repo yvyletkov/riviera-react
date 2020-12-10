@@ -337,13 +337,23 @@ import poolBar4 from "./img/infrastructure/restaurant/PoolBar/4.jpg";
 import tavrika1 from "./img/infrastructure/restaurant/Tavrika/1.jpg";
 import tavrika2 from "./img/infrastructure/restaurant/Tavrika/2.jpg";
 import tavrika3 from "./img/infrastructure/restaurant/Tavrika/3.jpg";
+// END Restaurants import
+// medical spa imports
 import medicalSpaBannerIcon1 from "./img/medical-spa/bannerIcons/1.png";
 import medicalSpaBannerIcon2 from "./img/medical-spa/bannerIcons/2.png";
 import medicalSpaBannerIcon3 from "./img/medical-spa/bannerIcons/3.png";
 import medicalSpaBannerIcon4 from "./img/medical-spa/bannerIcons/4.png";
 import medicalSpaBannerIcon5 from "./img/medical-spa/bannerIcons/5.png";
 import medicalSpaBannerImg from "./img/medical-spa/1.jpg";
-//end Restaurants import
+import medicalSpaAdvIcon1 from "./img/medical-spa/advantagesIcons/1.png";
+import medicalSpaAdvIcon2 from "./img/medical-spa/advantagesIcons/2.png";
+import medicalSpaAdvIcon3 from "./img/medical-spa/advantagesIcons/3.png";
+import medicalSpaAdvIcon4 from "./img/medical-spa/advantagesIcons/4.png";
+import medicalSpaAdvIcon5 from "./img/medical-spa/advantagesIcons/5.png";
+import medicalSpaAdvIcon6 from "./img/medical-spa/advantagesIcons/6.png";
+import medicalSpaAdvIcon7 from "./img/medical-spa/advantagesIcons/7.png";
+import medicalSpaAdvIcon8 from "./img/medical-spa/advantagesIcons/8.png";
+// END medical spa imports
 
 const commonGridSlides = [
     {
@@ -2772,6 +2782,16 @@ export const singlePromotionPages = {
 // Страница "Medical SPA"
 export const medicalSpaPage = {
     bannerImg: medicalSpaBannerImg,
-    icons: [medicalSpaBannerIcon1, medicalSpaBannerIcon2, medicalSpaBannerIcon3, medicalSpaBannerIcon4, medicalSpaBannerIcon5],
+    bannerIcons: [medicalSpaBannerIcon1, medicalSpaBannerIcon2, medicalSpaBannerIcon3, medicalSpaBannerIcon4, medicalSpaBannerIcon5],
+    advantagesIcons: [
+        {img: medicalSpaAdvIcon1, text: "Наличие<br/>протяженной<br/>набережной"},
+        {img: medicalSpaAdvIcon2, text: "Безупречный<br/>сервис<br/>в отеле"},
+        {img: medicalSpaAdvIcon3, text: "Команда<br/>профессиональных<br/>аниматоров"},
+        {img: medicalSpaAdvIcon4, text: "Пробуждение<br/>внутренних<br/>ресурсов"},
+        {img: medicalSpaAdvIcon5, text: "Холистический<br/>подход<br/>к здоровью"},
+        {img: medicalSpaAdvIcon6, text: "Наличие<br/>реликтового<br/>парка"},
+        {img: medicalSpaAdvIcon7, text: "Персональная<br/>программа<br/>лечения"},
+        {img: medicalSpaAdvIcon8, text: "Избавление<br/>от хронического<br/>стресса"},
 
+    ]
 }

@@ -140,6 +140,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .wrapper.noPaddingTop .container {
+    padding-top: 0 !important;
+  }
   .miniSliderWrapper {
     margin: 0 auto;
     width: fit-content;
