@@ -4,6 +4,7 @@ import s from "./EventMainSlider.module.scss";
 import styled from "styled-components";
 import HeadlineCenter from "../../HeadlineCenter/HeadlineCenter";
 import {NextArrow, PrevArrow} from "../SliderArrows/sliderArrowButtons";
+import Button from "../../Button/Button";
 
 const SliderStyles = styled(Slider)`
   .slick-next:before,
@@ -63,7 +64,7 @@ const SliderStylesManySlider = styled(Slider)`
 // const SliderStylesManySlider = str.replace("Microsoft", "W3Schools");
 
 
-const EventMainSlider = ({slides, title, titleMobile, initialSlideIndex = 0, manySlides = false}) => {
+const EventMainSlider = ({slides, title, titleMobile, initialSlideIndex = 0, manySlides = false, withButton = false}) => {
 
     const settings = {
         initialSlide: initialSlideIndex,
@@ -98,13 +99,15 @@ const EventMainSlider = ({slides, title, titleMobile, initialSlideIndex = 0, man
     };
 
     const items = slides.map((item, index) => {
-        const {img, title, key, descr} = item;
+        const {img, title, key, descr, popupData} = item;
         return (
             <div className="SliderElement" key={key}>
-                <WeddingSliderItem
+                <EventMainSliderItem
+                    withButton
                     img={img}
                     title={title}
                     descr={descr}
+                    popupData={popupData}
                     active={window.matchMedia('(max-width: 490px').matches ? false : index === 1}
                 />
             </div>
@@ -128,10 +131,11 @@ const EventMainSlider = ({slides, title, titleMobile, initialSlideIndex = 0, man
 export default EventMainSlider;
 
 
-const WeddingSliderItem = (props) => {
-    const {img, title, descr, active} = props;
+const EventMainSliderItem = (props) => {
+    const {img, title, descr, active, index, withButton} = props;
 
     let [showDescr, setShowDescr] = React.useState(active);
+    let [showPopup, setShowPopup] = React.useState(false);
 
     return (
         <div className={showDescr ? s.card + ' ' + s.active : s.card}>
@@ -143,9 +147,22 @@ const WeddingSliderItem = (props) => {
                 <p className={s.descr}>
                     {descr}
                 </p>
+
+                { withButton && <Button onClick={ () => setShowPopup(true)} text={'Подробнее'}/>}
+
                 <div className={s.moreBtn} onClick={() => setShowDescr(!showDescr)}>
                     {showDescr ? 'Cкрыть' : 'Подробнее'}
                 </div>
             </div>
+
+            <div className={showPopup ? s.popupWrapper + ' ' + s.show : s.popupWrapper}>
+                <div className={s.popup}>
+                    <div className={s.col}></div>
+                    <div className={s.col}></div>
+                    <div className={s.col}></div>
+                </div>
+
+            </div>
+
         </div>);
 };

@@ -3,12 +3,13 @@ import s from "./MedicalSpaPage.module.scss";
 import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
 import CenteredSlider from "../../shared/sliders/CenteredSlider/CenteredSlider";
 import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
-import {roomsAndPricesPageData} from "../../../data";
+import {medicalSpaPage, roomsAndPricesPageData} from "../../../data";
 import Button from "../../shared/Button/Button";
 import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
 import img from "../../../img/events/wedding/weddingPageBanner.jpg";
 import AnimatedMouseIcon from "../../shared/AnimatedMouseIcon/AnimatedMouseIcon";
 import AdvantagesBlock from "../../shared/AdvantagesBlock/AdvantagesBlock";
+import EventMainSlider from "../../shared/sliders/EventMainSlider/EventMainSlider";
 
 const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
 
@@ -57,6 +58,10 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
 
         <section className='section first'>
             <AdvantagesBlock slidesToShow={5} icons={advantagesIcons} title={'Всё лучшее в одном месте'}/>
+        </section>
+
+        <section className='section first'>
+            <EventMainSlider withButton={true} title={'Программы оздоровления'} manySlides={true} titleMobile={'Программы оздоровления'} initialSlideIndex={1} slides={medicalSpaPage.mainSlides}/>
         </section>
 
         <section className='section'>
