@@ -363,6 +363,19 @@ import SPAroomRoomsSlider from "./img/mice/rooms/The-Shore-SPA.jpg";
 import beachRoomRoomsSlider from "./img/mice/rooms/beach.jpg";
 import aroundTerRoomsSlider from "./img/mice/rooms/around-ter.jpg";
 import aquaZoneRoomsSlider from "./img/mice/rooms/aqua-area.jpg";
+// END rooms imports
+//prices SPA imports
+import SpaPricesBanner from "./img/infrastructure/spaPage/prices/1.jpg";
+import adultSPA1 from "./img/infrastructure/spaPage/prices/adult1.jpg";
+import adultSPA2 from "./img/infrastructure/spaPage/prices/adult2.jpg";
+import adultSPA3 from "./img/infrastructure/spaPage/prices/adult3.jpg"
+import childrenSPA1 from "./img/infrastructure/spaPage/prices/children1.jpg";
+import childrenSPA2 from "./img/infrastructure/spaPage/prices/children2.jpg";
+import childrenSPA3 from "./img/infrastructure/spaPage/prices/children3.jpg";
+import subscriptionSPA1 from "./img/infrastructure/spaPage/prices/subscription1.jpg";
+import subscriptionSPA2 from "./img/infrastructure/spaPage/prices/subscription2.jpg";
+import subscriptionSPA3 from "./img/infrastructure/spaPage/prices/subscription3.jpg";
+// END prices SPA imports
 
 const commonGridSlides = [
     {
@@ -2530,6 +2543,72 @@ export const promotionsPageData = {
 
 // Страницы Инфраструктуры
 export const infrastructurePagesData = {
+    spaPrices: {
+        bannerData: {
+            subtitleText: "THE SHORE SPA",
+            headlineText: ['Услуги', 'И цены'],
+            headlineFontSize: ['80px', '80px'],
+            headlineMobileFontSize: ['8vw', '10vw'],
+            descriptionText: 'На территории отеля Riviera Sunrise Resort&SPA расположен СПА-центр THE SHORE SPA площадью 2000 м². Элегантный и стильный интерьер выполнен известным скандинавским дизайнером Кристианом Люндвалем. Мы приглашаем Вас в атмосферу здоровья, красоты и гармонии.',
+            bgImg: SpaPricesBanner,
+        },
+        spaPricesContent: [
+            [
+                {
+                    name: "Для взрослых",
+                    text1: "Разовое посещение Wellness в выходной день",
+                    price1: "2000 руб",
+                    text2: "СПА-вечер в выходной день (с 16-00 до 21-00)",
+                    price2: "1500 руб",
+                    text3: "Разовое посещение Wellness в будний день",
+                    price3: "2000 руб",
+                    text4:"СПА-вечер в будний день (с 16-00 до 21-00)",
+                    price4:"1500 руб",
+                },
+                [
+                    {img: adultSPA1, name:'SPA для взрослых'},
+                    {img: adultSPA2, name:'SPA для взрослых'},
+                    {img: adultSPA3, name:'SPA для взрослых'},
+                ]
+            ],
+            [
+                {
+                    name: "Для детей",
+                    text1: "Разовое посещение Wellness в выходной день",
+                    price1: "1000 руб",
+                    text2: "СПА-вечер в выходной день (с 16-00 до 21-00)",
+                    price2: "750 руб",
+                    text3: "Разовое посещение Wellness в будний день",
+                    price3: "800 руб",
+                    text4:"СПА-вечер в будний день (с 16-00 до 21-00)",
+                    price4:"500 руб",
+                },
+                [
+                    {img: childrenSPA1, name:'SPA для детей'},
+                    {img: childrenSPA2, name:'SPA для детей'},
+                    {img: childrenSPA3, name:'SPA для детей'},
+                ]
+            ],
+            [
+                {
+                    name: "Абонементы",
+                    text1: "Разовое посещение Wellness в выходной день",
+                    price1: "1000 руб",
+                    text2: "СПА-вечер в выходной день (с 16-00 до 21-00)",
+                    price2: "750 руб",
+                    text3: "Разовое посещение Wellness в будний день",
+                    price3: "800 руб",
+                    text4:"СПА-вечер в будний день (с 16-00 до 21-00)",
+                    price4:"500 руб",
+                },
+                [
+                    {img: subscriptionSPA1, name:'SPA абонимент'},
+                    {img: subscriptionSPA2, name:'SPA абонимент'},
+                    {img: subscriptionSPA3, name:'SPA абонимент'},
+                ]
+            ],
+        ]
+    },
     restaurants: {
         bannerData: {
             subtitleText: "Инфраструктура",

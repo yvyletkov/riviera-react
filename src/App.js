@@ -42,6 +42,7 @@ const GymPage = lazy(() => import('./components/pages/infrastructure/GymPage'));
 const AquaThermalPage = lazy(() => import('./components/pages/infrastructure/AquaThermalPage/AquaThermalPage'));
 const Restaurants = lazy(() => import('./components/pages/infrastructure/Restaurants/Restaurants'));
 const FAQPage = lazy(() => import('./components/pages/FAQPage/FAQPage'));
+const SpaPrices = lazy(() => import('./components/pages/infrastructure/SpaPrices'));
 
 function App() {
 
@@ -52,6 +53,9 @@ function App() {
             </div>}>
 
                 <Switch>
+
+                    <Route path='/infrastructure/spa-services-and-prices' exact
+                           component={() => <SpaPrices/>}/>
 
                     <Route path='/medical-spa' exact
                            component={() => <MedicalSpaPage {...medicalSpaPage}/>}/>
