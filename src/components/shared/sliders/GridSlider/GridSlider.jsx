@@ -83,15 +83,9 @@ function PrevArrow({style, onClick}) {
 const GridSlider = ({slides}) => {
 
     let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
-    let [swipedVertically, setSwipedVertically] = React.useState(0);
+    // let [swipedVertically, setSwipedVertically] = React.useState(0);
 
     const afterChangeHandler = (index) => setCurrentSlideIndex(index);
-
-    const onSwipeMove = (position) => {
-        setSwipedVertically(position.y)
-        return true;
-    }
-
 
     const items = slides.map((item, index) => <GridSliderItem key={item.name + index}
                                                               firstRow={item.firstRow}
@@ -112,10 +106,10 @@ const GridSlider = ({slides}) => {
                     slidesToShow: 1,
                     infinite: false,
                     vertical: true,
-                    verticalSwiping: true,
+                    // verticalSwiping: true, // ИНАЧЕ НЕ БУДЕТ РАБОТАТЬ
                     arrows: false,
                     dots: true,
-                    draggable: true,
+                    // draggable: true,
                     swipe: false
                 }
             },
@@ -128,17 +122,36 @@ const GridSlider = ({slides}) => {
         sliderRef.current.slickGoTo(currentSlideIndex);
     }, [currentSlideIndex]);
 
-    React.useEffect(() => {
-        if (swipedVertically > 90) {
-            if (currentSlideIndex === 0)
-                return;
-            else sliderRef.current.slickPrev();
-        } else if (swipedVertically < -90) {
-            if (currentSlideIndex === slides.length - 1)
-                return;
-            else sliderRef.current.slickNext();
-        }
-    }, [swipedVertically]);
+    // React.useEffect(() => {
+    //     if (swipedVertically > 90) {
+    //         if (currentSlideIndex === 0)
+    //             return;
+    //         else sliderRef.current.slickPrev();
+    //     } else if (swipedVertically < -90) {
+    //         if (currentSlideIndex === slides.length - 1)
+    //             return;
+    //         else sliderRef.current.slickNext();
+    //     }
+    // }, [swipedVertically]);
+
+    const onSwipeMove = (position) => {
+        // setSwipedVexrtically(position.y)
+        return true;
+    }
+
+
+    const onSwipeUp = () => {
+        console.log('up')
+        if (currentSlideIndex === slides.length - 1)
+            return;
+        else sliderRef.current.slickNext();
+    }
+
+    const onSwipeDown = () => {
+        if (currentSlideIndex === 0)
+            return;
+        else sliderRef.current.slickPrev();
+    }
 
     const slideNames = slides.map((item) => item.name);
 
@@ -159,7 +172,13 @@ const GridSlider = ({slides}) => {
                 </div>
                 <SliderStyles>
 
-                    <Swipe onSwipeMove={onSwipeMove}>
+                    <Swipe
+                        allowMouseEvents
+                        tolerance={80}
+                        onSwipeMove={onSwipeMove}
+                        onSwipeUp={onSwipeUp}
+                        onSwipeDown={onSwipeDown}>
+
                         <Slider {...settings} ref={sliderRef}>
                             {items}
                         </Slider>

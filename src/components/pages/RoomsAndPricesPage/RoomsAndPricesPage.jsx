@@ -4,6 +4,7 @@ import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
 import CenteredSlider from "../../shared/sliders/CenteredSlider/CenteredSlider";
 import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
 import {roomsAndPricesPageData} from "../../../data";
+import GridSlider2 from "../../shared/sliders/GridSlider/TestGridSlider";
 
 
 const RoomsAndPricesPage = () => {
