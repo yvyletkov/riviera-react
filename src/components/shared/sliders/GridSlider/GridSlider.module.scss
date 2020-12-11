@@ -73,3 +73,50 @@
   }
 }
 
+.animatedHand {
+  position: absolute;
+}
+
+
+.animatedHand {
+  width: 28vw;
+  display: none;
+  position: absolute;
+  left: 14%;
+  top: 70%;
+  animation: animationFrames linear 2.4s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+
+}
+
+@media screen and (max-width: 768px) {
+  .animatedHand {
+    display: block;
+  }
+}
+
+
+@keyframes animationFrames {
+  0% {
+    opacity: 0;
+    transform: translate(0%, 0%);
+  }
+  10% {
+    opacity: 1;
+    transform: translate(9%, -9%);
+  }
+  12% {
+    opacity: 1;
+    transform: translate(10%, -6%);
+  }
+  28% {
+    opacity: 1;
+    transform: translate(10%, -45%) rotate(5deg);
+  }
+  33%, 100% {
+    opacity: 0;
+    transform: translate(10%, -80%) rotate(20deg);
+  }
+}
+
