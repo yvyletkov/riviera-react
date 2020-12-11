@@ -64,7 +64,7 @@ const GridSliderItem = ({firstRow, secondRow}) => {
     });
 
 
-    if (window.innerWidth <= 768) return <InnerSlider firstRowItems={firstRowItems} secondRowItems={secondRowItems}/>;
+    if (window.matchMedia('screen and (max-width: 768px)').matches) return <InnerSlider firstRowItems={firstRowItems} secondRowItems={secondRowItems}/>;
 
     else return (
         <div className={s.wrapper}>
