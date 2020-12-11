@@ -170,6 +170,38 @@
 }
 
 
+.popupWrapper {
+  display: none;
+  background: #5e6466;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+
+  .popup {
+    display: flex;
+    max-width: 1100px;
+    width: 99%;
+    background: #fff;
+    justify-content: space-between;
+
+    .col {
+      width: 33%;
+      height: 300px;
+    }
+  }
+
+  &.show {
+    display: flex;
+  }
+}
+
+
+
 
 
 
