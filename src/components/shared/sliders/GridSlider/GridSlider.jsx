@@ -85,40 +85,43 @@ const GridSlider = ({slides}) => {
     let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
     let [swipedVertically, setSwipedVertically] = React.useState(0);
 
-    const bodyEl = document.getElementsByTagName("body")[0];
+    // const bodyEl = document.getElementsByTagName("body")[0];
 
     // const disableScroll = () => bodyEl.classList.add("fixed");
     // const enableScroll = () => bodyEl.classList.remove("fixed");
-    const disableScroll = () => bodyEl.style.overflow = "hidden"
-    const enableScroll = () => bodyEl.style.overflow = "auto"
+    // const disableScroll = () => bodyEl.style.overflow = "hidden"
+    // const enableScroll = () => bodyEl.style.overflow = "auto"
 
-    React.useEffect( function () {
-        const sliderElementsObj = $("#verticalSliderWrapper *");
-        const sliderElementsArr = Object.values(sliderElementsObj);
-        const whiteBg = Object.values($('#whiteGridSliderBg'))[0];
-        const h2El = Object.values($('h2'));
-        const h4El = Object.values($('h4'));
-        const miniSliderEl = Object.values($('.miniSliderTarget'));
-
-        $(document).on('touchstart', (e) => {
-
-            if (!sliderElementsArr.includes(e.target)
-                || e.target === whiteBg
-                || h2El.includes(e.target)
-                || h4El.includes(e.target)
-                || miniSliderEl.includes(e.target))
-                enableScroll()
-
-        })
-    }, []);
+    // React.useEffect( function () {
+    //     const sliderElementsObj = $("#verticalSliderWrapper *");
+    //     const sliderElementsArr = Object.values(sliderElementsObj);
+    //     const whiteBg = Object.values($('#whiteGridSliderBg'))[0];
+    //     const h2El = Object.values($('h2'));
+    //     const h4El = Object.values($('h4'));
+    //     const miniSliderEl = Object.values($('.miniSliderTarget'));
+    //
+    //     $(document).on('touchstart', (e) => {
+    //
+    //         if (!sliderElementsArr.includes(e.target)
+    //             || e.target === whiteBg
+    //             || h2El.includes(e.target)
+    //             || h4El.includes(e.target)
+    //             || miniSliderEl.includes(e.target))
+    //             enableScroll()
+    //
+    //     })
+    // }, []);
 
     const afterChangeHandler = (index) => setCurrentSlideIndex(index);
-    const onSwipeMove = (position) => setSwipedVertically(position.y)
+
+    const onSwipeMove = (position) => {
+        setSwipedVertically(position.y)
+        return true;
+    }
 
 
     const items = slides.map((item, index) => <GridSliderItem key={item.name + index}
                                                               firstRow={item.firstRow}
-                                                              disableScroll={disableScroll}
                                                               secondRow={item.secondRow}/>);
 
     const settings = {
@@ -181,7 +184,7 @@ const GridSlider = ({slides}) => {
                                     slideNames={slideNames}/>
                     </div>
                 </div>
-                <SliderStyles onTouchStart={disableScroll} onTouchEnd={ () => setTimeout( enableScroll, 1500)}>
+                <SliderStyles>
 
                     <Swipe onSwipeMove={onSwipeMove}>
                         <Slider {...settings} ref={sliderRef}>
