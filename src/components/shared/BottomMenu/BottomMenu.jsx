@@ -4,10 +4,12 @@ import bedIcon from "../../../img/bed-icon.png";
 import calendarIcon from "../../../img/calendar-icon.png";
 import phoneIcon from "../../../img/phone-icon.png";
 import {NavLink} from "react-router-dom";
+import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
 
 const BottomMenu = (props) => {
 
     let [scrolledFromTop, setScrolledFromTop] = React.useState(0);
+    let [popupOpen, setPopupOpen] = React.useState(false);
 
     const listenToScroll = () => {
         const scroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -21,7 +23,7 @@ const BottomMenu = (props) => {
     }, []);
 
     return <div className={scrolledFromTop > window.innerHeight / 3 ? `${s.bottomMenu} ${s.minified}` : s.bottomMenu}>
-        <NavLink to="" className={s.item}>
+        <NavLink to="/rooms-and-prices" className={s.item}>
             <img src={bedIcon} alt=""/>
             <div>Номера и цены</div>
         </NavLink>
@@ -29,10 +31,17 @@ const BottomMenu = (props) => {
             <img src={calendarIcon} alt=""/>
             <div>Бронировать</div>
         </NavLink>
-        <NavLink to="" className={s.item}>
+        <div onClick={() => setPopupOpen(true)} className={s.item}>
             <img src={phoneIcon} alt=""/>
             <div>Позвонить</div>
-        </NavLink>
+        </div>
+
+        <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
+                          popupTitleText={'Пожалуйста, укажите свои контактные данные'}
+                          submitBtnText='Жду звонка'
+                          formName={`Контактная форма из нижнего блока мобильной версии сайта (кнопка "позвонить")`}
+                          swalText={'очень скоро наши менеджеры свяжутся c Вами'}
+                          withPhone/>
     </div>
 };
 
