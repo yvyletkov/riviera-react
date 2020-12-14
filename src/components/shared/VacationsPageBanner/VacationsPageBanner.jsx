@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./VacationsPageBanner.module.scss";
 import cirqlesImg from "../../../img/home-page/cirqles.png"
+import BookingBlock from "../../additional/BookingBlock/BookingBlock";
 
 const VacationsPageBanner = ({fontSize, fontSizeMobile, subtitle, topLine, bottomLine, bannerImg, bannerMobileImg, descr, extraLine = []}) => {
 
@@ -43,7 +44,7 @@ const VacationsPageBanner = ({fontSize, fontSizeMobile, subtitle, topLine, botto
                     <p dangerouslySetInnerHTML={{__html: descr}}/>
                 </div>
             </div>
-            <div className={s.bookingBlock}></div>
+            <BookingBlock/>
 
         </section>
     )

@@ -2,6 +2,7 @@ import React from "react";
 import s from "./RoomsAndPricesPageBanner.module.scss";
 import bannerImg from "../../../../img/rooms-and-prices-page/banner-bg.jpg";
 import bannerImgTopLayer from "../../../../img/rooms-and-prices-page/banner-top-layer.png"
+import BookingBlock from "../../../additional/BookingBlock/BookingBlock";
 
 const RoomsAndPricesPageBanner = () => {
 
@@ -33,7 +34,7 @@ const RoomsAndPricesPageBanner = () => {
                 </div>
             </div>
             <img className={s.bannerImgTop} src={bannerImgTopLayer} alt="Номера и цены"/>
-            <div className={s.bookingBlock}></div>
+            <BookingBlock/>
         </section>
     )
 };

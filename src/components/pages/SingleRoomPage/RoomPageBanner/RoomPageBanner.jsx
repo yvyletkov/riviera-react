@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./RoomPageBanner.module.scss";
 import {Link as Scroll} from "react-scroll";
+import BookingBlock from "../../../additional/BookingBlock/BookingBlock";
 
 const RoomPageBanner = ({campusName, roomName, roomNameFontSize, bannerImg}) => {
 
@@ -21,7 +22,7 @@ const RoomPageBanner = ({campusName, roomName, roomNameFontSize, bannerImg}) => 
                 </div>
             </div>
             {/*<img className={s.bannerImgTop} src={bannerImgTopLayer} alt="Номера и цены"/>*/}
-            <div className={s.bookingBlock}></div>
+            <BookingBlock/>
         </section>
     )
 };
