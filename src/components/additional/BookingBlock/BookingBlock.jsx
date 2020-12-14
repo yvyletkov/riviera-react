@@ -4,7 +4,7 @@ import s from "./BookingBlock.module.scss";
 function BookingBlock() {
 
     useEffect(() => {
-        window.tlLoad(window)
+        window.tlSearch(window)
     }, []);
 
     return <div className={s.bookingBlock}>

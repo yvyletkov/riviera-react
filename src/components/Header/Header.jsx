@@ -67,7 +67,7 @@ const Header = () => {
                                       title={"+7 (800) 555-78-56"}/>
                                 <div>Крым, г. Алушта</div>
                             </div>
-                            <Button className={s.button} href={'#'} text={'Забронировать'}/>
+                            <Button className={s.button} link={'/booking'} text={'Забронировать'}/>
 
                         </div>
 
