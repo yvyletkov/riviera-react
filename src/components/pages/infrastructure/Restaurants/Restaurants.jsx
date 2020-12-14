@@ -31,30 +31,30 @@ const Restaurants = () => {
         flex-direction:column;
       }
       
-      .text-left {
+      .textLeft {
         display: flex;
         text-align: left;
       }
       
-      .schedule-block {
+      .scheduleBlock {
         display: flex;
         width:100%;
         margin-bottom: 30px;
         align-items: center;
       }
       
-      .schedule-icon {
+      .scheduleIcon {
         width: 50px;
         height: 50px;
         margin-right: 10px;
       }
       
-      .schedule-time {
+      .scheduleTime {
         display: flex;
         flex-direction: column;
       }
       
-      .text-desc {
+      .textDesc {
         width: 100%;
         text-align: justify;
         font-size: 16px;
@@ -121,6 +121,7 @@ const Restaurants = () => {
       }
       @media screen and (max-width: 480px) {
         .sliderBlock {
+          height: 240px;
           padding-bottom: 25px;
         }
       }
@@ -166,43 +167,43 @@ const Restaurants = () => {
                                 <h4>{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].name}</h4>
                                 {
                                     infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].timeBreakfast ?
-                                        <div className="schedule-block">
-                                            <img className="schedule-icon" src={iconBreakfast} alt="завтрак"/>
-                                            <div className="schedule-time">
-                                                <p className="text-left">Завтрак</p>
-                                                <p className="text-left">{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].timeBreakfast}</p>
+                                        <div className="scheduleBlock">
+                                            <img className="scheduleIcon" src={iconBreakfast} alt="завтрак"/>
+                                            <div className="scheduleTime">
+                                                <p className="textLeft">Завтрак</p>
+                                                <p className="textLeft">{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].timeBreakfast}</p>
                                             </div>
                                         </div>
                                         :
-                                        <div className="schedule-block">
-                                            <img className="schedule-icon" src={iconTime} alt="Время"/>
-                                            <div className="schedule-time">
-                                                <p className="text-left">Время работы</p>
-                                                <p className="text-left">{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].workingHours}</p>
+                                        <div className="scheduleBlock">
+                                            <img className="scheduleIcon" src={iconTime} alt="Время"/>
+                                            <div className="scheduleTime">
+                                                <p className="textLeft">Время работы</p>
+                                                <p className="textLeft">{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].workingHours}</p>
                                             </div>
                                         </div>
                                 }
                                 {
                                     infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].timeDinner ?
-                                        <div className="schedule-block">
-                                            <img className="schedule-icon" src={iconDinner} alt="обед"/>
-                                            <div className="schedule-time">
-                                                <p className="text-left">Обед</p>
-                                                <p className="text-left">{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].timeDinner}</p>
+                                        <div className="scheduleBlock">
+                                            <img className="scheduleIcon" src={iconDinner} alt="обед"/>
+                                            <div className="scheduleTime">
+                                                <p className="textLeft">Обед</p>
+                                                <p className="textLeft">{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].timeDinner}</p>
                                             </div>
                                         </div> : null
                                 }
                                 {
                                     infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].timeSupper ?
-                                        <div className="schedule-block">
-                                            <img className="schedule-icon" src={iconSupper} alt="ужин"/>
-                                            <div className="schedule-time">
-                                                <p className="text-left">Ужин</p>
-                                                <p className="text-left">{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].timeSupper}</p>
+                                        <div className="scheduleBlock">
+                                            <img className="scheduleIcon" src={iconSupper} alt="ужин"/>
+                                            <div className="scheduleTime">
+                                                <p className="textLeft">Ужин</p>
+                                                <p className="textLeft">{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].timeSupper}</p>
                                             </div>
                                         </div> : null
                                 }
-                                <p className="text-desc"><b>
+                                <p className="textDesc"><b>
                                     {
                                         infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].kitchen ?
                                         `Кухня: ${infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].kitchen}` :
@@ -211,15 +212,17 @@ const Restaurants = () => {
                                 </b></p>
                                 {
                                     infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].location ?
-                                        <p className="text-desc"><b>Расположение: {infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].location}</b></p>
+                                        <p className="textDesc"><b>Расположение: {infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].location}</b></p>
                                         : null
                                 }
-                                <p className="text-desc">{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].description}</p>
+                                <p className="textDesc">{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].description}</p>
                         </div>
                         <div className='sliderBlock'>
                             <SimpleSlider
                                 slides={infrastructurePagesData.restaurants.restaurantsContent[currentTab][1]}
-                                styleImg={{height:'476px'}}
+                                styleImg={window.matchMedia('(min-width:480px)').matches ?
+                                    {height:'476px'} :
+                                    {height:'240px'}}
                             />
                         </div>
                     </div>

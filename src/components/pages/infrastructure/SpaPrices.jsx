@@ -30,34 +30,27 @@ const SpaPrices = () => {
         max-width: 720px;
       }
       
-      .text-left {
+      .textLeft {
         display: flex;
         text-align: left;
         flex-direction: column;
         margin-bottom: 20px;
       }
       
-      .schedule-block {
+      .scheduleBlock {
         display: flex;
         margin-bottom: 30px;
       }
       
-      .schedule-icon {
+      .scheduleIcon {
         width: 30px;
         height: 30px;
         margin-right: 10px;
       }
       
-      .schedule-time {
+      .scheduleTime {
         display: flex;
         flex-direction: column;
-      }
-      
-      .text-desc {
-        width: 100%;
-        text-align: justify;
-        font-size: 16px;
-        padding-bottom: 10px;
       }
       
       .textBlock {
@@ -150,27 +143,27 @@ const SpaPrices = () => {
                         </div>
                         <div className="textBlock">
                             <h4>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].name}</h4>
-                            <div className="schedule-block">
-                                <img className="schedule-icon" src={weekendIcon} alt="выходные дни"/>
-                                <div className="schedule-time">
-                                    <div className="text-left">
+                            <div className="scheduleBlock">
+                                <img className="scheduleIcon" src={weekendIcon} alt="выходные дни"/>
+                                <div className="scheduleTime">
+                                    <div className="textLeft">
                                         <p>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].text1}</p>
                                         <p><b>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].price1}</b></p>
                                     </div>
-                                    <div className="text-left">
+                                    <div className="textLeft">
                                         <p>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].text2}</p>
                                         <p><b>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].price2}</b></p>
                                     </div>
                                 </div>
                             </div>
-                            <div className="schedule-block">
-                                <img className="schedule-icon" src={weekDaysIcon} alt="будние дни"/>
-                                <div className="schedule-time">
-                                    <div className="text-left">
+                            <div className="scheduleBlock">
+                                <img className="scheduleIcon" src={weekDaysIcon} alt="будние дни"/>
+                                <div className="scheduleTime">
+                                    <div className="textLeft">
                                         <p>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].text3}</p>
                                         <p><b>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].price3}</b></p>
                                     </div>
-                                    <div className="text-left">
+                                    <div className="textLeft">
                                         <p>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].text4}</p>
                                         <p><b>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].price4}</b></p>
                                     </div>
