@@ -367,7 +367,7 @@ const commonGridSlides = [
             {
                 title: "Номера и цены",
                 img: gridKurortImg2,
-                href: '/rooms-and-prices'
+                href: '/nomera-i-tseny'
             },
             {
                 title: "Отдых без детей",
@@ -484,7 +484,7 @@ const commonGridSlides = [
             {
                 title: "Номера и цены",
                 img: gridKurortImg2,
-                href: '/rooms-and-prices'
+                href: '/nomera-i-tseny'
             },
             {
                 title: "Отдых без детей",
@@ -610,14 +610,14 @@ const commonSpecialsSlides = [
         img: promoImg1,
         subtitle: "Летний отдых",
         title: "С выгодой до 20%",
-        link: '/promotions/letniy-otdyh',
+        link: '/offers/letniy-otdyh',
         key: 1,
     },
     {
         img: promoImg5,
         subtitle: "",
         title: "Бархатный<br/>сезон",
-        link: '/promotions/barhatnyi-sezon',
+        link: '/offers/barhatnyi-sezon',
         key: 2,
     },
     {
@@ -631,14 +631,14 @@ const commonSpecialsSlides = [
         img: promoImg3,
         subtitle: "Длительное проживание 2021",
         title: "С выгодой до 25%",
-        link: '/promotions/dlitelnoe-prozhivaniye',
+        link: '/offers/dlitelnoe-prozhivaniye',
         key: 4,
     },
     {
         img: promoImg4,
         subtitle: "Отдых",
         title: "Для крымчан",
-        link: '/promotions/otdyh-dlya-krymchan',
+        link: '/offers/otdyh-dlya-krymchan',
         key: 5,
     },
     {
@@ -788,31 +788,31 @@ const commonClassicCampusSlides = [
     {
         img: classicStandart1,
         title: "Стандарт",
-        link: "/classic/standart",
+        link: "/rooms/standart-classic",
         bookingLink: "",
     },
     {
         img: classicImproved1,
         title: "Улучшенный",
-        link: "/classic/improved",
+        link: "/rooms/improved-classic",
         bookingLink: "",
     },
     {
         img: classicSemiLux2,
         title: "Полулюкс",
-        link: "/classic/semi-lux",
+        link: "/rooms/semilux-classic",
         bookingLink: "",
     },
     {
         img: classicLux2,
         title: "Люкс",
-        link: "/classic/lux",
+        link: "/rooms/lux-classic",
         bookingLink: "",
     },
     {
         img: classicPresidentLux1,
         title: "Президентский люкс",
-        link: "/classic/president-lux",
+        link: "/rooms/president-lux-classic",
         bookingLink: "",
     },
 ];
@@ -825,37 +825,37 @@ const commonModernCampusSlides = [
     {
         img: modernStandart1,
         title: "Стандарт",
-        link: "/modern/standart",
+        link: "/rooms/standart-modern",
         bookingLink: "",
     },
     {
         img: modernImproved1,
         title: "Улучшенный",
-        link: "/modern/improved",
+        link: "/rooms/improved-modern/",
         bookingLink: "",
     },
     {
         img: modernSemilux1,
         title: "Полулюкс",
-        link: "/modern/semi-lux",
+        link: "/rooms/semilux-modern",
         bookingLink: "",
     },
     {
         img: modernLux1,
         title: "Люкс",
-        link: "/modern/lux",
+        link: "/rooms/lux-modern",
         bookingLink: "",
     },
     {
         img: modernSpaSuite1,
         title: "SPA-Suite",
-        link: "/spa-suite",
+        link: "/rooms/vip-suite",
         bookingLink: "",
     },
     {
         img: modernPresident2,
         title: "Президентский люкс",
-        link: "/modern/president-lux",
+        link: "/rooms/president-lux-modern",
         bookingLink: "",
     },
 ];
@@ -1119,7 +1119,7 @@ const modernOtherRoomsSlides = [
         title: 'Стандарт',
         capacity: "2 человека",
         area: "25",
-        link: '/modern/standart',
+        link: '/rooms/standart-modern',
         key: 1,
     },
     {
@@ -1128,7 +1128,7 @@ const modernOtherRoomsSlides = [
         title: 'Улучшенный',
         capacity: "2 человека",
         area: "25",
-        link: '/modern/improved',
+        link: '/rooms/improved-modern/',
         key: 2,
     },
     {
@@ -1146,7 +1146,7 @@ const modernOtherRoomsSlides = [
         title: 'Люкс',
         capacity: "2 человека",
         area: "50",
-        link: '/modern/lux',
+        link: '/rooms/lux-modern',
         key: 4,
     },
     {
@@ -1155,7 +1155,7 @@ const modernOtherRoomsSlides = [
         title: 'SPA-Suite',
         capacity: "2 человека",
         area: "117",
-        link: '/spa-suite',
+        link: '/rooms/vip-suite',
         key: 5,
     },
     {
@@ -1164,7 +1164,7 @@ const modernOtherRoomsSlides = [
         title: 'Возможностями',
         capacity: "2 человека",
         area: "25",
-        link: '/modern/disabled',
+        link: '/rooms/disabled-modern',
         key: 6,
     },
     {
@@ -1173,7 +1173,7 @@ const modernOtherRoomsSlides = [
         title: 'Президентский люкс',
         capacity: "4 человека",
         area: "110",
-        link: '/modern/president-lux',
+        link: '/rooms/president-lux-modern',
         key: 6,
     },
 ];
@@ -1184,7 +1184,7 @@ const classicOtherRoomsSlides = [
         title: 'Cтандарт',
         capacity: "2 человека",
         area: "20-25",
-        link: '/classic/standart',
+        link: '/rooms/standart-classic',
         key: 1,
     },
     {
@@ -1193,7 +1193,7 @@ const classicOtherRoomsSlides = [
         title: 'Улучшенный',
         capacity: "2 человека",
         area: "20-25",
-        link: '/classic/improved',
+        link: '/rooms/improved-classic',
         key: 2,
     },
     {
@@ -1202,7 +1202,7 @@ const classicOtherRoomsSlides = [
         title: 'Полулюкс',
         capacity: "2 человека",
         area: "20-25",
-        link: '/classic/semi-lux',
+        link: '/rooms/semilux-classic',
         key: 3,
     },
     {
@@ -1211,7 +1211,7 @@ const classicOtherRoomsSlides = [
         title: 'Люкс',
         capacity: "2 человека",
         area: "45-50",
-        link: '/classic/lux',
+        link: '/rooms/lux-classic',
         key: 4,
     },
     {
@@ -1220,7 +1220,7 @@ const classicOtherRoomsSlides = [
         title: 'Президентский люкс',
         capacity: "2 человека",
         area: "130",
-        link: '/classic/president-lux',
+        link: '/rooms/president-lux-classic',
         key: 5,
     },
 ];
@@ -2569,7 +2569,7 @@ export const infrastructurePagesData = {
                 subtitle: "",
                 title: "Русская парная",
                 text: 'Заполнена влажным, близким к 100% паром, при температуре воздуха 45-60 С. При этом происходит мягкий, не обжигающий кожу, прогрев организма, вызывающий обильное потоотделение. Прогревание улучшает обмен веществ организма, за счет раскрытия пор и удаления ороговевших клеток. Посещение Римской парной способствует укреплению сердечно-сосудистой, дыхательной и эндокринной систем. Кожа становится упругой и эластичной, снимается нервное и мышечное напряжение, восстанавливается бодрость и работоспособность.',
-                // link: '/promotions/barhatnyi-sezon',
+                // link: '/offers/barhatnyi-sezon',
                 key: 2,
             },
             {
@@ -2577,7 +2577,7 @@ export const infrastructurePagesData = {
                 subtitle: "",
                 title: "Процедурный кабинет",
                 text: 'Комфортная температура 45 С и влажность 60-80% — это, прежде всего, отличный пилинг для всего тела, омолаживающий и очищающий кожу благодаря нанесению оздоровительных составов. Благотворно Расул воздействует и на внутренние органы: вещества, содержащиеся в целебных смесях для обертывания, проникают сквозь кожу в глубинные слои, насыщая и подпитывая ткани.',
-                // link: '/promotions/barhatnyi-sezon',
+                // link: '/offers/barhatnyi-sezon',
                 key: 3,
             },
             {
