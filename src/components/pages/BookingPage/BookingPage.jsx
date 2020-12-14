@@ -1,9 +1,16 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 
 const BookingPage = () => {
+    useEffect(() => {
+        window.tlBooking(window)
+    }, []);
+
     return (
-        <div id="tl-booking-form"></div>
+        <section>
+            <div style={{margin: "120px 0 50px"}} id="tl-booking-form"/>
+        </section>
+
     )
 }
 

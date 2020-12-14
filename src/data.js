@@ -2531,13 +2531,7 @@ export const promotionsPageData = {
             // link: '#',
             key: 5,
         },
-        {
-            img: promoImg7,
-            subtitle: "",
-            title: "Бархатный<br/>сезон",
-            // link: '#',
-            key: 6,
-        },
+
     ],
 }
 

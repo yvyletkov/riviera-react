@@ -17,14 +17,13 @@ const HomePageBanner = () => {
                                 <span>Sunrise</span></h1>
                             <div>RESORT & SPA</div>
                         </div>
+                    </div>
+                    <div className={s.rightSide}>
                         <div className={s.playBtn}>
                             <img src={pauseImg} alt="пауза"/>
                         </div>
-                    </div>
-                    <div className={s.rightSide}>
-
                         <img className={s.cirqles} src={cirqlesImg} alt=""/>
-                        <img style={{height: '800px'}} src={bannerImg} alt="Riviera Sunrise"/>
+                        <img style={{height: '740px', marginTop: "60px"}} src={bannerImg} alt="Riviera Sunrise"/>
                     </div>
                 </div>
             </div>

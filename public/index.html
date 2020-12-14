@@ -33,7 +33,7 @@
   </noscript>
   <!-- /Yandex.Metrika counter -->
   <script type="text/javascript">
-    (function (w) {
+    window.tlBooking = function (w) {
       var q = [
         ['setContext', 'TL-INT-rivierasunrise', 'ru'],
         ['embed', 'booking-form', {container: 'tl-booking-form'}]
@@ -48,9 +48,9 @@
         s.src = (p == 'https:' ? p : 'http:') + '//ibe.tlintegration.com/integration/loader.js';
         (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
       }
-    })(window);
+    };
 
-    window.tlLoad = function(w){
+    window.tlSearch = function(w){
       var q=[
         ['setContext', 'TL-INT-rivierasunrise', 'ru'],
         ['embed', 'search-form', {container: 'tl-search-form'}]
