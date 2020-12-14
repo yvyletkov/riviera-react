@@ -90,8 +90,9 @@ const SpaPrices = () => {
           height:unset;
         }
         .btnBlock {
-          max-width: 300px;
-          margin: 0 auto;
+          margin: 0 auto 40px;
+          flex-direction: column;
+          width:280px;
         }
         .textBlock {
           margin:0 auto;
@@ -108,7 +109,7 @@ const SpaPrices = () => {
       }
       
       @media screen and (max-width: 700px) {
-        .textBlock, .sliderBlock {
+        .sliderBlock {
           h4 {
             margin-bottom: 15px;
           }
@@ -122,6 +123,7 @@ const SpaPrices = () => {
       @media screen and (max-width: 480px) {
         .sliderBlock {
           padding-bottom: 25px;
+          height:240px;
         }
       }
     `
@@ -136,15 +138,15 @@ const SpaPrices = () => {
                             <Button notActive={currentTab !== 0}
                                     onClick={() => setCurrentTab(0)}
                                     text="Для взрослых"
-                                    style={{marginRight:'40px', width:'150px'}}/>
+                                    style={window.matchMedia('(min-width:1201px)').matches ? {marginRight:'20px'} : {marginBottom:'20px'}}/>
                             <Button notActive={currentTab !== 1}
                                     onClick={() => setCurrentTab(1)}
                                     text="Для детей"
-                                    style={{marginRight:'40px', width:'150px'}}/>
+                                    style={window.matchMedia('(min-width:1201px)').matches ? {marginRight:'20px'} : {marginBottom:'20px'}}/>
                             <Button notActive={currentTab !== 2}
                                     onClick={() => setCurrentTab(2)}
                                     text="Абонементы"
-                                    style={{marginRight:'40px', width:'150px'}}/>
+                                    style={window.matchMedia('(min-width:1201px)').matches ? {marginRight:'20px'} : {marginBottom:'20px'}}/>
                         </div>
                         <div className="textBlock">
                             <h4>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].name}</h4>
@@ -178,7 +180,9 @@ const SpaPrices = () => {
                         <div className='sliderBlock'>
                             <SimpleSlider
                                 slides={infrastructurePagesData.spaPrices.spaPricesContent[currentTab][1]}
-                                styleImg={{height:'476px'}}
+                                styleImg={window.matchMedia('(min-width:480px)').matches ?
+                                    {height:'476px'} :
+                                    {height:'240px'}}
                             />
                         </div>
                     </div>
