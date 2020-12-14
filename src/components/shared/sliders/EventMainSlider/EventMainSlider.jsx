@@ -64,7 +64,7 @@ const SliderStylesManySlider = styled(Slider)`
 // const SliderStylesManySlider = str.replace("Microsoft", "W3Schools");
 
 
-const EventMainSlider = ({slides, title, titleMobile, initialSlideIndex = 0, manySlides = false, withButton = false}) => {
+const EventMainSlider = ({slides, title, titleMobile, initialSlideIndex = 0, manySlides = false, withButton = false, setShowPopup}) => {
 
     const settings = {
         initialSlide: initialSlideIndex,
@@ -103,11 +103,13 @@ const EventMainSlider = ({slides, title, titleMobile, initialSlideIndex = 0, man
         return (
             <div className="SliderElement" key={key}>
                 <EventMainSliderItem
-                    withButton
+                    index={index}
+                    withButton={withButton}
                     img={img}
                     title={title}
                     descr={descr}
                     popupData={popupData}
+                    setShowPopup={setShowPopup}
                     active={window.matchMedia('(max-width: 490px').matches ? false : index === 1}
                 />
             </div>
@@ -132,10 +134,9 @@ export default EventMainSlider;
 
 
 const EventMainSliderItem = (props) => {
-    const {img, title, descr, active, index, withButton} = props;
+    const {img, title, descr, active, index, withButton, setShowPopup} = props;
 
     let [showDescr, setShowDescr] = React.useState(active);
-    let [showPopup, setShowPopup] = React.useState(false);
 
     return (
         <div className={showDescr ? s.card + ' ' + s.active : s.card}>
@@ -144,25 +145,17 @@ const EventMainSliderItem = (props) => {
 
             <div className={s.content}>
                 <h6 className={s.title}>{title}</h6>
-                <p className={s.descr}>
-                    {descr}
-                </p>
+                <div className={s.descr}>
+                    <p style={{marginBottom: withButton ? '10px' : '0'}}>{descr}</p>
+                    { withButton && <Button onClick={ () => setShowPopup(index)} text={'Подробнее'}/>}
+                </div>
 
-                { withButton && <Button onClick={ () => setShowPopup(true)} text={'Подробнее'}/>}
 
                 <div className={s.moreBtn} onClick={() => setShowDescr(!showDescr)}>
                     {showDescr ? 'Cкрыть' : 'Подробнее'}
                 </div>
             </div>
 
-            <div className={showPopup ? s.popupWrapper + ' ' + s.show : s.popupWrapper}>
-                <div className={s.popup}>
-                    <div className={s.col}></div>
-                    <div className={s.col}></div>
-                    <div className={s.col}></div>
-                </div>
-
-            </div>
 
         </div>);
 };
