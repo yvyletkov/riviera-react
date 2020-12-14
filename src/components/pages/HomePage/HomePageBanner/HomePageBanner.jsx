@@ -3,6 +3,7 @@ import s from "./HomePageBanner.module.scss";
 import bannerImg from "../../../../img/home-page/banner-img.png"
 import cirqlesImg from "../../../../img/home-page/cirqles.png"
 import pauseImg from "../../../../img/home-page/pause.png"
+import BookingBlock from "../../../additional/BookingBlock/BookingBlock";
 
 const HomePageBanner = () => {
     return (
@@ -13,7 +14,7 @@ const HomePageBanner = () => {
                         <div className={s.textBlock}>
                             <h2>Рассвет совершенного сервиса</h2>
                             <h1>Riviera
-                           <span>Sunrise</span></h1>
+                                <span>Sunrise</span></h1>
                             <div>RESORT & SPA</div>
                         </div>
                         <div className={s.playBtn}>
@@ -27,10 +28,7 @@ const HomePageBanner = () => {
                     </div>
                 </div>
             </div>
-            {/*<div className={s.bookingBlock}></div>*/}
-            <div style={{zIndex:'1000'}} id="tl-search-form" class="tl-container">
-                <noindex><a href="http://www.travelline.ru/products/tl-hotel/" rel="nofollow">система онлайн-бронирования</a></noindex>
-            </div>
+            <BookingBlock/>
         </section>
     )
 };

@@ -1,0 +1,25 @@
+.bookingBlock {
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 85px;
+  max-width: 1115px;
+  width: 95%;
+  padding: 20px 0;
+  left: 50%;
+  box-shadow: -6.156px 16.914px 40px 0px rgba(23, 23, 23, 0.13);
+  background-color: white;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 620px) {
+  .bookingBlock {
+    bottom: unset;
+    position: relative;
+    max-width: 1115px;
+    width: 100%;
+    background-color: white;
+    border-radius: 0;
+    margin: 0 0 50px;
+    box-shadow: -7.182px 19.734px 47px 0px rgba(23, 23, 23, 0.13);
+  }
+}

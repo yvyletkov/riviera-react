@@ -81,22 +81,8 @@ $black: #171717;
 .cirqles {
   position: absolute;
   top: 187px;
-  left: -247px;
+  left: -250px;
   z-index: 0;
-}
-
-.bookingBlock {
-  transform: translateX(-50%);
-  position: absolute;
-  bottom: 120px;
-  max-width: 1115px;
-  width: 95%;
-  left: 50%;
-  height: 132px;
-  box-shadow: -6.156px 16.914px 40px 0px rgba(23, 23, 23, 0.13);
-  background-color: white;
-  border-radius: 5px;
-  background: url(../../../../img/booking.jpg) center;
 }
 
 .playBtn {
@@ -104,7 +90,7 @@ $black: #171717;
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: -40px;
+  bottom: -42px;
   right: -60px;
   border-radius: 50%;
   box-shadow: -10.261px 28.191px 57px 0px rgba(255, 108, 57, 0.41);
@@ -171,21 +157,6 @@ $black: #171717;
     filter: brightness(0.7);
     z-index: -1;
   }
-
-  .bookingBlock {
-    display: none;
-    bottom: unset;
-    position: relative;
-    bottom: unset;
-    max-width: 1115px;
-    width: 100%;
-    height: 20px;
-    background-color: white;
-    border-radius: 0;
-    margin: 0 0 50px;
-    box-shadow: -7.182px 19.734px 47px 0px rgba(23, 23, 23, 0.13);
-  }
-
 }
 
 @media screen and (max-width: 490px) {

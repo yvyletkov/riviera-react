@@ -9,9 +9,6 @@ import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
 import MapSection from "../../shared/MapSection/MapSection";
 
 const HomePage = () => {
-    useEffect(() => {
-        window.tlLoad(window)
-    }, []);
 
     return <>
         <HomePageBanner/>
