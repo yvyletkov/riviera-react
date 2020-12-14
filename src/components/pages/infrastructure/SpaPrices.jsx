@@ -30,7 +30,7 @@ const SpaPrices = () => {
         max-width: 720px;
       }
       
-      .textLeft {
+      .textBlock {
         display: flex;
         text-align: left;
         flex-direction: column;
@@ -42,10 +42,29 @@ const SpaPrices = () => {
         margin-bottom: 30px;
       }
       
+      .titleSubscription {
+        margin-bottom: 20px;
+      }
+      
+      .descSubscription {
+        display: flex;
+        width:300px;
+      }
+      
       .scheduleIcon {
         width: 30px;
         height: 30px;
         margin-right: 10px;
+      }
+      
+      .text {
+        margin:0 0 10px auto;
+      }
+      
+      .subscriptionIcon {
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
       }
       
       .scheduleTime {
@@ -70,6 +89,14 @@ const SpaPrices = () => {
         }
       }
       
+      .textBlockPrice {
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin:0 0 0 auto;
+      }
+      
       .sliderBlock {
         width: 60%;
         height: 476px;
@@ -79,6 +106,15 @@ const SpaPrices = () => {
       }
       
       @media screen and (max-width: 1200px) {
+        .textBlockPrice {
+          margin:0;
+          padding: 0 5px;
+        }
+        
+        .text {
+          margin:0 auto;
+        }
+        
         .container {
           height:unset;
         }
@@ -87,13 +123,23 @@ const SpaPrices = () => {
           flex-direction: column;
           width:280px;
         }
+        .subscriptionIcon {
+            margin:0;
+        }
+        
+        .descSubscription {
+          width: 100%;
+        }
+        
         .textBlock {
           margin:0 auto;
         }
+        
         .container {
           flex-wrap: wrap;
           padding: 0;
         }
+        
         .sliderBlock {
           position: relative;
           right: unset;
@@ -131,44 +177,90 @@ const SpaPrices = () => {
                             <Button notActive={currentTab !== 0}
                                     onClick={() => setCurrentTab(0)}
                                     text="Для взрослых"
-                                    style={window.matchMedia('(min-width:1201px)').matches ? {marginRight:'20px'} : {marginBottom:'20px'}}/>
+                                    style={window.matchMedia('(min-width:1201px)').matches ? {marginRight: '20px'} : {marginBottom: '20px'}}/>
                             <Button notActive={currentTab !== 1}
                                     onClick={() => setCurrentTab(1)}
                                     text="Для детей"
-                                    style={window.matchMedia('(min-width:1201px)').matches ? {marginRight:'20px'} : {marginBottom:'20px'}}/>
+                                    style={window.matchMedia('(min-width:1201px)').matches ? {marginRight: '20px'} : {marginBottom: '20px'}}/>
                             <Button notActive={currentTab !== 2}
                                     onClick={() => setCurrentTab(2)}
                                     text="Абонементы"
-                                    style={window.matchMedia('(min-width:1201px)').matches ? {marginRight:'20px'} : {marginBottom:'20px'}}/>
+                                    style={window.matchMedia('(min-width:1201px)').matches ? {marginRight: '20px'} : {marginBottom: '20px'}}/>
                         </div>
                         <div className="textBlock">
                             <h4>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].name}</h4>
-                            <div className="scheduleBlock">
-                                <img className="scheduleIcon" src={weekendIcon} alt="выходные дни"/>
-                                <div className="scheduleTime">
-                                    <div className="textLeft">
-                                        <p>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].text1}</p>
-                                        <p><b>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].price1}</b></p>
-                                    </div>
-                                    <div className="textLeft">
-                                        <p>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].text2}</p>
-                                        <p><b>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].price2}</b></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="scheduleBlock">
-                                <img className="scheduleIcon" src={weekDaysIcon} alt="будние дни"/>
-                                <div className="scheduleTime">
-                                    <div className="textLeft">
-                                        <p>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].text3}</p>
-                                        <p><b>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].price3}</b></p>
-                                    </div>
-                                    <div className="textLeft">
-                                        <p>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].text4}</p>
-                                        <p><b>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].price4}</b></p>
-                                    </div>
-                                </div>
-                            </div>
+                            {infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].subscription ?
+                                    <>
+                                        <h6 className="titleSubscription">{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].textTitleChildren}</h6>
+                                        <div className="scheduleBlock">
+                                            <img className="subscriptionIcon" src={weekendIcon} alt="выходные дни"/>
+                                            <div className="descSubscription">
+                                                <div className="textBlockPrice" style={{margin: '0'}}>
+                                                    <p className="text">{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].subscriptionAdult1}</p>
+                                                    <p className="text">{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].subscriptionAdult2}</p>
+                                                    <p className="text">{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].subscriptionAdult3}</p>
+                                                </div>
+                                                <div className="textBlockPrice">
+                                                    <p className="text">{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].priceAdult1}</p>
+                                                    <p className="text">{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].priceAdult2}</p>
+                                                    <p className="text">{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].priceAdult3}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h6 className="titleSubscription">{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].textTitleAdult}</h6>
+                                        <div className="scheduleBlock">
+                                            <img className="subscriptionIcon" src={weekendIcon} alt="выходные дни"/>
+                                            <div className="descSubscription">
+                                                <div className="textBlockPrice" style={{margin: '0'}}>
+                                                    <p className="text">{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].subscriptionChild1}</p>
+                                                    <p className="text">{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].subscriptionChild2}</p>
+                                                    <p className="text">{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].subscriptionChild3}</p>
+                                                </div>
+                                                <div className="textBlockPrice">
+                                                    <p className="text">{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].priceChild1}</p>
+                                                    <p className="text">{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].priceChild2}</p>
+                                                    <p className="text">{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].priceChild3}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </>
+                                    :
+                                    <>
+                                        <div className="scheduleBlock">
+                                            <img className="scheduleIcon" src={weekendIcon} alt="выходные дни"/>
+                                            <div className="scheduleTime">
+                                                <div className="textBlock">
+                                                    <p>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].text1}</p>
+                                                    <p>
+                                                        <b>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].price1}</b>
+                                                    </p>
+                                                </div>
+                                                <div className="textBlock">
+                                                    <p>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].text2}</p>
+                                                    <p>
+                                                        <b>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].price2}</b>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="scheduleBlock">
+                                            <img className="scheduleIcon" src={weekDaysIcon} alt="будние дни"/>
+                                            <div className="scheduleTime">
+                                                <div className="textBlock">
+                                                    <p>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].text3}</p>
+                                                    <p>
+                                                        <b>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].price3}</b>
+                                                    </p>
+                                                </div>
+                                                <div className="textBlock">
+                                                    <p>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].text4}</p>
+                                                    <p>
+                                                        <b>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].price4}</b>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </>}
                         </div>
                         <div className='sliderBlock'>
                             <SimpleSlider
