@@ -66,7 +66,7 @@ function App() {
                     <Route path='/grid' exact
                            component={() => <GridSliderPage/>}/>
 
-                    <Route path='/infrastructure/restaurants' exact
+                    <Route path='/restaurant' exact
                            component={() => <Restaurants/>}/>
 
                     <Route path='/infrastructure/beach-and-pools' exact
@@ -78,7 +78,7 @@ function App() {
                     <Route path='/infrastructure/gym' exact
                            component={() => <GymPage/>}/>
 
-                    <Route path='/infrastructure/spa-complex' exact
+                    <Route path='/spa' exact
                            component={() => <SpaPage/>}/>
 
                     <Route path='/promotions/otdyh-dlya-krymchan' exact
