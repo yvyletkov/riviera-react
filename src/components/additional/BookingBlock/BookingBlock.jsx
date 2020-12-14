@@ -1,5 +1,19 @@
 import React, {useEffect} from "react";
 import s from "./BookingBlock.module.scss";
+// import styled from "styled-components";
+
+// const StyledDiv = styled.div`
+// .sfl-container .sf-submit-button-container .sfl-submit-button {
+//     text-transform: none;
+//     font-family: 'Helvetica Neue Light', sans-serif;
+//     font-size: 16px;
+//     font-weight: 100;
+//     background: #fe6c39;
+//     border-radius: 6px;
+//     height: unset;
+//     padding: 18px 30px;
+// }
+// `
 
 function BookingBlock() {
 
