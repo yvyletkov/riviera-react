@@ -23,7 +23,7 @@ const BottomMenu = (props) => {
     }, []);
 
     return <div className={scrolledFromTop > window.innerHeight / 3 ? `${s.bottomMenu} ${s.minified}` : s.bottomMenu}>
-        <NavLink to="/rooms-and-prices" className={s.item}>
+        <NavLink to="/nomera-i-tseny" className={s.item}>
             <img src={bedIcon} alt=""/>
             <div>Номера и цены</div>
         </NavLink>

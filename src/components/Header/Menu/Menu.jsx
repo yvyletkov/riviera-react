@@ -64,7 +64,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
 
                                 <div className={s.list}>
 
-                                    <NavLink to={"/rooms-and-prices"}>
+                                    <NavLink to={"/nomera-i-tseny"}>
                                         <div className={s.listItem} onClick={toggleMenu}>
                                             Номера и цены
                                         </div>
@@ -234,7 +234,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
                                         </div>
                                     </NavLink>
 
-                                    <NavLink to={"/rooms-and-prices"}>
+                                    <NavLink to={"/nomera-i-tseny"}>
                                         <div className={s.listItem} onClick={toggleMenu}>
                                             Номера
                                         </div>
@@ -246,7 +246,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
                             </div>
 
                             <div className={s.menuItem} onClick={toggleMenu}>
-                                <NavLink to={"/promotions"}>
+                                <NavLink to={"/offers"}>
                                     Спецпредложения
                                 </NavLink>
                             </div>
@@ -274,7 +274,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
                             </div>
 
                             <div className={s.menuItem} onClick={toggleMenu}>
-                                <NavLink to={"/contacts"}>
+                                <NavLink to={"/contact"}>
                                     Контакты
                                 </NavLink>
                             </div>

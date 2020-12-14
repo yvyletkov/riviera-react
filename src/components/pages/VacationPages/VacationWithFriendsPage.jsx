@@ -37,7 +37,7 @@ const VacationWithFriendsPage = () => {
         </section>
 
         <section className='section'>
-            <SpecialsSlider subtitle={'Лучшие'} title={'спецпредложения'} btnLink={'/promotions'} slides={vacationPagesData.specialsSlides}/>
+            <SpecialsSlider subtitle={'Лучшие'} title={'спецпредложения'} btnLink={'/offers'} slides={vacationPagesData.specialsSlides}/>
         </section>
 
 

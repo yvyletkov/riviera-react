@@ -53,7 +53,7 @@ const Header = () => {
                             <span></span>
                         </div>
                         <div className={s.leftBlock}>
-                            <Link title={"Спецпредложения"} icon={star} link={"/promotions"}/>
+                            <Link title={"Спецпредложения"} icon={star} link={"/offers"}/>
                             <Link title={"Анимация"} icon={speaker} link={"#"}/>
                             <Link title={"Новости"} icon={microphone} link={"#"}/>
                         </div>

@@ -17,7 +17,7 @@ const HomePage = () => {
         </section>
 
         <section className='section'>
-            <SpecialsSlider subtitle={'Лучшие'} title={'спецпредложения'} btnLink={'/promotions'} slides={homePageData.specialsSlides}/>
+            <SpecialsSlider subtitle={'Лучшие'} title={'спецпредложения'} btnLink={'/offers'} slides={homePageData.specialsSlides}/>
         </section>
 
         <section className='section'>
