@@ -27,8 +27,10 @@ const HomePageBanner = () => {
                     </div>
                 </div>
             </div>
-            <div className={s.bookingBlock}></div>
-
+            {/*<div className={s.bookingBlock}></div>*/}
+            <div style={{zIndex:'1000'}} id="tl-search-form" class="tl-container">
+                <noindex><a href="http://www.travelline.ru/products/tl-hotel/" rel="nofollow">система онлайн-бронирования</a></noindex>
+            </div>
         </section>
     )
 };

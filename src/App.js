@@ -12,6 +12,7 @@ import Header from "./components/Header/Header";
 import BottomMenu from "./components/shared/BottomMenu/BottomMenu";
 import GridSliderPage from "./components/GridSliderPage";
 import MedicalSpaPage from "./components/pages/MedicalSpaPage/MedicalSpaPage";
+import BookingPage from "./components/pages/BookingPage/BookingPage";
 
 const HomePage = lazy(() => import('./components/pages/HomePage/HomePage'));
 const RoomsAndPricesPage = lazy(() => import('./components/pages/RoomsAndPricesPage/RoomsAndPricesPage'));
@@ -43,6 +44,7 @@ const AquaThermalPage = lazy(() => import('./components/pages/infrastructure/Aqu
 const Restaurants = lazy(() => import('./components/pages/infrastructure/Restaurants/Restaurants'));
 const FAQPage = lazy(() => import('./components/pages/FAQPage/FAQPage'));
 const SpaPrices = lazy(() => import('./components/pages/infrastructure/SpaPrices'));
+const VacanciesPage = lazy(() => import('./components/pages/VacanciesPage/VacanciesPage'));
 
 function App() {
 
@@ -53,6 +55,11 @@ function App() {
             </div>}>
 
                 <Switch>
+                    <Route path='/booking' exact
+                           component={() => <BookingPage/>}/>
+
+                    <Route path='/vacancies' exact
+                           component={() => <VacanciesPage/>}/>
 
                     <Route path='/infrastructure/spa-services-and-prices' exact
                            component={() => <SpaPrices/>}/>
