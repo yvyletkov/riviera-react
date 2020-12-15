@@ -90,22 +90,19 @@ const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-�
                     <Headline subtitle={subtitle} title={title}/>
                     <p>{text}</p>
 
-                    <Button text={btnText} onClick={!btnLink ? () => setPopupOpen(true) : null} link={btnLink ? btnLink : null} style={!window.matchMedia("(max-width: 768px)").matches ? {width: "210px"} : {}}/>
-
                     <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
                                       popupTitleText={'Для этого, пожалуйста, оставьте свои контактные данные️'}
                                       submitBtnText={btnText}
                                       formName={`Форма из блока "Дополнительные услуги" (получить прайс по услугам)`}
                                       swalText={'мы отправим всю необходимую информацию на указанную Вами почту в самое ближайшее время!'}
                                       withEmail/>
-
-
                 </div>
                 <div className={s.rightBlock}>
                     <SliderStyles>
                         <Slider {...settings}>{items}</Slider>
                     </SliderStyles>
                 </div>
+                <Button text={btnText} onClick={!btnLink ? () => setPopupOpen(true) : null} link={btnLink ? btnLink : null} style={!window.matchMedia("(max-width: 768px)").matches ? {width: "210px", marginLeft:"10px"} : {marginTop:'40px'}}/>
             </div>
         </div>
     );

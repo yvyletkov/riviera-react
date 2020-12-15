@@ -20,7 +20,8 @@ const BeachAndPools = () => {
     React.useEffect( () => document.title = `Пляж и бассейны – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
     return <>
-        <InfrastructurePageBanner bannerData={infrastructurePagesData.beachAndPools.bannerData}/>
+        <InfrastructurePageBanner bannerData={infrastructurePagesData.beachAndPools.bannerData}
+                                  style={{objectPosition:"0"}}/>
         <section className='section first'>
             <div className={s.poolsBlock}>
                 <div className={s.wrapper}>

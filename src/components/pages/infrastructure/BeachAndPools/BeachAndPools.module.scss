@@ -82,9 +82,9 @@
 
       @media screen and (max-width: 426px) {
         .image {
-          width: auto;
+          object-fit: contain;
           max-width: unset !important;
-          object-position: -100px;
+          object-position: -40px;
         }
       }
     }
