@@ -52,7 +52,8 @@ const ConferencesPage = () => {
                             backgroundStyle={{
                                 backgroundImage: `url(${imageBanner})`,
                                 backgroundPosition: window.matchMedia('(max-width: 500px)').matches ? '-190px' : '0'
-                            }}/>
+                            }}
+                            styleCirqleTip={{bottom:'-3px'}}/>
             {window.matchMedia('(min-width:769px)').matches &&
             <section className="section">
                 <TextBlock style={{marginTop: '-100px'}}/>

@@ -98,6 +98,10 @@ const Restaurants = () => {
         }
         .textBlock {
           margin:0 auto;
+          
+          h4 {
+            width: 100%;
+          }
         }
         .container {
           flex-wrap: wrap;
@@ -151,15 +155,15 @@ const Restaurants = () => {
                                     style={{marginBottom:'14px'}}/>
                                 <Button notActive={currentTab !== 3}
                                         onClick={() => setCurrentTab(3)}
-                                        text="Лобби-бар «Mungup»"
+                                        text="Lobby Bar Mangup"
                                         style={{marginBottom:'14px'}}/>
                                 <Button notActive={currentTab !== 4}
                                         onClick={() => setCurrentTab(4)}
-                                        text="Лобби-лаундж"
+                                        text="Lobby Lounge"
                                         style={{marginBottom:'14px'}}/>
                                 <Button notActive={currentTab !== 5}
                                         onClick={() => setCurrentTab(5)}
-                                        text="Pool-бар"
+                                        text="Pool Bar"
                                         style={{marginBottom:'14px'}}/>
                                 <Button notActive={currentTab !== 6}
                                         onClick={() => setCurrentTab(6)}
@@ -171,7 +175,7 @@ const Restaurants = () => {
                                 {
                                     infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].timeBreakfast ?
                                         <div className="scheduleBlock">
-                                            <img className="scheduleIcon" src={iconBreakfast} alt="завтрак"/>
+                                            <img className="scheduleIcon" src={iconTime} alt="завтрак"/>
                                             <div className="scheduleTime">
                                                 <p className="textLeft">Завтрак</p>
                                                 <p className="textLeft">{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].timeBreakfast}</p>
@@ -189,7 +193,7 @@ const Restaurants = () => {
                                 {
                                     infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].timeDinner ?
                                         <div className="scheduleBlock">
-                                            <img className="scheduleIcon" src={iconDinner} alt="обед"/>
+                                            <img className="scheduleIcon" src={iconTime} alt="обед"/>
                                             <div className="scheduleTime">
                                                 <p className="textLeft">Обед</p>
                                                 <p className="textLeft">{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].timeDinner}</p>
@@ -199,7 +203,7 @@ const Restaurants = () => {
                                 {
                                     infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].timeSupper ?
                                         <div className="scheduleBlock">
-                                            <img className="scheduleIcon" src={iconSupper} alt="ужин"/>
+                                            <img className="scheduleIcon" src={iconTime} alt="ужин"/>
                                             <div className="scheduleTime">
                                                 <p className="textLeft">Ужин</p>
                                                 <p className="textLeft">{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].timeSupper}</p>

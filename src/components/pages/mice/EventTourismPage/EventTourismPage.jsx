@@ -30,7 +30,7 @@ const EventTourismPage = () => {
                             title3Style={{fontSize:'32px',
                                           backgroundColor:"#ffbb28",
                                           padding:'5px 10px',
-                                          marginTop:'25px'}}
+                                          marginTop:'10px'}}
                             icons={micePagesData.conferenceIconsBanner}
                             backgroundStyle={{backgroundImage:`url(${imageBanner})`}}
                             styleCirqleTip={{left:'220px', bottom:'4px'}}/>

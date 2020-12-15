@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./InfrastructurePageBanner.module.scss";
 
-const InfrastructurePageBanner = ({bannerData}) => {
+const InfrastructurePageBanner = ({bannerData, style}) => {
 
     const {subtitleText, headlineText, headlineFontSize, headlineMobileFontSize, descriptionText, bgImg} = bannerData;
 
@@ -9,7 +9,7 @@ const InfrastructurePageBanner = ({bannerData}) => {
 
     return (
         <section className={s.bannerWrapper}>
-            <img className={s.bannerImg} src={bgImg} alt="Инфраструктура Riviera Sunrise"/>
+            <img className={s.bannerImg} style={style} src={bgImg} alt="Инфраструктура Riviera Sunrise"/>
             <div className={s.container}>
                 <div className={s.textBlock}>
                     <h2>{subtitleText}</h2>
