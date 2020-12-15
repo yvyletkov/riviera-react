@@ -3,7 +3,9 @@ $black: #171717;
 .bannerWrapper {
   position: relative;
   height: calc(100vh - 30px);
-  max-height: 800px;
+  @media (min-width: 769px) {
+    max-height: 800px;
+  }
   max-width: 1920px;
   width: 100%;
   overflow: hidden;

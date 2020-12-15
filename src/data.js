@@ -348,6 +348,12 @@ import medicalSpaAdvIcon5 from "./img/medical-spa/advantagesIcons/5.png";
 import medicalSpaAdvIcon6 from "./img/medical-spa/advantagesIcons/6.png";
 import medicalSpaAdvIcon7 from "./img/medical-spa/advantagesIcons/7.png";
 import medicalSpaAdvIcon8 from "./img/medical-spa/advantagesIcons/8.png";
+import medicalSpaPopupImgVosstan from "./img/medical-spa/blocks/восстановление.jpg";
+import medicalSpaPopupImgDetox from "./img/medical-spa/blocks/детокс.jpg";
+import medicalSpaPopupImgSpina from "./img/medical-spa/blocks/здоровая-спина.jpg";
+import medicalSpaPopupImgDvizhenie from "./img/medical-spa/blocks/свобода-движения.jpg";
+import medicalSpaPopupImgSerdce from "./img/medical-spa/blocks/сильное-сердце.jpg";
+import medicalSpaPopupImgStress from "./img/medical-spa/blocks/управление стрессом.jpg";
 // END medical spa imports
 // mice rooms imports
 import parkRoomsSlider from "./img/mice/rooms/park.jpg";
@@ -3086,39 +3092,39 @@ export const medicalSpaPage = {
     ],
     mainSlides: [
         {
-            img: birthdayTavrika,
-            title: "Ресторан Tavrika",
-            descr: 'Подойдет для небольшой дружеской компании.',
+            img: medicalSpaPopupImgVosstan,
+            title: "Восстановление",
+            descr: 'Программа рекомендуется широкому кругу людей с усталостью, раздражением, стрессом, низким уровнем иммунитета, концентрации и работоспособности. \n',
             key: 1,
         },
         {
-            img: birthdayBallroom,
-            title: "Ball Room",
-            descr: 'Зал вместит до 120 гостей, его можно украсить в соответствии с общей тональностью мероприятия, подойдет для праздника в любое время года и в любую погоду. Имеет отдельный вход и зону для приветственного фуршета. Есть возможность организации танцпола.',
+            img: medicalSpaPopupImgStress,
+            title: "Управление стрессом",
+            descr: 'Программа показана людям с хроническим стрессом, страдающим вегетососудистой дистонией, неврастенией, депрессией и неврозами.',
             key: 2,
         },
         {
-            img: birthdayCircleTerrase,
-            title: "Круглая терраса",
-            descr: 'Зал вместит до 120 гостей, его можно украсить в соответствии с общей тональностью мероприятия, подойдет для праздника в любое время года и в любую погоду. Имеет отдельный вход и зону для приветственного фуршета. Есть возможность организации танцпола.',
+            img: medicalSpaPopupImgDetox,
+            title: "Детокс",
+            descr: 'Программа предназначена для людей с привычкой неправленого питания, страдающие от избыточной тяги к кофе, сладкому, табаку или алкоголю. Также людям, живущим в городах с неблагоприятной экологической обстановкой.\n',
             key: 3,
         },
         {
-            img: birthdayGreenTerrase,
-            title: "Зеленая Терраса",
-            descr: 'Зеленая Терраса под открытым небом на втором этаже отеля – идеальное место для летнего праздника в любой компании. Вмещает более 200 чел.',
+            img: medicalSpaPopupImgDvizhenie,
+            title: "Свобода движения",
+            descr: 'Программа предназначена людям с недостаточным уровнем активности в повседневной жизни, ведущим сидячий образ жизни, утратившим мышечный тонус\n',
             key: 4,
         },
         {
-            img: birthdayPaluba,
-            title: "Верхняя палуба",
-            descr: 'Верхняя палуба обладает прекрасным видом на бескрайнее Черное море.',
+            img: medicalSpaPopupImgSerdce,
+            title: "Сильное сердце",
+            descr: 'Программа будет полезна людям, страдающим хроническими заболеваниями сердечно сосудистой системы: гипертоническая болезнь, ишемической болезни сердца, заболевания артерий и вен.\n',
             key: 5,
         },
         {
-            img: birthdayLaVeranda,
-            title: "Ресторан La Veranda",
-            descr: 'Ресторан в неувядающем классическом стиле с лучшим видом на парк и море: вечернее солнце и все оттенки неба и моря будут служить прекрасным фоном для вашего праздника.',
+            img: medicalSpaPopupImgSpina,
+            title: "Здоровая спина",
+            descr: 'Программа разработана для людей ведущие сидячий образ жизни, беспокоящих остеохондроз, сколиоз, грыжа межпозвоночных дисков и спондилез.\n',
             key: 6,
         },
     ],

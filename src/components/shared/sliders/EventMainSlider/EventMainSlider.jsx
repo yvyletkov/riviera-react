@@ -103,6 +103,7 @@ const EventMainSlider = ({slides, title, titleMobile, initialSlideIndex = 0, man
         return (
             <div className="SliderElement" key={key}>
                 <EventMainSliderItem
+                    key={key}
                     index={index}
                     withButton={withButton}
                     img={img}
@@ -134,7 +135,7 @@ export default EventMainSlider;
 
 
 const EventMainSliderItem = (props) => {
-    const {img, title, descr, active, index, withButton, setShowPopup} = props;
+    const {img, title, descr, active, index, withButton, setShowPopup, key} = props;
 
     let [showDescr, setShowDescr] = React.useState(active);
 
@@ -147,7 +148,7 @@ const EventMainSliderItem = (props) => {
                 <h6 className={s.title}>{title}</h6>
                 <div className={s.descr}>
                     <p style={{marginBottom: withButton ? '10px' : '0'}}>{descr}</p>
-                    { withButton && <Button onClick={ () => setShowPopup(index)} text={'Подробнее'}/>}
+                    { withButton && <Button onClick={ () => setShowPopup(key)} text={'Подробнее о программе'}/>}
                 </div>
 
 
