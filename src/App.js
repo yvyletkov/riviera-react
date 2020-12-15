@@ -13,7 +13,6 @@ import BottomMenu from "./components/shared/BottomMenu/BottomMenu";
 import GridSliderPage from "./components/GridSliderPage";
 import MedicalSpaPage from "./components/pages/MedicalSpaPage/MedicalSpaPage";
 import BookingPage from "./components/pages/BookingPage/BookingPage";
-import TransferPage from "./components/pages/TransferPage/TransferPage";
 
 const HomePage = lazy(() => import('./components/pages/HomePage/HomePage'));
 const RoomsAndPricesPage = lazy(() => import('./components/pages/RoomsAndPricesPage/RoomsAndPricesPage'));
@@ -46,6 +45,7 @@ const Restaurants = lazy(() => import('./components/pages/infrastructure/Restaur
 const FAQPage = lazy(() => import('./components/pages/FAQPage/FAQPage'));
 const SpaPrices = lazy(() => import('./components/pages/infrastructure/SpaPrices'));
 const VacanciesPage = lazy(() => import('./components/pages/VacanciesPage/VacanciesPage'));
+const TransferPage = lazy(() => import("./components/pages/TransferPage/TransferPage"));
 
 function App() {
 
@@ -57,7 +57,7 @@ function App() {
 
                 <Switch>
                     <Route path='/transfer' exact
-                           component={() => <TransferPage/>}/>
+                           component={() => <TransferPage {...singlePromotionPages.dlyaKrymchan}/>}/>
 
                     <Route path='/booking' exact
                            component={() => <BookingPage/>}/>
