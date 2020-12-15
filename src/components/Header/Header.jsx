@@ -11,8 +11,8 @@ import {NavLink} from "react-router-dom";
 import Menu from "./Menu/Menu";
 
 
-const Link = ({title, icon, link = '#', extraClass = null}) => {
-    return <NavLink to={link} className={s.link + ' ' + extraClass}>
+const Link = ({title, style, icon, link = '#', extraClass = null}) => {
+    return <NavLink style={style} to={link} className={s.link + ' ' + extraClass}>
         <img src={icon} alt={title}/>
         {title ? <div>{title}</div> : null}
     </NavLink>
@@ -37,6 +37,10 @@ const Header = () => {
         setMenuOpened(!menuOpened)
     };
 
+    const handleLinkClick = (e) => {
+        e.preventDefault()
+    }
+
     return (<>
 
             <div className={s.wrapper}>
@@ -54,14 +58,14 @@ const Header = () => {
                         </div>
                         <div className={s.leftBlock}>
                             <Link title={"Спецпредложения"} icon={star} link={"/offers"}/>
-                            <Link title={"Анимация"} icon={speaker} link={"#"}/>
-                            <Link title={"Новости"} icon={microphone} link={"#"}/>
+                            <Link onClick={handleLinkClick} style={{cursor: 'not-allowed'}} title={"Анимация"} icon={speaker} link={""}/>
+                            <Link onClick={handleLinkClick} style={{cursor: 'not-allowed'}} title={"Новости"} icon={microphone} link={""}/>
                         </div>
                         <div className={s.logo}>
                             <NavLink to={'/'}><img src={logo} alt="Riviera Sunrise"/></NavLink>
                         </div>
                         <div className={s.rightBlock}>
-                            <Link icon={search} extraClass={s.searchIcon} link={"#"}/>
+                            <Link onClick={handleLinkClick} style={{cursor: 'not-allowed'}} icon={search} extraClass={s.searchIcon} link={""}/>
                             <div className={s.contacts}>
                                 <Link icon={phone} href={"tel:+78005557856"} extraClass={s.number}
                                       title={"+7 (800) 555-78-56"}/>
