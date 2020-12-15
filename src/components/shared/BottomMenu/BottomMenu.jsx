@@ -27,7 +27,7 @@ const BottomMenu = (props) => {
             <img src={bedIcon} alt=""/>
             <div>Номера и цены</div>
         </NavLink>
-        <NavLink to="" className={s.item}>
+        <NavLink to="/booking" className={s.item}>
             <img src={calendarIcon} alt=""/>
             <div>Бронировать</div>
         </NavLink>

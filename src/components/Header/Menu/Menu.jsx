@@ -266,7 +266,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
 
                             {/*<div className={s.menuItem} onClick={toggleMenu}>*/}
                             <div className={s.menuItem}>
-                                <NavLink style={{cursor: 'not-allowed'}} onClick={handleLinkClick} to={"/"}>
+                                <NavLink style={{cursor: 'not-allowed' }} onClick={handleLinkClick} to={"/"}>
                                     Отзывы
                                 </NavLink>
                             </div>
@@ -297,10 +297,10 @@ const Menu = ({menuOpened, toggleMenu}) => {
                                 <a href='tel:8 800 300 68 41'>8 800 300 68 41</a>
                             </div>
                             <div className={s.icons}>
-                                <a href="https://vk.com" target='_blank'><img src={logoInst} alt="Instagram"/></a>
-                                <a href="https://fb.com" target='_blank'><img src={logoFb} alt="Facebook"/></a>
-                                <a href="https://youtube.com" target='_blank'><img src={logoYt} alt="Youtube"/></a>
-                                <a href="https://vk.com" target='_blank'><img src={logoVk} alt="VK"/></a>
+                                <a href="https://www.instagram.com/rivierasunrise/" target='_blank'><img src={logoInst} alt="Instagram"/></a>
+                                <a href="https://www.facebook.com/RivieraSunrise" target='_blank'><img src={logoFb} alt="Facebook"/></a>
+                                <a href="https://www.youtube.com/channel/UCi35hEb1HZKVvGbu5bRNXRw" target='_blank'><img src={logoYt} alt="Youtube"/></a>
+                                <a href="https://vk.com/rivierasunrise" target='_blank'><img src={logoVk} alt="VK"/></a>
                             </div>
 
                         </div>

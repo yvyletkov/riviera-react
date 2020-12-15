@@ -56,10 +56,10 @@ const Footer = () => {
                         <div className={s.footerSocials}>
                             <p>Мы в соцсетях</p>
                             <div className={s.icons}>
-                                <img src={logoInst} alt="Лого"/>
-                                <img src={logoFb} alt="Лого"/>
-                                <img src={logoYt} alt="Лого"/>
-                                <img src={logoVk} alt="Лого"/>
+                                <a target={'_blank'} href="https://www.instagram.com/rivierasunrise/"><img src={logoInst} alt="Instagram"/></a>
+                                <a target={'_blank'} href="https://www.facebook.com/RivieraSunrise"><img src={logoFb} alt="Лого"/></a>
+                                <a target={'_blank'} href="https://www.youtube.com/channel/UCi35hEb1HZKVvGbu5bRNXRw"><img src={logoYt} alt="Лого"/></a>
+                                <a target={'_blank'} href="https://vk.com/rivierasunrise"><img src={logoVk} alt="ВК"/></a>
                             </div>
                             <div className={s.flexWrapper}>
                                 <p>Документы</p>
