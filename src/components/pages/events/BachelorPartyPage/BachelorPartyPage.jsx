@@ -19,6 +19,8 @@ import EventTextImgBlock from "../../../shared/EventTextImgBlock/EventTextImgBlo
 import ContactForm from "../../../additional/ContactForm/ContactForm";
 
 const BachelorPartyPage = () => {
+    React.useEffect( () => document.title = `Настоящий Мальчишник в Крыму – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
 
     return <>
 

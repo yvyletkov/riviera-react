@@ -6,6 +6,9 @@ import MapSection from "../../shared/MapSection/MapSection";
 
 const ContactsPage = () => {
 
+    React.useEffect( () => document.title = `Наши контакты – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
+
     const [showDescr, setShowDescr] = React.useState(false);
 
     return ( <>

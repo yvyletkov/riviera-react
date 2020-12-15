@@ -136,6 +136,9 @@ const SubscriptionsStyledDiv = styled.div`
 
 const GymPage = () => {
 
+    React.useEffect( () => document.title = `Фитнес зал – the Shored SPA - Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
+
     const {bannerData, mainSlides, apparatusesSlides, subscriptionsSlides} = infrastructurePagesData.gymPage;
 
     // let [currentTab, setCurrentTab] = React.useState(1);

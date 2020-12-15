@@ -10,6 +10,9 @@ import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
 import FoodBlock from "../../shared/FoodBlock/FoodBlock";
 
 const VacationWithFriendsPage = () => {
+
+    React.useEffect( () => document.title = `Отдых с друзьями – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
     return <>
         <VacationsPageBanner fontSize={["82px", "60px"]}
                              fontSizeMobile={["15vw", "10vw"]}

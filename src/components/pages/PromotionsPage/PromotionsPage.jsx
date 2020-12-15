@@ -41,6 +41,9 @@ const SliderStyles = styled(Slider)`
 
 const PromotionsPage = () => {
 
+    React.useEffect( () => document.title = `Акции и специальные предложения – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
+
     const settings = {
         infinite: true,
         centerPadding: "60px",

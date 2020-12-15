@@ -2,10 +2,12 @@ import React from "react";
 import s from "./VacanciesPage.module.scss";
 import MapSection from "../../shared/MapSection/MapSection";
 import Headline from "../../shared/Headline/Headline";
-import vacationsImg from "../../../img/vacancies/1.jpg";
+// import vacationsImg from "../../../img/vacancies/1.jpg";
 import Button from "../../shared/Button/Button";
 
 const VacanciesPage = () => {
+
+    React.useEffect( () => document.title = `Вакансии – the Shored SPA - Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
     let [currentTab, setCurrentTab] = React.useState(0);
     const tabs = ["Служба питания", "Хозяйственная служба"]
@@ -57,7 +59,7 @@ const VacanciesPage = () => {
                             {window.matchMedia('(max-width:992px)').matches ? null : <Button style={{marginTop:'30px'}} text="Оставить резюме"/> }
                         </div>
                         <div className={s.imgBlock}>
-                            <img className={s.image} src={vacationsImg} alt="Вакансия" />
+                            {/*<img className={s.image} src={vacationsImg} alt="Вакансия" />*/}
                         </div>
                         {window.matchMedia('(min-width:992px)').matches ? null : <Button text="Оставить резюме"/>}
                     </div>

@@ -9,6 +9,10 @@ import Headline from "../../../shared/Headline/Headline";
 import SpecialsDynamicSlider from "../../../shared/sliders/SpecialsDynamicSlider/SpecialsDynamicSlider";
 
 const AquaThermalPage = () => {
+
+    React.useEffect( () => document.title = `Акватермальная зона – the Shored SPA - Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
+
     return <>
         <InfrastructurePageBanner bannerData={infrastructurePagesData.aquaThermalPage.bannerData}/>
 

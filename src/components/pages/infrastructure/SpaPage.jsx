@@ -5,6 +5,9 @@ import MapSection from "../../shared/MapSection/MapSection";
 import {infrastructurePagesData} from "../../../data";
 
 const SpaPage = () => {
+
+    React.useEffect( () => document.title = `SPA комплекс – the Shored SPA – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
     return <>
         <InfrastructurePageBanner bannerData={infrastructurePagesData.spaPage.bannerData}/>
 

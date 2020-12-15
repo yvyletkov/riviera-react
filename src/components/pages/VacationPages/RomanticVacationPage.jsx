@@ -10,6 +10,9 @@ import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
 import FoodBlock from "../../shared/FoodBlock/FoodBlock";
 
 const RomanticVacationPage = () => {
+
+    React.useEffect( () => document.title = `Романтический отдых – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
     return <>
         <VacationsPageBanner fontSize={["75px", "47px"]}
                              fontSizeMobile={["15.6vw", "8.2vw"]}

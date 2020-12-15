@@ -24,6 +24,9 @@ import ContactForm from "../../../additional/ContactForm/ContactForm";
 
 const WeddingPage = () => {
 
+    React.useEffect( () => document.title = `Выездная церемония – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
+
     return <>
 
         <EventPageBanner fontSize={['68px', '82px', '52px']} mobileFontSize={['9.7vw', '12.3vw', '8.2vw']}

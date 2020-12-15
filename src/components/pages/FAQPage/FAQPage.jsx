@@ -20,6 +20,9 @@ const Question = ({title, answer = 'Ответ на этот вопрос поя
 
 const FAQPage = () => {
 
+    React.useEffect( () => document.title = `Вопросы и ответы – the Shored SPA - Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
+
     let [currentTab, setCurrentTab] = React.useState(0);
 
     const tabs = ['Номера и проживание', 'Медицинский центр', 'Транспорт', 'Питание', 'Разное']

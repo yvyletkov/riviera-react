@@ -22,6 +22,10 @@ import SpecialTask from "../../../shared/SpecialTask/SpecialTask";
 import ContactForm from "../../../additional/ContactForm/ContactForm";
 
 const ForumPage = () => {
+
+    React.useEffect( () => document.title = `Форум – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
+
     let [accordeonStatus, setAccordeonStatus] = React.useState(false);
 
     const settings = {

@@ -5,6 +5,10 @@ import walletImg from "../../../../img/wallet.png";
 
 const SinglePromotionPage = ({bannerImg, title, description, hiddenDescription, firstCol, secondCol}) => {
 
+    console.log(title)
+
+    React.useEffect( () => document.title = `${title[0]} ${title[1]} – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
     const [showDescr, setShowDescr] = React.useState(false);
 
 

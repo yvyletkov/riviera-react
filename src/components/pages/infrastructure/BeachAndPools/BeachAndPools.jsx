@@ -16,6 +16,9 @@ import areaIcon from "../../../../img/infrastructure/beach-pools/icons/1.png";
 import temperatureIcon from "../../../../img/infrastructure/beach-pools/icons/2.png";
 
 const BeachAndPools = () => {
+
+    React.useEffect( () => document.title = `Пляж и бассейны – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
     return <>
         <InfrastructurePageBanner bannerData={infrastructurePagesData.beachAndPools.bannerData}/>
         <section className='section first'>

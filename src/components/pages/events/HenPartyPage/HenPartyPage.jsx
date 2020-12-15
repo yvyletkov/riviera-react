@@ -20,6 +20,9 @@ import ContactForm from "../../../additional/ContactForm/ContactForm";
 
 const HenPartyPage = () => {
 
+    React.useEffect( () => document.title = `Девичник в Крыму – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
+
     return <>
 
         <EventPageBanner fontSize={['46px', '79px', '55px']} mobileFontSize={['8.7vw', '14.3vw', '8.2vw']}

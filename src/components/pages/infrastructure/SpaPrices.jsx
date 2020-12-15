@@ -10,6 +10,9 @@ import weekDaysIcon from "../../../img/infrastructure/spaPage/prices/icons/2.png
 
 const SpaPrices = () => {
 
+    React.useEffect( () => document.title = `SPA-услуги и цены – the Shored SPA - Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
+
     let [currentTab, setCurrentTab] = useState(0);
 
     const ApparatusesStyledDiv = styled.div`
