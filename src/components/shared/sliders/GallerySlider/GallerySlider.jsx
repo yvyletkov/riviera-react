@@ -6,6 +6,7 @@ import styled from "styled-components";
 import HeadlineCenter from "../../HeadlineCenter/HeadlineCenter";
 import {NextArrow, PrevArrow} from "../SliderArrows/sliderArrowButtons";
 import Button from "../../Button/Button";
+import {SRLWrapper} from "simple-react-lightbox";
 
 const StyledSlider = styled(Slider)`
   .slick-next:before,
@@ -97,19 +98,33 @@ const GallerySlider = ({blockName = "Фотогалерея", slides}) => {
         );
     });
 
+    const options = {
+        buttons: {
+            showAutoplayButton: false,
+            showCloseButton: true,
+            showDownloadButton: false,
+            showFullscreenButton: false,
+        },
+        caption: {
+            showCaption: false,
+        }
+    };
+
     return (
-        <div id='gallery' className={s.wrapper}>
-            <div className={s.container}>
-                <HeadlineCenter title={blockName}/>
-                <StyledSlider>
-                    <Slider {...settings}>{items}</Slider>
-                </StyledSlider>
-                <div className={s.mobileBlock}>
-                    <div className={s.mobileBlockText}>Больше фотографий нашего отеля</div>
-                    <Button text={'Перейти к галерее'} />
+        <SRLWrapper options={options}>
+            <div id='gallery' className={s.wrapper}>
+                <div className={s.container}>
+                    <HeadlineCenter title={blockName}/>
+                    <StyledSlider>
+                        <Slider {...settings}>{items}</Slider>
+                    </StyledSlider>
+                    <div className={s.mobileBlock}>
+                        <div className={s.mobileBlockText}>Больше фотографий нашего отеля</div>
+                        <Button text={'Перейти к галерее'}/>
+                    </div>
                 </div>
             </div>
-        </div>
+        </SRLWrapper>
     );
 };
 

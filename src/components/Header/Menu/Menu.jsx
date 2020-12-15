@@ -34,6 +34,9 @@ const Menu = ({menuOpened, toggleMenu}) => {
         setInfrastructureOpened(!infrastructureOpened)
     };
 
+    const handleLinkClick = (e) => {
+        e.preventDefault()
+    }
 
     const checkActive = (match, location) => {
         if (!location) return false;
@@ -261,14 +264,16 @@ const Menu = ({menuOpened, toggleMenu}) => {
                                 </NavLink>
                             </div>
 
-                            <div className={s.menuItem} onClick={toggleMenu}>
-                                <NavLink to={"/"}>
+                            {/*<div className={s.menuItem} onClick={toggleMenu}>*/}
+                            <div className={s.menuItem}>
+                                <NavLink style={{cursor: 'not-allowed'}} onClick={handleLinkClick} to={"/"}>
                                     Отзывы
                                 </NavLink>
                             </div>
 
-                            <div className={s.menuItem} onClick={toggleMenu}>
-                                <NavLink to={"/"}>
+                            {/*<div className={s.menuItem} onClick={toggleMenu}>*/}
+                            <div className={s.menuItem}>
+                                <NavLink style={{cursor: 'not-allowed'}} onClick={handleLinkClick} to={"/"}>
                                     Анимация
                                 </NavLink>
                             </div>
