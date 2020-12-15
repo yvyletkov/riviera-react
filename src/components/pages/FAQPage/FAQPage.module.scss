@@ -177,7 +177,11 @@
         font-family: "Helvetica Neue Medium", sans-serif;
         padding: 0 10px;
         margin-bottom: 2px;
+        color: #a5acae;
+        cursor: not-allowed;
         &.active {
+          color: #000;
+          cursor: pointer;
           text-decoration: underline;
         }
       }
@@ -232,6 +236,9 @@
             max-height: 0;
             font-size: 14px;
             transition: all 800ms;
+            ul li {
+              font-size: 14px;
+            }
           }
 
           &.opened {
