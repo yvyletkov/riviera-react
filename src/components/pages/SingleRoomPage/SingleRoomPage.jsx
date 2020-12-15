@@ -7,6 +7,9 @@ import SpecialsSlider from "../../shared/sliders/SpecialsSlider/SpecialsSlider";
 import MapSection from "../../shared/MapSection/MapSection";
 
 const SingleRoomPage = ({data}) => {
+
+    React.useEffect( () => document.title = `${data.campusName} ${data.roomName} – номера и цены – отель Riviera Sunrise esort & SPA – Алушта, Крым`, [])
+
     return <>
         <RoomPageBanner bannerImg={data.bannerImg} campusName={data.campusName} roomName={data.roomName} roomNameFontSize={data.roomNameFontSize}/>
 

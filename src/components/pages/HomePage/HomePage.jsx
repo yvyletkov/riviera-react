@@ -10,6 +10,8 @@ import MapSection from "../../shared/MapSection/MapSection";
 
 const HomePage = () => {
 
+    React.useEffect( () => document.title = 'Riviera Sunrise Resort & SPA – Алушта, Крым – главная страница', [])
+
     return <>
         <HomePageBanner/>
 

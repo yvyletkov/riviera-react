@@ -24,6 +24,9 @@ import ContactForm from "../../../additional/ContactForm/ContactForm";
 const TeamBuildingPage = () => {
     let [accordeonStatus, setAccordeonStatus] = React.useState(false);
 
+    React.useEffect( () => document.title = `Тимбилдинг в Крыму – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
+
     const settings = {
         infinite: false,
         slidesToShow: 5,

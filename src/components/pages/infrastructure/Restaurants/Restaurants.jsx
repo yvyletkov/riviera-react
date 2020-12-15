@@ -13,6 +13,9 @@ import iconTime from "../../../../img/infrastructure/restaurant/icons/time.png";
 
 const Restaurants = () => {
 
+    React.useEffect( () => document.title = `Рестораны и бары - Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
+
     let [currentTab, setCurrentTab] = useState(0);
 
     const ApparatusesStyledDiv = styled.div`

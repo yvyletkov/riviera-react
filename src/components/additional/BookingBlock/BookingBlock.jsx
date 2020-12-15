@@ -5,7 +5,7 @@ import s from "./BookingBlock.module.scss";
 // const StyledDiv = styled.div`
 // .sfl-container .sf-submit-button-container .sfl-submit-button {
 //     text-transform: none;
-//     font-family: 'Helvetica Neue Light', sans-serif;
+//     font-family: 'Helvet ica Neue Light', sans-serif;
 //     font-size: 16px;
 //     font-weight: 100;
 //     background: #fe6c39;

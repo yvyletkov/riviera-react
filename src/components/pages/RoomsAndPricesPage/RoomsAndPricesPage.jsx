@@ -8,6 +8,9 @@ import GridSlider2 from "../../shared/sliders/GridSlider/TestGridSlider";
 
 
 const RoomsAndPricesPage = () => {
+
+    React.useEffect( () => document.title = 'Номера и цены – отель Riviera Sunrise Resort & SPA – Алушта, Крым', [])
+
     return <>
         <RoomsAndPricesPageBanner/>
 

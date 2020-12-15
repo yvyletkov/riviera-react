@@ -21,6 +21,9 @@ import ContactForm from "../../../additional/ContactForm/ContactForm";
 
 const BirthdayPage = () => {
 
+    React.useEffect( () => document.title = `День рождения в Крыму – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
+
     return <>
 
         <EventPageBanner fontSize={['75px', '75px', '52px']} mobileFontSize={['11.7vw', '13vw', '8.2vw']}

@@ -13,6 +13,9 @@ import FoodBlock from "../../shared/FoodBlock/FoodBlock";
 
 const FamilyVacationPage = () => {
 
+    React.useEffect( () => document.title = `Семейный отдых – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
+
     return <>
         <VacationsPageBanner fontSize={["70px", "57px"]}
                              fontSizeMobile={["16.7vw", "10.5vw"]}

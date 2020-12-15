@@ -17,6 +17,9 @@ import FoodBlock from "../../../shared/FoodBlock/FoodBlock";
 
 const EventTourismPage = () => {
 
+    React.useEffect( () => document.title = `Событийный туризм в Крыму – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
+
     return (
         <>
             <MicePageBanner subtitle={'Мероприятия'}
