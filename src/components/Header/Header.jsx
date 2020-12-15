@@ -11,8 +11,8 @@ import {NavLink} from "react-router-dom";
 import Menu from "./Menu/Menu";
 
 
-const Link = ({title, style, icon, link = '#', extraClass = null}) => {
-    return <NavLink style={style} to={link} className={s.link + ' ' + extraClass}>
+const Link = ({title, style, icon, link = '#', extraClass = null, onClickHandler}) => {
+    return <NavLink onClick={onClickHandler ? onClickHandler : null} style={style} to={link} className={s.link + ' ' + extraClass}>
         <img src={icon} alt={title}/>
         {title ? <div>{title}</div> : null}
     </NavLink>
@@ -58,14 +58,14 @@ const Header = () => {
                         </div>
                         <div className={s.leftBlock}>
                             <Link title={"Спецпредложения"} icon={star} link={"/offers"}/>
-                            <Link onClick={handleLinkClick} style={{cursor: 'not-allowed'}} title={"Анимация"} icon={speaker} link={""}/>
-                            <Link onClick={handleLinkClick} style={{cursor: 'not-allowed'}} title={"Новости"} icon={microphone} link={""}/>
+                            <Link onClickHandler={handleLinkClick} style={{cursor: 'not-allowed'}} title={"Анимация"} icon={speaker} link={""}/>
+                            <Link onClickHandler={handleLinkClick} style={{cursor: 'not-allowed'}} title={"Новости"} icon={microphone} link={""}/>
                         </div>
                         <div className={s.logo}>
                             <NavLink to={'/'}><img src={logo} alt="Riviera Sunrise"/></NavLink>
                         </div>
                         <div className={s.rightBlock}>
-                            <Link onClick={handleLinkClick} style={{cursor: 'not-allowed'}} icon={search} extraClass={s.searchIcon} link={""}/>
+                            <Link onClickHandler={handleLinkClick} style={{cursor: 'not-allowed'}} icon={search} extraClass={s.searchIcon} link={""}/>
                             <div className={s.contacts}>
                                 <Link icon={phone} href={"tel:+78005557856"} extraClass={s.number}
                                       title={"+7 (800) 555-78-56"}/>
