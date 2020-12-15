@@ -16,7 +16,9 @@ $black: #171717;
   position: relative;
   margin-top: 0;
   height: 100vh;
-  max-height: 750px;
+  @media (min-width: 769px) {
+    max-height: 750px;
+  }
   width: 100%;
   background-color: #f8f8f8;
   //overflow: hidden;

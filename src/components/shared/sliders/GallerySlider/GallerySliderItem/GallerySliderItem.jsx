@@ -4,12 +4,11 @@ import LazyImage from "../../../../additional/LazyImg";
 
 
 const GallerySliderItem = ({img, title, description, href}) => {
-    // let [showDescription, setShowDescription] = React.useState(false);
+    let [showDescription, setShowDescription] = React.useState(false);
 
     return (
-        // <div onMouseEnter={() => setShowDescription(true)}
-        //      onMouseLeave={() => setShowDescription(false)}
-        <div
+        <div onMouseEnter={() => setShowDescription(true)}
+             onMouseLeave={() => setShowDescription(false)}
              className={s.photo}>
             <LazyImage className={s.img} src={img} alt={title}/>
             {/*<div className={showDescription ? `${s.description} ${s.shown}` : s.description}>*/}

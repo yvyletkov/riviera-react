@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./VacationsPageBanner.module.scss";
-import cirqlesImg from "../../../img/home-page/cirqles.png"
+// import cirqlesImg from "../../../img/home-page/cirqles.png"
 import BookingBlock from "../../additional/BookingBlock/BookingBlock";
 
 const VacationsPageBanner = ({fontSize, fontSizeMobile, subtitle, topLine, bottomLine, bannerImg, bannerMobileImg, descr, extraLine = []}) => {
