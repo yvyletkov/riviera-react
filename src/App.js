@@ -13,6 +13,7 @@ import BottomMenu from "./components/shared/BottomMenu/BottomMenu";
 import GridSliderPage from "./components/GridSliderPage";
 import MedicalSpaPage from "./components/pages/MedicalSpaPage/MedicalSpaPage";
 import BookingPage from "./components/pages/BookingPage/BookingPage";
+import TransferPage from "./components/pages/TransferPage/TransferPage";
 
 const HomePage = lazy(() => import('./components/pages/HomePage/HomePage'));
 const RoomsAndPricesPage = lazy(() => import('./components/pages/RoomsAndPricesPage/RoomsAndPricesPage'));
@@ -55,6 +56,9 @@ function App() {
             </div>}>
 
                 <Switch>
+                    <Route path='/transfer' exact
+                           component={() => <TransferPage/>}/>
+
                     <Route path='/booking' exact
                            component={() => <BookingPage/>}/>
 
