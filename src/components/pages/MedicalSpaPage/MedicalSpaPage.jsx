@@ -56,7 +56,7 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
 
                 <div className={s.icons}>
                     {bannerIcons.map((item, index) => <div key={index} className={s.icon}>
-                        <img src={item} alt=""/>
+                        <img style={index === 1 ? {height: '29px', position: 'relative', top: '3px'} : {}} src={item} alt=""/>
                     </div>)}
                 </div>
 
