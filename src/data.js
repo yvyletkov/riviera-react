@@ -3128,5 +3128,6 @@ export const medicalSpaPage = {
             key: 6,
         },
     ],
+    gallerySlides: commonGallerySlides,
 }
 

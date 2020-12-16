@@ -7,6 +7,7 @@ import logoInst from "../../img/footer/inst.png";
 import logoYt from "../../img/footer/youtube.png";
 import logoPin from "../../img/footer/pin.png";
 import logoPhone from "../../img/footer/phone.png";
+import {NavLink} from "react-router-dom";
 
 const Footer = () => {
     return (<>
@@ -30,27 +31,26 @@ const Footer = () => {
                         </div>
                         <div className={s.footerNav}>
                             <ul>
-                                <li>О нас</li>
-                                <li>Размещение</li>
-                                <li>Бары и рестораны</li>
-                                <li>Детям</li>
-                                <li>Курортный отдых</li>
-                                <li>Инфраструктура</li>
+                                <li><NavLink to={'/nomera-i-tseny'}>Номера и цены</NavLink></li>
+                                <li><NavLink to={'/family-vacation'}>Семейный отдых</NavLink></li>
+                                <li><NavLink to={'/vacation-for-yourself'}>Отдых без детей</NavLink></li>
+                                <li><NavLink to={'/romantic-vacation'}>Романтический отдых</NavLink></li>
+                                <li><NavLink to={'/vacation-with-friends'}>Отдых с друзьями</NavLink></li>
                             </ul>
                             <ul>
-                                <li>Мероприятия</li>
-                                <li>Галерея</li>
-                                <li>Спецпредложения</li>
-                                <li>Отзывы</li>
-                                <li>Контакты</li>
-                                <li>Партнерам</li>
+                                <li><NavLink to={'/medical-spa'}>Medical SPA</NavLink></li>
+                                <li><NavLink to={'/offers'}>Специальные предложения</NavLink></li>
+                                <li><NavLink to={'/spa'}>SPA комплекс</NavLink></li>
+                                <li><NavLink to={'/restaurant'}>Бары и рестораны</NavLink></li>
+                                {/*<li>Партнерам</li>*/}
                             </ul>
                             <ul>
-                                <li>Вакансии/карьера</li>
-                                <li>Новости/пресс-релизы</li>
-                                <li>FAQ</li>
-                                <li>Medical SPA</li>
-                                <li>Развлечения</li>
+                                <li><NavLink to={'/reviews'}>Отзывы</NavLink></li>
+                                <li><NavLink to={'/contact'}>Контакты</NavLink></li>
+                                <li><NavLink to={'/vacancies'}>Вакансии/карьера</NavLink></li>
+                                <li><NavLink to={'/faq'}>FAQ (Частые вопросы)</NavLink></li>
+                                {/*<li>Новости/пресс-релизы</li>*/}
+                                {/*<li>Развлечения</li>*/}
                             </ul>
                         </div>
                         <div className={s.footerSocials}>
@@ -62,8 +62,8 @@ const Footer = () => {
                                 <a target={'_blank'} href="https://vk.com/rivierasunrise"><img src={logoVk} alt="ВК"/></a>
                             </div>
                             <div className={s.flexWrapper}>
-                                <p>Документы</p>
-                                <p>Программа лояльности UPRO CLUB</p>
+                                {/*<p>Документы</p>*/}
+                                {/*<p>Программа лояльности UPRO CLUB</p>*/}
                             </div>
 
                         </div>

@@ -6,7 +6,6 @@ import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
 import {medicalSpaPage, roomsAndPricesPageData} from "../../../data";
 import Button from "../../shared/Button/Button";
 import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
-import img from "../../../img/events/wedding/weddingPageBanner.jpg";
 import AnimatedMouseIcon from "../../shared/AnimatedMouseIcon/AnimatedMouseIcon";
 import AdvantagesBlock from "../../shared/AdvantagesBlock/AdvantagesBlock";
 import EventMainSlider from "../../shared/sliders/EventMainSlider/EventMainSlider";
@@ -16,13 +15,26 @@ import medicalSpaPopupImgSpina from "../../../img/medical-spa/popup/здоров
 import medicalSpaPopupImgDvizhenie from "../../../img/medical-spa/popup/свобода-движения.jpg";
 import medicalSpaPopupImgSerdce from "../../../img/medical-spa/popup/сильное-сердце.jpg";
 import medicalSpaPopupImgStress from "../../../img/medical-spa/popup/управление-стрессом.jpg";
+import topBlockImg from "../../../img/medical-spa/topBlockImg.jpg";
 import closeBtn from "../../../img/close.svg";
+import Headline from "../../shared/Headline/Headline";
+import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
+import MapSection from "../../shared/MapSection/MapSection";
 
 
 const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
 
     let [popupContactFormOpen, setPopupContactFormOpen] = React.useState(false);
-    let [showPopup, setShowPopup] = React.useState(false); // or 1, 2, 3, 4
+    let [showPopup, setShowPopup] = React.useState(false);
+    let [popupIndex, setPopupIndex] = React.useState(0);
+
+    const activatePopup = (index) => {
+        setPopupIndex(index);
+        setShowPopup(true);
+    }
+
+    React.useEffect(() => document.title = `Medical SPA - Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
 
     return <>
 
@@ -69,10 +81,32 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
             <AdvantagesBlock slidesToShow={5} icons={advantagesIcons} title={'Всё лучшее в одном месте'}/>
         </section>
 
-        <section className='section first'>
-            <EventMainSlider withButton setShowPopup={setShowPopup} title={'Программы оздоровления'} manySlides={true}
+        <section className='section'>
+            <EventMainSlider withButton activatePopup={activatePopup} title={'Программы оздоровления'} manySlides={true}
                              titleMobile={'Программы оздоровления'} initialSlideIndex={1}
                              slides={medicalSpaPage.mainSlides}/>
+        </section>
+
+        <section className='section'>
+            <div className={s.topBlockWrapper}>
+                <div className={s.container}>
+                    <div className={s.background}/>
+                    <div className={s.textContent}>
+                        <Headline subtitle={'Философия'} title={'качества'}/>
+
+                        <p>Riviera Sunrise Resort & SPА объединяет все, что отдыхающие ищут в отелях - комфортные
+                            номера, безупречный сервис и десятки возможностей полезного времяпрепровождения. Мы
+                            практикуем холистический подход к здоровью и отдыху: создали полноценную систему
+                            восстановления физических и душевных сил. Предлагаем только немедикаментозные методики
+                            лечения, потому что знаем - организм человека обладает колоссальными ресурсами
+                            самовосстановления. Нужно только пробудить их, и мы знаем как.</p>
+
+                    </div>
+
+                    <img src={topBlockImg} alt={"Medical SPA – Riviera Sunrise"}/>
+
+                </div>
+            </div>
         </section>
 
         <section className='section'>
@@ -88,12 +122,20 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
             <GridSlider slides={roomsAndPricesPageData.gridSlides}/>
         </section>
 
-        <section className='section last'>
+        <section className='section'>
             <CenteredSlider title={'Сегодня в программе'} slides={roomsAndPricesPageData.centeredSlides}/>
         </section>
 
+        <section className='section'>
+            <GallerySlider blockName={'Фотогалерея'} slides={medicalSpaPage.gallerySlides}/>
+        </section>
+
+        <section className='section'>
+            <MapSection/>
+        </section>
+
         {/* POPUP Восстановление*/}
-        <div className={showPopup === 1 ? s.popupWrapper + ' ' + s.show : s.popupWrapper}>
+        <div className={showPopup && popupIndex === 1 ? s.popupWrapper + ' ' + s.show : s.popupWrapper}>
             <div className={s.popup}>
                 <div className={s.col}>
                     <h4>Восстановление</h4>
@@ -106,14 +148,17 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
                         <p>Программа рекомендуется широкому кругу людей с усталостью, раздражением, стрессом, низким
                             уровнем иммунитета, концентрации и работоспособности.</p>
                         <h5>Результат</h5>
-                        <p>Восстановление организма после заболеваний или травм, снижение обострений хронических недугов, активация защитных сил организма для профилактики заболевания, адаптация к стресс-факторам городской среды, избавление от острых проявлений хронических заболеваний, возвращение функциональности суставов, повышение жизненного тонуса и работоспособности.</p>
+                        <p>Восстановление организма после заболеваний или травм, снижение обострений хронических
+                            недугов, активация защитных сил организма для профилактики заболевания, адаптация к
+                            стресс-факторам городской среды, избавление от острых проявлений хронических заболеваний,
+                            возвращение функциональности суставов, повышение жизненного тонуса и работоспособности.</p>
                     </div>
                 </div>
                 <div className={s.col}>
                     <img src={medicalSpaPopupImgVosstan} alt="Восстановление"/>
                 </div>
                 <div className={s.col}>
-                    <img className={s.closeBtn} onClick={ () => setShowPopup(false)} src={closeBtn} alt="close"/>
+                    <img className={s.closeBtn} onClick={() => setShowPopup(false)} src={closeBtn} alt="close"/>
 
                     <h5>Методика восстановления</h5>
                     <ul>
@@ -125,7 +170,8 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
                         <li>Климатотерапия</li>
                         <li>Фитотерапия</li>
                         <li>Вегето-резонансная
-                            диагностика и терапия</li>
+                            диагностика и терапия
+                        </li>
                         <li>Галотерапия</li>
                     </ul>
                 </div>
@@ -133,9 +179,8 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
 
         </div>
 
-
         {/* POPUP Управление стрессом*/}
-        <div className={showPopup === 2 ? s.popupWrapper + ' ' + s.show : s.popupWrapper}>
+        <div className={showPopup && popupIndex === 2 ? s.popupWrapper + ' ' + s.show : s.popupWrapper}>
             <div className={s.popup}>
                 <div className={s.col}>
                     <h4>Управление стрессом</h4>
@@ -145,16 +190,19 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
 
                     <div>
                         <h5>Для кого?</h5>
-                        <p>Программа показана людям с хроническим стрессом, страдающим вегетососудистой дистонией и неврастенией, депрессией и неврозами. </p>
+                        <p>Программа показана людям с хроническим стрессом, страдающим вегетососудистой дистонией и
+                            неврастенией, депрессией и неврозами. </p>
                         <h5>Результат</h5>
-                        <p>Снижение уровня накопившегося в организме хронического стресса. Избавиться от хронической усталости, бессонницы, тревожности, раздражительности, напряжения, головной боли. Также повышение уровня работоспособности и концентрации, </p>
+                        <p>Снижение уровня накопившегося в организме хронического стресса. Избавление от хронической
+                            усталости, бессонницы, тревожности, раздражительности, напряжения, головной боли, а также
+                            повышение уровня работоспособности и концентрации.</p>
                     </div>
                 </div>
                 <div className={s.col}>
                     <img src={medicalSpaPopupImgStress} alt=""/>
                 </div>
                 <div className={s.col}>
-                    <img className={s.closeBtn} onClick={ () => setShowPopup(false)} src={closeBtn} alt="close"/>
+                    <img className={s.closeBtn} onClick={() => setShowPopup(false)} src={closeBtn} alt="close"/>
 
                     <h5>Методика лечения</h5>
                     <ul>
@@ -177,7 +225,7 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
                         <li>Стоун массаж</li>
                         <li>Сауна</li>
                         <li>Римская парная</li>
-                        <li>хамам</li>
+                        <li>Хаммам</li>
                         <li>Бассейн</li>
                         <li>Джакузи</li>
                         <li>Лежаки «теплый сон»</li>
@@ -189,6 +237,231 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
             </div>
 
         </div>
+
+        {/* POPUP Детокс*/}
+        <div className={showPopup && popupIndex === 3 ? s.popupWrapper + ' ' + s.show : s.popupWrapper}>
+            <div className={s.popup}>
+                <div className={s.col}>
+                    <h4>Детокс</h4>
+                    <p>Восстановите здоровье и оптимальный уровень энергии</p>
+                    <h5>Продолжительность</h5>
+                    <p>Определяется пожеланием гостя</p>
+
+                    <div>
+                        <h5>Для кого?</h5>
+                        <p>Программа предназначена для людей с привычкой неправленого питания, страдающие от избыточной
+                            тяги к кофе, сладкому, табаку или алкоголю. Также людям, живущим в городах с неблагоприятной
+                            экологической обстановкой.</p>
+                        <h5>Результат</h5>
+                        <p>Определение уровня оксидативного стресса в организме для его нейтрализации. Очищение
+                            организма от шлаков и токсинов, накопленных из-за неправильного питания и неблагоприятной
+                            внешней среды, избавиться от высыпаний и раздражений кожи.</p>
+                    </div>
+                </div>
+                <div className={s.col}>
+                    <img src={medicalSpaPopupImgDetox} alt=""/>
+                </div>
+                <div className={s.col}>
+                    <img className={s.closeBtn} onClick={() => setShowPopup(false)} src={closeBtn} alt="close"/>
+
+                    <h5>Методика лечения</h5>
+                    <ul>
+                        <li>Консультации врачей</li>
+                        <li>Аппаратная физиотерапия</li>
+                        <li>Бальнеология</li>
+                        <li>Фитнес</li>
+                        <li>Мануальная физиотерапия</li>
+                        <li>Климатотерапия</li>
+                        <li>Фитотерапия</li>
+                        <li>Вегето-резонансная диагностика и терапия</li>
+                        <li>Галотерапия</li>
+                        <li>Процедура для лица «Глубокое очищение»</li>
+                        <li>Йога</li>
+                        <li>Скандинавская ходьба</li>
+                        <li>Плавание</li>
+                        <li>Сауна</li>
+                        <li>Римская парная</li>
+                        <li>Хаммам</li>
+                        <li>Бассейн</li>
+                        <li>Джакузи</li>
+                        <li>Лежаки «теплый сон»</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        {/* POPUP Свобода движения*/}
+        <div className={showPopup && popupIndex === 4 ? s.popupWrapper + ' ' + s.show : s.popupWrapper}>
+            <div className={s.popup}>
+                <div className={s.col}>
+                    <h4>Свобода движения</h4>
+                    <p>Восстановите здоровье и оптимальный уровень энергии</p>
+                    <h5>Продолжительность</h5>
+                    <p>Определяется пожеланием гостя</p>
+
+                    <div>
+                        <h5>Для кого?</h5>
+                        <p>Программа предназначена людям с недостаточным уровнем активности в повседневной жизни,
+                            ведущим сидячий образ жизни, утратившим мышечный тонус</p>
+                        <h5>Результат</h5>
+                        <p>Улучшение состояния опорно-двигательной системы, повышение тонуса и укрепление мышц,
+                            возвращение функциональности суставов, избавление от боли в разных частях тела, выпрямление
+                            осанки уменьшение головных болей.</p>
+                    </div>
+                </div>
+                <div className={s.col}>
+                    <img src={medicalSpaPopupImgDvizhenie} alt=""/>
+                </div>
+                <div className={s.col}>
+                    <img className={s.closeBtn} onClick={() => setShowPopup(false)} src={closeBtn} alt="close"/>
+
+                    <h5>Методика лечения</h5>
+                    <ul>
+                        <li>Консультации врачей</li>
+                        <li>Аппаратная физиотерапия</li>
+                        <li>Бальнеология</li>
+                        <li>Фитнес</li>
+                        <li>Мануальная физиотерапия</li>
+                        <li>Климатотерапия</li>
+                        <li>Фитотерапия</li>
+                        <li>Галотерапия</li>
+                        <li>Гимнастика на свежем воздухе</li>
+                        <li>Процедура для лица «Глубокое очищение»</li>
+                        <li>Йога</li>
+                        <li>Скандинавская ходьба</li>
+                        <li>Кардиотренировки</li>
+                        <li>Массаж зональный</li>
+                        <li>Физиотерапевтическая реабилитация</li>
+                        <li>Индивидуальный массаж 60 мин</li>
+                        <li>Лимфодренажный массаж</li>
+                        <li>Турецкий пенный уход</li>
+                        <li>Сауна</li>
+                        <li>Римская парная</li>
+                        <li>Хаммам</li>
+                        <li>Бассейн</li>
+                        <li>Джакузи</li>
+                        <li>Лежаки «теплый сон»</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        {/* POPUP Сильно сердце*/}
+        <div className={showPopup && popupIndex === 5 ? s.popupWrapper + ' ' + s.show : s.popupWrapper}>
+            <div className={s.popup}>
+                <div className={s.col}>
+                    <h4>Сильное сердце</h4>
+                    <p>Восстановите здоровье и оптимальный уровень энергии</p>
+                    <h5>Продолжительность</h5>
+                    <p>Определяется пожеланием гостя</p>
+
+                    <div>
+                        <h5>Для кого?</h5>
+                        <p>Программа будет полезна людям, страдающим хроническими заболеваниями сердечно-сосудистой
+                            системы: гипертоническая болезнь, ишемической болезни сердца, заболевания артерий и вен.</p>
+                        <h5>Результат</h5>
+                        <p>Нормализация работы сердца, повышение выносливости и работоспособности, уменьшение головных
+                            болей и боли в области сердца, улучшение кровообращения и уровня общего тонуса организма
+                            благодаря здоровой сердечно-сосудистой системе.</p>
+                    </div>
+                </div>
+                <div className={s.col}>
+                    <img src={medicalSpaPopupImgSerdce} alt=""/>
+                </div>
+                <div className={s.col}>
+                    <img className={s.closeBtn} onClick={() => setShowPopup(false)} src={closeBtn} alt="close"/>
+
+                    <h5>Методика лечения</h5>
+                    <ul>
+                        <li>Консультации врачей</li>
+                        <li>Аппаратная физиотерапия</li>
+                        <li>Бальнеология</li>
+                        <li>Грязелечение</li>
+                        <li>Фитнес</li>
+                        <li>Мануальная физиотерапия</li>
+                        <li>Климатотерапия</li>
+                        <li>Фитотерапия</li>
+                        <li>Галотерапия</li>
+                        <li>Аэротерапия</li>
+                        <li>Гелиотерапия</li>
+                        <li>Талассотерапия</li>
+                        <li>Йога</li>
+                        <li>Бассейн</li>
+                        <li>Электрофорез</li>
+                        <li>Магнитотерапия</li>
+                        <li>УВЧ</li>
+                        <li>Дарсонваль</li>
+                        <li>Кислородный коктейль</li>
+                        <li>Массаж воротниковой зоны</li>
+                        <li>Детокс-массаж</li>
+                        <li>Вихревая ванна</li>
+                        <li>Ванна лекарственная</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        {/* POPUP Здоровая спина*/}
+        <div className={showPopup && popupIndex === 6 ? s.popupWrapper + ' ' + s.show : s.popupWrapper}>
+            <div className={s.popup}>
+                <div className={s.col}>
+                    <h4>Здоровая спина</h4>
+                    <p>Восстановите здоровье и оптимальный уровень энергии</p>
+                    <h5>Продолжительность</h5>
+                    <p>Определяется пожеланием гостя</p>
+
+                    <div>
+                        <h5>Для кого?</h5>
+                        <p>Программа разработана для людей сидячий образ жизни, беспокоящих остеохондроз, сколиоз, грыжа
+                            межпозвоночных дисков и спондилез.</p>
+                        <h5>Результат</h5>
+                        <p>Восстановление осанки, уменьшение болевого синдрома, уменьшение нарушений чувствительности,
+                            избавиться от острых и хронических болей в спине и защемлений, снять напряжение и гипертонус
+                            мышц, восстановить чувствительность и подвижность конечностей.</p>
+                    </div>
+                </div>
+                <div className={s.col}>
+                    <img src={medicalSpaPopupImgSpina} alt=""/>
+                </div>
+                <div className={s.col}>
+                    <img className={s.closeBtn} onClick={() => setShowPopup(false)} src={closeBtn} alt="close"/>
+
+                    <h5>Методика лечения</h5>
+                    <ul>
+                        <li>Консультации врачей</li>
+                        <li>Аппаратная физиотерапия</li>
+                        <li>Бальнеология</li>
+                        <li>Грязелечение</li>
+                        <li>Мануальная физиотерапия</li>
+                        <li>Фитнес</li>
+                        <li>Галотерапия</li>
+                        <li>Гелиотерапия, талассотерапия</li>
+                        <li>Йога</li>
+                        <li>Тренажерный зал</li>
+                        <li>Бассейн</li>
+                        <li>Грязелечение</li>
+                        <li>Восстанавливающий массаж спины</li>
+                        <li>Климатотерапия</li>
+                        <li>Фитотерапия</li>
+                        <li>Ультразвук</li>
+                        <li>Магнитотерапия</li>
+                        <li>ДДТ</li>
+                        <li>Амплипульс</li>
+                        <li>Кислородный коктейль</li>
+                        <li>Электрофорез</li>
+                        <li>Вихревая ванна</li>
+                        <li>Ванна лекарственная</li>
+                        <li>Флоатинг</li>
+                        <li>Термальное оздоровление Гротта Джусти</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
 
     </>
 

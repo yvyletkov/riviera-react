@@ -10,9 +10,6 @@ import './style/rodal.css';
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import BottomMenu from "./components/shared/BottomMenu/BottomMenu";
-import GridSliderPage from "./components/GridSliderPage";
-import MedicalSpaPage from "./components/pages/MedicalSpaPage/MedicalSpaPage";
-import BookingPage from "./components/pages/BookingPage/BookingPage";
 
 const HomePage = lazy(() => import('./components/pages/HomePage/HomePage'));
 const RoomsAndPricesPage = lazy(() => import('./components/pages/RoomsAndPricesPage/RoomsAndPricesPage'));
@@ -45,6 +42,9 @@ const Restaurants = lazy(() => import('./components/pages/infrastructure/Restaur
 const FAQPage = lazy(() => import('./components/pages/FAQPage/FAQPage'));
 const SpaPrices = lazy(() => import('./components/pages/infrastructure/SpaPrices'));
 const VacanciesPage = lazy(() => import('./components/pages/VacanciesPage/VacanciesPage'));
+const BookingPage = lazy(() => import('./components/pages/BookingPage/BookingPage'));
+const MedicalSpaPage = lazy(() => import('./components/pages/MedicalSpaPage/MedicalSpaPage'));
+const ReviewsPage = lazy(() => import('./components/pages/ReviewsPage/ReviewsPage'));
 const TransferPage = lazy(() => import("./components/pages/TransferPage/TransferPage"));
 
 function App() {
@@ -56,6 +56,10 @@ function App() {
             </div>}>
 
                 <Switch>
+
+                    <Route path='/reviews' exact
+                           component={() => <ReviewsPage/>}/>
+
                     <Route path='/transfer' exact
                            component={() => <TransferPage {...singlePromotionPages.dlyaKrymchan}/>}/>
 
@@ -73,9 +77,6 @@ function App() {
 
                     <Route path='/faq' exact
                            component={() => <FAQPage/>}/>
-
-                    <Route path='/grid' exact
-                           component={() => <GridSliderPage/>}/>
 
                     <Route path='/restaurant' exact
                            component={() => <Restaurants/>}/>
