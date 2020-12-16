@@ -370,7 +370,7 @@ import beachRoomRoomsSlider from "./img/mice/rooms/beach.jpg";
 import aroundTerRoomsSlider from "./img/mice/rooms/around-ter.jpg";
 import aquaZoneRoomsSlider from "./img/mice/rooms/aqua-area.jpg";
 // END rooms imports
-//prices SPA imports
+// prices SPA imports
 import SpaPricesBanner from "./img/infrastructure/spaPage/prices/1.jpg";
 import adultSPA1 from "./img/infrastructure/spaPage/prices/adult1.jpg";
 import adultSPA2 from "./img/infrastructure/spaPage/prices/adult2.jpg";
@@ -382,6 +382,10 @@ import subscriptionSPA1 from "./img/infrastructure/spaPage/prices/subscription1.
 import subscriptionSPA2 from "./img/infrastructure/spaPage/prices/subscription2.jpg";
 import subscriptionSPA3 from "./img/infrastructure/spaPage/prices/subscription3.jpg";
 // END prices SPA imports
+// transfer imports
+import transfer1 from "./img/transfer/1.jpg";
+import transfer2 from "./img/transfer/2.jpg";
+// END transfer imports
 
 const commonGridSlides = [
     {
@@ -2539,7 +2543,42 @@ export const promotionsPageData = {
         },
 
     ],
-}
+};
+
+
+// Страница Трансфера
+export const transferPageData = [
+    {
+        img: transfer1,
+        name: 'Легковой автомобиль',
+        passengers: 'вместимость до 4 человек',
+        price1: '2 800 рублей (70 км)',
+        price2: '40 рублей (1 км)',
+        price3: '20 рублей (1 км)',
+        price4: '750 рублей (1 час)',
+        price5: '250 рублей'
+    },
+    {
+        img: transfer2,
+        name: 'Минивен',
+        passengers: 'вместимость до 6 человек',
+        price1: '4 000 рублей (70 км)',
+        price2: '60 рублей (1 км)',
+        price3: '30 рублей (1 км)',
+        price4: '1 000 рублей (1 час)',
+        price5: '250 рублей'
+    },
+    {
+        img: transfer2,
+        name: 'Минивен',
+        passengers: 'вместимость до 8 человек',
+        price1: '4 800 рублей (70 км)',
+        price2: '70 рублей (1 км)',
+        price3: '35 рублей (1 км)',
+        price4: '1 300 рублей (1 час)',
+        price5: '250 рублей'
+    }
+];
 
 // Страницы Инфраструктуры
 export const infrastructurePagesData = {

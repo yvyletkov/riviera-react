@@ -18,7 +18,6 @@ const MicePageBanner = ({
                         }) => {
     const [accordeonStatus, setAccordeonStatus] = useState(false);
     const [popupOpen, setPopupOpen] = React.useState(false);
-    // {background: 'left no-repeat url("../../../../img/mice/conference/1.jpg")'}
 
     icons = icons.map((icon) => {
         return (
