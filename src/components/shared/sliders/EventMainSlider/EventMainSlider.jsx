@@ -64,7 +64,7 @@ const SliderStylesManySlider = styled(Slider)`
 // const SliderStylesManySlider = str.replace("Microsoft", "W3Schools");
 
 
-const EventMainSlider = ({slides, title, titleMobile, initialSlideIndex = 0, manySlides = false, withButton = false, setShowPopup}) => {
+const EventMainSlider = ({slides, title, titleMobile, initialSlideIndex = 0, manySlides = false, withButton = false, activatePopup}) => {
 
     const settings = {
         initialSlide: initialSlideIndex,
@@ -110,7 +110,7 @@ const EventMainSlider = ({slides, title, titleMobile, initialSlideIndex = 0, man
                     title={title}
                     descr={descr}
                     popupData={popupData}
-                    setShowPopup={setShowPopup}
+                    activatePopup={activatePopup}
                     active={window.matchMedia('(max-width: 490px').matches ? false : index === 1}
                 />
             </div>
@@ -135,7 +135,7 @@ export default EventMainSlider;
 
 
 const EventMainSliderItem = (props) => {
-    const {img, title, descr, active, index, withButton, setShowPopup, key} = props;
+    const {img, title, descr, active, index, withButton, activatePopup} = props;
 
     let [showDescr, setShowDescr] = React.useState(active);
 
@@ -148,7 +148,7 @@ const EventMainSliderItem = (props) => {
                 <h6 className={s.title}>{title}</h6>
                 <div className={s.descr}>
                     <p style={{marginBottom: withButton ? '10px' : '0'}}>{descr}</p>
-                    { withButton && <Button onClick={ () => setShowPopup(key)} text={'Подробнее о программе'}/>}
+                    { withButton && <Button onClick={ () => activatePopup(index + 1)} text={'Подробнее о программе'}/>}
                 </div>
 
 
