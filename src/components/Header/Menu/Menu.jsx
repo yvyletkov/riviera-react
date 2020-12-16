@@ -278,6 +278,12 @@ const Menu = ({menuOpened, toggleMenu}) => {
                             </div>
 
                             <div className={s.menuItem} onClick={toggleMenu}>
+                                <NavLink to={"/transfer"}>
+                                    Трансфер
+                                </NavLink>
+                            </div>
+
+                            <div className={s.menuItem} onClick={toggleMenu}>
                                 <NavLink to={"/contact"}>
                                     Контакты
                                 </NavLink>
