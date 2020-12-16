@@ -61,7 +61,7 @@ function App() {
                            component={() => <ReviewsPage/>}/>
 
                     <Route path='/transfer' exact
-                           component={() => <TransferPage {...singlePromotionPages.dlyaKrymchan}/>}/>
+                           component={() => <TransferPage/>}/>
 
                     <Route path='/booking' exact
                            component={() => <BookingPage/>}/>

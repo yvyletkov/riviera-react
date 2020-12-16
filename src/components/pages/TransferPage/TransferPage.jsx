@@ -2,11 +2,14 @@ import React from "react";
 import s from "./TransferPage.module.scss";
 import busIcon from "../../../img/school-bus.png";
 import MapSection from "../../shared/MapSection/MapSection";
-import {infrastructurePagesData} from "../../../data";
-import SimpleSlider from "../../shared/sliders/SimpleSlider/SimpleSlider";
+import TransferSlider from "../../shared/sliders/TransferSlider/TransferSlider";
+import {transferPageData} from "../../../data";
+import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
+import Button from "../../shared/Button/Button";
 
-const TransferPage= ({title, description, hiddenDescription}) => {
+const TransferPage= () => {
     const [showDescr, setShowDescr] = React.useState(false);
+    const [popupOpen, setPopupOpen] = React.useState(false);
 
     return (<>
             <section className='section'>
@@ -43,12 +46,16 @@ const TransferPage= ({title, description, hiddenDescription}) => {
             </section>
 
             <section className="section">
-                <SimpleSlider
-                    slides={infrastructurePagesData.restaurants.restaurantsContent[0][1]}
-                    styleImg={window.matchMedia('(min-width:480px)').matches ?
-                        {height:'476px'} :
-                        {height:'240px'}}
-                />
+                <TransferSlider sliders={transferPageData}/>
+                <Button text="Заказать услугу"
+                        onClick={ () => setPopupOpen(true)}
+                        style={{margin: '30px auto 0', maxWidth:'300px'}}/>
+                <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
+                                  popupTitleText={'Для этого, пожалуйста, оставьте свои контактные данные️'}
+                                  submitBtnText='Получить смету'
+                                  formName={`Форма с главного баннера страницы MICE (получить смету)`}
+                                  swalText={'мы отправим всю необходимую информацию на указанную Вами почту в самое ближайшее время!'}
+                                  withPhone/>
             </section>
 
             <section className='section last'>
