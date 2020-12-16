@@ -45,6 +45,7 @@ const VacanciesPage = lazy(() => import('./components/pages/VacanciesPage/Vacanc
 const BookingPage = lazy(() => import('./components/pages/BookingPage/BookingPage'));
 const MedicalSpaPage = lazy(() => import('./components/pages/MedicalSpaPage/MedicalSpaPage'));
 const ReviewsPage = lazy(() => import('./components/pages/ReviewsPage/ReviewsPage'));
+const TransferPage = lazy(() => import("./components/pages/TransferPage/TransferPage"));
 
 function App() {
 
@@ -55,10 +56,14 @@ function App() {
             </div>}>
 
                 <Switch>
+
                     <Route path='/reviews' exact
                            component={() => <ReviewsPage/>}/>
 
-                     <Route path='/booking' exact
+                    <Route path='/transfer' exact
+                           component={() => <TransferPage {...singlePromotionPages.dlyaKrymchan}/>}/>
+
+                    <Route path='/booking' exact
                            component={() => <BookingPage/>}/>
 
                     <Route path='/vacancies' exact
