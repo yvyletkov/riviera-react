@@ -6,7 +6,6 @@ import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
 import {medicalSpaPage, roomsAndPricesPageData} from "../../../data";
 import Button from "../../shared/Button/Button";
 import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
-import img from "../../../img/events/wedding/weddingPageBanner.jpg";
 import AnimatedMouseIcon from "../../shared/AnimatedMouseIcon/AnimatedMouseIcon";
 import AdvantagesBlock from "../../shared/AdvantagesBlock/AdvantagesBlock";
 import EventMainSlider from "../../shared/sliders/EventMainSlider/EventMainSlider";
@@ -16,7 +15,11 @@ import medicalSpaPopupImgSpina from "../../../img/medical-spa/popup/здоров
 import medicalSpaPopupImgDvizhenie from "../../../img/medical-spa/popup/свобода-движения.jpg";
 import medicalSpaPopupImgSerdce from "../../../img/medical-spa/popup/сильное-сердце.jpg";
 import medicalSpaPopupImgStress from "../../../img/medical-spa/popup/управление-стрессом.jpg";
+import topBlockImg from "../../../img/medical-spa/topBlockImg.jpg";
 import closeBtn from "../../../img/close.svg";
+import Headline from "../../shared/Headline/Headline";
+import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
+import MapSection from "../../shared/MapSection/MapSection";
 
 
 const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
@@ -30,7 +33,7 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
         setShowPopup(true);
     }
 
-    React.useEffect( () => document.title = `Medical SPA - Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+    React.useEffect(() => document.title = `Medical SPA - Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
 
     return <>
@@ -78,10 +81,32 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
             <AdvantagesBlock slidesToShow={5} icons={advantagesIcons} title={'Всё лучшее в одном месте'}/>
         </section>
 
-        <section className='section first'>
+        <section className='section'>
             <EventMainSlider withButton activatePopup={activatePopup} title={'Программы оздоровления'} manySlides={true}
                              titleMobile={'Программы оздоровления'} initialSlideIndex={1}
                              slides={medicalSpaPage.mainSlides}/>
+        </section>
+
+        <section className='section'>
+            <div className={s.topBlockWrapper}>
+                <div className={s.container}>
+                    <div className={s.background}/>
+                    <div className={s.textContent}>
+                        <Headline subtitle={'Философия'} title={'качества'}/>
+
+                        <p>Riviera Sunrise Resort & SPА объединяет все, что отдыхающие ищут в отелях - комфортные
+                            номера, безупречный сервис и десятки возможностей полезного времяпрепровождения. Мы
+                            практикуем холистический подход к здоровью и отдыху: создали полноценную систему
+                            восстановления физических и душевных сил. Предлагаем только немедикаментозные методики
+                            лечения, потому что знаем - организм человека обладает колоссальными ресурсами
+                            самовосстановления. Нужно только пробудить их, и мы знаем как.</p>
+
+                    </div>
+
+                    <img src={topBlockImg} alt={"Medical SPA – Riviera Sunrise"}/>
+
+                </div>
+            </div>
         </section>
 
         <section className='section'>
@@ -97,8 +122,16 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
             <GridSlider slides={roomsAndPricesPageData.gridSlides}/>
         </section>
 
-        <section className='section last'>
+        <section className='section'>
             <CenteredSlider title={'Сегодня в программе'} slides={roomsAndPricesPageData.centeredSlides}/>
+        </section>
+
+        <section className='section'>
+            <GallerySlider blockName={'Фотогалерея'} slides={medicalSpaPage.gallerySlides}/>
+        </section>
+
+        <section className='section'>
+            <MapSection/>
         </section>
 
         {/* POPUP Восстановление*/}
@@ -315,7 +348,6 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
 
         </div>
 
-
         {/* POPUP Сильно сердце*/}
         <div className={showPopup && popupIndex === 5 ? s.popupWrapper + ' ' + s.show : s.popupWrapper}>
             <div className={s.popup}>
@@ -371,7 +403,6 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
             </div>
 
         </div>
-
 
         {/* POPUP Здоровая спина*/}
         <div className={showPopup && popupIndex === 6 ? s.popupWrapper + ' ' + s.show : s.popupWrapper}>
