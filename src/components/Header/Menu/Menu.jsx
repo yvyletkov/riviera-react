@@ -264,9 +264,8 @@ const Menu = ({menuOpened, toggleMenu}) => {
                                 </NavLink>
                             </div>
 
-                            {/*<div className={s.menuItem} onClick={toggleMenu}>*/}
-                            <div className={s.menuItem}>
-                                <NavLink style={{cursor: 'not-allowed' }} onClick={handleLinkClick} to={"/"}>
+                            <div className={s.menuItem} onClick={toggleMenu}>
+                                <NavLink to={"/reviews"}>
                                     Отзывы
                                 </NavLink>
                             </div>
