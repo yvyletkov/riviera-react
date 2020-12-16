@@ -52,9 +52,9 @@ const TransferPage= () => {
                         style={{margin: '30px auto 0', maxWidth:'300px'}}/>
                 <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
                                   popupTitleText={'Для этого, пожалуйста, оставьте свои контактные данные️'}
-                                  submitBtnText='Получить смету'
-                                  formName={`Форма с главного баннера страницы MICE (получить смету)`}
-                                  swalText={'мы отправим всю необходимую информацию на указанную Вами почту в самое ближайшее время!'}
+                                  submitBtnText='Заказать услугу'
+                                  formName={`Форма со страницы трансфера`}
+                                  swalText={'мы свяжемся с Вами ближайшее время'}
                                   withPhone/>
             </section>
 
