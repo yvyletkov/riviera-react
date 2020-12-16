@@ -148,12 +148,12 @@ const EventMainSliderItem = (props) => {
                 <h6 className={s.title}>{title}</h6>
                 <div className={s.descr}>
                     <p style={{marginBottom: withButton ? '10px' : '0'}}>{descr}</p>
-                    { withButton && <Button onClick={ () => activatePopup(index + 1)} text={'Подробнее о программе'}/>}
+                    { withButton && <Button style={{marginTop: '17px'}} onClick={ () => activatePopup(index + 1)} text={'Подробнее о программе'}/>}
                 </div>
 
 
                 <div className={s.moreBtn} onClick={() => setShowDescr(!showDescr)}>
-                    {showDescr ? 'Cкрыть' : 'Подробнее'}
+                    {showDescr ? (withButton ? '' : 'Cкрыть') : 'Подробнее'}
                 </div>
             </div>
 

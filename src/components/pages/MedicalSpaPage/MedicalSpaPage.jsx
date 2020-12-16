@@ -61,13 +61,12 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
                 </div>
 
                 <Button style={{width: "fit-content"}}
-                        onClick={() => setPopupContactFormOpen(true)} text={"Подробнее"}/>
+                        onClick={() => setPopupContactFormOpen(true)} text={"Узнать подробности"}/>
                 <PopupContactForm popupOpen={popupContactFormOpen} setPopupOpen={setPopupContactFormOpen}
-                                  popupTitleText={'Чтобы получить точную информацию о стоимости, позвольте нам связаться с Вами'}
-                                  submitBtnText='Узнать стоимость'
+                                  popupTitleText={'Чтобы узнать больше, пожалуйста, оставьте свои контактные данные, и мы Вам перезвоним'}
+                                  submitBtnText='Узнать подробности'
                                   formName={`Форма с верхнего баннера страницы Медикал СПА (кнопка "Подробнее")`}
-                                  swalText={'очень скоро наши менеджеры с Вами свяжутся. Также не забывайте проверять указанную почту :)'}
-                                  withEmail
+                                  swalText={'очень скоро наши менеджеры с Вами свяжутся'}
                                   withPhone/>
 
             </div>
@@ -135,9 +134,10 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
         </section>
 
         {/* POPUP Восстановление*/}
-        <div className={showPopup && popupIndex === 1 ? s.popupWrapper + ' ' + s.show : s.popupWrapper}>
+        <div onClick={ () => setShowPopup(false)} className={showPopup && popupIndex === 1 ? s.popupWrapper + ' ' + s.show : s.popupWrapper}>
             <div className={s.popup}>
                 <div className={s.col}>
+                    <img src={medicalSpaPage.bannerIcons[2]} alt=""/>
                     <h4>Восстановление</h4>
                     <p>Общий комплекс оздоровления</p>
                     <h5>Продолжительность</h5>
@@ -183,7 +183,8 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
         <div className={showPopup && popupIndex === 2 ? s.popupWrapper + ' ' + s.show : s.popupWrapper}>
             <div className={s.popup}>
                 <div className={s.col}>
-                    <h4>Управление стрессом</h4>
+                    <img style={{position: 'relative', top: '-30px'}}src={medicalSpaPage.bannerIcons[3]} alt=""/>
+                    <h4 style={{width: 'inherit'}}>Управление<br/>стрессом</h4>
                     <p>Восстановите здоровье и оптимальный уровень энергии</p>
                     <h5>Продолжительность</h5>
                     <p>Определяется пожеланием гостя</p>
@@ -242,6 +243,7 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
         <div className={showPopup && popupIndex === 3 ? s.popupWrapper + ' ' + s.show : s.popupWrapper}>
             <div className={s.popup}>
                 <div className={s.col}>
+                    <img src={medicalSpaPage.bannerIcons[0]} alt=""/>
                     <h4>Детокс</h4>
                     <p>Восстановите здоровье и оптимальный уровень энергии</p>
                     <h5>Продолжительность</h5>
@@ -295,7 +297,8 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
         <div className={showPopup && popupIndex === 4 ? s.popupWrapper + ' ' + s.show : s.popupWrapper}>
             <div className={s.popup}>
                 <div className={s.col}>
-                    <h4>Свобода движения</h4>
+                    <img style={{position: 'relative', top: '-30px'}} src={medicalSpaPage.bannerIcons[4]} alt=""/>
+                    <h4 style={{width: 'inherit'}}>Свобода движения</h4>
                     <p>Восстановите здоровье и оптимальный уровень энергии</p>
                     <h5>Продолжительность</h5>
                     <p>Определяется пожеланием гостя</p>
@@ -348,10 +351,11 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
 
         </div>
 
-        {/* POPUP Сильно сердце*/}
+        {/* POPUP Сильное сердце*/}
         <div className={showPopup && popupIndex === 5 ? s.popupWrapper + ' ' + s.show : s.popupWrapper}>
             <div className={s.popup}>
                 <div className={s.col}>
+                    <img style={{filter: 'none'}} src={medicalSpaPage.advantagesIcons[4].img} alt=""/>
                     <h4>Сильное сердце</h4>
                     <p>Восстановите здоровье и оптимальный уровень энергии</p>
                     <h5>Продолжительность</h5>
@@ -408,6 +412,7 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
         <div className={showPopup && popupIndex === 6 ? s.popupWrapper + ' ' + s.show : s.popupWrapper}>
             <div className={s.popup}>
                 <div className={s.col}>
+                    <img src={medicalSpaPage.bannerIcons[1]} alt=""/>
                     <h4>Здоровая спина</h4>
                     <p>Восстановите здоровье и оптимальный уровень энергии</p>
                     <h5>Продолжительность</h5>

@@ -6,11 +6,9 @@ import bannerImg from "../../../../img/events/birthday/birthdayBanner.jpg";
 import bannerImgMobile from "../../../../img/events/birthday/birthdayBanner-mob.jpg";
 import textImgBlockImg from "../../../../img/events/birthday/text-img-block.jpg";
 import kitchenImg from "../../../../img/events/birthday/kitchen.jpg";
-
 import EventPageBanner from "../EventPageBanner/EventPageBanner";
 import Headline from "../../../shared/Headline/Headline";
 import EventMainSlider from "../../../shared/sliders/EventMainSlider/EventMainSlider";
-import Button from "../../../shared/Button/Button";
 import SpecialsSlider from "../../../shared/sliders/SpecialsSlider/SpecialsSlider";
 import MapSection from "../../../shared/MapSection/MapSection";
 import AdvantagesBlock from "../../../shared/AdvantagesBlock/AdvantagesBlock";
@@ -60,7 +58,7 @@ const BirthdayPage = () => {
                         <p>Оставьте свою почту и мы вышлем вам список
                             свободных дат</p>
 
-                        <ContactForm submitBtnText={'Узнать свободные даты'} formName={`Форма "Планировать свой праздник лучше заранее" (узнать свободные даты)`} withEmail
+                        <ContactForm submitBtnText={'Узнать свободные даты'} formName={`Форма "Планировать свой праздник лучше заранее" (узнать свободные даты)`} withPhone
                                      swalText={'мы отправим всю необходимую информацию на указанную Вами почту в самое ближайшее время!'}/>
 
                     </div>
