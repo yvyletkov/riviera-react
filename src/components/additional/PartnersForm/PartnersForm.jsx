@@ -75,7 +75,7 @@ const PartnersForm = (props) => {
 
     const onSubmit = (values, {resetForm}) => {
         data.form = {
-            "url": `https://rivierasunrise.ru${props.location.pathname}`
+            "url": `https://rivierasunrise.com${props.location.pathname}`
         };
         data.inputs = [
             {
