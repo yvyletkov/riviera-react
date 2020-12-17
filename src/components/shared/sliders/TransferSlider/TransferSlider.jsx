@@ -68,6 +68,7 @@ const TransferSlider = ({sliders}) => {
                                                     margin: '0 auto 30px'
                                                 }}/>
                                 <div className={s.itemWrapper}>
+                                    <div className={s.grayBackground} />
                                     <img src={item.img} alt={item.name}/>
                                     <div className={s.textBlock}>
                                         <p>Трансфер аэропорт Симферополь - Алушта&nbsp;</p>
