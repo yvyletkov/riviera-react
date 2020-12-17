@@ -23,9 +23,9 @@ const HomePage = () => {
             <SpecialsSlider subtitle={'Лучшие'} title={'спецпредложения'} btnLink={'/offers'} slides={homePageData.specialsSlides}/>
         </section>
 
-        <section className='section'>
-            <CenteredSlider title={'Сегодня в программе'} slides={homePageData.centeredSlides} type={'home-page'}/>
-        </section>
+        {/*<section className='section'>*/}
+        {/*    <CenteredSlider title={'Сегодня в программе'} slides={homePageData.centeredSlides} type={'home-page'}/>*/}
+        {/*</section>*/}
 
         <section className='section'>
             <TextPlusImageBlock subtitle={'Идеальный отдых в Крыму'} title={'круглый год'} withForm={true}/>

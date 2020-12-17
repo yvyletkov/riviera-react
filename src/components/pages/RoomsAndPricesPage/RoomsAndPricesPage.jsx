@@ -27,9 +27,9 @@ const RoomsAndPricesPage = () => {
             <GridSlider slides={roomsAndPricesPageData.gridSlides}/>
         </section>
 
-        <section className='section last'>
-            <CenteredSlider title={'Сегодня в программе'} slides={roomsAndPricesPageData.centeredSlides}/>
-        </section>
+        {/*<section className='section last'>*/}
+        {/*    <CenteredSlider title={'Сегодня в программе'} slides={roomsAndPricesPageData.centeredSlides}/>*/}
+        {/*</section>*/}
 
     </>
 
