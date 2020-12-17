@@ -42,9 +42,9 @@ const Footer = () => {
                                 <li><NavLink to={'/offers'}>Специальные предложения</NavLink></li>
                                 <li><NavLink to={'/spa'}>SPA комплекс</NavLink></li>
                                 <li><NavLink to={'/restaurant'}>Бары и рестораны</NavLink></li>
-                                {/*<li>Партнерам</li>*/}
                             </ul>
                             <ul>
+                                <li><NavLink to={'/partners'}>Партнёрам</NavLink></li>
                                 <li><NavLink to={'/reviews'}>Отзывы</NavLink></li>
                                 <li><NavLink to={'/contact'}>Контакты</NavLink></li>
                                 <li><NavLink to={'/vacancies'}>Вакансии/карьера</NavLink></li>

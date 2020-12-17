@@ -46,6 +46,7 @@ const BookingPage = lazy(() => import('./components/pages/BookingPage/BookingPag
 const MedicalSpaPage = lazy(() => import('./components/pages/MedicalSpaPage/MedicalSpaPage'));
 const ReviewsPage = lazy(() => import('./components/pages/ReviewsPage/ReviewsPage'));
 const TransferPage = lazy(() => import("./components/pages/TransferPage/TransferPage"));
+const PartnersPage = lazy(() => import("./components/pages/PartnersPage/PartnersPage"));
 
 function App() {
 
@@ -57,7 +58,10 @@ function App() {
 
                 <Switch>
 
-                    <Route path='/reviews' exact
+                    <Route path='/partners' exact
+                           component={() => <PartnersPage/>}/>
+
+                   <Route path='/reviews' exact
                            component={() => <ReviewsPage/>}/>
 
                     <Route path='/transfer' exact
