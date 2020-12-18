@@ -47,21 +47,31 @@ const MedicalSpaPage = lazy(() => import('./components/pages/MedicalSpaPage/Medi
 const ReviewsPage = lazy(() => import('./components/pages/ReviewsPage/ReviewsPage'));
 const TransferPage = lazy(() => import("./components/pages/TransferPage/TransferPage"));
 const PartnersPage = lazy(() => import("./components/pages/PartnersPage/PartnersPage"));
+const BlogPage = lazy(() => import("./components/pages/BlogPage/BlogPage"));
 
 function App() {
 
     return (<>
             <Header/>
-            <Suspense fallback={<div style={{height: 'calc(100vh - 70px)', width: '100vw', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                <img width={'150px'} src={preloaderImg} alt/>
+            <Suspense fallback={<div style={{
+                height: 'calc(100vh - 70px)',
+                width: '100vw',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+            }}>
+                <img width={'150px'} src={preloaderImg} alt=''/>
             </div>}>
 
                 <Switch>
 
+                    <Route path='/blog' exact
+                           component={() => <BlogPage/>}/>
+
                     <Route path='/partners' exact
                            component={() => <PartnersPage/>}/>
 
-                   <Route path='/reviews' exact
+                    <Route path='/reviews' exact
                            component={() => <ReviewsPage/>}/>
 
                     <Route path='/transfer' exact
