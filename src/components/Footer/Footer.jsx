@@ -50,7 +50,7 @@ const Footer = () => {
                                 <li><NavLink to={'/reviews'}>Отзывы</NavLink></li>
                                 <li><NavLink to={'/contact'}>Контакты</NavLink></li>
                                 <li><NavLink to={'/vacancies'}>Вакансии/карьера</NavLink></li>
-                                <li><NavLink style={{whiteSpace: 'nowrap'}} to={'/faq'}>FAQ (частые вопросы)</NavLink></li>
+                                <li><NavLink style={window.matchMedia('(min-width: 768px)').matches ? {whiteSpace: 'nowrap'} : null} to={'/faq'}>FAQ (частые вопросы)</NavLink></li>
                                 {/*<li>Новости/пресс-релизы</li>*/}
                                 {/*<li>Развлечения</li>*/}
                             </ul>

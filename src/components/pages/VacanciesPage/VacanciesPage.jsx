@@ -7,7 +7,7 @@ import Button from "../../shared/Button/Button";
 
 const VacanciesPage = () => {
 
-    React.useEffect( () => document.title = `Вакансии – the Shored SPA - Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+    React.useEffect( () => document.title = `Вакансии – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
     let [currentTab, setCurrentTab] = React.useState(0);
     const tabs = ["Служба питания", "Хозяйственная служба"]

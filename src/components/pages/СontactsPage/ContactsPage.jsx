@@ -56,7 +56,7 @@ const ContactsPage = () => {
                                 <h5>Ресепшен</h5>
                                 <p><a target={'_blank'}
                                       href="mailto:info.alushta@rivierasunrise.com">info.alushta@rivierasunrise.com</a>
-                                    <span><a href="tel:8 800 550 98 24">8 800 550 98 24</a></span></p>
+                                    <span><a style={{whiteSpace: 'nowrap'}} href="tel:8 800 550 98 24">8 800 550 98 24</a></span></p>
                             </div>
 
                             <div className={s.contactsItem}>
