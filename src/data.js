@@ -386,6 +386,18 @@ import subscriptionSPA3 from "./img/infrastructure/spaPage/prices/subscription3.
 import transfer1 from "./img/transfer/1.jpg";
 import transfer2 from "./img/transfer/2.jpg";
 // END transfer imports
+// PartnersLogos
+import partnerLogo1 from "./img/partners/1.jpg"
+import partnerLogo2 from "./img/partners/2.jpg"
+import partnerLogo3 from "./img/partners/3.jpg"
+import partnerLogo4 from "./img/partners/4.jpg"
+import partnerLogo5 from "./img/partners/5.jpg"
+import partnerLogo6 from "./img/partners/6.jpg"
+import partnerLogo7 from "./img/partners/7.jpg"
+import partnerLogo8 from "./img/partners/8.jpg"
+import partnerLogo9 from "./img/partners/9.jpg"
+import partnerLogo10 from "./img/partners/10.jpg"
+// END PartnersLogos
 
 const commonGridSlides = [
     {
@@ -3170,3 +3182,18 @@ export const medicalSpaPage = {
     gallerySlides: commonGallerySlides,
 }
 
+// Страница "Партнерам"
+export const partnersPageData = {
+    partnersIcons: [
+        {img: partnerLogo1},
+        {img: partnerLogo2},
+        {img: partnerLogo3},
+        {img: partnerLogo4},
+        {img: partnerLogo5},
+        {img: partnerLogo6},
+        {img: partnerLogo7},
+        {img: partnerLogo8},
+        {img: partnerLogo9},
+        {img: partnerLogo10},
+    ],
+}
