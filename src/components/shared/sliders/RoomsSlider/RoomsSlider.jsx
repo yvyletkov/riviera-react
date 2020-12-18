@@ -122,9 +122,9 @@ const RoomsSlider = ({title = "Заголовок", subtitle = "Какой-то"
         );
     });
 
-    const miniSliderItems = data.map(item => {
-        const name = item.title.split(' ')[1] ? item.title.split(' ')[1] : item.title.split(' ')[0]
-        return name;
+    const miniSliderItems = data.map( (item, index) => {
+        if (index === 0) return item.title.split(' ')[1]
+        else return item.title.split(' ')[0];
     });
 
     const classnames = cx(s.wrapper, {[s.lastOfTwo]: lastOfTwo, [s.noPaddingTop]: noPaddingTop})
