@@ -284,16 +284,16 @@ import gymIcon1 from "./img/infrastructure/gym/ic1.png";
 import gymIcon2 from "./img/infrastructure/gym/ic2.png";
 import gymIcon3 from "./img/infrastructure/gym/ic3.png";
 import gymIcon4 from "./img/infrastructure/gym/ic4.png";
-import gymVeloGoriz from "./img/infrastructure/gym/кардио - велотренажер горизонтальный.jpg";
+import gymVeloGoriz from "./img/infrastructure/gym/кардио - велотренажер горизонтальныи.jpg";
 import gymVelo from "./img/infrastructure/gym/кардио - велотренажер.JPG";
 import gymBegovaya from "./img/infrastructure/gym/кардио - дорожка беговая.jpg";
 import gymKross from "./img/infrastructure/gym/кардио - Кросс-тренажер.jpg";
 import gymVert from "./img/infrastructure/gym/силовые - вертикальная тяга.jpg";
-import gymMnogofunk from "./img/infrastructure/gym/силовые - Многофункциональный силовой тренажер.jpg";
+import gymMnogofunk from "./img/infrastructure/gym/силовые - Многофункциональныи силовои тренажер.jpg";
 import gymPress from "./img/infrastructure/gym/свободные веса - скамья для пресса.jpg";
 import gymSmit from "./img/infrastructure/gym/силовые свободные веса - машина смита.jpg";
 import gymNogi from "./img/infrastructure/gym/силовые -Тренажер «разгибание ног».jpg";
-import gymSpina from "./img/infrastructure/gym/свободные веса - Лавка для нижней части спины.jpg";
+import gymSpina from "./img/infrastructure/gym/свободные веса - Лавка для нижнеи части спины.jpg";
 // END infra Imports
 // single promotions Imports
 import barhatniiSeasonBannerImg from "./img/promos/promo-barhat-seaon.jpg";

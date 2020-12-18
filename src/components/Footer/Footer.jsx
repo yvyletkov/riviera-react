@@ -42,13 +42,15 @@ const Footer = () => {
                                 <li><NavLink to={'/offers'}>Специальные предложения</NavLink></li>
                                 <li><NavLink to={'/spa'}>SPA комплекс</NavLink></li>
                                 <li><NavLink to={'/restaurant'}>Бары и рестораны</NavLink></li>
+                                <li><NavLink to={'/infrastructure/beach-and-pools'}>Бассейны и пляж</NavLink></li>
                             </ul>
                             <ul>
+                                <li><NavLink to={'/transfer'}>Трансфер</NavLink></li>
                                 <li><NavLink to={'/partners'}>Партнёрам</NavLink></li>
                                 <li><NavLink to={'/reviews'}>Отзывы</NavLink></li>
                                 <li><NavLink to={'/contact'}>Контакты</NavLink></li>
                                 <li><NavLink to={'/vacancies'}>Вакансии/карьера</NavLink></li>
-                                <li><NavLink to={'/faq'}>FAQ (Частые вопросы)</NavLink></li>
+                                <li><NavLink style={{whiteSpace: 'nowrap'}} to={'/faq'}>FAQ (частые вопросы)</NavLink></li>
                                 {/*<li>Новости/пресс-релизы</li>*/}
                                 {/*<li>Развлечения</li>*/}
                             </ul>
@@ -73,8 +75,7 @@ const Footer = () => {
                     <p>
                         Riviera Sunrise Resort & SPА, Alushta © 2020 Официальный сайт
                         гостиницы <span className={s.thinLine}>&nbsp; | &nbsp;</span><a href='https://upro.group/'
-                                                                                        className={s.managedBy}>Managed
-                        by UPRO</a>
+                                                                                        className={s.managedBy}>Managed by UPRO</a>
                     </p>
                 </div>
             </div>
