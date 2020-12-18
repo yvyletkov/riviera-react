@@ -2,8 +2,10 @@ import React from "react";
 import MapSection from "../../shared/MapSection/MapSection";
 import s from "./PartnersPage.module.scss";
 import PartnersForm from "../../additional/PartnersForm/PartnersForm";
+import LogosSlider from "../../shared/sliders/LogosSlider/LogosSlider";
+import {partnersPageData} from "../../../data";
 
-const ReviewsPage = () => {
+const PartnersPage = () => {
 
     React.useEffect(() => document.title = `Партнерам - Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
@@ -34,6 +36,10 @@ const ReviewsPage = () => {
 
             </section>
 
+            <section className="section">
+                <LogosSlider colored title={"С кем мы сотрудничали"} slidesToShow={4} icons={partnersPageData.partnersIcons}/>
+            </section>
+
             <section className='section last'>
                 <MapSection/>
             </section>
@@ -41,4 +47,4 @@ const ReviewsPage = () => {
     );
 }
 
-export default ReviewsPage;
+export default PartnersPage;

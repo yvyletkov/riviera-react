@@ -9,6 +9,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
+    overflow: hidden;
 
     .sliderWrapper {
       margin: 0 auto;
@@ -31,6 +32,12 @@
         filter:saturate(1);
       }
 
+      &.colored {
+        img {
+          filter: none;
+        }
+      }
+
       @media (max-width: 1000px) {
         flex-direction: row;
         max-width: 250px;
@@ -43,4 +50,25 @@
 
 
   }
+}
+
+.nextArrow, .prevArrow {
+  position: absolute;
+  display: block;
+  z-index: 10;
+  width: 30px;
+  height: 50px;
+  top: 50%;
+  background: no-repeat center;
+  cursor: pointer;
+}
+
+.nextArrow {
+  right: -14px;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.prevArrow {
+  left: -14px;
+  transform: translateY(-50%);
 }

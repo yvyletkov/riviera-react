@@ -8,6 +8,9 @@ import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
 import Button from "../../shared/Button/Button";
 
 const TransferPage= () => {
+
+    React.useEffect(() => document.title = `Трансфер - Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
     const [showDescr, setShowDescr] = React.useState(false);
     const [popupOpen, setPopupOpen] = React.useState(false);
 
