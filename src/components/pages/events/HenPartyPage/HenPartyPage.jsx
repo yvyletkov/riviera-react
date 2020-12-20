@@ -17,6 +17,7 @@ import AdvantagesBlock from "../../../shared/AdvantagesBlock/AdvantagesBlock";
 import KitchenBlock from "../../../shared/KitchenBlock/KitchenBlock";
 import EventTextImgBlock from "../../../shared/EventTextImgBlock/EventTextImgBlock";
 import ContactForm from "../../../additional/ContactForm/ContactForm";
+import MetaTags from 'react-meta-tags';
 
 const HenPartyPage = () => {
 
@@ -24,7 +25,9 @@ const HenPartyPage = () => {
 
 
     return <>
-
+        <MetaTags>
+            <meta name="keywords" content="лучший девичник, девичник в Крыму" />
+        </MetaTags>
         <EventPageBanner fontSize={['46px', '79px', '55px']} mobileFontSize={['8.7vw', '14.3vw', '8.2vw']}
                          titles={['Организуем вам', 'атмосферный', 'девичник', 'в Крыму']}
                          icons={eventPagesData.henPartyPage.henPartyBannerIcons} bannerImg={bannerImg}

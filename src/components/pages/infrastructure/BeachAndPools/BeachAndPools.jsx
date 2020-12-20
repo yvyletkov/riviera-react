@@ -14,12 +14,16 @@ import blueFlagImg from "../../../../img/infrastructure/beach-pools/blue-flag.pn
 import ZoomSlider from "../../../shared/sliders/ZoomSlider/ZoomSlider";
 import areaIcon from "../../../../img/infrastructure/beach-pools/icons/1.png";
 import temperatureIcon from "../../../../img/infrastructure/beach-pools/icons/2.png";
+import MetaTags from 'react-meta-tags';
 
 const BeachAndPools = () => {
 
     React.useEffect( () => document.title = `Пляж и бассейны – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
     return <>
+        <MetaTags>
+            <meta name="keywords" content="Бассейн с подгревом, Бассейн детский,Бассейн возле моря, Бассейн крытый, Лучший пляж в Алуште, Закрытый пляж в Алуште" />
+        </MetaTags>
         <InfrastructurePageBanner bannerData={infrastructurePagesData.beachAndPools.bannerData}
                                   style={{objectPosition:"0"}}/>
         <section className='section first'>

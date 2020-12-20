@@ -9,6 +9,7 @@ import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
 import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
 import WideSlider from "../../shared/sliders/WideSlider/WideSlider";
 import FoodBlock from "../../shared/FoodBlock/FoodBlock";
+import MetaTags from 'react-meta-tags';
 
 
 const FamilyVacationPage = () => {
@@ -17,6 +18,9 @@ const FamilyVacationPage = () => {
 
 
     return <>
+        <MetaTags>
+            <meta name="keywords" content="отдых с детьми, детский отдых, отель для отдыха с детьми, семейный отдых с детьми, отель для семейного отдыха, семейный отдых бассейн, отдых семейных пар, активный семейный отдых, семейный отдых парами, отдых на море с детьми" />
+        </MetaTags>
         <VacationsPageBanner fontSize={["70px", "57px"]}
                              fontSizeMobile={["16.7vw", "10.5vw"]}
                              subtitle={'Рассвет совершенного сервиса'}
