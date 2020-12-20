@@ -8,12 +8,16 @@ import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
 import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
 import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
 import FoodBlock from "../../shared/FoodBlock/FoodBlock";
+import MetaTags from 'react-meta-tags';
 
 const VacationForYourselfPage = () => {
 
     React.useEffect( () => document.title = `Отдых без детей – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
     return <>
+        <MetaTags>
+            <meta name="keywords" content="отдых без детей, отдых без детей у моря, спокойный отдых" />
+        </MetaTags>
         <VacationsPageBanner fontSize={["95px", "71px"]}
                              fontSizeMobile={["17.4vw", "12.6vw"]}
                              subtitle={'Отдых для себя'}

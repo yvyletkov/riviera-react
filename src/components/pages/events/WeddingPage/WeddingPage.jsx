@@ -19,13 +19,16 @@ import BlackBlock from "../../../shared/BlackBlock/BlackBlock";
 import EventTextImgBlock from "../../../shared/EventTextImgBlock/EventTextImgBlock";
 import EventSquaresSlider from "../../../shared/sliders/EventSquaresSlider/EventSquaresSlider";
 import ContactForm from "../../../additional/ContactForm/ContactForm";
+import MetaTags from 'react-meta-tags';
 
 const WeddingPage = () => {
 
     React.useEffect( () => document.title = `Свадьба – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
     return <>
-
+        <MetaTags>
+            <meta name="keywords" content="свадьба на берегу моря, свадьба в отеле, свадьба у моря, свадебная мечта, красивая свадьба, банкетный зал" />
+        </MetaTags>
         <EventPageBanner fontSize={['68px', '82px', '52px']} mobileFontSize={['11.7vw', '19.2vw', '8.2vw']}
                          titles={['Ваша', 'свадьба', 'мечты', 'в Крыму']}
                          icons={eventPagesData.weddingPages.weddingBannerIcons} bannerImg={bannerImg}

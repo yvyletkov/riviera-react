@@ -8,12 +8,16 @@ import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
 import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
 import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
 import FoodBlock from "../../shared/FoodBlock/FoodBlock";
+import MetaTags from 'react-meta-tags';
 
 const RomanticVacationPage = () => {
 
     React.useEffect( () => document.title = `Романтический отдых – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
     return <>
+        <MetaTags>
+            <meta name="keywords" content="романтический отдых для двоих, романтический отдых на выходных, отель для романтического отдыха, лучший романтический отдых" />
+        </MetaTags>
         <VacationsPageBanner fontSize={["75px", "47px"]}
                              fontSizeMobile={["15.6vw", "8.2vw"]}
                              extraLine={['отдых любимому человеку', '4.6vw', '30px',]}

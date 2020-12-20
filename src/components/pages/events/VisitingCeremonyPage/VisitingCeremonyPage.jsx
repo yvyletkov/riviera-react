@@ -5,7 +5,7 @@ import decisionBlockImg from "../../../../img/events/wedding/decision.jpg";
 import bannerImg from "../../../../img/events/visiting-ceremony/banner.jpg";
 // import bannerImgMobile from "../../../../img/events/visiting-ceremony/banner.jpg";
 import textImgBlockImg from "../../../../img/events/visiting-ceremony/visiting-ceremony.jpg";
-
+import MetaTags from 'react-meta-tags';
 import EventPageBanner from "../EventPageBanner/EventPageBanner";
 import Headline from "../../../shared/Headline/Headline";
 import EventMainSlider from "../../../shared/sliders/EventMainSlider/EventMainSlider";
@@ -28,7 +28,9 @@ const WeddingPage = () => {
 
 
     return <>
-
+        <MetaTags>
+            <meta name="keywords" content="выездна регистрация, Выездная церемония в Крыму" />
+        </MetaTags>
         <EventPageBanner fontSize={['68px', '82px', '52px']} mobileFontSize={['9.7vw', '12.3vw', '8.2vw']}
                          titles={['Выездная', 'свадебная', 'церемония', 'в Крыму']}
                          icons={eventPagesData.weddingPages.weddingCeremonyBannerIcons} bannerImg={bannerImg} bannerImgMobile={bannerImg}/>
