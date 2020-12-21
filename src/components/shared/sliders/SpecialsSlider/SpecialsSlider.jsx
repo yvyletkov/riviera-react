@@ -102,7 +102,7 @@ const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-�
                         <Slider {...settings}>{items}</Slider>
                     </SliderStyles>
                 </div>
-                <Button text={btnText} onClick={!btnLink ? () => setPopupOpen(true) : null} link={btnLink ? btnLink : null} style={!window.matchMedia("(max-width: 768px)").matches ? {width: "210px", marginLeft:"10px"} : {marginTop:'40px'}}/>
+                <Button text={btnText} onClick={!btnLink ? () => setPopupOpen(true) : null} link={btnLink ? btnLink : null} style={!window.matchMedia("(max-width: 768px)").matches ? {width: "210px", marginLeft:"10px"} : {width: 'calc(100vw - 40px)', margin: '0 auto', marginTop:'40px'}}/>
             </div>
         </div>
     );
