@@ -2,7 +2,7 @@ import React from 'react';
 import ContactForm from "./ContactForm";
 import Rodal from 'rodal';
 
-const PopupContactForm = ({popupOpen, setPopupOpen, popupTitleText, submitBtnText, formName, withEmail, withPhone, swalText}) => {
+const PopupContactForm = ({popupOpen, setPopupOpen, popupTitleText, submitBtnText, formName, withEmail, withPhone, withMessage, textAreaPlaceholder, swalText}) => {
     return (
         <Rodal className={'rodal-popup'} visible={popupOpen} onClose={() => setPopupOpen(false)}>
             <p style={{maxWidth: "100%"}}>
@@ -12,7 +12,9 @@ const PopupContactForm = ({popupOpen, setPopupOpen, popupTitleText, submitBtnTex
                          formName={formName}
                          withEmail={withEmail}
                          withPhone={withPhone}
-                         swalText={swalText}/>
+                         swalText={swalText}
+                         withMessage={withMessage}
+                         textAreaPlaceholder={textAreaPlaceholder}/>
         </Rodal>)
 };
 

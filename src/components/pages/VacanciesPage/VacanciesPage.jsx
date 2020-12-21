@@ -4,12 +4,16 @@ import MapSection from "../../shared/MapSection/MapSection";
 import Headline from "../../shared/Headline/Headline";
 import vacationsImg from "../../../img/vacancies/1.jpg";
 import Button from "../../shared/Button/Button";
+import {vacanciesPageData} from "../../../data";
+import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
+import VacanciesSlider from "../../shared/sliders/VacanciesSlider/VacanciesSlider";
 
 const VacanciesPage = () => {
 
     React.useEffect( () => document.title = `Вакансии – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
     let [currentTab, setCurrentTab] = React.useState(0);
+    const [popupOpen, setPopupOpen] = React.useState(false);
     const tabs = ["Служба питания", "Хозяйственная служба"]
 
     return ( <>
@@ -33,37 +37,17 @@ const VacanciesPage = () => {
             </section>
 
             <section className="section">
-                <div className={s.cardWrapper}>
-                    <div className={s.card}>
-                        <div className={s.description}>
-                            <h2>Повар</h2>
-                            <p><b>Опыт работы:</b> от 1 года</p>
-                            <br />
-                            <p><b>Зарплата:</b> от 25 тыс</p>
-                            <br />
-                            <p><b>Должностные обязанности:</b></p>
-                            <ul className={s.listBlock}>
-                                <li>Приготовление блюд из меню раскладок.</li>
-                                <li>Управление технологическим процессом и контроль выхода блюд (старший повар).</li>
-                            </ul>
-                            <br />
-                            <p><b>Требования:</b></p>
-                            <ul className={s.listBlock}>
-                                <li>Образование средне-специальное, специальность: повар.</li>
-                                <li>Опыт работы в учреждениях с детским питанием приветствуется.</li>
-                                <li>Умение читать технологические карты, знание норм и требований СанПина детского оздоровительного лагеря — желательно.</li>
-                                <li>Понимание всех технологических процессов кухни.</li>
-                                <li>Личностные качества: ответственность, обязательность, гибкость, любовь к своему делу.</li>
-                                <li>Наличие действующей мед.книжки обязательно.</li>
-                            </ul>
-                            {window.matchMedia('(max-width:992px)').matches ? null : <Button style={{marginTop:'30px'}} text="Оставить резюме"/> }
-                        </div>
-                        <div className={s.imgBlock}>
-                            <img className={s.image} src={vacationsImg} alt="Вакансия" />
-                        </div>
-                        {window.matchMedia('(min-width:992px)').matches ? null : <Button text="Оставить резюме"/>}
-                    </div>
-                </div>
+                <VacanciesSlider sliders={vacanciesPageData}
+                                 popupOpen={popupOpen}
+                                 setPopupOpen={setPopupOpen}/>
+                <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
+                                  popupTitleText={'Для этого, пожалуйста, оставьте свои контактные данные️'}
+                                  submitBtnText='Отправить резюме'
+                                  formName={`Форма со страницы вакансий`}
+                                  swalText={'мы свяжемся с Вами ближайшее время'}
+                                  withPhone
+                                  withMessage
+                                  textAreaPlaceholder={"Вставьте ссылку на резюме"}/>
             </section>
 
 
