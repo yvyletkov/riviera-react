@@ -10,6 +10,7 @@ import './style/rodal.css';
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import BottomMenu from "./components/shared/BottomMenu/BottomMenu";
+import swal from "sweetalert2";
 
 const HomePage = lazy(() => import('./components/pages/HomePage/HomePage'));
 const RoomsAndPricesPage = lazy(() => import('./components/pages/RoomsAndPricesPage/RoomsAndPricesPage'));
@@ -51,6 +52,16 @@ const BlogPage = lazy(() => import("./components/pages/BlogPage/BlogPage"));
 
 function App() {
 
+    React.useEffect( () => {
+        swal.fire({
+            title: `Важное объявление!`,
+            html: '                <p style=\'text-align: left; margin-top: 10px\'>Уважаемые гости, отель Riviera Sunrise Resort & SPА выполняет все ограничения, соответствующие рекомендациям Роспотребнадзора и Указа Главы республики от 17.03.2020 года № 63-У, с последующими редакциями.<br/><br/>\n' +
+                '\n' +
+                '                    Мы прикладываем максимум усилий для предотвращения распространения коронавирусной инфекции на территории отеля, чтобы каждый гость, проживающий в отеле, мог насладиться светлыми Новогодними праздниками, проведенными у нас.</p>\n',
+            confirmButtonText: 'Хорошо'
+        })
+    }, [])
+
     return (<>
             <Header/>
             <Suspense fallback={<div style={{
@@ -62,6 +73,11 @@ function App() {
             }}>
                 <img width={'150px'} src={preloaderImg} alt=''/>
             </div>}>
+
+                <p style={{textAlign: "left"}}>Уважаемые гости, отель Riviera Sunrise Resort & SPА выполняет все ограничения, соответствующие рекомендациям Роспотребнадзора и Указа Главы республики от 17.03.2020 года № 63-У, с последующими редакциями.<br/><br/>
+
+                    Мы прикладываем максимум усилий для предотвращения распространения коронавирусной инфекции на территории отеля, чтобы каждый гость, проживающий в отеле, мог насладиться светлыми Новогодними праздниками, проведенными у нас.</p>
+
 
                 <Switch>
 

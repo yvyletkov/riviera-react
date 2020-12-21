@@ -29,7 +29,7 @@ const WeddingPage = () => {
 
     return <>
         <MetaTags>
-            <meta name="keywords" content="выездна регистрация, Выездная церемония в Крыму" />
+            <meta name="keywords" content="выездная регистрация, Выездная церемония в Крыму" />
         </MetaTags>
         <EventPageBanner fontSize={['68px', '82px', '52px']} mobileFontSize={['9.7vw', '12.3vw', '8.2vw']}
                          titles={['Выездная', 'свадебная', 'церемония', 'в Крыму']}

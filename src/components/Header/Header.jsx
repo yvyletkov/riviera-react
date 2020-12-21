@@ -12,7 +12,8 @@ import Menu from "./Menu/Menu";
 
 
 const Link = ({title, style, icon, link = '#', extraClass = null, onClickHandler}) => {
-    return <NavLink onClick={onClickHandler ? onClickHandler : null} style={style} to={link} className={s.link + ' ' + extraClass}>
+    return <NavLink onClick={onClickHandler ? onClickHandler : null} style={style} to={link}
+                    className={s.link + ' ' + extraClass}>
         <img src={icon} alt={title}/>
         {title ? <div>{title}</div> : null}
     </NavLink>
@@ -45,7 +46,7 @@ const Header = () => {
 
             <div className={s.wrapper}>
 
-                <Menu toggleMenu={toggleMenu} menuOpened={menuOpened} />
+                <Menu toggleMenu={toggleMenu} menuOpened={menuOpened}/>
 
                 <div className={s.container}>
 
@@ -58,14 +59,17 @@ const Header = () => {
                         </div>
                         <div className={s.leftBlock}>
                             <Link title={"Спецпредложения"} icon={star} link={"/offers"}/>
-                            <Link onClickHandler={handleLinkClick} style={{cursor: 'not-allowed'}} title={"Анимация"} icon={speaker} link={""}/>
-                            <Link onClickHandler={handleLinkClick} style={{cursor: 'not-allowed'}} title={"Новости"} icon={microphone} link={""}/>
+                            <Link onClickHandler={handleLinkClick} style={{cursor: 'not-allowed'}} title={"Анимация"}
+                                  icon={speaker} link={""}/>
+                            <Link onClickHandler={handleLinkClick} style={{cursor: 'not-allowed'}} title={"Новости"}
+                                  icon={microphone} link={""}/>
                         </div>
                         <div className={s.logo}>
                             <NavLink to={'/'}><img src={logo} alt="Riviera Sunrise"/></NavLink>
                         </div>
                         <div className={s.rightBlock}>
-                            <Link onClickHandler={handleLinkClick} style={{cursor: 'not-allowed'}} icon={search} extraClass={s.searchIcon} link={""}/>
+                            <Link onClickHandler={handleLinkClick} style={{cursor: 'not-allowed'}} icon={search}
+                                  extraClass={s.searchIcon} link={""}/>
                             <div className={s.contacts}>
                                 <Link icon={phone} href={"tel:+78005557856"} extraClass={s.number}
                                       title={"+7 (800) 555-78-56"}/>
@@ -77,7 +81,17 @@ const Header = () => {
 
                     </div>
                 </div>
+
+                <div className={s.wrapper} style={{background: "#ff6c39", position: "absolute", top: 'unset'}}>
+                    <div className={s.container} style={{padding: '5px 20px'}}>
+                    <p style={{fontSize: '13px', color: '#fff'}}>
+                        Уважаемые гости, с 28 декабря по 15 января, при заселении, необходимо предоставить справку об
+                        отрицательном тесте на COVID-19, полученную не позднее, чем за 72 часа до заезда.
+                    </p>
+                    </div>
+                </div>
             </div>
+
         </>
     )
 };
