@@ -3,7 +3,6 @@ import RoomsAndPricesPageBanner from "./RoomsAndPricesPageBanner/RoomsAndPricesP
 import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
 import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
 import {roomsAndPricesPageData} from "../../../data";
-import MetaTags from 'react-meta-tags';
 
 
 const RoomsAndPricesPage = () => {
@@ -11,9 +10,6 @@ const RoomsAndPricesPage = () => {
     React.useEffect( () => document.title = 'Номера и цены – отель Riviera Sunrise Resort & SPA – Алушта, Крым', [])
 
     return <>
-        <MetaTags>
-            <meta name="keywords" content="номер в отеле, цена номеров в отеле, цены номеров отель у моря, цена номеров отель крыма, просторные номера, снять номер в отеле, номер с видом на море, номер с видом на горы, цены номеров отель ривьера, снять номер в отеле"/>
-        </MetaTags>
         <RoomsAndPricesPageBanner/>
 
         <section className='section'>

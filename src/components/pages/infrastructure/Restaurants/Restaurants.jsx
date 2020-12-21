@@ -9,7 +9,6 @@ import iconBreakfast from "../../../../img/infrastructure/restaurant/icons/break
 import iconDinner from "../../../../img/infrastructure/restaurant/icons/dinner.png";
 import iconSupper from "../../../../img/infrastructure/restaurant/icons/supper.png";
 import iconTime from "../../../../img/infrastructure/restaurant/icons/time.png";
-import MetaTags from 'react-meta-tags';
 
 const Restaurants = () => {
 
@@ -136,9 +135,6 @@ const Restaurants = () => {
 
     return (
         <>
-            <MetaTags>
-                <meta name="keywords" content="Ресторан в Алуште, ресторан на открытой веранде, ресторан у моря, меню ресторана, ресторан Крым, банкетный зал" />
-            </MetaTags>
             <InfrastructurePageBanner bannerData={infrastructurePagesData.restaurants.bannerData}/>
             <section className='section first'>
                 <ApparatusesStyledDiv>

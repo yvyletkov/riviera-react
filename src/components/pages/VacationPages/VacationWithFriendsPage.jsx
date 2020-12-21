@@ -8,16 +8,12 @@ import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
 import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
 import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
 import FoodBlock from "../../shared/FoodBlock/FoodBlock";
-import MetaTags from 'react-meta-tags';
 
 const VacationWithFriendsPage = () => {
 
     React.useEffect( () => document.title = `Отдых с друзьями – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
     return <>
-        <MetaTags>
-            <meta name="keywords" content="отдых с друзьями, отдых в компании, отдых у моря, отдых в Крыму большой компанией" />
-        </MetaTags>
         <VacationsPageBanner fontSize={["82px", "60px"]}
                              fontSizeMobile={["15vw", "10vw"]}
                              subtitle={'Отдых c друзьями'}
