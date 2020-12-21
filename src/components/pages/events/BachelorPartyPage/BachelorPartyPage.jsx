@@ -17,16 +17,12 @@ import AdvantagesBlock from "../../../shared/AdvantagesBlock/AdvantagesBlock";
 import KitchenBlock from "../../../shared/KitchenBlock/KitchenBlock";
 import EventTextImgBlock from "../../../shared/EventTextImgBlock/EventTextImgBlock";
 import ContactForm from "../../../additional/ContactForm/ContactForm";
-import MetaTags from 'react-meta-tags';
 
 const BachelorPartyPage = () => {
     React.useEffect( () => document.title = `Настоящий Мальчишник в Крыму – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
 
     return <>
-        <MetaTags>
-            <meta name="keywords" content="лучший мальчишник, мальчишник в Крыму" />
-        </MetaTags>
         <EventPageBanner fontSize={['55px', '55px', '55px']} mobileFontSize={['10.5vw', '10.5vw', '8.2vw']}
                          titles={['Организуем вам', 'настоящий', 'мальчишник', 'в Крыму']}
                          icons={eventPagesData.bachelorParty.bachelorPartyBannerIcons} bannerImg={bannerImg}

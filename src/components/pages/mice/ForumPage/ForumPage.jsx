@@ -20,7 +20,6 @@ import LogosSlider from "../../../shared/sliders/LogosSlider/LogosSlider";
 import imageBanner from "../../../../img/mice/forum/1.jpg";
 import SpecialTask from "../../../shared/SpecialTask/SpecialTask";
 import ContactForm from "../../../additional/ContactForm/ContactForm";
-import MetaTags from 'react-meta-tags';
 
 const ForumPage = () => {
 
@@ -46,9 +45,6 @@ const ForumPage = () => {
 
     return (
         <>
-            <MetaTags>
-                <meta name="keywords" content="форум в Крыму, Крым Россия форумы, форум на отдыхе, съезд руководителей" />
-            </MetaTags>
             <MicePageBanner subtitle={'Организация'}
                             title1={'Форума'}
                             title1Style={window.matchMedia('(max-width: 500px)').matches ? {} : {fontSize: '90px'}}

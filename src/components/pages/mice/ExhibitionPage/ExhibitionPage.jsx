@@ -20,7 +20,6 @@ import LogosSlider from "../../../shared/sliders/LogosSlider/LogosSlider";
 import imageBanner from "../../../../img/mice/exhibition/1.jpg";
 import SpecialTask from "../../../shared/SpecialTask/SpecialTask";
 import ContactForm from "../../../additional/ContactForm/ContactForm";
-import MetaTags from 'react-meta-tags';
 
 const ExhibitionPage = () => {
 
@@ -45,9 +44,6 @@ const ExhibitionPage = () => {
 
     return (
         <>
-            <MetaTags>
-                <meta name="keywords" content="выставка в Крыму, Организация выставки в отеле, выставка в отеле" />
-            </MetaTags>
             <MicePageBanner subtitle={'Площадка для'}
                             title1={'Выставки'}
                             title1Style={{fontSize: window.matchMedia('(max-width: 500px)').matches ? '8.7vw' : '70px'}}

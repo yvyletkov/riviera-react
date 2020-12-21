@@ -20,7 +20,6 @@ import LogosSlider from "../../../shared/sliders/LogosSlider/LogosSlider";
 import imageBanner from "../../../../img/mice/team-building/1.jpg";
 import SpecialTask from "../../../shared/SpecialTask/SpecialTask";
 import ContactForm from "../../../additional/ContactForm/ContactForm";
-import MetaTags from 'react-meta-tags';
 
 const TeamBuildingPage = () => {
     let [accordeonStatus, setAccordeonStatus] = React.useState(false);
@@ -45,9 +44,6 @@ const TeamBuildingPage = () => {
 
     return (
         <>
-            <MetaTags>
-                <meta name="keywords" content="тимбилдинг в крыму, тимбилдинг идеи, тимбилдинг в отеле, тимбилдинг с проживанием, мастер класс, тимбилдинг идеи" />
-            </MetaTags>
             <MicePageBanner subtitle={'Незабываемый'}
                             title1={'Тимбилдинг'}
                             title1Style={{fontSize: window.matchMedia('(max-width: 500px)').matches ? '8.7vw' : '60px'}}

@@ -19,7 +19,6 @@ import LogosSlider from "../../../shared/sliders/LogosSlider/LogosSlider";
 import imageBanner from "../../../../img/mice/conference/1.jpg";
 import SpecialTask from "../../../shared/SpecialTask/SpecialTask";
 import ContactForm from "../../../additional/ContactForm/ContactForm";
-import MetaTags from 'react-meta-tags';
 
 const ConferencesPage = () => {
 
@@ -45,9 +44,6 @@ const ConferencesPage = () => {
 
     return (
         <>
-            <MetaTags>
-                <meta name="keywords" content="оборудование для конференций, организация конференций, конференция в Крыму, конференц зал, Провести конференцию в Крыму, Конференция на берегу моря" />
-            </MetaTags>
             <MicePageBanner subtitle={'Идеальная организация'}
                             title1={'Вашей'}
                             title2={'Конференции'}

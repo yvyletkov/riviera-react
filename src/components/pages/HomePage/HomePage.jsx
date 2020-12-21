@@ -7,16 +7,12 @@ import TextPlusImageBlock from "../../shared/TextPlusImageBlock/TextPlusImageBlo
 import SpecialsSlider from "../../shared/sliders/SpecialsSlider/SpecialsSlider";
 import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
 import MapSection from "../../shared/MapSection/MapSection";
-import MetaTags from 'react-meta-tags';
 
 const HomePage = () => {
 
     React.useEffect( () => document.title = 'Riviera Sunrise Resort & SPA – Алушта, Крым – главная страница', [])
 
     return <>
-        <MetaTags>
-            <meta name="keywords" content="Отдых Россия Крым, отдых в Крыму с питанием, отель с собственным пляжем, СПА центр, Riviera Крым, СПА отель Крым" />
-        </MetaTags>
         <HomePageBanner/>
 
         <section className='section first'>
