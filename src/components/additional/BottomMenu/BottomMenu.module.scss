@@ -14,7 +14,7 @@
 }
 
 .bottomMenu.minified {
-  height: 60px;
+  height: 50px;
 }
 
 .item {
@@ -41,6 +41,11 @@
   height: 27px;
   margin-bottom: 7px;
   transition: all 400ms;
+}
+
+.bottomMenu.minified .item img {
+  margin-bottom: 4px;
+
 }
 
 .bottomMenu.minified .item img {

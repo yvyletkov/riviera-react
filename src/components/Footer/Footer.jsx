@@ -56,7 +56,7 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className={s.footerSocials}>
-                            <p>Мы в соцсетях</p>
+                            <p>Мы в соцсетях:</p>
                             <div className={s.icons}>
                                 <a target={'_blank'} href="https://www.instagram.com/rivierasunrise/"><img src={logoInst} alt="Instagram"/></a>
                                 <a target={'_blank'} href="https://www.facebook.com/RivieraSunrise"><img src={logoFb} alt="Лого"/></a>

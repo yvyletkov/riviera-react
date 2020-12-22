@@ -9,7 +9,7 @@ import "./style/fonts.css";
 import './style/rodal.css';
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
-import BottomMenu from "./components/shared/BottomMenu/BottomMenu";
+import BottomMenu from "./components/additional/BottomMenu/BottomMenu";
 import swal from "sweetalert2";
 
 const HomePage = lazy(() => import('./components/pages/HomePage/HomePage'));
@@ -65,7 +65,7 @@ function App() {
     return (<>
             <Header/>
             {window.matchMedia('(max-width: 767px)').matches &&
-            <div style={{height: '70px'}}/>}
+            <div style={{height: '65px'}}/>}
             <Suspense fallback={<div style={{
                 height: 'calc(100vh - 70px)',
                 width: '100vw',

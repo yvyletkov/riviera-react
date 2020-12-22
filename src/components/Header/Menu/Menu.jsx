@@ -254,6 +254,12 @@ const Menu = ({menuOpened, toggleMenu}) => {
                                 </NavLink>
                             </div>
 
+                            <div className={s.menuItem} onClick={toggleMenu}>
+                                <NavLink to={"/medical-spa"}>
+                                    Medical SPA
+                                </NavLink>
+                            </div>
+
                         </div>
 
                         <div className={s.col}>

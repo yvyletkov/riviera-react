@@ -4,7 +4,7 @@ import bedIcon from "../../../img/bed-icon.png";
 import calendarIcon from "../../../img/calendar-icon.png";
 import phoneIcon from "../../../img/phone-icon.png";
 import {NavLink} from "react-router-dom";
-import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
+import PopupContactForm from "../ContactForm/PopupContactForm";
 
 const BottomMenu = (props) => {
 
