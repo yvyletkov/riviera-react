@@ -3,6 +3,7 @@ import RoomsAndPricesPageBanner from "./RoomsAndPricesPageBanner/RoomsAndPricesP
 import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
 import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
 import {roomsAndPricesPageData} from "../../../data";
+import CenteredSlider from "../../shared/sliders/CenteredSlider/CenteredSlider";
 
 
 const RoomsAndPricesPage = () => {
@@ -25,9 +26,9 @@ const RoomsAndPricesPage = () => {
             <GridSlider slides={roomsAndPricesPageData.gridSlides}/>
         </section>
 
-        {/*<section className='section last'>*/}
-        {/*    <CenteredSlider title={'Сегодня в программе'} slides={roomsAndPricesPageData.centeredSlides}/>*/}
-        {/*</section>*/}
+        <section className='section last'>
+            <CenteredSlider title={'Сегодня в программе'} slides={roomsAndPricesPageData.centeredSlides}/>
+        </section>
 
     </>
 

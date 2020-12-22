@@ -49,6 +49,7 @@ const ReviewsPage = lazy(() => import('./components/pages/ReviewsPage/ReviewsPag
 const TransferPage = lazy(() => import("./components/pages/TransferPage/TransferPage"));
 const PartnersPage = lazy(() => import("./components/pages/PartnersPage/PartnersPage"));
 const BlogPage = lazy(() => import("./components/pages/BlogPage/BlogPage"));
+const AfishaPage = lazy(() => import("./components/pages/AfishaPage/AfishaPage"));
 
 function App() {
 
@@ -77,6 +78,9 @@ function App() {
             </div>}>
 
                 <Switch>
+
+                    <Route path='/afisha' exact
+                           component={() => <AfishaPage/>}/>
 
                     <Route path='/blog' exact
                            component={() => <BlogPage/>}/>

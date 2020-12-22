@@ -3,7 +3,6 @@ import s from "./CenteredSliderItem.module.scss";
 import capacityImg from "./../../../../../img/room-page/capacity-white.png";
 import areaImg from "./../../../../../img/room-page/ploshchad-white.png";
 import {NavLink} from "react-router-dom";
-import LazyImage from "../../../../additional/LazyImg";
 
 
 const CenteredSliderItem = (props) => {
@@ -17,15 +16,16 @@ const CenteredSliderItem = (props) => {
         case "home-page":
             return (
                 <div className={active ? s.card + ' ' + s.active : s.card}>
+                    {link && <NavLink className={s.link} to={link}>Подробнее →</NavLink>}
                     <img className={s.img} src={img} alt={title}/>
                     <div className={s.content}>
                         <p className={s.title}>{title}</p>
-                        <p className={s.subtitle}>{subtitle}</p>
+                        <p dangerouslySetInnerHTML={{__html: subtitle}} className={s.subtitle}/>
                         <p className={s.time}>{time}
                             <span>{date}</span></p>
-                        <p className={s.campus}>{campus}
-                            <div>{campusName}</div>
+                        <p dangerouslySetInnerHTML={{__html: campus}} className={s.campus}>
                         </p>
+                        <div>{campusName}</div>
                     </div>
                 </div>
             );

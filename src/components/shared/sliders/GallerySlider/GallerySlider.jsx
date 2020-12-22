@@ -120,7 +120,7 @@ const GallerySlider = ({blockName = "Фотогалерея", slides}) => {
                     </StyledSlider>
                     <div className={s.mobileBlock}>
                         <div className={s.mobileBlockText}>Больше фотографий нашего отеля</div>
-                        <Button text={'Перейти к галерее'}/>
+                        <Button onClick={ () => null} style={{cursor: 'not-allowed'}} text={'Перейти к галерее'}/>
                     </div>
                 </div>
             </div>

@@ -38,7 +38,7 @@ const SliderStyles = styled.div`
 
 const CenteredSlider = ({title = "Какой-то заголовок", slides, type = "home-page"}) => {
 
-    let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
+    let [currentSlideIndex, setCurrentSlideIndex] = React.useState(window.matchMedia('(min-width: 769px)').matches ? (slides.length === 4 ? 2 : slides.length === 2 ? 1 : 0) : 0);
 
     const items = slides.map((item, index) => {
         const {img, link, title, subtitle, time, date, campus, campusName, key, subsubtitle='', fontsizeSubsubtitle='', capacity, area} = item;
@@ -67,20 +67,21 @@ const CenteredSlider = ({title = "Какой-то заголовок", slides, t
     const afterChangeHandler = (index) => setCurrentSlideIndex(index)
 
     const settings = {
+        initialSlide: slides.length === 4 ? 2 : slides.length === 2 ? 1 : 0,
         afterChange: afterChangeHandler,
         dots: false,
         className: "center",
         centerMode: true,
-        infinite: true,
+        infinite: type !== "home-page",
         centerPadding: "60px",
         variableWidth: true,
         speed: 500,
-        nextArrow: <NextArrow positionStyles={{
+        nextArrow: <NextArrow onClick={() => setCurrentSlideIndex(currentSlideIndex + 1)} positionStyles={{
             bottom: "-90px",
             right: "50%",
             transform: "translateX(120%)"
         }}/>,
-        prevArrow: <PrevArrow positionStyles={{
+        prevArrow: <PrevArrow onClick={() => setCurrentSlideIndex(currentSlideIndex - 1)} positionStyles={{
             bottom: "-90px",
             left: "50%",
             transform: "translateX(-120%)"
@@ -89,11 +90,12 @@ const CenteredSlider = ({title = "Какой-то заголовок", slides, t
             {
                 breakpoint: 480,
                 settings: {
+                    initialSlide: 0,
                     className: false,
                     centerMode: false,
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    infinite: true,
+                    infinite: type !== "home-page",
                     dots: true,
                     arrows: false
                 }
@@ -101,11 +103,17 @@ const CenteredSlider = ({title = "Какой-то заголовок", slides, t
         ]
     };
 
+    React.useEffect(() => {
+        sliderRef.current.slickGoTo(currentSlideIndex);
+    }, [currentSlideIndex]);
+
+    const sliderRef = React.useRef();
+
     return (
         <div className={s.wrapper}>
             <HeadlineCenter title={title}/>
             <SliderStyles>
-                <Slider {...settings}>{items}</Slider>
+                <Slider ref={sliderRef} {...settings}>{items}</Slider>
             </SliderStyles>
         </div>
     );

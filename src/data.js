@@ -402,6 +402,15 @@ import partnerLogo10 from "./img/partners/10.jpg"
 import painterImg from "./img/vacancies/painter.jpg";
 import pizzaMakerImg from "./img/vacancies/pizza-maker.jpg";
 // END VacanciesImg
+// afisha imports
+import afishaImg1 from "./img/afisha/1.jpg";
+import afishaImg2 from "./img/afisha/2.jpg";
+import afishaImg3 from "./img/afisha/3.jpg";
+import afishaImg4 from "./img/afisha/4.jpg";
+import afishaImg5 from "./img/afisha/5.jpg";
+import afishaImg6 from "./img/afisha/6.jpg";
+
+// END afisha imports
 
 const commonGridSlides = [
     {
@@ -767,64 +776,45 @@ const commonExtraServicesSlides = [
 ]; // доп услуги
 const commonAfishaSlides = [
     {
-        img: afisha1,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00",
-        date: "8 августа",
+        img: afishaImg1,
+        title: "Тренировки",
+        subtitle: "По плаванию<br/>для взрослых",
+        time: "и детей",
+        date: "",
         campus: "Корпус",
-        campusName: "Classic",
+        campusName: "Modern",
         key: 1,
+        link: '/pool-shedule'
     },
     {
-        img: afisha2,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00",
-        date: "8 августа",
-        campus: "Корпус",
-        campusName: "Classic",
+        img: afishaImg2,
+        title: "Новое",
+        subtitle: "паназиатское<br/><span style='font-size: 78px'>меню</span>",
+        time: "",
+        date: "",
+        campus: "Ресторан",
+        campusName: "«The Grilled»",
         key: 2,
     },
     {
-        img: afisha3,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00",
-        date: "8 августа",
-        campus: "Корпус",
-        campusName: "Classic",
+        img: afishaImg3,
+        title: "Открытый",
+        subtitle: "Подогреваемый<br/>бассейн",
+        time: "На улице",
+        date: "",
+        campus: "С 26 декабря<br/>по 10 января",
+        campusName: "",
         key: 3,
     },
     {
-        img: afisha4,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00",
-        date: "8 августа",
+        img: afishaImg4,
+        title: "",
+        subtitle: "Новогодний<br><span style='font-size: 70px'>ужин</span>",
+        time: "18:00",
+        date: "31 декабря",
         campus: "Корпус",
-        campusName: "Classic",
+        campusName: "Modern",
         key: 4,
-    },
-    {
-        img: afisha5,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00",
-        date: "8 августа",
-        campus: "Корпус",
-        campusName: "Classic",
-        key: 5,
-    },
-    {
-        img: afisha5,
-        title: "Караоке бар",
-        subtitle: "Green Stage",
-        time: "21:00",
-        date: "8 августа",
-        campus: "Корпус",
-        campusName: "Classic",
-        key: 6,
     },
 ];
 const commonClassicCampusSlides = [
@@ -3285,3 +3275,30 @@ export const blogPostsData = [
         img: adultSPA1
     },
 ]
+
+// Страница "Афиша"
+export const afishaPageData = {
+    slides: commonAfishaSlides,
+    pastSlides: [
+        {
+            img: afishaImg5,
+            title: "вечер",
+            subtitle: "Живой<br><span style='font-size: 70px'>музыки</span>",
+            time: "Ольга Легкая",
+            date: "",
+            campus: "",
+            campusName: "18 декабря",
+            key: 2,
+        },
+        {
+            img: afishaImg6,
+            title: "вечер",
+            subtitle: "Незабываемого<br><span style='font-size: 70px'>вокала</span>",
+            time: "Алина Авчиян",
+            date: "",
+            campus: "",
+            campusName: "19 декабря",
+            key: 2,
+        },
+    ]
+}
