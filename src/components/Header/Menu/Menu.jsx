@@ -159,6 +159,12 @@ const Menu = ({menuOpened, toggleMenu}) => {
 
                             </div>
 
+                            <div className={s.menuItem} onClick={toggleMenu}>
+                                <NavLink isActive={checkActive} to={"/afisha"}>
+                                    Афиша
+                                </NavLink>
+                            </div>
+
                         </div>
 
                         <div className={s.col}>

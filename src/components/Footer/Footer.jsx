@@ -38,6 +38,7 @@ const Footer = () => {
                                 <li><NavLink to={'/vacation-with-friends'}>Отдых с друзьями</NavLink></li>
                             </ul>
                             <ul>
+                                <li><NavLink to={'/afisha'}>Афиша</NavLink></li>
                                 <li><NavLink to={'/medical-spa'}>Medical SPA</NavLink></li>
                                 <li><NavLink to={'/offers'}>Специальные предложения</NavLink></li>
                                 <li><NavLink to={'/spa'}>SPA комплекс</NavLink></li>
