@@ -784,7 +784,7 @@ const commonAfishaSlides = [
         campus: "Корпус",
         campusName: "Modern",
         key: 1,
-        link: '/pool-shedule'
+        link: '/pool-schedule'
     },
     {
         img: afishaImg2,
