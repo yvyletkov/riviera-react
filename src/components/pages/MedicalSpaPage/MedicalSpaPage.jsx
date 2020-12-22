@@ -121,9 +121,9 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
             <GridSlider slides={roomsAndPricesPageData.gridSlides}/>
         </section>
 
-        {/*<section className='section'>*/}
-        {/*    <CenteredSlider title={'Сегодня в программе'} slides={roomsAndPricesPageData.centeredSlides}/>*/}
-        {/*</section>*/}
+        <section className='section'>
+            <CenteredSlider title={'Сегодня в программе'} slides={roomsAndPricesPageData.centeredSlides}/>
+        </section>
 
         <section className='section'>
             <GallerySlider blockName={'Фотогалерея'} slides={medicalSpaPage.gallerySlides}/>

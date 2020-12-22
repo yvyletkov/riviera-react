@@ -38,6 +38,7 @@ const Footer = () => {
                                 <li><NavLink to={'/vacation-with-friends'}>Отдых с друзьями</NavLink></li>
                             </ul>
                             <ul>
+                                <li><NavLink to={'/afisha'}>Афиша</NavLink></li>
                                 <li><NavLink to={'/medical-spa'}>Medical SPA</NavLink></li>
                                 <li><NavLink to={'/offers'}>Специальные предложения</NavLink></li>
                                 <li><NavLink to={'/spa'}>SPA комплекс</NavLink></li>
@@ -56,7 +57,7 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className={s.footerSocials}>
-                            <p>Мы в соцсетях</p>
+                            <p>Мы в соцсетях:</p>
                             <div className={s.icons}>
                                 <a target={'_blank'} href="https://www.instagram.com/rivierasunrise/"><img src={logoInst} alt="Instagram"/></a>
                                 <a target={'_blank'} href="https://www.facebook.com/RivieraSunrise"><img src={logoFb} alt="Лого"/></a>

@@ -9,7 +9,7 @@ import "./style/fonts.css";
 import './style/rodal.css';
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
-import BottomMenu from "./components/shared/BottomMenu/BottomMenu";
+import BottomMenu from "./components/additional/BottomMenu/BottomMenu";
 import swal from "sweetalert2";
 
 const HomePage = lazy(() => import('./components/pages/HomePage/HomePage'));
@@ -49,6 +49,7 @@ const ReviewsPage = lazy(() => import('./components/pages/ReviewsPage/ReviewsPag
 const TransferPage = lazy(() => import("./components/pages/TransferPage/TransferPage"));
 const PartnersPage = lazy(() => import("./components/pages/PartnersPage/PartnersPage"));
 const BlogPage = lazy(() => import("./components/pages/BlogPage/BlogPage"));
+const AfishaPage = lazy(() => import("./components/pages/AfishaPage/AfishaPage"));
 const PoolSchedulePage = lazy(() => import("./components/pages/PoolSchedulePage/PoolSchedulePage"));
 
 function App() {
@@ -66,7 +67,7 @@ function App() {
     return (<>
             <Header/>
             {window.matchMedia('(max-width: 767px)').matches &&
-            <div style={{height: '70px'}}/>}
+            <div style={{height: '65px'}}/>}
             <Suspense fallback={<div style={{
                 height: 'calc(100vh - 70px)',
                 width: '100vw',
@@ -79,6 +80,9 @@ function App() {
 
                 <Switch>
 
+                    <Route path='/afisha' exact
+                           component={() => <AfishaPage/>}/>
+  
                     <Route path='/pool-schedule' exact
                            component={() => <PoolSchedulePage/>}/>
 

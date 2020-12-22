@@ -43,9 +43,9 @@ const FamilyVacationPage = () => {
             <GridSlider slides={vacationPagesData.gridSlides}/>
         </section>
 
-        {/*<section className='section'>*/}
-        {/*    <CenteredSlider title={'Сегодня в программе'} slides={vacationPagesData.centeredSlides}/>*/}
-        {/*</section>*/}
+        <section className='section'>
+            <CenteredSlider title={'Сегодня в программе'} slides={vacationPagesData.centeredSlides}/>
+        </section>
 
         <section className='section'>
             <WideSlider subtitle={'Развлечения'} title={'для Ваших детей'}

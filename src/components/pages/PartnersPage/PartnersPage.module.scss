@@ -26,7 +26,7 @@
 
       span:first-of-type {
         text-transform: none;
-        font-family: "Helvetica Neue Medium";
+        font-family: "Helvetica Neue Medium", sans-serif;
         font-size: 23px;
         position: relative;
         width: fit-content;
@@ -44,7 +44,7 @@
       }
 
       span:last-of-type {
-        font-family: "Helvetica Neue Black";
+        font-family: "Helvetica Neue Black", sans-serif;
         font-size: 38px;
         line-height: 1.1;
       }

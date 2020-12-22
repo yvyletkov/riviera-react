@@ -189,7 +189,10 @@ input.input, textarea {
 // SWAL RESTYLE start
 .swal2-popup {
   border-radius: .6125em !important;
-  padding: 1.75em !important;
+  padding: 2.55em 1.75em 1.75em !important;
+  @media (max-width: 768px) {
+    padding: 2.55em 0.65em 1.75em !important;
+  }
 
   .swal2-title {
     font-size: 1.575em !important;
