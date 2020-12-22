@@ -239,7 +239,7 @@ input.input, textarea {
   }
 
   form {
-    input {
+    input, textarea {
       margin-bottom: 12px;
       @media (max-width: 768px) {
         padding: 19px 40px !important;

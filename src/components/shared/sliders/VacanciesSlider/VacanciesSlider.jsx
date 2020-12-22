@@ -32,7 +32,7 @@ const VacanciesSlider = ({sliders, popupOpen, setPopupOpen}) => {
                 breakpoint: 1000,
                 settings: {
                     arrows: false,
-                    variableWidth: true,
+                    variableWidth: false,
                     slidesToShow: 1,
                     dots: true,
                 }
