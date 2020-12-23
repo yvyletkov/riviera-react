@@ -51,6 +51,8 @@ const PartnersPage = lazy(() => import("./components/pages/PartnersPage/Partners
 const BlogPage = lazy(() => import("./components/pages/BlogPage/BlogPage"));
 const AfishaPage = lazy(() => import("./components/pages/AfishaPage/AfishaPage"));
 const PoolSchedulePage = lazy(() => import("./components/pages/PoolSchedulePage/PoolSchedulePage"));
+const DocumentsPage = lazy(() => import("./components/pages/DocumentsPage/DocumentsPage"));
+
 
 function App() {
 
@@ -80,9 +82,12 @@ function App() {
 
                 <Switch>
 
+                    <Route path='/documents' exact
+                           component={() => <DocumentsPage/>}/>
+  
                     <Route path='/afisha' exact
                            component={() => <AfishaPage/>}/>
-  
+
                     <Route path='/pool-schedule' exact
                            component={() => <PoolSchedulePage/>}/>
 

@@ -65,7 +65,7 @@ const Footer = () => {
                                 <a target={'_blank'} href="https://vk.com/rivierasunrise"><img src={logoVk} alt="ВК"/></a>
                             </div>
                             <div className={s.flexWrapper}>
-                                {/*<p>Документы</p>*/}
+                                <NavLink to={'/documents'}>Документы</NavLink>
                                 {/*<p>Программа лояльности UPRO CLUB</p>*/}
                             </div>
 
