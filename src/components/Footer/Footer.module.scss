@@ -93,6 +93,12 @@
   grid-area: socials;
   padding: 0 40px;
   margin: 0 auto;
+  .flexWrapper {
+    margin-top: 15px;
+    a {
+      margin: 0 auto 10px;
+    }
+  }
 }
 
 .footerContacts > img {
@@ -134,8 +140,12 @@
   }
   .footerSocials {
     border-top: 1px solid #000;
-
     text-align: center;
+    .flexWrapper {
+      a {
+        margin: 0 auto 10px;
+      }
+    }
   }
   .footerSocials > p:first-child {
     font-size: 140%;
