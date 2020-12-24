@@ -69,7 +69,7 @@ const VacanciesSlider = ({sliders, popupOpen, setPopupOpen}) => {
                                             })}
                                         </ul>
                                         <br />
-                                        <p><b>Требования:</b></p>
+                                        <p><b>Мы предлагаем:</b></p>
                                         <ul className={s.listBlock}>
                                             {item.offer.map((e) => {
                                                 return <li>{e}</li>
