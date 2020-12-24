@@ -36,7 +36,11 @@
 
 
 .footerFlex p {
-  margin: 0 0 0 10px;
+  margin: 0 0 0 14px;
+}
+
+.footerFlex a {
+  margin: 0 0 0 8px;
 }
 
 .footerGray {
@@ -196,6 +200,9 @@
   .footerNav ul li {
     font-size: 12px !important;
     //padding: 0 20px;
+  }
+  .footerFlex p, .footerFlex a {
+    margin: 0 0 0 10px;
   }
 }
 
