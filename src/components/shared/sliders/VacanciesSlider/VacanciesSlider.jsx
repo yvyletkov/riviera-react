@@ -51,10 +51,10 @@ const VacanciesSlider = ({sliders, popupOpen, setPopupOpen}) => {
                                 <div className={s.card}>
                                     <div className={s.description}>
                                         <h2>{item.vacancy}</h2>
-                                        <p><b>Опыт работы: </b>{item.experience}</p>
-                                        <br />
-                                        <p><b>Зарплата: </b>{item.salary}</p>
-                                        <br />
+                                        {/*<p><b>Опыт работы: </b>{item.experience}</p>*/}
+                                        {/*<br />*/}
+                                        {/*<p><b>Зарплата: </b>{item.salary}</p>*/}
+                                        {/*<br />*/}
                                         <p><b>Должностные обязанности:</b></p>
                                         <ul className={s.listBlock}>
                                             {item.duties.map((e) => {
@@ -65,6 +65,13 @@ const VacanciesSlider = ({sliders, popupOpen, setPopupOpen}) => {
                                         <p><b>Требования:</b></p>
                                         <ul className={s.listBlock}>
                                             {item.demands.map((e) => {
+                                                return <li>{e}</li>
+                                            })}
+                                        </ul>
+                                        <br />
+                                        <p><b>Требования:</b></p>
+                                        <ul className={s.listBlock}>
+                                            {item.offer.map((e) => {
                                                 return <li>{e}</li>
                                             })}
                                         </ul>
