@@ -37,7 +37,7 @@ const AfishaPage = () => {
             </section>
 
             <section className='section'>
-                <CenteredSlider title='Прошедшие афиши' slides={afishaPageData.pastSlides}/>
+                <CenteredSlider title='Прошедшие мероприятия' slides={afishaPageData.pastSlides}/>
             </section>
 
             <section className='section last'>

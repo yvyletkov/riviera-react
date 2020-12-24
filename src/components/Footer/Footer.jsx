@@ -24,7 +24,7 @@ const Footer = () => {
                             </div>
                             <div className={s.footerFlex}>
                                 <img src={logoPhone} alt="Лого"/>
-                                <p>8 800 300 68 41</p>
+                                <a href='tel:+78003006841'>8 800 300 68 41</a>
                             </div>
 
 

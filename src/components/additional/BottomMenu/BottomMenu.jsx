@@ -9,7 +9,7 @@ import PopupContactForm from "../ContactForm/PopupContactForm";
 const BottomMenu = (props) => {
 
     let [scrolledFromTop, setScrolledFromTop] = React.useState(0);
-    let [popupOpen, setPopupOpen] = React.useState(false);
+    // let [popupOpen, setPopupOpen] = React.useState(false);
 
     const listenToScroll = () => {
         const scroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -31,17 +31,17 @@ const BottomMenu = (props) => {
             <img src={calendarIcon} alt=""/>
             <div>Бронировать</div>
         </NavLink>
-        <div onClick={() => setPopupOpen(true)} className={s.item}>
+        <a href='tel:+78003006841' className={s.item}>
             <img src={phoneIcon} alt=""/>
             <div>Позвонить</div>
-        </div>
+        </a>
 
-        <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
-                          popupTitleText={'Пожалуйста, укажите свои контактные данные'}
-                          submitBtnText='Жду звонка'
-                          formName={`Контактная форма из нижнего блока мобильной версии сайта (кнопка "позвонить")`}
-                          swalText={'очень скоро наши менеджеры свяжутся c Вами'}
-                          withPhone/>
+        {/*<PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}*/}
+        {/*                  popupTitleText={'Пожалуйста, укажите свои контактные данные'}*/}
+        {/*                  submitBtnText='Жду звонка'*/}
+        {/*                  formName={`Контактная форма из нижнего блока мобильной версии сайта (кнопка "позвонить")`}*/}
+        {/*                  swalText={'очень скоро наши менеджеры свяжутся c Вами'}*/}
+        {/*                  withPhone/>*/}
     </div>
 };
 
