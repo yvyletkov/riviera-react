@@ -37,7 +37,7 @@ const VacanciesPage = () => {
             </section>
 
             <section className="section">
-                <VacanciesSlider sliders={vacanciesPageData}
+                <VacanciesSlider sliders={vacanciesPageData[currentTab]}
                                  popupOpen={popupOpen}
                                  setPopupOpen={setPopupOpen}/>
                 <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
