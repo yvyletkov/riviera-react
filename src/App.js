@@ -52,6 +52,7 @@ const BlogPage = lazy(() => import("./components/pages/BlogPage/BlogPage"));
 const AfishaPage = lazy(() => import("./components/pages/AfishaPage/AfishaPage"));
 const PoolSchedulePage = lazy(() => import("./components/pages/PoolSchedulePage/PoolSchedulePage"));
 const DocumentsPage = lazy(() => import("./components/pages/DocumentsPage/DocumentsPage"));
+const NewYearPage = lazy(() => import("./components/pages/NewYearPage/NewYearPage"));
 
 
 function App() {
@@ -82,9 +83,12 @@ function App() {
 
                 <Switch>
 
+                    <Route path='/new-year' exact
+                           component={() => <NewYearPage/>}/>
+
                     <Route path='/documents' exact
                            component={() => <DocumentsPage/>}/>
-  
+
                     <Route path='/afisha' exact
                            component={() => <AfishaPage/>}/>
 
