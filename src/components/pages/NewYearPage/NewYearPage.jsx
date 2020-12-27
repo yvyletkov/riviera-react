@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./NewYearPage.module.scss";
 import bannerImg from "../../../img/newYearBanner.png";
+import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
 
 
 const NewYearPage = () => {
@@ -127,6 +128,7 @@ const NewYearPage = () => {
                                 проведенного
                                 вместе с нами!
                             </p>
+                            <HeadlineCenter title="Для вас работают" style={{margin:'30px auto 0'}} />
                             <div className={s.flexWrapper}>
                                 <div className={s.col}>
                                     <h2 style={{textAlign: 'center', padding: '15px'}}>Расписание занятий в THE SHORE
