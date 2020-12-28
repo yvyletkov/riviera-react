@@ -174,7 +174,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
                                     События
                                 </p>
                                 <img src={arrowIcon} onClick={toggleEvent}
-                                     clчassName={!eventOpened ? s.arrow + ' ' + s.rotated : s.arrow}
+                                     className={!eventOpened ? s.arrow + ' ' + s.rotated : s.arrow}
                                      alt=""/>
 
 
