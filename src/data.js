@@ -458,7 +458,7 @@ const commonGridSlides = [
             }],
     },
     {
-        name: "Праздники",
+        name: "События",
         firstRow: [
             {
                 title: "Свадьба",
@@ -2478,7 +2478,7 @@ export const eventPagesData = {
     henPartyPage: {
         henPartyBannerIcons: [
             {img: iconSpa, descr: 'SPA-процедуры,<br/>бассейны<br/>и парные'},
-            {img: iconBeach, descr: 'Пляж<br/>в 50 метрах<br/>от отеля'},
+            {img: iconBeach, descr: 'Собственный<br/>закрытый пляж<br/>отеля'},
             {img: birthdayIcon6, descr: 'Специальные<br/>условия<br/>на проживание'},
         ],
         henPartyIcons: [
@@ -2491,7 +2491,7 @@ export const eventPagesData = {
     bachelorParty: {
         bachelorPartyBannerIcons: [
             {img: iconSauna, descr: 'Отдых<br/>в бассейне<br/>и парных'},
-            {img: iconBeach, descr: 'Пляж<br/>в 50 метрах<br/>от отеля'},
+            {img: iconBeach, descr: 'Собственный<br/>закрытый пляж<br/>отеля'},
             {img: birthdayIcon6, descr: 'Специальные<br/>условия<br/>на проживание'},
         ],
         bachelorPartyIcons: [
