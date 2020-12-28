@@ -115,7 +115,6 @@ const NewYearPage = () => {
                                 А СПА-центре THE SHORE SPA на территории отеля, для вас доступна Аква термальная зона,
                                 тренажерный
                                 зал.
-                                <b></b>
                             </p>
                             <p>
                                 <b>
@@ -131,25 +130,22 @@ const NewYearPage = () => {
                             <HeadlineCenter title="Для вас работают" style={{margin:'30px auto 0'}} />
                             <div className={s.flexWrapper}>
                                 <div className={s.col}>
-                                    <h2 style={{textAlign: 'center', padding: '15px'}}>Расписание занятий в THE SHORE
-                                        SPA</h2>
+                                    <h2 style={{textAlign: 'center', padding: '15px'}}>Ресторан  «Tavrika»</h2>
+                                    <p>Питание по системе «Шведский стол»</p>
                                     <ul>
-                                        <li>10:30 - Дыхательная гимнастика</li>
-                                        <li>10:45 - Стретчинг</li>
-                                        <li>11:30 - Аквааэробика</li>
-                                        <li>16:00 - Дыхательная гимнастика</li>
-                                        <li>16:15 - Йога</li>
-                                        <li>17:00 – Аквааэробика</li>
+                                        <li>Завтрак 08:00 — 10:30</li>
+                                        <li>Обед 13:00 — 15:00</li>
+                                        <li>Ужин 18:00 — 21:00</li>
                                     </ul>
                                 </div>
                                 <div className={s.col}>
-                                    <h2 style={{textAlign: 'center', padding: '15px'}}>Ресторан «The Grilled»
-                                        12:00-22:00</h2>
+                                    <h2 style={{textAlign: 'center', padding: '15px'}}>Ресторан  «The Grilled»</h2>
+                                    <p>Питание по системе «Шведский стол»</p>
                                     <ul>
-                                        <li>Шведская линия</li>
-                                        <li>Завтрак</li>
-                                        <li>Обед</li>
-                                        <li>Ужин</li>
+                                        <li>Завтрак 08:00 — 10:30</li>
+                                        <li>Обед 13:00 — 15:00</li>
+                                        <li>Ужин «18:00 — 21:00</li>
+                                        <li>A la Carte с 12:00 до 22:00</li>
                                     </ul>
                                 </div>
                                 <div className={s.col}>
@@ -157,13 +153,10 @@ const NewYearPage = () => {
                                     <ul>
                                         <li>08:00-22:00</li>
                                     </ul>
-                                    <h2 style={{padding: '15px'}}>Фитобар</h2>
+                                    <h2 style={{padding: '15px'}}>Фитобар в СПА-центре THE SHORE SPA</h2>
                                     <ul>
-                                        <li>9:00-21:00</li>
+                                        <li>9:00-18:00</li>
                                     </ul>
-                                    <h2 style={{padding: '15px'}}>Ресторан «Tavrika»</h2>
-                                    <h2 style={{padding: '15px'}}>Lobby Lounge</h2>
-                                    <h2 style={{padding: '15px'}}>Аренда мангала в саду</h2>
                                 </div>
                             </div>
                         </div>
