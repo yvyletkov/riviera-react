@@ -66,7 +66,7 @@ const ContactForm = ({submitBtnText, withEmail, withPhone, withMessage, formName
 
     const onSubmit = (values, {resetForm}) => {
         data.form = {
-            "url": `https://rivierasunrise.com${props.location.pathname}`
+            "url": `https://rivierasunrise.ru${props.location.pathname}`
         };
         data.inputs = [
             {
