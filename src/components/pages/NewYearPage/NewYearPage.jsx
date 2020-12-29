@@ -2,6 +2,7 @@ import React from "react";
 import s from "./NewYearPage.module.scss";
 import bannerImg from "../../../img/newYearBanner.png";
 import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
+import newYearPool from "../../../img/newYear-pool.jpg"
 
 
 const NewYearPage = () => {
@@ -22,11 +23,16 @@ const NewYearPage = () => {
                                 <span>гость</span>
                             </h1>
                             <div className={s.textContent}>
-                                <p>Мы рады пригласить Вас на новогодний ужин в ОТЕЛЬ-КАЗИНО 31 декабря 2020 года
+                                <p>Мы рады пригласить Вас на новогодний ужин в ОТЕЛЬ-КАЗИНО 31 декабря 2020 года.
+                                    <br/>
                                     Напоминаем, что пропуском на вечеринку будут шикарные вечерние платья, изысканные
                                     украшения и прически для дам, смокинги и шляпы для мужчин.
                                     <br/>
                                     <br/>
+                                    Напоминаем, о необходимости предоставлении отрицательного теста на наличие COVID-19, оформленного не ранее, чем за 2 суток до выезда из дома.
+                                    Максимальный срок действия справки 5 календарных дней с даты получения.
+                                    <br />
+                                    <br />
                                     Мероприятия проводящийся в отеле для проживающих гостей учитывают все санитарные
                                     нормы и правила Роспотребнадзора, соблюдается социальная дистанция и правила
                                     дезинфекции помещений.
@@ -54,13 +60,18 @@ const NewYearPage = () => {
                             <div className={s.col}>
                                 <h2 style={{textAlign: 'center', padding: '15px'}}>1 января</h2>
                                 <ul>
-                                    <li>8:00 - 13.00 завтрак</li>
+                                    <li>8:00 - 13.00 Поздний завтрак с безлимитным шампанским</li>
                                     <li>13:00 до 16:00 Barbecue-party у моря</li>
                                 </ul>
                             </div>
                         </div>
-                        <p style={{padding: '25px', textAlign: 'center'}}><b>С 22.12.2020 по 10.01.2021 в парке отеля
-                            работает подогреваемый бассейн 28&deg;</b></p>
+                    </div>
+                </div>
+            </section>
+            <section className="section">
+                <div className={s.schedulePoolBlock}>
+                    <div className={s.wrapper}>
+                        <img src={newYearPool} alt="работа бассейна"/>
                     </div>
                 </div>
             </section>
