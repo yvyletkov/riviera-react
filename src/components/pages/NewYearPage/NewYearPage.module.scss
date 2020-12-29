@@ -283,6 +283,24 @@
   }
 }
 
+.schedulePoolBlock {
+  .wrapper {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+
+      @media screen and (max-width: 600px) {
+        height: 230px;
+        object-position: -95px;
+      }
+    }
+  }
+}
+
 .scheduleRestBlock {
   .wrapper {
     max-width: 1920px;
@@ -300,7 +318,7 @@
       .flexWrapper {
         box-sizing: border-box;
         display: flex;
-        margin: 60px 0;
+        margin: 35px 0 50px;
         padding: 0 30px;
 
         .col {
