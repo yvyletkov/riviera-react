@@ -692,18 +692,11 @@ const commonSpecialsSlides = [
         key: 4,
     },
     {
-        img: promoImg4,
-        subtitle: "Отдых",
-        title: "Для крымчан",
-        link: '/offers/otdyh-dlya-krymchan',
-        key: 5,
-    },
-    {
         img: promoImg6,
         subtitle: "",
         title: "Онлайн</br>конференции",
         // link: '#',
-        key: 6,
+        key: 5,
     },
 ];
 const commonClosePoolsSlides = [
@@ -2512,6 +2505,13 @@ export const eventPagesData = {
 export const promotionsPageData = {
     slides: commonSpecialsSlides,
     pastSlides: [
+        {
+            img: promoImg4,
+            subtitle: "Отдых",
+            title: "Для крымчан",
+            link: '/offers/otdyh-dlya-krymchan',
+            key: 0,
+        },
         {
             img: promoImg7,
             subtitle: "",
