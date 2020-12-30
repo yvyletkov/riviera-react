@@ -27,7 +27,8 @@ const BachelorPartyPage = () => {
                          titles={['Организуем вам', 'настоящий', 'мальчишник', 'в Крыму']}
                          icons={eventPagesData.bachelorParty.bachelorPartyBannerIcons} bannerImg={bannerImg}
                          bannerImgMobile={bannerImgMobile}
-                         blackFont={true}/>
+                         blackFont={true}
+                         withInfo/>
 
         {/* Идеальное место для проведения */}
 

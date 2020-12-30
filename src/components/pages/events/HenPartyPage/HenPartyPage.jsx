@@ -20,7 +20,7 @@ import ContactForm from "../../../additional/ContactForm/ContactForm";
 
 const HenPartyPage = () => {
 
-    React.useEffect( () => document.title = `Девичник в Крыму – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+    React.useEffect(() => document.title = `Девичник в Крыму – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
 
     return <>
@@ -28,12 +28,14 @@ const HenPartyPage = () => {
                          titles={['Организуем вам', 'атмосферный', 'девичник', 'в Крыму']}
                          icons={eventPagesData.henPartyPage.henPartyBannerIcons} bannerImg={bannerImg}
                          bannerImgMobile={bannerImgMobile}
-                         blackFont={true}/>
+                         blackFont={true}
+                         withInfo/>
 
         {/* Идеальное место для проведения */}
 
         <section className='section first'>
-            <AdvantagesBlock title={'Идеальное место для проведения'} icons={eventPagesData.henPartyPage.henPartyIcons}/>
+            <AdvantagesBlock title={'Идеальное место для проведения'}
+                             icons={eventPagesData.henPartyPage.henPartyIcons}/>
         </section>
 
         {/* Для Вас душевная атмосфера */}
@@ -68,7 +70,8 @@ const HenPartyPage = () => {
 
         <section className='section'>
             <SpecialsSlider subtitle={'Дополнительные'} title={'услуги'} btnText={'Получить прайс по услугам'}
-                            slides={eventPagesData.specialsSlides} text={'Для успешной организации мероприятия в отеле Riviera Sunrise Resort & SPA, вы можете воспользоваться дополнительными услугами. Мы создавали их с желанием сделать ваше мероприятие ещё более насыщенным и подарить гостям комфорт и удивительные впечатления!'}/>
+                            slides={eventPagesData.specialsSlides}
+                            text={'Для успешной организации мероприятия в отеле Riviera Sunrise Resort & SPA, вы можете воспользоваться дополнительными услугами. Мы создавали их с желанием сделать ваше мероприятие ещё более насыщенным и подарить гостям комфорт и удивительные впечатления!'}/>
         </section>
 
         {/* Вам предстоит легкое решение */}
@@ -91,7 +94,9 @@ const HenPartyPage = () => {
                                     необходимые материалы для принятия решения о проведении девичника в нашем отеле.
                                 </p>
 
-                                <ContactForm submitBtnText={'Скачать коммерческое предложение'} formName={`Форма "Вам предстоит легкое решение" (скачать коммерческое предложение)`} withEmail
+                                <ContactForm submitBtnText={'Скачать коммерческое предложение'}
+                                             formName={`Форма "Вам предстоит легкое решение" (скачать коммерческое предложение)`}
+                                             withEmail
                                              swalText={'мы отправим всю необходимую информацию на указанную Вами почту в самое ближайшее время!'}/>
 
                             </div>
