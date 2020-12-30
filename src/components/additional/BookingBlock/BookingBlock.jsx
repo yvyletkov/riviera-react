@@ -22,8 +22,8 @@ function BookingBlock() {
     }, []);
 
     return <div className={s.bookingBlock}>
-        <div style={{zIndex: '1000'}} id="tl-search-form" className="tl-container">
-            <noindex><a href="http://www.travelline.ru/products/tl-hotel/" rel="nofollow">система
+        <div style={{zIndex: '1000'}} id='tl-search-form' className='tl-container'>
+            <noindex><a href='http://www.travelline.ru/products/tl-hotel' rel='nofollow'>система
                 онлайн-бронирования</a></noindex>
         </div>
     </div>
