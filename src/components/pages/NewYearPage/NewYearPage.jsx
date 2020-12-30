@@ -51,7 +51,6 @@ const NewYearPage = () => {
                                         корпуса
                                         Modern
                                     </li>
-                                    <li>22:00 - Вас ждет новогодний сюрприз в парке отеля Лобби-бар «Mangup»</li>
                                     <li>Спа-центр THE SHORE SPA работает до 20:00</li>
                                 </ul>
                             </div>
