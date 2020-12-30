@@ -40,7 +40,7 @@ const SliderStyles = styled(Slider)`
 }
 `;
 
-const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-то", btnLink, slides, text, btnText = 'Смотреть все предложения'}) => {
+const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-то", btnLink, slides, text, btnText = 'Смотреть все предложения', withWeddingPrices}) => {
 
     let [popupOpen, setPopupOpen] = React.useState(false);
 
@@ -102,7 +102,14 @@ const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-�
                         <Slider {...settings}>{items}</Slider>
                     </SliderStyles>
                 </div>
-                <Button text={btnText} onClick={!btnLink ? () => setPopupOpen(true) : null} link={btnLink ? btnLink : null} style={!window.matchMedia("(max-width: 768px)").matches ? {width: "210px", marginLeft:"10px"} : {width: 'calc(100vw - 40px)', margin: '0 auto', marginTop:'40px'}}/>
+                <Button text={btnText} onClick={
+                    withWeddingPrices ? () => {
+                        window.open('/documents/Пакетное-предложение.pdf', '_blank');
+                        window.open('/documents/Первая-ночь.pdf', '_blank');
+                        window.open('/documents/Свадебные-торты.pdf', '_blank');
+                        } :
+                    (!btnLink ? () => setPopupOpen(true) : null)
+                } link={btnLink ? btnLink : null} style={!window.matchMedia("(max-width: 768px)").matches ? {width: "210px", marginLeft:"10px"} : {width: 'calc(100vw - 40px)', margin: '0 auto', marginTop:'40px'}}/>
             </div>
         </div>
     );

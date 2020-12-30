@@ -28,7 +28,8 @@ const WeddingPage = () => {
         <EventPageBanner fontSize={['68px', '82px', '52px']} mobileFontSize={['11.7vw', '19.2vw', '8.2vw']}
                          titles={['Ваша', 'свадьба', 'мечты', 'в Крыму']}
                          icons={eventPagesData.weddingPages.weddingBannerIcons} bannerImg={bannerImg}
-                         bannerImgMobile={bannerImgMobile}/>
+                         bannerImgMobile={bannerImgMobile}
+                         withPrice/>
 
         {/* Ваша семья начинается здесь */}
 
@@ -101,13 +102,13 @@ const WeddingPage = () => {
         {/* Вас ждет изысканная еда */}
 
         <section className='section'>
-            <KitchenBlock/>
+            <KitchenBlock withWeddingMenu/>
         </section>
 
         {/* Дополнительные услуги */}
 
         <section className='section'>
-            <SpecialsSlider subtitle={'Дополнительные'} title={'услуги'} btnText={'Получить прайс по услугам'}
+            <SpecialsSlider withWeddingPrices subtitle={'Дополнительные'} title={'услуги'} btnText={'Получить прайс по услугам'}
                             slides={eventPagesData.specialsSlides} text={'Для успешной организации мероприятия в отеле Riviera Sunrise Resort & SPA, вы можете воспользоваться дополнительными услугами. Мы создавали их с желанием сделать ваше мероприятие ещё более насыщенным и подарить гостям комфорт и удивительные впечатления!'}/>
         </section>
 

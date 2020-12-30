@@ -7,9 +7,11 @@ import iconThematic from "../../../../img/events/wedding/icon-thematic.png"
 import AnimatedMouseIcon from "../../../shared/AnimatedMouseIcon/AnimatedMouseIcon";
 import Button from "../../../shared/Button/Button";
 import PopupContactForm from "../../../additional/ContactForm/PopupContactForm";
+import ContactForm from "../../../additional/ContactForm/ContactForm";
+import Rodal from "rodal";
 
 
-const EventPageBanner = ({mobileFontSize, fontSize, titles, icons, bannerImg, bannerImgMobile, blackFont, btnLink = "#"}) => {
+const EventPageBanner = ({mobileFontSize, fontSize, titles, icons, bannerImg, bannerImgMobile, blackFont, withInfo = false, withPrice = false}) => {
 
     let [popupOpen, setPopupOpen] = React.useState(false);
 
@@ -33,13 +35,33 @@ const EventPageBanner = ({mobileFontSize, fontSize, titles, icons, bannerImg, ba
                     <Button style={{width: "fit-content", marginTop: "20px"}}
                             onClick={() => setPopupOpen(true)} text={"Узнать стоимость"}/>
 
-                    <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
-                                      popupTitleText={'Чтобы получить точную информацию о стоимости, позвольте нам связаться с Вами'}
-                                      submitBtnText='Узнать стоимость'
-                                      formName={`Форма с верхнего баннера страницы ${titles[1]} ${titles[2]} ${titles[3]} (кнопка "узнать стоимость")`}
-                                      swalText={'очень скоро наши менеджеры с Вами свяжутся. Также не забывайте проверять свою почту 😉'}
-                                      withEmail
-                                      withPhone/>
+                    {withInfo ?
+                        <Rodal className={'rodal-popup'} visible={popupOpen} onClose={() => setPopupOpen(false)}>
+                            <p style={{maxWidth: "90%"}}>
+                                Менеджер по организации мероприятий:
+                            </p>
+                            <p>
+                                Телефон: <a style={{whiteSpace: 'nowrap'}} href="tel:+73656026226">+7(365)602-62-26
+                                доб. 3998</a>
+                            </p>
+                            <p>
+                                What's App, Viber, Telegram: <a href="tel:+79877541784">+7(987)754-17-84</a>
+                            </p>
+                        </Rodal>
+                        :
+                        withPrice ? (popupOpen ? (function () {
+                                window.location = 'documents/Выездная-церемония.pdf';
+                            })() : null)
+                            :
+                            <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
+                                              popupTitleText={'Чтобы получить точную информацию о стоимости, позвольте нам связаться с Вами'}
+                                              submitBtnText='Узнать стоимость'
+                                              formName={`Форма с верхнего баннера страницы ${titles[1]} ${titles[2]} ${titles[3]} (кнопка "узнать стоимость")`}
+                                              swalText={'очень скоро наши менеджеры с Вами свяжутся. Также не забывайте проверять свою почту 😉'}
+                                              withEmail
+                                              withPhone/>
+                    }
+
                 </div>
 
 
