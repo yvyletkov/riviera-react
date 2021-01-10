@@ -82,14 +82,14 @@ const Header = () => {
                     </div>
                 </div>
 
-                <div className={s.wrapper} style={{zIndex: '1', background: "#7bc05d", position: "absolute", top: 'unset'}}>
-                    <div className={s.container} style={{padding: '5px 20px'}}>
-                    <p style={{fontSize: '13px', color: '#fff'}}>
-                        Уважаемые гости, с 28 декабря по 15 января, при заселении, необходимо предоставить справку об
-                        отрицательном тесте на COVID-19, полученную не позднее, чем за 72 часа до заезда.
-                    </p>
-                    </div>
-                </div>
+                {/*<div className={s.wrapper} style={{zIndex: '1', background: "#7bc05d", position: "absolute", top: 'unset'}}>*/}
+                {/*    <div className={s.container} style={{padding: '5px 20px'}}>*/}
+                {/*    <p style={{fontSize: '13px', color: '#fff'}}>*/}
+                {/*        Уважаемые гости, с 28 декабря по 15 января, при заселении, необходимо предоставить справку об*/}
+                {/*        отрицательном тесте на COVID-19, полученную не позднее, чем за 72 часа до заезда.*/}
+                {/*    </p>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
 
         </>
