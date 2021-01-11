@@ -137,6 +137,9 @@ function App() {
                     <Route path='/spa' exact
                            component={() => <SpaPage/>}/>
 
+                    <Route path='/offers/rannee-bronirovanie' exact
+                           component={() => <SinglePromotionPage {...singlePromotionPages.ranneeBronirovanie}/>}/>
+
                     <Route path='/offers/otdyh-dlya-krymchan' exact
                            component={() => <SinglePromotionPage {...singlePromotionPages.dlyaKrymchan}/>}/>
 

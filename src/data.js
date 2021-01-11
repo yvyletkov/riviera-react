@@ -17,11 +17,6 @@ import gridAqua1 from "./img/grid-slider/aqua/aqua1.jpg";
 import gridAqua2 from "./img/grid-slider/aqua/aqua2.jpg";
 import gridAqua3 from "./img/grid-slider/aqua/aqua3.jpg";
 import gridAqua4 from "./img/grid-slider/aqua/aqua4.jpg";
-import afisha1 from "./img/centered-slider/home-page/afisha1.png";
-import afisha2 from "./img/centered-slider/home-page/afisha2.png";
-import afisha3 from "./img/centered-slider/home-page/afisha3.png";
-import afisha4 from "./img/centered-slider/home-page/afisha4.png";
-import afisha5 from "./img/centered-slider/home-page/afisha5.png";
 import promoImg1 from "./img/promos/promo1.jpg";
 import promoImg2 from "./img/promos/promo2.jpg";
 import promoImg3 from "./img/promos/promo3.jpg";
@@ -300,6 +295,8 @@ import barhatniiSeasonBannerImg from "./img/promos/promo-barhat-seaon.jpg";
 import letniyOtdyhBannerImg from "./img/promos/promo-letnoo-otdyh.jpg";
 import dlitelnoeBannerImg from "./img/promos/promo-dlitelnoe.jpg";
 import dlyaKrymchanBannerImg from "./img/promos/promo-otdyh-dlya-krymchan.jpg";
+import ranneeBronirovanieBannerImg from "./img/promos/rannee.jpg";
+import ranneeBronirovaniePreviewImg from "./img/promos/rannee-peview.jpg";
 // END single promotions Imports
 // Restaurants Imports
 import bannerRestaurants from "./img/infrastructure/restaurant/LaVeranda/1.jpg";
@@ -663,6 +660,13 @@ const commonVacationGridSlides = [
     },
 ];
 const commonSpecialsSlides = [
+    {
+        img: ranneeBronirovaniePreviewImg,
+        subtitle: "Раннее бронирование",
+        title: "Межсезонье",
+        link: '/offers/rannee-bronirovanie',
+        key: 6,
+    },
     {
         img: promoImg4,
         subtitle: "Отдых со скидкой",
@@ -3179,7 +3183,44 @@ export const singlePromotionPages = {
             '                                </ul>',
 
 
-    }
+    },
+    ranneeBronirovanie: {
+        bannerImg: ranneeBronirovanieBannerImg,
+        title: ['Раннее бронирование', 'Межсезонье'],
+        description: 'Отель Riviera Sunrise Resort & SPA предлагает отличную возможность заблаговременно спланировать отдых по выгодной цене.\n' +
+            'Успейте забронировать проживание со скидкой -20% по акции «Раннее бронирование»!',
+        hiddenDescription: '<ul>\n' +
+            '                                        <li>Бронирование производится при внесении предоплаты стоимостью первых суток;' +
+            '                                        </li>\n' +
+            '                                        <li>При аннуляции более чем за 14 дня до заезда – бесплатно;' +
+            '                                        </li>\n' +
+            '                                        <li>При аннуляции менее чем за 14 дня до заезда – взимается полная стоимость предоплаты.</li>\n' +
+            '                                    </ul>',
+        firstCol: '<h3><b>Условия акции:</b></h3>\n' +
+            '<ul>\n' +
+            ' \t<li>Скидка 20%;</li>\n' +
+            ' \t<li>Период проживания с 10 января  до 30 апреля 2021 года;</li>\n' +
+            ' \t<li>Период бронирования за 14 дней до заезда;</li>\n' +
+            ' \t<li>Ребенок до 5 лет БЕСПЛАТНОЕ размещение (при условии проживания с двумя взрослыми на основных местах).<br>Второй и последующие дети в номере размещаются по стоимости соответствующей программы питания для детей от 5 до 12 лет.</li>\n' +
+            ' \t<li>Ранний заезд/поздний выезд (при условии наличия свободных номеров);</li>\n' +
+            ' \t<li>Акция не суммируется с другими акциями, специальными предложениями и программами лояльности отеля.</li> \n' +
+            '</ul>',
+        secondCol: '     <h3><b>В стоимость входит:</b></h3>\n' +
+            '                                <ul>\n' +
+            '                                    <li>Размещение в комфортных номерах;</li>\n' +
+            '                                    <li>Вкусные и насыщенные завтраки;</li>\n' +
+            '                                    <li>Посещение открытого и крытого бассейна;</li>\n' +
+            '                                    <li>Посещение тренажерного зала;</li>\n' +
+            '                                    <li>Посещение зоны отдыха «Теплый сон»;</li>\n' +
+            '                                    <li>Прогулки в парке;</li>\n' +
+            '                                    <li>Собственный обустроенный пляж: зонтики, шезлонги, пляжные полотенца;</li>\n' +
+            '                                    <li>Wi-Fi по всей территории отеля;</li>\n' +
+            '                                    <li>Посещение SPA-центра: соляной пещеры, финской сауны, римской парной.</li>\n' +
+            '                                    <li>Парковка;</li>\n' +
+            '                                </ul>',
+
+
+    },
 }
 
 // Страница "Medical SPA"
