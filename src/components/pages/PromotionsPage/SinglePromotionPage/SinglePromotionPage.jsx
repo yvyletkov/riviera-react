@@ -25,7 +25,7 @@ const SinglePromotionPage = ({bannerImg, title, description, hiddenDescription, 
                         <div className={s.topRow}>
                             <h1 className={s.title}>
                                 <span>{title[0]}</span>
-                                <span>{title[1]}</span>
+                                <span dangerouslySetInnerHTML={{__html: title[1]}}/>
                             </h1>
                             <div className={s.textContent}>
                                 <p dangerouslySetInnerHTML={{__html: description}}/>

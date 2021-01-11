@@ -664,6 +664,13 @@ const commonVacationGridSlides = [
 ];
 const commonSpecialsSlides = [
     {
+        img: promoImg4,
+        subtitle: "Отдых со скидкой",
+        title: "Для крымчан",
+        link: '/offers/otdyh-dlya-krymchan',
+        key: 0,
+    },
+    {
         img: promoImg1,
         subtitle: "Летний отдых",
         title: "С выгодой до 20%",
@@ -2505,13 +2512,7 @@ export const eventPagesData = {
 export const promotionsPageData = {
     slides: commonSpecialsSlides,
     pastSlides: [
-        {
-            img: promoImg4,
-            subtitle: "Отдых",
-            title: "Для крымчан",
-            link: '/offers/otdyh-dlya-krymchan',
-            key: 0,
-        },
+
         {
             img: promoImg7,
             subtitle: "",
@@ -3156,7 +3157,7 @@ export const singlePromotionPages = {
             '                                    </ul>',
         firstCol: '<h3><b>Условия акции:</b></h3>\n' +
             '                                <ul>\n' +
-            '                                    <li>Период проживания С 15 октября по 28 декабря 2020;</li>\n' +
+            '                                    <li>Период проживания С 10 января по 30 апреля 2021;</li>\n' +
             '                                    <li>Для гостей с крымской пропиской;</li>\n' +
             '                                    <li>Акция распространяется на номера любой категории с любым типом питания;</li>\n' +
             '                                    <li>Ребенок до 5 лет БЕСПЛАТНОЕ размещение (при условии проживания с двумя взрослыми на основных местах).\n' +
