@@ -11,6 +11,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import BottomMenu from "./components/additional/BottomMenu/BottomMenu";
 import swal from "sweetalert2";
+import formBlockDefaultBg from "./img/promos/Fotograf-Krym-YAlta.jpg";
 
 const HomePage = lazy(() => import('./components/pages/HomePage/HomePage'));
 const RoomsAndPricesPage = lazy(() => import('./components/pages/RoomsAndPricesPage/RoomsAndPricesPage'));
@@ -57,7 +58,7 @@ const NewYearPage = lazy(() => import("./components/pages/NewYearPage/NewYearPag
 
 function App() {
 
-    React.useEffect( () => {
+    React.useEffect(() => {
         swal.fire({
             title: `Важное объявление!`,
             html: '                <p style=\'text-align: left; margin-top: 10px\'>Уважаемые гости, отель Riviera Sunrise Resort & SPА выполняет все ограничения, соответствующие рекомендациям Роспотребнадзора и Указа Главы республики от 17.03.2020 года № 63-У, с последующими редакциями.<br/><br/>\n' +
@@ -138,19 +139,41 @@ function App() {
                            component={() => <SpaPage/>}/>
 
                     <Route path='/offers/rannee-bronirovanie' exact
-                           component={() => <SinglePromotionPage {...singlePromotionPages.ranneeBronirovanie}/>}/>
+                           component={() => <SinglePromotionPage {...singlePromotionPages.ranneeBronirovanie}
+                                                                 formBlockText='Воспользуйтесь акцией, проведите незабываемый отдых в Крыму!'
+                                                                 formBlockBg={formBlockDefaultBg}
+                                                                 formBlockBtnText='Узнать свободные даты'/>}/>
 
                     <Route path='/offers/otdyh-dlya-krymchan' exact
-                           component={() => <SinglePromotionPage {...singlePromotionPages.dlyaKrymchan}/>}/>
+                           component={() => <SinglePromotionPage {...singlePromotionPages.dlyaKrymchan}
+                                                                 formBlockText='Воспользуйтесь акцией, проведите незабываемый отдых в Крыму!'
+                                                                 formBlockBg={formBlockDefaultBg}
+                                                                 formBlockBtnText='Узнать свободные даты'/>}/>
 
                     <Route path='/offers/dlitelnoe-prozhivaniye' exact
-                           component={() => <SinglePromotionPage {...singlePromotionPages.dlitelnoeProzh}/>}/>
+                           component={() => <SinglePromotionPage {...singlePromotionPages.dlitelnoeProzh}
+                                                                 formBlockText='Воспользуйтесь акцией, проведите незабываемый отдых в Крыму!'
+                                                                 formBlockBg={formBlockDefaultBg}
+                                                                 formBlockBtnText='Узнать свободные даты'/>}/>
 
-                    <Route path='/offers/barhatnyi-sezon' exact
-                           component={() => <SinglePromotionPage {...singlePromotionPages.barhatnyiSezon}/>}/>
+                    <Route path='/offers/krymskaya-zima' exact
+                           component={() => <SinglePromotionPage {...singlePromotionPages.barhatnyiSezon}
+                                                                 formBlockText='Погрузитесь в мир зимней гармонии'
+                                                                 formBlockBg={formBlockDefaultBg}
+                                                                 formBlockBtnText='Узнать свободные даты'/>}/>
 
                     <Route path='/offers/letniy-otdyh' exact
-                           component={() => <SinglePromotionPage {...singlePromotionPages.letniyOtdyh}/>}/>
+                           component={() => <SinglePromotionPage {...singlePromotionPages.letniyOtdyh}
+                                                                 formBlockText='Проведите незабываемый летний отдых в Крыму!'
+                                                                 formBlockBg={formBlockDefaultBg}
+                                                                 formBlockBtnText='Узнать свободные даты'/>}/>
+
+                    <Route path='/offers/online-conferences' exact
+                           component={() => <SinglePromotionPage {...singlePromotionPages.onlineConferences}
+                                                                 withConferenceRooms
+                                                                 formBlockText='Проведите свою онлайн-конференцию в Крыму!'
+                                                                 formBlockBg={formBlockDefaultBg}
+                                                                 formBlockBtnText='Узнать свободные даты'/>}/>
 
                     <Route path='/offers' exact
                            component={() => <PromotionsPage/>}/>
