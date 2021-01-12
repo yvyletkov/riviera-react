@@ -11,7 +11,7 @@ const BlackBlock = ({btnLink = ''}) => {
         <div className={s.container}>
             <div className={s.content}>
                 <div className={s.textBlock}>
-                    <p>Сомневаетесь в площаке?</p>
+                    <p>Сомневаетесь в площадке?</p>
                     <p>Обязательно проверьте выбранное место по чек-листу</p>
                 </div>
                 <Button text={'Скачать чек-лист'} onClick={btnLink ? () => window.open(btnLink) : () => setPopupOpen(true)}/>
