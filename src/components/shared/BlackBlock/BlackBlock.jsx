@@ -3,7 +3,7 @@ import s from "./BlackBlock.module.scss";
 import Button from "../Button/Button";
 import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
 
-const BlackBlock = () => {
+const BlackBlock = ({btnLink = ''}) => {
 
     let [popupOpen, setPopupOpen] = React.useState(false);
 
@@ -14,7 +14,7 @@ const BlackBlock = () => {
                     <p>Сомневаетесь в площаке?</p>
                     <p>Обязательно проверьте выбранное место по чек-листу</p>
                 </div>
-                <Button text={'Скачать чек-лист'} onClick={() => setPopupOpen(true)}/>
+                <Button text={'Скачать чек-лист'} onClick={btnLink ? () => window.open(btnLink) : () => setPopupOpen(true)}/>
 
                 <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
                                   popupTitleText={'Чтобы получить чек-лист, пожалуйста, оставьте свои контактные данные️'}

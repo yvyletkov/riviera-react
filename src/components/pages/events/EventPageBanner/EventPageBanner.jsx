@@ -11,7 +11,7 @@ import ContactForm from "../../../additional/ContactForm/ContactForm";
 import Rodal from "rodal";
 
 
-const EventPageBanner = ({mobileFontSize, fontSize, titles, icons, bannerImg, bannerImgMobile, blackFont, withInfo = false, withPrice = false}) => {
+const EventPageBanner = ({mobileFontSize, fontSize, titles, icons, bannerImg, bannerImgMobile, blackFont, btnLink = '', withInfo = false, withPrice = false}) => {
 
     let [popupOpen, setPopupOpen] = React.useState(false);
 
@@ -50,7 +50,7 @@ const EventPageBanner = ({mobileFontSize, fontSize, titles, icons, bannerImg, ba
                         </Rodal>
                         :
                         withPrice ? (popupOpen ? (function () {
-                                window.location = 'documents/Выездная-церемония.pdf';
+                                window.open(btnLink);
                             })() : null)
                             :
                             <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
