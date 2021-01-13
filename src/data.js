@@ -301,6 +301,7 @@ import ranneeBronirovanieBannerImg from "./img/promos/rannee.jpg";
 import onlineConferencesBannerImg from "./img/promos/online-conferences.jpg";
 
 import krymskayaZimaContactBlockImg from "./img/promos/Fotograf-Krym-YAlta.jpg";
+import krymskayaZimaPreviewImg from "./img/promos/krimskayaZimaPreview.jpg";
 import dlyaKrymchanFormBannerImg from "./img/promos/крымчане.jpg";
 import ranneeBronirovanieFormBannerImg from "./img/promos/межсезонье.jpg";
 import letniyOtdyhFormBannerImg from "./img/promos/летний-отдых.jpg";
@@ -692,7 +693,7 @@ const commonSpecialsSlides = [
         key: 1,
     },
     {
-        img: krymskayaZimaContactBlockImg,
+        img: krymskayaZimaPreviewImg,
         subtitle: "",
         title: "Крымская<br/>зима",
         link: '/offers/krymskaya-zima',
