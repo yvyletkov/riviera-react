@@ -11,8 +11,6 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import BottomMenu from "./components/additional/BottomMenu/BottomMenu";
 import swal from "sweetalert2";
-import formBlockDefaultBg from "./img/promos/Fotograf-Krym-YAlta.jpg";
-
 const HomePage = lazy(() => import('./components/pages/HomePage/HomePage'));
 const RoomsAndPricesPage = lazy(() => import('./components/pages/RoomsAndPricesPage/RoomsAndPricesPage'));
 const SingleRoomPage = lazy(() => import('./components/pages/SingleRoomPage/SingleRoomPage'));
@@ -140,39 +138,29 @@ function App() {
 
                     <Route path='/offers/rannee-bronirovanie' exact
                            component={() => <SinglePromotionPage {...singlePromotionPages.ranneeBronirovanie}
-                                                                 formBlockText='Воспользуйтесь акцией, проведите незабываемый отдых в Крыму!'
-                                                                 formBlockBg={formBlockDefaultBg}
                                                                  formBlockBtnText='Узнать свободные даты'/>}/>
 
                     <Route path='/offers/otdyh-dlya-krymchan' exact
                            component={() => <SinglePromotionPage {...singlePromotionPages.dlyaKrymchan}
-                                                                 formBlockText='Воспользуйтесь акцией, проведите незабываемый отдых в Крыму!'
-                                                                 formBlockBg={formBlockDefaultBg}
                                                                  formBlockBtnText='Узнать свободные даты'/>}/>
 
                     <Route path='/offers/dlitelnoe-prozhivaniye' exact
                            component={() => <SinglePromotionPage {...singlePromotionPages.dlitelnoeProzh}
-                                                                 formBlockText='Воспользуйтесь акцией, проведите незабываемый отдых в Крыму!'
-                                                                 formBlockBg={formBlockDefaultBg}
                                                                  formBlockBtnText='Узнать свободные даты'/>}/>
 
                     <Route path='/offers/krymskaya-zima' exact
                            component={() => <SinglePromotionPage {...singlePromotionPages.barhatnyiSezon}
-                                                                 formBlockText='Погрузитесь в мир зимней гармонии'
-                                                                 formBlockBg={formBlockDefaultBg}
-                                                                 formBlockBtnText='Узнать свободные даты'/>}/>
+                                                                 formBlockBtnText='Узнать свободные даты'
+                                                                 whiteText/>}/>
 
                     <Route path='/offers/letniy-otdyh' exact
                            component={() => <SinglePromotionPage {...singlePromotionPages.letniyOtdyh}
-                                                                 formBlockText='Проведите незабываемый летний отдых в Крыму!'
-                                                                 formBlockBg={formBlockDefaultBg}
-                                                                 formBlockBtnText='Узнать свободные даты'/>}/>
+                                                                 formBlockBtnText='Узнать свободные даты'
+                                                                 whiteText/>}/>
 
                     <Route path='/offers/online-conferences' exact
                            component={() => <SinglePromotionPage {...singlePromotionPages.onlineConferences}
                                                                  withConferenceRooms
-                                                                 formBlockText='Проведите свою онлайн-конференцию в Крыму!'
-                                                                 formBlockBg={formBlockDefaultBg}
                                                                  formBlockBtnText='Узнать свободные даты'/>}/>
 
                     <Route path='/offers' exact

@@ -292,14 +292,21 @@ import gymSpina from "./img/infrastructure/gym/свободные веса - Л�
 // END infra Imports
 // single promotions Imports
 import barhatniiSeasonBannerImg from "./img/promos/promo-barhat-seaon.jpg";
+import ranneeBronirovaniePreviewImg from "./img/promos/rannee-peview.jpg";
+import dlyaKrymchanBannerImg from "./img/promos/promo-otdyh-dlya-krymchan.jpg";
 import krymskayaZimaBannerImg from "./img/promos/крымская-зима.jpg";
-import krymskayaZimaContactBlockImg from "./img/promos/Fotograf-Krym-YAlta.jpg";
 import letniyOtdyhBannerImg from "./img/promos/promo-letnoo-otdyh.jpg";
 import dlitelnoeBannerImg from "./img/promos/promo-dlitelnoe.jpg";
-import dlyaKrymchanBannerImg from "./img/promos/promo-otdyh-dlya-krymchan.jpg";
 import ranneeBronirovanieBannerImg from "./img/promos/rannee.jpg";
-import ranneeBronirovaniePreviewImg from "./img/promos/rannee-peview.jpg";
 import onlineConferencesBannerImg from "./img/promos/online-conferences.jpg";
+
+import krymskayaZimaContactBlockImg from "./img/promos/Fotograf-Krym-YAlta.jpg";
+import dlyaKrymchanFormBannerImg from "./img/promos/крымчане.jpg";
+import ranneeBronirovanieFormBannerImg from "./img/promos/межсезонье.jpg";
+import letniyOtdyhFormBannerImg from "./img/promos/летний-отдых.jpg";
+import dlitelnoeFormBannerImg from "./img/promos/длительное-проживание.jpg";
+import onlineConferencesFormBannerImg from "./img/promos/онлайн-конференция.jpg";
+
 // END single promotions Imports
 // Restaurants Imports
 import bannerRestaurants from "./img/infrastructure/restaurant/LaVeranda/1.jpg";
@@ -3029,6 +3036,7 @@ export const infrastructurePagesData = {
 export const singlePromotionPages = {
     barhatnyiSezon: {
         bannerImg: krymskayaZimaBannerImg,
+        formImg: krymskayaZimaContactBlockImg,
         title: ['Крымская', 'зима'],
         description: 'Отель Riviera Sunrise Resort & SPA предлагает Вам неспеша погрузиться в мир зимней гармонии со скидкой 20% по акции «Крымская зима».',
         hiddenDescription: '<ul>\n' +
@@ -3075,6 +3083,7 @@ export const singlePromotionPages = {
     },
     letniyOtdyh: {
         bannerImg: letniyOtdyhBannerImg,
+        formImg: letniyOtdyhFormBannerImg,
         title: ['Летний отдых 2021', 'с выгодой до 20%'],
         description: 'Специально для Вас особые условия отдыха в отеле Riviera Sunrise Resort & SPA, ALUSHTA.\n' +
             'Отель Riviera Sunrise Resort & SPA предлагает провести незабываемый летний отдых на южном берегу Крыма еще интереснее и выгоднее, чем раньше!',
@@ -3115,6 +3124,7 @@ export const singlePromotionPages = {
     },
     dlitelnoeProzh: {
         bannerImg: dlitelnoeBannerImg,
+        formImg: dlitelnoeFormBannerImg,
         title: ['Длительное проживание 2021', 'с выгодой до 25%'],
         description: 'Отель Riviera Sunrise Resort & SPA дает отличный повод задержаться в Крыму и дарит своим гостям скидку до 25%!',
         hiddenDescription: '<ul>\n' +
@@ -3153,6 +3163,7 @@ export const singlePromotionPages = {
     },
     dlyaKrymchan: {
         bannerImg: dlyaKrymchanBannerImg,
+        formImg: dlyaKrymchanFormBannerImg,
         title: ['Отдых', 'Для крымчан -10%'],
         description: 'Отель Riviera Sunrise Resort & SPA приглашает жителей полуострова провести осенние дни у моря в обстановке комфорта и роскоши, со скидкой 10%!',
         hiddenDescription: '<ul>\n' +
@@ -3189,6 +3200,7 @@ export const singlePromotionPages = {
     },
     ranneeBronirovanie: {
         bannerImg: ranneeBronirovanieBannerImg,
+        formImg: ranneeBronirovanieFormBannerImg,
         title: ['Раннее бронирование', 'Межсезонье'],
         description: 'Отель Riviera Sunrise Resort & SPA предлагает отличную возможность заблаговременно спланировать отдых по выгодной цене.\n' +
             'Успейте забронировать проживание со скидкой -20% по акции «Раннее бронирование»!',
@@ -3226,6 +3238,7 @@ export const singlePromotionPages = {
     },
     onlineConferences: {
         bannerImg: onlineConferencesBannerImg,
+        formImg: onlineConferencesFormBannerImg,
         title: ['Онлайн конференции', 'В крыму'],
         description: 'Отель Riviera Sunrise Resort & SPA предлагает отличную возможность проведения онлайн-конференций в Крыму.',
         hiddenDescription: '<ul>\n' +
