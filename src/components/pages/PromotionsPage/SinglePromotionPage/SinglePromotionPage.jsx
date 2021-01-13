@@ -22,8 +22,9 @@ const SinglePromotionPage = ({
                                  firstCol,
                                  secondCol,
                                  formBlockText = 'Погрузитесь в мир зимней гармонии',
-                                 formBlockBg = formBlockDefaultBg,
-                                 formBlockBtnText = 'Узнать свободные даты'
+                                 formBlockBtnText = 'Узнать свободные даты',
+                                 whiteText = false,
+                                 formImg
                              }) => {
 
     console.log(title)
@@ -77,16 +78,18 @@ const SinglePromotionPage = ({
             <section className='section'>
                 <div className={s.formBlock}>
                     <div className={s.wrapper}
-                         style={{background: `center no-repeat url(${formBlockBg})`, backgroundSize: 'cover'}}>
+                         style={{background: `center no-repeat url(${formImg})`, backgroundSize: 'cover'}}>
                         <div className={s.container}>
-                            <h4 className={s.title}>
-                                <span>{formBlockText}</span>
-
+                            <h4 className={whiteText ? s.title + ' ' + s.white : s.title}>
+                                <span>Воспользуйтесь акцией,</span>
+                                <span>проведите незабываемое</span>
+                                <span>время в Крыму</span>
                             </h4>
+                            <p>Оставьте свою почту и мы вышлем Вам рассчет стоимости</p>
 
                             <ContactForm submitBtnText={formBlockBtnText}
                                          formName={`Форма со страницы АКЦИИ/СПЕЦПРЕДЛОЖЕНИЯ '${window.location.href}'`}
-                                         withEmail withPhone
+                                         withEmail
                                          swalText={'мы свяжемся с Вами в самое ближайшее время!'}/>
 
                         </div>
