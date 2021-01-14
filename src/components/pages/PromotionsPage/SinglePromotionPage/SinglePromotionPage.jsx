@@ -85,7 +85,7 @@ const SinglePromotionPage = ({
                                 <span>проведите незабываемое</span>
                                 <span>время в Крыму</span>
                             </h4>
-                            <p>Оставьте свой телефон и мы свяжемся с Вами для расчета</p>
+                            <p>Оставьте свой телефон, и мы свяжемся с Вами для расчета</p>
 
                             <ContactForm submitBtnText={formBlockBtnText}
                                          formName={`Форма со страницы АКЦИИ/СПЕЦПРЕДЛОЖЕНИЯ '${window.location.href}'`}
