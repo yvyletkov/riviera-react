@@ -304,7 +304,7 @@ import krymskayaZimaContactBlockImg from "./img/promos/Fotograf-Krym-YAlta.jpg";
 import krymskayaZimaPreviewImg from "./img/promos/krimskayaZimaPreview.jpg";
 import dlyaKrymchanFormBannerImg from "./img/promos/крымчане.jpg";
 import ranneeBronirovanieFormBannerImg from "./img/promos/межсезонье.jpg";
-import letniyOtdyhFormBannerImg from "./img/promos/летний-отдых.jpg";
+import letniyOtdyhFormBannerImg from "./img/promos/letniy-otdyh.jpg";
 import dlitelnoeFormBannerImg from "./img/promos/длительное-проживание.jpg";
 import onlineConferencesFormBannerImg from "./img/promos/онлайн-конференция.jpg";
 
@@ -2682,9 +2682,9 @@ export const infrastructurePagesData = {
                     text2: "СПА-вечер в выходной день (с 16-00 до 21-00)",
                     price2: "1500 руб",
                     text3: "Разовое посещение Wellness в будний день",
-                    price3: "2000 руб",
+                    price3: "1600 руб",
                     text4:"СПА-вечер в будний день (с 16-00 до 21-00)",
-                    price4:"1500 руб",
+                    price4:"1000 руб",
                 },
                 [
                     {img: adultSPA1, name:'SPA для взрослых'},
@@ -2814,7 +2814,7 @@ export const infrastructurePagesData = {
                         "Обширная винная карта, представленная знаменитыми винзаводами: Массандра, Инкерман, Сатера ТМ «Esse», а также европейские и южноамериканские вина.\n",
                     workingHours: "07:00 — 23:00 (с июня по сентябрь)",
                     menu: "винная карта, барная карта",
-                    location: "Корпус Классик"},
+                    location: "Корпус Modern"},
                 [
                     {img: lobbyLounge1, name:'Bar Lounge'},
                     {img: lobbyLounge2, name:'Bar Lounge'},
@@ -3103,8 +3103,8 @@ export const singlePromotionPages = {
             '                                    <li>Скидка 10%, при бронировании до более чем за 2 месяца до заезда;</li>\n' +
             '                                    <li>Период проживания с 01.05.2021 до 30.09.2021;</li>\n' +
             '                                    <li>Бронирование производится при внесении предоплаты 30% от стоимости проживания;</li>\n' +
-            '                                    <li>Ребенок до 5 лет БЕСПЛАТНОЕ размещение (при условии проживания с двумя взрослыми на основных местах).\n' +
-            ' Второй и последующие дети в номере размещаются по стоимости соответствующей программы питания для детей от 5 до 12 лет.</li>\n' +
+            '                          <li>Ребенок до 5 лет БЕСПЛАТНОЕ размещение (при условии проживания с двумя взрослыми на основных местах).\\n\' +\n' +
+            '            \' Второй и последующие дети в номере размещаются по стоимости соответствующей программы питания для детей от 5 до 12 лет.</li>\\n\' +
             '                                    <li>Ранний заезд/поздний выезд (при условии наличия свободных номеров);</li>\n' +
             '                                    <li>Акция не суммируется с другими акциями, специальными предложениями и программами лояльности отеля.</li>\n' +
             '                                </ul>',
