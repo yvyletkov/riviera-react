@@ -11,6 +11,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import BottomMenu from "./components/additional/BottomMenu/BottomMenu";
 import swal from "sweetalert2";
+
 const HomePage = lazy(() => import('./components/pages/HomePage/HomePage'));
 const RoomsAndPricesPage = lazy(() => import('./components/pages/RoomsAndPricesPage/RoomsAndPricesPage'));
 const SingleRoomPage = lazy(() => import('./components/pages/SingleRoomPage/SingleRoomPage'));
@@ -67,209 +68,215 @@ function App() {
     }, [])
 
     return (<>
-            <Header/>
-            {/*{window.matchMedia('(max-width: 767px)').matches &&*/}
-            {/*<div style={{height: '65px'}}/>}*/}
-            <Suspense fallback={<div style={{
-                height: 'calc(100vh - 70px)',
-                width: '100vw',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-            }}>
-                <img width={'150px'} src={preloaderImg} alt=''/>
-            </div>}>
+        <Header/>
+        {/*{window.matchMedia('(max-width: 767px)').matches &&*/}
+        {/*<div style={{height: '65px'}}/>}*/}
+        <Suspense fallback={<div style={{
+            height: 'calc(100vh - 70px)',
+            width: '100vw',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+        }}>
+            <img width={'150px'} src={preloaderImg} alt=''/>
+        </div>}>
 
-                <Switch>
+            <Switch>
 
-                    <Route path='/new-year' exact
-                           component={() => <NewYearPage/>}/>
+                <Route path='/new-year' exact
+                       component={() => <NewYearPage/>}/>
 
-                    <Route path='/documents' exact
-                           component={() => <DocumentsPage/>}/>
+                <Route path='/documents' exact
+                       component={() => <DocumentsPage/>}/>
 
-                    <Route path='/afisha' exact
-                           component={() => <AfishaPage/>}/>
+                <Route path='/afisha' exact
+                       component={() => <AfishaPage/>}/>
 
-                    <Route path='/pool-schedule' exact
-                           component={() => <PoolSchedulePage/>}/>
+                <Route path='/pool-schedule' exact
+                       component={() => <PoolSchedulePage/>}/>
 
-                    <Route path='/blog' exact
-                           component={() => <BlogPage/>}/>
+                <Route path='/blog' exact
+                       component={() => <BlogPage/>}/>
 
-                    <Route path='/partners' exact
-                           component={() => <PartnersPage/>}/>
+                <Route path='/partners' exact
+                       component={() => <PartnersPage/>}/>
 
-                    <Route path='/reviews' exact
-                           component={() => <ReviewsPage/>}/>
+                <Route path='/reviews' exact
+                       component={() => <ReviewsPage/>}/>
 
-                    <Route path='/transfer' exact
-                           component={() => <TransferPage/>}/>
+                <Route path='/transfer' exact
+                       component={() => <TransferPage/>}/>
 
-                    <Route path='/booking' exact
-                           component={() => <BookingPage/>}/>
+                <Route path='/booking' exact
+                       component={() => <BookingPage/>}/>
 
-                    <Route path='/vacancies' exact
-                           component={() => <VacanciesPage/>}/>
+                <Route path='/vacancies' exact
+                       component={() => <VacanciesPage/>}/>
 
-                    <Route path='/infrastructure/spa-services-and-prices' exact
-                           component={() => <SpaPrices/>}/>
+                <Route path='/infrastructure/spa-services-and-prices' exact
+                       component={() => <SpaPrices/>}/>
 
-                    <Route path='/medical-spa' exact
-                           component={() => <MedicalSpaPage {...medicalSpaPage}/>}/>
+                <Route path='/medical-spa' exact
+                       component={() => <MedicalSpaPage {...medicalSpaPage}/>}/>
 
-                    <Route path='/faq' exact
-                           component={() => <FAQPage/>}/>
+                <Route path='/faq' exact
+                       component={() => <FAQPage/>}/>
 
-                    <Route path='/restaurant' exact
-                           component={() => <Restaurants/>}/>
+                <Route path='/restaurant' exact
+                       component={() => <Restaurants/>}/>
 
-                    <Route path='/infrastructure/beach-and-pools' exact
-                           component={() => <BeachAndPools/>}/>
+                <Route path='/infrastructure/beach-and-pools' exact
+                       component={() => <BeachAndPools/>}/>
 
-                    <Route path='/infrastructure/aqua-thermal' exact
-                           component={() => <AquaThermalPage/>}/>
+                <Route path='/infrastructure/aqua-thermal' exact
+                       component={() => <AquaThermalPage/>}/>
 
-                    <Route path='/infrastructure/gym' exact
-                           component={() => <GymPage/>}/>
+                <Route path='/infrastructure/gym' exact
+                       component={() => <GymPage/>}/>
 
-                    <Route path='/spa' exact
-                           component={() => <SpaPage/>}/>
+                <Route path='/spa' exact
+                       component={() => <SpaPage/>}/>
 
                     <Route path='/offers/rannee-bronirovanie' exact
                            component={() => <SinglePromotionPage {...singlePromotionPages.ranneeBronirovanie}
-                                                                 formBlockBtnText='Узнать свободные даты'/>}/>
+                                                                 formBlockBtnText='Отправить'
+                           />}/>
 
                     <Route path='/offers/otdyh-dlya-krymchan' exact
                            component={() => <SinglePromotionPage {...singlePromotionPages.dlyaKrymchan}
-                                                                 formBlockBtnText='Узнать свободные даты'/>}/>
+                                                                 formBlockBtnText='Отправить'
+                           />}/>
 
                     <Route path='/offers/dlitelnoe-prozhivaniye' exact
                            component={() => <SinglePromotionPage {...singlePromotionPages.dlitelnoeProzh}
-                                                                 formBlockBtnText='Узнать свободные даты'/>}/>
+                                                                 formBlockBtnText='Отправить'/>}/>
 
-                    <Route path='/offers/krymskaya-zima' exact
-                           component={() => <SinglePromotionPage {...singlePromotionPages.barhatnyiSezon}
-                                                                 formBlockBtnText='Узнать свободные даты'
-                                                                 whiteText/>}/>
+                                     <Route path='/offers/krymskaya-zima' exact
+                                            component={() =>
+                                                <SinglePromotionPage {...singlePromotionPages.barhatnyiSezon}
+                                                                     formBlockBtnText='Отправить'
+                                                                     whiteText/>}/>
 
-                    <Route path='/offers/letniy-otdyh' exact
-                           component={() => <SinglePromotionPage {...singlePromotionPages.letniyOtdyh}
-                                                                 formBlockBtnText='Узнать свободные даты'
-                                                                 whiteText/>}/>
+                                     <Route path='/offers/letniy-otdyh' exact
+                                            component={() => <SinglePromotionPage {...singlePromotionPages.letniyOtdyh}
+                                                                                  formBlockBtnText='Отправить'
+                                                                                  whiteText/>}/>
 
-                    <Route path='/offers/online-conferences' exact
-                           component={() => <SinglePromotionPage {...singlePromotionPages.onlineConferences}
-                                                                 withConferenceRooms
-                                                                 formBlockBtnText='Узнать свободные даты'/>}/>
+                                     <Route path='/offers/online-conferences' exact
+                                            component={() =>
+                                                <SinglePromotionPage {...singlePromotionPages.onlineConferences}
+                                                                     withConferenceRooms
+                                                                     formBlockBtnText='Отправить'
+                                                />}/>
 
-                    <Route path='/offers' exact
-                           component={() => <PromotionsPage/>}/>
+                                     <Route path='/offers' exact
+                                            component={() => <PromotionsPage/>}/>
 
-                    <Route path='/contact' exact
-                           component={() => <ContactsPage/>}/>
+                                     <Route path='/contact' exact
+                                            component={() => <ContactsPage/>}/>
 
-                    <Route path='/exhibition' exact
-                           component={() => <ExhibitionPage/>}/>
+                                     <Route path='/exhibition' exact
+                                            component={() => <ExhibitionPage/>}/>
 
-                    <Route path='/team-building' exact
-                           component={() => <TeamBuildingPage/>}/>
+                                     <Route path='/team-building' exact
+                                            component={() => <TeamBuildingPage/>}/>
 
-                    <Route path='/intensive' exact
-                           component={() => <IntensivePage/>}/>
+                                     <Route path='/intensive' exact
+                                            component={() => <IntensivePage/>}/>
 
-                    <Route path='/trainings' exact
-                           component={() => <TrainingsPage/>}/>
+                                     <Route path='/trainings' exact
+                                            component={() => <TrainingsPage/>}/>
 
-                    <Route path='/bachelor-party' exact
-                           component={() => <BachelorPartyPage/>}/>
+                                     <Route path='/bachelor-party' exact
+                                            component={() => <BachelorPartyPage/>}/>
 
-                    <Route path='/hen-party' exact
-                           component={() => <HenPartyPage/>}/>
+                                     <Route path='/hen-party' exact
+                                            component={() => <HenPartyPage/>}/>
 
-                    <Route path='/birthday' exact
-                           component={() => <BirthdayPage/>}/>
+                                     <Route path='/birthday' exact
+                                            component={() => <BirthdayPage/>}/>
 
-                    <Route path='/event-tourism' exact
-                           component={() => <EventTourismPage/>}/>
+                                     <Route path='/event-tourism' exact
+                                            component={() => <EventTourismPage/>}/>
 
-                    <Route path='/forum' exact
-                           component={() => <ForumPage/>}/>
+                                     <Route path='/forum' exact
+                                            component={() => <ForumPage/>}/>
 
-                    <Route path='/conference' exact
-                           component={() => <ConferencesPage/>}/>
+                                     <Route path='/conference' exact
+                                            component={() => <ConferencesPage/>}/>
 
-                    <Route path='/visiting-ceremony' exact
-                           component={() => <VisitingCeremonyPage/>}/>
+                                     <Route path='/visiting-ceremony' exact
+                                            component={() => <VisitingCeremonyPage/>}/>
 
-                    <Route path='/wedding' exact
-                           component={() => <WeddingPage/>}/>
+                                     <Route path='/wedding' exact
+                                            component={() => <WeddingPage/>}/>
 
-                    <Route path='/family-vacation' exact
-                           component={() => <FamilyVacationPage/>}/>
+                                     <Route path='/family-vacation' exact
+                                            component={() => <FamilyVacationPage/>}/>
 
-                    <Route path='/vacation-for-yourself' exact
-                           component={() => <VacationForYourselfPage/>}/>
+                                     <Route path='/vacation-for-yourself' exact
+                                            component={() => <VacationForYourselfPage/>}/>
 
-                    <Route path='/romantic-vacation' exact
-                           component={() => <RomanticVacationPage/>}/>
+                                     <Route path='/romantic-vacation' exact
+                                            component={() => <RomanticVacationPage/>}/>
 
-                    <Route path='/vacation-with-friends' exact
-                           component={() => <VacationWithFriendsPage/>}/>
+                                     <Route path='/vacation-with-friends' exact
+                                            component={() => <VacationWithFriendsPage/>}/>
 
-                    {/* MODERN ROOMS*/}
-                    <Route path='/rooms/standart-modern' exact
-                           component={() => <SingleRoomPage data={roomPageData.modernStandart}/>}/>
+                                         {/* MODERN ROOMS*/}
+                                     <Route path='/rooms/standart-modern' exact
+                                            component={() => <SingleRoomPage data={roomPageData.modernStandart}/>}/>
 
-                    <Route path='/rooms/improved-modern/' exact
-                           component={() => <SingleRoomPage data={roomPageData.modernImproved}/>}/>
+                                     <Route path='/rooms/improved-modern/' exact
+                                            component={() => <SingleRoomPage data={roomPageData.modernImproved}/>}/>
 
-                    <Route path='/rooms/semilux-modern' exact
-                           component={() => <SingleRoomPage data={roomPageData.modernSemilux}/>}/>
+                                     <Route path='/rooms/semilux-modern' exact
+                                            component={() => <SingleRoomPage data={roomPageData.modernSemilux}/>}/>
 
-                    <Route path='/rooms/lux-modern' exact
-                           component={() => <SingleRoomPage data={roomPageData.modernLux}/>}/>
+                                     <Route path='/rooms/lux-modern' exact
+                                            component={() => <SingleRoomPage data={roomPageData.modernLux}/>}/>
 
-                    <Route path='/rooms/vip-suite' exact
-                           component={() => <SingleRoomPage data={roomPageData.spaSuite}/>}/>
+                                     <Route path='/rooms/vip-suite' exact
+                                            component={() => <SingleRoomPage data={roomPageData.spaSuite}/>}/>
 
-                    <Route path='/rooms/disabled-modern' exact
-                           component={() => <SingleRoomPage data={roomPageData.modernDisabled}/>}/>
+                                     <Route path='/rooms/disabled-modern' exact
+                                            component={() => <SingleRoomPage data={roomPageData.modernDisabled}/>}/>
 
-                    <Route path='/rooms/president-lux-modern' exact
-                           component={() => <SingleRoomPage data={roomPageData.modernPresidentLux}/>}/>
+                                     <Route path='/rooms/president-lux-modern' exact
+                                            component={() => <SingleRoomPage data={roomPageData.modernPresidentLux}/>}/>
 
-                    {/* CLASSIC ROOMS */}
-                    <Route path='/rooms/standart-classic' exact
-                           component={() => <SingleRoomPage data={roomPageData.classicStandart}/>}/>
+                                         {/* CLASSIC ROOMS */}
+                                     <Route path='/rooms/standart-classic' exact
+                                            component={() => <SingleRoomPage data={roomPageData.classicStandart}/>}/>
 
-                    <Route path='/rooms/improved-classic' exact
-                           component={() => <SingleRoomPage data={roomPageData.classicImproved}/>}/>
+                                     <Route path='/rooms/improved-classic' exact
+                                            component={() => <SingleRoomPage data={roomPageData.classicImproved}/>}/>
 
-                    <Route path='/rooms/semilux-classic' exact
-                           component={() => <SingleRoomPage data={roomPageData.classicSemilux}/>}/>
+                                     <Route path='/rooms/semilux-classic' exact
+                                            component={() => <SingleRoomPage data={roomPageData.classicSemilux}/>}/>
 
-                    <Route path='/rooms/lux-classic' exact
-                           component={() => <SingleRoomPage data={roomPageData.classicLux}/>}/>
+                                     <Route path='/rooms/lux-classic' exact
+                                            component={() => <SingleRoomPage data={roomPageData.classicLux}/>}/>
 
-                    <Route path='/rooms/president-lux-classic' exact
-                           component={() => <SingleRoomPage data={roomPageData.classicPresidentLux}/>}/>
+                                     <Route path='/rooms/president-lux-classic' exact
+                                            component={() => <SingleRoomPage
+                                                data={roomPageData.classicPresidentLux}/>}/>
 
-                    <Route path='/nomera-i-tseny' exact
-                           component={() => <RoomsAndPricesPage/>}/>
+                                     <Route path='/nomera-i-tseny' exact
+                                            component={() => <RoomsAndPricesPage/>}/>
 
-                    <Route path='/' exact
-                           render={() => <HomePage/>}/>
+                                     <Route path='/' exact
+                                            render={() => <HomePage/>}/>
 
-                    <Route component={NotFoundPage}/>
+                                     <Route component={NotFoundPage}/>
 
-                </Switch>
-            </Suspense>
-            <Footer/>
+                                         </Switch>
+                                         </Suspense>
+                                         <Footer/>
 
-            <BottomMenu/>
-        </>
-    );
-}
+                                         <BottomMenu/>
+                                         </>
+                                         );
+                                     }
 
 export default App;

@@ -71,8 +71,11 @@ const Header = () => {
                             <Link onClickHandler={handleLinkClick} style={{cursor: 'not-allowed'}} icon={search}
                                   extraClass={s.searchIcon} link={""}/>
                             <div className={s.contacts}>
-                                <Link icon={phone} href={"tel:88005509824"} extraClass={s.number}
-                                      title={"+7(800)550-98-24"}/>
+                                <a href={"tel:+78005509824"}
+                                         className={s.link + ' ' + s.number}>
+                                    <img src={phone} alt={'Riviera Phone Number'}/>
+                                    <div>+7 (800) 550-98-24</div>
+                                </a>
                                 <div>Крым, г. Алушта</div>
                             </div>
                             <Button className={s.button} link={'/booking'} text={'Забронировать'}/>
