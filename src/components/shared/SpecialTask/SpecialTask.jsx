@@ -31,7 +31,7 @@ const SpecialTask = () => {
                     <img className={s.leftImg}
                          src={window.matchMedia("(max-width: 768px").matches ? imgAbout2 : imgAbout1} alt=""/>
 
-                    <Button text={"Оставить заявку консультацию"} onClick={() => setPopupOpen(true)}
+                    <Button text={"Оставить заявку на консультацию"} onClick={() => setPopupOpen(true)}
                             style={!window.matchMedia("(max-width: 768px").matches ? {width: "100%"} : {}}/>
 
                     <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
