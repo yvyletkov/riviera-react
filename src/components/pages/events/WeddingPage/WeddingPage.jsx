@@ -22,14 +22,14 @@ import ContactForm from "../../../additional/ContactForm/ContactForm";
 
 const WeddingPage = () => {
 
-    React.useEffect( () => document.title = `Свадьба – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+    React.useEffect(() => document.title = `Свадьба – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
     return <>
         <EventPageBanner fontSize={['68px', '82px', '52px']} mobileFontSize={['11.7vw', '19.2vw', '8.2vw']}
                          titles={['Ваша', 'свадьба', 'мечты', 'в Крыму']}
                          icons={eventPagesData.weddingPages.weddingBannerIcons} bannerImg={bannerImg}
                          bannerImgMobile={bannerImgMobile}
-                         />
+        />
 
         {/* Ваша семья начинается здесь */}
 
@@ -58,10 +58,10 @@ const WeddingPage = () => {
                             <span>сколько стоит выездная</span>
                             <span>церемония?</span>
                         </h4>
-                        <p>Оставьте свою почту и мы вышлем вам подробный
-                            прайс с описанием</p>
+                        <p>Оставьте свой телефон и мы свяжемся с Вами в ближайшее время</p>
 
-                        <ContactForm submitBtnText={'Получить прайс'} formName={`Форма "Хотите знать, сколько стоит выездная церемония"`} withEmail
+                        <ContactForm submitBtnText={'Получить прайс'}
+                                     formName={`Форма "Хотите знать, сколько стоит выездная церемония"`} withPhone
                                      swalText={'мы отправим прайс-лист на указанную Вами почту в самое ближайшее время!'}/>
 
                     </div>
@@ -88,9 +88,11 @@ const WeddingPage = () => {
                                 <span>Вашей свадьбы</span>
                             </h4>
 
-                            <ContactForm submitBtnText={window.matchMedia("(max-width: 768px").matches ? 'Узнать подробности' : 'Узнать подробности об организации свадьбы'}
-                                         formName={`Форма "Приезжайте и наслаждайтесь безупречной организацией" (Узнать подробности об организации свадьбы)`} withEmail
-                                         swalText={'скоро подробности будут на указанной Вами почте!'}/>
+                            <ContactForm
+                                submitBtnText={window.matchMedia("(max-width: 768px").matches ? 'Узнать подробности' : 'Узнать подробности об организации свадьбы'}
+                                formName={`Форма "Приезжайте и наслаждайтесь безупречной организацией" (Узнать подробности об организации свадьбы)`}
+                                withPhone
+                                swalText={'скоро подробности будут на указанной Вами почте!'}/>
 
 
                         </div>
@@ -108,8 +110,10 @@ const WeddingPage = () => {
         {/* Дополнительные услуги */}
 
         <section className='section'>
-            <SpecialsSlider subtitle={'Дополнительные'} title={'услуги'} btnText={'Скачать прайс по услугам'} btnLink={'/documents/Доп-услуги.zip'}
-                            slides={eventPagesData.specialsSlides} text={'Для успешной организации мероприятия в отеле Riviera Sunrise Resort & SPA, вы можете воспользоваться дополнительными услугами. Мы создавали их с желанием сделать ваше мероприятие ещё более насыщенным и подарить гостям комфорт и удивительные впечатления!'}/>
+            <SpecialsSlider subtitle={'Дополнительные'} title={'услуги'} btnText={'Скачать прайс по услугам'}
+                            btnLink={'/documents/Доп-услуги.zip'}
+                            slides={eventPagesData.specialsSlides}
+                            text={'Для успешной организации мероприятия в отеле Riviera Sunrise Resort & SPA, вы можете воспользоваться дополнительными услугами. Мы создавали их с желанием сделать ваше мероприятие ещё более насыщенным и подарить гостям комфорт и удивительные впечатления!'}/>
         </section>
 
         {/* Лучше один раз увидеть */}
@@ -166,11 +170,13 @@ const WeddingPage = () => {
                                 <Headline subtitle={'Вам предстоит'} title={'Ответственное решение'}/>
 
                                 <p>
-                                    Лучше принимать его, владея полной информацией. Получите на свою почту все
-                                    необходимые материалы для принятия решения о проведении свадьбы в нашем отеле.
+                                    Лучше принимать его, владея полной информацией. Оставьте свои контакты, и мы
+                                    предоставим все материалы для принятия решения о проведении свадьбы в нашем отеле.
                                 </p>
 
-                                <ContactForm submitBtnText={'Скачать коммерческое предложение'} formName={`Форма "Вам предстоит ответсвенное решение" (скачать коммерческое предложение)`} withEmail
+                                <ContactForm submitBtnText={'Получить материалы для принятия решения'}
+                                             formName={`Форма "Вам предстоит ответсвенное решение" (скачать коммерческое предложение)`}
+                                             withPhone
                                              swalText={'мы отправим всю необходимую информацию на указанную Вами почту в самое ближайшее время!'}/>
 
                             </div>

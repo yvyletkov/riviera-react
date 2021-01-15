@@ -27,13 +27,12 @@ const KitchenBlock = ({firstImg = kitchenImg1, btnLink = ''}) => {
                 </p>
                 <img className={s.leftImg} src={firstImg} alt=""/>
 
-                <p><b>Получите на свою почту полное меню банкета!</b></p>
-                <Button text={"Получить меню"} onClick={btnLink ? () => window.open(btnLink) : () => setPopupOpen(true)}
+                <Button text={btnLink ? "Посмотреть меню" : "Получить меню"} onClick={btnLink ? () => window.open(btnLink) : () => setPopupOpen(true)}
                         style={window.matchMedia("screen and (max-width: 768px)").matches ? {width: "100%"} : {width: "230px"}}/>
 
                 <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
                                   popupTitleText={'Для этого, пожалуйста, оставьте свои контактные данные️'}
-                                  submitBtnText='Получить меню'
+                                  submitBtnText={"Получить меню"}
                                   formName={`Форма из блока "Вас ожидает изысканная кухня" (получить меню) ${window.location.href}`}
                                   swalText={'мы отправим всю необходимую информацию на указанную Вами почту в самое ближайшее время!'}
                                   withEmail/>

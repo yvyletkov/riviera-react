@@ -34,9 +34,7 @@ const WeddingPage = () => {
 
         <EventPageBanner fontSize={['68px', '82px', '52px']} mobileFontSize={['9.7vw', '12.3vw', '8.2vw']}
                          titles={['Выездная', 'свадебная', 'церемония', 'в Крыму']}
-                         icons={eventPagesData.weddingPages.weddingCeremonyBannerIcons} bannerImg={bannerImg} bannerImgMobile={bannerImg}
-                         withPrice
-                         btnLink={'documents/Выездная-церемония.pdf'}/>
+                         icons={eventPagesData.weddingPages.weddingCeremonyBannerIcons} bannerImg={bannerImg} bannerImgMobile={bannerImg}/>
 
         {/* Ваша семья начинается здесь */}
 
@@ -63,10 +61,9 @@ const WeddingPage = () => {
                             <span>сколько стоит выездная</span>
                             <span>церемония?</span>
                         </h4>
-                        <p>Оставьте свою почту и мы вышлем вам подробный
-                            прайс с описанием</p>
+                        <p>Оставьте свой телефон и мы свяжемся с Вами в ближайшее время</p>
 
-                        <ContactForm submitBtnText={'Получить прайс'} formName={`Форма "Хотите знать, сколько стоит выездная церемония"`} withEmail
+                        <ContactForm submitBtnText={'Получить прайс'} formName={`Форма "Хотите знать, сколько стоит выездная церемония"`} withPhone
                                      swalText={'мы отправим прайс-лист на указанную Вами почту в самое ближайшее время!'}/>
 
                     </div>
@@ -94,7 +91,7 @@ const WeddingPage = () => {
                             </h4>
 
                             <ContactForm submitBtnText={window.matchMedia("(max-width: 768px").matches ? 'Узнать подробности' : 'Узнать подробности об организации свадьбы'}
-                                         formName={`Форма "Приезжайте и наслаждайтесь безупречной организацией" (Узнать подробности об организации свадьбы)`} withEmail
+                                         formName={`Форма "Приезжайте и наслаждайтесь безупречной организацией" (Узнать подробности об организации свадьбы)`} withPhone
                                          swalText={'скоро подробности будут на указанной Вами почте!'}/>
 
 
@@ -166,21 +163,18 @@ const WeddingPage = () => {
                             <img src={decisionBlockImg} alt="Riviera Sunrise"/>
                         </div>
 
-                        <div className={s.textBlock}>
-                            <div className={s.textContent}>
-                                <Headline subtitle={'Вам предстоит'} title={'Ответственное решение'}/>
+                        <div className={s.textContent}>
+                            <Headline subtitle={'Вам предстоит'} title={'Ответственное решение'}/>
 
-                                <p>
-                                    Лучше принимать его, владея полной информацией. Получите на свою почту все
-                                    необходимые материалы для принятия решения о проведении свадьбы в нашем отеле.
-                                </p>
+                            <p>
+                                Лучше принимать его, владея полной информацией. Оставьте свои контакты, и мы
+                                предоставим все материалы для принятия решения о проведении свадьбы в нашем отеле.
+                            </p>
 
-                                <ContactForm submitBtnText={'Скачать коммерческое предложение'} formName={`Форма "Вам предстоит ответсвенное решение" (скачать коммерческое предложение)`} withEmail
-                                             swalText={'мы отправим всю необходимую информацию на указанную Вами почту в самое ближайшее время!'}/>
-
-
-                            </div>
-
+                            <ContactForm submitBtnText={'Получить материалы для принятия решения'}
+                                         formName={`Форма "Вам предстоит ответсвенное решение" (скачать коммерческое предложение)`}
+                                         withPhone
+                                         swalText={'мы отправим всю необходимую информацию на указанную Вами почту в самое ближайшее время!'}/>
 
                         </div>
 

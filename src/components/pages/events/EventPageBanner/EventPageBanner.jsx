@@ -35,26 +35,27 @@ const EventPageBanner = ({mobileFontSize, fontSize, titles, icons, bannerImg, ba
                     <Button style={{width: "fit-content", marginTop: "20px"}}
                             onClick={() => setPopupOpen(true)} text={"Узнать стоимость"}/>
 
-                    {withInfo ?
-                        <Rodal className={'rodal-popup'} visible={popupOpen} onClose={() => setPopupOpen(false)}>
-                            <p style={{maxWidth: "90%"}}>
-                                Менеджер по организации мероприятий:
-                            </p>
-                            <p>
-                                Телефон: <a style={{whiteSpace: 'nowrap'}} href="tel:+73656026226">+7(365)602-62-26
-                                доб. 3998</a>
-                            </p>
-                            <p>
-                                What's App, Viber, Telegram: <a href="tel:+79877541784">+7(987)754-17-84</a>
-                            </p>
-                        </Rodal>
-                        :
+                    {
+                        // withInfo ?
+                        // <Rodal className={'rodal-popup'} visible={popupOpen} onClose={() => setPopupOpen(false)}>
+                        //     <p style={{maxWidth: "90%"}}>
+                        //         Менеджер по организации мероприятий:
+                        //     </p>
+                        //     <p>
+                        //         Телефон: <a style={{whiteSpace: 'nowrap'}} href="tel:+73656026226">+7(365)602-62-26
+                        //         доб. 3998</a>
+                        //     </p>
+                        //     <p>
+                        //         What's App, Viber, Telegram: <a href="tel:+79877541784">+7(987)754-17-84</a>
+                        //     </p>
+                        // </Rodal>
+                        // :
                         withPrice ? (popupOpen ? (function () {
                                 window.open(btnLink);
                             })() : null)
                             :
                             <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
-                                              popupTitleText={'Чтобы получить точную информацию о стоимости, позвольте нам связаться с Вами'}
+                                              popupTitleText={withInfo ? 'Пожалуйста, оставьте своб контактные данные, либо свяжитесь с нами по What\'s App, Viber, Telegram: <a href="tel:+79877541784">+7(987)754-17-84</a>' : 'Чтобы получить точную информацию о стоимости, позвольте нам связаться с Вами'}
                                               submitBtnText='Узнать стоимость'
                                               formName={`Форма с верхнего баннера страницы ${titles[1]} ${titles[2]} ${titles[3]} (кнопка "узнать стоимость")`}
                                               swalText={'очень скоро наши менеджеры с Вами свяжутся. Также не забывайте проверять свою почту 😉'}
