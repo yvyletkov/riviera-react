@@ -21,7 +21,8 @@ const BlackBlock = ({btnLink = ''}) => {
                                   submitBtnText='Скачать чек-лист'
                                   formName={`Форма из блока чёрного цвета "Сомневаетесь в площадке?" (скачать чек-лист)`}
                                   swalText={'мы отправим чек-лист на указанную Вами почту в самое ближайшее время!'}
-                                  withEmail/>
+                                  withEmail
+                                  withPhone/>
             </div>
         </div>
     </div>
