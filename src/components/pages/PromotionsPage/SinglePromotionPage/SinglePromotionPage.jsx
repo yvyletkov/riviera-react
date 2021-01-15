@@ -88,7 +88,7 @@ const SinglePromotionPage = ({
                             <p>Оставьте свой телефон, и мы свяжемся с Вами для расчета</p>
 
                             <ContactForm submitBtnText={formBlockBtnText}
-                                         formName={`Форма со страницы АКЦИИ/СПЕЦПРЕДЛОЖЕНИЯ '${window.location.href}'`}
+                                         formName={`Контактная форма для расчета стоимости со страницы АКЦИИ/СПЕЦПРЕДЛОЖЕНИЯ`}
                                          withPhone
                                          swalText={'мы свяжемся с Вами в самое ближайшее время!'}/>
 
