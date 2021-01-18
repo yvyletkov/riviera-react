@@ -43,7 +43,7 @@ const HomePageBanner = () => {
                         </div>
                         <img className={s.cirqles} src={cirqlesImg} alt=""/>
 
-                        <video ref={videoRef} autoPlay poster={bannerImg} muted loop style={{height: '740px', marginTop: "60px"}}>
+                        <video ref={videoRef} autoPlay muted loop style={{background: `url(${bannerImg})`, height: '740px', marginTop: "60px"}}>
                             <source src={videoMp4}/>
                             <source src={videoWebM}/>
                         </video>

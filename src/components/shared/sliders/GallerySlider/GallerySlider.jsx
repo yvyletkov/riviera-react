@@ -118,10 +118,10 @@ const GallerySlider = ({blockName = "Фотогалерея", slides}) => {
                     <StyledSlider>
                         <Slider {...settings}>{items}</Slider>
                     </StyledSlider>
-                    <div className={s.mobileBlock}>
-                        <div className={s.mobileBlockText}>Больше фотографий нашего отеля</div>
-                        <Button onClick={ () => null} style={{cursor: 'not-allowed'}} text={'Перейти к галерее'}/>
-                    </div>
+                    {/*<div className={s.mobileBlock}>*/}
+                    {/*    <div className={s.mobileBlockText}>Больше фотографий нашего отеля</div>*/}
+                    {/*    <Button onClick={ () => null} style={{cursor: 'not-allowed'}} text={'Перейти к галерее'}/>*/}
+                    {/*</div>*/}
                 </div>
             </div>
         </SRLWrapper>
