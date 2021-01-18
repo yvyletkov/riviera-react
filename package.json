@@ -18,6 +18,7 @@
     "react-easy-swipe": "^0.0.21",
     "react-fancybox": "^0.2.5",
     "react-meta-tags": "^1.0.1",
+    "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-scroll": "^1.8.1",

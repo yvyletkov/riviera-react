@@ -1,138 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
 
 .wrapper {
   box-sizing: border-box;
-  height: 100vh;
-  background-color: #000000 !important;
-  background-image: radial-gradient(#11581E, #041607), url("https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif") !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  font-family: 'Ubuntu Mono', monospace !important;
-  font-size: 1.5rem !important;
-  color: rgba(128, 255, 128, 0.8) !important;
-  text-shadow: 0 0 1ex rgba(51, 255, 51, 1),
-  0 0 2px rgba(255, 255, 255, 0.8) !important;
-}
-
-.noise {
-  pointer-events: none;
-  position: absolute;
+  max-width: 1920px;
+  height: 700px;
   width: 100%;
-  height: 100%;
-  background-image: url("https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif");
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
-  opacity: .02;
-}
-
-.overlay {
-  pointer-events: none;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(
-                  180deg,
-                  rgba(0, 0, 0, 0) 0,
-                  rgba(0, 0, 0, 0.3) 50%,
-                  rgba(0, 0, 0, 0) 100%);
-  background-size: auto 4px;
-  z-index: 1;
-}
-
-.overlay::before {
-  content: "";
-  pointer-events: none;
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(
-                  0deg,
-                  transparent 0%,
-                  rgba(32, 128, 32, 0.2) 2%,
-                  rgba(32, 128, 32, 0.8) 3%,
-                  rgba(32, 128, 32, 0.2) 3%,
-                  transparent 100%);
-  background-repeat: no-repeat;
-  animation: scan 7.5s linear 0s infinite;
-}
-
-@keyframes scan {
-  0% {
-    background-position: 0 -100vh;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding-top: 90px;
+  * {
+    color: #fff;
+    text-align: center;
   }
-  35%, 100% {
-    background-position: 0 100vh;
-  }
-}
-
-.terminal {
-  p.output, {
-    text-shadow: 0 0 1ex rgba(51, 255, 51, 1),
-    0 0 2px rgba(255, 255, 255, 0.8) !important;
-    font-family: "Ubuntu Mono" !important;
-    margin-block-start: 1em !important;
-    margin-block-end: 1em !important;
-    font-size: 1.5rem;
+  @media (max-width: 768px) {
+    margin-top: 70px;
   }
 
-  p.output a {
-    text-shadow: 0 0 1ex rgba(51, 255, 51, 1),
-    0 0 2px rgba(255, 255, 255, 0.8) !important;
-    font-family: "Ubuntu Mono" !important;
-    font-size: 1.5rem;
+  .subtitle {
+    font-size: 65px;
+    font-family: "Helvetica Neue Bold", sans-serif;
   }
 
-  h1 {
-    text-shadow: 0 0 1ex rgba(51, 255, 51, 1),
-    0 0 2px rgba(255, 255, 255, 0.8) !important;
-    margin: .67em 0 !important;
-    font-family: "Ubuntu Mono" !important;
-    font-size: 3.2em;
+  .digits {
+    .digit {
+      font-size: 240px;
+      font-family: "Helvetica Neue Bold", sans-serif;
+      position: relative;
+      display: inline-block;
+      top: -60px;
+      letter-spacing: -40px;
+      &:last-child {
+        left: -65px
+      }
+      z-index: 0;
+    }
   }
 
-  h1 span {
-    font-size: inherit !important;
-    font-family: "Ubuntu Mono" !important;
+  img {
+    width: 300px;
+    margin-top: -62px;
+    margin-left: -35px;
+    z-index: 1;
+  }
+
+  .topText, .bottomText {
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
 
   }
-  box-sizing: inherit;
-  position: absolute;
-  height: 100%;
-  width: 1000px;
-  max-width: 100%;
-  padding: 150px 4rem 4rem;
-  text-transform: uppercase;
+  .topText {
+    top: -90px;
+    * {
+      font-size: 21px;
+    }
+  }
+
+  .bottomText {
+    font-size: 20px;
+    max-width: 400px;
+    top: -72px;
+    .link, a {
+      font-size: 20px;
+      color: #fff;
+      cursor: pointer;
+      //text-decoration: underline;
+      border-bottom: 1px solid white;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 }
 
-.output {
-  color: rgba(128, 255, 128, 0.8);
-  text-shadow: 0 0 1px rgba(51, 255, 51, 0.4),
-  0 0 2px rgba(255, 255, 255, 0.8);
-}
-
-.output::before {
-  content: "> ";
-}
-
-.output a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.output a::before {
-  content: "[";
-}
-
-.output a::after {
-  content: "]";
-}
-
-.errorcode {
-  color: white;
+@media screen and (max-width: 768px) {
+  .content {
+    //transform: scale(0.5);
+    zoom: 0.6;
+  }
 }
