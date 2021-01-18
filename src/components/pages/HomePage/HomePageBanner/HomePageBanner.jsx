@@ -4,6 +4,8 @@ import bannerImg from "../../../../img/home-page/banner-img.png"
 import cirqlesImg from "../../../../img/home-page/cirqles.png"
 import pauseImg from "../../../../img/home-page/pause.png"
 import BookingBlock from "../../../additional/BookingBlock/BookingBlock";
+import videoMp4 from "../../../../video/rivierasunrise.mp4";
+import videoWebM from "../../../../video/rivierasunrise.webm";
 
 const HomePageBanner = () => {
     return (
@@ -23,7 +25,12 @@ const HomePageBanner = () => {
                             <img src={pauseImg} alt="пауза"/>
                         </div>
                         <img className={s.cirqles} src={cirqlesImg} alt=""/>
-                        <img style={{height: '740px', marginTop: "60px"}} src={bannerImg} alt="Riviera Sunrise"/>
+
+                        <video autoPlay muted loop style={{height: '740px', marginTop: "60px"}}>
+                            <source src={videoMp4}/>
+                            <source src={videoWebM}/>
+                        </video>
+                        {/*<img style={{height: '740px', marginTop: "60px"}} src={bannerImg} alt="Riviera Sunrise"/>*/}
                     </div>
                 </div>
             </div>
