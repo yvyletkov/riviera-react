@@ -3,16 +3,33 @@ import s from "./HomePageBanner.module.scss";
 import bannerImg from "../../../../img/home-page/banner-img.png"
 import cirqlesImg from "../../../../img/home-page/cirqles.png"
 import pauseImg from "../../../../img/home-page/pause.png"
+import playImg from "../../../../img/play.png"
+import homePageBg from "../../../../img/homeBannerB.png"
 import BookingBlock from "../../../additional/BookingBlock/BookingBlock";
 import videoMp4 from "../../../../video/rivierasunrise.mp4";
 import videoWebM from "../../../../video/rivierasunrise.webm";
 
 const HomePageBanner = () => {
+
+    let [isPlaying, setIsPlaying] = React.useState(true)
+
+    let videoRef = React.useRef();
+
+    let onBtnClick = () => {
+        setIsPlaying(!isPlaying);
+    }
+    React.useEffect(() => {
+        if (isPlaying) videoRef.current.play();
+        else videoRef.current.pause();
+    }, [isPlaying])
+
     return (
         <section className={s.bannerWrapper}>
             <div className={s.container}>
                 <div className={s.flexWrapper}>
                     <div className={s.leftSide}>
+                        <img className={s.bgImg} src={homePageBg} alt=""/>
+
                         <div className={s.textBlock}>
                             <h2>Рассвет совершенного сервиса</h2>
                             <h1>Riviera
@@ -21,16 +38,15 @@ const HomePageBanner = () => {
                         </div>
                     </div>
                     <div className={s.rightSide}>
-                        <div className={s.playBtn}>
-                            <img src={pauseImg} alt="пауза"/>
+                        <div onClick={onBtnClick} className={s.playBtn + ' ' + (!isPlaying ? s.play : '')}>
+                            <img src={isPlaying ? pauseImg : playImg} alt="пауза"/>
                         </div>
                         <img className={s.cirqles} src={cirqlesImg} alt=""/>
 
-                        <video autoPlay muted loop style={{height: '740px', marginTop: "60px"}}>
+                        <video ref={videoRef} autoPlay poster={bannerImg} muted loop style={{height: '740px', marginTop: "60px"}}>
                             <source src={videoMp4}/>
                             <source src={videoWebM}/>
                         </video>
-                        {/*<img style={{height: '740px', marginTop: "60px"}} src={bannerImg} alt="Riviera Sunrise"/>*/}
                     </div>
                 </div>
             </div>
