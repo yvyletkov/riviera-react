@@ -16,7 +16,7 @@ const SliderStyles = styled.div`
   .slick-next, .slick-prev {
     color: #000;
   }
-  .slick-dots li button:before, .slick-next:before, .slick-prev:before {font-family: 'Helvetica Neue Medium';}
+  .slick-dots li button:before, .slick-next:before, .slick-prev:before {font-family: 'Helvetica Neue Medium', sans-serif;}
   .slick-prev {left: -20px}
   .slick-next {right: -20px}
   .slick-list {margin: -2px 0;}
