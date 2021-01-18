@@ -23,11 +23,22 @@ $black: #171717;
   display: flex;
 }
 
+.bgImg {
+  position: absolute;
+  right: -200px;
+  top: 20px;
+  z-index: -1;
+  @media (max-width: 620px) {
+    display: none;
+  }
+}
+
 .leftSide {
   padding-top: 175px;
   padding-left: 20px;
   z-index: 1;
   position: relative;
+
 }
 
 .textBlock {
@@ -80,7 +91,7 @@ $black: #171717;
 
 .cirqles {
   position: absolute;
-  top: 187px;
+  top: 174px;
   left: -250px;
   z-index: 0;
 }
@@ -105,6 +116,10 @@ $black: #171717;
 .playBtn img {
   width: 23px;
   height: 23px;
+}
+
+.playBtn.play img {
+  margin-left: 4px;
 }
 
 .playBtn:hover {
