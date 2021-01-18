@@ -105,6 +105,7 @@ const FAQPage = () => {
                         <HeadlineCenter title={'Можете задать свой вопрос'}/>
                         <div className={s.formWrapper}>
                             <ContactForm withMessage
+                                         withEmail
                                          formName={'Форма со страницы Контакты" (Обратная связь)'}
                                          swalText={'ваш вопрос будет получен и обработан нашими менеджерами'}
                                          submitBtnText={'Отправить'}
