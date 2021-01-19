@@ -2290,19 +2290,13 @@ export const eventPagesData = {
                 key: 1,
             },
             {
-                video: "https://www.youtube.com/embed/9ZaY4ILBbzA?controls=0",
+                video: "https://www.youtube.com/embed/Ob7a7PzBOAg?controls=0",
                 key: 2,
             },
             {
-                video: "https://www.youtube.com/embed/9ZaY4ILBbzA?controls=0",
+                video: "https://www.youtube.com/embed/fBv_rmcDYKU?controls=0",
                 key: 3,
             },
-            {
-                video: "https://www.youtube.com/embed/9ZaY4ILBbzA?controls=0",
-                key: 4,
-            },
-
-
         ], // need videos
         weddingPlacesSlides: [
             {img: placesIcon1, text: 'Обширный<br/>номерной<br/>фонд'},
