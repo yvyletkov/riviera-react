@@ -36,7 +36,7 @@ $black: #171717;
 .leftSide {
   padding-top: 175px;
   padding-left: 20px;
-  z-index: 1;
+  z-index: 2;
   position: relative;
 
 }
@@ -109,7 +109,7 @@ $black: #171717;
   height: 65px;
   background-color: #ff6c39;
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
   transition: all 200ms;
 }
 
