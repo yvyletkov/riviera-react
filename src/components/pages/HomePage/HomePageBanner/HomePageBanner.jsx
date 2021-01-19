@@ -7,7 +7,7 @@ import playImg from "../../../../img/play.png"
 import homePageBg from "../../../../img/homeBannerB.png"
 import BookingBlock from "../../../additional/BookingBlock/BookingBlock";
 import videoMp4 from "../../../../video/rivierasunrise.mp4";
-import videoWebM from "../../../../video/rivierasunrise.webm";
+// import videoWebM from "../../../../video/rivierasunrise.webm";
 
 const HomePageBanner = () => {
 
@@ -43,9 +43,9 @@ const HomePageBanner = () => {
                         </div>
                         <img className={s.cirqles} src={cirqlesImg} alt=""/>
 
-                        <video ref={videoRef} autoPlay muted loop style={{background: `url(${bannerImg})`, height: '740px', marginTop: "60px"}}>
+                        <video preload="none" ref={videoRef} autoPlay muted loop style={{position: 'relative', backgroundPosition: '500px', left: '-500px', background: `url(${bannerImg}) no-repeat`, height: '740px', marginTop: "60px"}}>
                             <source src={videoMp4}/>
-                            <source src={videoWebM}/>
+                            {/*<source src={videoWebM}/>*/}
                         </video>
                     </div>
                 </div>
