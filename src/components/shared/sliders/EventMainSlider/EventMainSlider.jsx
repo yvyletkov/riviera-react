@@ -5,32 +5,35 @@ import styled from "styled-components";
 import HeadlineCenter from "../../HeadlineCenter/HeadlineCenter";
 import {NextArrow, PrevArrow} from "../SliderArrows/sliderArrowButtons";
 import Button from "../../Button/Button";
+import cx from 'classnames'
 
 const SliderStyles = styled(Slider)`
   .slick-next:before,
   .slick-prev:before {
     color: #000;
   }
+
   .slick-list {
     overflow: visible;
   }
 
-.slick-track {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
-@media screen and (min-width: 481px){
- .slick-slider {
-    height: unset;
-    padding-bottom: 40px;
+  .slick-track {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
   }
-}
-@media screen and (max-width: 1200px){
-  .slick-slider {
-    height: unset
+
+  @media screen and (min-width: 481px) {
+    .slick-slider {
+      height: unset;
+      padding-bottom: 40px;
+    }
   }
-}
+  @media screen and (max-width: 1200px) {
+    .slick-slider {
+      height: unset
+    }
+  }
 `;
 
 const SliderStylesManySlider = styled(Slider)`
@@ -38,38 +41,48 @@ const SliderStylesManySlider = styled(Slider)`
   .slick-prev:before {
     color: #000;
   }
+
   .slick-list {
     overflow: visible;
   }
 
-.slick-track {
-  margin: 0 auto;
-  display: flex;
-  justify-content: start;
-}
-@media screen and (min-width: 481px){
- .slick-slider {
-    height: unset;
-    padding-bottom: 40px;
+  .slick-track {
+    margin: 0 auto;
+    display: flex;
+    justify-content: start;
   }
-}
-@media screen and (max-width: 1200px){
-  .slick-slider {
-    height: unset
+
+  @media screen and (min-width: 481px) {
+    .slick-slider {
+      height: unset;
+      padding-bottom: 40px;
+    }
   }
-}
+  @media screen and (max-width: 1200px) {
+    .slick-slider {
+      height: unset
+    }
+  }
 `;
 
 
 // const SliderStylesManySlider = str.replace("Microsoft", "W3Schools");
 
 
-const EventMainSlider = ({slides, title, titleMobile, initialSlideIndex = 0, manySlides = false, withButton = false, activatePopup}) => {
+const EventMainSlider = ({
+                             slides,
+                             title,
+                             titleMobile,
+                             initialSlideIndex = 0,
+                             manySlides = false,
+                             withButton = false,
+                             activatePopup
+                         }) => {
 
     const settings = {
         initialSlide: initialSlideIndex,
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow: slides.length === 1 ? 1 : 3,
         centerMode: true,
         arrows: manySlides,
         variableWidth: true,
@@ -117,9 +130,22 @@ const EventMainSlider = ({slides, title, titleMobile, initialSlideIndex = 0, man
         );
     });
 
+    const containerStyles = cx(s.container, {[s.withPadding]: manySlides, [s.small]: slides.length === 1})
+
     return (
         <div className={s.wrapper}>
-            <div className={!manySlides ? s.container : s.container + ' ' + s.withPadding}>
+            <div className={containerStyles}>
+                {(window.matchMedia('screen and (max-width: 480px)').matches && slides.length === 1) &&
+                <div style={{
+                    position: 'absolute',
+                    transform: 'rotate(-90deg)',
+                    right: '-30%', color: 'rgb(226, 226, 226)',
+                    fontFamily: 'Helvetica Neue Black',
+                    fontSize: '9vw',
+                    lineHeight: '0.8',
+                    top: '47%'}}>
+                    Новые программы<br/>в разработке
+                </div>}
                 <HeadlineCenter title={window.matchMedia('(max-width: 490px').matches ? titleMobile : title}/>
                 {manySlides ? <SliderStylesManySlider><Slider {...settings}>{items}</Slider></SliderStylesManySlider>
                     :
@@ -148,7 +174,8 @@ const EventMainSliderItem = (props) => {
                 <h6 className={s.title}>{title}</h6>
                 <div className={s.descr}>
                     <p style={{marginBottom: withButton ? '10px' : '0'}}>{descr}</p>
-                    { withButton && <Button style={{marginTop: '17px'}} onClick={ () => activatePopup(index + 1)} text={'Подробнее о программе'}/>}
+                    {withButton && <Button style={{marginTop: '17px'}} onClick={() => activatePopup(index + 1)}
+                                           text={'Подробнее о программе'}/>}
                 </div>
 
 

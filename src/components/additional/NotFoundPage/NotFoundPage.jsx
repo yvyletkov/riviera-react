@@ -8,7 +8,7 @@ import zeroImg from "../../../img/404bgZero.png";
 const NotFoundPage = ({history}) => {
 
     return (
-        <div className={s.wrapper} style={{background: `url(${bg})`}}>
+        <div className={s.wrapper} style={{background: `center url(${bg})`}}>
             <div className={s.content}>
                 <p className={s.subtitle}>Oops!</p>
                 <div className={s.digits}>
