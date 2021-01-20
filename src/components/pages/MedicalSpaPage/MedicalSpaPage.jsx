@@ -89,7 +89,9 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
         <section className='section'>
             <EventMainSlider withButton activatePopup={activatePopup} title={'Программы оздоровления'} manySlides={true}
                              titleMobile={'Программы оздоровления'} initialSlideIndex={1}
-                             slides={medicalSpaPage.mainSlides}/>
+                             slides={medicalSpaPage.mainSlides}
+                             // withTip
+            />
         </section>
 
         <section className='section'>

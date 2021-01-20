@@ -6,6 +6,8 @@ import HeadlineCenter from "../../HeadlineCenter/HeadlineCenter";
 import {NextArrow, PrevArrow} from "../SliderArrows/sliderArrowButtons";
 import Button from "../../Button/Button";
 import cx from 'classnames'
+import CirqleTip from "../../CirqleTip/CirqleTip";
+import busIcon from "../../../../img/school-bus.png";
 
 const SliderStyles = styled(Slider)`
   .slick-next:before,
@@ -76,7 +78,8 @@ const EventMainSlider = ({
                              initialSlideIndex = 0,
                              manySlides = false,
                              withButton = false,
-                             activatePopup
+                             activatePopup,
+                             withTip = false
                          }) => {
 
     const settings = {
@@ -116,6 +119,7 @@ const EventMainSlider = ({
         return (
             <div className="SliderElement" key={key}>
                 <EventMainSliderItem
+                    withTip={withTip}
                     key={key}
                     index={index}
                     withButton={withButton}
@@ -143,7 +147,8 @@ const EventMainSlider = ({
                     fontFamily: 'Helvetica Neue Black',
                     fontSize: '9vw',
                     lineHeight: '0.8',
-                    top: '47%'}}>
+                    top: '47%'
+                }}>
                     Новые программы<br/>в разработке
                 </div>}
                 <HeadlineCenter title={window.matchMedia('(max-width: 490px').matches ? titleMobile : title}/>
@@ -161,17 +166,42 @@ export default EventMainSlider;
 
 
 const EventMainSliderItem = (props) => {
-    const {img, title, descr, active, index, withButton, activatePopup} = props;
+    let [showTip, setShowTip] = React.useState(false);
+
+    const {img, title, descr, active, index, withButton, activatePopup, withTip} = props;
 
     let [showDescr, setShowDescr] = React.useState(active);
 
     return (
         <div className={showDescr ? s.card + ' ' + s.active : s.card}>
 
+            <div className={showTip ? s.tip + ' ' + s.active : s.tip}>
+                <p>Примечание. В течение первых суток пребывания гость посещает врача (первичный прием) .
+                    Комплексное лечение назначается с 3-го дня пребывания - после прохождения периода частичной
+                    адаптации.
+                    * - в тёплое время года.
+                    При наличии или возникновении у гостя противопоказаний к процедурам или отказе гостя от
+                    приёма входящих в программу процедур, возврат стоимости лечения не производится, замена на
+                    другие услуги не осуществляется.
+                    Врач может дополнительно рекомендовать расширение объёма и перечня видов процедур:
+                    бальнеотерапию, включая сауну, хамам и др., расширенный объем массажа и СПА-уходов,
+                    дополнительные методы аппаратного физиотерапевтического воздействия, инъекционную
+                    карбокситерапию ( назначается после дополнительной консультации физиотерапевта), расширенный
+                    объем пелоидотерапии и другие процедуры, не входящие в данную лечебно - оздоровительную
+                    программу - на платной основе.
+
+                    Лечащий врач имеет право вносить предложения по изменениям в программу лечения по
+                    согласованию с Главным врачом, в том числе замену процедур на равнозначные, сохранив при
+                    этом общую структуру программы.
+                </p>
+            </div>
+
             <img className={s.img} src={img} alt=""/>
 
             <div className={s.content}>
                 <h6 className={s.title}>{title}</h6>
+                {withTip && <CirqleTip accordeonStatus={showTip} onClick={() => setShowTip(!showTip)} forDesktop
+                                         style={{marginLeft: '10px'}}/>}
                 <div className={s.descr}>
                     <p style={{marginBottom: withButton ? '10px' : '0'}}>{descr}</p>
                     {withButton && <Button style={{marginTop: '17px'}} onClick={() => activatePopup(index + 1)}

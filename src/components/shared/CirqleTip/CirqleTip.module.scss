@@ -20,6 +20,9 @@
     font-size: 18px;
     font-family: 'Helvetica Neue Bold', sans-serif;
   }
+  &.forDesktop {
+    display: inline-flex !important;
+  }
 }
 
 .cirqleTip.active {
