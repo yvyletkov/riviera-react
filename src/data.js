@@ -497,48 +497,6 @@ const commonGridSlides = [
         ],
     },
     {
-        name: "Мероприятия",
-        firstRow: [
-            {
-                title: "Конференции",
-                img: conferenceImgGrid,
-                href: '/conference'
-            },
-            {
-                title: "Форум",
-                img: forumImgGrid,
-                href: '/forum'
-            },
-            {
-                title: "Выставка",
-                img: exhibitionImgGrid,
-                href: '/exhibition'
-            },
-            {
-                title: "Интенсив",
-                img: intensiveImgGrid,
-                href: '/intensive'
-            }
-        ],
-        secondRow: [
-            {
-                title: "Семинар/Тренинги",
-                img: trainingsImgGrid,
-                href: '/trainings'
-            },
-            {
-                title: "Тимбилдинг",
-                img: teamImgGrid,
-                href: '/team-building'
-            },
-            {
-                title: "Событийный туризм",
-                img: tourismImgGrid,
-                href: '/event-tourism'
-            },
-        ],
-    },
-    {
         name: "Курортный отдых",
         firstRow: [
             {
@@ -581,6 +539,48 @@ const commonGridSlides = [
                 img: gridKurortImg8,
                 href: '/romantic-vacation'
             }],
+    },
+    {
+        name: "Мероприятия",
+        firstRow: [
+            {
+                title: "Конференции",
+                img: conferenceImgGrid,
+                href: '/conference'
+            },
+            {
+                title: "Форум",
+                img: forumImgGrid,
+                href: '/forum'
+            },
+            {
+                title: "Выставка",
+                img: exhibitionImgGrid,
+                href: '/exhibition'
+            },
+            {
+                title: "Интенсив",
+                img: intensiveImgGrid,
+                href: '/intensive'
+            }
+        ],
+        secondRow: [
+            {
+                title: "Семинар/Тренинги",
+                img: trainingsImgGrid,
+                href: '/trainings'
+            },
+            {
+                title: "Тимбилдинг",
+                img: teamImgGrid,
+                href: '/team-building'
+            },
+            {
+                title: "Событийный туризм",
+                img: tourismImgGrid,
+                href: '/event-tourism'
+            },
+        ],
     },
 ];
 const commonVacationGridSlides = [
