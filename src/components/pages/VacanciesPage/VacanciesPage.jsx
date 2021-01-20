@@ -44,7 +44,7 @@ const VacanciesPage = () => {
                                   popupTitleText={'Для этого, пожалуйста, оставьте свои контактные данные️'}
                                   submitBtnText='Отправить резюме'
                                   formName={`Форма со страницы вакансий`}
-                                  swalText={'мы свяжемся с Вами ближайшее время'}
+                                  swalText={'мы свяжемся с Вами в ближайшее время'}
                                   withPhone
                                   withMessage
                                   textAreaPlaceholder={"Вставьте ссылку на резюме"}/>

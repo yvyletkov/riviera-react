@@ -30,6 +30,8 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
     let [popupContactFormOpen, setPopupContactFormOpen] = React.useState(false);
     let [showPopup, setShowPopup] = React.useState(false);
     let [popupIndex, setPopupIndex] = React.useState(0);
+    let [chosenProgram, setChosenProgram] = React.useState('');
+    let [formPopupOpen, setFormPopupOpen] = React.useState(false);
 
     const activatePopup = (index) => {
         setPopupIndex(index);
@@ -57,12 +59,12 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
                     </h2>
                 </div>
 
-                <div className={s.icons}>
-                    {bannerIcons.map((item, index) => <div key={index} className={s.icon}>
-                        <img style={index === 1 ? {height: '29px', position: 'relative', top: '3px'} : {}} src={item}
-                             alt=""/>
-                    </div>)}
-                </div>
+                {/*<div className={s.icons}>*/}
+                {/*    {bannerIcons.map((item, index) => <div key={index} className={s.icon}>*/}
+                {/*        <img style={index === 1 ? {height: '29px', position: 'relative', top: '3px'} : {}} src={item}*/}
+                {/*             alt=""/>*/}
+                {/*    </div>)}*/}
+                {/*</div>*/}
 
                 <Button style={{width: "fit-content"}}
                         onClick={() => setPopupContactFormOpen(true)} text={"Узнать подробности"}/>
@@ -143,6 +145,14 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
             <MapSection/>
         </section>
 
+        {/* Попап бронирования программы */}
+        <PopupContactForm popupOpen={formPopupOpen} setPopupOpen={setFormPopupOpen}
+                          popupTitleText={'Чтобы забронировать программу, пожалуйста, оставьте свои контактные данные'}
+                          submitBtnText='Забронировать'
+                          formName={`Форма бронирования программы Medical SPA (${chosenProgram})`}
+                          swalText={'мы свяжемся с Вами в ближайшее время'}
+                          withPhone/>
+
         {/* POPUP Восстановление*/}
         <div onClick={() => setShowPopup(false)}
              className={showPopup && popupIndex === 1 ? s.popupWrapper + ' ' + s.show : s.popupWrapper}>
@@ -165,7 +175,15 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
                             после перенесенных острых заболеваний, в том числе и новой коронавирусной инфекцией,
                             хроническими заболеваниями верхних дыхательных путей, бронхиального дерева и лёгких.
                         </p>
-                        <img style={{margin: '-50px 0 -20px -50px'}} src={dihanieZdorovyaPriceImg} alt="стоимость программы - от 17950 рублей"/>
+
+                        <Button text="Забронировать"
+                                onClick={ () => {
+                                    setFormPopupOpen(true);
+                                    setChosenProgram('Дыхание здоровья');
+                                }}
+                                style={{position: 'relative', zIndex: 5, margin: '30px auto 20px', maxWidth:'300px'}}/>
+
+
 
                     </div>
 
@@ -174,6 +192,8 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
                     <img src={medicalSpaPopupImgDihanieZdorovya} alt="Дыхание здоровья"/>
                 </div>
                 <div className={s.col}>
+                    <img style={{position: 'absolute', left: '-105px', top: '0'}} src={dihanieZdorovyaPriceImg} alt="стоимость программы - от 17950 рублей"/>
+
                     <img className={s.closeBtn} onClick={() => setShowPopup(false)} src={closeBtn} alt="close"/>
 
                     <h5>Методика восстановления</h5>
