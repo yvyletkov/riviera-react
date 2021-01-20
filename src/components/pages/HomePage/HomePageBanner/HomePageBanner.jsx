@@ -42,7 +42,7 @@ const HomePageBanner = () => {
                             <img src={isPlaying ? pauseImg : playImg} alt="пауза"/>
                         </div>
                         <img className={s.cirqles} src={cirqlesImg} alt=""/>
-                        <video preload="none" ref={videoRef} autoPlay muted loop style={{position: 'relative', backgroundPosition: '180px', left: '-180px', background: `url(${bannerImg}) no-repeat`, height: '740px', marginTop: "60px"}}>
+                        <video preload="none" ref={videoRef} autoPlay muted loop style={{position: 'relative', left: '-180px', background: `url(${bannerImg}) no-repeat`, backgroundPosition: '180px', height: '740px', marginTop: "60px"}}>
                             <source src={videoMp4}/>
                             <source src={videoWebM}/>
                         </video>

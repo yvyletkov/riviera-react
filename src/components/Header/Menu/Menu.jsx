@@ -67,13 +67,6 @@ const Menu = ({menuOpened, toggleMenu}) => {
 
                                 <div className={s.list}>
 
-                                    <NavLink to={"/nomera-i-tseny"}>
-                                        <div className={s.listItem} onClick={toggleMenu}>
-                                            Номера и цены
-                                        </div>
-                                    </NavLink>
-
-
                                     <NavLink to={"/family-vacation"}>
                                         <div className={s.listItem} onClick={toggleMenu}>
                                             Семейный отдых
@@ -162,6 +155,12 @@ const Menu = ({menuOpened, toggleMenu}) => {
                             <div className={s.menuItem} onClick={toggleMenu}>
                                 <NavLink isActive={checkActive} to={"/afisha"}>
                                     Афиша
+                                </NavLink>
+                            </div>
+
+                            <div className={s.menuItem} onClick={toggleMenu}>
+                                <NavLink isActive={checkActive} to={"/nomera-i-tseny"}>
+                                    Номера и цены
                                 </NavLink>
                             </div>
 

@@ -4,6 +4,7 @@ import logo from "../../img/logo.svg"
 import star from "../../img/header/star.png"
 import speaker from "../../img/header/speaker.png"
 import microphone from "../../img/header/microphone.png"
+import reviews from "../../img/header/reviews.svg"
 import search from "../../img/header/search.png"
 import phone from "../../img/header/phone.png"
 import Button from "../shared/Button/Button";
@@ -61,8 +62,10 @@ const Header = () => {
                             <Link title={"Спецпредложения"} icon={star} link={"/offers"}/>
                             <Link onClickHandler={handleLinkClick} style={{cursor: 'not-allowed'}} title={"Анимация"}
                                   icon={speaker} link={""}/>
-                            <Link onClickHandler={handleLinkClick} style={{cursor: 'not-allowed'}} title={"Новости"}
-                                  icon={microphone} link={""}/>
+                            {/*<Link onClickHandler={handleLinkClick} style={{cursor: 'not-allowed'}} title={"Новости"}*/}
+                            {/*      icon={microphone} link={""}/>*/}
+                            <Link title={"Отзывы"}
+                                  icon={reviews} link={"/reviews"}/>
                         </div>
                         <div className={s.logo}>
                             <NavLink to={'/'}><img src={logo} alt="Riviera Sunrise"/></NavLink>
