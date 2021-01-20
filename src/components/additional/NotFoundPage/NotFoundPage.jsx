@@ -16,7 +16,7 @@ const NotFoundPage = ({history}) => {
                     <img src={zeroImg} alt="0"/>
                     <span className={s.digit}>4</span>
                 </div>
-                <p className={s.topText}><b>Данная страницу находится по какому-то другому адресу, либо она просто не
+                <p className={s.topText}><b>Данная страница находится по другому адресу, либо она просто не
                     существует</b></p>
                 <p className={s.bottomText}>Пожалуйста, попробуйте <span onClick={history.goBack} className={s.link}>вернуться назад</span> или <NavLink to={'/'}>вернуться на главную страницу</NavLink>
                 </p>
