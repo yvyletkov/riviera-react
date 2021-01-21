@@ -6,8 +6,8 @@ import pauseImg from "../../../../img/home-page/pause.png"
 import playImg from "../../../../img/play.png"
 import homePageBg from "../../../../img/homeBannerB.png"
 import BookingBlock from "../../../additional/BookingBlock/BookingBlock";
-import videoMp4 from "../../../../video/rivierasunrise.mp4";
-import videoWebM from "../../../../video/rivierasunrise.webm";
+import videoMp4 from "../../../../video/rivierasunrisenew.mp4";
+// import videoWebM from "../../../../video/rivierasunrise.webm";
 
 const HomePageBanner = () => {
 
@@ -42,9 +42,9 @@ const HomePageBanner = () => {
                             <img src={isPlaying ? pauseImg : playImg} alt="пауза"/>
                         </div>
                         <img className={s.cirqles} src={cirqlesImg} alt=""/>
-                        <video preload="none" ref={videoRef} autoPlay muted loop style={{position: 'relative', left: '-180px', background: `url(${bannerImg}) no-repeat`, backgroundPosition: '180px', height: '740px', marginTop: "60px"}}>
+                        <video preload="none" ref={videoRef} autoPlay muted loop style={{position: 'relative', left: '-380px', background: `url(${bannerImg}) no-repeat`, backgroundPosition: '380px', height: '740px', marginTop: "60px"}}>
                             <source src={videoMp4}/>
-                            <source src={videoWebM}/>
+                            {/*<source src={videoWebM}/>*/}
                         </video>
                     </div>
                 </div>
