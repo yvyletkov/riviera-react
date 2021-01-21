@@ -57,16 +57,6 @@ const NewYearPage = lazy(() => import("./components/pages/NewYearPage/NewYearPag
 
 function App() {
 
-    React.useEffect(() => {
-        swal.fire({
-            title: `Важное объявление!`,
-            html: '                <p style=\'text-align: left; margin-top: 10px\'>Уважаемые гости, отель Riviera Sunrise Resort & SPА выполняет все ограничения, соответствующие рекомендациям Роспотребнадзора и Указа Главы республики от 17.03.2020 года № 63-У, с последующими редакциями.<br/><br/>\n' +
-                '\n' +
-                '                    Мы прикладываем максимум усилий для предотвращения распространения коронавирусной инфекции на территории отеля, чтобы каждый гость, проживающий в отеле, мог насладиться светлыми Новогодними праздниками, проведенными у нас.</p>\n',
-            confirmButtonText: 'Хорошо'
-        })
-    }, [])
-
     return (<>
         <Header/>
         {/*{window.matchMedia('(max-width: 767px)').matches &&*/}
