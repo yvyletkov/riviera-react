@@ -53,6 +53,7 @@ const AfishaPage = lazy(() => import("./components/pages/AfishaPage/AfishaPage")
 const PoolSchedulePage = lazy(() => import("./components/pages/PoolSchedulePage/PoolSchedulePage"));
 const DocumentsPage = lazy(() => import("./components/pages/DocumentsPage/DocumentsPage"));
 const NewYearPage = lazy(() => import("./components/pages/NewYearPage/NewYearPage"));
+const LoveDayPage = lazy(() => import("./components/pages/LoveDayPage/LoveDayPage"));
 
 
 function App() {
@@ -72,6 +73,9 @@ function App() {
         </div>}>
 
             <Switch>
+
+                <Route path='/love-day' exact
+                       component={() => <LoveDayPage/>}/>
 
                 <Route path='/new-year' exact
                        component={() => <NewYearPage/>}/>
