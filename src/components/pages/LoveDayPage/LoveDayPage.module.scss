@@ -26,8 +26,26 @@ $black: #171717;
   }
   width: 100%;
   background-color: #f8f8f8;
-  //overflow: hidden;
-  //box-shadow: 0px 0px 40.94px 5.06px rgba(3, 7, 8, 0.09);
+
+  .iconsWrapper {
+    margin-top: 30px;
+    display: flex;
+
+    .item {
+      display: flex;
+      margin-right: 25px;
+
+      img {
+        width: 35px;
+        margin-right: 17px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
 }
 
 .flexWrapper {
@@ -36,7 +54,7 @@ $black: #171717;
 }
 
 .leftSide {
-  padding-top: 14vh;
+  padding-top: 9vh;
   //padding-left: 20px;
   z-index: 1;
   position: relative;
@@ -71,8 +89,19 @@ $black: #171717;
 }
 
 .pageNameBlock h1:first-of-type {
+  position: relative;
   text-transform: uppercase;
   font-family: "Helvetica Neue Black", sans-serif;
+  &:before {
+    content: '';
+    position: absolute;
+    left: -90px;
+    top: -35px;
+    display: block;
+    width: 150px;
+    height: 120px;
+    background: url('../../../img/loveDay/heart.png')
+  }
 }
 
 .pageNameBlock h1:last-of-type {
@@ -146,20 +175,6 @@ $black: #171717;
   top: 187px;
   left: -251px;
   z-index: 0;
-}
-
-.bookingBlock {
-  transform: translateX(-50%);
-  position: absolute;
-  bottom: 7vh;
-  max-width: 1115px;
-  width: 95%;
-  left: 50%;
-  height: 132px;
-  box-shadow: -6.156px 16.914px 40px 0px rgba(23, 23, 23, 0.13);
-  background-color: white;
-  border-radius: 5px;
-  background: url(../../../img/booking.jpg) center;
 }
 
 @media screen and (max-width: 768px) {
@@ -254,6 +269,13 @@ $black: #171717;
   .pageNameBlock h2 {
     font-size: 4.8vw;
   }
+}
+
+.animatedMouseWrapper {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-17.5px);
 }
 
 
