@@ -88,7 +88,7 @@
   transition: all 200ms;
 }
 
-.title {
+.title, .titleSmall {
   width: fit-content;
   position: relative;
   text-transform: uppercase;
@@ -99,11 +99,17 @@
   display: inline-block;
 }
 
+.titleSmall {
+  font-size: 15px;
+  font-family: "Helvetica Neue Bold", sans-serif;
+  text-transform: none;
+}
+
 .title + a {
   text-transform: none;
 }
 
-.title:after {
+.title:after, .titleSmall:after {
   display: block;
   background-color: #ff6c39;
   content: "";
@@ -112,6 +118,10 @@
   position: absolute;
   top: -11px
 }
+
+
+
+
 
 
 .card.active {

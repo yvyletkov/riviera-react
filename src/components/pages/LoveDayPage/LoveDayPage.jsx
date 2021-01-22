@@ -8,6 +8,8 @@ import icon1 from "../../../img/loveDay/icons/1.png";
 import icon2 from "../../../img/loveDay/icons/2.png";
 import icon3 from "../../../img/loveDay/icons/3.png";
 import AnimatedMouseIcon from "../../shared/AnimatedMouseIcon/AnimatedMouseIcon";
+import EventMainSlider from "../../shared/sliders/EventMainSlider/EventMainSlider";
+import {loveDayPageData} from "../../../data";
 
 const LoveDayPage = () => {
 
@@ -57,9 +59,15 @@ const LoveDayPage = () => {
 
         </section>
 
+        <section className='section first'>
+            <EventMainSlider title={'Три дня незабываемой романтики'} manySlides slides={loveDayPageData.loveDayMainSlides} onlyTitle initialSlideIndex={1}/>
+        </section>
+
         <section className='section last'>
             <MapSection/>
         </section>
+
+
     </>
 
 };

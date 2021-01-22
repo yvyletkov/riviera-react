@@ -419,8 +419,13 @@ import afishaImg3 from "./img/afisha/3.jpg";
 import afishaImg4 from "./img/afisha/4.jpg";
 import afishaImg5 from "./img/afisha/5.jpg";
 import afishaImg6 from "./img/afisha/6.jpg";
-
 // END afisha imports
+// LOVE DAY imports
+import loveDaySlide1 from "./img/loveDay/1.1.jpg"
+import loveDaySlide2 from "./img/loveDay/1.2.jpg"
+import loveDaySlide3 from "./img/loveDay/1.3.jpg"
+// end LOVE DAY imports
+
 
 const commonGridSlides = [
     {
@@ -3413,4 +3418,52 @@ export const afishaPageData = {
             key: 2,
         },
     ]
+}
+
+// Страница 14 февраля
+export const loveDayPageData = {
+    loveDayMainSlides: [
+        {
+            img: loveDaySlide1,
+            title: "Ресторан для влюбленных:<br/>Цветы, свечи, приглушенный свет, столы для двоих",
+            descr: '',
+            key: 1,
+        },
+        {
+            img: loveDaySlide2,
+            title: "Красочная фотозона",
+            descr: '',
+            key: 2,
+        },
+        {
+            img: loveDaySlide3,
+            title: "Комплимент от отеля в номера высоких категорий",
+            descr: '',
+            key: 3,
+        },
+        {
+            img: birthdayTavrika,
+            title: "Ангельское приветствие:<br/>Дети-ангелочки сделают Вам сюрприз\n",
+            descr: '',
+            key: 4,
+        },
+        {
+            img: birthdayTavrika,
+            title: "Заказ цветов на ресепшн",
+            descr: '',
+            key: 5,
+        },
+        {
+            img: birthdayTavrika,
+            title: "Вечерняя программа",
+            descr: '',
+            key: 6,
+        },
+        {
+            img: birthdayTavrika,
+            title: "Специальное сет-меню в ресторане",
+            descr: '',
+            key: 7,
+        },
+    ],
 }
