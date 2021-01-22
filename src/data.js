@@ -424,6 +424,11 @@ import afishaImg6 from "./img/afisha/6.jpg";
 import loveDaySlide1 from "./img/loveDay/1.1.jpg"
 import loveDaySlide2 from "./img/loveDay/1.2.jpg"
 import loveDaySlide3 from "./img/loveDay/1.3.jpg"
+import loveDaySlide4 from "./img/loveDay/6.jpg"
+import loveDaySlide5 from "./img/loveDay/7.jpg"
+import loveDaySlide6 from "./img/loveDay/8.jpg"
+import loveDaySlide7 from "./img/loveDay/9.jpg"
+import loveDaySlide8 from "./img/loveDay/10.jpg"
 // end LOVE DAY imports
 
 
@@ -3435,31 +3440,31 @@ export const loveDayPageData = {
             key: 2,
         },
         {
-            img: loveDaySlide3,
+            img: loveDaySlide4,
             title: "Комплимент от отеля в номера высоких категорий",
             descr: '',
             key: 3,
         },
         {
-            img: birthdayTavrika,
+            img: loveDaySlide5,
             title: "Ангельское приветствие:<br/>Дети-ангелочки сделают Вам сюрприз\n",
             descr: '',
             key: 4,
         },
         {
-            img: birthdayTavrika,
+            img: loveDaySlide6,
             title: "Заказ цветов на ресепшн",
             descr: '',
             key: 5,
         },
         {
-            img: birthdayTavrika,
+            img: loveDaySlide7,
             title: "Вечерняя программа",
             descr: '',
             key: 6,
         },
         {
-            img: birthdayTavrika,
+            img: loveDaySlide8,
             title: "Специальное сет-меню в ресторане",
             descr: '',
             key: 7,

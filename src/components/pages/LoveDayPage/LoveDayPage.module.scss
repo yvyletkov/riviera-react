@@ -1,9 +1,7 @@
 $black: #171717;
 
 
-
 .bannerWrapper {
-
 
 
   .container {
@@ -13,40 +11,24 @@ $black: #171717;
     padding: 0 20px;
     position: relative;
   }
+
   .background {
     display: none;
   }
+
   position: relative;
   height: 100vh;
   max-width: 1920px;
   margin: 0 auto;
+  width: 100%;
+  background-color: #f8f8f8;
+
   @media (min-width: 769px) {
     max-height: 750px;
   }
   @media (min-width: 1200px) {
     height: calc(100vh - 100px);
     margin-top: 100px;
-  }
-  width: 100%;
-  background-color: #f8f8f8;
-
-  .iconsWrapper {
-    margin-top: 30px;
-    display: flex;
-
-    .item {
-      display: flex;
-      margin-right: 25px;
-
-      img {
-        width: 35px;
-        margin-right: 17px;
-      }
-    }
-
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
   }
 
 
@@ -64,6 +46,9 @@ $black: #171717;
 
   .pageNameBlock {
     color: $black;
+    @media (min-width: 620px) {
+      zoom: 0.9
+    }
   }
 
   .pageNameBlock p {
@@ -94,6 +79,7 @@ $black: #171717;
     position: relative;
     text-transform: uppercase;
     font-family: "Helvetica Neue Black", sans-serif;
+
     &:before {
       content: '';
       position: absolute;
@@ -102,8 +88,12 @@ $black: #171717;
       display: block;
       width: 150px;
       height: 120px;
-      background: url('../../../img/loveDay/heart.png')
+      background: url('../../../img/loveDay/heart.png');
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
+
   }
 
   .pageNameBlock h1:last-of-type {
@@ -139,46 +129,6 @@ $black: #171717;
     //maybe smth
   }
 
-  .description {
-    z-index: 3;
-    opacity: 0;
-    box-sizing: border-box;
-    background-color: #f6f6f6;
-    box-shadow: 0px 4px 27px 0px rgba(23, 23, 23, 0.52);
-    position: absolute;
-    width: 582px;
-    top: 25px;
-    left: 40px;
-    padding: 40px 50px;
-    font-family: "Helvetica Neue Light", sans-serif;
-    font-size: 16px;
-    text-align: justify;
-    transition: all 300ms;
-    cursor: default;
-  }
-
-  .description.shown {
-    opacity: 1;
-    z-index: 3;
-  }
-
-  .rightSide {
-    img {
-      height: 100%;
-    }
-    height: 100vh;
-    max-height: 750px;
-    position: absolute;
-    left: 43%;
-  }
-
-  .cirqles {
-    position: absolute;
-    top: 187px;
-    left: -251px;
-    z-index: 0;
-  }
-
   @media screen and (max-width: 768px) {
     .bannerWrapper {
       overflow: visible;
@@ -199,14 +149,12 @@ $black: #171717;
   }
 
   @media screen and (max-width: 620px) {
-    .description {
-      top: -130px;
-    }
-    .descriptionBtn {
-      align-self: flex-start;
-      margin-bottom: 135px;
-      color: #fff;
-    }
+
+    position: relative;
+    width: 100vw;
+    height: unset;
+    background: none;
+
     .container {
       height: calc(100vh - 60px);
     }
@@ -215,7 +163,7 @@ $black: #171717;
     }
     .pageNameBlock {
       color: #fff !important;
-      //margin-bottom: 100px;
+      margin-bottom: 80px;
     }
     .pageNameBlock h2:after {
       background-color: #fff;
@@ -232,12 +180,7 @@ $black: #171717;
     .flexWrapper {
       height: 100%;
     }
-    .bannerWrapper {
-      position: relative;
-      width: 100vw;
-      height: unset;
-      background: none;
-    }
+
     .background {
       display: block;
       position: absolute;
@@ -248,7 +191,7 @@ $black: #171717;
       background-size: cover;
       background-position: center;
       filter: brightness(0.7);
-      z-index: -1;
+      //z-index: -1;
     }
 
     .bookingBlock {
@@ -269,7 +212,7 @@ $black: #171717;
 
   @media screen and (max-width: 620px) {
     .pageNameBlock h2 {
-      font-size: 4.8vw;
+      font-size: 6vw;
     }
   }
 
@@ -281,7 +224,31 @@ $black: #171717;
   }
 
 
+}
 
+.iconsWrapper {
+  margin-top: -30px;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+
+    .item {
+      display: flex;
+      margin-right: 25px;
+
+      img {
+        width: 35px;
+        margin-right: 17px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
 }
 
 .textBlockWrapper {
@@ -354,9 +321,11 @@ $black: #171717;
       object-fit: cover;
       border-radius: 5px;
       box-shadow: -9.629px 12.778px 27px 0px rgba(23, 23, 23, 0.09);
+
       &.wide {
         width: 650px;
       }
+
       @media (max-width: 768px) {
         border-radius: 0;
       }
@@ -491,7 +460,7 @@ $black: #171717;
             font-size: 4.6vw;
           }
           span:last-of-type {
-            font-size: 11.3vw;
+            font-size: 9.8vw;
           }
         }
       }
@@ -517,7 +486,7 @@ $black: #171717;
 
         @media (max-width: 500px) {
           width: 100%;
-          margin-top: 330px;
+          margin-top: 30px;
 
           input {
             margin-bottom: 10px;

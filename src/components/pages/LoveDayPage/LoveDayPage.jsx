@@ -3,6 +3,7 @@ import MapSection from "../../shared/MapSection/MapSection";
 import s from "./LoveDayPage.module.scss";
 import BookingBlock from "../../additional/BookingBlock/BookingBlock";
 import bannerImg from "../../../img/loveDay/banner.jpg";
+import bannerMobileImg from "../../../img/loveDay/bannerMobile.jpg";
 import icon1 from "../../../img/loveDay/icons/1.png";
 import icon2 from "../../../img/loveDay/icons/2.png";
 import icon3 from "../../../img/loveDay/icons/3.png";
@@ -12,8 +13,6 @@ import AnimatedMouseIcon from "../../shared/AnimatedMouseIcon/AnimatedMouseIcon"
 import EventMainSlider from "../../shared/sliders/EventMainSlider/EventMainSlider";
 import {infrastructurePagesData, loveDayPageData, vacationPagesData} from "../../../data";
 import Headline from "../../shared/Headline/Headline";
-
-import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
 import ContactForm from "../../additional/ContactForm/ContactForm";
 import InfraMainSlider from "../../shared/sliders/InfraMainSlider/InfraMainSlider";
 import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
@@ -30,34 +29,17 @@ const LoveDayPage = () => {
         <section className={s.bannerWrapper}
                  style={{background: 'center url(' + bannerImg + ')', backgroundSize: 'cover'}}>
             <div className={s.container}>
-                <div className={s.background}/>
+                <div className={s.background} style={{background: 'center url(' + bannerMobileImg + ')', backgroundSize: 'cover'}}/>
                 <div className={s.flexWrapper}>
                     <div className={s.leftSide}>
                         <div className={s.pageNameBlock}>
                             <h2>Kids free</h2>
-                            <h1 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? '10vw' : '85px'}}>Отмечай</h1>
-                            <h1 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? '9vw' : '76px'}}>14
+                            <h1 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? '11vw' : '85px'}}>Отмечай</h1>
+                            <h1 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? '12vw' : '76px'}}>14
                                 февраля</h1>
-                            <h3 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? '8vw' : '56px'}}
+                            <h3 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? '11vw' : '56px'}}
                                 className={s.extraline}>с нами</h3>
                             <p>12-14 февраля</p>
-                        </div>
-
-                        <div className={s.iconsWrapper}>
-                            <div className={s.item}>
-                                <img src={icon1} alt=""/>
-                                <div>Романтическая<br/>атмосфера</div>
-                            </div>
-
-                            <div className={s.item}>
-                                <img src={icon2} alt=""/>
-                                <div>Комплимент<br/>от отеля</div>
-                            </div>
-
-                            <div className={s.item}>
-                                <img src={icon3} alt=""/>
-                                <div>Программа<br/>для влюбленных</div>
-                            </div>
                         </div>
 
                     </div>
@@ -72,8 +54,30 @@ const LoveDayPage = () => {
 
         </section>
 
-        <section className='section first'>
-            <EventMainSlider title={'Три дня незабываемой романтики'} manySlides
+        { !window.matchMedia('(max-width: 620px)').matches && <section className={'section first'}>
+            <div className={s.iconsWrapper}>
+                <div className={s.container}>
+                    <div className={s.item}>
+                        <img src={icon1} alt=""/>
+                        <div>Романтическая<br/>атмосфера</div>
+                    </div>
+
+                    <div className={s.item}>
+                        <img src={icon2} alt=""/>
+                        <div>Комплимент<br/>от отеля</div>
+                    </div>
+
+                    <div className={s.item}>
+                        <img src={icon3} alt=""/>
+                        <div>Программа<br/>для влюбленных</div>
+                    </div>
+                </div>
+            </div>
+        </section> }
+
+        <section className={'section ' + (window.matchMedia('(max-width: 620px)').matches ? 'first' : '')}>
+            <EventMainSlider title={'Три дня незабываемой романтики'} titleMobile={'Три дня незабываемой романтики'}
+                             manySlides
                              slides={loveDayPageData.loveDayMainSlides} onlyTitle initialSlideIndex={1}/>
         </section>
 
@@ -131,7 +135,7 @@ const LoveDayPage = () => {
 
         <section className='section'>
             <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={vacationPagesData.modernDescr}
-                         data={vacationPagesData.modernSlides}/>
+                         data={vacationPagesData.modernSlides} noPaddingTop/>
 
             <RoomsSlider lastOfTwo={true} subtitle={'Корпус'} title={'Классик'}
                          textContent={vacationPagesData.classicDescr} data={vacationPagesData.classicSlides}/>
@@ -146,7 +150,8 @@ const LoveDayPage = () => {
         </section>
 
         <section className='section'>
-            <SpecialsSlider subtitle={'Лучшие'} title={'спецпредложения'} btnLink={'/offers'} slides={vacationPagesData.specialsSlides}/>
+            <SpecialsSlider subtitle={'Лучшие'} title={'спецпредложения'} btnLink={'/offers'}
+                            slides={vacationPagesData.specialsSlides}/>
         </section>
 
         <section className='section last'>
