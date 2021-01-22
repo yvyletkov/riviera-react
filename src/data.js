@@ -822,16 +822,6 @@ const commonAfishaSlides = [
         campusName: "",
         key: 3,
     },
-    {
-        img: afishaImg4,
-        title: "",
-        subtitle: "Новогодний<br><span style='font-size: 70px'>ужин</span>",
-        time: "18:00",
-        date: "31 декабря",
-        campus: "Корпус",
-        campusName: "Modern",
-        key: 4,
-    },
 ];
 const commonClassicCampusSlides = [
     {
@@ -2522,7 +2512,6 @@ export const eventPagesData = {
 export const promotionsPageData = {
     slides: commonSpecialsSlides,
     pastSlides: [
-
         {
             img: promoImg7,
             subtitle: "",
@@ -3398,6 +3387,16 @@ export const afishaPageData = {
     slides: commonAfishaSlides,
     pastSlides: [
         {
+            img: afishaImg4,
+            title: "",
+            subtitle: "Новогодний<br><span style='font-size: 70px'>ужин</span>",
+            time: "18:00",
+            date: "31 декабря",
+            campus: "Корпус",
+            campusName: "Modern",
+            key: 1,
+        },
+        {
             img: afishaImg5,
             title: "вечер",
             subtitle: "Живой<br><span style='font-size: 70px'>музыки</span>",
@@ -3415,7 +3414,7 @@ export const afishaPageData = {
             date: "",
             campus: "",
             campusName: "19 декабря",
-            key: 2,
+            key: 3,
         },
     ]
 }
