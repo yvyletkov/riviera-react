@@ -6,7 +6,7 @@ import {NavLink} from "react-router-dom";
 
 
 const CenteredSliderItem = (props) => {
-    const {img, link, title, subtitle, time, date, campus, campusName, type = "home-page", subsubtitle, fontsizeSubsubtitle, active, capacity, area} = props;
+    const {img, link, title, subtitle, time, date, campus, campusName, type = "home-page", subsubtitle, fontsizeSubsubtitle, active, capacity, area, desaturated} = props;
 
     const handleLinkClick = (e) => {
         if (!link) e.preventDefault()
@@ -17,7 +17,7 @@ const CenteredSliderItem = (props) => {
             return (
                 <div className={active ? s.card + ' ' + s.active : s.card}>
                     {link && <NavLink className={s.link} to={link}>Подробнее →</NavLink>}
-                    <img className={s.img} src={img} alt={title}/>
+                    <img className={s.img} style={desaturated ? {filter: 'saturate(0)'} : {}} src={img} alt={title}/>
                     <div className={s.content}>
                         <p className={s.title}>{title}</p>
                         <p dangerouslySetInnerHTML={{__html: subtitle}} className={s.subtitle}/>

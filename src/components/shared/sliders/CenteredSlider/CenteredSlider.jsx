@@ -36,15 +36,16 @@ const SliderStyles = styled.div`
 `;
 
 
-const CenteredSlider = ({title = "Какой-то заголовок", slides, type = "home-page"}) => {
+const CenteredSlider = ({title = "Какой-то заголовок", slides, type = "home-page", desaturated = false}) => {
 
-    let [currentSlideIndex, setCurrentSlideIndex] = React.useState(window.matchMedia('(min-width: 769px)').matches ? (slides.length === 4 ? 2 : slides.length === 2 ? 1 : 0) : 0);
+    let [currentSlideIndex, setCurrentSlideIndex] = React.useState(window.matchMedia('(min-width: 769px)').matches ? (slides.length === 4 ? 2 : slides.length === 2 ? 1 : slides.length === 3 ? 1 : 0) : 0);
 
     const items = slides.map((item, index) => {
         const {img, link, title, subtitle, time, date, campus, campusName, key, subsubtitle='', fontsizeSubsubtitle='', capacity, area} = item;
         return (
             <div className="sliderElement" key={key}>
                 <CenteredSliderItem
+                    desaturated={desaturated}
                     active={currentSlideIndex === index}
                     link={link}
                     type={type}
@@ -67,7 +68,7 @@ const CenteredSlider = ({title = "Какой-то заголовок", slides, t
     const afterChangeHandler = (index) => setCurrentSlideIndex(index)
 
     const settings = {
-        initialSlide: slides.length === 4 ? 2 : slides.length === 2 ? 1 : 0,
+        initialSlide: slides.length === 4 ? 2 : slides.length === 2 ? 1 : slides.length === 3 ? 1 : 0,
         afterChange: afterChangeHandler,
         dots: false,
         className: "center",

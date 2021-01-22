@@ -58,6 +58,14 @@
   left: 0;
   right: 0;
   text-align: center;
+  zoom: 0.9;
+  &.black * {
+    color: #000;
+    border-color: #000 !important;
+    .mouse span {
+      background-color: #000;
+    }
+  }
 }
 .scrollBtn > * {
   display: inline-block;
