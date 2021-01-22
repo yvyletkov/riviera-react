@@ -91,12 +91,12 @@ const EventMainSlider = ({
         arrows: manySlides,
         variableWidth: true,
         nextArrow: <NextArrow positionStyles={{
-            bottom: "-30px",
+            bottom: "-20px",
             right: "50%",
             transform: "translateX(120%)"
         }}/>,
         prevArrow: <PrevArrow positionStyles={{
-            bottom: "-30px",
+            bottom: "-20px",
             left: "50%",
             transform: "translateX(-120%)"
         }}/>,
