@@ -108,6 +108,22 @@
 
     .menuItem {
 
+      &.valentine {
+        position: relative;
+        width: fit-content;
+        &:before {
+          content: '';
+          position: absolute;
+          left: 124px;
+          top: -14px;
+          display: block;
+          width: 70px;
+          height: 70px;
+          background: no-repeat url('../../../img/loveDay/heart.png');
+          background-size: contain;
+        }
+      }
+
       a, p {
         cursor: pointer;
         display: inline-block;
