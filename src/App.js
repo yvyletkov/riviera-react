@@ -58,10 +58,12 @@ const LoveDayPage = lazy(() => import("./components/pages/LoveDayPage/LoveDayPag
 
 function App() {
 
+
+
     return (<>
         <Header/>
-        {/*{window.matchMedia('(max-width: 767px)').matches &&*/}
-        {/*<div style={{height: '65px'}}/>}*/}
+        {window.matchMedia('(max-width: 767px)').matches &&
+        <div style={{height: '65px'}}/>}
         <Suspense fallback={<div style={{
             height: 'calc(100vh - 70px)',
             width: '100vw',
