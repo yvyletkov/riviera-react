@@ -179,12 +179,6 @@ const Menu = ({menuOpened, toggleMenu}) => {
 
                                 <div className={s.list}>
 
-                                    <NavLink to={"/love-day"}>
-                                        <div className={s.listItem} onClick={toggleMenu}>
-                                            14 февраля
-                                        </div>
-                                    </NavLink>
-
                                     <NavLink to={"/wedding"}>
                                         <div className={s.listItem} onClick={toggleMenu}>
                                             Свадьба
@@ -268,6 +262,12 @@ const Menu = ({menuOpened, toggleMenu}) => {
                             <div className={s.menuItem} onClick={toggleMenu}>
                                 <NavLink to={"/medical-spa"}>
                                     Medical SPA
+                                </NavLink>
+                            </div>
+
+                            <div className={s.menuItem + ' ' + s.valentine} onClick={toggleMenu}>
+                                <NavLink to={"/love-day"}>
+                                    14 февраля
                                 </NavLink>
                             </div>
 
