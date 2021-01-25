@@ -83,14 +83,18 @@ $black: #171717;
     &:before {
       content: '';
       position: absolute;
-      left: -90px;
-      top: -35px;
+      left: -120px;
+      top: -45px;
       display: block;
-      width: 150px;
-      height: 120px;
-      background: url('../../../img/loveDay/heart.png');
+      width: 170px;
+      height: 160px;
+      background: no-repeat url('../../../img/loveDay/heart.png');
+      background-size: contain;
       @media (max-width: 768px) {
-        display: none;
+        left: 37vw;
+        top: 20vw;
+        width: 28vw;
+        height: 23vw;
       }
     }
 
@@ -228,6 +232,7 @@ $black: #171717;
 
 .iconsWrapper {
   margin-top: -30px;
+  margin-bottom: 40px;
   .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -447,7 +452,7 @@ $black: #171717;
 
         span:last-of-type {
           font-family: "Helvetica Neue Black", sans-serif;
-          font-size: 60px;
+          font-size: 50px;
           line-height: 1.2;
           margin-bottom: 20px;
         }

@@ -19,6 +19,7 @@ import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
 import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
 import CenteredSlider from "../../shared/sliders/CenteredSlider/CenteredSlider";
 import SpecialsSlider from "../../shared/sliders/SpecialsSlider/SpecialsSlider";
+import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
 
 const LoveDayPage = () => {
 
@@ -55,6 +56,7 @@ const LoveDayPage = () => {
         </section>
 
         { !window.matchMedia('(max-width: 620px)').matches && <section className={'section first'}>
+            <HeadlineCenter title={'Вас ожидает'}/>
             <div className={s.iconsWrapper}>
                 <div className={s.container}>
                     <div className={s.item}>
