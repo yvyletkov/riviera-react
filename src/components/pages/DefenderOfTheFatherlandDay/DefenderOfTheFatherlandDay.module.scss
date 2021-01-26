@@ -42,6 +42,10 @@ $white: #fff;
     //padding-left: 20px;
     z-index: 1;
     position: relative;
+
+    @media screen and (max-width: 768px) {
+      padding-top: 6vh;
+    }
   }
 
   .pageNameBlock {
@@ -79,20 +83,24 @@ $white: #fff;
     right: -66px;
   }
 
+  .textImg {
+    @media screen and (max-width: 620px) {
+      max-width: 240px;
+      width:100%;
+    }
+  }
+
   .pageNameBlock h1:first-of-type {
     position: relative;
     text-transform: uppercase;
     font-family: "Helvetica Neue Black", sans-serif;
-    background: url('../../../img/defenderDay/text-background.jpg') no-repeat;
-    background-size: cover;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    margin: 10px 0;
 
     &:after {
       content: '';
       position: absolute;
-      left: 413px;
-      top: -33px;
+      left: 395px;
+      top: -130px;
       display: block;
       width: 130px;
       height: 130px;
@@ -100,8 +108,8 @@ $white: #fff;
       background-size: contain;
       z-index: -1;
       @media (max-width: 768px) {
-        left: 54.4vw;
-        top: 0;
+        left: 73vw;
+        top: -9vh;
         width: 15vw;
         height: 15vw;
       }
@@ -176,7 +184,7 @@ $white: #fff;
     }
     .pageNameBlock {
       color: #fff !important;
-      margin-bottom: 80px;
+      margin-bottom: 120px;
     }
     .pageNameBlock h2:after {
       background-color: #fff;

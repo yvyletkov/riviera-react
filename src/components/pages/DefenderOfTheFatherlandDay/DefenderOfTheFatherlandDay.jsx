@@ -4,13 +4,13 @@ import s from "./DefenderOfTheFatherlandDay.module.scss";
 import BookingBlock from "../../additional/BookingBlock/BookingBlock";
 import bannerImg from "../../../img/defenderDay/banner.jpg";
 import bannerMobileImg from "../../../img/defenderDay/banner-mob.jpg";
+import titleImg from "../../../img/defenderDay/text.png";
 import img from "../../../img/defenderDay/6.jpg";
 import AnimatedMouseIcon from "../../shared/AnimatedMouseIcon/AnimatedMouseIcon";
 import EventMainSlider from "../../shared/sliders/EventMainSlider/EventMainSlider";
-import {defenderDayPageData, infrastructurePagesData, vacationPagesData} from "../../../data";
+import {defenderDayPageData, vacationPagesData} from "../../../data";
 import Headline from "../../shared/Headline/Headline";
 import ContactForm from "../../additional/ContactForm/ContactForm";
-import InfraMainSlider from "../../shared/sliders/InfraMainSlider/InfraMainSlider";
 import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
 import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
 import CenteredSlider from "../../shared/sliders/CenteredSlider/CenteredSlider";
@@ -32,7 +32,8 @@ const DefenderDayPage = () => {
                     <div className={s.leftSide}>
                         <div className={s.pageNameBlock}>
                             <h2>21-23 февраля</h2>
-                            <h1 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? '11vw' : '85px', display: 'inline', paddingTop:'20px'}}>Отмечай</h1>
+                            <img className={s.textImg} src={titleImg} alt={""}/>
+                            {/*<h1 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? '11vw' : '85px', display: 'inline', paddingTop:'20px'}}>Отмечай</h1>*/}
                             <h1 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? '7vw' : '45px'}}>Мужской
                                 праздник</h1>
                             <h3 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? '7vw' : '40px'}}
