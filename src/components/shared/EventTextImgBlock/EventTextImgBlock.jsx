@@ -9,7 +9,6 @@ import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
 
 const EventTextImgBlock = ({subtitle = 'Ваша семья', title = 'Начинается здесь', img, text, listArray = [], forWedding = true, wideImg}) => {
 
-    // let [accordeonStatus, setAccordeonStatus] = React.useState(false);
     let [popupOpen, setPopupOpen] = React.useState(false);
 
     return (
@@ -18,11 +17,8 @@ const EventTextImgBlock = ({subtitle = 'Ваша семья', title = 'Начи�
                 <div className={s.background}/>
                 <div className={s.textContent}>
                     <Headline subtitle={subtitle} title={title}/>
-                    {/*<CirqleTip accordeonStatus={accordeonStatus}*/}
-                    {/*           onClick={() => setAccordeonStatus(!accordeonStatus)}/>*/}
-                    {/*<Accordeon withBtn={false} zeroHeight={true} status={accordeonStatus}>*/}
+
                         <p dangerouslySetInnerHTML={{__html: text}}/>
-                    {/*</Accordeon>*/}
                     <p>
                         {forWedding && <h5><b>Молодожёнов ждёт:</b></h5>}
 

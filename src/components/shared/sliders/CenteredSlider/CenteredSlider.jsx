@@ -36,9 +36,15 @@ const SliderStyles = styled.div`
 `;
 
 
-const CenteredSlider = ({title = "Какой-то заголовок", slides, type = "home-page", desaturated = false}) => {
+const CenteredSlider = ({title = "Какой-то заголовок", slides, type = "home-page", desaturated = false, infinite = false}) => {
 
-    let [currentSlideIndex, setCurrentSlideIndex] = React.useState(window.matchMedia('(min-width: 769px)').matches ? (slides.length === 4 ? 2 : slides.length === 2 ? 1 : slides.length === 3 ? 1 : 0) : 0);
+
+    const initialCurrentSlideIndex = window.matchMedia('(min-width: 769px)').matches ? (slides.length === 4 ? 2 : slides.length === 2 ? 1 : slides.length === 3 ? 1 : 0) : 0;
+
+    let [currentSlideIndex, setCurrentSlideIndex] = React.useState(initialCurrentSlideIndex);
+
+    console.log(initialCurrentSlideIndex)
+
 
     const items = slides.map((item, index) => {
         const {img, link, title, subtitle, time, date, campus, campusName, key, subsubtitle='', fontsizeSubsubtitle='', capacity, area} = item;
@@ -68,12 +74,12 @@ const CenteredSlider = ({title = "Какой-то заголовок", slides, t
     const afterChangeHandler = (index) => setCurrentSlideIndex(index)
 
     const settings = {
-        initialSlide: slides.length === 4 ? 2 : slides.length === 2 ? 1 : slides.length === 3 ? 1 : 0,
+        initialSlide: initialCurrentSlideIndex,
         afterChange: afterChangeHandler,
         dots: false,
         className: "center",
         centerMode: true,
-        infinite: type !== "home-page",
+        infinite: type !== "home-page" || infinite,
         centerPadding: "60px",
         variableWidth: true,
         speed: 500,
@@ -96,7 +102,7 @@ const CenteredSlider = ({title = "Какой-то заголовок", slides, t
                     centerMode: false,
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    infinite: type !== "home-page",
+                    infinite: type !== "home-page" || infinite,
                     dots: true,
                     arrows: false
                 }

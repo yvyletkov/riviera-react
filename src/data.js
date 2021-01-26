@@ -1031,7 +1031,7 @@ const commonGallerySlides = [
     },
 ];
 
-//страницы майса
+// страницы майса
 export const micePagesData = {
     centeredSlides: [
         {
@@ -2637,14 +2637,14 @@ export const vacanciesPageData = [
             experience: 'от 1 лет',
             salary: 'от 35 тыс.',
             duties: [
-                    'Выполнение работ различной сложности, подбор коллера, покраски, оклейки и ремонта разных поверхностей',
-                    'Подготовка поверхности для выполнения работ, приготовление растворов для различных видов штукатурки',
-                    'Мелкий ремонт/замена облицовочной плитки, затирка швов',
-                    'Ремонт/замена  поверхностей из гипсокартона',
-                    ],
+                'Выполнение работ различной сложности, подбор коллера, покраски, оклейки и ремонта разных поверхностей',
+                'Подготовка поверхности для выполнения работ, приготовление растворов для различных видов штукатурки',
+                'Мелкий ремонт/замена облицовочной плитки, затирка швов',
+                'Ремонт/замена  поверхностей из гипсокартона',
+            ],
             demands: [
-                    'Наличие опыта в ремонтно-строительных работах, отделке обязательно',
-                    'Ответственность, исполнительность, вежливость, аккуратность, пунктуальность, честность, ориентация на результат, умение работать в команде, обучаемость',
+                'Наличие опыта в ремонтно-строительных работах, отделке обязательно',
+                'Ответственность, исполнительность, вежливость, аккуратность, пунктуальность, честность, ориентация на результат, умение работать в команде, обучаемость',
             ],
             offer: [
                 'Стабильную заработную плату (от 25 000 руб. в месяц);',
@@ -2679,13 +2679,13 @@ export const infrastructurePagesData = {
                     price2: "1500 руб",
                     text3: "Разовое посещение Wellness в будний день",
                     price3: "1600 руб",
-                    text4:"СПА-вечер в будний день (с 16-00 до 21-00)",
-                    price4:"1000 руб",
+                    text4: "СПА-вечер в будний день (с 16-00 до 21-00)",
+                    price4: "1000 руб",
                 },
                 [
-                    {img: adultSPA1, name:'SPA для взрослых'},
-                    {img: adultSPA2, name:'SPA для взрослых'},
-                    {img: adultSPA3, name:'SPA для взрослых'},
+                    {img: adultSPA1, name: 'SPA для взрослых'},
+                    {img: adultSPA2, name: 'SPA для взрослых'},
+                    {img: adultSPA3, name: 'SPA для взрослых'},
                 ]
             ],
             [
@@ -2697,20 +2697,20 @@ export const infrastructurePagesData = {
                     price2: "750 руб",
                     text3: "Разовое посещение Wellness в будний день",
                     price3: "800 руб",
-                    text4:"СПА-вечер в будний день (с 16-00 до 21-00)",
-                    price4:"500 руб",
+                    text4: "СПА-вечер в будний день (с 16-00 до 21-00)",
+                    price4: "500 руб",
                 },
                 [
-                    {img: childrenSPA1, name:'SPA для детей'},
-                    {img: childrenSPA2, name:'SPA для детей'},
-                    {img: childrenSPA3, name:'SPA для детей'},
+                    {img: childrenSPA1, name: 'SPA для детей'},
+                    {img: childrenSPA2, name: 'SPA для детей'},
+                    {img: childrenSPA3, name: 'SPA для детей'},
                 ]
             ],
             [
                 {
                     subscription: true,
                     name: "Абонементы",
-                    textTitleAdult:"Абонемент Wellness взрослый",
+                    textTitleAdult: "Абонемент Wellness взрослый",
                     subscriptionAdult1: "4 посещения",
                     subscriptionAdult2: "8 посещения",
                     subscriptionAdult3: "12 посещения",
@@ -2722,13 +2722,13 @@ export const infrastructurePagesData = {
                     subscriptionChild2: "8 посещения",
                     subscriptionChild3: "12 посещения",
                     priceChild1: "3 000 руб",
-                    priceChild2:"5 000 руб",
-                    priceChild3:"7 000 руб",
+                    priceChild2: "5 000 руб",
+                    priceChild3: "7 000 руб",
                 },
                 [
-                    {img: subscriptionSPA1, name:'SPA абонимент'},
-                    {img: subscriptionSPA2, name:'SPA абонимент'},
-                    {img: subscriptionSPA3, name:'SPA абонимент'},
+                    {img: subscriptionSPA1, name: 'SPA абонимент'},
+                    {img: subscriptionSPA2, name: 'SPA абонимент'},
+                    {img: subscriptionSPA3, name: 'SPA абонимент'},
                 ]
             ],
         ]
@@ -2754,11 +2754,11 @@ export const infrastructurePagesData = {
                     location: "Корпус Модерн, рестораны «The Grilled»"
                 },
                 [
-                    {img: buffet1, name:'Шведский стол'},
-                    {img: buffet2, name:'Шведский стол'},
-                    {img: buffet3, name:'Шведский стол'},
-                    {img: buffet4, name:'Шведский стол'},
-                    {img: buffet5, name:'Шведский стол'}
+                    {img: buffet1, name: 'Шведский стол'},
+                    {img: buffet2, name: 'Шведский стол'},
+                    {img: buffet3, name: 'Шведский стол'},
+                    {img: buffet4, name: 'Шведский стол'},
+                    {img: buffet5, name: 'Шведский стол'}
                 ]
             ],
             [
@@ -2767,11 +2767,12 @@ export const infrastructurePagesData = {
                     description: "Ресторан «Tavrika» спешит побаловать своих гостей русско-французской кухней от профессионального шеф-повара Максима Сысоева. Tavrika идеально подходит для закрытого обеда или ужина, а также для проведения праздничного мероприятия. Меню составляется, учитывая все пожелания гостей.",
                     timeBreakfast: "07:30 — 10:30",
                     kitchen: "европейская",
-                    location: "Корпус Модерн"},
+                    location: "Корпус Модерн"
+                },
                 [
-                    {img: tavrika1, name:'Таврика'},
-                    {img: tavrika2, name:'Таврика'},
-                    {img: tavrika3, name:'Таврика'},
+                    {img: tavrika1, name: 'Таврика'},
+                    {img: tavrika2, name: 'Таврика'},
+                    {img: tavrika3, name: 'Таврика'},
                 ]
             ],
             [
@@ -2780,12 +2781,13 @@ export const infrastructurePagesData = {
                     description: "Ресторан «La Veranda» расположен на белокаменной веранде исторического корпуса Классик, откуда открывается прекрасный вид на Черное море и парк отеля. В итальянское меню ресторана входят блюда из местных продуктов, старательно отобранных бренд-шефом Андреем Поляшовым.Обширная винная карта, представленная знаменитыми винзаводами: Массандра, Инкерман, Сатера ТМ «Esse», а также европейские и южноамериканские вина.",
                     workingHours: "12:00 — 23:00",
                     kitchen: "локальная кухня",
-                    location: "Корпус Классик"},
+                    location: "Корпус Классик"
+                },
                 [
-                    {img: laVeranda1, name:'LaVeranda'},
-                    {img: laVeranda2, name:'LaVeranda'},
-                    {img: laVeranda3, name:'LaVeranda'},
-                    {img: laVeranda4, name:'LaVeranda'}
+                    {img: laVeranda1, name: 'LaVeranda'},
+                    {img: laVeranda2, name: 'LaVeranda'},
+                    {img: laVeranda3, name: 'LaVeranda'},
+                    {img: laVeranda4, name: 'LaVeranda'}
                 ]
             ],
             [
@@ -2794,13 +2796,14 @@ export const infrastructurePagesData = {
                     description: "Лобби-бар «Mangup» — идеальное место для проведения встреч и непринужденного общения. Комфортно организованное пространство, удобная мебель, внимательное обслуживание и отличный сигнал Wi-Fi – прекрасное место для отдыха. Баре Вам всегда предложат ароматный кофе, элитные сорта виски и Крымские вина.",
                     workingHours: "10:00 — 23:00",
                     menu: "винная карта, барная карта",
-                    location: "Корпус Модерн"},
+                    location: "Корпус Модерн"
+                },
                 [
-                    {img: lobbyMangup1, name:'Bar Mungup'},
-                    {img: lobbyMangup2, name:'Bar Mungup'},
-                    {img: lobbyMangup3, name:'Bar Mungup'},
-                    {img: lobbyMangup4, name:'Bar Mungup'},
-                    {img: lobbyMangup5, name:'Bar Mungup'}
+                    {img: lobbyMangup1, name: 'Bar Mungup'},
+                    {img: lobbyMangup2, name: 'Bar Mungup'},
+                    {img: lobbyMangup3, name: 'Bar Mungup'},
+                    {img: lobbyMangup4, name: 'Bar Mungup'},
+                    {img: lobbyMangup5, name: 'Bar Mungup'}
                 ]
             ],
             [
@@ -2810,11 +2813,12 @@ export const infrastructurePagesData = {
                         "Обширная винная карта, представленная знаменитыми винзаводами: Массандра, Инкерман, Сатера ТМ «Esse», а также европейские и южноамериканские вина.\n",
                     workingHours: "07:00 — 23:00 (с июня по сентябрь)",
                     menu: "винная карта, барная карта",
-                    location: "Корпус Modern"},
+                    location: "Корпус Modern"
+                },
                 [
-                    {img: lobbyLounge1, name:'Bar Lounge'},
-                    {img: lobbyLounge2, name:'Bar Lounge'},
-                    {img: lobbyLounge3, name:'Bar Lounge'},
+                    {img: lobbyLounge1, name: 'Bar Lounge'},
+                    {img: lobbyLounge2, name: 'Bar Lounge'},
+                    {img: lobbyLounge3, name: 'Bar Lounge'},
                 ]
             ],
             [
@@ -2822,12 +2826,13 @@ export const infrastructurePagesData = {
                     name: "Pool Bar",
                     description: "Бар находится прямо в воде, в одном из открытых бассейнов аква-зоны отеля. В жаркий летний день Вы сможете освежиться прохладными напитками, даже не выходя из бассейна.",
                     workingHours: "9:00- 20:00 (с июня по сентябрь)",
-                    menu: "коктейли, винная карта, барная карта",},
+                    menu: "коктейли, винная карта, барная карта",
+                },
                 [
-                    {img: poolBar1, name:'Pool Bar'},
-                    {img: poolBar2, name:'Pool Bar'},
-                    {img: poolBar3, name:'Pool Bar'},
-                    {img: poolBar4, name:'Pool Bar'}
+                    {img: poolBar1, name: 'Pool Bar'},
+                    {img: poolBar2, name: 'Pool Bar'},
+                    {img: poolBar3, name: 'Pool Bar'},
+                    {img: poolBar4, name: 'Pool Bar'}
                 ]
             ],
             [
@@ -2836,13 +2841,14 @@ export const infrastructurePagesData = {
                     description: "«Мангал в саду» – это место для ценителей нежного, сочного, ароматного мяса, приготовленного на огне. Особенным шиком и ярким, сочным дополнением станут пряности и соусы, которые мы используем в процессе готовки. Взрыв вкуса обеспечен!",
                     workingHours: "12:00-20:00",
                     kitchen: "фьюжн",
-                    location: "реликтовый парк"},
+                    location: "реликтовый парк"
+                },
                 [
-                    {img: grillGarden1, name:'Мангал в саду'},
-                    {img: grillGarden2, name:'Мангал в саду'},
-                    {img: grillGarden3, name:'Мангал в саду'},
-                    {img: grillGarden4, name:'Мангал в саду'},
-                    {img: grillGarden5, name:'Мангал в саду'}
+                    {img: grillGarden1, name: 'Мангал в саду'},
+                    {img: grillGarden2, name: 'Мангал в саду'},
+                    {img: grillGarden3, name: 'Мангал в саду'},
+                    {img: grillGarden4, name: 'Мангал в саду'},
+                    {img: grillGarden5, name: 'Мангал в саду'}
                 ]
             ],
         ],
@@ -3391,7 +3397,7 @@ export const blogPostsData = [
 export const afishaPageData = {
     slides: commonAfishaSlides,
     pastSlides: [
-        {
+         {
             img: afishaImg4,
             title: "",
             subtitle: "Новогодний<br><span style='font-size: 70px'>ужин</span>",
@@ -3470,4 +3476,116 @@ export const loveDayPageData = {
             key: 7,
         },
     ],
+}
+
+
+// Страница Анимация
+export const animationPageData = {
+    kidsAnimationSlides: [
+        {
+            img: afishaImg1,
+            title: "",
+            subtitle: "Творческие<br/><span style='font-size: 45px'>мастер-классы</span>",
+            time: "",
+            date: "",
+            campus: "Корпус",
+            campusName: "Classic",
+            key: 1,
+            link: ''
+        },
+        {
+            img: afishaImg2,
+            title: "",
+            subtitle: "бумажное<br/><span style='font-size: 70px'>шоу</span>",
+            time: "",
+            date: "",
+            campus: "Корпус",
+            campusName: "Classic",
+            key: 2,
+        },
+        {
+            img: afishaImg3,
+            title: "",
+            subtitle: "Водные<br/><span style='font-size: 60px'>Забавы</span>",
+            time: "",
+            date: "",
+            campus: "Корпус",
+            campusName: "Classic",
+            key: 3,
+        },
+        {
+            img: afishaImg3,
+            title: "",
+            subtitle: "Интерактивные<br/><span style='font-size: 60px'>квесты</span>",
+            time: "",
+            date: "",
+            campus: "Корпус",
+            campusName: "Classic",
+            key: 4,
+        },
+        {
+            img: afishaImg3,
+            title: "",
+            subtitle: "Танцевальные<br/><span style='font-size: 60px'>флэшмобы</span>",
+            time: "",
+            date: "",
+            campus: "Корпус",
+            campusName: "Classic",
+            key: 5,
+        },
+    ],
+    adultAnimationSlides: [
+        {
+            img: afishaImg1,
+            title: "",
+            subtitle: "Танцевальные<br/><span style='font-size: 45px'>мастер-классы</span>",
+            time: "",
+            date: "",
+            campus: "Корпус",
+            campusName: "Classic",
+            key: 1,
+            link: ''
+        },
+        {
+            img: afishaImg2,
+            title: "",
+            subtitle: "Спортивные<br/><span style='font-size: 60px'>турниры</span>",
+            time: "",
+            date: "",
+            campus: "Корпус",
+            campusName: "Classic",
+            key: 2,
+        },
+        {
+            img: afishaImg3,
+            title: "",
+            subtitle: "Настольные<br/><span style='font-size: 70px'>игры</span>",
+            time: "",
+            date: "",
+            campus: "Корпус",
+            campusName: "Classic",
+            key: 3,
+        },
+        {
+            img: afishaImg3,
+            title: "",
+            subtitle: "Аквааэробика<br/><span style='font-size: 60px'>для всех</span>",
+            time: "",
+            date: "",
+            campus: "Корпус",
+            campusName: "Classic",
+            key: 4,
+        },
+        {
+            img: afishaImg3,
+            title: "",
+            subtitle: "Групповые<br/><span style='font-size: 53px'>программы</span>",
+            time: "",
+            date: "",
+            campus: "Корпус",
+            campusName: "Classic",
+            key: 5,
+        },
+    ],
+
 }
