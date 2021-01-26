@@ -77,7 +77,7 @@ function App() {
         </div>}>
 
             <Switch>
-                <Route path='/defender-day' exact
+                <Route path='/23-february' exact
                        component={() => <DefenderOfTheFatherlandDay/>}/>
 
                 <Route path='/animation' exact
