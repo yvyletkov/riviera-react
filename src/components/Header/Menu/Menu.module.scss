@@ -124,6 +124,22 @@
         }
       }
 
+      &.defenderDay {
+        position: relative;
+        width: fit-content;
+        &:before {
+          content: '';
+          position: absolute;
+          left: 135px;
+          top: -10px;
+          display: block;
+          width: 40px;
+          height: 40px;
+          background: no-repeat url('../../../img/defenderDay/star.png');
+          background-size: contain;
+        }
+      }
+
       a, p {
         cursor: pointer;
         display: inline-block;

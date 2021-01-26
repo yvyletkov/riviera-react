@@ -271,6 +271,12 @@ const Menu = ({menuOpened, toggleMenu}) => {
                                 </NavLink>
                             </div>
 
+                            <div className={s.menuItem + ' ' + s.defenderDay} onClick={toggleMenu}>
+                                <NavLink to={"/23-february"}>
+                                    23 февраля
+                                </NavLink>
+                            </div>
+
                         </div>
 
                         <div className={s.col}>
