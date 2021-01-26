@@ -32,10 +32,10 @@ const DefenderDayPage = () => {
                     <div className={s.leftSide}>
                         <div className={s.pageNameBlock}>
                             <h2>21-23 февраля</h2>
-                            <h1 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? '11vw' : '85px', display:'inline', paddingTop:'20px'}}>Отмечай</h1>
-                            <h1 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? '7vw' : '35px'}}>Мужской
+                            <h1 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? '11vw' : '85px', display: 'inline', paddingTop:'20px'}}>Отмечай</h1>
+                            <h1 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? '7vw' : '45px'}}>Мужской
                                 праздник</h1>
-                            <h3 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? '7vw' : '30px'}}
+                            <h3 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? '7vw' : '40px'}}
                                 className={s.extraline}>в стиле казино</h3>
                             <p>с нами</p>
                         </div>

@@ -52,8 +52,12 @@ $white: #fff;
   }
 
   .pageNameBlock p {
-    font-size: 15px;
+    font-size: 40px;
     line-height: 1;
+
+    @media screen and (max-width: 768px){
+      font-size: 7vw;
+    }
   }
 
   .pageNameBlock h2 {
