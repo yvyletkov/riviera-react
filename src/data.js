@@ -430,7 +430,13 @@ import loveDaySlide6 from "./img/loveDay/8.jpg"
 import loveDaySlide7 from "./img/loveDay/9.jpg"
 import loveDaySlide8 from "./img/loveDay/10.jpg"
 // end LOVE DAY imports
-
+// DEFENDER DAY imports
+import defenderDaySlide1 from "./img/defenderDay/1.jpg";
+import defenderDaySlide2 from "./img/defenderDay/2.jpg";
+import defenderDaySlide3 from "./img/defenderDay/3.jpg";
+import defenderDaySlide4 from "./img/defenderDay/4.jpg";
+import defenderDaySlide5 from "./img/defenderDay/5.jpg";
+// end DEFENDER DAY imports
 
 const commonGridSlides = [
     {
@@ -3468,6 +3474,42 @@ export const loveDayPageData = {
             title: "Специальное сет-меню в ресторане",
             descr: '',
             key: 7,
+        },
+    ],
+};
+
+// Страница 23 февраля
+export const defenderDayPageData = {
+    defenderDayMainSlides: [
+        {
+            img: defenderDaySlide1,
+            title: "Рулетка для гостей",
+            descr: '',
+            key: 1,
+        },
+        {
+            img: defenderDaySlide2,
+            title: "Ресторан",
+            descr: '',
+            key: 2,
+        },
+        {
+            img: defenderDaySlide3,
+            title: "Диджей",
+            descr: '',
+            key: 3,
+        },
+        {
+            img: defenderDaySlide4,
+            title: "Шоу-программа с танцевальными номерами",
+            descr: '',
+            key: 4,
+        },
+        {
+            img: defenderDaySlide5,
+            title: "Кенди-бар в стиле казино",
+            descr: '',
+            key: 5,
         },
     ],
 }
