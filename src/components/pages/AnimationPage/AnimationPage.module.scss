@@ -141,7 +141,7 @@
     .tabsWrapper {
       display: flex;
       margin: 60px auto 0;
-      max-width: 900px;
+      max-width: 680px;
       justify-content: space-between;
 
       .tab {
@@ -159,7 +159,7 @@
 
       @media screen and (max-width: 600px) {
         display: block;
-        margin: 30px auto 30px;
+        margin: 30px auto 0px;
 
       }
 

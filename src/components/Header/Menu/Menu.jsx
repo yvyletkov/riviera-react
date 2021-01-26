@@ -289,7 +289,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
 
                             {/*<div className={s.menuItem} onClick={toggleMenu}>*/}
                             <div className={s.menuItem}>
-                                <NavLink style={{cursor: 'not-allowed'}} onClick={handleLinkClick} to={"/"}>
+                                <NavLink to={"/animation"}>
                                     Анимация
                                 </NavLink>
                             </div>

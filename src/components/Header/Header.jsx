@@ -59,8 +59,8 @@ const Header = () => {
                         </div>
                         <div className={s.leftBlock}>
                             <Link title={"Спецпредложения"} icon={star} link={"/offers"}/>
-                            <Link onClickHandler={handleLinkClick} style={{cursor: 'not-allowed'}} title={"Анимация"}
-                                  icon={speaker} link={""}/>
+                            <Link title={"Анимация"}
+                                  icon={speaker} link={"/animation"}/>
                             {/*<Link onClickHandler={handleLinkClick} style={{cursor: 'not-allowed'}} title={"Новости"}*/}
                             {/*      icon={microphone} link={""}/>*/}
                             <Link title={"Отзывы"}

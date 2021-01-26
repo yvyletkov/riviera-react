@@ -1,14 +1,13 @@
 import React from "react";
 import s from "./AnimationPage.module.scss";
 import MapSection from "../../shared/MapSection/MapSection";
-import arrow from "../../../img/arrow-accordeon.png";
-import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
+import animation2_block from "../../../img/animation/2-2-block.jpg"
+import animation3_block from "../../../img/animation/3-2-block.jpg"
 import cx from 'classnames'
 import CenteredSlider from "../../shared/sliders/CenteredSlider/CenteredSlider";
 import {afishaPageData, animationPageData} from "../../../data";
 import Headline from "../../shared/Headline/Headline";
 import img from "../../../img/loveDay/4.jpg";
-
 
 const AnimationPage = () => {
 
@@ -56,7 +55,7 @@ const AnimationPage = () => {
                 </section>
 
                 <section className='section'>
-                    <CenteredSlider desaturated title='Прошедшие мероприятия' slides={afishaPageData.pastSlides}/>
+                    <CenteredSlider infinite desaturated title='Прошедшие мероприятия' slides={afishaPageData.pastSlides}/>
                 </section>
             </>}
 
@@ -95,7 +94,7 @@ const AnimationPage = () => {
                                 </p>
 
                             </div>
-                            <img src={img} alt={"Лучший праздник"}/>
+                            <img src={animation2_block} alt={"Лучшая анимация"}/>
 
                         </div>
                     </div>
@@ -132,7 +131,7 @@ const AnimationPage = () => {
                                 </p>
 
                             </div>
-                            <img src={img} alt={"Лучший праздник"}/>
+                            <img src={animation3_block} alt={"Лучшая анимация"}/>
 
                         </div>
                     </div>
