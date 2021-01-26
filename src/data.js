@@ -437,6 +437,34 @@ import defenderDaySlide3 from "./img/defenderDay/3.jpg";
 import defenderDaySlide4 from "./img/defenderDay/4.jpg";
 import defenderDaySlide5 from "./img/defenderDay/5.jpg";
 // end DEFENDER DAY imports
+// animationPage imports
+import animation1_1 from "./img/animation/1-beauty-lunch.jpg"
+import animation1_2 from "./img/animation/1-belov.jpg"
+import animation1_3 from "./img/animation/1-dreaming.jpg"
+import animation1_4 from "./img/animation/1-frantsen.jpg"
+import animation1_5 from "./img/animation/1-safronova.jpg"
+import animation2_1 from "./img/animation/2-akvagrim.jpg"
+import animation2_2 from "./img/animation/2-bumazhnoe.jpg"
+import animation2_3 from "./img/animation/2-diskoteki.jpg"
+import animation2_4 from "./img/animation/2-kvesty.jpg"
+import animation2_5 from "./img/animation/2-pennaya-vecherinka.jpg"
+import animation2_6 from "./img/animation/2-sportivnye.jpg"
+import animation2_7 from "./img/animation/2-tantsevalnyse.jpg"
+import animation2_8 from "./img/animation/2-tvorcheskie.jpg"
+import animation2_9 from "./img/animation/2-vodnye-zabavy.jpg"
+import animation3_1 from "./img/animation/3-akvaaerobika.jpg"
+import animation3_2 from "./img/animation/3-excursions.jpg"
+import animation3_3 from "./img/animation/3-gruppovye.jpg"
+import animation3_4 from "./img/animation/3-master-klassy.jpg"
+import animation3_5 from "./img/animation/3-nastolnye.jpg"
+import animation3_6 from "./img/animation/3-show-programmy.jpg"
+import animation3_7 from "./img/animation/3-tantsevalnye.jpg"
+import animation3_8 from "./img/animation/3-tematicheskie.jpg"
+import animation3_9 from "./img/animation/3-turniry.jpg"
+// import animation3 from "./img/animation/1"
+
+
+// END animationPage imports
 
 const commonGridSlides = [
     {
@@ -3403,7 +3431,7 @@ export const blogPostsData = [
 export const afishaPageData = {
     slides: commonAfishaSlides,
     pastSlides: [
-         {
+        {
             img: afishaImg4,
             title: "",
             subtitle: "Новогодний<br><span style='font-size: 70px'>ужин</span>",
@@ -3432,6 +3460,56 @@ export const afishaPageData = {
             campus: "",
             campusName: "19 декабря",
             key: 3,
+        },
+        {
+            img: animation1_2,
+            title: "саксофон",
+            subtitle: "Белов<br><span style='font-size: 70px'>Ян</span>",
+            time: "19:00",
+            date: "21 марта",
+            campus: "Ресторан",
+            campusName: "«The Grilled»",
+            key: 4,
+        },
+        {
+            img: animation1_3,
+            title: "",
+            subtitle: "Dreaming<br><span style='font-size: 50px'>By the sea</span>",
+            time: "12:00",
+            date: "",
+            campus: "АКВАЗОНА",
+            campusName: "",
+            key: 5,
+        },
+        {
+            img: animation1_5,
+            title: "Вокал",
+            subtitle: "Сафронова<br><span style='font-size: 50px'>Татьяна</span>",
+            time: "19:00",
+            date: "20 & 27 марта",
+            campus: "Ресторан",
+            campusName: "«The Grilled»",
+            key: 6,
+        },
+        {
+            img: animation1_4,
+            title: "Гитара и вокал",
+            subtitle: "Францен<br><span style='font-size: 50px'>Константин</span>",
+            time: "19:00",
+            date: "6 марта",
+            campus: "Ресторан",
+            campusName: "«The Grilled»",
+            key: 7,
+        },
+        {
+            img: animation1_1,
+            title: "",
+            subtitle: "Beauty<br><span style='font-size: 60px'>Ланч</span>",
+            time: "15:00",
+            date: "17 марта",
+            campus: "Ресторан",
+            campusName: "«The Grilled»",
+            key: 8,
         },
     ]
 }
@@ -3525,7 +3603,7 @@ export const defenderDayPageData = {
 export const animationPageData = {
     kidsAnimationSlides: [
         {
-            img: afishaImg1,
+            img: animation2_8,
             title: "",
             subtitle: "Творческие<br/><span style='font-size: 45px'>мастер-классы</span>",
             time: "",
@@ -3536,7 +3614,7 @@ export const animationPageData = {
             link: ''
         },
         {
-            img: afishaImg2,
+            img: animation2_2,
             title: "",
             subtitle: "бумажное<br/><span style='font-size: 70px'>шоу</span>",
             time: "",
@@ -3546,7 +3624,7 @@ export const animationPageData = {
             key: 2,
         },
         {
-            img: afishaImg3,
+            img: animation2_9,
             title: "",
             subtitle: "Водные<br/><span style='font-size: 60px'>Забавы</span>",
             time: "",
@@ -3556,7 +3634,7 @@ export const animationPageData = {
             key: 3,
         },
         {
-            img: afishaImg3,
+            img: animation2_4,
             title: "",
             subtitle: "Интерактивные<br/><span style='font-size: 60px'>квесты</span>",
             time: "",
@@ -3566,7 +3644,7 @@ export const animationPageData = {
             key: 4,
         },
         {
-            img: afishaImg3,
+            img: animation2_7,
             title: "",
             subtitle: "Танцевальные<br/><span style='font-size: 60px'>флэшмобы</span>",
             time: "",
@@ -3575,10 +3653,50 @@ export const animationPageData = {
             campusName: "Classic",
             key: 5,
         },
+        {
+            img: animation2_5,
+            title: "",
+            subtitle: "Пенная<br/><span style='font-size: 60px'>вечеринка</span>",
+            time: "",
+            date: "",
+            campus: "Корпус",
+            campusName: "Classic",
+            key: 6,
+        },
+        {
+            img: animation2_3,
+            title: "",
+            subtitle: "<span style='font-size: 50px'>Дискотеки</span>",
+            time: "",
+            date: "",
+            campus: "Корпус",
+            campusName: "Classic",
+            key: 7,
+        },
+        {
+            img: animation2_6,
+            title: "",
+            subtitle: "Спортивные<br/><span style='font-size: 45px'>развлечения</span>",
+            time: "",
+            date: "",
+            campus: "Корпус",
+            campusName: "Classic",
+            key: 8,
+        },
+        {
+            img: animation2_1,
+            title: "",
+            subtitle: "<span style='font-size: 55px'>Аквагрим</span>",
+            time: "",
+            date: "",
+            campus: "Корпус",
+            campusName: "Classic",
+            key: 9,
+        },
     ],
     adultAnimationSlides: [
         {
-            img: afishaImg1,
+            img: animation3_7,
             title: "",
             subtitle: "Танцевальные<br/><span style='font-size: 45px'>мастер-классы</span>",
             time: "",
@@ -3589,7 +3707,7 @@ export const animationPageData = {
             link: ''
         },
         {
-            img: afishaImg2,
+            img: animation3_9,
             title: "",
             subtitle: "Спортивные<br/><span style='font-size: 60px'>турниры</span>",
             time: "",
@@ -3599,7 +3717,7 @@ export const animationPageData = {
             key: 2,
         },
         {
-            img: afishaImg3,
+            img: animation3_5,
             title: "",
             subtitle: "Настольные<br/><span style='font-size: 70px'>игры</span>",
             time: "",
@@ -3609,7 +3727,7 @@ export const animationPageData = {
             key: 3,
         },
         {
-            img: afishaImg3,
+            img: animation3_1,
             title: "",
             subtitle: "Аквааэробика<br/><span style='font-size: 60px'>для всех</span>",
             time: "",
@@ -3619,7 +3737,7 @@ export const animationPageData = {
             key: 4,
         },
         {
-            img: afishaImg3,
+            img: animation3_3,
             title: "",
             subtitle: "Групповые<br/><span style='font-size: 53px'>программы</span>",
             time: "",
@@ -3627,6 +3745,46 @@ export const animationPageData = {
             campus: "Корпус",
             campusName: "Classic",
             key: 5,
+        },
+        {
+            img: animation3_6,
+            title: "",
+            subtitle: "Вечерние<br/><span style='font-size: 42px'>шоу-программы</span>",
+            time: "",
+            date: "",
+            campus: "Корпус",
+            campusName: "Classic",
+            key: 6,
+        },
+        {
+            img: animation3_4,
+            title: "",
+            subtitle: "Творческие<br/><span style='font-size: 53px'>мастерские</span>",
+            time: "",
+            date: "",
+            campus: "Корпус",
+            campusName: "Classic",
+            key: 7,
+        },
+        {
+            img: animation3_2,
+            title: "",
+            subtitle: "<span style='font-size: 60px'>Экскурсии</span>",
+            time: "",
+            date: "",
+            campus: "Корпус",
+            campusName: "Classic",
+            key: 8,
+        },
+        {
+            img: animation3_8,
+            title: "",
+            subtitle: "Тематические<br/><span style='font-size: 53px'>мероприятия</span>",
+            time: "",
+            date: "",
+            campus: "Корпус",
+            campusName: "Classic",
+            key: 9,
         },
     ],
 
