@@ -143,7 +143,18 @@ const ContactForm = ({submitBtnText, withEmail, withPhone, withMessage, formName
             {withEmail && <Field component={Input} name="email" placeholder={'Введите Ваш E-mail'}/>}
             {withPhone && <Field component={Input} name="phone" placeholder={'Введите Ваш телефон'}/>}
             {withMessage && <Field component={Textarea} name="message" placeholder={textAreaPlaceholder}/>}
-
+            <div className="agreementBlock">
+                <input className="agreementCheckbox" id="checkbox-agreement" type="checkbox" required/>
+                <label htmlFor="checkbox-agreement">
+                    <p className="checkboxText">Даю&nbsp;
+                        <a className="checkboxText"
+                           style={{textDecoration:'underline'}}
+                           href="/documents/Политика-обработки-персональных-данных.pdf"
+                           target="_blank">согласие на обработку персональных данных
+                        </a>
+                    </p>
+                </label>
+            </div>
             <button style={{width: '100%'}} className={s.button} type="submit">{submitBtnText}</button>
         </Form>
     </Formik>
