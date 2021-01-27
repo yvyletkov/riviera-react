@@ -4,8 +4,8 @@ import logo from "../../img/logo.svg"
 import star from "../../img/header/star.svg"
 import speaker from "../../img/header/speaker.svg"
 import reviews from "../../img/header/reviews.svg"
-import search from "../../img/header/search.png"
-import phone from "../../img/header/phone.png"
+import search from "../../img/header/search.svg"
+import phone from "../../img/header/phone.svg"
 import Button from "../shared/Button/Button";
 import {NavLink} from "react-router-dom";
 import Menu from "./Menu/Menu";
@@ -70,8 +70,8 @@ const Header = () => {
                             <NavLink to={'/'}><img src={logo} alt="Riviera Sunrise"/></NavLink>
                         </div>
                         <div className={s.rightBlock}>
-                            <Link onClickHandler={handleLinkClick} style={{cursor: 'not-allowed'}} icon={search}
-                                  extraClass={s.searchIcon} link={""}/>
+                            {/*<Link onClickHandler={handleLinkClick} style={{cursor: 'not-allowed'}} icon={search}*/}
+                            {/*      extraClass={s.searchIcon} link={""}/>*/}
                             <div className={s.contacts}>
                                 <a href={"tel:+78005509824"}
                                          className={s.link + ' ' + s.number}>

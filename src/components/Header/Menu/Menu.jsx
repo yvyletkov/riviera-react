@@ -288,7 +288,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
                             </div>
 
                             {/*<div className={s.menuItem} onClick={toggleMenu}>*/}
-                            <div className={s.menuItem}>
+                            <div className={s.menuItem} onClick={toggleMenu}>
                                 <NavLink to={"/animation"}>
                                     Анимация
                                 </NavLink>
