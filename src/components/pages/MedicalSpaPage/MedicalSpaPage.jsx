@@ -22,6 +22,7 @@ import Headline from "../../shared/Headline/Headline";
 import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
 import MapSection from "../../shared/MapSection/MapSection";
 import dihanieZdorovyaPriceImg from "../../../img/medical-spa/dihanieZdorovyaPriceImg.png";
+import zdorovayaSpinaPriceImg from "../../../img/medical-spa/zdorovaya-spina.png";
 
 
 
@@ -259,17 +260,23 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
 
                     <h5>Методика восстановления</h5>
                     <ul>
-                        <li>Консультации врачей</li>
-                        <li>Аппаратная физиотерапия</li>
-                        <li>Бальнеология</li>
+                        <li>Прием врача-терапевта</li>
+                        <li>Лечебный массаж спины</li>
+                        <li>Плавание в бассейне </li>
+                        <li>Термотерапия</li>
+                        <li>Механотерапия</li>
+                        <li>Аэротерапия</li>
+                        <li>Аэрофитотерапия</li>
+                        <li>Гелиотерапия</li>
+                        <li>Талассотерапия</li>
+                        <li>Спелеотерапия</li>
+                        <li>Фитованны</li>
+                        <li>Минеральные ванны/флоатинг/подводный душ-массаж</li>
                         <li>Грязелечение</li>
-                        <li>Мануальная физиотерапия</li>
-                        <li>Климатотерапия</li>
-                        <li>Фитотерапия</li>
-                        <li>Вегето-резонансная
-                            диагностика и терапия
-                        </li>
-                        <li>Галотерапия</li>
+                        <li>Грязевые аппликации</li>
+                        <li>Фито-чай или кислородный коктейль</li>
+                        <li>Физиотерапия</li>
+                        <li>Диетпитание</li>
                     </ul>
                 </div>
             </div>
@@ -571,35 +578,35 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
                     <img src={medicalSpaPopupImgSpina} alt="Здоровая спина"/>
                 </div>
                 <div className={s.col}>
+                    <img style={{position: 'absolute', left: '-105px', top: '0'}} src={zdorovayaSpinaPriceImg} alt="стоимость программы - от 8950 рублей"/>
+
                     <img className={s.closeBtn} onClick={() => setShowPopup(false)} src={closeBtn} alt="close"/>
 
                     <h5>Методика лечения</h5>
                     <ul>
-                        <li>Консультации врачей</li>
-                        <li>Аппаратная физиотерапия</li>
-                        <li>Бальнеология</li>
-                        <li>Грязелечение</li>
-                        <li>Мануальная физиотерапия</li>
-                        <li>Фитнес</li>
-                        <li>Галотерапия</li>
-                        <li>Гелиотерапия, талассотерапия</li>
-                        <li>Йога</li>
-                        <li>Тренажерный зал</li>
+                        <li>Консультация терапевта</li>
+                        <li>Консультация физиотерапевта</li>
+                        <li>Клинический анализ крови</li>
+                        <li>Клинический анализ мочи</li>
+                        <li>Аппаратная физиотерапия </li>
+                        <li>Лечебный массаж</li>
+                        <li>Ванна вихревая лекарственная</li>
+                        <li>Фиточай</li>
+                        <li>Пелоидотерапия  грязями Сакского озера</li>
+                        <li>Термальное оздоровление</li>
+                        <li>Спелеокомната</li>
+                        <li>Групповые тренировки</li>
                         <li>Бассейн</li>
-                        <li>Грязелечение</li>
-                        <li>Восстанавливающий массаж спины</li>
                         <li>Климатотерапия</li>
                         <li>Фитотерапия</li>
-                        <li>Ультразвук</li>
-                        <li>Магнитотерапия</li>
-                        <li>ДДТ</li>
-                        <li>Амплипульс</li>
-                        <li>Кислородный коктейль</li>
-                        <li>Электрофорез</li>
-                        <li>Вихревая ванна</li>
-                        <li>Ванна лекарственная</li>
+                        <li>Талассотерапия</li>
+                        <li>Гелиотерапия</li>
+                        <li>Медикаментозное обеспечение</li>
+                        <li>Карбокситерапия инъекционная проблемных зон</li>
+                        <li>Стоун-массаж</li>
                         <li>Флоатинг</li>
-                        <li>Термальное оздоровление Гротта Джусти</li>
+                        <li>Детокс (Королевский SPA-ритуал «Спокойствие»)</li>
+                        <li>Детокс (Обёртывание термальное)</li>
                     </ul>
                 </div>
             </div>
