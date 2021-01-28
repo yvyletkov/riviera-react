@@ -25,7 +25,7 @@ const CenteredSliderItem = (props) => {
                             <span>{date}</span></p>}
                         <p dangerouslySetInnerHTML={{__html: campus}} className={s.campus}>
                         </p>
-                        <div>{campusName}</div>
+                        <div dangerouslySetInnerHTML={{__html: campusName}}/>
                     </div>
                 </div>
             );

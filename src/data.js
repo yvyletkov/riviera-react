@@ -851,16 +851,7 @@ const commonAfishaSlides = [
         campusName: "«The Grilled»",
         key: 2,
     },
-    {
-        img: afishaImg3,
-        title: "Открытый",
-        subtitle: "Подогреваемый<br/>бассейн",
-        time: "На улице",
-        date: "",
-        campus: "С 26 декабря<br/>по 10 января",
-        campusName: "",
-        key: 3,
-    },
+
 ];
 const commonClassicCampusSlides = [
     {
@@ -3431,6 +3422,16 @@ export const blogPostsData = [
 export const afishaPageData = {
     slides: commonAfishaSlides,
     pastSlides: [
+        {
+            img: afishaImg3,
+            title: "Открытый",
+            subtitle: "Подогреваемый<br/>бассейн",
+            time: "На улице",
+            date: "",
+            campus: "",
+            campusName: "С 26 декабря<br/>по 10 января",
+            key: 0,
+        },
         {
             img: afishaImg4,
             title: "",
