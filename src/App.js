@@ -12,7 +12,7 @@ import Header from "./components/Header/Header";
 import BottomMenu from "./components/additional/BottomMenu/BottomMenu";
 import swal from "sweetalert2";
 import CookiesNotification from "./components/additional/CookieNotificationWindow/CookiesNotification";
-
+import TagManager from 'react-gtm-module'
 const HomePage = lazy(() => import('./components/pages/HomePage/HomePage'));
 const RoomsAndPricesPage = lazy(() => import('./components/pages/RoomsAndPricesPage/RoomsAndPricesPage'));
 const SingleRoomPage = lazy(() => import('./components/pages/SingleRoomPage/SingleRoomPage'));
@@ -61,6 +61,12 @@ const DefenderOfTheFatherlandDay = lazy(() => import("./components/pages/Defende
 
 function App() {
 
+    const tagManagerArgs = {
+        gtmId: 'GTM-PG3X9N2',
+        dataLayerName: 'dataLayer'
+    }
+
+    TagManager.initialize(tagManagerArgs)
 
     return (<>
             <Header/>
