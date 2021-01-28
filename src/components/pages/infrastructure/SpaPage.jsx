@@ -19,6 +19,11 @@ const SpaPage = () => {
             <div style={{maxWidth: '1200px', margin: '0 auto', padding: '0 20px'}}>
                 <p>Мы заботимся о комфортном пребывании гостей в SPA-комплексе, для этого просим соблюдать <a style={{textDecoration: 'underline', color: '#000'}} target='_blank' href="/documents/pravila-spa.pdf" >несколько простых
                     правил</a>, которые сделают Ваш отдых и отдых других гостей максимально приятным.
+                </p><br/>
+                <p>
+                    Контакты SPA-комплекса The Shore SPA:<br/>
+                    <a target='_blank' href="mailto:spa.alushta@rivierasunrise.com">spa.alushta@rivierasunrise.com</a><br/>
+                    <a href="tel:89789153591">8 978 915 35 91</a>
                 </p>
             </div>
 
