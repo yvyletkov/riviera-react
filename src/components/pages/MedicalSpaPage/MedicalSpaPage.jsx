@@ -74,6 +74,7 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
                                   submitBtnText='Узнать подробности'
                                   formName={`Форма с верхнего баннера страницы Медикал СПА (кнопка "Подробнее")`}
                                   swalText={'очень скоро наши менеджеры с Вами свяжутся'}
+                                  requestUrl={'https://medical-spa.rivierasunrise.ru/medical-spa'}
                                   withPhone/>
 
             </div>
@@ -154,6 +155,7 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
                           submitBtnText='Забронировать'
                           formName={`Форма бронирования программы Medical SPA (${chosenProgram})`}
                           swalText={'мы свяжемся с Вами в ближайшее время'}
+                          requestUrl={'https://medical-spa.rivierasunrise.ru/medical-spa'}
                           withPhone/>
 
 
