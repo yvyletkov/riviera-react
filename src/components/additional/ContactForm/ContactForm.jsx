@@ -34,7 +34,7 @@ const Textarea = ({
     </div>
 };
 
-const ContactForm = ({submitBtnText, withEmail, withPhone, withMessage, formName, swalText = 'Мы получили Вашу заявку 😌', textAreaPlaceholder = 'Введите Ваше сообщение', ...props}) => {
+const ContactForm = ({submitBtnText, withEmail, withPhone, withMessage, formName, swalText = 'Мы получили Вашу заявку 😌', textAreaPlaceholder = 'Введите Ваше сообщение', requestUrl, ...props}) => {
 
     const rePhoneNumber = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
     Yup.addMethod(Yup.string, "phone", function() {
@@ -64,9 +64,11 @@ const ContactForm = ({submitBtnText, withEmail, withPhone, withMessage, formName
 
     const data = {};
 
+
+
     const onSubmit = (values, {resetForm}) => {
         data.form = {
-            "url": `${window.location.href}`
+            "url": `${requestUrl ? requestUrl : window.location.href}`
         };
         data.inputs = [
             {
