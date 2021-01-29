@@ -34,7 +34,7 @@ const LoveDayPage = () => {
                 <div className={s.flexWrapper}>
                     <div className={s.leftSide}>
                         <div className={s.pageNameBlock}>
-                            <h2>Kids free</h2>
+                            <h2 style={{zIndex: '-10', visibility: 'hidden'}}>Kids free</h2>
                             <h1 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? '11vw' : '85px'}}>Отмечай</h1>
                             <h1 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? '12vw' : '76px'}}>14
                                 февраля</h1>
