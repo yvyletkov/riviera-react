@@ -1,14 +1,11 @@
 import React, {useEffect} from "react";
 import MapSection from "../../shared/MapSection/MapSection";
-import s from "./LoveDayPage.module.scss";
+import s from "./March8Page.module.scss";
 import BookingBlock from "../../additional/BookingBlock/BookingBlock";
-import bannerImg from "../../../img/loveDay/banner.jpg";
-import bannerMobileImg from "../../../img/loveDay/bannerMobile.jpg";
-// import icon1 from "../../../img/loveDay/icons/1.png";
-// import icon2 from "../../../img/loveDay/icons/2.png";
-// import icon3 from "../../../img/loveDay/icons/3.png";
-import formBluredImg from "../../../img/loveDay/petal.png";
-import img from "../../../img/loveDay/4.jpg";
+import bannerImg from "../../../img/march8Page/главный.jpg";
+import bannerMobileImg from "../../../img/march8Page/главный.jpg";
+import formBluredImg from "../../../img/march8Page/leaves.png";
+import img from "../../../img/march8Page/5.jpg";
 import AnimatedMouseIcon from "../../shared/AnimatedMouseIcon/AnimatedMouseIcon";
 import EventMainSlider from "../../shared/sliders/EventMainSlider/EventMainSlider";
 import {infrastructurePagesData, loveDayPageData, vacationPagesData} from "../../../data";
@@ -21,26 +18,27 @@ import CenteredSlider from "../../shared/sliders/CenteredSlider/CenteredSlider";
 import SpecialsSlider from "../../shared/sliders/SpecialsSlider/SpecialsSlider";
 // import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
 
-const LoveDayPage = () => {
+const March8Page = () => {
 
-    React.useEffect(() => document.title = `14 февраля в Крыму - Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+    React.useEffect(() => document.title = `8 марта в Крыму - Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
     return <>
 
         <section className={s.bannerWrapper}
                  style={{background: 'center url(' + bannerImg + ')', backgroundSize: 'cover'}}>
             <div className={s.container}>
-                <div className={s.background} style={{background: 'center url(' + bannerMobileImg + ')', backgroundSize: 'cover'}}/>
+                <div className={s.background}
+                     style={{background: 'center url(' + bannerMobileImg + ')', backgroundSize: 'cover'}}/>
                 <div className={s.flexWrapper}>
                     <div className={s.leftSide}>
                         <div className={s.pageNameBlock}>
-                            <h2 style={{zIndex: '-10', visibility: 'hidden'}}>Kids free</h2>
-                            <h1 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? '11vw' : '85px'}}>Отмечай</h1>
-                            <h1 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? '12vw' : '76px'}}>14
-                                февраля</h1>
-                            <h3 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? '11vw' : '56px'}}
-                                className={s.extraline}>с нами</h3>
-                            <p>12-14 февраля</p>
+                            <h2>8 марта</h2>
+                            <h1 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? '8vw' : '60px'}}>Приглашаем</h1>
+                            <h1 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? '13vw' : '79px'}}>На
+                                главный</h1>
+                            <h3 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? '6vw' : '37px'}}
+                                className={s.extraline}>женский праздник</h3>
+                            <p>6-8 марта</p>
                         </div>
 
                     </div>
@@ -50,7 +48,7 @@ const LoveDayPage = () => {
             <BookingBlock/>
 
             <div className={s.animatedMouseWrapper}>
-                <AnimatedMouseIcon black/>
+                <AnimatedMouseIcon/>
             </div>
 
         </section>
@@ -78,7 +76,7 @@ const LoveDayPage = () => {
         {/*</section> }*/}
 
         <section className={'section first'}>
-            <EventMainSlider title={'Три дня незабываемой романтики'} titleMobile={'Три дня незабываемой романтики'}
+            <EventMainSlider title={'Для милых дам'} titleMobile={'Для милых дам'}
                              manySlides
                              slides={loveDayPageData.loveDayMainSlides} onlyTitle initialSlideIndex={1}/>
         </section>
@@ -88,18 +86,14 @@ const LoveDayPage = () => {
                 <div className={s.container}>
                     <div className={s.background}/>
                     <div className={s.textContent}>
-                        <Headline subtitle={'Что делать'} title={'14 февраля?'}/>
+                        <Headline subtitle={'Как праздновать'} title={'8 марта?'}/>
 
                         <p>
-                            <b>Как отпраздновать 14 февраля с любимым человеком?</b>
-                        </p>
-
-                        <p>
-                            Заботливая команда отеля Riviera Sunrise с радостью ответила на этот вопрос и сделала всё,
-                            чтобы этот день стал особенным для вас! Вас ждет профессиональный и чуткий подход к
-                            организации как праздника, так и предпраздничных дней. Романтичное оформление ресторана,
-                            цветы, свечи, фотозона, анимация для взрослых, специальное меню, SPA и многое другое для
-                            наших гостей в этот прекрасный праздник – 14 февраля.
+                            Подарите любимым женщинам лучший праздник! Заботливая команда отеля Riviera Sunrise с
+                            радостью сделает этот день особенным для всех дам. Вас ждет профессиональный и чуткий подход
+                            к организации как праздника, так и предпраздничных дней. Мастер классы, комплимент от
+                            ресторана, цветы, фотозона, анимация для взрослых, специальное меню, SPA и многое другое для
+                            наших гостей в этот прекрасный праздник – 8 марта.
                         </p>
 
                     </div>
@@ -116,14 +110,14 @@ const LoveDayPage = () => {
 
                     <div className={s.container}>
                         <h4 className={s.title}>
-                            <span>Позвольте себе</span>
-                            <span>день, посвященный</span>
-                            <span>вашей любви</span>
+                            <span>Нежность и красота</span>
+                            <span>В программе 8 марта для</span>
+                            <span>Милых дам</span>
                         </h4>
-                        <p>Оставьте свой телефон, и мы расчитаем стоимость романтического уикенда</p>
+                        <p>Оставьте свой телефон, и мы рассчитаем стоимость нежных и красивых выходных</p>
 
                         <ContactForm submitBtnText={'Отправить'}
-                                     formName={`Форма расчета стоимости 14 февраля`} withPhone
+                                     formName={`Форма расчета стоимости 8 марта`} withPhone
                                      swalText={'очень скоро мы свяжемся с Вами и сообщим все подробности'}/>
 
                     </div>
@@ -132,7 +126,7 @@ const LoveDayPage = () => {
         </section>
 
         <section className='section'>
-            <InfraMainSlider title={'Совершенный уровень отдыха'} slides={infrastructurePagesData.spaPage.slides}/>
+            <InfraMainSlider title={'День полного релакса'} slides={infrastructurePagesData.spaPage.slides}/>
         </section>
 
         <section className='section'>
@@ -165,5 +159,5 @@ const LoveDayPage = () => {
 
 };
 
-export default LoveDayPage;
+export default March8Page;
 
