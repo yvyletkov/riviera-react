@@ -194,7 +194,7 @@ const SpaPrices = () => {
                             <h4>{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].name}</h4>
                             {infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].subscription ?
                                     <>
-                                        <h6 className="titleSubscription">{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].textTitleChildren}</h6>
+                                        <h6 className="titleSubscription">{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].textTitleAdult}</h6>
                                         <div className="scheduleBlock">
                                             <img className="subscriptionIcon" src={weekendIcon} alt="выходные дни"/>
                                             <div className="descSubscription">
@@ -210,7 +210,7 @@ const SpaPrices = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <h6 className="titleSubscription">{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].textTitleAdult}</h6>
+                                        <h6 className="titleSubscription">{infrastructurePagesData.spaPrices.spaPricesContent[currentTab][0].textTitleChildren}</h6>
                                         <div className="scheduleBlock">
                                             <img className="subscriptionIcon" src={weekendIcon} alt="выходные дни"/>
                                             <div className="descSubscription">
