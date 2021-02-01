@@ -45,7 +45,7 @@ $black: #171717;
   }
 
   .pageNameBlock {
-    color: $black;
+    color: #fff;
     @media (min-width: 620px) {
       zoom: 0.9
     }
@@ -70,7 +70,7 @@ $black: #171717;
     display: block;
     width: 53px;
     height: 1px;
-    background-color: #171717;
+    background-color: #fff;
     top: 40%;
     right: -66px;
   }
@@ -83,16 +83,16 @@ $black: #171717;
     &:before {
       content: '';
       position: absolute;
-      left: -120px;
-      top: -45px;
+      right: -52px;
+      top: -60px;
       display: block;
-      width: 170px;
-      height: 160px;
-      background: no-repeat url('../../../img/loveDay/heart.png');
+      width: 200px;
+      height: 200px;
+      background: no-repeat url('../../../img/march8Page/flower.png');
       background-size: contain;
       @media (max-width: 768px) {
-        left: 37vw;
-        top: 20vw;
+        right: -1vw;
+        top: 16vw;
         width: 28vw;
         height: 23vw;
       }
@@ -104,7 +104,7 @@ $black: #171717;
     text-transform: uppercase;
     white-space: nowrap;
     font-family: "Helvetica Neue Black", sans-serif;
-    line-height: 0.9;
+    line-height: 1.1;
   }
 
   .pageNameBlock h3.extraline {
@@ -397,13 +397,13 @@ $black: #171717;
     width: 100%;
     height: 700px;
     margin: 0 auto;
-    background: center no-repeat url(../../../img/loveDay/form.jpg);
+    background: center no-repeat url(../../../img/march8Page/6.jpg);
     background-size: cover;
 
 
     @media (max-width: 500px) {
       height: unset;
-      background: center no-repeat url(../../../img/loveDay/form.jpg);
+      background: center no-repeat url(../../../img/march8Page/6.jpg);
       background-size: cover;
     }
 
@@ -412,7 +412,7 @@ $black: #171717;
       max-width: 1200px;
       width: 100%;
       margin: 0 auto;
-      padding: 145px 0 0 35px;
+      padding: 125px 0 0 35px;
 
       @media (max-width: 500px) {
         padding: 60px 20px 50px;
@@ -452,7 +452,7 @@ $black: #171717;
 
         span:last-of-type {
           font-family: "Helvetica Neue Black", sans-serif;
-          font-size: 50px;
+          font-size: 58px;
           line-height: 1.2;
           margin-bottom: 20px;
         }
@@ -505,8 +505,10 @@ $black: #171717;
   .bluredImg {
     position: absolute;
     top: -92px;
-    left: 400px;
-
+    left: 50px;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 }
 

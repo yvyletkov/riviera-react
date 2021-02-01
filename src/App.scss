@@ -200,7 +200,7 @@ input.input, textarea {
 .agreementBlock {
   display: flex;
   position: relative;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 
   .agreementCheckbox {
     position: absolute;
@@ -215,6 +215,7 @@ input.input, textarea {
       display: flex;
       align-items: center;
       user-select: none;
+      margin-bottom: 10px;
 
       .checkboxText {
         width:fit-content;
