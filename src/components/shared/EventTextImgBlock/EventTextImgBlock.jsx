@@ -7,7 +7,7 @@ import bestDayEverImg from "../../../img/events/bestdayever.png";
 import Button from "../Button/Button";
 import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
 
-const EventTextImgBlock = ({subtitle = 'Ваша семья', title = 'Начинается здесь', img, text, listArray = [], forWedding = true, wideImg}) => {
+const EventTextImgBlock = ({subtitle = 'Ваша семья', title = 'Начинается здесь', img, text, listArray = [], forWedding = true, wideImg, button=true}) => {
 
     let [popupOpen, setPopupOpen] = React.useState(false);
 

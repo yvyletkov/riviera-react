@@ -1,0 +1,254 @@
+.textBlockWrapper {
+  width: 100%;
+
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    height: 595px;
+    padding-right: 80px;
+    //overflow: hidden;
+
+    .background {
+      position: absolute;
+      z-index: -1;
+      height: 465px;
+      background-color: #f6f6f6;
+      width: 100vw;
+      right: 150px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .textContent {
+      position: relative;
+      padding: 100px 50px 100px 100px;
+
+      p {
+        text-align: justify;
+        margin: 15px 0 18px;
+      }
+
+      li::marker {
+        color: #ff6c39;
+        font-size: 120%;
+      }
+
+      h5 {
+        margin-top: 25px;
+        margin-bottom: 10px;
+      }
+
+      img {
+        width: 160px;
+        height: 160px;
+        object-fit: contain;
+        position: absolute;
+        right: -65px;
+        bottom: 50px;
+        box-shadow: none;
+
+        @media (max-width: 1200px) {
+          bottom: -70px;
+        }
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+    }
+
+    img {
+      width: 500px;
+      height: 595px;
+      object-fit: cover;
+      border-radius: 5px;
+      box-shadow: -9.629px 12.778px 27px 0px rgba(23, 23, 23, 0.09);
+
+      &.wide {
+        width: 650px;
+      }
+
+      @media (max-width: 768px) {
+        border-radius: 0;
+      }
+    }
+
+  }
+
+  @media screen and (max-width: 1200px) {
+    .container {
+      padding-right: 0;
+
+      .textContent {
+        padding: 0 20px;
+        margin-bottom: 20px;
+      }
+
+      img {
+        max-width: 50%;
+      }
+
+    }
+
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .container {
+      display: block;
+      padding: 30px 0 30px 0;
+      height: unset;
+      background-color: #f7f7f7;
+
+      .background {
+        display: none;
+      }
+
+      .textContent {
+        padding: 0 0 0 20px;
+        margin-bottom: 20px;
+
+        p {
+          padding-right: 20px;
+        }
+      }
+
+      img {
+        max-width: 100%;
+        width: 100vw;
+        height: calc(100vw * 1.07);
+        position: relative;
+      }
+
+    }
+
+  }
+
+}
+
+.textBlockWrapperRow {
+  width: 100%;
+
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    height: 595px;
+    padding-right: 80px;
+    flex-direction: row-reverse;
+
+    .textContent {
+      position: relative;
+      padding: 100px 45px 100px;
+
+      p {
+        text-align: justify;
+        margin: 15px 0 18px;
+      }
+
+      li::marker {
+        color: #ff6c39;
+        font-size: 120%;
+      }
+
+      h5 {
+        margin-top: 25px;
+        margin-bottom: 10px;
+      }
+
+      img {
+        width: 160px;
+        height: 160px;
+        object-fit: contain;
+        position: absolute;
+        right: -65px;
+        bottom: 50px;
+        box-shadow: none;
+
+        @media (max-width: 1200px) {
+          bottom: -70px;
+        }
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+    }
+
+    img {
+      width: 500px;
+      height: 595px;
+      object-fit: cover;
+      border-radius: 5px;
+      box-shadow: -9.629px 12.778px 27px 0px rgba(23, 23, 23, 0.09);
+
+      &.wide {
+        width: 650px;
+      }
+
+      @media (max-width: 768px) {
+        border-radius: 0;
+      }
+    }
+
+  }
+
+  @media screen and (max-width: 1200px) {
+    .container {
+      padding-right: 0;
+
+      .textContent {
+        padding: 0 20px;
+        margin-bottom: 20px;
+      }
+
+      img {
+        max-width: 50%;
+      }
+
+    }
+
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .container {
+      display: block;
+      padding: 30px 0 30px 0;
+      height: unset;
+      background-color: #f7f7f7;
+
+      .background {
+        display: none;
+      }
+
+      .textContent {
+        padding: 0 0 0 20px;
+        margin-bottom: 20px;
+
+        p {
+          padding-right: 20px;
+        }
+      }
+
+      img {
+        max-width: 100%;
+        width: 100vw;
+        height: calc(100vw * 1.07);
+        position: relative;
+      }
+
+    }
+
+  }
+
+}
