@@ -59,6 +59,7 @@ const AnimationPage = lazy(() => import("./components/pages/AnimationPage/Animat
 const DefenderOfTheFatherlandDay = lazy(() => import("./components/pages/DefenderOfTheFatherlandDay/DefenderOfTheFatherlandDay"));
 const March8Page = lazy(() => import("./components/pages/March8Page/March8Page"));
 const TheGrilledPage = lazy(() => import("./components/pages/infrastructure/Restaurants/TheGrilledPage/TheGrilledPage"));
+const CrimeaTourPage = lazy(() => import("./components/pages/CrimeaTourPage/CrimeaTourPage"));
 
 function App() {
 
@@ -84,6 +85,9 @@ function App() {
             </div>}>
 
                 <Switch>
+                    <Route path='/crimea-tour' exact
+                           component={() => <CrimeaTourPage/>}/>
+
                     <Route path='/the-grilled' exact
                            component={() => <TheGrilledPage/>}/>
 
