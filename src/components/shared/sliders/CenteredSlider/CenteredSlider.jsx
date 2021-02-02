@@ -39,7 +39,9 @@ const SliderStyles = styled.div`
 const CenteredSlider = ({title = "Какой-то заголовок", slides, type = "home-page", desaturated = false, infinite = false}) => {
 
 
-    const initialCurrentSlideIndex = window.matchMedia('(min-width: 769px)').matches ? (slides.length === 4 ? 2 : slides.length === 2 ? 1 : slides.length === 3 ? 1 : 0) : 0;
+    const initialCurrentSlideIndex = window.matchMedia('(min-width: 769px)').matches ?
+        (slides.length >= 5 ? 2 : slides.length === 4 ? 2 : slides.length === 2 ? 1 : slides.length === 3 ? 1 : 0)
+        : 0;
 
     let [currentSlideIndex, setCurrentSlideIndex] = React.useState(initialCurrentSlideIndex);
 

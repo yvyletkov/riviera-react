@@ -3,7 +3,7 @@ import MapSection from "../../shared/MapSection/MapSection";
 import s from "./March8Page.module.scss";
 import BookingBlock from "../../additional/BookingBlock/BookingBlock";
 import bannerImg from "../../../img/march8Page/главный.jpg";
-import bannerMobileImg from "../../../img/march8Page/главный.jpg";
+import bannerMobileImg from "../../../img/march8Page/главная-mobile.jpg";
 import formBluredImg from "../../../img/march8Page/leaves.png";
 import img from "../../../img/march8Page/5.jpg";
 import AnimatedMouseIcon from "../../shared/AnimatedMouseIcon/AnimatedMouseIcon";
