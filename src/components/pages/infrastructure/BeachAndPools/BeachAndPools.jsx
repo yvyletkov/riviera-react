@@ -17,11 +17,11 @@ import temperatureIcon from "../../../../img/infrastructure/beach-pools/icons/2.
 
 const BeachAndPools = () => {
 
-    React.useEffect( () => document.title = `Пляж и бассейны – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+    React.useEffect(() => document.title = `Пляж и бассейны – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
     return <>
         <InfrastructurePageBanner bannerData={infrastructurePagesData.beachAndPools.bannerData}
-                                  style={{objectPosition:"0"}}/>
+                                  style={{objectPosition: "0"}}/>
         <section className='section first'>
             <div className={s.poolsBlock}>
                 <div className={s.wrapper}>
@@ -35,15 +35,15 @@ const BeachAndPools = () => {
                                     выходя из воды.</p>
                             </div>
                         </div>
-                            <div className={s.imageBlock}>
-                                <div className={s.iconBlock}>
-                                    <img className={s.icon} src={areaIcon} alt="Длина"/>
-                                    <p className={s.iconDesc}>605 м&sup2;</p>
-                                    <img className={s.icon} src={temperatureIcon} alt="Температура"/>
-                                    <p className={s.iconDesc}>+28 &deg;С</p>
-                                </div>
-                                <img className={s.image} src={poolImage1} alt="Бассейн"/>
+                        <div className={s.imageBlock}>
+                            <div className={s.iconBlock}>
+                                <img className={s.icon} src={areaIcon} alt="Длина"/>
+                                <p className={s.iconDesc}>605 м&sup2;</p>
+                                <img className={s.icon} src={temperatureIcon} alt="Температура"/>
+                                <p className={s.iconDesc}>+28 &deg;С</p>
                             </div>
+                            <img className={s.image} src={poolImage1} alt="Бассейн"/>
+                        </div>
 
                     </div>
                 </div>
@@ -102,7 +102,8 @@ const BeachAndPools = () => {
 
         <section className='section'>
             <ZoomSlider subtitle={'Бассейн'} title={'Крытый'}
-                            slides={infrastructurePagesData.beachAndPools.zoomSlides} text={'Даже в прохладные дни Вы можете наслаждаться купанием в бассейне и отдыхом на шезлонге. В SPA комплексе нашего отеля расположен крытый бассейн где можно провести свой досуг с комфортом.'}/>
+                        slides={infrastructurePagesData.beachAndPools.zoomSlides}
+                        text={'Даже в прохладные дни Вы можете наслаждаться купанием в бассейне и отдыхом на шезлонге. В SPA комплексе нашего отеля расположен крытый бассейн где можно провести свой досуг с комфортом.'}/>
         </section>
 
         <section className='section'>
@@ -124,7 +125,10 @@ const BeachAndPools = () => {
                 </div>
             </div>
         </section>
-        <MapSection/>
+
+        <section className='section last'>
+            <MapSection/>
+        </section>
     </>
 }
 

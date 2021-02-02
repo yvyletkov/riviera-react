@@ -140,6 +140,22 @@
         }
       }
 
+      &.march8 {
+        position: relative;
+        width: fit-content;
+        &:before {
+          content: '';
+          position: absolute;
+          right: -44px;
+          top: -17px;
+          display: block;
+          width: 60px;
+          height: 60px;
+          background: no-repeat url('../../../img/march8Page/flower.png');
+          background-size: contain;
+        }
+      }
+
       a, p {
         cursor: pointer;
         display: inline-block;
