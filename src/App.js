@@ -83,7 +83,6 @@ function App() {
             </div>}>
 
                 <Switch>
-                    
                     <Route path='/8-march' exact
                            component={() => <March8Page/>}/>
 
