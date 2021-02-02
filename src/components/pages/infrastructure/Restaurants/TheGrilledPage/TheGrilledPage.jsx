@@ -4,12 +4,10 @@ import MapSection from "../../../../shared/MapSection/MapSection";
 import VacationsPageBanner from "../../../../shared/VacationsPageBanner/VacationsPageBanner";
 import bannerImg from "../../../../../img/the-grilled/restoran-gril.png";
 import img1 from "../../../../../img/the-grilled/restoran-gril-1.jpg";
-import imgContact from "../../../../../img/the-grilled/restoran-gril-kontakty.jpg";
 import s from "./TheGrilledPage.module.scss";
 import Headline from "../../../../shared/Headline/Headline";
 import EventMainSlider from "../../../../shared/sliders/EventMainSlider/EventMainSlider";
 import decisionBlockImg from "../../../../../img/mice/conference/14.jpg";
-import ContactForm from "../../../../additional/ContactForm/ContactForm";
 
 
 const TheGrilledPage = () => {
