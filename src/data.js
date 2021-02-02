@@ -465,6 +465,11 @@ import animation3_9 from "./img/animation/3-turniry.jpg"
 
 
 // END animationPage imports
+//import sliderTheGrilled
+import theGrilledSlider1 from "./img/the-grilled/restoran-gril-2.jpg";
+import theGrilledSlider2 from "./img/the-grilled/restoran-gril-3.jpg";
+import theGrilledSlider3 from "./img/the-grilled/restoran-gril-4.jpg";
+//END sliderTheGrilled
 
 const commonGridSlides = [
     {
@@ -2280,6 +2285,28 @@ export const vacationPagesData = {
         },
     ],
 };
+
+
+//The Grilled Data
+export const TheGrilledData = {
+        theGrilledMainSlides: [
+            {
+                img: theGrilledSlider1,
+                title: "Татаки из говядины",
+                key: 1,
+            },
+            {
+                img: theGrilledSlider2,
+                title: "Черный ролл с креветками",
+                key: 2,
+            },
+            {
+                img: theGrilledSlider3,
+                title: "Блэк бургер с курицей",
+                key: 3,
+            },
+        ],
+}
 
 // Страницы ивентов: "Свадьба", "Выездная церемония", "ДР', "Мальчишник", "Девичник"
 export const eventPagesData = {
