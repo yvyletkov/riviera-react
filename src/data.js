@@ -421,6 +421,7 @@ import afishaImg5 from "./img/afisha/5.jpg";
 import afishaImg6 from "./img/afisha/6.jpg";
 import afishaImg14feb from "./img/afisha/14feb.jpg";
 import afishaImg23feb from "./img/afisha/23feb.jpg";
+import afishaImg8mar from "./img/afisha/8mar.jpg";
 // END afisha imports
 // LOVE DAY imports
 import loveDaySlide1 from "./img/loveDay/1.1.jpg"
@@ -474,6 +475,7 @@ import march8img5 from "./img/march8Page/фотозона.jpg"
 import march8img6 from "./img/march8Page/фотограф.jpg"
 import march8img7 from "./img/march8Page/живая-музыка.jpg"
 import march8img8 from "./img/march8Page/велком).jpg"
+import march8img9 from "./img/march8Page/комплимент.jpg"
 // END 8march imports
 
 
@@ -856,8 +858,8 @@ const commonAfishaSlides = [
         date: "",
         campus: "Корпус",
         campusName: "Modern",
+        link: '/pool-schedule',
         key: 1,
-        link: '/pool-schedule'
     },
     {
         img: afishaImg2,
@@ -867,7 +869,9 @@ const commonAfishaSlides = [
         date: "",
         campus: "Ресторан",
         campusName: "«The Grilled»",
+        link: '/the-grilled',
         key: 2,
+
     },
     {
         img: afishaImg14feb,
@@ -877,6 +881,7 @@ const commonAfishaSlides = [
         date: "",
         campus: "",
         campusName: "12-14 февраля",
+        link: '/love-day',
         key: 3,
     },
     {
@@ -887,7 +892,19 @@ const commonAfishaSlides = [
         date: "",
         campus: "",
         campusName: "23 февраля",
+        link: '/23-february',
         key: 4,
+    },
+    {
+        img: afishaImg8mar,
+        title: "приглашаем на главный",
+        subtitle: "женский<br/><span style='font-size: 54px'>праздник</span>",
+        time: "",
+        date: "",
+        campus: "",
+        campusName: "8 марта",
+        link: '/8-march',
+        key: 5,
     },
 ];
 const commonClassicCampusSlides = [
@@ -2321,23 +2338,23 @@ export const vacationPagesData = {
 
 //The Grilled Data
 export const TheGrilledData = {
-        theGrilledMainSlides: [
-            {
-                img: theGrilledSlider1,
-                title: "Татаки из говядины",
-                key: 1,
-            },
-            {
-                img: theGrilledSlider2,
-                title: "Черный ролл с креветками",
-                key: 2,
-            },
-            {
-                img: theGrilledSlider3,
-                title: "Блэк бургер с курицей",
-                key: 3,
-            },
-        ],
+    theGrilledMainSlides: [
+        {
+            img: theGrilledSlider1,
+            title: "Татаки из говядины",
+            key: 1,
+        },
+        {
+            img: theGrilledSlider2,
+            title: "Черный ролл с креветками",
+            key: 2,
+        },
+        {
+            img: theGrilledSlider3,
+            title: "Блэк бургер с курицей",
+            key: 3,
+        },
+    ],
 }
 
 // Страницы ивентов: "Свадьба", "Выездная церемония", "ДР', "Мальчишник", "Девичник"
@@ -3708,6 +3725,12 @@ export const march8PageData = {
             title: "Welcome подарок",
             descr: '',
             key: 8,
+        },
+        {
+            img: march8img9,
+            title: "Комплимент от ресторана",
+            descr: '',
+            key: 9,
         },
     ],
 }
