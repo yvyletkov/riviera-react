@@ -464,6 +464,7 @@ import animation3_7 from "./img/animation/3-tantsevalnye.jpg"
 import animation3_8 from "./img/animation/3-tematicheskie.jpg"
 import animation3_9 from "./img/animation/3-turniry.jpg"
 // END animationPage imports
+
 // 8march imports
 import march8img1 from "./img/march8Page/заказ-цветов.jpg"
 import march8img2 from "./img/march8Page/композиции.jpg"
@@ -473,6 +474,15 @@ import march8img5 from "./img/march8Page/фотозона.jpg"
 import march8img6 from "./img/march8Page/фотограф.jpg"
 import march8img7 from "./img/march8Page/живая-музыка.jpg"
 import march8img8 from "./img/march8Page/велком).jpg"
+// END 8march imports
+
+
+//import sliderTheGrilled
+import theGrilledSlider1 from "./img/the-grilled/restoran-gril-2.jpg";
+import theGrilledSlider2 from "./img/the-grilled/restoran-gril-3.jpg";
+import theGrilledSlider3 from "./img/the-grilled/restoran-gril-4.jpg";
+//END sliderTheGrilled
+
 
 const commonGridSlides = [
     {
@@ -2307,6 +2317,28 @@ export const vacationPagesData = {
         },
     ],
 };
+
+
+//The Grilled Data
+export const TheGrilledData = {
+        theGrilledMainSlides: [
+            {
+                img: theGrilledSlider1,
+                title: "Татаки из говядины",
+                key: 1,
+            },
+            {
+                img: theGrilledSlider2,
+                title: "Черный ролл с креветками",
+                key: 2,
+            },
+            {
+                img: theGrilledSlider3,
+                title: "Блэк бургер с курицей",
+                key: 3,
+            },
+        ],
+}
 
 // Страницы ивентов: "Свадьба", "Выездная церемония", "ДР', "Мальчишник", "Девичник"
 export const eventPagesData = {
