@@ -8,7 +8,7 @@ import formBluredImg from "../../../img/march8Page/leaves.png";
 import img from "../../../img/march8Page/5.jpg";
 import AnimatedMouseIcon from "../../shared/AnimatedMouseIcon/AnimatedMouseIcon";
 import EventMainSlider from "../../shared/sliders/EventMainSlider/EventMainSlider";
-import {infrastructurePagesData, loveDayPageData, vacationPagesData} from "../../../data";
+import {infrastructurePagesData, march8PageData, vacationPagesData} from "../../../data";
 import Headline from "../../shared/Headline/Headline";
 import ContactForm from "../../additional/ContactForm/ContactForm";
 import InfraMainSlider from "../../shared/sliders/InfraMainSlider/InfraMainSlider";
@@ -16,7 +16,6 @@ import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
 import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
 import CenteredSlider from "../../shared/sliders/CenteredSlider/CenteredSlider";
 import SpecialsSlider from "../../shared/sliders/SpecialsSlider/SpecialsSlider";
-// import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
 
 const March8Page = () => {
 
@@ -53,32 +52,10 @@ const March8Page = () => {
 
         </section>
 
-        {/*{ !window.matchMedia('(max-width: 620px)').matches && <section className={'section first'}>*/}
-        {/*    <HeadlineCenter title={'Вас ожидает'}/>*/}
-        {/*    <div className={s.iconsWrapper}>*/}
-        {/*        <div className={s.container}>*/}
-        {/*            <div className={s.item}>*/}
-        {/*                <img src={icon1} alt=""/>*/}
-        {/*                <div>Романтическая<br/>атмосфера</div>*/}
-        {/*            </div>*/}
-
-        {/*            <div className={s.item}>*/}
-        {/*                <img src={icon2} alt=""/>*/}
-        {/*                <div>Комплимент<br/>от отеля</div>*/}
-        {/*            </div>*/}
-
-        {/*            <div className={s.item}>*/}
-        {/*                <img src={icon3} alt=""/>*/}
-        {/*                <div>Программа<br/>для влюбленных</div>*/}
-        {/*            </div>*/}
-        {/*        </div>*/}
-        {/*    </div>*/}
-        {/*</section> }*/}
-
         <section className={'section first'}>
             <EventMainSlider title={'Для милых дам'} titleMobile={'Для милых дам'}
                              manySlides
-                             slides={loveDayPageData.loveDayMainSlides} onlyTitle initialSlideIndex={1}/>
+                             slides={march8PageData.march8PageMainSlides} onlyTitle initialSlideIndex={1}/>
         </section>
 
         <section className='section'>

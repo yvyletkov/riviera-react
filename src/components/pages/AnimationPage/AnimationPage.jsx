@@ -11,7 +11,7 @@ import img from "../../../img/loveDay/4.jpg";
 
 const AnimationPage = () => {
 
-    React.useEffect(() => document.title = `Вопросы и ответы - Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+    React.useEffect(() => document.title = `Анимация - Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
     let [currentTab, setCurrentTab] = React.useState(0);
 

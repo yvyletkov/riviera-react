@@ -419,6 +419,8 @@ import afishaImg3 from "./img/afisha/3.jpg";
 import afishaImg4 from "./img/afisha/4.jpg";
 import afishaImg5 from "./img/afisha/5.jpg";
 import afishaImg6 from "./img/afisha/6.jpg";
+import afishaImg14feb from "./img/afisha/14feb.jpg";
+import afishaImg23feb from "./img/afisha/23feb.jpg";
 // END afisha imports
 // LOVE DAY imports
 import loveDaySlide1 from "./img/loveDay/1.1.jpg"
@@ -461,15 +463,26 @@ import animation3_6 from "./img/animation/3-show-programmy.jpg"
 import animation3_7 from "./img/animation/3-tantsevalnye.jpg"
 import animation3_8 from "./img/animation/3-tematicheskie.jpg"
 import animation3_9 from "./img/animation/3-turniry.jpg"
-// import animation3 from "./img/animation/1"
-
-
 // END animationPage imports
+
+// 8march imports
+import march8img1 from "./img/march8Page/заказ-цветов.jpg"
+import march8img2 from "./img/march8Page/композиции.jpg"
+import march8img3 from "./img/march8Page/акварельное.jpg"
+import march8img4 from "./img/march8Page/мастер-класс-по-макияжу.jpg"
+import march8img5 from "./img/march8Page/фотозона.jpg"
+import march8img6 from "./img/march8Page/фотограф.jpg"
+import march8img7 from "./img/march8Page/живая-музыка.jpg"
+import march8img8 from "./img/march8Page/велком).jpg"
+// END 8march imports
+
+
 //import sliderTheGrilled
 import theGrilledSlider1 from "./img/the-grilled/restoran-gril-2.jpg";
 import theGrilledSlider2 from "./img/the-grilled/restoran-gril-3.jpg";
 import theGrilledSlider3 from "./img/the-grilled/restoran-gril-4.jpg";
 //END sliderTheGrilled
+
 
 const commonGridSlides = [
     {
@@ -856,7 +869,26 @@ const commonAfishaSlides = [
         campusName: "«The Grilled»",
         key: 2,
     },
-
+    {
+        img: afishaImg14feb,
+        title: "3 дня",
+        subtitle: "Незабываемой<br/><span style='font-size: 58px'>романтики</span>",
+        time: "",
+        date: "",
+        campus: "",
+        campusName: "12-14 февраля",
+        key: 3,
+    },
+    {
+        img: afishaImg23feb,
+        title: "В стиле казино",
+        subtitle: "Мужской<br/><span style='font-size: 54px'>праздник</span>",
+        time: "",
+        date: "",
+        campus: "",
+        campusName: "23 февраля",
+        key: 4,
+    },
 ];
 const commonClassicCampusSlides = [
     {
@@ -3626,6 +3658,59 @@ export const defenderDayPageData = {
     ],
 }
 
+// Страница 8 марта
+export const march8PageData = {
+    march8PageMainSlides: [
+        {
+            img: march8img1,
+            title: "Заказ цветов на месте или заранее",
+            descr: '',
+            key: 1,
+        },
+        {
+            img: march8img2,
+            title: "Мастер класс по составлению цветочной композиции",
+            descr: '',
+            key: 2,
+        },
+        {
+            img: march8img3,
+            title: "Мастер класс по акварельному рисованию",
+            descr: '',
+            key: 3,
+        },
+        {
+            img: march8img4,
+            title: "Мастер класс по макияжу",
+            descr: '',
+            key: 4,
+        },
+        {
+            img: march8img5,
+            title: "Фотозона",
+            descr: '',
+            key: 5,
+        },
+        {
+            img: march8img6,
+            title: "Фотограф",
+            descr: '',
+            key: 6,
+        },
+        {
+            img: march8img7,
+            title: "Живая музыка в ресторане The Grilled",
+            descr: '',
+            key: 7,
+        },
+        {
+            img: march8img8,
+            title: "Welcome подарок",
+            descr: '',
+            key: 8,
+        },
+    ],
+}
 
 // Страница Анимация
 export const animationPageData = {
