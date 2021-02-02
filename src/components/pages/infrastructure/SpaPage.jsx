@@ -52,6 +52,12 @@ const TextBlock = styled.div`
         p {
           text-align: justify;
           margin: 15px 0 18px;
+          
+          a.link {
+            display: block;
+            margin-bottom: 7px;
+          }
+          
         }
 
         h5 {
@@ -121,7 +127,10 @@ const TextBlock = styled.div`
 
           p {
             padding-right: 20px;
+            
           }
+          
+         
         }
 
         .map {
@@ -164,11 +173,11 @@ const SpaPage = () => {
                                 правил</a>, которые сделают Ваш отдых и отдых других гостей максимально приятным.
                             </p>
                             <p>
-                                <a target='_blank'
+                                <a className='link' target='_blank'
                                    href="mailto:spa.alushta@rivierasunrise.com">
                                     <img className={'icon'} src={mailIcon} alt=""/>spa.alushta@rivierasunrise.com
-                                </a><br/>
-                                <a href="tel:89789153591">
+                                </a>
+                                <a className='link' href="tel:89789153591">
                                     <img className={'icon'} src={phoneIcon} alt=""/>8 978 915 35 91
                                 </a>
                             </p>
