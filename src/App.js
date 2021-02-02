@@ -86,7 +86,7 @@ function App() {
                 <Switch>
                     <Route path='/the-grilled' exact
                            component={() => <TheGrilledPage/>}/>
-                           
+
                     <Route path='/8-march' exact
                            component={() => <March8Page/>}/>
 
