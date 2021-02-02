@@ -57,7 +57,6 @@ const NewYearPage = lazy(() => import("./components/pages/NewYearPage/NewYearPag
 const LoveDayPage = lazy(() => import("./components/pages/LoveDayPage/LoveDayPage"));
 const AnimationPage = lazy(() => import("./components/pages/AnimationPage/AnimationPage"));
 const DefenderOfTheFatherlandDay = lazy(() => import("./components/pages/DefenderOfTheFatherlandDay/DefenderOfTheFatherlandDay"));
-const TheGrilledPage = lazy(() => import("./components/pages/infrastructure/Restaurants/TheGrilledPage/TheGrilledPage"));
 
 
 function App() {
@@ -84,8 +83,6 @@ function App() {
             </div>}>
 
                 <Switch>
-                    <Route path='/the-grilled' exact
-                           component={() => <TheGrilledPage/>}/>
 
                     <Route path='/23-february' exact
                            component={() => <DefenderOfTheFatherlandDay/>}/>
