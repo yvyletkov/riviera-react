@@ -8,11 +8,13 @@ import imgContact from "../../../../../img/the-grilled/restoran-gril-kontakty.jp
 import s from "./TheGrilledPage.module.scss";
 import Headline from "../../../../shared/Headline/Headline";
 import EventMainSlider from "../../../../shared/sliders/EventMainSlider/EventMainSlider";
+import decisionBlockImg from "../../../../../img/mice/conference/14.jpg";
+import ContactForm from "../../../../additional/ContactForm/ContactForm";
 
 
 const TheGrilledPage = () => {
 
-    React.useEffect(() => document.title = `Семейный отдых – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+    React.useEffect(() => document.title = `Ресторан The Grilled – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
 
     return <>
@@ -67,30 +69,33 @@ const TheGrilledPage = () => {
         </section>
 
         <section className='section'>
-            <div className={s.textBlockWrapperRow}>
-                <div className={s.container}>
-                    <div className={s.background}/>
-                    <div className={s.textContent}>
-                        <Headline subtitle={'«The Grilled»'} title={'мир экзотических блюд'}/>
+            <div className={s.conferencesDecisionBlock}>
+                <div className={s.wrapper}>
+                    <div className={s.grid}>
+                        <div className={s.imageBlock}>
+                            <img src={decisionBlockImg} alt="Riviera Sunrise"/>
+                        </div>
+                        <div className={s.textBlock}>
+                            <div className={s.textContent}>
+                                <Headline subtitle={'«The Grilled»'} title={'мир экзотических блюд'}/>
+                                <p>
+                                    Приглашаем Вас в увлекательный мир экзотических блюд, ярких красок, вкусов и запахов в ресторан «The Grilled», каждый день с 12:00 до 22:00 часов
+                                    Вас ждет высококлассное облуживание, а каждый вечер выходного дня атмосферу дополнит живая музыка.
+                                </p>
 
-                        <p>
-                            Приглашаем Вас в увлекательный мир экзотических блюд, ярких красок, вкусов и запахов в ресторан «The Grilled», каждый день с 12:00 до 22:00 часов
-                            Вас ждет высококлассное облуживание, а каждый вечер выходного дня атмосферу дополнит живая музыка.
-                        </p>
+                                <p>
+                                    <b>Бронирование столов по телефону</b>
+                                </p>
 
-                        <p>
-                            <b>Бронирование столов по телефону</b>
-                        </p>
+                                <p>+7 (978) 905-18-52</p>
 
-                        <p>+7 (978) 905-18-52</p>
+                                <p><b>Адрес</b></p>
 
-                        <p><b>Адрес</b></p>
+                                <p>Алушта, ул. Ленина, 2</p>
 
-                        <p>Алушта, ул. Ленина, 2</p>
-
+                            </div>
+                        </div>
                     </div>
-                    <img src={imgContact} alt={"Лучший праздник"}/>
-
                 </div>
             </div>
         </section>
