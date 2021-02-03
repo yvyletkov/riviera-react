@@ -485,6 +485,21 @@ import theGrilledSlider2 from "./img/the-grilled/restoran-gril-3.jpg";
 import theGrilledSlider3 from "./img/the-grilled/restoran-gril-4.jpg";
 //END sliderTheGrilled
 
+//import LanguageCamp
+import languageCampSlider1 from "./img/language-camp/PhilippaAshcroft.jpg";
+import languageCampSlider2 from "./img/language-camp/JackWilliams.jpg";
+import languageCampSlider3 from "./img/language-camp/MartinaMagurova.jpg";
+import languageCampSlider4 from "./img/language-camp/Degtyar.jpeg";
+import excursion1 from "./img/language-camp/caves.jpg";
+import excursion2 from "./img/language-camp/castle.jpg";
+import excursion3 from "./img/language-camp/castle1.jpg";
+import excursion4 from "./img/language-camp/kanatnaya.jpg";
+import food1 from "./img/language-camp/shveden.png";
+import food2 from "./img/language-camp/tavrika.png";
+import food3 from "./img/language-camp/grill.png";
+import food4 from "./img/language-camp/mangup.png";
+//END sliderLanguageCamp
+
 
 const commonGridSlides = [
     {
@@ -2361,24 +2376,76 @@ export const TheGrilledData = {
 export const LanguageCampData = {
     languageCampMainSlides: [
         {
-            img: theGrilledSlider1,
+            img: languageCampSlider1,
             title: "Philippa Ashcroft",
             key: 1,
         },
         {
-            img: theGrilledSlider2,
+            img: languageCampSlider2,
             title: "Jack Williams",
             key: 2,
         },
         {
-            img: theGrilledSlider3,
+            img: languageCampSlider3,
             title: "Martina Magurova",
             key: 3,
         },
         {
-            img: theGrilledSlider3,
+            img: languageCampSlider4,
             title: "Дегтярь Екатерина Викторовна " +
                 "<p>Эксперт ЕГЭ - руководитель кафедры иностранных языков Первой Московской Гимназии</p>",
+            key: 4,
+        },
+    ],
+    excursions: [
+        {
+            img: excursion1,
+            subtitle: "Красные",
+            title: "пещеры",
+            key: 1,
+        },
+        {
+            img: excursion2,
+            subtitle: "Ливадинский",
+            title: "дворец",
+            key: 2,
+        },
+        {
+            img: excursion3,
+            subtitle: "Ласточкино",
+            title: "гнездо",
+            key: 3,
+        },
+        {
+            img: excursion4,
+            subtitle: "Канатная",
+            title: "дорога",
+            key: 4,
+        },
+    ],
+    food: [
+        {
+            img: food1,
+            subtitle: "Шведский",
+            title: "стол",
+            key: 1,
+        },
+        {
+            img: food2,
+            subtitle: "Ресторан",
+            title: "«Tavrika»",
+            key: 2,
+        },
+        {
+            img: food3,
+            subtitle: "Ресторан",
+            title: "«La Veranda»",
+            key: 3,
+        },
+        {
+            img: food4,
+            subtitle: "Лобби-бар",
+            title: "«Mangup»",
             key: 4,
         },
     ],

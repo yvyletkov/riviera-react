@@ -1,5 +1,5 @@
 import React from "react";
-import {LanguageCampData} from "../../../data";
+import {eventPagesData, homePageData, LanguageCampData} from "../../../data";
 import MapSection from "../../shared/MapSection/MapSection";
 import VacationsPageBanner from "../../shared/VacationsPageBanner/VacationsPageBanner";
 import bannerImg from "../../../img/language-camp/main.png";
@@ -8,6 +8,9 @@ import s from "./LanguageCampPage.module.scss";
 import Headline from "../../shared/Headline/Headline";
 import EventMainSlider from "../../shared/sliders/EventMainSlider/EventMainSlider";
 import decisionBlockImg from "../../../img/mice/conference/14.jpg";
+import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
+import InfoSlider from "../../shared/sliders/InfoSlider/InfoSlider";
+import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
 
 
 const LanguageCampPage = () => {
@@ -66,6 +69,68 @@ const LanguageCampPage = () => {
                              onlyTitle
                              topText={"Профессиональные преподаватели курса являются носителями языка и работают на постоянной основе в языковых школах Англии и Ирландии:"}
                              bottomText={"* cостав педагогов может быть изменен"}/>
+        </section>
+
+        <section className='section'>
+            <HeadlineCenter title={"ПРОГРАММЫ ОБУЧЕНИЯ"} />
+            <div className={s.programsBlock}>
+                <div className={s.wrapper}>
+                    <div className={s.container}>
+                        <div className={s.card}>
+                            <h5>Для учеников младших классов</h5>
+                            <ul>
+                                <li>4 занятия английским языком в день с носителями языка</li>
+                                <li>Занятия в первой половине дня, с 9.00 до 12.30 с небольшим перерывом</li>
+                            </ul>
+                            <p>Стоимость обучения: <b>15 000 руб/смена</b></p>
+                            <p>20 уроков английского языка в неделю</p>
+                        </div>
+
+                        <div className={s.card}>
+                            <h5>Для учащихся 8-11 классов</h5>
+                            <ul>
+                                <li>2 урока английского языка в день с носителями языка</li>
+                                <li>2 урока подготовки к экзаменам ЕГЭ/ОГЭ в день, с экспертами ЕГЭ</li>
+                            </ul>
+                            <p>Максимальное количество человек в группе - 15</p>
+                            <p>Стоимость обучения: <b>15 000 руб/смена</b></p>
+                            <p>20 уроков английского языка в неделю</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section className='section'>
+            <InfoSlider subtitle={'Экскурсионная'}
+                            title={'программа'}
+                            slides={LanguageCampData.excursions}
+                            text={"Экскурсионная программа предполагает посещение замка Ласточкино Гнездо, Красных пещер, Ялты и зоопарка, Севастополя, Никитского Ботанического сада, канатной дороги на Ай-Петри <br/><br/>" +
+                            "В стоимость включено транспортное обслуживание, услуги профессионального гида, все входные билеты и обед на одном из маршрутов (экскурсия на весь день с посещением Ливадийского дворца и подъем на гору Ай Петри).<br/><br/>" +
+                            "Стоимость экскурсионной программы: 7 500 руб за 1 человека"}/>
+        </section>
+
+        <section className='section'>
+            <InfoSlider subtitle={'Программа'}
+                            title={'анимации'}
+                            slides={homePageData.specialsSlides}
+                            text={"Детские развлекательные программы в отеле: спортивные состязания, веселые конкурсы и настольные игры для детей нескольких возрастных групп.<br/><br/>" +
+                            "Команда аниматоров подготовила веселое путешествие по странам мира во время каникул"}/>
+        </section>
+
+        <section className='section'>
+            <InfoSlider subtitle={'Изысканная еда'}
+                        title={'для Вас'}
+                        slides={LanguageCampData.food}
+                        text={"Вкусное, здоровое и разнообразное питание в ресторанах отеля"}/>
+        </section>
+
+        <section className='section'>
+            <RoomsSlider subtitle={'Корпус'} title={'Модерн'} textContent={eventPagesData.modernDescr}
+                         data={eventPagesData.modernSlides} noPaddingTop/>
+
+            <RoomsSlider lastOfTwo={true} subtitle={'Корпус'} title={'Классик'}
+                         textContent={eventPagesData.classicDescr} data={eventPagesData.classicSlides}/>
         </section>
 
         <section className='section'>
