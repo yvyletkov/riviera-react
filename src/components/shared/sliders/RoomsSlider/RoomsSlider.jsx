@@ -9,6 +9,7 @@ import MiniSlider from "../MiniSlider/MiniSlider";
 import Accordeon from "../../Accordeon/Accordeon";
 import CirqleTip from "../../CirqleTip/CirqleTip";
 import cx from 'classnames';
+import HeadlineCenter from "../../HeadlineCenter/HeadlineCenter";
 
 
 const SliderStyles = styled(Slider)`
@@ -32,7 +33,7 @@ const SliderStyles = styled(Slider)`
 }
 `;
 
-const RoomsSlider = ({title = "Заголовок", subtitle = "Какой-то", textContent = 'Немного какого-то текста', data, lastOfTwo, noPaddingTop}) => {
+const RoomsSlider = ({title = "Заголовок", subtitle = "Какой-то", textContent = 'Немного какого-то текста', data, lastOfTwo, noPaddingTop, blockTitle = ''}) => {
 
 
     let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
@@ -131,7 +132,10 @@ const RoomsSlider = ({title = "Заголовок", subtitle = "Какой-то"
 
     return (
         <div ref={sliderWrapperRef} className={classnames}>
-            <div className={s.container}>
+            <div className={blockTitle ? s.container + ' ' + s.withTitle : s.container}>
+
+                { blockTitle && <HeadlineCenter style={{position: 'absolute', top: '70px', left: '50%', transform: 'translateX(-50%)'}} title={blockTitle}/> }
+
                 <div className={s.leftBlock}>
                     <Headline subtitle={subtitle} title={title}/>
                     <CirqleTip onClick={cirqleTipHandler} accordeonStatus={accordeonStatus}/>

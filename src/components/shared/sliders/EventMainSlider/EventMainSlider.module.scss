@@ -83,10 +83,12 @@
     text-align: justify;
     transition: all 200ms;
     opacity: 0;
-    font-size: 14px;
     max-height: 0;
     overflow: hidden;
     margin-bottom: 10px;
+    p {
+      font-size: 14px;
+    }
   }
 }
 

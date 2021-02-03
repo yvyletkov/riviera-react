@@ -1,18 +1,20 @@
 import React from "react";
-import {TheGrilledData, vacationPagesData} from "../../../data";
+import {crimeaTourPageData, vacationPagesData} from "../../../data";
 import MapSection from "../../shared/MapSection/MapSection";
 import VacationsPageBanner from "../../shared/VacationsPageBanner/VacationsPageBanner";
-import bannerImg from "../../../img/the-grilled/restoran-gril.png";
-import img1 from "../../../img/the-grilled/restoran-gril-1.jpg";
+import bannerImg from "../../../img/crimea-tour/banner.png";
+import img1 from "../../../img/crimea-tour/text-block.jpg";
+import groupImg from "../../../img/crimea-tour/group.jpg";
+import individualImg from "../../../img/crimea-tour/individual.png";
 import s from "./CrimeaTourPage.module.scss";
 import Headline from "../../shared/Headline/Headline";
 import EventMainSlider from "../../shared/sliders/EventMainSlider/EventMainSlider";
-import decisionBlockImg from "../../../img/mice/conference/14.jpg";
-
 import styled from "styled-components"
 import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
 import {NavLink} from "react-router-dom";
 import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
+import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
+import FoodBlock from "../../shared/FoodBlock/FoodBlock";
 
 const ProgramsBlock = styled.div`
   .container {
@@ -62,8 +64,11 @@ const ProgramsBlock = styled.div`
 
 
     .program-block__img {
-      width: 100%;
+      width: calc(100% + 36px);
+      margin-left: -18px;
       margin-bottom: 24px;
+      height: 175px;
+      object-fit: cover;
     }
 
     .program-block__text {
@@ -73,7 +78,7 @@ const ProgramsBlock = styled.div`
     }
 
     .program-block__content {
-      padding: 37px 18px 0;
+      padding: 45px 18px 0;
     }
 
     .programs-block__subtitle {
@@ -84,9 +89,10 @@ const ProgramsBlock = styled.div`
     }
 
     .programs-block__title {
+      white-space: nowrap;
       text-align: center;
       font-size: 28px;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       line-height: 1.4;
     }
 
@@ -115,7 +121,7 @@ const ProgramsBlock = styled.div`
       position: absolute;
       bottom: 0;
       width: 100%;
-      padding: 0 29px 55px;
+      padding: 0 29px 62px;
       
    
     }
@@ -156,9 +162,9 @@ const ProgramsBlock = styled.div`
 
     .program-block__price-absolute {
       position: absolute;
-      top: 13px;
+      top: 25px;
       left: 50%;
-      color: #444444;
+      color: #9e9e9e;
       transform: translateX(-50%);
       font-size: 17px;
       font-weight: 600 !important;
@@ -240,7 +246,7 @@ const CrimeaTourPage = () => {
 
 
     return <>
-        <VacationsPageBanner fontSize={["70px", "27px"]}
+        <VacationsPageBanner fontSize={["70px", "23.9px"]}
                              fontSizeMobile={["11.7vw", "4.0vw"]}
                              subtitle={'Незабываемый'}
                              topLine={"Тур в Крым"}
@@ -271,7 +277,7 @@ const CrimeaTourPage = () => {
                         </p>
 
                     </div>
-                    <img className={s.wide} src={img1} alt={"Лучший праздник"}/>
+                    <img  src={img1} alt={"Лучший праздник"}/>
 
                 </div>
             </div>
@@ -297,7 +303,7 @@ const CrimeaTourPage = () => {
                             <div className="program-block__content">
                                 <div className="programs-block__title">Групповые экскурсии</div>
                                 <div className="program-block__price-absolute">от 1 000 рублей</div>
-                                <img src="/wp-content/themes/riviera/images/crimea-tour/programs/1.jpg"
+                                <img src={groupImg}
                                      className="program-block__img" alt="Групповые экскурсии"/>
 
                                 <p className="program-block__text">
@@ -329,7 +335,7 @@ const CrimeaTourPage = () => {
                                 <div className="programs-block__title">Индивидуальные туры</div>
                                 <div className="program-block__price-absolute">от 10 000 рублей</div>
 
-                                <img src="/wp-content/themes/riviera/images/crimea-tour/programs/2.jpg"
+                                <img src={individualImg}
                                      className="program-block__img" alt="Индивидуальные туры"/>
 
                                 <p className="program-block__text">
@@ -360,17 +366,21 @@ const CrimeaTourPage = () => {
         </ProgramsBlock>
 
         <section className='section'>
-            <EventMainSlider slides={TheGrilledData.theGrilledMainSlides}
+            <EventMainSlider slides={crimeaTourPageData.crimeaTourPageMainSlides}
                              title={'Разные направления отдыха'}
                              titleMobile={'Разные направления отдыха'} manySlides />
         </section>
 
         <section className='section'>
-            <RoomsSlider noPaddingTop subtitle={'Корпус'} title={'Модерн'} textContent={vacationPagesData.modernDescr}
+            <RoomsSlider blockTitle={'Лучшие номера для Вас'} noPaddingTop subtitle={'Корпус'} title={'Модерн'} textContent={vacationPagesData.modernDescr}
                          data={vacationPagesData.modernSlides}/>
 
             <RoomsSlider lastOfTwo={true} subtitle={'Корпус'} title={'Классик'}
                          textContent={vacationPagesData.classicDescr} data={vacationPagesData.classicSlides}/>
+        </section>
+
+        <section className='section'>
+            <GridSlider slides={vacationPagesData.gridSlides}/>
         </section>
 
         <section className='section last'>

@@ -212,7 +212,7 @@ const EventMainSliderItem = (props) => {
 
                 { !onlyTitle && <>
                     <div className={s.descr}>
-                        <p style={{marginBottom: withButton ? '10px' : '0'}}>{descr}</p>
+                        <p dangerouslySetInnerHTML={{__html: descr}} style={{marginBottom: withButton ? '10px' : '0'}}/>
                         {withButton && <Button style={{marginTop: '17px'}} onClick={() => activatePopup(index + 1)}
                                                text={'Подробнее о программе'}/>}
                     </div>
