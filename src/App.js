@@ -60,6 +60,7 @@ const DefenderOfTheFatherlandDay = lazy(() => import("./components/pages/Defende
 const March8Page = lazy(() => import("./components/pages/March8Page/March8Page"));
 const TheGrilledPage = lazy(() => import("./components/pages/infrastructure/Restaurants/TheGrilledPage/TheGrilledPage"));
 const CrimeaTourPage = lazy(() => import("./components/pages/CrimeaTourPage/CrimeaTourPage"));
+const ExcursionsBookingPage = lazy(() => import("./components/pages/ExcursionsBookingPage/ExcursionsBookingPage"));
 const LanguageCampPage = lazy(() => import("./components/pages/LanguageCampPage/LanguageCampPage"));
 
 function App() {
@@ -86,6 +87,10 @@ function App() {
             </div>}>
 
                 <Switch>
+
+                    <Route path='/excursions' exact
+                           component={() => <ExcursionsBookingPage/>}/>
+
                     <Route path='/language-camp' exact
                            component={() => <LanguageCampPage/>}/>
 
