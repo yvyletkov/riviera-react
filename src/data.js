@@ -3761,6 +3761,42 @@ export const march8PageData = {
     ],
 }
 
+// Страница Турпакет
+export const crimeaTourPageData = {
+    crimeaTourPageMainSlides: [
+        {
+            img: march8img1,
+            title: "Заказ цветов на месте или заранее",
+            descr: '',
+            key: 1,
+        },
+        {
+            img: march8img2,
+            title: "Мастер класс по составлению цветочной композиции",
+            descr: '',
+            key: 2,
+        },
+        {
+            img: march8img3,
+            title: "Мастер класс по акварельному рисованию",
+            descr: '',
+            key: 3,
+        },
+        {
+            img: march8img4,
+            title: "Мастер класс по макияжу",
+            descr: '',
+            key: 4,
+        },
+        {
+            img: march8img5,
+            title: "Фотозона",
+            descr: '',
+            key: 5,
+        },
+    ],
+}
+
 // Страница Анимация
 export const animationPageData = {
     kidsAnimationSlides: [
