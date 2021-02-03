@@ -3,8 +3,9 @@ import s from "./VacationsPageBanner.module.scss";
 // import cirqlesImg from "../../../img/home-page/cirqles.png"
 import BookingBlock from "../../additional/BookingBlock/BookingBlock";
 
-const VacationsPageBanner = ({fontSize, fontSizeMobile, subtitle, topLine, bottomLine, bannerImg, bannerMobileImg, descr, extraLine = []}) => {
+const VacationsPageBanner = ({fontSize, fontSizeMobile, subtitle, topLine, bottomLine, bannerImg, bannerMobileImg, descr, extraLine = [], positionBackground = null}) => {
 
+    console.log(positionBackground)
     let [descriptionShown, setDescriptionShown] = React.useState(false);
     let [matches620px, setMatches620px] = React.useState(false);
 
@@ -35,7 +36,7 @@ const VacationsPageBanner = ({fontSize, fontSizeMobile, subtitle, topLine, botto
                     </div>
                     <div className={s.rightSide}>
                         {/*<img className={s.cirqles} src={cirqlesImg} alt=""/>*/}
-                        <img src={bannerImg} alt="Riviera Sunrise"/>
+                        <img src={bannerImg} alt="Riviera Sunrise" style={{objectPosition: `${positionBackground}`}}/>
                     </div>
                 </div>
             </div>

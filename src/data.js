@@ -2357,6 +2357,32 @@ export const TheGrilledData = {
     ],
 }
 
+//Language camp Data
+export const LanguageCampData = {
+    languageCampMainSlides: [
+        {
+            img: theGrilledSlider1,
+            title: "Philippa Ashcroft",
+            key: 1,
+        },
+        {
+            img: theGrilledSlider2,
+            title: "Jack Williams",
+            key: 2,
+        },
+        {
+            img: theGrilledSlider3,
+            title: "Martina Magurova",
+            key: 3,
+        },
+        {
+            img: theGrilledSlider3,
+            title: "Дегтярь Екатерина Викторовна <p>Эксперт ЕГЭ - руководитель кафедры иностранных языков Первой Московской Гимназии</p>",
+            key: 4,
+        },
+    ],
+}
+
 // Страницы ивентов: "Свадьба", "Выездная церемония", "ДР', "Мальчишник", "Девичник"
 export const eventPagesData = {
     weddingPages: { // "Свадьба", "Выездная церемония"
