@@ -60,6 +60,7 @@ const DefenderOfTheFatherlandDay = lazy(() => import("./components/pages/Defende
 const March8Page = lazy(() => import("./components/pages/March8Page/March8Page"));
 const TheGrilledPage = lazy(() => import("./components/pages/infrastructure/Restaurants/TheGrilledPage/TheGrilledPage"));
 const CrimeaTourPage = lazy(() => import("./components/pages/CrimeaTourPage/CrimeaTourPage"));
+const ExcursionsBookingPage = lazy(() => import("./components/pages/ExcursionsBookingPage/ExcursionsBookingPage"));
 
 function App() {
 
@@ -85,6 +86,9 @@ function App() {
             </div>}>
 
                 <Switch>
+                    <Route path='/excursions' exact
+                           component={() => <ExcursionsBookingPage/>}/>
+
                     <Route path='/crimea-tour' exact
                            component={() => <CrimeaTourPage/>}/>
 
