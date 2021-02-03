@@ -62,6 +62,7 @@ const TheGrilledPage = lazy(() => import("./components/pages/infrastructure/Rest
 const CrimeaTourPage = lazy(() => import("./components/pages/CrimeaTourPage/CrimeaTourPage"));
 const ExcursionsBookingPage = lazy(() => import("./components/pages/ExcursionsBookingPage/ExcursionsBookingPage"));
 const LanguageCampPage = lazy(() => import("./components/pages/LanguageCampPage/LanguageCampPage"));
+const SearchPage = lazy(() => import("./components/pages/SearchPage/SearchPage"));
 
 function App() {
 
@@ -87,6 +88,9 @@ function App() {
             </div>}>
 
                 <Switch>
+
+                    <Route path='/search'
+                           component={() => <SearchPage/>}/>
 
                     <Route path='/excursions' exact
                            component={() => <ExcursionsBookingPage/>}/>
