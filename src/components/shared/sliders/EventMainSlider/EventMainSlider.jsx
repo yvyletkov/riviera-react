@@ -81,7 +81,8 @@ const EventMainSlider = ({
                              activatePopup,
                              withTip = false,
                              onlyTitle = false,
-                             text = null
+                             topText = null,
+                             bottomText = null,
                          }) => {
 
     const settings = {
@@ -155,13 +156,13 @@ const EventMainSlider = ({
                     Новые программы<br/>в разработке
                 </div>}
                 <HeadlineCenter title={window.matchMedia('(max-width: 490px').matches ? titleMobile : title}/>
-                {text && <p className={s.text}>{text}</p>}
+                {topText && <p className={s.text}>{topText}</p>}
                 {manySlides ? <SliderStylesManySlider><Slider {...settings}>{items}</Slider></SliderStylesManySlider>
                     :
                     <SliderStyles>
                         <Slider {...settings}>{items}</Slider>
                     </SliderStyles>}
-                {text && <p className={s.text}>{text}</p>}
+                {bottomText && <p className={s.text}>{bottomText}</p>}
             </div>
         </div>
     );
