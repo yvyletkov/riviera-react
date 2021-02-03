@@ -34,6 +34,14 @@
   width: 100%;
   margin: 0 auto;
   //border: thin solid black;
+
+  &.withTitle {
+    padding-top: 255px;
+    height: 640px;
+    .rightBlock {
+      top: 150px
+    }
+  }
 }
 
 .wrapper.lastOfTwo .rightBlock {

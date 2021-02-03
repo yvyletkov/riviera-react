@@ -465,7 +465,6 @@ import animation3_7 from "./img/animation/3-tantsevalnye.jpg"
 import animation3_8 from "./img/animation/3-tematicheskie.jpg"
 import animation3_9 from "./img/animation/3-turniry.jpg"
 // END animationPage imports
-
 // 8march imports
 import march8img1 from "./img/march8Page/заказ-цветов.jpg"
 import march8img2 from "./img/march8Page/композиции.jpg"
@@ -477,13 +476,18 @@ import march8img7 from "./img/march8Page/живая-музыка.jpg"
 import march8img8 from "./img/march8Page/велком).jpg"
 import march8img9 from "./img/march8Page/комплимент.jpg"
 // END 8march imports
-
-
 //import sliderTheGrilled
 import theGrilledSlider1 from "./img/the-grilled/restoran-gril-2.jpg";
 import theGrilledSlider2 from "./img/the-grilled/restoran-gril-3.jpg";
 import theGrilledSlider3 from "./img/the-grilled/restoran-gril-4.jpg";
 //END sliderTheGrilled
+// crimeaTour imports
+import activnyikrymImg from "./img/crimea-tour/excursions/activnyikrym.jpg"
+import dvorcikrymImg from "./img/crimea-tour/excursions/dvorcikrym.jpg"
+import gastrokrymImg from "./img/crimea-tour/excursions/gastrokrym.jpg"
+import poznavatkrymImg from "./img/crimea-tour/excursions/poznavatkrym.jpg"
+import vinnyikrymImg from "./img/crimea-tour/excursions/vinnyikrym.jpg"
+// END crimeaTour imports
 
 
 const commonGridSlides = [
@@ -3766,33 +3770,63 @@ export const march8PageData = {
 export const crimeaTourPageData = {
     crimeaTourPageMainSlides: [
         {
-            img: march8img1,
-            title: "Заказ цветов на месте или заранее",
-            descr: '',
+            img: activnyikrymImg,
+            title: "Активный Крым",
+            descr: '1. Сафари-парк «Тайган»<br/>' +
+                '2. Долина Привидений на горе Демерджи.<br/>' +
+                '3. Крымский государственный заповедник<br/>' +
+                '4. Джип тур Мангуп-Кале<br/>' +
+                '5. Поляна Сказок и Зоопарк "Сказка"<br/>' +
+                '6. Большой Каньон Крыма и Прогулка по Ай-Петри<br/>' +
+                '7. Горными тропами Южнобережья.',
             key: 1,
         },
         {
-            img: march8img2,
-            title: "Мастер класс по составлению цветочной композиции",
-            descr: '',
+            img: dvorcikrymImg,
+            title: "Дворцы Крыма",
+            descr: '1. Воронцовский дворец<br/>' +
+                '2. Путешествие Бахчисарай. Ханский дворец<br/>' +
+                '3. Судакская крепость и бухты Нового Света<br/>' +
+                '4. Знаменитая Ливадия<br/>' +
+                '5. Великолепная Массандра<br/>' +
+                '6. Юсуповский дворец<br/>' +
+                '7. Дворец графини Гагариной',
             key: 2,
         },
         {
-            img: march8img3,
-            title: "Мастер класс по акварельному рисованию",
-            descr: '',
+            img: gastrokrymImg,
+            title: "Гастрономический Крым",
+            descr: '1. Горная сыроварня<br/>' +
+                '2. Устричная ферма<br/>' +
+                '3. Караимская кухня.<br/>' +
+                '4. Морская прогулка и обед<br/>' +
+                '5. Украинское гостеприимство.<br/>' +
+                '6. Мастер класс «Обед из местных продуктов»<br/>' +
+                '7. Форелевое хозяйство',
             key: 3,
         },
         {
-            img: march8img4,
-            title: "Мастер класс по макияжу",
-            descr: '',
+            img: poznavatkrymImg,
+            title: "Познавательный Крым",
+            descr: '1. Крымская астрофизическая обсерваторию.<br/>' +
+                '2. Никитский ботанический сад.<br/>' +
+                '3. Пещеры Чатырдага (Мраморная и Эмине-Баир-Хосар)<br/>' +
+                '4. Героический Севастополь<br/>' +
+                '5. Балаклава. Музей подводных лодок<br/>' +
+                '6. Водопад Джур-Джур и Храм-Маяк<br/>' +
+                '7. Экскурсия на Крымский солепромысел<br/>',
             key: 4,
         },
         {
-            img: march8img5,
-            title: "Фотозона",
-            descr: '',
+            img: vinnyikrymImg,
+            title: "Винный Крым",
+            descr: '1. Массандровский подвалы<br/>' +
+                '2. Шампанерия «Золотая Балка»<br/>' +
+                '3. Дегустация "По-царски" в Ливадийском дворце<br/>' +
+                '4. Винодельческое хозяйство «ALMA VALLEY»<br/>' +
+                '5. Экскурсия в подвалы «Инкермана»<br/>' +
+                '6. Виноделья Валерия Захарьина<br/>' +
+                '7. Завод шампанских вин «Новый Свет»',
             key: 5,
         },
     ],
