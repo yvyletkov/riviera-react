@@ -5,24 +5,81 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
 
-  .ya-page_js_yes .ya-site-form_inited_no {display: none;}
+  .b-head__found {
+    display: none;
+  }
 
-  #ya-site-form0 .ya-site-form__search-input {
-    padding: 18px 28px;
+  .b-head__l, .b-head__r, .b-body-items {
+    padding: 0;
   }
   
+  .g-gap-horizontal {
+    margin-left: 0 !important;
+  }
+
+  .b-serp-item__title-link {
+    font-family: "Helvetica Neue Medium", sans-serif;
+  }
+
+  .b-serp-item__text {
+    margin: 5px 0;
+  }
+
+  .ya-page_js_yes .ya-site-form_inited_no, .b-serp-item__number {
+    display: none;
+  }
+
+  #ya-site-form0 .ya-site-form__search-input-layout {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  #ya-site-form0 .ya-site-form__search-input {
+    padding: 38px 20px;
+  }
+
+  #ya-site-form0 .ya-site-form__search-input-layout-l {
+    border-radius: 6px 0 0 6px;
+    overflow: hidden;
+  }
+
+  #ya-site-form0 .ya-site-form__form .ya-site-form__submit {
+    cursor: pointer;
+    display: block;
+    font-family: "Helvetica Neue Roman", sans-serif;
+    background-color: #fe6c39;
+    padding: 18px 30px;
+    color: #fff !important;
+    border-radius: 0 6px 6px 0;
+    text-align: center;
+    transition: all 200ms;
+    border: none;
+    font-size: 16px !important;
+    margin-left: 0;
+
+    &:hover {
+      background-color: #e66133;
+      text-decoration: none;
+    }
+  }
+
   .ya-site-form__wrap {
-    border-radius: 5px;
     overflow: hidden;
   }
 
   #ya-site-form0 .ya-site-form__form .ya-site-form__input-text {
-    height: 25px;
+    //height: 25px;
     box-shadow: none;
     border: none;
-    padding: 0 10px;
+    padding: 18px 30px;
+    font-size: 16px !important;
+    //font-family: 'Helvetica Neue Medium', sans-serif;
   }
-  
+
+  .b-serp-item__links-link {
+    display: none;
+  }
+
   #ya-site-results {
     color: #000000;
     background: #FFFFFF;
@@ -57,7 +114,7 @@ const Wrapper = styled.div`
   #ya-site-results .b-copyright__link:link,
   #ya-site-results .b-serp-item__mime,
   #ya-site-results .b-pager :link {
-    color: #0033FF;
+    color: #ab4722;
   }
 
   #ya-site-results :link:hover,
@@ -79,12 +136,26 @@ const Wrapper = styled.div`
   #ya-site-results .ad {
     font-style: normal;
     font-weight: normal;
+    font-family: "Helvetica Neue Light", sans-serif;
+    font-size: 15px;
+    color: #737373;
   }
 
   #ya-site-results .b-serp-item__title-link,
   #ya-site-results .ad .ad-link {
     font-style: normal;
-    font-weight: normal;
+    font-weight: bolder;
+
+    * {
+      text-transform: uppercase;
+      font-size: 20px !important;
+      font-family: "Helvetica Neue Bold", sans-serif !important;
+      color: #171717 !important;
+    }
+
+    &:visited {
+      color: #171717 !important;
+    }
   }
 
   #ya-site-results .ad .ad-link a {
@@ -113,7 +184,7 @@ const Wrapper = styled.div`
   #ya-site-results .b-direct .url,
   #ya-site-results .b-direct .url a:link,
   #ya-site-results .b-direct .url a:visited {
-    font-size: 13px;
+    font-size: 15px;
     font-style: normal;
     font-weight: normal;
     color: #329932;
@@ -212,9 +283,15 @@ const Wrapper = styled.div`
     background: #FFFFFF;
     border-color: #E0E0E0 !important;
   }
+
+  .b-head__l {
+    display: none;
+  }
 `
 
 const SearchPage = () => {
+
+    const [state, setState] = React.useState(false)
 
 
     const initForm = function (w, d, c) {
@@ -255,23 +332,24 @@ const SearchPage = () => {
     return (<>
 
 
-
-            <section style={{marginTop: window.matchMedia('(max-width: 1024px)').matches ? '100px' : '180px'}}
+            <section style={{marginTop: window.matchMedia('(max-width: 500px)').matches ? '55px' : window.matchMedia('(max-width: 1024px)').matches ? '80px' :  '120px'}}
                      className='section'>
 
                 <Wrapper>
+
+                    <div className="ya-site-form ya-site-form_inited_no"
+                         data-bem="{&quot;action&quot;:&quot;http://localhost:3000/search&quot;,&quot;arrow&quot;:false,&quot;bg&quot;:&quot;#171717&quot;,&quot;fontsize&quot;:12,&quot;fg&quot;:&quot;#000000&quot;,&quot;language&quot;:&quot;ru&quot;,&quot;logo&quot;:&quot;rb&quot;,&quot;publicname&quot;:&quot;Поиск по rivierasunrise.ru&quot;,&quot;suggest&quot;:true,&quot;target&quot;:&quot;_self&quot;,&quot;tld&quot;:&quot;ru&quot;,&quot;type&quot;:2,&quot;usebigdictionary&quot;:true,&quot;searchid&quot;:2445728,&quot;input_fg&quot;:&quot;#000000&quot;,&quot;input_bg&quot;:&quot;#ffffff&quot;,&quot;input_fontStyle&quot;:&quot;normal&quot;,&quot;input_fontWeight&quot;:&quot;normal&quot;,&quot;input_placeholder&quot;:&quot;Что Вы хотите найти?&quot;,&quot;input_placeholderColor&quot;:&quot;#000000&quot;,&quot;input_borderColor&quot;:&quot;#cc6600&quot;}">
+                        <form action="https://yandex.ru/search/site/" method="get" target="_self"
+                              accept-charset="utf-8">
+                            <input
+                                type="hidden" name="searchid" value="2445728"/><input type="hidden" name="l10n"
+                                                                                      value="ru"/><input
+                            type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input
+                            type="submit" value="Найти"/></form>
+                    </div>
+
                     <div className={s.container}>
 
-                        <div className="ya-site-form ya-site-form_inited_no"
-                             data-bem="{&quot;action&quot;:&quot;http://localhost:3000/search&quot;,&quot;arrow&quot;:false,&quot;bg&quot;:&quot;#ff6c39&quot;,&quot;fontsize&quot;:12,&quot;fg&quot;:&quot;#000000&quot;,&quot;language&quot;:&quot;ru&quot;,&quot;logo&quot;:&quot;rb&quot;,&quot;publicname&quot;:&quot;Поиск по rivierasunrise.ru&quot;,&quot;suggest&quot;:true,&quot;target&quot;:&quot;_self&quot;,&quot;tld&quot;:&quot;ru&quot;,&quot;type&quot;:2,&quot;usebigdictionary&quot;:true,&quot;searchid&quot;:2445728,&quot;input_fg&quot;:&quot;#000000&quot;,&quot;input_bg&quot;:&quot;#ffffff&quot;,&quot;input_fontStyle&quot;:&quot;normal&quot;,&quot;input_fontWeight&quot;:&quot;normal&quot;,&quot;input_placeholder&quot;:&quot;Что Вы хотите найти?&quot;,&quot;input_placeholderColor&quot;:&quot;#000000&quot;,&quot;input_borderColor&quot;:&quot;#cc6600&quot;}">
-                            <form action="https://yandex.ru/search/site/" method="get" target="_self"
-                                  accept-charset="utf-8">
-                                <input
-                                    type="hidden" name="searchid" value="2445728"/><input type="hidden" name="l10n"
-                                                                                          value="ru"/><input
-                                type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input
-                                type="submit" value="Найти"/></form>
-                        </div>
 
                         <div id="ya-site-results"
                              data-bem="{&quot;tld&quot;: &quot;ru&quot;,&quot;language&quot;: &quot;ru&quot;,&quot;encoding&quot;: &quot;&quot;,&quot;htmlcss&quot;: &quot;1.x&quot;,&quot;updatehash&quot;: false}"/>
@@ -279,7 +357,7 @@ const SearchPage = () => {
                     </div>
 
 
-                    </Wrapper>
+                </Wrapper>
 
             </section>
 
