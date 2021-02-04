@@ -83,6 +83,7 @@ const EventMainSlider = ({
                              onlyTitle = false,
                              topText = null,
                              bottomText = null,
+                             allClosedAtStart = false
                          }) => {
 
     const settings = {
@@ -132,7 +133,7 @@ const EventMainSlider = ({
                     descr={descr}
                     popupData={popupData}
                     activatePopup={activatePopup}
-                    active={!onlyTitle ? (window.matchMedia('(max-width: 490px').matches ? false : index === 1) : false}
+                    active={!onlyTitle && !allClosedAtStart ? (window.matchMedia('(max-width: 490px').matches ? false : index === 1) : false}
                 />
             </div>
         );
@@ -210,7 +211,7 @@ const EventMainSliderItem = (props) => {
                                        style={{marginLeft: '10px'}}/>}
 
 
-                { !onlyTitle && <>
+                {!onlyTitle && <>
                     <div className={s.descr}>
                         <p dangerouslySetInnerHTML={{__html: descr}} style={{marginBottom: withButton ? '10px' : '0'}}/>
                         {withButton && <Button style={{marginTop: '17px'}} onClick={() => activatePopup(index + 1)}
@@ -221,7 +222,7 @@ const EventMainSliderItem = (props) => {
                     <div className={s.moreBtn} onClick={() => setShowDescr(!showDescr)}>
                         {showDescr ? (withButton ? '' : 'Cкрыть') : 'Подробнее'}
                     </div>
-                </> }
+                </>}
 
             </div>
 
