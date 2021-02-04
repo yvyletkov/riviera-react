@@ -74,7 +74,7 @@ const InfoSlider = ({ title = "Заголовок", subtitle = "Какой-то"
                     img={img}
                     title={title}
                     subtitle={subtitle}
-                    active={index===1}
+                    active={(title || subtitle) && index===1}
                 />
             </div>
         );

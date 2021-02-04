@@ -127,7 +127,7 @@ section.section.last {
 
 
 //FORM start
-input.input, textarea {
+input.input, textarea, select {
   position: relative;
   box-sizing: border-box;
   border-radius: 5px;
@@ -139,6 +139,9 @@ input.input, textarea {
   transition: all 200ms;
   border: 0px solid transparent;
   resize: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 
   &.error {
     padding: 15px 40px 25px;
