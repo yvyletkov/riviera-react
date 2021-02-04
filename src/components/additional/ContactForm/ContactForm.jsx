@@ -59,7 +59,7 @@ const ContactForm = ({
                          withPhone,
                          withMessage,
                          withAge,
-                         withSelect,
+                         withDate,
                          formName,
                          swalText = 'Мы получили Вашу заявку 😌',
                          textAreaPlaceholder = 'Введите Ваше сообщение',
@@ -94,7 +94,7 @@ const ContactForm = ({
             .max(2, 'Возраст указан не корректно 😢')
             .age()
             .required('Это поле тоже обязательное') : null,
-        date: withSelect && Yup.string().required('Пожалуйста, выберите дату'),
+        date: withDate && Yup.string().required('Пожалуйста, выберите дату'),
         email: withEmail ? Yup.string()
             .email('E-mail введен некорректно')
             .required('Это поле тоже обязательное') : null,
@@ -143,6 +143,20 @@ const ContactForm = ({
                 "value": values.message,
             },
         ];
+        if (withAge) data.inputs = [
+            ...data.inputs,
+            {
+                "alias": "Возраст",
+                "value": values.age,
+            },
+        ];
+        if (withDate) data.inputs = [
+            ...data.inputs,
+            {
+                "alias": "Дата",
+                "value": values.date,
+            },
+        ];
 
         request(data)
             .then((response) => {
@@ -188,7 +202,7 @@ const ContactForm = ({
             {withPhone && <Field component={Input} name="phone" type={"text"} placeholder={'Введите Ваш телефон'}/>}
             {withMessage && <Field component={Textarea} name="message" placeholder={textAreaPlaceholder}/>}
             {withAge && <Field component={Input} name="age" type={"number"} placeholder="Введите ваш возраст"/>}
-            {withSelect && <Field component={Select} name="date" type={"select"}/>}
+            {withDate && <Field component={Select} name="date" type={"select"}/>}
             <div className="agreementBlock">
                 <input className="agreementCheckbox" id="checkbox-agreement" type="checkbox" required/>
                 <label htmlFor="checkbox-agreement">

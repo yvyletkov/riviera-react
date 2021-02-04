@@ -88,7 +88,8 @@ const LanguageCampPage = () => {
                                 formName={`Форма "Приезжайте и наслаждайтесь безупречной организацией" (Узнать подробности об организации свадьбы)`}
                                 withPhone
                                 withAge
-                                withSelect
+                                withDate
+                                requestUrl={'https://language-camp.rivierasunrise.ru/language-camp'}
                                 swalText={'скоро подробности будут на указанной Вами почте!'}/>
 
 
