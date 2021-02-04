@@ -11,6 +11,9 @@ import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
 import InfoSlider from "../../shared/sliders/InfoSlider/InfoSlider";
 import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
 import ContactForm from "../../additional/ContactForm/ContactForm";
+import img from "../../../img/loveDay/4.jpg";
+import formBluredImg from "../../../img/language-camp/Group-1.png";
+import Button from "../../shared/Button/Button";
 
 
 const LanguageCampPage = () => {
@@ -26,7 +29,7 @@ const LanguageCampPage = () => {
                              bottomLine={"КАНИКУЛЫ"}
                              bannerImg={bannerImg}
                              bannerMobileImg={bannerImg}
-                             descr={'С 24 по 31 октября 2020 года. Уроки с носителями языка и экспертами ЕГЭ'}
+                             descr={'2 смены:<br/>с 20 по 27 марта<br/>с 3 по 10 апреля<br/>Уроки с носителями языка и экспертами ЕГЭ'}
                              positionBackground={'0 110px'}/>
 
         <section className='section first'>
@@ -72,34 +75,32 @@ const LanguageCampPage = () => {
         </section>
 
         <section className='section'>
-            <div className={s.languageCampOrganizationBlock}>
+            <div className={s.formBlock}>
                 <div className={s.wrapper}>
+                    <img className={s.bluredImg} src={formBluredImg} alt=""/>
+
                     <div className={s.container}>
-                        <div className={s.contentWrapper}>
-                            <h4 className={s.title}>
-                                <span>Приезжайте</span>
-                                <span>и наслаждайтесь безупречной</span>
-                                <span>организацией</span>
-                                <span>Вашей свадьбы</span>
-                            </h4>
+                        <h4 className={s.title}>
+                            <span>Запишитесь на образовательно</span>
+                            <span>развлекательную программу по </span>
+                            <span>английскому языку</span>
+                        </h4>
+                        <p>Оставьте свои контакты и мы рассчитаем стоимость отдыха с обучением</p>
 
-                            <ContactForm
-                                submitBtnText={window.matchMedia("(max-width: 768px").matches ? 'Узнать подробности' : 'Узнать подробности об организации свадьбы'}
-                                formName={`Форма "Приезжайте и наслаждайтесь безупречной организацией" (Узнать подробности об организации свадьбы)`}
-                                withPhone
-                                withAge
-                                withDate
-                                requestUrl={'https://language-camp.rivierasunrise.ru/language-camp'}
-                                swalText={'скоро подробности будут на указанной Вами почте!'}/>
+                        <ContactForm submitBtnText={'Рассчитать стоимость'}
+                                     formName={`Форма заявки со страницы Английские каникулы`}
+                                     withPhone
+                                     withAge
+                                     withDate
+                                     requestUrl={'https://language-camp.rivierasunrise.ru/language-camp'}
+                                     swalText={'очень скоро мы свяжемся с Вами и сообщим все подробности'}/>
 
-
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section className='section'>
+        <section>
             <HeadlineCenter title={"ПРОГРАММЫ ОБУЧЕНИЯ"} />
             <div className={s.programsBlock}>
                 <div className={s.wrapper}>
@@ -110,8 +111,14 @@ const LanguageCampPage = () => {
                                 <li>4 занятия английским языком в день с носителями языка</li>
                                 <li>Занятия в первой половине дня, с 9.00 до 12.30 с небольшим перерывом</li>
                             </ul>
-                            <p>Стоимость обучения: <b>15 000 руб/смена</b></p>
                             <p>20 уроков английского языка в неделю</p>
+                            <div className={s.priceBlock}>
+                                <p>Стоимость:</p>
+                                <p className={s.price}>15 000 &#8381;/смена</p>
+                            </div>
+                            <Button text="Подробнее"
+                                    link="#"
+                                    style={{maxWidth: "270px", margin: "0 auto", width:"100%"}} />
                         </div>
 
                         <div className={s.card}>
@@ -120,9 +127,17 @@ const LanguageCampPage = () => {
                                 <li>2 урока английского языка в день с носителями языка</li>
                                 <li>2 урока подготовки к экзаменам ЕГЭ/ОГЭ в день, с экспертами ЕГЭ</li>
                             </ul>
-                            <p>Максимальное количество человек в группе - 15</p>
-                            <p>Стоимость обучения: <b>15 000 руб/смена</b></p>
-                            <p>20 уроков английского языка в неделю</p>
+                            <div>
+                                <p>Максимальное количество человек в группе - 15</p>
+                                <p>20 уроков английского языка в неделю</p>
+                            </div>
+                            <div className={s.priceBlock}>
+                                <p>Стоимость:</p>
+                                <p className={s.price}>15 000 &#8381;/смена</p>
+                            </div>
+                            <Button text="Подробнее"
+                                    link="#"
+                                    style={{maxWidth: "270px", margin:"0 auto", width:"100%"}}/>
                         </div>
                     </div>
                 </div>
