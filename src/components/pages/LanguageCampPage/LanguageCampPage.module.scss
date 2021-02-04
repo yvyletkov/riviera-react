@@ -64,7 +64,6 @@
 
     img {
       width: 500px;
-      height: 595px;
       object-fit: cover;
       border-radius: 5px;
       box-shadow: -9.629px 12.778px 27px 0px rgba(23, 23, 23, 0.09);
@@ -267,7 +266,7 @@
       margin: 0 auto;
       overflow: hidden;
       display: flex;
-      padding: 15px;
+      padding: 35px;
       //flex-wrap: nowrap;
 
       .card {
@@ -277,6 +276,10 @@
         box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,.1), 0 0.9375rem 1.40625rem rgba(90,97,105,.1), 0 0.25rem 0.53125rem rgba(90,97,105,.12), 0 0.125rem 0.1875rem rgba(90,97,105,.1);
         border-radius: .625rem;
         padding: 40px;
+        display: flex;
+        flex-direction: column;
+        height: 350px;
+        justify-content: space-between;
 
         &:first-of-type {
           margin-right: 30px;
@@ -294,7 +297,7 @@
 
         ul {
           list-style: none;
-          margin: 20px 0;
+          margin: 20px 0 0;
           padding: 0;
 
           li {
@@ -313,14 +316,40 @@
         p {
           font-size: 16px;
           font-family: "Helvetica Neue Light", Arial, sans-serif;
+          text-align: center;
+        }
 
-          &:nth-of-type(2) {
-            margin: 10px 0;
+        .priceBlock {
+          p {
+            font-size: 20px;
+            font-family: "Helvetica Neue Light", Arial, serif;
+            text-align: center;
+          }
+
+          .price {
+            text-align: center;
+            font-size: 28px;
+            font-family: "Helvetica Neue Bold", sans-serif;
+            line-height: 1;
+            color:#ff6c39;
+            margin-top: 10px;
+
+            @media screen and (max-width: 992px) {
+              font-size: 26px;
+            }
+          }
+
+          @media screen and (max-width: 992px) {
+            margin: 15px 0;
           }
         }
 
+
+
         @media screen and (max-width: 992px) {
           max-width: 100%;
+          padding: 25px;
+          height: unset;
         }
       }
 
@@ -331,20 +360,22 @@
   }
 }
 
-.languageCampOrganizationBlock {
+.formBlock {
   .wrapper {
     max-width: 1920px;
+    position: relative;
+
     width: 100%;
-    height: 700px;
+    height: 900px;
     margin: 0 auto;
-    background: center no-repeat url(../../../img/events/wedding/weddingOrganizationBlock.jpg);
+    background: center no-repeat url(../../../img/language-camp/Group-2.jpg);
     background-size: cover;
+
 
     @media (max-width: 500px) {
       height: unset;
-      background: center no-repeat url(../../../img/events/wedding/weddingOrganizationBlock-mob.jpg);
+      background: center no-repeat url(../../../img/language-camp/Group-2.jpg);
       background-size: cover;
-      background-position: 0px;
     }
 
     .container {
@@ -354,125 +385,101 @@
       margin: 0 auto;
       padding: 145px 0 0 35px;
 
-      @media (max-width: 1200px) {
-        padding: 100px 35px 0;
-      }
-
       @media (max-width: 500px) {
         padding: 60px 20px 50px;
       }
 
-      .contentWrapper {
+      h4.title {
 
-        width: 46%;
-        float: right;
+        span {
+          text-transform: uppercase;
+          display: block;
+          line-height: 1.6;
+        }
 
-        h4.title {
+        span:first-of-type {
+          text-transform: none;
+          font-family: "Helvetica Neue Light", sans-serif;
+          font-size: 27px;
+          position: relative;
+          width: fit-content;
 
-          span {
-            font-family: "Helvetica Neue Black", sans-serif;
-            text-transform: uppercase;
+          &:after {
+            content: "";
             display: block;
-            line-height: 1.6;
+            position: absolute;
+            width: 60px;
+            height: 1px;
+            background-color: #171717;
+            top: 40%;
+            right: -70px;
           }
+        }
 
+        span:nth-child(2) {
+          font-family: "Helvetica Neue Black", sans-serif;
+          font-size: 24px;
+        }
+
+        span:last-of-type {
+          font-family: "Helvetica Neue Black", sans-serif;
+          font-size: 50px;
+          line-height: 1.2;
+          margin-bottom: 20px;
+        }
+
+        @media (max-width: 500px) {
           span:first-of-type {
-            text-transform: none;
-            font-family: "Helvetica Neue Medium", sans-serif;
-            font-size: 27px;
-            position: relative;
-            width: fit-content;
-
-            &:after {
-              content: "";
-              display: block;
-              position: absolute;
-              width: 60px;
-              height: 1px;
-              background-color: #171717;
-              top: 40%;
-              right: -70px;
-            }
+            font-size: 16px;
           }
-
           span:nth-child(2) {
-            font-size: 24px;
+            font-size: 4.6vw;
           }
-
-          span:nth-child(3) {
-            font-size: 60px;
-            line-height: 1.2;
-          }
-
           span:last-of-type {
-            background-color: #ffbb28;
-            width: fit-content;
-            color: white;
-            padding: 2px 18px;
-            font-size: 32px;
-            margin-bottom: 40px;
-            height: 1.4em;
-          }
-
-          @media (max-width: 500px) {
-            span:first-of-type {
-              font-size: 16px;
-            }
-            span:nth-child(2) {
-              font-size: 4.3vw;
-            }
-            span:nth-child(3) {
-              font-size: 10vw;
-            }
-            span:last-of-type {
-              font-size: 5.3vw;
-            }
+            font-size: 9.8vw;
           }
         }
-
-        p {
-          font-family: "Helvetica Neue Roman", sans-serif;
-          font-size: 16px;
-          max-width: 390px;
-          margin-bottom: 30px;
-
-          @media (max-width: 500px) {
-            max-width: 100%;
-          }
-        }
-
-        form {
-          display: flex;
-          justify-content: space-between;
-          flex-wrap: wrap;
-
-          div {
-            width: 48%;
-            margin-bottom: 25px;
-          }
-
-          a {
-            flex-grow: 1;
-          }
-
-          @media (max-width: 500px) {
-            margin-top: 250px;
-            width: 100%;
-
-            div {
-              width: 100%;
-              margin-bottom: 10px;
-            }
-          }
-        }
-
-        @media (max-width: 1200px) {
-          width: 100%;
-          float: none;
-        }
-
       }
 
+      p {
+        font-family: "Helvetica Neue Roman", sans-serif;
+        font-size: 16px;
+        max-width: 390px;
+        margin-bottom: 30px;
+
+        @media (max-width: 500px) {
+          max-width: 100%;
+        }
+      }
+
+      form {
+        width: 360px;
+
+        input, select {
+          width: 100%;
+          margin-bottom: 25px;
+        }
+
+        @media (max-width: 500px) {
+          width: 100%;
+          margin-top: 30px;
+
+          input {
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+    }
+  }
+
+  .bluredImg {
+    position: absolute;
+    top: -92px;
+    left: 0;
+
+    @media screen and (max-width: 500px) {
+      display: none;
     }
   }
 }
