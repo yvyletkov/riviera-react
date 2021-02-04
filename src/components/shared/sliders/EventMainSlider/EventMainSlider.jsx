@@ -119,13 +119,13 @@ const EventMainSlider = ({
     };
 
     const items = slides.map((item, index) => {
-        const {img, title, key, descr, popupData} = item;
+        const {img, title, descr, popupData} = item;
         return (
-            <div className="SliderElement" key={key}>
+            <div className="SliderElement" key={index}>
                 <EventMainSliderItem
                     onlyTitle={onlyTitle}
                     withTip={withTip}
-                    key={key}
+                    key={index}
                     index={index}
                     withButton={withButton}
                     img={img}

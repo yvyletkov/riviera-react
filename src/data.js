@@ -422,6 +422,9 @@ import afishaImg6 from "./img/afisha/6.jpg";
 import afishaImg14feb from "./img/afisha/14feb.jpg";
 import afishaImg23feb from "./img/afisha/23feb.jpg";
 import afishaImg8mar from "./img/afisha/8mar.jpg";
+import afishaBelov from "./img/afisha/belov.jpg";
+import afishaFilimonova from "./img/afisha/filimonova.jpg";
+import afishaSafronova from "./img/afisha/safronova.jpg";
 // END afisha imports
 // LOVE DAY imports
 import loveDaySlide1 from "./img/loveDay/1.1.jpg"
@@ -874,6 +877,34 @@ const commonExtraServicesSlides = [
 ]; // доп услуги
 const commonAfishaSlides = [
     {
+        img: afishaBelov,
+        title: "Джаз",
+        subtitle: "Белов<br><span style='font-size: 70px'>Ян</span>",
+        time: "19:30",
+        date: "12 февраля, пятница",
+        campus: "Ресторан",
+        campusName: "«The Grilled»",
+        key: 4,
+    },
+    {
+        img: afishaFilimonova,
+        title: "Вокал",
+        subtitle: "Филимонова<br><span style='font-size: 50px'>Ирина</span>",
+        time: "19:30",
+        date: "13 февраля, суббота",
+        campus: "Ресторан",
+        campusName: "«The Grilled»",
+    },
+    {
+        img: afishaSafronova,
+        title: "Вокал",
+        subtitle: "Сафронова<br><span style='font-size: 50px'>Татьяна</span>",
+        time: "19:30",
+        date: "14 февраля, воскресенье",
+        campus: "Ресторан",
+        campusName: "«The Grilled»",
+    },
+    {
         img: afishaImg1,
         title: "Тренировки",
         subtitle: "По плаванию<br/>для взрослых",
@@ -882,7 +913,6 @@ const commonAfishaSlides = [
         campus: "Корпус",
         campusName: "Modern",
         link: '/pool-schedule',
-        key: 1,
     },
     {
         img: afishaImg2,
@@ -893,8 +923,6 @@ const commonAfishaSlides = [
         campus: "Ресторан",
         campusName: "«The Grilled»",
         link: '/the-grilled',
-        key: 2,
-
     },
     {
         img: afishaImg14feb,
@@ -916,7 +944,6 @@ const commonAfishaSlides = [
         campus: "",
         campusName: "23 февраля",
         link: '/23-february',
-        key: 4,
     },
     {
         img: afishaImg8mar,
@@ -927,7 +954,6 @@ const commonAfishaSlides = [
         campus: "",
         campusName: "8 марта",
         link: '/8-march',
-        key: 5,
     },
 ];
 const commonClassicCampusSlides = [
@@ -3510,43 +3536,36 @@ export const medicalSpaPage = {
             img: medicalSpaPopupImgDihanieZdorovya,
             title: "Дышать - здорово",
             descr: 'Для гостей, желающих получить лечение и оздоровление, программа позволяет применить наиболее эффективные и безопасные виды лечебных процедур',
-            key: 1,
         },
         {
             img: medicalSpaPopupImgVosstan,
             title: "Восстановление",
             descr: 'Программа рекомендуется широкому кругу людей с усталостью, раздражением, стрессом, низким уровнем иммунитета, концентрации и работоспособности. \n',
-            key: 2,
-        },
-        {
-            img: medicalSpaPopupImgStress,
-            title: "Управление стрессом",
-            descr: 'Программа показана людям с хроническим стрессом, страдающим вегетососудистой дистонией, неврастенией, депрессией и неврозами.',
-            key: 3,
-        },
-        {
-            img: medicalSpaPopupImgDetox,
-            title: "Детокс",
-            descr: 'Программа предназначена для людей с привычкой неправленого питания, страдающие от избыточной тяги к кофе, сладкому, табаку или алкоголю. Также людям, живущим в городах с неблагоприятной экологической обстановкой.\n',
-            key: 4,
-        },
-        {
-            img: medicalSpaPopupImgDvizhenie,
-            title: "Свобода движения",
-            descr: 'Программа предназначена людям с недостаточным уровнем активности в повседневной жизни, ведущим сидячий образ жизни, утратившим мышечный тонус\n',
-            key: 5,
-        },
-        {
-            img: medicalSpaPopupImgSerdce,
-            title: "Сильное сердце",
-            descr: 'Программа будет полезна людям, страдающим хроническими заболеваниями сердечно сосудистой системы: гипертоническая болезнь, ишемической болезни сердца, заболевания артерий и вен.\n',
-            key: 6,
         },
         {
             img: medicalSpaPopupImgSpina,
             title: "Здоровая спина",
             descr: 'Программа разработана для людей ведущие сидячий образ жизни, беспокоящих остеохондроз, сколиоз, грыжа межпозвоночных дисков и спондилез.\n',
-            key: 7,
+        },
+        {
+            img: medicalSpaPopupImgStress,
+            title: "Управление стрессом",
+            descr: 'Программа показана людям с хроническим стрессом, страдающим вегетососудистой дистонией, неврастенией, депрессией и неврозами.',
+        },
+        {
+            img: medicalSpaPopupImgDetox,
+            title: "Детокс",
+            descr: 'Программа предназначена для людей с привычкой неправленого питания, страдающие от избыточной тяги к кофе, сладкому, табаку или алкоголю. Также людям, живущим в городах с неблагоприятной экологической обстановкой.\n',
+        },
+        {
+            img: medicalSpaPopupImgDvizhenie,
+            title: "Свобода движения",
+            descr: 'Программа предназначена людям с недостаточным уровнем активности в повседневной жизни, ведущим сидячий образ жизни, утратившим мышечный тонус\n',
+        },
+        {
+            img: medicalSpaPopupImgSerdce,
+            title: "Сильное сердце",
+            descr: 'Программа будет полезна людям, страдающим хроническими заболеваниями сердечно сосудистой системы: гипертоническая болезнь, ишемической болезни сердца, заболевания артерий и вен.\n',
         },
     ],
     gallerySlides: commonGallerySlides,
@@ -3666,7 +3685,6 @@ export const afishaPageData = {
             date: "21 марта",
             campus: "Ресторан",
             campusName: "«The Grilled»",
-            key: 4,
         },
         {
             img: animation1_3,
@@ -3676,7 +3694,6 @@ export const afishaPageData = {
             date: "",
             campus: "АКВАЗОНА",
             campusName: "",
-            key: 5,
         },
         {
             img: animation1_5,
@@ -3686,7 +3703,6 @@ export const afishaPageData = {
             date: "20 & 27 марта",
             campus: "Ресторан",
             campusName: "«The Grilled»",
-            key: 6,
         },
         {
             img: animation1_4,
@@ -3696,7 +3712,6 @@ export const afishaPageData = {
             date: "6 марта",
             campus: "Ресторан",
             campusName: "«The Grilled»",
-            key: 7,
         },
         {
             img: animation1_1,
@@ -3706,7 +3721,6 @@ export const afishaPageData = {
             date: "17 марта",
             campus: "Ресторан",
             campusName: "«The Grilled»",
-            key: 8,
         },
     ]
 }

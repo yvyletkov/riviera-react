@@ -11,7 +11,13 @@ import {NavLink} from "react-router-dom";
 import Menu from "./Menu/Menu";
 
 
-const Link = ({title, style, icon, link = '#', extraClass = null, onClickHandler}) => {
+const Link = ({title, style, icon, link = '#', extraClass = null, onClickHandler, href = ''}) => {
+    if (href) return <a href={href} onClick={onClickHandler ? onClickHandler : null} style={style}
+                        className={s.link + ' ' + extraClass}>
+        <img src={icon} alt={title}/>
+        {title ? <div>{title}</div> : null}
+    </a>
+
     return <NavLink onClick={onClickHandler ? onClickHandler : null} style={style} to={link}
                     className={s.link + ' ' + extraClass}>
         <img src={icon} alt={title}/>
@@ -70,8 +76,8 @@ const Header = () => {
                             <NavLink to={'/'}><img src={logo} alt="Riviera Sunrise"/></NavLink>
                         </div>
                         <div className={s.rightBlock}>
-                            {/*<Link onClickHandler={handleLinkClick} style={{cursor: 'not-allowed'}} icon={search}*/}
-                            {/*      extraClass={s.searchIcon} link={""}/>*/}
+                            <Link icon={search}
+                                  extraClass={s.searchIcon} href={"/search"}/>
                             <div className={s.contacts}>
                                 <a href={"tel:+78005509824"}
                                          className={s.link + ' ' + s.number}>

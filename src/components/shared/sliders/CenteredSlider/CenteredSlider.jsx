@@ -49,9 +49,9 @@ const CenteredSlider = ({title = "Какой-то заголовок", slides, t
 
 
     const items = slides.map((item, index) => {
-        const {img, link, title, subtitle, time, date, campus, campusName, key, subsubtitle='', fontsizeSubsubtitle='', capacity, area} = item;
+        const {img, link, title, subtitle, time, date, campus, campusName, subsubtitle='', fontsizeSubsubtitle='', capacity, area} = item;
         return (
-            <div className="sliderElement" key={key}>
+            <div className="sliderElement" key={index}>
                 <CenteredSliderItem
                     desaturated={desaturated}
                     active={currentSlideIndex === index}
