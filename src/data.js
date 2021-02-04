@@ -502,6 +502,10 @@ import food1 from "./img/language-camp/shveden.png";
 import food2 from "./img/language-camp/tavrika.png";
 import food3 from "./img/language-camp/grill.png";
 import food4 from "./img/language-camp/mangup.png";
+import animations1 from "./img/language-camp/ch1.jpg";
+import animations2 from "./img/language-camp/ch2.jpg";
+import animations3 from "./img/language-camp/ch3.jpg";
+import animations4 from "./img/language-camp/ch4.jpg";
 //END sliderLanguageCamp
 
 
@@ -2410,7 +2414,7 @@ export const LanguageCampData = {
         },
         {
             img: excursion2,
-            subtitle: "Ливадинский",
+            subtitle: "Ливадийский",
             title: "дворец",
             key: 2,
         },
@@ -2424,6 +2428,24 @@ export const LanguageCampData = {
             img: excursion4,
             subtitle: "Канатная",
             title: "дорога",
+            key: 4,
+        },
+    ],
+    animations: [
+        {
+            img: animations1,
+            key: 1,
+        },
+        {
+            img: animations2,
+            key: 2,
+        },
+        {
+            img: animations3,
+            key: 3,
+        },
+        {
+            img: animations4,
             key: 4,
         },
     ],

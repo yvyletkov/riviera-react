@@ -1,5 +1,5 @@
 import React from "react";
-import {eventPagesData, homePageData, LanguageCampData} from "../../../data";
+import {eventPagesData, LanguageCampData} from "../../../data";
 import MapSection from "../../shared/MapSection/MapSection";
 import VacationsPageBanner from "../../shared/VacationsPageBanner/VacationsPageBanner";
 import bannerImg from "../../../img/language-camp/main.png";
@@ -7,10 +7,10 @@ import img1 from "../../../img/language-camp/lc-1.jpg";
 import s from "./LanguageCampPage.module.scss";
 import Headline from "../../shared/Headline/Headline";
 import EventMainSlider from "../../shared/sliders/EventMainSlider/EventMainSlider";
-import decisionBlockImg from "../../../img/mice/conference/14.jpg";
 import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
 import InfoSlider from "../../shared/sliders/InfoSlider/InfoSlider";
 import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
+import ContactForm from "../../additional/ContactForm/ContactForm";
 
 
 const LanguageCampPage = () => {
@@ -20,7 +20,7 @@ const LanguageCampPage = () => {
 
     return <>
         <VacationsPageBanner fontSize={["70px", "57px"]}
-                             fontSizeMobile={["14.7vw", "10.5vw"]}
+                             fontSizeMobile={["11.7vw", "10.5vw"]}
                              subtitle={'Riviera Sunrise Resort & SPA'}
                              topLine={"АНГЛИЙСКИЕ"}
                              bottomLine={"КАНИКУЛЫ"}
@@ -72,6 +72,33 @@ const LanguageCampPage = () => {
         </section>
 
         <section className='section'>
+            <div className={s.languageCampOrganizationBlock}>
+                <div className={s.wrapper}>
+                    <div className={s.container}>
+                        <div className={s.contentWrapper}>
+                            <h4 className={s.title}>
+                                <span>Приезжайте</span>
+                                <span>и наслаждайтесь безупречной</span>
+                                <span>организацией</span>
+                                <span>Вашей свадьбы</span>
+                            </h4>
+
+                            <ContactForm
+                                submitBtnText={window.matchMedia("(max-width: 768px").matches ? 'Узнать подробности' : 'Узнать подробности об организации свадьбы'}
+                                formName={`Форма "Приезжайте и наслаждайтесь безупречной организацией" (Узнать подробности об организации свадьбы)`}
+                                withPhone
+                                withAge
+                                withSelect
+                                swalText={'скоро подробности будут на указанной Вами почте!'}/>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section className='section'>
             <HeadlineCenter title={"ПРОГРАММЫ ОБУЧЕНИЯ"} />
             <div className={s.programsBlock}>
                 <div className={s.wrapper}>
@@ -101,7 +128,7 @@ const LanguageCampPage = () => {
             </div>
         </section>
 
-        <section className='section'>
+        <section>
             <InfoSlider subtitle={'Экскурсионная'}
                             title={'программа'}
                             slides={LanguageCampData.excursions}
@@ -110,15 +137,15 @@ const LanguageCampPage = () => {
                             "Стоимость экскурсионной программы: 7 500 руб за 1 человека"}/>
         </section>
 
-        <section className='section'>
+        <section>
             <InfoSlider subtitle={'Программа'}
                             title={'анимации'}
-                            slides={homePageData.specialsSlides}
+                            slides={LanguageCampData.animations}
                             text={"Детские развлекательные программы в отеле: спортивные состязания, веселые конкурсы и настольные игры для детей нескольких возрастных групп.<br/><br/>" +
                             "Команда аниматоров подготовила веселое путешествие по странам мира во время каникул"}/>
         </section>
 
-        <section className='section'>
+        <section>
             <InfoSlider subtitle={'Изысканная еда'}
                         title={'для Вас'}
                         slides={LanguageCampData.food}
@@ -131,40 +158,6 @@ const LanguageCampPage = () => {
 
             <RoomsSlider lastOfTwo={true} subtitle={'Корпус'} title={'Классик'}
                          textContent={eventPagesData.classicDescr} data={eventPagesData.classicSlides}/>
-        </section>
-
-        <section className='section'>
-            <div className={s.conferencesDecisionBlock}>
-                <div className={s.wrapper}>
-                    <div className={s.grid}>
-                        <div className={s.imageBlock}>
-                            <img src={decisionBlockImg} alt="Riviera Sunrise"/>
-                        </div>
-                        <div className={s.textBlock}>
-                            <div className={s.textContent}>
-                                <Headline subtitle={'«The Grilled»'} title={'мир экзотических блюд'}/>
-                                <p>
-                                    Приглашаем Вас в увлекательный мир экзотических блюд, ярких красок, вкусов и запахов
-                                    в ресторан «The Grilled», каждый день с 12:00 до 22:00 часов
-                                    Вас ждет высококлассное облуживание, а каждый вечер выходного дня атмосферу дополнит
-                                    живая музыка.
-                                </p>
-
-                                <p>
-                                    <b>Бронирование столов по телефону</b>
-                                </p>
-
-                                <p>+7 (978) 905-18-52</p>
-
-                                <p><b>Адрес</b></p>
-
-                                <p>Алушта, ул. Ленина, 2</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
 
         <section className='section last'>

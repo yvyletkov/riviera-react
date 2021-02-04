@@ -10,12 +10,31 @@ import swal from 'sweetalert2';
 
 const Input = ({
                    field,
+                   type,
                    form: {touched, errors},
                    ...props
                }) => {
     const classNames = cx('input', {'success': touched[field.name] && !errors[field.name]}, {'error': touched[field.name] && errors[field.name]})
     return <div style={{position: 'relative'}}>
-        <input type="text" className={classNames} {...field} {...props} />
+        <input type={type} className={classNames} {...field} {...props} />
+        {touched[field.name] &&
+        errors[field.name] && <div className="error">{errors[field.name]}</div>}
+    </div>
+};
+
+const Select = ({
+                   field,
+                   type,
+                   form: {touched, errors},
+                   ...props
+               }) => {
+    const classNames = cx('input', {'success': touched[field.name] && !errors[field.name]}, {'error': touched[field.name] && errors[field.name]})
+    return <div style={{position: 'relative'}}>
+        <select type={type} style={{color:'#bababa'}} className={classNames} {...field} {...props} >
+            <option value="default" hidden selected>Выберите дату</option>
+            <option value="Дата 20.03-27.03">с 20 по 27 марта </option>
+            <option value="Дата 3.04-10.04">с 3 по 10 апреля</option>
+        </select>
         {touched[field.name] &&
         errors[field.name] && <div className="error">{errors[field.name]}</div>}
     </div>
@@ -34,12 +53,29 @@ const Textarea = ({
     </div>
 };
 
-const ContactForm = ({submitBtnText, withEmail, withPhone, withMessage, formName, swalText = 'Мы получили Вашу заявку 😌', textAreaPlaceholder = 'Введите Ваше сообщение', requestUrl, ...props}) => {
+const ContactForm = ({
+                         submitBtnText,
+                         withEmail,
+                         withPhone,
+                         withMessage,
+                         withAge,
+                         withSelect,
+                         formName,
+                         swalText = 'Мы получили Вашу заявку 😌',
+                         textAreaPlaceholder = 'Введите Ваше сообщение',
+                         requestUrl, ...props}) => {
 
     const rePhoneNumber = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
+    const reAge = /^[1-9]?[0-9]{1}$|^100$/;
     Yup.addMethod(Yup.string, "phone", function() {
         return this.test("phone", "Некорректный номер", value =>
             rePhoneNumber.test(value)
+        );
+    });
+
+    Yup.addMethod(Yup.string, "age", function() {
+        return this.test("age", "Некорректный возраст", value =>
+            reAge.test(value)
         );
     });
 
@@ -53,6 +89,12 @@ const ContactForm = ({submitBtnText, withEmail, withPhone, withMessage, formName
             .max(16, 'Слишком длинный номер телефона 😢')
             .phone()
             .required('Это поле тоже обязательное') : null,
+        age: withAge ? Yup.string()
+            .min(1, 'Введите корректный возраст')
+            .max(2, 'Возраст указан не корректно 😢')
+            .age()
+            .required('Это поле тоже обязательное') : null,
+        date: withSelect && Yup.string().required('Пожалуйста, выберите дату'),
         email: withEmail ? Yup.string()
             .email('E-mail введен некорректно')
             .required('Это поле тоже обязательное') : null,
@@ -142,9 +184,11 @@ const ContactForm = ({submitBtnText, withEmail, withPhone, withMessage, formName
         onSubmit={onSubmit}>
         <Form>
             <Field component={Input} name="name" placeholder={'Введите Ваше имя'}/>
-            {withEmail && <Field component={Input} name="email" placeholder={'Введите Ваш E-mail'}/>}
-            {withPhone && <Field component={Input} name="phone" placeholder={'Введите Ваш телефон'}/>}
+            {withEmail && <Field component={Input} name="email" type={"text"} placeholder={'Введите Ваш E-mail'}/>}
+            {withPhone && <Field component={Input} name="phone" type={"text"} placeholder={'Введите Ваш телефон'}/>}
             {withMessage && <Field component={Textarea} name="message" placeholder={textAreaPlaceholder}/>}
+            {withAge && <Field component={Input} name="age" type={"number"} placeholder="Введите ваш возраст"/>}
+            {withSelect && <Field component={Select} name="date" type={"select"}/>}
             <div className="agreementBlock">
                 <input className="agreementCheckbox" id="checkbox-agreement" type="checkbox" required/>
                 <label htmlFor="checkbox-agreement">
