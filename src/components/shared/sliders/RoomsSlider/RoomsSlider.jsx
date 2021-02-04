@@ -134,7 +134,7 @@ const RoomsSlider = ({title = "Заголовок", subtitle = "Какой-то"
         <div ref={sliderWrapperRef} className={classnames}>
             <div className={(blockTitle && window.matchMedia('(min-width: 1024px)').matches) ? s.container + ' ' + s.withTitle : s.container}>
 
-                { window.matchMedia('(min-width: 1024px)').matches ? (blockTitle && <HeadlineCenter style={{position: 'absolute', top: 'px', left: '50%', transform: 'translateX(-50%)'}} title={blockTitle}/>) : null }
+                { window.matchMedia('(min-width: 1024px)').matches ? (blockTitle && <HeadlineCenter style={{position: 'absolute', top: '60px', left: '50%', transform: 'translateX(-50%)'}} title={blockTitle}/>) : null }
 
                 <div className={s.leftBlock}>
                     <Headline subtitle={subtitle} title={title}/>

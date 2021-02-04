@@ -15,6 +15,8 @@ import {NavLink} from "react-router-dom";
 import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
 import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
 import FoodBlock from "../../shared/FoodBlock/FoodBlock";
+import Accordeon from "../../shared/Accordeon/Accordeon";
+import CirqleTip from "../../shared/CirqleTip/CirqleTip";
 
 const ProgramsBlock = styled.div`
   .container {
@@ -27,6 +29,11 @@ const ProgramsBlock = styled.div`
     > p {
       font-size: 15px;
     }
+  }
+  
+  .flex-wrapper {
+    display: flex;
+    justify-content: center;
   }
 
   .programs {
@@ -41,11 +48,15 @@ const ProgramsBlock = styled.div`
 
     p {
       font-size: 15px;
-      margin-bottom: 80px;
-      
+      margin-bottom: 20px;
+
       @media (max-width: 768px) {
         margin-bottom: 40px;
       }
+    }
+
+    .welcome-text {
+      margin-bottom: 40px;
     }
 
 
@@ -57,28 +68,28 @@ const ProgramsBlock = styled.div`
     .program-block {
       position: relative;
       width: 385px;
-      height: 545px;
+      //height: 545px;
       background-color: rgb(255, 255, 255);
       box-shadow: -9.08px 17.82px 49px 0px rgba(23, 23, 23, 0.11);
     }
 
 
     .program-block__img {
-      width: calc(100% + 36px);
-      margin-left: -18px;
+      width: calc(100% + 50px);
+      margin-left: -25px;
       margin-bottom: 24px;
-      height: 175px;
+      height: 210px;
       object-fit: cover;
     }
 
     .program-block__text {
       text-align: justify;
       font-size: 14px !important;
-      line-height: 17px;
+      line-height: 1.3;
     }
 
     .program-block__content {
-      padding: 45px 18px 0;
+      padding: 30px 25px 0;
     }
 
     .programs-block__subtitle {
@@ -92,7 +103,7 @@ const ProgramsBlock = styled.div`
       white-space: nowrap;
       text-align: center;
       font-size: 28px;
-      margin-bottom: 15px;
+      margin-bottom: 25px;
       line-height: 1.4;
     }
 
@@ -113,62 +124,54 @@ const ProgramsBlock = styled.div`
       top: 5px;
     }
 
-    .program-block__bottom {
+    .program-block__bottom-btns {
       text-align: center;
       display: flex;
       justify-content: center;
       box-sizing: border-box;
-      position: absolute;
+      //position: absolute;
       bottom: 0;
       width: 100%;
-      padding: 0 29px 62px;
-      
-   
+      padding: 0 5px;
+      margin-bottom: 19px;
     }
 
-    .program-block__bottom.second {
-      padding-bottom: 105px;
-    }
-
-
-    .program-block__bottom__text {
+    .program-block__bottom-text {
       font-size: 11px;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 10px;
       width: 95%;
-      line-height: 12px;
-      position: absolute;
-      bottom: 21px;
-      left: 50%;
-      transform: translateX(-50%);
+      line-height: 1.3;
 
       a {
-        display: block;
+        //display: block;
         font-size: 13px;
-        margin: 5px 0!important;
+        line-height: 2;
+        margin: 5px 7px !important;
+
         &:last-child {
           margin-bottom: 0 !important;
         }
       }
     }
 
-    .program-block__bottom__text.second {
+    .program-block__bottom-text.second {
       width: 98%;
     }
 
 
-    .program-block__price {
-      font-size: 25px;
-      margin-bottom: 29px;
-    }
+    //.program-block__price {
+    //  font-size: 25px;
+    //  margin-bottom: 29px;
+    //}
 
-    .program-block__price-absolute {
-      position: absolute;
-      top: 25px;
-      left: 50%;
+    .program-block__price {
       color: #9e9e9e;
-      transform: translateX(-50%);
-      font-size: 17px;
+      font-size: 20px;
       font-weight: 600 !important;
       width: fit-content;
+      margin: 0 auto 15px;
     }
 
     .bid__button {
@@ -212,12 +215,16 @@ const ProgramsBlock = styled.div`
     }
 
   }
-  
+
   @media (max-width: 767px) {
     .container {
       box-sizing: border-box;
     }
-    
+
+    .program-block__text {
+      margin-bottom: 20px !important;
+    }
+
     .program-blocks-wrapper {
       flex-wrap: wrap;
     }
@@ -243,6 +250,8 @@ const ProgramsBlock = styled.div`
 const CrimeaTourPage = () => {
 
     React.useEffect(() => document.title = `Незабываемый тур в Крым – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
+    const [accordeonStatus, setAccordeonStatus] = React.useState(false)
 
 
     return <>
@@ -277,32 +286,38 @@ const CrimeaTourPage = () => {
                         </p>
 
                     </div>
-                    <img  src={img1} alt={"Лучший праздник"}/>
+                    <img src={img1} alt={"Лучший праздник"}/>
 
                 </div>
             </div>
         </section>
 
         <ProgramsBlock>
-            <HeadlineCenter title={'Варианты отдыха для Вас'}/>
+            <div className="flex-wrapper">
+                <HeadlineCenter title={'Варианты отдыха для Вас'} style={{width: 'fit-content', display: 'block', margin: '0 0 50px'}}/>
+                <CirqleTip forDesktop={true} onClick={() => setAccordeonStatus((status) => !status)} accordeonStatus={accordeonStatus}
+                style={{marginLeft: '10px', position: 'relative', top: '5px'}}/>
+            </div>
+
             <section className="programs section">
                 <div className='container'>
-                    <p>
-                        Каждый день <b>Вы сами можете выбрать одно из приключений</b>, и отправится туда в составе
-                        экскурсионной
-                        группы
-                        или выбрать индивидуальный тур, исходя из Ваших предпочтений.<br/><br/>
-                        Бронирование экскурсий возможно при бронировании проживания.<br/><br/>
-                        Наш консьерж с удовольствием поможет Вам выбрать направление и тур, с учетом Вашего свободного
-                        времени,
-                        интересующего направления, в необходимые Вам даты.
-
-                    </p>
+                    <Accordeon forDesktop={true} withBtn={false} zeroHeight status={accordeonStatus}>
+                        <p className='welcome-text'>
+                            Каждый день <b>Вы сами можете выбрать одно из приключений</b>, и отправится туда в составе
+                            экскурсионной
+                            группы
+                            или выбрать индивидуальный тур, исходя из Ваших предпочтений.<br/><br/>
+                            Бронирование экскурсий возможно при бронировании проживания.<br/><br/>
+                            Наш консьерж с удовольствием поможет Вам выбрать направление и тур, с учетом Вашего
+                            свободного
+                            времени,
+                            интересующего направления, в необходимые Вам даты.
+                        </p>
+                    </Accordeon>
                     <div className="program-blocks-wrapper">
                         <div className="program-block">
                             <div className="program-block__content">
                                 <div className="programs-block__title">Групповые экскурсии</div>
-                                <div className="program-block__price-absolute">от 1 000 рублей</div>
                                 <img src={groupImg}
                                      className="program-block__img" alt="Групповые экскурсии"/>
 
@@ -315,17 +330,20 @@ const CrimeaTourPage = () => {
                                 </p>
 
                             </div>
-                            <div className="program-block__bottom">
+
+                            <div className="program-block__price">Цена: от 1 000 ₽</div>
+
+                            <div className="program-block__bottom-btns">
                                 <NavLink to="/booking" className="bid__button">Забронировать
                                     проживание</NavLink>
                                 <NavLink
                                     to="/excursions"
                                     className="bid__button last popup">Выбрать
                                     экскурсию</NavLink>
+                            </div>
 
-                                <div className="program-block__bottom__text">
-                                    *стоимость за 1 экскурсию, на 1 человека + к стоимости проживания
-                                </div>
+                            <div className="program-block__bottom-text">
+                                *стоимость за 1 экскурсию, на 1 человека + к стоимости проживания
                             </div>
 
                         </div>
@@ -333,7 +351,6 @@ const CrimeaTourPage = () => {
                         <div className="program-block">
                             <div className="program-block__content">
                                 <div className="programs-block__title">Индивидуальные туры</div>
-                                <div className="program-block__price-absolute">от 10 000 рублей</div>
 
                                 <img src={individualImg}
                                      className="program-block__img" alt="Индивидуальные туры"/>
@@ -345,18 +362,23 @@ const CrimeaTourPage = () => {
                                 </p>
 
                             </div>
-                            <div className="program-block__bottom second">
+
+                            <div className="program-block__price">Цена: от 10 000 ₽</div>
+
+                            <div className="program-block__bottom-btns second">
                                 <NavLink to="/booking" className="bid__button popup big">Забронировать
                                     проживание</NavLink>
-                                <div className="program-block__bottom__text second">
-                                    *На все интересующие Вас вопросы, касающиеся индивидуальных экскурсий по Крыму
-                                    ответит
-                                    Консьерж
-                                    отеля Riviera Sunrise Resort & SPA<br/>
-                                    <a
+                            </div>
+
+
+                            <div className="program-block__bottom-text second">
+                                *На все интересующие Вас вопросы, касающиеся индивидуальных экскурсий по Крыму
+                                ответит
+                                Консьерж
+                                отеля Riviera Sunrise Resort & SPA<br/>
+                                <a
                                     href="tel:89789726509">8(978)972-65-09</a>
-                                    <a href="tel:89384565211">8(938)456-52-11</a>
-                                </div>
+                                <a href="tel:89384565211">8(938)456-52-11</a>
                             </div>
 
                         </div>
@@ -368,11 +390,12 @@ const CrimeaTourPage = () => {
         <section className='section'>
             <EventMainSlider slides={crimeaTourPageData.crimeaTourPageMainSlides}
                              title={'Разные направления отдыха'}
-                             titleMobile={'Разные направления отдыха'} manySlides />
+                             titleMobile={'Разные направления отдыха'} manySlides allClosedAtStart/>
         </section>
 
         <section className='section'>
-            <RoomsSlider blockTitle={'Лучшие номера для Вас'} noPaddingTop subtitle={'Корпус'} title={'Модерн'} textContent={vacationPagesData.modernDescr}
+            <RoomsSlider blockTitle={'Наши лучшие номера для Вас'} noPaddingTop subtitle={'Корпус'} title={'Модерн'}
+                         textContent={vacationPagesData.modernDescr}
                          data={vacationPagesData.modernSlides}/>
 
             <RoomsSlider lastOfTwo={true} subtitle={'Корпус'} title={'Классик'}
