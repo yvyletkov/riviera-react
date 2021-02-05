@@ -28,7 +28,7 @@ const VacationsPageBanner = ({fontSize, fontSizeMobile, subtitle, topLine, botto
                             <h2>{subtitle}</h2>
                             <h1 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? fontSizeMobile[0] : fontSize[0]}}>{topLine}</h1>
                             <h1 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? fontSizeMobile[1] : fontSize[1]}} dangerouslySetInnerHTML={{__html: bottomLine}}/>
-                            {extraLine && <h3 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? extraLine[1] : extraLine[2]}} className={s.extraline}>{extraLine[0]}</h3>}
+                            {extraLine && <h3 dangerouslySetInnerHTML={{__html: extraLine[0]}} style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? extraLine[1] : extraLine[2]}} className={s.extraline}/>}
                         </div>
                         <div className={descriptionShown ? s.descriptionBtn + ' ' + s.active : s.descriptionBtn} onClick={() => setDescriptionShown(!descriptionShown)}>
                             Подробнее&nbsp;&nbsp;• • •

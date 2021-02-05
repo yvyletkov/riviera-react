@@ -31,10 +31,13 @@ $black: #171717;
 }
 
 .leftSide {
-  padding-top: 25vh;
+  padding-top: 220px;
   padding-left: 20px;
   z-index: 1;
   position: relative;
+  @media (max-height: 750px) {
+    padding-top: 25vh;
+  }
 }
 
 .pageNameBlock {

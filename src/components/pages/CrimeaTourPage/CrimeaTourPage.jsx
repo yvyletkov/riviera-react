@@ -66,6 +66,7 @@ const ProgramsBlock = styled.div`
     }
 
     .program-block {
+      border-radius: 6px;
       position: relative;
       width: 385px;
       //height: 545px;
@@ -167,11 +168,21 @@ const ProgramsBlock = styled.div`
     //}
 
     .program-block__price {
-      color: #9e9e9e;
-      font-size: 20px;
-      font-weight: 600 !important;
-      width: fit-content;
-      margin: 0 auto 15px;
+      text-align: center;
+      
+      p:first-child {
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+      
+      p:last-child {
+        font-size: 26px;
+        font-family: "Helvetica Neue Bold", sans-serif;
+        color: #fe6c39;
+        margin: 0 auto 15px;
+
+      }
+      
     }
 
     .bid__button {
@@ -184,15 +195,26 @@ const ProgramsBlock = styled.div`
       box-shadow: 1.145px 5.89px 16px 0px rgba(23, 23, 23, 0.24);
       width: 140px;
       height: 52px;
-      border: none;
+      border: 1px solid #fe6c39;
       color: #fff;
       font-size: 16px;
       margin-right: 10px;
       transition: all 300ms;
+      
+      &.light {
+        background-color: transparent;
+        color: #fe6c39;
+        border: 1px solid #fe6c39;
+        &:hover {
+          border-color: rgb(210, 90, 49);
+        }
+        
+      }
     }
 
     .bid__button.big {
       width: 200px;
+      margin-right: 0;
     }
 
     .bid__button.last {
@@ -255,11 +277,12 @@ const CrimeaTourPage = () => {
 
 
     return <>
-        <VacationsPageBanner fontSize={["70px", "23.9px"]}
-                             fontSizeMobile={["11.7vw", "4.0vw"]}
-                             subtitle={'Незабываемый'}
-                             topLine={"Тур в Крым"}
-                             bottomLine={"Мы знаем, какой тур Вам нужен"}
+        <VacationsPageBanner fontSize={["50px", "77px"]}
+                             fontSizeMobile={["8.3vw", "12.7vw"]}
+                             subtitle={'Потрясающее путешествие'}
+                             topLine={"Незабываемый"}
+                             bottomLine={"тур в Крым"}
+                             extraLine={['Мы знаем, какой тур Вам нужен', '4vw', '28px']}
                              bannerImg={bannerImg}
                              bannerMobileImg={bannerImg}
                              descr={'<p><b>Включено в стоимость</b></p><ul><li>Экскурсионная программа</li><li>Питание</li><li>SPA услуги</li><li>Развлекательная программа</li></ul>'}/>
@@ -331,14 +354,17 @@ const CrimeaTourPage = () => {
 
                             </div>
 
-                            <div className="program-block__price">Цена: от 1 000 ₽</div>
+                            <div className="program-block__price">
+                                <p>Стоимость:</p>
+                                <p>от 1 000 ₽</p>
+                            </div>
 
                             <div className="program-block__bottom-btns">
                                 <NavLink to="/booking" className="bid__button">Забронировать
                                     проживание</NavLink>
                                 <NavLink
                                     to="/excursions"
-                                    className="bid__button last popup">Выбрать
+                                    className="bid__button last light">Выбрать
                                     экскурсию</NavLink>
                             </div>
 
@@ -363,10 +389,13 @@ const CrimeaTourPage = () => {
 
                             </div>
 
-                            <div className="program-block__price">Цена: от 10 000 ₽</div>
+                            <div className="program-block__price">
+                                <p>Стоимость:</p>
+                                <p>от 10 000 ₽</p>
+                            </div>
 
                             <div className="program-block__bottom-btns second">
-                                <NavLink to="/booking" className="bid__button popup big">Забронировать
+                                <NavLink to="/booking" className="bid__button big">Забронировать
                                     проживание</NavLink>
                             </div>
 
