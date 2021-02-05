@@ -32,6 +32,8 @@ const Wrapper = styled.div`
   #ya-site-form0 .ya-site-form__search-input-layout {
     max-width: 1160px;
     margin: 0 auto;
+    box-shadow: 1.145px 5.89px 16px 0px rgba(23, 23, 23, 0.05);
+
   }
 
   #ya-site-form0 .ya-site-form__search-input {
@@ -338,7 +340,7 @@ const SearchPage = () => {
                 <Wrapper>
 
                     <div className="ya-site-form ya-site-form_inited_no"
-                         data-bem="{&quot;action&quot;:&quot;https://rivierasunrise.ru/search&quot;,&quot;arrow&quot;:false,&quot;bg&quot;:&quot;#171717&quot;,&quot;fontsize&quot;:12,&quot;fg&quot;:&quot;#000000&quot;,&quot;language&quot;:&quot;ru&quot;,&quot;logo&quot;:&quot;rb&quot;,&quot;publicname&quot;:&quot;Поиск по rivierasunrise.ru&quot;,&quot;suggest&quot;:true,&quot;target&quot;:&quot;_self&quot;,&quot;tld&quot;:&quot;ru&quot;,&quot;type&quot;:2,&quot;usebigdictionary&quot;:true,&quot;searchid&quot;:2445728,&quot;input_fg&quot;:&quot;#000000&quot;,&quot;input_bg&quot;:&quot;#ffffff&quot;,&quot;input_fontStyle&quot;:&quot;normal&quot;,&quot;input_fontWeight&quot;:&quot;normal&quot;,&quot;input_placeholder&quot;:&quot;Что Вы хотите найти?&quot;,&quot;input_placeholderColor&quot;:&quot;#000000&quot;,&quot;input_borderColor&quot;:&quot;#cc6600&quot;}">
+                         data-bem="{&quot;action&quot;:&quot;https://rivierasunrise.ru/search&quot;,&quot;arrow&quot;:false,&quot;bg&quot;:&quot;#efefef&quot;,&quot;fontsize&quot;:12,&quot;fg&quot;:&quot;#000000&quot;,&quot;language&quot;:&quot;ru&quot;,&quot;logo&quot;:&quot;rb&quot;,&quot;publicname&quot;:&quot;Поиск по rivierasunrise.ru&quot;,&quot;suggest&quot;:true,&quot;target&quot;:&quot;_self&quot;,&quot;tld&quot;:&quot;ru&quot;,&quot;type&quot;:2,&quot;usebigdictionary&quot;:true,&quot;searchid&quot;:2445728,&quot;input_fg&quot;:&quot;#000000&quot;,&quot;input_bg&quot;:&quot;#ffffff&quot;,&quot;input_fontStyle&quot;:&quot;normal&quot;,&quot;input_fontWeight&quot;:&quot;normal&quot;,&quot;input_placeholder&quot;:&quot;Что Вы хотите найти?&quot;,&quot;input_placeholderColor&quot;:&quot;#000000&quot;,&quot;input_borderColor&quot;:&quot;#cc6600&quot;}">
                         <form action="https://yandex.ru/search/site/" method="get" target="_self"
                               accept-charset="utf-8">
                             <input
