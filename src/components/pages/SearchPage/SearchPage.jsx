@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   .b-head__found {
     display: none;
   }
+  
 
   .b-head__l, .b-head__r, .b-body-items {
     padding: 0;
@@ -75,6 +76,20 @@ const Wrapper = styled.div`
     border: none;
     padding: 18px 30px;
     font-size: 16px !important;
+    &::placeholder {
+      color: #7f8c8d;
+    }
+    &::-webkit-search-cancel-button{
+      -webkit-appearance: none;
+      height: 1.1em;
+      width: 1.1em;
+      border-radius: 50em;
+      background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+      background-size: contain;
+      opacity: 0.2;
+      pointer-events: all;
+      cursor: pointer;
+    }
     //font-family: 'Helvetica Neue Medium', sans-serif;
   }
 
