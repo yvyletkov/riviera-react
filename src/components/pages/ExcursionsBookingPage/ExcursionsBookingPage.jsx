@@ -2,6 +2,9 @@ import React from "react";
 
 const ExcursionsBookingPage = () => {
 
+    React.useEffect(() => document.title = `Бронирование экскурсий - Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
+
     const init = function () {
         var d = document;
         var w = window;
