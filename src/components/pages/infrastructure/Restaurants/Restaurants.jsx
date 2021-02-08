@@ -8,7 +8,7 @@ import Button from "../../../shared/Button/Button";
 import iconBreakfast from "../../../../img/infrastructure/restaurant/icons/breakfast.png";
 import iconDinner from "../../../../img/infrastructure/restaurant/icons/dinner.png";
 import iconSupper from "../../../../img/infrastructure/restaurant/icons/supper.png";
-import iconTime from "../../../../img/infrastructure/restaurant/icons/time.png";
+import iconTime from "../../../../img/infrastructure/restaurant/icons/time.svg";
 
 const Restaurants = () => {
 
@@ -46,8 +46,8 @@ const Restaurants = () => {
       }
       
       .scheduleIcon {
-        width: 50px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
         margin-right: 10px;
       }
       
