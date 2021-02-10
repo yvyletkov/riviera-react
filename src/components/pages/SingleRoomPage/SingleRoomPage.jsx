@@ -26,7 +26,7 @@ const SingleRoomPage = ({data}) => {
         </section>
 
         <section className='section'>
-            <SpecialsSlider subtitle={'Лучшие'} title={'спецпредложения'} btnLink={'/offers'} slides={data.specialsSlides}/>
+            <SpecialsSlider subtitle={'Лучшие'} title={'Акции'} btnLink={'/offers'} slides={data.specialsSlides}/>
         </section>
 
         <section className='section last'>

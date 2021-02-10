@@ -27,7 +27,7 @@ const RoomsAndPricesPage = () => {
         </section>
 
         <section className='section last'>
-            <CenteredSlider title={'Сегодня в программе'} slides={roomsAndPricesPageData.centeredSlides}/>
+            <CenteredSlider title={'Актуальные мероприятия'} slides={roomsAndPricesPageData.centeredSlides}/>
         </section>
 
     </>

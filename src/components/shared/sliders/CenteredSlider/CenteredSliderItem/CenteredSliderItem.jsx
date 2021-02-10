@@ -16,17 +16,19 @@ const CenteredSliderItem = (props) => {
         case "home-page":
             return (
                 <div className={active ? s.card + ' ' + s.active : s.card}>
-                    {link && <NavLink className={s.link} to={link}>Подробнее →</NavLink>}
-                    <img className={s.img} style={desaturated ? {filter: 'saturate(0)'} : {}} src={img} alt={title}/>
-                    <div className={s.content}>
-                        <p className={s.title}>{title}</p>
-                        <p dangerouslySetInnerHTML={{__html: subtitle}} className={s.subtitle} style={!time ? {marginBottom: '20px'} : {}}/>
-                        {time && <p className={s.time}>{time}
-                            <span>{date}</span></p>}
-                        <p dangerouslySetInnerHTML={{__html: campus}} className={s.campus}>
-                        </p>
-                        <div dangerouslySetInnerHTML={{__html: campusName}}/>
-                    </div>
+                    <NavLink onClick={handleLinkClick} to={link ? link : '#'}>
+                        {link && <NavLink className={s.link} to={link}>Подробнее →</NavLink>}
+                        <img className={s.img} style={desaturated ? {filter: 'saturate(0)'} : {}} src={img} alt={title}/>
+                        <div className={s.content}>
+                            <p className={s.title}>{title}</p>
+                            <p dangerouslySetInnerHTML={{__html: subtitle}} className={s.subtitle} style={!time ? {marginBottom: '20px'} : {}}/>
+                            {time && <p className={s.time}>{time}
+                                <span>{date}</span></p>}
+                            <p dangerouslySetInnerHTML={{__html: campus}} className={s.campus}>
+                            </p>
+                            <div dangerouslySetInnerHTML={{__html: campusName}}/>
+                        </div>
+                    </NavLink>
                 </div>
             );
         case 2 :

@@ -2801,7 +2801,7 @@ export const promotionsPageData = {
         },
         {
             img: promoImg11,
-            subtitle: "Акция",
+            subtitle: "",
             title: "Море ждет",
             // link: '#',
             key: 6,
