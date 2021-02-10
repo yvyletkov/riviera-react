@@ -138,7 +138,7 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
         </section>
 
         <section className='section'>
-            <CenteredSlider title={'Сегодня в программе'} slides={roomsAndPricesPageData.centeredSlides}/>
+            <CenteredSlider title={'Актуальные мероприятия'} slides={roomsAndPricesPageData.centeredSlides}/>
         </section>
 
         <section className='section'>
@@ -385,7 +385,7 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
                 </div>
                 {/*<div className={s.col}>*/}
                 {/*    <img className={s.closeBtn} onClick={() => setShowPopup(false)} src={closeBtn} alt="close"/>*/}
-                
+
                 {/*    <h5>Методика лечения</h5>*/}
                 {/*    <ul>*/}
                 {/*        <li>Консультации врачей</li>*/}
@@ -455,7 +455,7 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
                 </div>
                 {/*<div className={s.col}>*/}
                 {/*    <img className={s.closeBtn} onClick={() => setShowPopup(false)} src={closeBtn} alt="close"/>*/}
-                
+
                 {/*    <h5>Методика лечения</h5>*/}
                 {/*    <ul>*/}
                 {/*        <li>Консультации врачей</li>*/}
@@ -517,7 +517,7 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
                 </div>
                 {/*<div className={s.col}>*/}
                 {/*    <img className={s.closeBtn} onClick={() => setShowPopup(false)} src={closeBtn} alt="close"/>*/}
-                
+
                 {/*    <h5>Методика лечения</h5>*/}
                 {/*    <ul>*/}
                 {/*        <li>Консультации врачей</li>*/}
@@ -583,7 +583,7 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
                 </div>
                 {/*<div className={s.col}>*/}
                 {/*    <img className={s.closeBtn} onClick={() => setShowPopup(false)} src={closeBtn} alt="close"/>*/}
-                
+
                 {/*    <h5>Методика лечения</h5>*/}
                 {/*    <ul>*/}
                 {/*        <li>Консультации врачей</li>*/}

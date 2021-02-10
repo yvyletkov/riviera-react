@@ -37,11 +37,11 @@ const RomanticVacationPage = () => {
         </section>
 
         <section className='section'>
-            <CenteredSlider title={'Сегодня в программе'} slides={vacationPagesData.centeredSlides}/>
+            <CenteredSlider title={'Актуальные мероприятия'} slides={vacationPagesData.centeredSlides}/>
         </section>
 
         <section className='section'>
-            <SpecialsSlider subtitle={'Лучшие'} title={'спецпредложения'} btnLink={'/offers'} slides={vacationPagesData.specialsSlides}/>
+            <SpecialsSlider subtitle={'Лучшие'} title={'Акции'} btnLink={'/offers'} slides={vacationPagesData.specialsSlides}/>
         </section>
 
 

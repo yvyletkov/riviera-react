@@ -20,11 +20,11 @@ const HomePage = () => {
         </section>
 
         <section className='section'>
-            <SpecialsSlider subtitle={'Лучшие'} title={'спецпредложения'} btnLink={'/offers'} slides={homePageData.specialsSlides}/>
+            <SpecialsSlider subtitle={'Лучшие'} title={'Акции'} btnLink={'/offers'} slides={homePageData.specialsSlides}/>
         </section>
 
         <section className='section'>
-            <CenteredSlider title={'Сегодня в программе'} slides={homePageData.centeredSlides} type={'home-page'}/>
+            <CenteredSlider title={'Актуальные мероприятия'} slides={homePageData.centeredSlides} type={'home-page'}/>
         </section>
 
         <section className='section'>
