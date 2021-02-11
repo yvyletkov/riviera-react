@@ -9,6 +9,7 @@ import Button from "../../../shared/Button/Button";
 import PopupContactForm from "../../../additional/ContactForm/PopupContactForm";
 import ContactForm from "../../../additional/ContactForm/ContactForm";
 import Rodal from "rodal";
+import NavBlock from "../../../shared/NavBlock/NavBlock";
 
 
 const EventPageBanner = ({mobileFontSize, fontSize, titles, icons, bannerImg, bannerImgMobile, blackFont, btnLink = '', withInfo = false, withPrice = false}) => {
@@ -89,14 +90,7 @@ const EventPageBanner = ({mobileFontSize, fontSize, titles, icons, bannerImg, ba
                 <AnimatedMouseIcon/>
             </div>
         </div>
-        {/*<div className={s.navBlock}>*/}
-        {/*    <div className={s.container}>*/}
-        {/*        <div>Навигация по разделам</div>*/}
-        {/*        <div>Проживание</div>*/}
-        {/*        <div>Питание</div>*/}
-        {/*        <div>Площадки</div>*/}
-        {/*    </div>*/}
-        {/*</div>*/}
+        {/*<NavBlock/>*/}
     </>)
 };
 
