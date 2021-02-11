@@ -24,7 +24,8 @@ const SinglePromotionPage = ({
                                  formBlockText = 'Погрузитесь в мир зимней гармонии',
                                  formBlockBtnText = 'Узнать свободные даты',
                                  whiteText = false,
-                                 formImg
+                                 formImg,
+                                 quiz = null
                              }) => {
 
     console.log(title)
@@ -109,6 +110,8 @@ const SinglePromotionPage = ({
             <section className='section'>
                 <GridSlider slides={homePageData.gridSlides}/>
             </section>
+
+            {quiz && <section className='section'>{quiz}</section>}
 
             <section className='section'>
                 <CenteredSlider title={'Актуальные мероприятия'} slides={homePageData.centeredSlides} type={'home-page'}/>

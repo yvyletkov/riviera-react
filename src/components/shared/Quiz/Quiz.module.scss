@@ -1,0 +1,152 @@
+$black: #171717;
+
+.container {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  display: flex;
+}
+
+.bannerWrapper {
+  margin-top: 0;
+  background-color: #f0f0f0;
+  width: 100%;
+  position: relative;
+  height: 100vh;
+
+  @media (min-width: 769px) {
+    max-height: 700px;
+  }
+
+  & .leafImg {
+    position: absolute;
+    top: -50px;
+    left: 150px;
+  }
+}
+
+.rightSide {
+  img {
+    height: 100%;
+  }
+  height: 100vh;
+  max-height: 700px;
+  position: absolute;
+  left: 43%;
+}
+
+.flexWrapper {
+  position: relative;
+  display: flex;
+}
+
+.leftSide {
+  padding-top: 170px;
+  padding-left: 20px;
+  z-index: 1;
+  position: relative;
+  @media (max-height: 750px) {
+    padding-top: 25vh;
+  }
+}
+
+.pageNameBlock {
+  color: $black;
+  max-width: 360px;
+  width: 100%;
+  margin-bottom: 25px;
+
+  & h2 {
+    font-size: 34px;
+    font-family: "Helvetica Neue Black", sans-serif;
+  }
+
+  & .desc {
+    margin: 15px 0;
+    font-family: "Helvetica Neue Light", sans-serif;
+    color: #989898;
+    font-size: 14px;
+  }
+
+  & .text {
+    margin: 20px 0;
+    font-family: "Helvetica Neue Roman", sans-serif;
+  }
+
+  & .radioBlock {
+    margin-bottom: 15px;
+    display: flex;
+    padding: 0 20px;
+
+    & input {
+      margin-right: 15px;
+    }
+
+    & span {
+      font-family: "Helvetica Neue Roman", sans-serif;
+    }
+  }
+}
+
+.pageNameBlock h1:first-of-type {
+  text-transform: uppercase;
+  font-family: "Helvetica Neue Black", sans-serif;
+}
+
+.pageNameBlock h1:last-of-type {
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-family: "Helvetica Neue Black", sans-serif;
+  line-height: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+  .bannerWrapper {
+    overflow: visible;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .leftSide {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+  }
+  .flexWrapper {
+    height: 100%;
+  }
+  .bannerWrapper {
+    position: relative;
+    width: 100vw;
+    height: unset;
+    background: none;
+  }
+  .background {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7);
+    z-index: -1;
+  }
+
+}
+
+@media screen and (max-width: 620px) {
+  .pageNameBlock h2 {
+    font-size: 4.8vw;
+  }
+}
+
+
+

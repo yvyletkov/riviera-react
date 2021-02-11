@@ -60,6 +60,8 @@ const ContactForm = ({
                          withMessage,
                          withAge,
                          withDate,
+                         withHiddenInput,
+                         hiddenInputValue,
                          formName,
                          swalText = 'Мы получили Вашу заявку 😌',
                          textAreaPlaceholder = 'Введите Ваше сообщение',
@@ -157,6 +159,13 @@ const ContactForm = ({
                 "value": values.date,
             },
         ];
+        if (withHiddenInput) data.inputs = [
+            ...data.inputs,
+            {
+                "alias": "Ответы на вопросы",
+                "value": values.hiddenInput,
+            },
+        ];
 
         request(data)
             .then((response) => {
@@ -203,6 +212,7 @@ const ContactForm = ({
             {withMessage && <Field component={Textarea} name="message" placeholder={textAreaPlaceholder}/>}
             {withAge && <Field component={Input} name="age" type={"number"} placeholder="Введите ваш возраст"/>}
             {withDate && <Field component={Select} name="date" type={"select"}/>}
+            {withHiddenInput && <Field component={Input} name="hiddenInput" type={"hidden"} value={hiddenInputValue}/>}
             <div className="agreementBlock">
                 <input className="agreementCheckbox" id="checkbox-agreement" type="checkbox" required/>
                 <label htmlFor="checkbox-agreement">
