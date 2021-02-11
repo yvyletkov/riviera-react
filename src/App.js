@@ -13,6 +13,7 @@ import BottomMenu from "./components/additional/BottomMenu/BottomMenu";
 import swal from "sweetalert2";
 import CookiesNotification from "./components/additional/CookieNotificationWindow/CookiesNotification";
 import TagManager from 'react-gtm-module'
+import Quiz from "./components/shared/Quiz/Quiz";
 const HomePage = lazy(() => import('./components/pages/HomePage/HomePage'));
 const RoomsAndPricesPage = lazy(() => import('./components/pages/RoomsAndPricesPage/RoomsAndPricesPage'));
 const SingleRoomPage = lazy(() => import('./components/pages/SingleRoomPage/SingleRoomPage'));
@@ -173,6 +174,7 @@ function App() {
                     <Route path='/offers/rannee-bronirovanie' exact
                            component={() => <SinglePromotionPage {...singlePromotionPages.ranneeBronirovanie}
                                                                  formBlockBtnText='Отправить'
+                                                                 quiz={<Quiz />}
                            />}/>
 
                     <Route path='/offers/otdyh-dlya-krymchan' exact
