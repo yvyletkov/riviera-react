@@ -1,22 +1,20 @@
-import img from "./../../../img/home-page/textimg.png"
+import img from "./../../../img/home-page/textimg.jpg"
+import img2 from "./../../../img/home-page/textimg2.jpg"
 import React from "react";
 import s from "./TextPlusImageBlock.module.scss";
-import kitchenImg1 from "../../../img/events/wedding/kitchen1.jpg";
-import kitchenImg2 from "../../../img/events/wedding/kitchen2.jpg";
-import menuPriceImg from "../../../img/events/wedding/menuPrice.png";
 import Headline from "../Headline/Headline";
 import Button from "../Button/Button";
 import 'rodal/lib/rodal.css';
 import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
 
-const TextPlusImageBlock = ({subtitle, title, firstImg = kitchenImg1, btnLink = ''}) => {
+const TextPlusImageBlock = ({subtitle, title}) => {
 
     let [popupOpen, setPopupOpen] = React.useState(false);
 
 
     return <div className={s.wrapper}>
         <div className={s.container}>
-            <img className={s.rightImg} src={kitchenImg2} alt=""/>
+            <img className={s.rightImg} src={img2} alt=""/>
 
             <div className={s.textContent}>
                 <Headline subtitle={subtitle} title={title}/>
