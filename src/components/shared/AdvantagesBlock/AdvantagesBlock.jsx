@@ -42,7 +42,7 @@ const AdvantagesBlock = ({title, icons, slidesToShow}) => {
         ]
     };
 
-    return <div className={s.wrapper}>
+    return <div className={s.wrapper} id='advantages'>
             <div className={s.container}>
                 <HeadlineCenter title={title}/>
 

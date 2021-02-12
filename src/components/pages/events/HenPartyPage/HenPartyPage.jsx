@@ -29,7 +29,12 @@ const HenPartyPage = () => {
                          icons={eventPagesData.henPartyPage.henPartyBannerIcons} bannerImg={bannerImg}
                          bannerImgMobile={bannerImgMobile}
                          blackFont={true}
-                         withInfo/>
+                         withInfo
+                         nav={[
+                             {link: "residence", title: 'Проживание'},
+                             {link: "food", title: 'Питание'},
+                             {link: "extra", title: 'Дополнительные услуги'},
+                         ]}/>
 
         {/* Идеальное место для проведения */}
 

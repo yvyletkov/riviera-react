@@ -24,7 +24,7 @@ const EventSquaresSlider = () => {
         ]
     };
 
-    return <div className={s.wrapper}>
+    return <div id='places' className={s.wrapper}>
         <div className={s.container}>
             <div className={s.topRow}>
                 <h4 className={s.title}>

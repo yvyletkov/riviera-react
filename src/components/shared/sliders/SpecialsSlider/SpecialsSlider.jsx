@@ -84,7 +84,7 @@ const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-�
     });
 
     return (
-        <div className={s.wrapper}>
+        <div className={s.wrapper} id='extra'>
             <div className={s.container}>
                 <div className={s.leftBlock}>
                     <Headline subtitle={subtitle} title={title}/>

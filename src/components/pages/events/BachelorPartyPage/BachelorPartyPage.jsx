@@ -28,7 +28,12 @@ const BachelorPartyPage = () => {
                          icons={eventPagesData.bachelorParty.bachelorPartyBannerIcons} bannerImg={bannerImg}
                          bannerImgMobile={bannerImgMobile}
                          blackFont={true}
-                         withInfo/>
+                         withInfo
+                         nav={[
+                             {link: "residence", title: 'Проживание'},
+                             {link: "food", title: 'Питание'},
+                             {link: "extra", title: 'Дополнительные услуги'},
+                         ]}/>
 
         {/* Идеальное место для проведения */}
 
