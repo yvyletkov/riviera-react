@@ -163,7 +163,7 @@ const ContactForm = ({
             ...data.inputs,
             {
                 "alias": "Ответы на вопросы",
-                "value": values.hiddenInput,
+                "value": values.hidden,
             },
         ];
 
@@ -212,7 +212,7 @@ const ContactForm = ({
             {withMessage && <Field component={Textarea} name="message" placeholder={textAreaPlaceholder}/>}
             {withAge && <Field component={Input} name="age" type={"number"} placeholder="Введите ваш возраст"/>}
             {withDate && <Field component={Select} name="date" type={"select"}/>}
-            {withHiddenInput && <Field component={Input} name="hiddenInput" type={"hidden"} value={hiddenInputValue}/>}
+            {withHiddenInput && <Field component={Input} name="hidden" type={"hidden"} value={hiddenInputValue}/>}
             <div className="agreementBlock">
                 <input className="agreementCheckbox" id="checkbox-agreement" type="checkbox" required/>
                 <label htmlFor="checkbox-agreement">

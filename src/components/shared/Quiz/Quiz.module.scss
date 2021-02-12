@@ -7,6 +7,21 @@ $black: #171717;
   padding: 0 20px;
   position: relative;
   display: flex;
+
+  & .mobileImg {
+    display: none;
+  }
+
+  @media screen and (max-width: 620px) {
+    flex-direction: column;
+
+    & .mobileImg {
+      display: block;
+      margin-top: 20px;
+      object-fit: cover;
+      max-height: 300px;
+    }
+  }
 }
 
 .bannerWrapper {
@@ -14,16 +29,20 @@ $black: #171717;
   background-color: #f0f0f0;
   width: 100%;
   position: relative;
-  height: 100vh;
-
-  @media (min-width: 769px) {
-    max-height: 700px;
-  }
+  height: 700px;
 
   & .leafImg {
     position: absolute;
     top: -50px;
     left: 150px;
+
+    @media screen and (max-width: 620px) {
+        max-width: 100px;
+    }
+  }
+
+  @media (min-width: 769px) {
+    max-height: 700px;
   }
 }
 
@@ -35,6 +54,10 @@ $black: #171717;
   max-height: 700px;
   position: absolute;
   left: 43%;
+
+  @media screen and (max-width: 620px) {
+    display: none;
+  }
 }
 
 .flexWrapper {
