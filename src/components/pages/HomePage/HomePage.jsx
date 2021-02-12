@@ -7,12 +7,26 @@ import TextPlusImageBlock from "../../shared/TextPlusImageBlock/TextPlusImageBlo
 import SpecialsSlider from "../../shared/sliders/SpecialsSlider/SpecialsSlider";
 import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
 import MapSection from "../../shared/MapSection/MapSection";
+import popupImg from "../../../img/14febpopup.jpg";
 
 const HomePage = () => {
 
     React.useEffect( () => document.title = 'Riviera Sunrise Resort & SPA – Алушта, Крым – главная страница', [])
 
+
+    React.useEffect(() => {
+        setTimeout( () => {
+            document.querySelector('.popupWrapper').classList.add('active')
+            document.querySelector('.popupWrapper').addEventListener('click', (e) => e.target.classList.remove('active'))
+        }, 4000)
+    }, [])
+
     return <>
+        <div className='popupWrapper'>
+            <div>
+                <img src={popupImg} alt=""/>
+            </div>
+        </div>
         <HomePageBanner/>
 
         <section className='section first'>

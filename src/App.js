@@ -75,12 +75,8 @@ function App() {
 
     TagManager.initialize(tagManagerArgs)
 
+
     return (<>
-            <div className='popupWrapper'>
-                <div>
-                    <img src={popupImg} alt=""/>
-                </div>
-            </div>
             <Header/>
             {window.matchMedia('(max-width: 767px)').matches &&
             <div style={{height: '65px'}}/>}
