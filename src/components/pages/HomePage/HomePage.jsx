@@ -8,6 +8,8 @@ import SpecialsSlider from "../../shared/sliders/SpecialsSlider/SpecialsSlider";
 import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
 import MapSection from "../../shared/MapSection/MapSection";
 import popupImg from "../../../img/14febpopup.jpg";
+import popupImgMob from "../../../img/14febpopup-mob.jpg";
+import {NavLink} from "react-router-dom";
 
 const HomePage = () => {
 
@@ -16,15 +18,16 @@ const HomePage = () => {
 
     React.useEffect(() => {
         setTimeout( () => {
-            document.querySelector('.popupWrapper').classList.add('active')
-            document.querySelector('.popupWrapper').addEventListener('click', (e) => e.target.classList.remove('active'))
+            document.querySelector('.popupOfferWrapper').classList.add('active')
+            document.querySelector('.popupOfferWrapper').addEventListener('click', (e) => e.target.classList.remove('active'))
         }, 4000)
     }, [])
 
     return <>
-        <div className='popupWrapper'>
+        <div className='popupOfferWrapper'>
             <div>
-                <img src={popupImg} alt=""/>
+                <NavLink to={'/love-day'}>Подробнее →</NavLink>
+                <img src={window.matchMedia('(max-width: 600px)').matches ? popupImgMob : popupImg} alt=""/>
             </div>
         </div>
         <HomePageBanner/>
