@@ -15,7 +15,8 @@ const PopupContactForm = ({
                               swalText,
                               requestUrl = '',
                               withHiddenInput,
-                              hiddenInputValue}) => {
+                              hiddenInputValue,
+                              setNumQuestion,}) => {
     return (
         <Rodal className={'rodal-popup'} visible={popupOpen} onClose={() => setPopupOpen(false)}>
             <p style={{maxWidth: "100%"}} dangerouslySetInnerHTML={{__html: popupTitleText}}/>
@@ -30,7 +31,8 @@ const PopupContactForm = ({
                          textAreaPlaceholder={textAreaPlaceholder}
                          withHiddenInput={withHiddenInput}
                          hiddenInputValue={hiddenInputValue}
-                         setPopupOpen={setPopupOpen}/>
+                         setPopupOpen={setPopupOpen}
+                         setNumQuestion={setNumQuestion}/>
         </Rodal>)
 };
 

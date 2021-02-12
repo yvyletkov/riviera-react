@@ -64,6 +64,7 @@ const ContactForm = ({
                          withHiddenInput,
                          hiddenInputValue,
                          formName,
+                         setNumQuestion,
                          swalText = 'Мы получили Вашу заявку 😌',
                          textAreaPlaceholder = 'Введите Ваше сообщение',
                          requestUrl, ...props}) => {
@@ -112,7 +113,6 @@ const ContactForm = ({
 
 
     const onSubmit = (values, {resetForm}) => {
-        console.log(values);
         data.form = {
             "url": `${requestUrl ? requestUrl : window.location.href}`
         };
@@ -165,7 +165,7 @@ const ContactForm = ({
             ...data.inputs,
             {
                 "alias": "Ответы на вопросы",
-                "value": values.hidden,
+                "value": hiddenInputValue,
             },
         ];
 
@@ -217,7 +217,6 @@ const ContactForm = ({
             {withMessage && <Field component={Textarea} name="message" placeholder={textAreaPlaceholder}/>}
             {withAge && <Field component={Input} name="age" type={"number"} placeholder="Введите ваш возраст"/>}
             {withDate && <Field component={Select} name="date" type={"select"}/>}
-            {withHiddenInput && <Field component={Input} name="hidden" type={"hidden"} value={hiddenInputValue}/>}
             <div className="agreementBlock">
                 <input className="agreementCheckbox" id="checkbox-agreement" type="checkbox" required/>
                 <label htmlFor="checkbox-agreement">
@@ -233,7 +232,10 @@ const ContactForm = ({
             <button style={{width: '100%'}}
                     className={s.button}
                     type="submit"
-                    onClick={() => setPopupOpen(false)}>{submitBtnText}
+                    onClick={() => {
+                        setPopupOpen(false);
+                        withHiddenInput && setNumQuestion(0);
+                    }}>{submitBtnText}
             </button>
         </Form>
     </Formik>

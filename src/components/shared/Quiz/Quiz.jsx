@@ -10,7 +10,7 @@ const Quiz = ({img, imgMob}) => {
     const [currentQuestion, setNumQuestion] = useState(0);
     const [currentAnswer, setNumAnswer] = useState(0);
     const [answers, setAnswers] = useState('');
-    let [popupOpen, setPopupOpen] = React.useState(false);
+    const [popupOpen, setPopupOpen] = React.useState(false);
 
     const answerList = quizQuestions[currentQuestion].answers.map((ans, idx) => {
         return (
@@ -64,7 +64,8 @@ const Quiz = ({img, imgMob}) => {
                               withPhone
                               withMessage
                               withHiddenInput
-                              hiddenInputValue={answers}/>
+                              hiddenInputValue={answers}
+                              setNumQuestion={setNumQuestion}/>
 
         </section>
     )
