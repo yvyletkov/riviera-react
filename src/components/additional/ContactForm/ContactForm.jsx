@@ -56,6 +56,7 @@ const Textarea = ({
 const ContactForm = ({
                          submitBtnText,
                          withEmail,
+                         setPopupOpen,
                          withPhone,
                          withMessage,
                          withAge,
@@ -225,7 +226,11 @@ const ContactForm = ({
                     </p>
                 </label>
             </div>
-            <button style={{width: '100%'}} className={s.button} type="submit">{submitBtnText}</button>
+            <button style={{width: '100%'}}
+                    className={s.button}
+                    type="submit"
+                    onClick={() => setPopupOpen(false)}>{submitBtnText}
+            </button>
         </Form>
     </Formik>
 };

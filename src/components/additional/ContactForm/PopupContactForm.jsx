@@ -29,7 +29,8 @@ const PopupContactForm = ({
                          withMessage={withMessage}
                          textAreaPlaceholder={textAreaPlaceholder}
                          withHiddenInput={withHiddenInput}
-                         hiddenInputValue={hiddenInputValue}/>
+                         hiddenInputValue={hiddenInputValue}
+                         setPopupOpen={setPopupOpen}/>
         </Rodal>)
 };
 
