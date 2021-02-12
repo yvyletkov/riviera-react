@@ -60,10 +60,10 @@ const Quiz = () => {
             </div>
 
             <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
-                              popupTitleText={'Чтобы получить чек-лист, пожалуйста, оставьте свои контактные данные️'}
-                              submitBtnText='Скачать чек-лист'
-                              formName={`Форма из блока чёрного цвета "Сомневаетесь в площадке?" (скачать чек-лист)`}
-                              swalText={'мы отправим чек-лист на указанную Вами почту в самое ближайшее время!'}
+                              popupTitleText={'Оставьте свои данные и мы перезвоним Вам!'}
+                              submitBtnText='Отправить'
+                              formName={`Форма обратной связи с опросника`}
+                              swalText={'наши менеджеры обязательно свяжутся с Вами!'}
                               withPhone
                               withMessage
                               withHiddenInput
