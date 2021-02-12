@@ -14,6 +14,10 @@ import swal from "sweetalert2";
 import CookiesNotification from "./components/additional/CookieNotificationWindow/CookiesNotification";
 import TagManager from 'react-gtm-module'
 import Quiz from "./components/shared/Quiz/Quiz";
+import quizImgRanneeBronirovanie from "./img/quiz/quiz-img.png";
+import quizImgRanneeBronirovanieMob from "./img/quiz/quiz-mob.jpg";
+import quizImgLetniyOtdyh from "./img/quiz/quiz-img1.png";
+import quizImgLetniyOtdyhMob from "./img/quiz/mob-quiz1.jpg";
 const HomePage = lazy(() => import('./components/pages/HomePage/HomePage'));
 const RoomsAndPricesPage = lazy(() => import('./components/pages/RoomsAndPricesPage/RoomsAndPricesPage'));
 const SingleRoomPage = lazy(() => import('./components/pages/SingleRoomPage/SingleRoomPage'));
@@ -174,7 +178,8 @@ function App() {
                     <Route path='/offers/rannee-bronirovanie' exact
                            component={() => <SinglePromotionPage {...singlePromotionPages.ranneeBronirovanie}
                                                                  formBlockBtnText='Отправить'
-                                                                 quiz={<Quiz />}
+                                                                 quiz={<Quiz img={quizImgRanneeBronirovanie}
+                                                                             imgMob={quizImgRanneeBronirovanieMob}/>}
                            />}/>
 
                     <Route path='/offers/otdyh-dlya-krymchan' exact
@@ -195,7 +200,9 @@ function App() {
                     <Route path='/offers/letniy-otdyh' exact
                            component={() => <SinglePromotionPage {...singlePromotionPages.letniyOtdyh}
                                                                  formBlockBtnText='Отправить'
-                                                                 whiteText/>}/>
+                                                                 whiteText
+                                                                 quiz={<Quiz img={quizImgLetniyOtdyh}
+                                                                             imgMob={quizImgLetniyOtdyhMob}/>}/>}/>
 
                     <Route path='/offers/online-conferences' exact
                            component={() =>
