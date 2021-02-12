@@ -1,14 +1,11 @@
 import React, {useRef, useState} from "react";
 import s from "./Quiz.module.scss";
-import img from "../../../img/quiz/quiz-img.png";
 import Button from "../Button/Button";
 import leafImg from "../../../img/quiz/leaf.png";
 import {quizQuestions} from "../../../data";
 import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
-import mobImg from "../../../img/quiz/quiz-mob.jpg";
 
-
-const Quiz = () => {
+const Quiz = ({img, imgMob}) => {
     const inputRef = useRef();
     const [currentQuestion, setNumQuestion] = useState(0);
     const [currentAnswer, setNumAnswer] = useState(0);
@@ -56,7 +53,7 @@ const Quiz = () => {
                 <div className={s.rightSide}>
                     <img src={img} alt="Riviera Sunrise"/>
                 </div>
-                <img className={s.mobileImg} src={mobImg} alt="Riviera Sunrise" />
+                <img className={s.mobileImg} src={imgMob} alt="Riviera Sunrise" />
             </div>
 
             <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}

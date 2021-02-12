@@ -112,6 +112,7 @@ const ContactForm = ({
 
 
     const onSubmit = (values, {resetForm}) => {
+        console.log(values);
         data.form = {
             "url": `${requestUrl ? requestUrl : window.location.href}`
         };
@@ -203,6 +204,9 @@ const ContactForm = ({
             name: '',
             phone: '',
             email: '',
+            message: '',
+            date: '',
+            hidden: '',
         }}
         validationSchema={Schema}
         onSubmit={onSubmit}>
