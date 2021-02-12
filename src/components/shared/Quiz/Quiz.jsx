@@ -5,6 +5,7 @@ import Button from "../Button/Button";
 import leafImg from "../../../img/quiz/leaf.png";
 import {quizQuestions} from "../../../data";
 import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
+import mobImg from "../../../img/quiz/quiz-mob.jpg";
 
 
 const Quiz = () => {
@@ -48,12 +49,14 @@ const Quiz = () => {
                                 setAnswers(answers +
                                     `${quizQuestions[currentQuestion].question} - ${
                                     quizQuestions[currentQuestion].answers[currentAnswer]}; <br/>`)
+
                             } :
                             () => setPopupOpen(true) }/>
                 </div>
                 <div className={s.rightSide}>
                     <img src={img} alt="Riviera Sunrise"/>
                 </div>
+                <img className={s.mobileImg} src={mobImg} alt="Riviera Sunrise" />
             </div>
 
             <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
