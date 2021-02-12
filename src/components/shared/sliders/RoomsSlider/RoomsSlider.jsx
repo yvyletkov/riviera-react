@@ -131,7 +131,7 @@ const RoomsSlider = ({title = "Заголовок", subtitle = "Какой-то"
     const classnames = cx(s.wrapper, {[s.lastOfTwo]: lastOfTwo, [s.noPaddingTop]: noPaddingTop})
 
     return (
-        <div ref={sliderWrapperRef} className={classnames}>
+        <div id={'residence'} ref={sliderWrapperRef} className={classnames}>
             <div className={(blockTitle && window.matchMedia('(min-width: 1024px)').matches) ? s.container + ' ' + s.withTitle : s.container}>
 
                 { window.matchMedia('(min-width: 1024px)').matches ? (blockTitle && <HeadlineCenter style={{position: 'absolute', top: '60px', left: '50%', transform: 'translateX(-50%)'}} title={blockTitle}/>) : null }

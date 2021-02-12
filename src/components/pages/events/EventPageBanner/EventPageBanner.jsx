@@ -12,7 +12,7 @@ import Rodal from "rodal";
 import NavBlock from "../../../shared/NavBlock/NavBlock";
 
 
-const EventPageBanner = ({mobileFontSize, fontSize, titles, icons, bannerImg, bannerImgMobile, blackFont, btnLink = '', withInfo = false, withPrice = false}) => {
+const EventPageBanner = ({mobileFontSize, fontSize, titles, icons, bannerImg, bannerImgMobile, blackFont, btnLink = '', withInfo = false, withPrice = false, nav}) => {
 
     let [popupOpen, setPopupOpen] = React.useState(false);
 
@@ -90,7 +90,7 @@ const EventPageBanner = ({mobileFontSize, fontSize, titles, icons, bannerImg, ba
                 <AnimatedMouseIcon/>
             </div>
         </div>
-        {/*<NavBlock/>*/}
+        <NavBlock links={nav}/>
     </>)
 };
 

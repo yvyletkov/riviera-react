@@ -13,7 +13,7 @@ const KitchenBlock = ({firstImg = kitchenImg1, btnLink = ''}) => {
     let [popupOpen, setPopupOpen] = React.useState(false);
 
 
-    return <div className={s.wrapper}>
+    return <div id='food' className={s.wrapper}>
         <div className={s.container}>
             <img className={s.rightImg} src={kitchenImg2} alt=""/>
             <img className={s.menuPriceImg} src={menuPriceImg} alt="Стоимость меню"/>

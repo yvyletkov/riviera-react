@@ -29,6 +29,11 @@ const BirthdayPage = () => {
                          bannerImg={bannerImg}
                          bannerImgMobile={bannerImgMobile}
                          blackFont={true}
+                         nav={[
+                             {link: "places", title: 'Площадки'},
+                             {link: "food", title: 'Питание'},
+                             {link: "extra", title: 'Дополнительные услуги'},
+                         ]}
         />
 
         {/* Организация под ваши пожелания */}
@@ -39,7 +44,7 @@ const BirthdayPage = () => {
 
         {/* Выберите место празднования */}
 
-        <section className='section'>
+        <section className='section' id='places'>
             <EventMainSlider initialSlideIndex={1} manySlides slides={eventPagesData.birthdayPage.birthdayMainSlides} title={'Выберите место празднования'} titleMobile={'Выберите место'}/>
         </section>
 
