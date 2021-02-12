@@ -1,4 +1,5 @@
 import React, {Suspense} from "react";
+import popupImg from "./img/14febpopup.jpg"
 import {Route, Switch} from "react-router-dom";
 import {medicalSpaPage, roomPageData, singlePromotionPages} from "./data";
 import {lazy} from '@loadable/component'
@@ -75,6 +76,11 @@ function App() {
     TagManager.initialize(tagManagerArgs)
 
     return (<>
+            <div className='popupWrapper'>
+                <div>
+                    <img src={popupImg} alt=""/>
+                </div>
+            </div>
             <Header/>
             {window.matchMedia('(max-width: 767px)').matches &&
             <div style={{height: '65px'}}/>}
