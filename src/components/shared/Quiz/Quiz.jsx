@@ -1,9 +1,10 @@
-import React, {useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import s from "./Quiz.module.scss";
 import Button from "../Button/Button";
 import leafImg from "../../../img/quiz/leaf.png";
 import {quizQuestions} from "../../../data";
 import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
+import cx from 'classnames';
 
 const Quiz = ({img, imgMob}) => {
     const inputRef = useRef();
@@ -23,9 +24,7 @@ const Quiz = ({img, imgMob}) => {
                 <span>{ans}</span>
             </div>
         )
-    })
-
-    console.log(answers)
+    });
 
     return (
         <section className={s.bannerWrapper}>
@@ -46,7 +45,6 @@ const Quiz = ({img, imgMob}) => {
                                 setAnswers(answers +
                                     `${quizQuestions[currentQuestion].question} - ${
                                     quizQuestions[currentQuestion].answers[currentAnswer]}; <br/>`)
-
                             } :
                             () => setPopupOpen(true) }/>
                 </div>
