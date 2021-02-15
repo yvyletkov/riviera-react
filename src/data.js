@@ -4128,7 +4128,7 @@ export const animationPageData = {
 export const quizQuestions = [
     {
         question: "Сколько гостей собирается в отель?",
-        answers: ['1', '2', '3']
+        answers: ['1', '2', '3', 'Более 3х']
     },
     {
         question: "На какое количество ночей вы хотели бы приехать?",
