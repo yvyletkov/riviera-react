@@ -4,7 +4,7 @@ import ContactForm from "../../additional/ContactForm/ContactForm";
 import MapSection from "../../shared/MapSection/MapSection";
 import arrow from "../../../img/arrow-accordeon.png";
 import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
-import cx from 'classnames'
+import cx from 'classnames';
 
 
 const Question = ({title, answer = 'Ответ на этот вопрос появится на сайте чуть позже. Спасибо!', key}) => {
