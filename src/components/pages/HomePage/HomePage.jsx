@@ -16,20 +16,20 @@ const HomePage = () => {
     React.useEffect( () => document.title = 'Riviera Sunrise Resort & SPA – Алушта, Крым – главная страница', [])
 
 
-    React.useEffect(() => {
-        setTimeout( () => {
-            document.querySelector('.popupOfferWrapper').classList.add('active')
-            document.querySelector('.popupOfferWrapper').addEventListener('click', (e) => e.target.classList.remove('active'))
-        }, 4000)
-    }, [])
+    // React.useEffect(() => {
+    //     setTimeout( () => {
+    //         document.querySelector('.popupOfferWrapper').classList.add('active')
+    //         document.querySelector('.popupOfferWrapper').addEventListener('click', (e) => e.target.classList.remove('active'))
+    //     }, 4000)
+    // }, [])
 
     return <>
-        <div className='popupOfferWrapper'>
-            <div>
-                <NavLink to={'/love-day'}>Подробнее →</NavLink>
-                <img src={window.matchMedia('(max-width: 600px)').matches ? popupImgMob : popupImg} alt=""/>
-            </div>
-        </div>
+        {/*<div className='popupOfferWrapper'>*/}
+        {/*    <div>*/}
+        {/*        <NavLink to={'/love-day'}>Подробнее →</NavLink>*/}
+        {/*        <img src={window.matchMedia('(max-width: 600px)').matches ? popupImgMob : popupImg} alt=""/>*/}
+        {/*    </div>*/}
+        {/*</div>*/}
         <HomePageBanner/>
 
         <section className='section first'>
