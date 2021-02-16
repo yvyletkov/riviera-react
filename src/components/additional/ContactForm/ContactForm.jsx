@@ -215,7 +215,7 @@ const ContactForm = ({
             {withEmail && <Field component={Input} name="email" type={"text"} placeholder={'Введите Ваш E-mail'}/>}
             {withPhone && <Field component={Input} name="phone" type={"text"} placeholder={'Введите Ваш телефон'}/>}
             {withMessage && <Field component={Textarea} name="message" placeholder={textAreaPlaceholder}/>}
-            {withAge && <Field component={Input} name="age" type={"number"} placeholder="Введите ваш возраст"/>}
+            {withAge && <Field component={Input} name="age" type={"number"} placeholder="Введите возраст"/>}
             {withDate && <Field component={Select} name="date" type={"select"}/>}
             <div className="agreementBlock">
                 <input className="agreementCheckbox" id="checkbox-agreement" type="checkbox" required/>
