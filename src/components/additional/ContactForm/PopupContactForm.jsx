@@ -11,6 +11,7 @@ const PopupContactForm = ({
                               withEmail,
                               withPhone,
                               withMessage,
+                              withAge,
                               textAreaPlaceholder,
                               swalText,
                               requestUrl = '',
@@ -32,7 +33,8 @@ const PopupContactForm = ({
                          withHiddenInput={withHiddenInput}
                          hiddenInputValue={hiddenInputValue}
                          setPopupOpen={setPopupOpen}
-                         setNumQuestion={setNumQuestion}/>
+                         setNumQuestion={setNumQuestion}
+                         withAge={withAge}/>
         </Rodal>)
 };
 

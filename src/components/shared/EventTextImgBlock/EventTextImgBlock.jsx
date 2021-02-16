@@ -7,7 +7,18 @@ import bestDayEverImg from "../../../img/events/bestdayever.png";
 import Button from "../Button/Button";
 import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
 
-const EventTextImgBlock = ({subtitle = 'Ваша семья', title = 'Начинается здесь', img, text, listArray = [], forWedding = true, wideImg, button=true}) => {
+const EventTextImgBlock = ({
+                               subtitle = 'Ваша семья',
+                               title = 'Начинается здесь',
+                               img,
+                               text,
+                               listArray = [],
+                               forWedding = true,
+                               wideImg,
+                               button=true,
+                               additionally=null,
+                               secondListTitle,
+                               secondListArray}) => {
 
     let [popupOpen, setPopupOpen] = React.useState(false);
 
@@ -24,6 +35,15 @@ const EventTextImgBlock = ({subtitle = 'Ваша семья', title = 'Начи�
 
                             {listArray.length ? <ul>{listArray.map((item, index) => <li key={index}>{item}</li>)}</ul> : <Button text={'Узнать подробности'} onClick={() => setPopupOpen(true)} style={window.matchMedia("(max-width: 768px)").matches ? {} : {width: '220px'}}/> }
                     </p>
+                    {(secondListTitle && secondListArray) &&
+                        <p>
+                            <h5><b>{secondListTitle}</b></h5>
+
+                            <ul>{secondListArray.map((item, index) => <li key={index}>{item}</li>)}</ul>
+                        </p>
+                    }
+
+                    {additionally && <p>{additionally}</p>}
                     {forWedding && <img src={bestDayEverImg} alt="Лучший день"/>}
                 </div>
                 <img className={wideImg ? s.wide : ''} src={img} alt={"Лучший праздник"}/>

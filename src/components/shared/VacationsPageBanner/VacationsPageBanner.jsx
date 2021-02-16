@@ -4,8 +4,7 @@ import s from "./VacationsPageBanner.module.scss";
 import BookingBlock from "../../additional/BookingBlock/BookingBlock";
 
 const VacationsPageBanner = ({fontSize, fontSizeMobile, subtitle, topLine, bottomLine, bannerImg, bannerMobileImg, descr, extraLine = [], positionBackground = null}) => {
-
-    console.log(positionBackground)
+    
     let [descriptionShown, setDescriptionShown] = React.useState(false);
     let [matches620px, setMatches620px] = React.useState(false);
 
