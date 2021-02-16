@@ -265,21 +265,21 @@ const Menu = ({menuOpened, toggleMenu}) => {
                                 </NavLink>
                             </div>
 
-                            <div className={s.menuItem + ' ' + s.valentine} onClick={toggleMenu}>
-                                <NavLink to={"/love-day"}>
-                                    14 февраля
-                                </NavLink>
-                            </div>
-
-                        </div>
-
-                        <div className={s.col}>
+                            {/*<div className={s.menuItem + ' ' + s.valentine} onClick={toggleMenu}>*/}
+                            {/*    <NavLink to={"/love-day"}>*/}
+                            {/*        14 февраля*/}
+                            {/*    </NavLink>*/}
+                            {/*</div>*/}
 
                             <div className={s.menuItem + ' ' + s.defenderDay} onClick={toggleMenu}>
                                 <NavLink to={"/23-february"}>
                                     23 февраля
                                 </NavLink>
                             </div>
+
+                        </div>
+
+                        <div className={s.col}>
 
                             <div className={s.menuItem + ' ' + s.march8} onClick={toggleMenu}>
                                 <NavLink to={"/8-march"}>

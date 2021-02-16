@@ -877,34 +877,6 @@ const commonExtraServicesSlides = [
 ]; // доп услуги
 const commonAfishaSlides = [
     {
-        img: afishaBelov,
-        title: "Джаз",
-        subtitle: "Белов<br><span style='font-size: 70px'>Ян</span>",
-        time: "19:30",
-        date: "12 февраля, пятница",
-        campus: "Ресторан",
-        campusName: "«The Grilled»",
-        key: 4,
-    },
-    {
-        img: afishaFilimonova,
-        title: "Вокал",
-        subtitle: "Филимонова<br><span style='font-size: 50px'>Ирина</span>",
-        time: "19:30",
-        date: "13 февраля, суббота",
-        campus: "Ресторан",
-        campusName: "«The Grilled»",
-    },
-    {
-        img: afishaSafronova,
-        title: "Вокал",
-        subtitle: "Сафронова<br><span style='font-size: 50px'>Татьяна</span>",
-        time: "19:30",
-        date: "14 февраля, воскресенье",
-        campus: "Ресторан",
-        campusName: "«The Grilled»",
-    },
-    {
         img: afishaImg1,
         title: "Тренировки",
         subtitle: "По плаванию<br/>для взрослых",
@@ -3637,6 +3609,33 @@ export const afishaPageData = {
     slides: commonAfishaSlides,
     pastSlides: [
         {
+            img: afishaBelov,
+            title: "Джаз",
+            subtitle: "Белов<br><span style='font-size: 70px'>Ян</span>",
+            time: "19:30",
+            date: "12 февраля, пятница",
+            campus: "Ресторан",
+            campusName: "«The Grilled»",
+        },
+        {
+            img: afishaFilimonova,
+            title: "Вокал",
+            subtitle: "Филимонова<br><span style='font-size: 50px'>Ирина</span>",
+            time: "19:30",
+            date: "13 февраля, суббота",
+            campus: "Ресторан",
+            campusName: "«The Grilled»",
+        },
+        {
+            img: afishaSafronova,
+            title: "Вокал",
+            subtitle: "Сафронова<br><span style='font-size: 50px'>Татьяна</span>",
+            time: "19:30",
+            date: "14 февраля, воскресенье",
+            campus: "Ресторан",
+            campusName: "«The Grilled»",
+        },
+        {
             img: afishaImg3,
             title: "Открытый",
             subtitle: "Подогреваемый<br/>бассейн",
@@ -3644,7 +3643,6 @@ export const afishaPageData = {
             date: "",
             campus: "",
             campusName: "С 26 декабря<br/>по 10 января",
-            key: 0,
         },
         {
             img: afishaImg4,
@@ -3654,7 +3652,6 @@ export const afishaPageData = {
             date: "31 декабря",
             campus: "Корпус",
             campusName: "Modern",
-            key: 1,
         },
         {
             img: afishaImg5,
@@ -3664,7 +3661,6 @@ export const afishaPageData = {
             date: "",
             campus: "",
             campusName: "18 декабря",
-            key: 2,
         },
         {
             img: afishaImg6,
@@ -3674,7 +3670,6 @@ export const afishaPageData = {
             date: "",
             campus: "",
             campusName: "19 декабря",
-            key: 3,
         },
         {
             img: animation1_2,
