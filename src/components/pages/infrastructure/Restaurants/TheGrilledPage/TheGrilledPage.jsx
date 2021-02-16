@@ -7,7 +7,7 @@ import img1 from "../../../../../img/the-grilled/restoran-gril-1.jpg";
 import s from "./TheGrilledPage.module.scss";
 import Headline from "../../../../shared/Headline/Headline";
 import EventMainSlider from "../../../../shared/sliders/EventMainSlider/EventMainSlider";
-import decisionBlockImg from "../../../../../img/mice/conference/14.jpg";
+import decisionBlockImg from "../../../../../img/the-grilled/reception.jpg";
 
 
 const TheGrilledPage = () => {
