@@ -106,7 +106,7 @@ function App() {
                     <Route path='/excursions' exact
                            component={() => <ExcursionsBookingPage/>}/>
 
-                    <Route path='/language-camp' exact
+                    <Route path='/offers/language-camp' exact
                            component={() => <LanguageCampPage/>}/>
 
                     <Route path='/crimea-tour' exact
