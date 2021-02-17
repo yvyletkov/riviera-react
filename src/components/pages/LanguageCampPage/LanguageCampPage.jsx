@@ -172,10 +172,10 @@ const LanguageCampPage = () => {
         </section>
 
         <section>
-            <InfoSlider subtitle={'Изысканная еда'}
-                        title={'для Вас'}
+            <InfoSlider subtitle={'Комплексное'}
+                        title={'ВКУСНОЕ ПИТАНИЕ'}
                         slides={LanguageCampData.food}
-                        text={"Вкусное, здоровое и разнообразное питание в ресторанах отеля"}/>
+                        text={"В ресторане «The Grilled» ежедневно накрывается завтрак, обед и ужин европейской кухни в формате «Шведский стол». Так же с 13 до 22-х часов можно побаловать себя блюдами из нового паназиатского меню. Взрыв вкуса обеспечен!"}/>
         </section>
 
         <section className='section'>
