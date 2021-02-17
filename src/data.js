@@ -293,6 +293,7 @@ import gymSpina from "./img/infrastructure/gym/свободные веса - Л�
 // single promotions Imports
 import barhatniiSeasonBannerImg from "./img/promos/promo-barhat-seaon.jpg";
 import ranneeBronirovaniePreviewImg from "./img/promos/rannee-peview.jpg";
+import languageCampBannerImg from "./img/promos/language-camp.jpg";
 import dlyaKrymchanBannerImg from "./img/promos/promo-otdyh-dlya-krymchan.jpg";
 import krymskayaZimaBannerImg from "./img/promos/крымская-зима.jpg";
 import letniyOtdyhBannerImg from "./img/promos/promo-letnoo-otdyh.jpg";
@@ -763,6 +764,13 @@ const commonVacationGridSlides = [
     },
 ];
 const commonSpecialsSlides = [
+    {
+        img: languageCampBannerImg,
+        subtitle: "Английские каникулы",
+        title: "в Крыму",
+        link: '/offers/language-camp',
+        key: 7,
+    },
     {
         img: ranneeBronirovaniePreviewImg,
         subtitle: "Раннее бронирование",
