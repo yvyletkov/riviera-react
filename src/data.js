@@ -442,7 +442,6 @@ import defenderDaySlide1 from "./img/defenderDay/1.jpg";
 import defenderDaySlide2 from "./img/defenderDay/2.jpg";
 import defenderDaySlide3 from "./img/defenderDay/3.jpg";
 import defenderDaySlide4 from "./img/defenderDay/4.jpg";
-import defenderDaySlide5 from "./img/defenderDay/5.jpg";
 // end DEFENDER DAY imports
 // animationPage imports
 import animation1_1 from "./img/animation/1-beauty-lunch.jpg"
@@ -3890,12 +3889,6 @@ export const defenderDayPageData = {
             title: "Шоу-программа с танцевальными номерами",
             descr: '',
             key: 4,
-        },
-        {
-            img: defenderDaySlide5,
-            title: "Кенди-бар в стиле казино",
-            descr: '',
-            key: 5,
         },
     ],
 }
