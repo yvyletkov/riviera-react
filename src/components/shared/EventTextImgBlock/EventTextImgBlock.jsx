@@ -6,6 +6,7 @@ import Headline from "../Headline/Headline";
 import bestDayEverImg from "../../../img/events/bestdayever.png";
 import Button from "../Button/Button";
 import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
+import whatsappIcon from "../../../img/icons/whatsapp.svg";
 
 const EventTextImgBlock = ({
                                subtitle = 'Ваша семья',
@@ -33,7 +34,7 @@ const EventTextImgBlock = ({
                     <p>
                         {forWedding && <h5><b>Молодожёнов ждёт:</b></h5>}
 
-                            {listArray.length ? <ul>{listArray.map((item, index) => <li key={index}>{item}</li>)}</ul> : <Button text={'Узнать подробности'} onClick={() => setPopupOpen(true)} style={window.matchMedia("(max-width: 768px)").matches ? {} : {width: '220px'}}/> }
+                            {listArray.length ? <ul>{listArray.map((item, index) => <li key={index}>{item}</li>)}</ul> : null }
                     </p>
                     {(secondListTitle && secondListArray) &&
                         <p>
@@ -45,16 +46,20 @@ const EventTextImgBlock = ({
 
                     {additionally && <p>{additionally}</p>}
                     {forWedding && <img src={bestDayEverImg} alt="Лучший день"/>}
+                    <Button withIcon
+                            text={'Напишите нам в Whatsapp'}
+                            icon={whatsappIcon}
+                            href={'https://wa.me/89877541784'}/>
                 </div>
                 <img className={wideImg ? s.wide : ''} src={img} alt={"Лучший праздник"}/>
 
-                <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
-                                  popupTitleText={'Чтобы мы могли подробнее рассказать об ивенте, пожалуйста, оставьте свои контактные данные️'}
-                                  submitBtnText='Узнать подробности'
-                                  formName={`Форма из блока с подробностями об Ивенте чёрного цвета (узнать подробности)`}
-                                  swalText={'мы отправим информацию по этому ивенту на указанную Вами почту в самое ближайшее время!'}
-                                  withEmail
-                                  withPhone/>
+                {/*<PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}*/}
+                {/*                  popupTitleText={'Чтобы мы могли подробнее рассказать об ивенте, пожалуйста, оставьте свои контактные данные️'}*/}
+                {/*                  submitBtnText='Узнать подробности'*/}
+                {/*                  formName={`Форма из блока с подробностями об Ивенте чёрного цвета (узнать подробности)`}*/}
+                {/*                  swalText={'мы отправим информацию по этому ивенту на указанную Вами почту в самое ближайшее время!'}*/}
+                {/*                  withEmail*/}
+                {/*                  withPhone/>*/}
             </div>
         </div>
     )
