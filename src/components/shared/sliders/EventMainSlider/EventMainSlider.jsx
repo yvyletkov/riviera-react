@@ -119,7 +119,7 @@ const EventMainSlider = ({
     };
 
     const items = slides.map((item, index) => {
-        const {img, title, descr, popupData} = item;
+        const {img, title, descr, popupData, imgHeight} = item;
         return (
             <div className="SliderElement" key={index}>
                 <EventMainSliderItem
@@ -128,6 +128,7 @@ const EventMainSlider = ({
                     key={index}
                     index={index}
                     withButton={withButton}
+                    imgHeight={imgHeight}
                     img={img}
                     title={title}
                     descr={descr}
@@ -175,7 +176,7 @@ export default EventMainSlider;
 const EventMainSliderItem = (props) => {
     let [showTip, setShowTip] = React.useState(false);
 
-    const {img, title, descr, active, index, withButton, activatePopup, withTip, onlyTitle} = props;
+    const {img, title, descr, active, index, withButton, activatePopup, withTip, onlyTitle, imgHeight = null} = props;
 
     let [showDescr, setShowDescr] = React.useState(active);
 
@@ -203,7 +204,7 @@ const EventMainSliderItem = (props) => {
             {/*    </p>*/}
             {/*</div>*/}
 
-            <img className={s.img} src={img} alt=""/>
+            <img className={s.img} style={{height: imgHeight}} src={img} alt=""/>
 
             <div className={s.content}>
                 <h6 className={onlyTitle ? s.titleSmall : s.title} dangerouslySetInnerHTML={{__html: title}}/>

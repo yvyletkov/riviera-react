@@ -14,12 +14,14 @@ import ContactForm from "../../additional/ContactForm/ContactForm";
 import img from "../../../img/loveDay/4.jpg";
 import formBluredImg from "../../../img/language-camp/Group-1.png";
 import Button from "../../shared/Button/Button";
+import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
 
 
 const LanguageCampPage = () => {
 
     React.useEffect(() => document.title = `Английские каникулы – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
+    let [popupOpen, setPopupOpen] = React.useState(false);
 
     return <>
         <VacationsPageBanner fontSize={["70px", "57px"]}
@@ -116,8 +118,8 @@ const LanguageCampPage = () => {
                                 <p>Стоимость:</p>
                                 <p className={s.price}>15 000 &#8381;/смена</p>
                             </div>
-                            <Button text="Подробнее"
-                                    link="#"
+                            <Button text="Оставить заявку"
+                                    onClick={() => setPopupOpen(!popupOpen)}
                                     style={{maxWidth: "270px", margin: "0 auto", width:"100%"}} />
                         </div>
 
@@ -135,10 +137,18 @@ const LanguageCampPage = () => {
                                 <p>Стоимость:</p>
                                 <p className={s.price}>15 000 &#8381;/смена</p>
                             </div>
-                            <Button text="Подробнее"
-                                    link="#"
+                            <Button text="Оставить заявку"
+                                    onClick={() => setPopupOpen(!popupOpen)}
                                     style={{maxWidth: "270px", margin:"0 auto", width:"100%"}}/>
                         </div>
+                        <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
+                                          popupTitleText={'Чтобы оставить заявку, пожалуйста, оставьте свои контактные данные️'}
+                                          submitBtnText='Оставить заявку'
+                                          formName={`Форма обратной связи с Языкового лагеря`}
+                                          swalText={'в ближайшее время с Вами свяжется координатор проекта!'}
+                                          withAge
+                                          withPhone
+                                          requestUrl={'https://language-camp.rivierasunrise.ru/language-camp'}/>
                     </div>
                 </div>
             </div>
@@ -162,10 +172,10 @@ const LanguageCampPage = () => {
         </section>
 
         <section>
-            <InfoSlider subtitle={'Изысканная еда'}
-                        title={'для Вас'}
+            <InfoSlider subtitle={'Комплексное'}
+                        title={'ВКУСНОЕ ПИТАНИЕ'}
                         slides={LanguageCampData.food}
-                        text={"Вкусное, здоровое и разнообразное питание в ресторанах отеля"}/>
+                        text={"В ресторане «The Grilled» ежедневно накрывается завтрак, обед и ужин европейской кухни в формате «Шведский стол». Так же с 13 до 22-х часов можно побаловать себя блюдами из нового паназиатского меню. Взрыв вкуса обеспечен!"}/>
         </section>
 
         <section className='section'>

@@ -69,7 +69,11 @@ const Footer = () => {
                                 <NavLink to={'/documents'}>Документы</NavLink>
                                 {/*<p>Программа лояльности UPRO CLUB</p>*/}
                             </div>
-
+                            <div id="tl-visa-support-block" style={{marginTop: '15px'}}>
+                                <noindex>
+                                    <a href="https://rivierasunrise.ru/visa-support" rel="nofollow">Получить визовое приглашение</a>
+                                </noindex>
+                            </div>
                         </div>
                     </div>
                 </div>

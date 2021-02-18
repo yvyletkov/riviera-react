@@ -19,6 +19,7 @@ import quizImgRanneeBronirovanie from "./img/quiz/quiz-img.png";
 import quizImgRanneeBronirovanieMob from "./img/quiz/quiz-mob.jpg";
 import quizImgLetniyOtdyh from "./img/quiz/quiz-img1.png";
 import quizImgLetniyOtdyhMob from "./img/quiz/mob-quiz1.jpg";
+import VisaPage from "./components/pages/VisaPage/VisaPage";
 const HomePage = lazy(() => import('./components/pages/HomePage/HomePage'));
 const RoomsAndPricesPage = lazy(() => import('./components/pages/RoomsAndPricesPage/RoomsAndPricesPage'));
 const SingleRoomPage = lazy(() => import('./components/pages/SingleRoomPage/SingleRoomPage'));
@@ -69,6 +70,7 @@ const CrimeaTourPage = lazy(() => import("./components/pages/CrimeaTourPage/Crim
 const ExcursionsBookingPage = lazy(() => import("./components/pages/ExcursionsBookingPage/ExcursionsBookingPage"));
 const LanguageCampPage = lazy(() => import("./components/pages/LanguageCampPage/LanguageCampPage"));
 const SearchPage = lazy(() => import("./components/pages/SearchPage/SearchPage"));
+// const VisaPage = lazy(() => import('./components/pages/VisaPage/VisaPage'));
 
 function App() {
 
@@ -95,6 +97,8 @@ function App() {
             </div>}>
 
                 <Switch>
+                    <Route path='/visa-support'
+                           component={() => <VisaPage/>}/>
 
                     <Route path='/search'
                            component={() => <SearchPage/>}/>
@@ -102,7 +106,7 @@ function App() {
                     <Route path='/excursions' exact
                            component={() => <ExcursionsBookingPage/>}/>
 
-                    <Route path='/language-camp' exact
+                    <Route path='/offers/language-camp' exact
                            component={() => <LanguageCampPage/>}/>
 
                     <Route path='/crimea-tour' exact
