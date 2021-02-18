@@ -12,7 +12,19 @@ import Rodal from "rodal";
 import NavBlock from "../../../shared/NavBlock/NavBlock";
 
 
-const EventPageBanner = ({mobileFontSize, fontSize, titles, icons, bannerImg, bannerImgMobile, blackFont, btnLink = '', withInfo = false, withPrice = false, nav}) => {
+const EventPageBanner = ({
+                             mobileFontSize,
+                             fontSize,
+                             titles,
+                             icons,
+                             bannerImg,
+                             bannerImgMobile,
+                             blackFont,
+                             btnLink = '',
+                             withInfo = false,
+                             withPrice = false,
+                             nav
+}) => {
 
     let [popupOpen, setPopupOpen] = React.useState(false);
 
@@ -33,8 +45,11 @@ const EventPageBanner = ({mobileFontSize, fontSize, titles, icons, bannerImg, ba
                         <span
                             style={window.matchMedia("(max-width: 620px)").matches ? {fontSize: mobileFontSize[2]} : {fontSize: fontSize[2]}}>{titles[3]}</span>
                     </h1>
-                    <Button style={{width: "fit-content", marginTop: "20px"}}
-                            onClick={() => setPopupOpen(true)} text={"Узнать стоимость"}/>
+                    <div style={{display: 'flex', alignItems: 'center'}}>
+                        <Button style={{width: "fit-content", marginTop: "20px"}}
+                                onClick={() => setPopupOpen(true)} text={"Узнать стоимость"}/>
+                    </div>
+
 
                     {
                         // withInfo ?

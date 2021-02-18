@@ -17,7 +17,7 @@
     .background {
       position: absolute;
       z-index: -1;
-      height: 95%;
+      height: 108%;
       background-color: #f6f6f6;
       width: 100vw;
       right: 150px;
@@ -27,7 +27,7 @@
 
     .textContent {
       position: relative;
-      padding: 100px 110px 100px 100px;
+      padding: 100px 70px 100px 20px;
 
       p {
         text-align: justify;
@@ -50,7 +50,7 @@
         object-fit: contain;
         position: absolute;
         right: -65px;
-        bottom: 50px;
+        bottom: 120px;
         box-shadow: none;
 
         @media (max-width: 1200px) {
