@@ -1316,22 +1316,22 @@ export const micePagesData = {
         },
         {
             img: confrerenceRoomsImg1RoomsSlider,
-            title: 'Конференц-зал 1',
+            title: 'Конференц-зал 1 + 2',
             key: 2,
         },
         {
             img: confrerenceRoomsImg2RoomsSlider,
-            title: 'Конференц-зал 2',
+            title: 'Конференц-зал 3 + 4',
             key: 3,
         },
         {
             img: confrerenceRoomsImg3RoomsSlider,
-            title: 'Конференц-зал 3',
+            title: 'Конференц-зал 5 + 6',
             key: 4,
         },
         {
             img: confrerenceRoomsImg4RoomsSlider,
-            title: 'Конференц-зал 4',
+            title: 'Конференц-зал 7',
             key: 5,
         },
         {
