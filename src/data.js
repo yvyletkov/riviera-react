@@ -3488,7 +3488,7 @@ export const singlePromotionPages = {
         bannerImg: dlyaKrymchanBannerImg,
         formImg: dlyaKrymchanFormBannerImg,
         title: ['Отдых', 'Для крымчан -10%'],
-        description: 'Отель Riviera Sunrise Resort & SPA приглашает жителей полуострова провести осенние дни у моря в обстановке комфорта и роскоши, со скидкой 10%!',
+        description: 'Отель Riviera Sunrise Resort & SPA приглашает жителей полуострова провести отдых  в обстановке комфорта и роскоши, со скидкой 10%!',
         hiddenDescription: '<ul>\n' +
             '                                        <li>Бронирование производится при внесении предоплаты за первые сутки проживания, в течение пяти дней;' +
             '                                        </li>\n' +
