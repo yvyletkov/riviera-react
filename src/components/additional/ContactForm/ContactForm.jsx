@@ -7,7 +7,6 @@ import {withRouter} from "react-router-dom";
 import {request} from "./../../../api";
 import swal from 'sweetalert2';
 
-
 const Input = ({
                    field,
                    type,
