@@ -2,8 +2,6 @@ import React from "react";
 import s from "./VacanciesPage.module.scss";
 import MapSection from "../../shared/MapSection/MapSection";
 import Headline from "../../shared/Headline/Headline";
-import vacationsImg from "../../../img/vacancies/1.jpg";
-import Button from "../../shared/Button/Button";
 import {vacanciesPageData} from "../../../data";
 import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
 import VacanciesSlider from "../../shared/sliders/VacanciesSlider/VacanciesSlider";
@@ -21,9 +19,19 @@ const VacanciesPage = () => {
                 <div className={s.wrapper}>
                     <div className={s.container}>
                         <div className={s.topRow}>
-                            <Headline title="В Riviera Sunrise" subtitle="Карьера" />
+                            <Headline title="В Riviera Sunrise" subtitle="Карьера"/>
                             <div className={s.textContent}>
-                                <p>Один из лучших отелей России приглашает в команду единомышленников, умеющих работать на результат, мотивированных на развитие и решение непростых, но очень интересных задач. Мы гарантируем: стабильную заработную плату, официальное трудоустройство, работу в дружной команде профессионалов, скидки для сотрудников на пользование инфраструктурой центра, возможность бесплатного проживания и питания.</p>
+                                <p>Один из лучших отелей России приглашает в команду единомышленников, умеющих работать
+                                    на результат,
+                                    мотивированных на развитие и решение непростых, но очень интересных задач.
+                                    Мы гарантируем: стабильную заработную плату, официальное трудоустройство,
+                                    работу в дружной команде профессионалов, скидки для сотрудников на пользование
+                                    инфраструктурой центра,
+                                    возможность бесплатного проживания и питания.</p><br/>
+                                <p>Если Вас заинтересовала вакансия, свяжитесь с нашим менеджером<br/>
+                                    <b>по телефону +7 978 915 33 88 (Viber и WhatsApp)</b><br/>
+                                    или высылайте свое СV на <b>е-mail: Аnna.leshinskaya@rivierasunrise.com</b>
+                                </p>
                             </div>
                         </div>
 
