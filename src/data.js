@@ -3952,12 +3952,12 @@ export const march8PageData = {
             descr: '',
             key: 5,
         },
-        {
-            img: march8img6,
-            title: "Фотограф",
-            descr: '',
-            key: 6,
-        },
+        // {
+        //     img: march8img6,
+        //     title: "Фотограф",
+        //     descr: '',
+        //     key: 6,
+        // },
         {
             img: march8img7,
             title: "Живая музыка в ресторане The Grilled",
