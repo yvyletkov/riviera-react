@@ -28,6 +28,7 @@ import promoImg8 from "./img/promos/promo8.jpg";
 import promoImg9 from "./img/promos/promo9.jpg";
 import promoImg10 from "./img/promos/promo10.jpg";
 import promoImg11 from "./img/promos/promo11.jpg";
+import crimeaTourPreviewImg from "./img/promos/turpaket.jpg";
 import img4 from "./img/promos/promo1.jpg";
 import img5 from "./img/gallery-slider/home-page/fotogalereya5.jpg";
 import img6 from "./img/gallery-slider/home-page/fotogalereya6.jpg";
@@ -764,6 +765,13 @@ const commonVacationGridSlides = [
     },
 ];
 const commonSpecialsSlides = [
+    {
+        img: crimeaTourPreviewImg,
+        subtitle: "Незабываемый тур",
+        title: "в Крым",
+        link: '/offers/crimea-tour',
+        key: 9,
+    },
     {
         img: languageCampBannerImg,
         subtitle: "Английские каникулы",
