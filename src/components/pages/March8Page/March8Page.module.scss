@@ -439,6 +439,7 @@ $black: #171717;
         margin: 0 auto;
 
         .description {
+          z-index: -1;
           opacity: 0;
           box-sizing: border-box;
           background-color: #f6f6f6;
