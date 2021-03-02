@@ -264,28 +264,16 @@ const Menu = ({menuOpened, toggleMenu}) => {
                                     Medical SPA
                                 </NavLink>
                             </div>
-
-                            {/*<div className={s.menuItem + ' ' + s.valentine} onClick={toggleMenu}>*/}
-                            {/*    <NavLink to={"/love-day"}>*/}
-                            {/*        14 февраля*/}
-                            {/*    </NavLink>*/}
-                            {/*</div>*/}
-
-                            <div className={s.menuItem + ' ' + s.defenderDay} onClick={toggleMenu}>
-                                <NavLink to={"/23-february"}>
-                                    23 февраля
+                            
+                            <div className={s.menuItem + ' ' + s.march8} onClick={toggleMenu}>
+                                <NavLink to={"/8-march"}>
+                                    8 марта
                                 </NavLink>
                             </div>
 
                         </div>
 
                         <div className={s.col}>
-
-                            <div className={s.menuItem + ' ' + s.march8} onClick={toggleMenu}>
-                                <NavLink to={"/8-march"}>
-                                    8 марта
-                                </NavLink>
-                            </div>
 
                             <div className={s.menuItem} onClick={toggleMenu}>
                                 <NavLink to={"/faq"}>

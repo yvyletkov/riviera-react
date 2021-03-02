@@ -15,7 +15,7 @@ const FoodBlock = ({
             <Headline subtitle={subtitle} title={title}/>
             {listArray ?
                 <ul className={s.text}>
-                    {listArray.map((el) => <li>{el}</li>)}
+                    {listArray.map((el) => <li dangerouslySetInnerHTML={{__html: el}}/>)}
                 </ul> :
                 <p className={s.text}>{text}</p>
             }
