@@ -25,11 +25,11 @@
       position: absolute;
       top: 15px;
       right: 20px;
-      color: #fff;
+      color: #000 !important;
       font-size: 16px;
-      @media (max-width: 600px) {
-        color: #000
-      }
+      //@media (max-width: 600px) {
+      //  color: #000
+      //}
     }
 
   }
