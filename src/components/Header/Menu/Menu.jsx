@@ -264,7 +264,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
                                     Medical SPA
                                 </NavLink>
                             </div>
-                            
+
                             <div className={s.menuItem + ' ' + s.march8} onClick={toggleMenu}>
                                 <NavLink to={"/8-march"}>
                                     8 марта

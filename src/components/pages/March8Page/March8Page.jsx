@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useState} from "react";
 import MapSection from "../../shared/MapSection/MapSection";
 import s from "./March8Page.module.scss";
 import BookingBlock from "../../additional/BookingBlock/BookingBlock";
@@ -16,10 +16,13 @@ import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
 import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
 import CenteredSlider from "../../shared/sliders/CenteredSlider/CenteredSlider";
 import SpecialsSlider from "../../shared/sliders/SpecialsSlider/SpecialsSlider";
+import CirqleTip from "../../shared/CirqleTip/CirqleTip";
 
 const March8Page = () => {
 
     React.useEffect(() => document.title = `8 марта в Крыму - Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
+    let [descriptionShown, setDescriptionShown] = React.useState(false);
 
     return <>
 
@@ -87,15 +90,40 @@ const March8Page = () => {
 
                     <div className={s.container}>
                         <h4 className={s.title}>
-                            <span>Нежность и красота</span>
-                            <span>В программе 8 марта для</span>
-                            <span>Милых дам</span>
+                            <span>7 марта приглашаем Вас</span>
+                            <span>на праздничный вечер в честь</span>
+                            <span>ПРЕКРАСНЫХ ДАМ!</span>
                         </h4>
-                        <p>Оставьте свой телефон, и мы рассчитаем стоимость нежных и красивых выходных</p>
+                        <div className={s.descriptionBtn} onClick={() => setDescriptionShown(!descriptionShown)}>
+                            Подробнее&nbsp;&nbsp;• • •
+                        </div>
+                        <div className={s.descriptionWrapper}>
+                            <div className={descriptionShown ? s.description + ' ' + s.shown : s.description}>
+                                <p dangerouslySetInnerHTML={{__html: '' +
+                                        '18:00 -19:00' +
+                                        '<ul>' +
+                                        '<li>Приветственный Welcome-коктейль в холле, комплимент от шеф-кондитера всем Дамам</li> ' +
+                                        '<li>Фотозона</li>' +
+                                        '</ul>' +
+                                        '</br>' +
+                                        '19:00-22:55' +
+                                        '<ul>' +
+                                        '<li>Праздничный ужин в банкетном зале «Ballroom»</li>' +
+                                        '<li>Выступление кавер-группы «Plus Bonus Band» </li>' +
+                                        '<li>Танцевальный Шоу – номер от дуэта «Alter EGO»</li>' +
+                                        '<li>Розыгрыш призов</li>' +
+                                        '<li>DJ - сет</li>' +
+                                        '<li>Стоимость - 2500₽ за персону и бутылка алкоголя в подарок!</li>' +
+                                        '</ul>'}}/>
+                            </div>
+                        </div>
+                        <p>Оставьте свой телефон для бронирования стола на праздничном банкете</p>
 
-                        <ContactForm submitBtnText={'Отправить'}
-                                     formName={`Форма расчета стоимости 8 марта`} withPhone
-                                     swalText={'очень скоро мы свяжемся с Вами и сообщим все подробности'}/>
+                        <ContactForm submitBtnText={'Забронировать'}
+                                     formName={`Форма расчета стоимости 8 марта`}
+                                     withPhone
+                                     swalText={'очень скоро мы свяжемся с Вами и сообщим все подробности'}
+                                     requestUrl={'https://8march.rivierasunrise.ru/8-march'}/>
 
                     </div>
                 </div>
