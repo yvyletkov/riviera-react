@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import {homePageData} from "../../../data"
 import HomePageBanner from "./HomePageBanner/HomePageBanner";
 import CenteredSlider from "../../shared/sliders/CenteredSlider/CenteredSlider";
@@ -26,7 +26,7 @@ const HomePage = () => {
     return <>
         <div className='popupOfferWrapper'>
             <div>
-                <NavLink to={'/23-february'}>Подробнее →</NavLink>
+                <NavLink to={'/8-march'}>Подробнее →</NavLink>
                 <img src={window.matchMedia('(max-width: 600px)').matches ? popupImgMob : popupImg} alt=""/>
             </div>
         </div>
