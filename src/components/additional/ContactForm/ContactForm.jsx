@@ -4,8 +4,11 @@ import * as Yup from 'yup';
 import s from "../../shared/Button/Button.module.scss";
 import cx from "classnames";
 import {withRouter} from "react-router-dom";
-import {request} from "./../../../api";
+import {request} from "../../../api";
 import swal from 'sweetalert2';
+// import Cleave from "cleave.js"
+import Cleave from 'cleave.js/react';
+import "cleave.js/dist/addons/cleave-phone.ru"
 
 const Input = ({
                    field,
@@ -21,17 +24,42 @@ const Input = ({
     </div>
 };
 
-const Select = ({
-                   field,
-                   type,
-                   form: {touched, errors},
-                   ...props
-               }) => {
+const NumInput = ({
+                      field,
+                      type,
+                      form: {touched, errors},
+                      ...props
+                  }) => {
     const classNames = cx('input', {'success': touched[field.name] && !errors[field.name]}, {'error': touched[field.name] && errors[field.name]})
     return <div style={{position: 'relative'}}>
-        <select type={type} style={{color:'#bababa'}} className={classNames} {...field} {...props} >
+        <Cleave placeholder="Enter your credit card number"
+                options={{
+                    prefix: '+7',
+                    delimiters: [' (', ') ', '-', '-'],
+                    blocks: [2, 3, 3, 2, 2],
+                }}
+                // onChange={this.onChange.bind(this)}
+                className={classNames}
+                {...field} {...props}
+                type={type}
+        />
+        {/*<input type={type} className={classNames} {...field} {...props} />*/}
+        {touched[field.name] &&
+        errors[field.name] && <div className="error">{errors[field.name]}</div>}
+    </div>
+};
+
+const Select = ({
+                    field,
+                    type,
+                    form: {touched, errors},
+                    ...props
+                }) => {
+    const classNames = cx('input', {'success': touched[field.name] && !errors[field.name]}, {'error': touched[field.name] && errors[field.name]})
+    return <div style={{position: 'relative'}}>
+        <select type={type} style={{color: '#bababa'}} className={classNames} {...field} {...props} >
             <option value="default" hidden selected>Выберите дату</option>
-            <option value="Дата 20.03-27.03">с 20 по 27 марта </option>
+            <option value="Дата 20.03-27.03">с 20 по 27 марта</option>
             <option value="Дата 3.04-10.04">с 3 по 10 апреля</option>
         </select>
         {touched[field.name] &&
@@ -40,10 +68,10 @@ const Select = ({
 };
 
 const Textarea = ({
-                   field,
-                   form: {touched, errors},
-                   ...props
-               }) => {
+                      field,
+                      form: {touched, errors},
+                      ...props
+                  }) => {
     const classNames = cx('input', {'success': touched[field.name] && !errors[field.name]}, {'error': touched[field.name] && errors[field.name]})
     return <div style={{position: 'relative'}}>
         <textarea rows={6} className={classNames} {...field} {...props} />
@@ -66,21 +94,30 @@ const ContactForm = ({
                          setNumQuestion,
                          swalText = 'Мы получили Вашу заявку 😌',
                          textAreaPlaceholder = 'Введите Ваше сообщение',
-                         requestUrl, ...props}) => {
+                         requestUrl, ...props
+                     }) => {
 
-    const rePhoneNumber = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
+    // const rePhoneNumber = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
     const reAge = /^[1-9]?[0-9]{1}$|^100$/;
-    Yup.addMethod(Yup.string, "phone", function() {
-        return this.test("phone", "Некорректный номер", value =>
-            rePhoneNumber.test(value)
-        );
-    });
+    // Yup.addMethod(Yup.string, "phone", function () {
+    //     return this.test("phone", "Некорректный номер", value =>
+    //         rePhoneNumber.test(value)
+    //     );
+    // });
 
-    Yup.addMethod(Yup.string, "age", function() {
+    Yup.addMethod(Yup.string, "age", function () {
         return this.test("age", "Некорректный возраст", value =>
             reAge.test(value)
         );
     });
+
+    // React.useEffect( () => {
+    //     let cleave = new Cleave('input[name=phone]', {
+    //         prefix: '+7',
+    //         delimiters: ['(', ')', '-', '-'],
+    //         blocks: [2, 3, 3, 2, 2],
+    //     });
+    // }, [])
 
     const Schema = Yup.object().shape({
         name: Yup.string()
@@ -88,9 +125,9 @@ const ContactForm = ({
             .max(25, 'Слишком длинное имя 😢')
             .required('Пожалуйста, введите имя'),
         phone: withPhone ? Yup.string()
-            .min(11, 'Пожалуйста, в формате +7xxxxxxxxxx')
-            .max(16, 'Слишком длинный номер телефона 😢')
-            .phone()
+            .min(18, 'Номер введен неверно')
+            .max(18, 'Слишком длинный номер телефона 😢')
+            // .phone()
             .required('Это поле тоже обязательное') : null,
         age: withAge ? Yup.string()
             .min(1, 'Введите корректный возраст')
@@ -108,7 +145,6 @@ const ContactForm = ({
     });
 
     const data = {};
-
 
 
     const onSubmit = (values, {resetForm}) => {
@@ -212,7 +248,7 @@ const ContactForm = ({
         <Form>
             <Field component={Input} name="name" placeholder={'Введите Ваше имя'}/>
             {withEmail && <Field component={Input} name="email" type={"text"} placeholder={'Введите Ваш E-mail'}/>}
-            {withPhone && <Field component={Input} name="phone" type={"text"} placeholder={'Введите Ваш телефон'}/>}
+            {withPhone && <Field component={NumInput} name="phone" type={"text"} placeholder={'Введите Ваш телефон'}/>}
             {withMessage && <Field component={Textarea} name="message" placeholder={textAreaPlaceholder}/>}
             {withAge && <Field component={Input} name="age" type={"number"} placeholder="Введите возраст"/>}
             {withDate && <Field component={Select} name="date" type={"select"}/>}
@@ -221,7 +257,7 @@ const ContactForm = ({
                 <label htmlFor="checkbox-agreement">
                     <p className="checkboxText">Даю&nbsp;
                         <a className="checkboxText"
-                           style={{textDecoration:'underline'}}
+                           style={{textDecoration: 'underline'}}
                            href="/documents/Политика-обработки-персональных-данных.pdf"
                            target="_blank">согласие на обработку персональных данных
                         </a>
@@ -232,7 +268,7 @@ const ContactForm = ({
                     className={s.button}
                     type="submit"
                     onClick={() => {
-                        setPopupOpen(false);
+                        setPopupOpen && setPopupOpen(false);
                         withHiddenInput && setNumQuestion(0);
                     }}>{submitBtnText}
             </button>
