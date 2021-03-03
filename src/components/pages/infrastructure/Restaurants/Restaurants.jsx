@@ -142,7 +142,7 @@ const Restaurants = () => {
                         <div className='btnBlock'>
                                 <Button notActive={currentTab !== 0}
                                         onClick={() => setCurrentTab(0)}
-                                        text="Шведский стол"
+                                        text="Ресторан  «The Grilled»"
                                         style={{marginBottom:'14px'}}/>
                                 <Button notActive={currentTab !== 1}
                                         onClick={() => setCurrentTab(1)}
@@ -221,7 +221,7 @@ const Restaurants = () => {
                                         <p className="textDesc"><b>Расположение: {infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].location}</b></p>
                                         : null
                                 }
-                                <p className="textDesc">{infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].description}</p>
+                                <p className="textDesc" dangerouslySetInnerHTML={{__html: infrastructurePagesData.restaurants.restaurantsContent[currentTab][0].description}}/>
                         </div>
                         <div className='sliderBlock'>
                             <SimpleSlider
