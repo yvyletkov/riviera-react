@@ -133,7 +133,7 @@ section.section.last {
   }
 
   .frisbuy-sr-widget.frisbuy-sr-mobile-fixed {
-    top: 130px !important;
+    top: 140px !important;
     bottom: unset !important;
   }
 
@@ -143,6 +143,10 @@ section.section.last {
 
   .frisbuy-sr-widget.frisbuy-sr-mobile-fixed .frisbuy-sr-block, .frisbuy-sr-widget.frisbuy-sr-mobile-fixed .frisbuy-sr-stories {
     width: 135px !important;
+  }
+
+  .frisbuy-sr-widget.frisbuy-sr-mobile-fixed.frisbuy-sr-right {
+    z-index: 998;
   }
 
 }
