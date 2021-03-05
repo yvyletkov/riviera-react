@@ -8,12 +8,13 @@ import s from "./TheGrilledPage.module.scss";
 import Headline from "../../../../shared/Headline/Headline";
 import EventMainSlider from "../../../../shared/sliders/EventMainSlider/EventMainSlider";
 import decisionBlockImg from "../../../../../img/the-grilled/reception.jpg";
+import PDFviewer from "../../../../additional/PDFviewer/PDFviewer";
+import HeadlineCenter from "../../../../shared/HeadlineCenter/HeadlineCenter";
 
 
 const TheGrilledPage = () => {
 
     React.useEffect(() => document.title = `Ресторан The Grilled – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
-
 
     return <>
         <VacationsPageBanner fontSize={["70px", "57px"]}
@@ -57,6 +58,11 @@ const TheGrilledPage = () => {
 
                 </div>
             </div>
+        </section>
+
+        <section className='section'>
+            <HeadlineCenter title={'Наше новое меню'}/>
+            <PDFviewer/>
         </section>
 
         <section className='section'>
