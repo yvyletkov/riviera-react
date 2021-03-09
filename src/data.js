@@ -911,16 +911,7 @@ const commonAfishaSlides = [
         campusName: "«The Grilled»",
         link: '/the-grilled',
     },
-    {
-        img: afishaImg8mar,
-        title: "приглашаем на главный",
-        subtitle: "женский<br/><span style='font-size: 54px'>праздник</span>",
-        time: "",
-        date: "",
-        campus: "",
-        campusName: "8 марта",
-        link: '/8-march',
-    },
+
 ];
 const commonClassicCampusSlides = [
     {
@@ -3717,6 +3708,16 @@ export const blogPostsData = [
 export const afishaPageData = {
     slides: commonAfishaSlides,
     pastSlides: [
+        {
+            img: afishaImg8mar,
+            title: "приглашаем на главный",
+            subtitle: "женский<br/><span style='font-size: 54px'>праздник</span>",
+            time: "",
+            date: "",
+            campus: "",
+            campusName: "8 марта",
+            link: '/8-march',
+        },
         {
             img: afishaImg23feb,
             title: "В стиле казино",

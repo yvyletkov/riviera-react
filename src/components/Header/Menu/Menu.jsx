@@ -265,11 +265,11 @@ const Menu = ({menuOpened, toggleMenu}) => {
                                 </NavLink>
                             </div>
 
-                            {/*<div className={s.menuItem + ' ' + s.march8} onClick={toggleMenu}>*/}
-                            {/*    <NavLink to={"/8-march"}>*/}
-                            {/*        8 марта*/}
-                            {/*    </NavLink>*/}
-                            {/*</div>*/}
+                            <div className={s.menuItem} onClick={toggleMenu}>
+                                <NavLink to={"offers/crimea-tour"}>
+                                    Незабываемый тур в Крым
+                                </NavLink>
+                            </div>
 
                         </div>
 
