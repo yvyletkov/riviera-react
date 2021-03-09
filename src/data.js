@@ -497,7 +497,9 @@ import vinnyikrymImg from "./img/crimea-tour/excursions/vinnyikrym.jpg"
 //import LanguageCamp
 import languageCampSlider1 from "./img/language-camp/PhilippaAshcroft.jpg";
 import languageCampSlider2 from "./img/language-camp/JackWilliams.jpg";
-import languageCampSlider3 from "./img/language-camp/Nick Southall.jpg";
+import languageCampSlider3 from "./img/language-camp/NickSouthall.jpg";
+import languageCampSlider4 from "./img/language-camp/AmyFletcher.jpg";
+import languageCampSlider5 from "./img/language-camp/Alex.jpg";
 import excursion1 from "./img/language-camp/caves.jpg";
 import excursion2 from "./img/language-camp/castle.jpg";
 import excursion3 from "./img/language-camp/castle1.jpg";
@@ -2377,6 +2379,18 @@ export const LanguageCampData = {
             img: languageCampSlider3,
             title: "Nick Southall",
             key: 3,
+            imgHeight: 'unset'
+        },
+        {
+            img: languageCampSlider4,
+            title: "Amy Fletcher",
+            key: 4,
+            imgHeight: 'unset'
+        },
+        {
+            img: languageCampSlider5,
+            title: "Alex",
+            key: 5,
             imgHeight: 'unset'
         },
     ],

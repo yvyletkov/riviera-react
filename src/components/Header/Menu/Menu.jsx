@@ -266,8 +266,8 @@ const Menu = ({menuOpened, toggleMenu}) => {
                             </div>
 
                             <div className={s.menuItem} onClick={toggleMenu}>
-                                <NavLink to={"offers/crimea-tour"}>
-                                    Незабываемый тур в Крым
+                                <NavLink to={"/offers/language-camp"}>
+                                    Языковой лагерь
                                 </NavLink>
                             </div>
 
