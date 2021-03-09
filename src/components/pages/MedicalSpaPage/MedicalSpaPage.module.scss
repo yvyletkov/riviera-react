@@ -237,7 +237,9 @@
 
     .col {
       position: relative;
-      width: 33.33%;
+      //width: 33.33%;
+      max-width: 50%;
+      width: 100%;
       box-sizing: border-box;
 
       h4 {
@@ -321,7 +323,9 @@
         padding: 60px 40px 60px 60px;
       }
 
-
+      &:first-of-type:nth-last-of-type(1) {
+        max-width: 100%;
+      }
 
     }
 
@@ -340,7 +344,7 @@
 
     @media (max-width: 767px) {
       zoom: 0.6;
-      .col:nth-child(1) {width: 50%}
+      .col:nth-child(1) {max-width: 100%; width: 100%}
       .col:nth-child(2) {width: 0%}
       .col:nth-child(3) {width: 50%}
     }

@@ -497,7 +497,9 @@ import vinnyikrymImg from "./img/crimea-tour/excursions/vinnyikrym.jpg"
 //import LanguageCamp
 import languageCampSlider1 from "./img/language-camp/PhilippaAshcroft.jpg";
 import languageCampSlider2 from "./img/language-camp/JackWilliams.jpg";
-import languageCampSlider3 from "./img/language-camp/Nick Southall.jpg";
+import languageCampSlider3 from "./img/language-camp/NickSouthall.jpg";
+import languageCampSlider4 from "./img/language-camp/AmyFletcher.jpg";
+import languageCampSlider5 from "./img/language-camp/Alex.jpg";
 import excursion1 from "./img/language-camp/caves.jpg";
 import excursion2 from "./img/language-camp/castle.jpg";
 import excursion3 from "./img/language-camp/castle1.jpg";
@@ -911,16 +913,7 @@ const commonAfishaSlides = [
         campusName: "«The Grilled»",
         link: '/the-grilled',
     },
-    {
-        img: afishaImg8mar,
-        title: "приглашаем на главный",
-        subtitle: "женский<br/><span style='font-size: 54px'>праздник</span>",
-        time: "",
-        date: "",
-        campus: "",
-        campusName: "8 марта",
-        link: '/8-march',
-    },
+
 ];
 const commonClassicCampusSlides = [
     {
@@ -2388,6 +2381,18 @@ export const LanguageCampData = {
             key: 3,
             imgHeight: 'unset'
         },
+        {
+            img: languageCampSlider4,
+            title: "Amy Fletcher",
+            key: 4,
+            imgHeight: 'unset'
+        },
+        {
+            img: languageCampSlider5,
+            title: "Alex",
+            key: 5,
+            imgHeight: 'unset'
+        },
     ],
     excursions: [
         {
@@ -3717,6 +3722,16 @@ export const blogPostsData = [
 export const afishaPageData = {
     slides: commonAfishaSlides,
     pastSlides: [
+        {
+            img: afishaImg8mar,
+            title: "приглашаем на главный",
+            subtitle: "женский<br/><span style='font-size: 54px'>праздник</span>",
+            time: "",
+            date: "",
+            campus: "",
+            campusName: "8 марта",
+            link: '/8-march',
+        },
         {
             img: afishaImg23feb,
             title: "В стиле казино",

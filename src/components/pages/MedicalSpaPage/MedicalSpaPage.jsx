@@ -187,7 +187,7 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
                                     setFormPopupOpen(true);
                                     setChosenProgram('Дыхание здоровья');
                                 }}
-                                style={{position: 'relative', zIndex: 5, margin: '30px auto 20px', maxWidth:'300px'}}/>
+                                style={{position: 'relative', zIndex: 5, margin: '30px 0 20px', maxWidth:'300px'}}/>
 
                     </div>
 
@@ -251,7 +251,7 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
                                 setFormPopupOpen(true);
                                 setChosenProgram('Восстановление');
                             }}
-                            style={{position: 'relative', zIndex: 5, margin: '30px auto 20px', maxWidth:'300px'}}/>
+                            style={{position: 'relative', zIndex: 5, margin: '30px 0 20px', maxWidth:'300px'}}/>
 
                 </div>
                 <div className={s.col}>
@@ -309,10 +309,8 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
                                 setFormPopupOpen(true);
                                 setChosenProgram('Здоровая спина');
                             }}
-                            style={{position: 'relative', zIndex: 5, margin: '30px auto 20px', maxWidth:'300px'}}/>
+                            style={{position: 'relative', zIndex: 5, margin: '30px 0 20px', maxWidth:'300px'}}/>
                 </div>
-
-
                 <div className={s.col}>
                     <img src={medicalSpaPopupImgSpina} alt="Здоровая спина"/>
                 </div>
@@ -377,7 +375,7 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
                                 setFormPopupOpen(true);
                                 setChosenProgram('Управление стрессом');
                             }}
-                            style={{position: 'relative', zIndex: 5, margin: '30px auto 20px', maxWidth:'300px'}}/>
+                            style={{position: 'relative', zIndex: 5, margin: '30px 0 20px', maxWidth:'300px'}}/>
 
                 </div>
                 <div className={s.col}>
@@ -446,7 +444,7 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
                                 setFormPopupOpen(true);
                                 setChosenProgram('Детокс');
                             }}
-                            style={{position: 'relative', zIndex: 5, margin: '30px auto 20px', maxWidth:'300px'}}/>
+                            style={{position: 'relative', zIndex: 5, margin: '30px 0 20px', maxWidth:'300px'}}/>
                 </div>
 
 
@@ -508,7 +506,7 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
                                 setFormPopupOpen(true);
                                 setChosenProgram('Свобода движения');
                             }}
-                            style={{position: 'relative', zIndex: 5, margin: '30px auto 20px', maxWidth:'300px'}}/>
+                            style={{position: 'relative', zIndex: 5, margin: '30px 0 20px', maxWidth:'300px'}}/>
                 </div>
 
 
@@ -574,7 +572,7 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
                                 setFormPopupOpen(true);
                                 setChosenProgram('Сильное сердце');
                             }}
-                            style={{position: 'relative', zIndex: 5, margin: '30px auto 20px', maxWidth:'300px'}}/>
+                            style={{position: 'relative', zIndex: 5, margin: '30px 0 20px', maxWidth:'300px'}}/>
                 </div>
 
 
