@@ -3085,7 +3085,7 @@ export const infrastructurePagesData = {
                     timeDinner: "13:00 — 15:00",
                     timeSupper: "19:00 — 21:00",
                     kitchen: "европейская",
-                    location: "Корпус Модерн, рестораны «The Grilled»"
+                    location: "Корпус Модерн"
                 },
                 [
                     {img: buffet1, name: 'Шведский стол'},
