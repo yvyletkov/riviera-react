@@ -38,7 +38,7 @@ const NumInput = ({
                     delimiters: [' (', ') ', '-', '-'],
                     blocks: [2, 3, 3, 2, 2],
                 }}
-                // onChange={this.onChange.bind(this)}
+            // onChange={this.onChange.bind(this)}
                 className={classNames}
                 {...field} {...props}
                 type={type}
