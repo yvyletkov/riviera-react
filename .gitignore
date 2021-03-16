@@ -9,7 +9,7 @@
 /coverage
 
 # production
-/build
+/yarn deploy
 /public_html
 
 # misc

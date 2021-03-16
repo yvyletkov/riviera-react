@@ -38,7 +38,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts yarn deploy",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "scp -rp public_html ck70191@vh172.timeweb.ru:/home/c/ck70191/rivierasunrise"
