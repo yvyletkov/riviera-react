@@ -296,14 +296,14 @@ import barhatniiSeasonBannerImg from "./img/promos/promo-barhat-seaon.jpg";
 import ranneeBronirovaniePreviewImg from "./img/promos/rannee-peview.jpg";
 import languageCampBannerImg from "./img/promos/language-camp.jpg";
 import dlyaKrymchanBannerImg from "./img/promos/promo-otdyh-dlya-krymchan.jpg";
-import krymskayaZimaBannerImg from "./img/promos/крымская-зима.jpg";
+import krymskayaVesnaBannerImg from "./img/promos/vesna.jpg";
 import letniyOtdyhBannerImg from "./img/promos/promo-letnoo-otdyh.jpg";
 import dlitelnoeBannerImg from "./img/promos/promo-dlitelnoe.jpg";
 import ranneeBronirovanieBannerImg from "./img/promos/rannee.jpg";
 import onlineConferencesBannerImg from "./img/promos/online-conferences.jpg";
 
-import krymskayaZimaContactBlockImg from "./img/promos/Fotograf-Krym-YAlta.jpg";
-import krymskayaZimaPreviewImg from "./img/promos/krimskayaZimaPreview.jpg";
+import krymskayaVesnaContactBlockImg from "./img/promos/Fotograf-Krym-YAlta.jpg";
+import krymskayaVesnaPreviewImg from "./img/promos/vesnapreview.jpg";
 import dlyaKrymchanFormBannerImg from "./img/promos/крымчане.jpg";
 import ranneeBronirovanieFormBannerImg from "./img/promos/межсезонье.jpg";
 import letniyOtdyhFormBannerImg from "./img/promos/letniy-otdyh.jpg";
@@ -768,6 +768,13 @@ const commonVacationGridSlides = [
 ];
 const commonSpecialsSlides = [
     {
+        img: krymskayaVesnaPreviewImg,
+        subtitle: "",
+        title: "Крымская<br/>весна",
+        link: '/offers/krymskaya-vesna',
+        key: 2,
+    },
+    {
         img: crimeaTourPreviewImg,
         subtitle: "Незабываемый тур",
         title: "в Крым",
@@ -801,13 +808,6 @@ const commonSpecialsSlides = [
         title: "С выгодой до 20%",
         link: '/offers/letniy-otdyh',
         key: 1,
-    },
-    {
-        img: krymskayaZimaPreviewImg,
-        subtitle: "",
-        title: "Крымская<br/>зима",
-        link: '/offers/krymskaya-zima',
-        key: 2,
     },
     {
         img: promoImg3,
@@ -3370,10 +3370,11 @@ export const infrastructurePagesData = {
 // Страницы Акций отдельные
 export const singlePromotionPages = {
     barhatnyiSezon: {
-        bannerImg: krymskayaZimaBannerImg,
-        formImg: krymskayaZimaContactBlockImg,
-        title: ['Крымская', 'зима'],
-        description: 'Отель Riviera Sunrise Resort & SPA предлагает Вам неспеша погрузиться в мир зимней гармонии со скидкой 20% по акции «Крымская зима».',
+        bannerImg: krymskayaVesnaBannerImg,
+        agreementTextColor: "#fff",
+        formImg: krymskayaVesnaContactBlockImg,
+        title: ['Крымская', 'весна'],
+        description: 'Отель Riviera Sunrise Resort & SPA приглашает Вас насладиться первыми весенними днями со скидкой 20% по акции «Крымская весна». ',
         hiddenDescription: '<ul>\n' +
             '                                        <li>\n' +
             '                                            Бронирование производится при внесении предоплаты за первые сутки\n' +

@@ -81,6 +81,7 @@ const Textarea = ({
 };
 
 const ContactForm = ({
+                         agreementTextColor = '#000',
                          submitBtnText,
                          withEmail,
                          setPopupOpen,
@@ -255,9 +256,10 @@ const ContactForm = ({
             <div className="agreementBlock">
                 <input className="agreementCheckbox" id="checkbox-agreement" type="checkbox" required/>
                 <label htmlFor="checkbox-agreement">
-                    <p className="checkboxText">Даю&nbsp;
+                    <p className="checkboxText"
+                       style={{color: agreementTextColor}}>Даю&nbsp;
                         <a className="checkboxText"
-                           style={{textDecoration: 'underline'}}
+                           style={{textDecoration: 'underline', color: agreementTextColor}}
                            href="/documents/Политика-обработки-персональных-данных.pdf"
                            target="_blank">согласие на обработку персональных данных
                         </a>

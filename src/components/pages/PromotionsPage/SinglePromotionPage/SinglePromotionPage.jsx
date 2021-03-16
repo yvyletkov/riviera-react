@@ -25,7 +25,8 @@ const SinglePromotionPage = ({
                                  formBlockBtnText = 'Узнать свободные даты',
                                  whiteText = false,
                                  formImg,
-                                 quiz = null
+                                 quiz = null,
+                                 agreementTextColor
                              }) => {
 
     console.log(title)
@@ -91,7 +92,8 @@ const SinglePromotionPage = ({
                             <ContactForm submitBtnText={formBlockBtnText}
                                          formName={`Контактная форма для расчета стоимости со страницы АКЦИИ/СПЕЦПРЕДЛОЖЕНИЯ`}
                                          withPhone
-                                         swalText={'мы свяжемся с Вами в самое ближайшее время!'}/>
+                                         swalText={'мы свяжемся с Вами в самое ближайшее время!'}
+                                         agreementTextColor={agreementTextColor}/>
 
                         </div>
                     </div>

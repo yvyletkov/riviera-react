@@ -70,6 +70,7 @@ const CrimeaTourPage = lazy(() => import("./components/pages/CrimeaTourPage/Crim
 const ExcursionsBookingPage = lazy(() => import("./components/pages/ExcursionsBookingPage/ExcursionsBookingPage"));
 const LanguageCampPage = lazy(() => import("./components/pages/LanguageCampPage/LanguageCampPage"));
 const SearchPage = lazy(() => import("./components/pages/SearchPage/SearchPage"));
+const Cashback = lazy(() => import("./components/pages/Cashback/Cashback"));
 // const VisaPage = lazy(() => import('./components/pages/VisaPage/VisaPage'));
 
 function App() {
@@ -97,6 +98,9 @@ function App() {
             </div>}>
 
                 <Switch>
+                    <Route path='/offers/cashback'
+                           component={() => <Cashback/>}/>
+
                     <Route path='/visa-support'
                            component={() => <VisaPage/>}/>
 
@@ -197,7 +201,7 @@ function App() {
                            component={() => <SinglePromotionPage {...singlePromotionPages.dlitelnoeProzh}
                                                                  formBlockBtnText='Отправить'/>}/>
 
-                    <Route path='/offers/krymskaya-zima' exact
+                    <Route path='/offers/krymskaya-vesna' exact
                            component={() =>
                                <SinglePromotionPage {...singlePromotionPages.barhatnyiSezon}
                                                     formBlockBtnText='Отправить'
