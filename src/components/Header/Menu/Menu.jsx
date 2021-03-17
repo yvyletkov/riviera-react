@@ -271,6 +271,12 @@ const Menu = ({menuOpened, toggleMenu}) => {
                                 </NavLink>
                             </div>
 
+                            <div className={s.menuItem} onClick={toggleMenu}>
+                                <NavLink to={"/offers/cashback"}>
+                                    Кэшбэк на отдых
+                                </NavLink>
+                            </div>
+
                         </div>
 
                         <div className={s.col}>
