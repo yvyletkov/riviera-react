@@ -80,7 +80,10 @@ const SinglePromotionPage = ({
             <section className='section'>
                 <div className={s.formBlock}>
                     <div className={s.wrapper}
-                         style={{background: `center no-repeat url(${formImg})`, backgroundSize: 'cover'}}>
+                         style={{
+                             background: `no-repeat url(${formImg})`,
+                             backgroundSize: 'cover',
+                             backgroundPosition: 'left'}}>
                         <div className={s.container}>
                             <h4 className={whiteText ? s.title + ' ' + s.white : s.title}>
                                 <span>Воспользуйтесь акцией,</span>
