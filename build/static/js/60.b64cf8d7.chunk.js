@@ -1,0 +1,2 @@
+(this["webpackJsonpriviera-react"]=this["webpackJsonpriviera-react"]||[]).push([[60],{1087:function(e,t,n){"use strict";n.r(t);var i=n(0),r=n.n(i);n(85);t.default=function(){return Object(i.useEffect)((function(){window.tlBooking(window)}),[]),r.a.createElement("section",null,r.a.createElement("div",{style:{margin:"120px 0 50px"},id:"tl-booking-form"}))}}}]);
+//# sourceMappingURL=60.b64cf8d7.chunk.js.map
