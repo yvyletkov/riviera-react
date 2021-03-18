@@ -86,7 +86,7 @@ const Header = () => {
                                 </a>
                                 <div>Крым, г. Алушта</div>
                             </div>
-                            <Button className={s.button} link={'/booking'} text={'Забронировать'}/>
+                            <Button className={s.button} link={'/booking/?promo-offer=mir'} text={'Забронировать'}/>
 
                         </div>
 

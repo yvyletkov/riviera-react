@@ -139,7 +139,7 @@ a:hover {
   .searchIcon {
     display: flex;
   }
-  .rightBlock a[aria-current], .rightBlock a[href='/booking'] {
+  .rightBlock a[aria-current], .rightBlock a[href='/booking/?promo-offer=mir'] {
     display: none;
   }
   .content {

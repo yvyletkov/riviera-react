@@ -360,7 +360,7 @@ const CrimeaTourPage = () => {
                             </div>
 
                             <div className="program-block__bottom-btns">
-                                <NavLink to="/booking" className="bid__button">Забронировать
+                                <NavLink to="/booking/?promo-offer=mir" className="bid__button">Забронировать
                                     проживание</NavLink>
                                 <NavLink
                                     to="/excursions"
@@ -395,7 +395,7 @@ const CrimeaTourPage = () => {
                             </div>
 
                             <div className="program-block__bottom-btns second">
-                                <NavLink to="/booking" className="bid__button big">Забронировать
+                                <NavLink to="/booking/?promo-offer=mir" className="bid__button big">Забронировать
                                     проживание</NavLink>
                             </div>
 

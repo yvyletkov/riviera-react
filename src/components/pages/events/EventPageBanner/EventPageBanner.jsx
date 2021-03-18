@@ -23,6 +23,7 @@ const EventPageBanner = ({
                              btnLink = '',
                              withInfo = false,
                              withPrice = false,
+                            requestUrl,
                              nav
 }) => {
 
@@ -76,7 +77,8 @@ const EventPageBanner = ({
                                               formName={`Форма с верхнего баннера страницы ${titles[1]} ${titles[2]} ${titles[3]} (кнопка "узнать стоимость")`}
                                               swalText={'очень скоро наши менеджеры с Вами свяжутся. Также не забывайте проверять свою почту 😉'}
                                               withEmail
-                                              withPhone/>
+                                              withPhone
+                                              requestUrl={requestUrl}/>
                     }
 
                 </div>

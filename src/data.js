@@ -302,7 +302,7 @@ import dlitelnoeBannerImg from "./img/promos/promo-dlitelnoe.jpg";
 import ranneeBronirovanieBannerImg from "./img/promos/rannee.jpg";
 import onlineConferencesBannerImg from "./img/promos/online-conferences.jpg";
 
-import krymskayaVesnaContactBlockImg from "./img/promos/Fotograf-Krym-YAlta.jpg";
+import krymskayaVesnaContactBlockImg from "./img/promos/vesnaform.jpg";
 import krymskayaVesnaPreviewImg from "./img/promos/vesnapreview.jpg";
 import dlyaKrymchanFormBannerImg from "./img/promos/крымчане.jpg";
 import ranneeBronirovanieFormBannerImg from "./img/promos/межсезонье.jpg";
@@ -3380,7 +3380,7 @@ export const infrastructurePagesData = {
 export const singlePromotionPages = {
     barhatnyiSezon: {
         bannerImg: krymskayaVesnaBannerImg,
-        agreementTextColor: "#fff",
+        agreementTextColor: "#000",
         formImg: krymskayaVesnaContactBlockImg,
         title: ['Крымская', 'весна'],
         description: 'Отель Riviera Sunrise Resort & SPA приглашает Вас насладиться первыми весенними днями со скидкой 20% по акции «Крымская весна». ',

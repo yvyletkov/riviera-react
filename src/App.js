@@ -205,7 +205,7 @@ function App() {
                            component={() =>
                                <SinglePromotionPage {...singlePromotionPages.barhatnyiSezon}
                                                     formBlockBtnText='Отправить'
-                                                    whiteText/>}/>
+                                                    />}/>
 
                     <Route path='/offers/letniy-otdyh' exact
                            component={() => <SinglePromotionPage {...singlePromotionPages.letniyOtdyh}
