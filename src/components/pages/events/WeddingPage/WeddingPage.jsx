@@ -29,6 +29,7 @@ const WeddingPage = () => {
                          titles={['Ваша', 'свадьба', 'мечты', 'в Крыму']}
                          icons={eventPagesData.weddingPages.weddingBannerIcons} bannerImg={bannerImg}
                          bannerImgMobile={bannerImgMobile}
+                         requestUrl={'https://event.rivierasunrise.ru'}
         />
 
         {/* Ваша семья начинается здесь */}
