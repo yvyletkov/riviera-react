@@ -93,15 +93,15 @@ const Header = () => {
                     </div>
                 </div>
 
-                <div className={s.wrapper}
-                     style={{zIndex: '1', background: "#7bc05d", position: "absolute", top: 'unset'}}>
-                    <div className={s.container} style={{padding: '5px 20px'}}>
-                        <p style={{fontSize: '13px', color: '#fff', textAlign: 'center'}}>
-                            Дорогие гости! Рады видеть Вас на нашем новом сайте! Данный сайт является официальным сайтом
-                            отеля Riviera Sunrise Resort&SPA - Алушта, Крым.
-                        </p>
-                    </div>
-                </div>
+                {/*<div className={s.wrapper}*/}
+                {/*     style={{zIndex: '1', background: "#7bc05d", position: "absolute", top: 'unset'}}>*/}
+                {/*    <div className={s.container} style={{padding: '5px 20px'}}>*/}
+                {/*        <p style={{fontSize: '13px', color: '#fff', textAlign: 'center'}}>*/}
+                {/*            Дорогие гости! Рады видеть Вас на нашем новом сайте! Данный сайт является официальным сайтом*/}
+                {/*            отеля Riviera Sunrise Resort&SPA - Алушта, Крым.*/}
+                {/*        </p>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
             <div className="frisbuy-stories-widget"/>
 
