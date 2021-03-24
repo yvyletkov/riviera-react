@@ -26,8 +26,6 @@ const DocumentsPage = () => {
                             <ul>
                                 <li><a target='_blank' href="/documents/Pravila-prozhivaniya-RiveraNEW.pdf">Правила предоставления гостиничных услуг</a></li>
                                 <li><a target='_blank' href="/documents/pravila-spa.pdf">Правила посещения СПА-центра и открытой Аквазоны</a></li>
-                                <li><a target='_blank' href="/documents/Prikaz-53-O-priostanovke-deyatelnosti-1.pdf">Приказ №53 О приостановке деятельности</a></li>
-                                <li><a target='_blank' href="/documents/prikaz-99.pdf">Приказ №99 об утверждении перечня документов, необходимых для заезда в отель в период с 28.12.2020г. по 15.01.2021г.</a></li>
                             </ul>
                         </div>
                     </div>

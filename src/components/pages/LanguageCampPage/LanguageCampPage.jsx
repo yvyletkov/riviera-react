@@ -31,7 +31,7 @@ const LanguageCampPage = () => {
                              bottomLine={"КАНИКУЛЫ"}
                              bannerImg={bannerImg}
                              bannerMobileImg={bannerImg}
-                             descr={'2 смены:<br/>с 20 по 27 марта<br/>с 3 по 10 апреля<br/>Уроки с носителями языка и экспертами ЕГЭ'}
+                             descr={'с 3 по 10 апреля<br/>Уроки с носителями языка и экспертами ЕГЭ'}
                              positionBackground={'0 110px'}/>
 
         <section className='section first'>
@@ -50,7 +50,7 @@ const LanguageCampPage = () => {
                         </p>
 
                         <p>
-                            Даты работы языкового лагеря - <b>с 20 по 27 марта и с 3 по 10 апреля</b> 2021 года
+                            Даты работы языкового лагеря - <b>с 3 по 10 апреля</b> 2021 года
                         </p>
 
                         <p>
