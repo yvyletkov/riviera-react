@@ -506,7 +506,7 @@ import excursion3 from "./img/language-camp/castle1.jpg";
 import excursion4 from "./img/language-camp/kanatnaya.jpg";
 import food1 from "./img/language-camp/shveden.png";
 import food2 from "./img/language-camp/tavrika.png";
-import food3 from "./img/language-camp/grill.png";
+import food3 from "./img/language-camp/grill.jpg";
 import food4 from "./img/language-camp/mangup.png";
 import animations1 from "./img/language-camp/ch1.jpg";
 import animations2 from "./img/language-camp/ch2.jpg";
@@ -789,6 +789,7 @@ const commonSpecialsSlides = [
         title: "в Крым",
         link: '/offers/crimea-tour',
         key: 9,
+        cashback: true,
     },
     {
         img: languageCampBannerImg,
@@ -796,6 +797,7 @@ const commonSpecialsSlides = [
         title: "в Крыму",
         link: '/offers/language-camp',
         key: 7,
+        cashback: true,
     },
     {
         img: ranneeBronirovaniePreviewImg,
@@ -803,6 +805,7 @@ const commonSpecialsSlides = [
         title: "Межсезонье",
         link: '/offers/rannee-bronirovanie',
         key: 6,
+        cashback: true,
     },
     {
         img: promoImg4,
@@ -810,6 +813,7 @@ const commonSpecialsSlides = [
         title: "Для крымчан",
         link: '/offers/otdyh-dlya-krymchan',
         key: 0,
+        cashback: true,
     },
     {
         img: promoImg1,
@@ -817,6 +821,7 @@ const commonSpecialsSlides = [
         title: "С выгодой до 20%",
         link: '/offers/letniy-otdyh',
         key: 1,
+        cashback: true,
     },
     {
         img: promoImg3,
@@ -824,6 +829,7 @@ const commonSpecialsSlides = [
         title: "С выгодой до 25%",
         link: '/offers/dlitelnoe-prozhivaniye',
         key: 4,
+        cashback: true,
     },
     {
         img: promoImg6,
@@ -2830,42 +2836,37 @@ export const promotionsPageData = {
             img: promoImg7,
             subtitle: "",
             title: "Трансфер<br/>в подарок",
-            // link: '#',
             key: 1,
         },
         {
             img: promoImg2,
             subtitle: "План \"Б\"",
             title: "Опережай время",
-            // link: '#',
             key: 2,
         },
         {
             img: promoImg8,
             subtitle: "Получи",
             title: "Кешбэк на отдых",
-            // link: '#',
             key: 3,
         },
         {
             img: promoImg9,
             subtitle: "Долгожданный отдых",
             title: "С выгодой 10%",
-            // link: '#',
             key: 4,
         },
         {
             img: promoImg10,
             subtitle: "",
             title: "Английские<br/>каникулы",
-            // link: '#',
             key: 5,
         },
         {
             img: promoImg11,
             subtitle: "",
             title: "Море ждет",
-            // link: '#',
+            cashback: true,
             key: 6,
         },
 
@@ -3447,6 +3448,7 @@ export const singlePromotionPages = {
             '            <li/>Второй и последующие дети в номере размещаются по стоимости соответствующей программы питания для детей от 5 до 12 лет.</li>' +
             '                                    <li>Ранний заезд/поздний выезд (при условии наличия свободных номеров);</li>\n' +
             '                                    <li>Акция не суммируется с другими акциями, специальными предложениями и программами лояльности отеля.</li>\n' +
+            '                           <li>Доступно по программе Кэшбэк.</li>' +
             '                                </ul>',
         secondCol: '     <h3><b>В стоимость входит:</b></h3>\n' +
             '                                <ul>\n' +
@@ -3486,6 +3488,7 @@ export const singlePromotionPages = {
             ' Второй и последующие дети в номере размещаются по стоимости соответствующей программы питания для детей от 5 до 12 лет.</li>\n' +
             '                                    <li>Ранний заезд/поздний выезд (при условии наличия свободных номеров);</li>\n' +
             '                                    <li>Акция не суммируется с другими акциями, специальными предложениями и программами лояльности отеля.</li>\n' +
+            '                                   <li>Доступно по программе Кэшбэк.</li> \n' +
             '                                </ul>',
         secondCol: '     <h3><b>В стоимость входит:</b></h3>\n' +
             '                                <ul>\n' +
@@ -3523,6 +3526,7 @@ export const singlePromotionPages = {
             ' Второй и последующие дети в номере размещаются по стоимости соответствующей программы питания для детей от 5 до 12 лет.</li>\n' +
             '                                    <li>Ранний заезд/поздний выезд (при условии наличия свободных номеров);</li>\n' +
             '                                    <li>Акция не суммируется с другими акциями, специальными предложениями и программами лояльности отеля.</li>\n' +
+            '                                    <li>Доступно по программе Кэшбэк.</li>\n' +
             '                                </ul>',
         secondCol: '     <h3><b>В стоимость входит:</b></h3>\n' +
             '                                <ul>\n' +
@@ -3560,6 +3564,7 @@ export const singlePromotionPages = {
             ' \t<li>Ребенок до 5 лет БЕСПЛАТНОЕ размещение (при условии проживания с двумя взрослыми на основных местах).<br>Второй и последующие дети в номере размещаются по стоимости соответствующей программы питания для детей от 5 до 12 лет.</li>\n' +
             ' \t<li>Ранний заезд/поздний выезд (при условии наличия свободных номеров);</li>\n' +
             ' \t<li>Акция не суммируется с другими акциями, специальными предложениями и программами лояльности отеля.</li> \n' +
+            ' \t<li>Доступно по программе Кэшбэк.</li> \n' +
             '</ul>',
         secondCol: '     <h3><b>В стоимость входит:</b></h3>\n' +
             '                                <ul>\n' +

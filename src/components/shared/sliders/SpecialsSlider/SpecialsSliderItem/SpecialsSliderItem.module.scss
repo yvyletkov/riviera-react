@@ -27,7 +27,16 @@
   }
 }
 
-.card img {
+.card .cashbackIcon {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  margin: 0 !important;
+  width: 70px !important;
+  filter: drop-shadow(5px 3px 4px rgba(34, 60, 80, 0.5));
+}
+
+.card .img {
   &.decolorized {
     filter: saturate(0);
   }
@@ -57,7 +66,7 @@
   .cardWrapper {
     width: 65vw;
   }
-  .card img {
+  .card .img {
     height: calc(65vw * 1.48);
     object-fit: cover;
   }
@@ -73,7 +82,7 @@
   }
 }
 
-.card img {
+.card .img {
   border-radius: 5px;
 }
 
