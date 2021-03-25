@@ -169,7 +169,7 @@ const SpaPage = () => {
 
                             <p>Мы заботимся о комфортном пребывании гостей в SPA-комплексе, для этого просим соблюдать <a
                                 style={{textDecoration: 'underline', color: '#000'}} target='_blank'
-                                href="/documents/pravila-spa.pdf">несколько простых
+                                href="/document-files/pravila-spa.pdf">несколько простых
                                 правил</a>, которые сделают Ваш отдых и отдых других гостей максимально приятным.
                             </p>
                             <p>

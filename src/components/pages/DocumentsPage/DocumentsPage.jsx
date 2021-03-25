@@ -24,8 +24,8 @@ const DocumentsPage = () => {
                         </div>
                         <div className={s.links}>
                             <ul>
-                                <li><a target='_blank' href="/documents/Pravila-prozhivaniya-RiveraNEW.pdf">Правила предоставления гостиничных услуг</a></li>
-                                <li><a target='_blank' href="/documents/pravila-spa.pdf">Правила посещения СПА-центра и открытой Аквазоны</a></li>
+                                <li><a target='_blank' href="/document-files/Pravila-prozhivaniya-RiveraNEW.pdf">Правила предоставления гостиничных услуг</a></li>
+                                <li><a target='_blank' href="/document-files/pravila-spa.pdf">Правила посещения СПА-центра и открытой Аквазоны</a></li>
                             </ul>
                         </div>
                     </div>

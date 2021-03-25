@@ -113,7 +113,7 @@ const MedicalSpaPage = ({bannerImg, bannerIcons, advantagesIcons}) => {
 
                             <Button text="Скачать меню SPA"
                                     style={{marginTop: '20px'}}
-                                    onClick={() => window.open('/documents/spa2.pdf')}/>
+                                    onClick={() => window.open('/document-files/spa2.pdf')}/>
                         </p>
 
                     </div>

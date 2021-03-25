@@ -108,13 +108,13 @@ const WeddingPage = () => {
         {/* Вас ждет изысканная еда */}
 
         <section className='section'>
-            <KitchenBlock btnLink={'documents/Свадебное-меню.pdf'}/>
+            <KitchenBlock btnLink={'document-files/Свадебное-меню.pdf'}/>
         </section>
 
         {/* Дополнительные услуги */}
 
         <section className='section'>
-            <SpecialsSlider subtitle={'Дополнительные'} title={'услуги'} btnText={'Скачать прайс по услугам'} btnLink={'/documents/Доп-услуги.zip'}
+            <SpecialsSlider subtitle={'Дополнительные'} title={'услуги'} btnText={'Скачать прайс по услугам'} btnLink={'/document-files/Доп-услуги.zip'}
                             slides={eventPagesData.specialsSlides} text={'Для успешной организации мероприятия в отеле Riviera Sunrise Resort & SPA, вы можете воспользоваться дополнительными услугами. Мы создавали их с желанием сделать ваше мероприятие ещё более насыщенным и подарить гостям комфорт и удивительные впечатления!'}/>
         </section>
 

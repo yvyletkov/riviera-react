@@ -157,7 +157,7 @@ const EventMainSlider = ({
                 }}>
                     Новые программы<br/>в разработке
                 </div>}
-                <HeadlineCenter title={window.matchMedia('(max-width: 490px').matches ? titleMobile : title}/>
+                <HeadlineCenter title={window.matchMedia('(max-width: 490px').matches ? (titleMobile || title ) : title}/>
                 {topText && <p className={s.text}>{topText}</p>}
                 {manySlides ? <SliderStylesManySlider><Slider {...settings}>{items}</Slider></SliderStylesManySlider>
                     :
