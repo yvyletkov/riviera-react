@@ -11,7 +11,7 @@
 # production
 /yarn deploy
 /public_html
-/public_html
+/build
 
 # misc
 .DS_Store
