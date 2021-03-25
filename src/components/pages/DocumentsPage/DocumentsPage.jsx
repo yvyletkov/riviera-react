@@ -24,7 +24,7 @@ const DocumentsPage = () => {
                         </div>
                         <div className={s.links}>
                             <ul>
-                                <li><a target='_blank' href="/document-files/Pravila-prozhivaniya-RiveraNEW.pdf">Правила предоставления гостиничных услуг</a></li>
+                                <li><a target='_blank' href="/document-files/Правила проживания и порядок размещения в отеле Riviera Sunrise Resort & SPA.PDF">Правила проживания и порядок размещения в отеле Riviera Sunrise Resort & SPА</a></li>
                                 <li><a target='_blank' href="/document-files/pravila-spa.pdf">Правила посещения СПА-центра и открытой Аквазоны</a></li>
                             </ul>
                         </div>

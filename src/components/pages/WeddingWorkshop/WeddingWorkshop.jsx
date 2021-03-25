@@ -18,6 +18,7 @@ import FoodBlock from "../../shared/FoodBlock/FoodBlock";
 import Accordeon from "../../shared/Accordeon/Accordeon";
 import CirqleTip from "../../shared/CirqleTip/CirqleTip";
 import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
+import WorkshopForm from "../../additional/WorkshopForm/WorkshopForm";
 
 const ProgramsBlock = styled.div`
   .container {
@@ -91,7 +92,11 @@ const ProgramsBlock = styled.div`
     }
 
     .program-block__content {
-      padding: 30px 25px 0;
+      padding: 30px 25px 20px;
+      
+      form > div, form > select {
+        margin-bottom: 10px;
+      }
     }
 
     .programs-block__subtitle {
@@ -326,79 +331,21 @@ const WeddingWorkshop = () => {
             <section className="programs section">
                 <div className='container'>
                     <div className="program-blocks-wrapper">
+
                         <div className="program-block">
                             <div className="program-block__content">
-                                <div className="programs-block__title">Групповые экскурсии</div>
-                                <img src={groupImg}
-                                     className="program-block__img" alt="Групповые экскурсии"/>
-
-                                <p className="program-block__text">
-                                    Предлагаем вам в составе групп посетить лучшие экскурсионные маршруты по Крыму в
-                                    сопровождении
-                                    аттестованных гидов-экскурсоводов на комфортабельных микроавтобусах (Mercedes,
-                                    Volkswagen,
-                                    Mitsubishi), оснащенных кондиционерами и микрофонам.
-                                </p>
-
+                                <div className="programs-block__title">Вы невеста?</div>
+                                <WorkshopForm type={'bride'} />
                             </div>
-
-                            <div className="program-block__price">
-                                <p>Стоимость:</p>
-                                <p>от 1 000 ₽</p>
-                            </div>
-
-                            <div className="program-block__bottom-btns">
-                                <NavLink to="/booking/?promo-offer=mir" className="bid__button">Забронировать
-                                    проживание</NavLink>
-                                <NavLink
-                                    to="/excursions"
-                                    className="bid__button last light">Выбрать
-                                    экскурсию</NavLink>
-                            </div>
-
-                            <div className="program-block__bottom-text">
-                                *стоимость за 1 экскурсию, на 1 человека + к стоимости проживания
-                            </div>
-
                         </div>
 
                         <div className="program-block">
                             <div className="program-block__content">
-                                <div className="programs-block__title">Индивидуальные туры</div>
-
-                                <img src={individualImg}
-                                     className="program-block__img" alt="Индивидуальные туры"/>
-
-                                <p className="program-block__text">
-                                    Предлагаем Вам индивидуальное обслуживание гида экскурсовода в поездке по
-                                    удивительному
-                                    Крымскому полуострову на комфортабельных автомобилях Mercedes, Volkswagen.
-                                </p>
-
+                                <div className="programs-block__title">Вы организатор?</div>
+                                <WorkshopForm type={'organizator'} />
                             </div>
-
-                            <div className="program-block__price">
-                                <p>Стоимость:</p>
-                                <p>от 10 000 ₽</p>
-                            </div>
-
-                            <div className="program-block__bottom-btns second">
-                                <NavLink to="/booking/?promo-offer=mir" className="bid__button big">Забронировать
-                                    проживание</NavLink>
-                            </div>
-
-
-                            <div className="program-block__bottom-text second">
-                                *На все интересующие Вас вопросы, касающиеся индивидуальных экскурсий по Крыму
-                                ответит
-                                Консьерж
-                                отеля Riviera Sunrise Resort & SPA<br/>
-                                <a
-                                    href="tel:89789726509">8(978)972-65-09</a>
-                                <a href="tel:89384565211">8(938)456-52-11</a>
-                            </div>
-
                         </div>
+
                     </div>
                 </div>
             </section>
