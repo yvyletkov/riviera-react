@@ -782,6 +782,7 @@ const commonSpecialsSlides = [
         title: "Крымская<br/>весна",
         link: '/offers/krymskaya-vesna',
         key: 2,
+        cashback: true,
     },
     {
         img: crimeaTourPreviewImg,
