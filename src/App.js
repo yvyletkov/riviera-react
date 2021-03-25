@@ -71,6 +71,8 @@ const ExcursionsBookingPage = lazy(() => import("./components/pages/ExcursionsBo
 const LanguageCampPage = lazy(() => import("./components/pages/LanguageCampPage/LanguageCampPage"));
 const SearchPage = lazy(() => import("./components/pages/SearchPage/SearchPage"));
 const Cashback = lazy(() => import("./components/pages/Cashback/Cashback"));
+const WeddingWorkshop = lazy(() => import("./components/pages/WeddingWorkshop/WeddingWorkshop"));
+
 // const VisaPage = lazy(() => import('./components/pages/VisaPage/VisaPage'));
 
 function App() {
@@ -98,6 +100,9 @@ function App() {
             </div>}>
 
                 <Switch>
+                    <Route path='/offers/wedding-workshop'
+                           component={() => <WeddingWorkshop/>}/>
+
                     <Route path='/offers/cashback'
                            component={() => <Cashback/>}/>
 

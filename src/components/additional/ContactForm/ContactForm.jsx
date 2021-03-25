@@ -8,7 +8,6 @@ import {request} from "../../../api";
 import swal from 'sweetalert2';
 // import Cleave from "cleave.js"
 import Cleave from 'cleave.js/react';
-import "cleave.js/dist/addons/cleave-phone.ru"
 
 const Input = ({
                    field,
@@ -32,7 +31,7 @@ const NumInput = ({
                   }) => {
     const classNames = cx('input', {'success': touched[field.name] && !errors[field.name]}, {'error': touched[field.name] && errors[field.name]})
     return <div style={{position: 'relative'}}>
-        <Cleave placeholder="Enter your credit card number"
+        <Cleave placeholder="Номер телефона"
                 options={{
                     prefix: '+7',
                     delimiters: [' (', ') ', '-', '-'],
@@ -260,7 +259,7 @@ const ContactForm = ({
                        style={{color: agreementTextColor}}>Даю&nbsp;
                         <a className="checkboxText"
                            style={{textDecoration: 'underline', color: agreementTextColor}}
-                           href="/documents/Политика-обработки-персональных-данных.pdf"
+                           href="/document-files/Политика-обработки-персональных-данных.pdf"
                            target="_blank">согласие на обработку персональных данных
                         </a>
                     </p>
