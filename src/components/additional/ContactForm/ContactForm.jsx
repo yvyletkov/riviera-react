@@ -216,6 +216,7 @@ const ContactForm = ({
                         confirmButtonText: 'Хорошо'
                     })
                 }
+                else throw response
             })
             .catch((err) => {
                 swal.fire({

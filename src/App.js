@@ -72,6 +72,7 @@ const LanguageCampPage = lazy(() => import("./components/pages/LanguageCampPage/
 const SearchPage = lazy(() => import("./components/pages/SearchPage/SearchPage"));
 const Cashback = lazy(() => import("./components/pages/Cashback/Cashback"));
 const WeddingWorkshop = lazy(() => import("./components/pages/WeddingWorkshop/WeddingWorkshop"));
+const SingleNewsPage = lazy(() => import("./components/pages/SingleNewsPage/SingleNewsPage"));
 
 // const VisaPage = lazy(() => import('./components/pages/VisaPage/VisaPage'));
 
@@ -100,6 +101,9 @@ function App() {
             </div>}>
 
                 <Switch>
+                    <Route path='/news/:newsId' exact
+                           component={() => <SingleNewsPage/>}/>
+
                     <Route path='/offers/wedding-workshop'
                            component={() => <WeddingWorkshop/>}/>
 
@@ -148,7 +152,7 @@ function App() {
                     <Route path='/pool-schedule' exact
                            component={() => <PoolSchedulePage/>}/>
 
-                    <Route path='/blog' exact
+                    <Route path='/news' exact
                            component={() => <BlogPage/>}/>
 
                     <Route path='/partners' exact

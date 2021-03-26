@@ -123,6 +123,8 @@ const PartnersForm = (props) => {
                         confirmButtonText: 'Отлично'
                     })
                 }
+                else throw response
+
             })
             .catch((err) => {
                 swal.fire({
