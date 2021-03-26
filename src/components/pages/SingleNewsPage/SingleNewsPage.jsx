@@ -1,17 +1,14 @@
 import React from "react";
-import {homePageData, TheGrilledData} from "../../../data";
+import {homePageData} from "../../../data";
 import MapSection from "../../shared/MapSection/MapSection";
 import VacationsPageBanner from "../../shared/VacationsPageBanner/VacationsPageBanner";
 import bannerImg from "../../../img/the-grilled/restoran-gril.png";
 import img1 from "../../../img/the-grilled/restoran-gril-1.jpg";
 import s from "./SingleNewsPage.module.scss";
-import Headline from "../../shared/Headline/Headline";
-import EventMainSlider from "../../shared/sliders/EventMainSlider/EventMainSlider";
-import decisionBlockImg from "../../../img/the-grilled/reception.jpg";
-import PDFviewer from "../../additional/PDFviewer/PDFviewer";
-import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
 import TextPlusImageBlock from "../../shared/TextPlusImageBlock/TextPlusImageBlock";
 import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
+import {withRouter} from "react-router-dom";
+import {request} from "../../../api";
 
 const data = {
     date: "25.03.2021",
@@ -21,25 +18,43 @@ const data = {
 }
 
 
-const SingleNewsPage = () => {
+const SingleNewsPage = ({match}) => {
 
-    React.useEffect(() => document.title = `${data.title} – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
+
+    const [newsId, setNewsId] = React.useState(null)
+    const [newsData, setNewsData] = React.useState({})
+
+    React.useEffect(() => document.title = `${newsData.title || '...'} – Riviera Sunrise Resort & SPA – Алушта, Крым`, [newsData])
+
+    React.useEffect((() => {
+        request(null, "GET", `https://admin.rivierasunrise.ru/news-items/${newsId}`).then( async res => {
+            if (res.status === 200) {
+                const data = await res.json()
+                console.log('data', data)
+                setNewsData(data)
+            }
+        })
+    }), [newsId])
+
+    React.useEffect((() => {
+        setNewsId(match.params.newsId)
+    }), [match.params])
 
     // здесб запрос к страпи
 
     return <>
-        <VacationsPageBanner fontSize={["70px", "57px"]}
-                             fontSizeMobile={["14.7vw", "10.5vw"]}
+        <VacationsPageBanner fontSize={["55px", "55px"]}
+                             fontSizeMobile={["11.7vw", "11.7vw"]}
                              subtitle={data.date}
-                             topLine={data.title}
-                             // bottomLine={"The Grilled"}
+                             topLine={newsData.title && (newsData.title.split(' ')[0] || newsData.title)}
+                             bottomLine={newsData.title && newsData.title.split(' ')[1]}
                              bannerImg={bannerImg}
                              bannerMobileImg={bannerImg}
                         />
 
         <section className='section first'>
-            <TextPlusImageBlock title={data.title} content={data.content2}/>
+            <TextPlusImageBlock title={newsData.title} content={newsData.content_1}/>
         </section>
 
         <section className='section'>
@@ -47,7 +62,7 @@ const SingleNewsPage = () => {
                 <div className={s.container}>
                     <div className={s.background}/>
                     <div className={s.textContent}>
-                        <p dangerouslySetInnerHTML={{__html: data.content1}}/>
+                        <p dangerouslySetInnerHTML={{__html: newsData.content_2}}/>
                     </div>
                     <img className={s.wide} src={img1} alt={"Лучший праздник"}/>
 
@@ -69,5 +84,5 @@ const SingleNewsPage = () => {
 };
 
 
-export default SingleNewsPage;
+export default withRouter(SingleNewsPage);
 

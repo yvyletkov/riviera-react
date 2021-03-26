@@ -513,7 +513,7 @@ import animations2 from "./img/language-camp/ch2.jpg";
 import animations3 from "./img/language-camp/ch3.jpg";
 import animations4 from "./img/language-camp/ch4.jpg";
 //END sliderLanguageCamp
-import cashbackPreview from "./img/home-page/textimg.jpg";
+import cashbackPreview from "./img/promos/mir.jpg";
 
 
 

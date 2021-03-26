@@ -1,13 +1,22 @@
-export const request = async (data) => {
+export const request = async (data,
+                              method = "POST",
+                              url = "https://team.upro-dev.ml/forms/notify/") => {
 
-    const baseUrl = "https://team.upro-dev.ml/forms/notify/";
     const headers = {"Content-Type": "application/json;charset=utf-8"};
 
-    const response = await fetch(`${baseUrl}`, {
-        method: "POST",
-        headers: headers,
-        body: JSON.stringify(data),
-    });
+    let init = {
+        method: method,
+        headers: headers
+    }
+
+    if (method === "POST") {
+        init = {
+            ...init,
+            body: JSON.stringify(data),
+        }
+    }
+
+    const response = await fetch(`${url}`, init);
 
     console.log('response', response);
 
