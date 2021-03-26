@@ -22,6 +22,25 @@ const Input = ({
     </div>
 };
 
+const SelectInput = ({
+                         field,
+                         form: {touched, errors},
+                         ...props
+                     }) => {
+    const classNames = cx('input', {'success': touched[field.name] && !errors[field.name]}, {'error': touched[field.name] && errors[field.name]})
+    return <div style={{position: 'relative'}}>
+        <select
+            className={classNames}
+            {...props}
+            {...field}
+        >
+            {props.children}
+        </select>
+        {touched[field.name] &&
+        errors[field.name] && <div className="error">{errors[field.name]}</div>}
+    </div>
+};
+
 const NumInput = ({
                       field,
                       type,
@@ -68,7 +87,7 @@ const DateInput = ({
 };
 
 
-const WorkshopForm = ({type,}) => {
+const WorkshopForm = ({type}) => {
 
     const [showExtraField, setShowExtraField] = React.useState(false)
     const [fieldOfActivityInputValue, setFieldOfActivityInputValue] = React.useState('initial')
@@ -80,7 +99,7 @@ const WorkshopForm = ({type,}) => {
         );
     });
 
-    const Schema = Yup.object().shape({
+    const SchemaBride = Yup.object().shape({
         name: Yup.string()
             .min(2, 'Слишком коротко')
             .max(50, 'Слишком длинное имя')
@@ -88,10 +107,7 @@ const WorkshopForm = ({type,}) => {
         phone: Yup.string()
             .min(18, 'Номер введен неверно')
             .max(18, 'Слишком длинный номер телефона 😢')
-            // .matches('^([A-Z]+, )?$', 'Пожалуйста, только цифры')
-            // .number()
-            // .phone()
-            .required('Это поле тоже обязательное'),
+            .required('Пожалуйста, введите номер'),
         weddingDate: Yup.string()
             .required('Пожалуйста, введите дату')
             .min(10, 'Введите дату в формате ДД.ММ.ГГГГ')
@@ -104,6 +120,18 @@ const WorkshopForm = ({type,}) => {
             .max(15, 'Слишком много букв 😢'),
         requiredSpecialist: Yup.string()
             .required('Пожалуйста, укажите специалиста'),
+
+    });
+
+    const SchemaOrganizator = Yup.object().shape({
+        name: Yup.string()
+            .min(2, 'Слишком коротко')
+            .max(50, 'Слишком длинное имя')
+            .required('Пожалуйста, введите имя'),
+        phone: Yup.string()
+            .min(18, 'Номер введен неверно')
+            .max(18, 'Слишком длинный номер телефона 😢')
+            .required('Пожалуйста, введите номер'),
         companyName: Yup.string()
             .required('Пожалуйста, укажите название компании')
             .min(2, 'Слишком мало букв 😢')
@@ -112,24 +140,28 @@ const WorkshopForm = ({type,}) => {
             .required('Пожалуйста, укажите сферу своей деятельности'),
         participationVariant: Yup.string()
             .required('Пожалуйста, укажите формат участия'),
+        otherActivity: showExtraField && Yup.string()
+            .required('Пожалуйста, укажите сферу своей деятельности')
+            .min(4, 'Слишком мало букв 😢')
+            .max(20, 'Слишком много букв 😢'),
         link: Yup.string()
             .required('Пожалуйста, укажите ссылку (или напишите "нет")')
-
-
+            .min(3, 'Слишком мало букв 😢')
+            .max(50, 'Слишком много букв 😢'),
     });
 
     const data = {};
 
-    const onSubmit = (values, {resetForm}) => {
+    const onBrideFormSubmit = (values, {resetForm}) => {
 
-        console.log(values)
+        console.log('submitValues', values)
         data.form = {
             "url": `https://workshop.rivierasunrise.ru/`
         };
         data.inputs = [
             {
                 "alias": "Источник",
-                "value": "Форма со страницы Свадебного Воркшопа",
+                "value": "Форма со страницы Свадебного Воркшопа (Невеста)",
             },
             {
                 "alias": "Имя",
@@ -140,24 +172,20 @@ const WorkshopForm = ({type,}) => {
                 "value": values.phone,
             },
             {
-                "alias": "E-mail",
-                "value": values.email,
+                "alias": "Дата свадьбы",
+                "value": values.weddingDate,
             },
             {
-                "alias": "Юридическое название",
-                "value": values.juridical,
+                "alias": "Город",
+                "value": values.city,
             },
             {
-                "alias": "Коммерческое название",
-                "value": values.commercial,
+                "alias": "Количество гостей на свадьбе",
+                "value": values.guestsAmount,
             },
             {
-                "alias": "Вебсайт",
-                "value": values.website,
-            },
-            {
-                "alias": "Сообщение",
-                "value": values.message,
+                "alias": "Требуемый специалист",
+                "value": values.requiredSpecialist,
             },
         ];
 
@@ -167,11 +195,12 @@ const WorkshopForm = ({type,}) => {
                     const name = values.name[0].toUpperCase() + values.name.slice(1);
                     swal.fire({
                         title: `Спасибо, ${name}!`,
-                        text: 'ваше предложение будет рассмотрено в самое ближайшее время',
+                        text: 'ваше заявка будет обработана в ближайшее время',
                         icon: 'success',
                         confirmButtonText: 'Отлично'
                     })
                 }
+                else throw response
             })
             .catch((err) => {
                 swal.fire({
@@ -185,40 +214,121 @@ const WorkshopForm = ({type,}) => {
 
         resetForm({})
 
-        console.log('values', data);
+        console.log('formdata', data);
+
+    };
+
+    const onOrganizatorFormSubmit = (values, {resetForm}) => {
+
+        console.log('submitValues', values)
+        data.form = {
+            "url": `https://workshop.rivierasunrise.ru/`
+        };
+        data.inputs = [
+            {
+                "alias": "Источник",
+                "value": "Форма со страницы Свадебного Воркшопа (Организатор)",
+            },
+            {
+                "alias": "Имя",
+                "value": values.name,
+            },
+            {
+                "alias": "Номер телефона",
+                "value": values.phone,
+            },
+            {
+                "alias": "Название компании",
+                "value": values.companyName,
+            },
+            {
+                "alias": "Сфера деятельности",
+                "value": values.fieldOfActivity,
+            },
+            {
+                "alias": "Формат участия",
+                "value": values.participationVariant,
+            },
+            {
+                "alias": "Ссылка на сайт/соцсеть",
+                "value": values.link,
+            },
+        ];
+
+        if (showExtraField) data.inputs = [
+            ...data.inputs,
+            {
+                "alias": "Свой вариант сферы деятельности",
+                "value": values.otherActivity,
+            },
+        ]
+
+        request(data)
+            .then((response) => {
+                if (response.status === 200) {
+                    const name = values.name[0].toUpperCase() + values.name.slice(1);
+                    swal.fire({
+                        title: `Спасибо, ${name}!`,
+                        text: 'ваше заявка будет обработана в ближайшее время',
+                        icon: 'success',
+                        confirmButtonText: 'Отлично'
+                    })
+                }
+                else throw response
+            })
+            .catch((err) => {
+                swal.fire({
+                    title: 'К сожалению, при отправке данных произошла ошибка 🤭',
+                    text: 'Мы уже работаем над ее исправлением!',
+                    icon: 'error',
+                    confirmButtonText: 'Понятно'
+                })
+                console.log(err)
+            });
+
+        resetForm({})
+
+        console.log('formdata', data);
 
     };
 
 
-    const handleFieldOfActivityChange = (e) => {
-        setFieldOfActivityInputValue(e.target.value)
-        if (e.target.value === 'other') setShowExtraField(true)
-        else setShowExtraField(false)
+    const handleFormChange = (e) => {
+        if (e.target.value === 'other' && e.target.name === 'fieldOfActivity') {
+            setShowExtraField(true)
+        }
+        else if (e.target.value !== 'other' && e.target.name === 'fieldOfActivity') {
+            setShowExtraField(false)
+        }
     }
-
 
     if (type === "bride") return <Formik
         initialValues={{
-            requiredSpecialist: 'initial'
+            name: '',
+            phone: '',
+            weddingDate: '',
+            city: '',
+            guestsAmount: '',
+            requiredSpecialist: 'initial',
         }}
-        validationSchema={Schema}
-        onSubmit={onSubmit}>
-        <Form>
+        validationSchema={SchemaBride}
+        onSubmit={onBrideFormSubmit}>
+        <Form onChange={handleFormChange}>
             <Field component={Input} name="name" placeholder={'Имя'}/>
             <Field component={NumInput} name="phone" placeholder={'Номер телефона'}/>
             <Field component={DateInput} name="weddingDate" placeholder={'Дата свадьбы'}/>
             <Field component={Input} name="city" placeholder={'Город'}/>
             <Field component={Input} name="guestsAmount" placeholder={'Количество гостей на свадьбе'}/>
-            <Field as="select" name="requiredSpecialist">
+            <Field component={SelectInput} name="requiredSpecialist">
                 <option value="initial" disabled>Какого специалиста Вы ищите?</option>
-                <option value="place">Нужна площадка</option>
-                <option value="host">Нужен ведущий</option>
-                <option value="decorator">Нужен декоратор</option>
-                <option value="stylist">Нужен стилист</option>
-                <option value="photograph">Нужен фотограф</option>
-                <option value="videograph">Нужен видеограф</option>
-                <option value="organizator">Нужен организатор</option>
-                <option value="conditer">Нужен кондитер</option>
+                <option value="Владелец площадки">Нужна площадка</option>
+                <option value="Ведущий">Нужен ведущий</option>
+                <option value="Декоратор">Нужен декоратор</option>
+                <option value="Стилист">Нужен стилист</option>
+                <option value="Фотограф">Нужен фотограф</option>
+                <option value="Видеограф">Нужен видеограф</option>
+                <option value="Организатор">Нужен организатор</option>
+                <option value="Кондитер">Нужен кондитер</option>
             </Field>
 
             <button style={{width: '100%'}} className={s.button} type="submit">Зарегистрироваться</button>
@@ -228,32 +338,36 @@ const WorkshopForm = ({type,}) => {
     else if (type === "organizator") return <Formik
         initialValues={{
             fieldOfActivity: 'initial',
-            participationVariant: 'initial'
+            name: '',
+            phone: '',
+            companyName: '',
+            otherActivity: '',
+            participationVariant: 'initial',
+            link: '',
         }}
-        validationSchema={Schema}
-        onSubmit={onSubmit}>
-        <Form>
+        validationSchema={SchemaOrganizator}
+        onSubmit={onOrganizatorFormSubmit}>
+        <Form onChange={handleFormChange}>
             <Field component={Input} name="name" placeholder={'Имя'}/>
             <Field component={NumInput} name="phone" placeholder={'Номер телефона'}/>
             <Field component={Input} name="companyName" placeholder={'Название компании'}/>
-            <Field as="select" name="fieldOfActivity" value={fieldOfActivityInputValue}
-                   onChange={handleFieldOfActivityChange}>
-                <option value="initial" disabled>Сфера деятельности</option>
-                <option value="place">Владелец площадки</option>
-                <option value="host">Я ведущий</option>
-                <option value="decorator">Я декоратор</option>
-                <option value="stylist">Я стилист</option>
-                <option value="photograph">Я фотограф</option>
-                <option value="videograph">Я видеограф</option>
-                <option value="organizator">Я организатор</option>
-                <option value="conditer">Я кондитер</option>
+            <Field component={SelectInput} name="fieldOfActivity" value={fieldOfActivityInputValue}>
+                <option value="initial" disabled>Выберите сферу деятельности</option>
+                <option value="Я владелец площадки">Владелец площадки</option>
+                <option value="Я ведущий">Я ведущий</option>
+                <option value="Я декоратор">Я декоратор</option>
+                <option value="Я стилист">Я стилист</option>
+                <option value="Я фотограф">Я фотограф</option>
+                <option value="Я видеограф">Я видеограф</option>
+                <option value="Я организатор">Я организатор</option>
+                <option value="Я кондитер">Я кондитер</option>
                 <option value="other">Свой вариант</option>
             </Field>
             {showExtraField && <Field component={Input} name="otherActivity" placeholder={'Сфера деятельности'}/>}
-            <Field as="select" name="participationVariant">
-                <option value="initial" disabled>Вариант участия в мероприятии</option>
-                <option value="guest">Гость</option>
-                <option value="coorganizator">Соорганизатор</option>
+            <Field component={SelectInput} name="participationVariant">
+                <option value="initial" disabled>Выберите формат участия</option>
+                <option value="Гость">Гость</option>
+                <option value="Соорганизатор">Соорганизатор</option>
             </Field>
             <Field component={Input} name="link" placeholder={'Ссылка на сайт/соцсеть'}/>
 

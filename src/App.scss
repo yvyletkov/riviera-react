@@ -264,6 +264,11 @@ input.input, textarea, select {
   }
 }
 
+select {
+  position: relative;
+  background-color: #f3f3f3;
+}
+
 .agreementBlock {
   display: flex;
   position: relative;
