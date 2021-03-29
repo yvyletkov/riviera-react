@@ -546,6 +546,7 @@ const commonGridSlides = [
             {
                 title: "Турпакет",
                 img: gridKurortImg5,
+                href: '/offers/crimea-tour'
             },
             {
                 title: "Medical Spa",
@@ -621,6 +622,7 @@ const commonGridSlides = [
             {
                 title: "Турпакет",
                 img: gridKurortImg5,
+                href: '/offers/crimea-tour'
             },
             {
                 title: "Medical Spa",

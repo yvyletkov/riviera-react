@@ -90,7 +90,7 @@ const SingleNewsPage = ({match}) => {
                 <div className={s.container}>
                     <div className={s.background}/>
                     <div className={s.textContent}>
-                        <p dangerouslySetInnerHTML={{__html: marked(newsData.content_2)}}/>
+                        <p className={s.textContentInner} dangerouslySetInnerHTML={{__html: marked(newsData.content_2)}}/>
                     </div>
                     <img className={s.wide} src={strapiUrl + newsData.content_2_img.url} alt={"Лучший праздник"}/>
 
@@ -98,7 +98,7 @@ const SingleNewsPage = ({match}) => {
             </div>
         </section>
 
-        {allNewsData.slice(0, 2).filter( item => item.id != newsId).length &&
+        {allNewsData.slice(0, 2).filter( item => item.id != newsId).length > 0 &&
         <section className="section">
             <HeadlineCenter title={'Это может быть интересно'}/>
             <div className={s.anotherNewsContainer}>
