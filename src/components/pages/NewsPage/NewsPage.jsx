@@ -78,7 +78,7 @@ const NewsPage = () => {
                         {/*</div>*/}
 
 
-                        {(currentTab === 0 && newsData.length) &&
+                        {(currentTab === 0 && newsData.length > 0) &&
                         <div className={s.cardsContainer}>
                             {newsData.map((item, index) =>
                                 <NewsItemPreviewCard title={item.title}
