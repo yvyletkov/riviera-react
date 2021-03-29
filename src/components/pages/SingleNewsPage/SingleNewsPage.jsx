@@ -3,32 +3,38 @@ import {homePageData} from "../../../data";
 import MapSection from "../../shared/MapSection/MapSection";
 import VacationsPageBanner from "../../shared/VacationsPageBanner/VacationsPageBanner";
 import bannerImg from "../../../img/the-grilled/restoran-gril.png";
-import img1 from "../../../img/the-grilled/restoran-gril-1.jpg";
 import s from "./SingleNewsPage.module.scss";
-import TextPlusImageBlock from "../../shared/TextPlusImageBlock/TextPlusImageBlock";
 import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
 import {withRouter} from "react-router-dom";
 import {request} from "../../../api";
-
-const data = {
-    date: "25.03.2021",
-    title: 'Отличная новость',
-    content1: 'Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).',
-    content2: 'Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).'
-}
+import marked from "marked"
+import img from "../../../img/home-page/textimg.jpg";
+import Headline from "../../shared/Headline/Headline";
+import Button from "../../shared/Button/Button";
+import {strapiUrl} from "../../../api";
 
 
 const SingleNewsPage = ({match}) => {
 
 
-
     const [newsId, setNewsId] = React.useState(null)
-    const [newsData, setNewsData] = React.useState({})
+    const [newsData, setNewsData] = React.useState({
+        content_1: '',
+        content_2: '',
+        banner_img: [{url: ''}],
+        content_1_img_1: {url: ''},
+        content_1_img_2: {url: ''},
+        content_2_img: {url: ''},
+        published_at: ''
+    })
+
+
+    console.log('AAAA', marked('привет\n пока'))
 
     React.useEffect(() => document.title = `${newsData.title || '...'} – Riviera Sunrise Resort & SPA – Алушта, Крым`, [newsData])
 
     React.useEffect((() => {
-        request(null, "GET", `https://admin.rivierasunrise.ru/news-items/${newsId}`).then( async res => {
+        request(null, "GET", `${strapiUrl}/news-items/${newsId}`).then(async res => {
             if (res.status === 200) {
                 const data = await res.json()
                 console.log('data', data)
@@ -45,31 +51,44 @@ const SingleNewsPage = ({match}) => {
 
     return <>
         <VacationsPageBanner fontSize={["55px", "55px"]}
-                             fontSizeMobile={["11.7vw", "11.7vw"]}
-                             subtitle={data.date}
-                             topLine={newsData.title && (newsData.title.split(' ')[0] || newsData.title)}
-                             bottomLine={newsData.title && newsData.title.split(' ')[1]}
-                             bannerImg={bannerImg}
+                             fontSizeMobile={["9.5vw", "9.5"]}
+                             subtitle={new Date(newsData.published_at).toLocaleDateString('ru')}
+                             topLine={newsData.title && newsData.title}
+                             bannerImg={strapiUrl + newsData.banner_img[0].url}
                              bannerMobileImg={bannerImg}
-                        />
+        />
 
         <section className='section first'>
-            <TextPlusImageBlock title={newsData.title} content={newsData.content_1}/>
-        </section>
 
-        <section className='section'>
-            <div className={s.textBlockWrapper}>
+            <div className={s.firstContentBlock}>
                 <div className={s.container}>
-                    <div className={s.background}/>
-                    <div className={s.textContent}>
-                        <p dangerouslySetInnerHTML={{__html: newsData.content_2}}/>
-                    </div>
-                    <img className={s.wide} src={img1} alt={"Лучший праздник"}/>
+                    <img className={s.rightImg} src={strapiUrl + newsData.content_1_img_2.url} alt=""/>
 
+                    <div className={s.textContent}>
+                        <Headline title={newsData.title}/>
+                        <p dangerouslySetInnerHTML={{__html: marked(newsData.content_1)}}/>
+                        <img className={s.leftImg} src={strapiUrl + newsData.content_1_img_1.url} alt=""/>
+
+                        {newsData.buttonLink && <Button link={newsData.buttonLink} text={'Подробнее'}
+                                style={window.matchMedia("screen and (max-width: 768px)").matches ? {width: "100%"} : {width: "230px"}}/> }
+
+                    </div>
                 </div>
             </div>
         </section>
 
+        <section className='section'>
+            <div className={s.secondContentBlock}>
+                <div className={s.container}>
+                    <div className={s.background}/>
+                    <div className={s.textContent}>
+                        <p dangerouslySetInnerHTML={{__html: marked(newsData.content_2)}}/>
+                    </div>
+                    <img className={s.wide} src={strapiUrl + newsData.content_2_img.url} alt={"Лучший праздник"}/>
+
+                </div>
+            </div>
+        </section>
 
 
         <section className='section'>

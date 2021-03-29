@@ -23,5 +23,8 @@ export const request = async (data,
     return response;
 };
 
+export const strapiUrl = 'https://admin.rivierasunrise.ru'
+
+
 
 

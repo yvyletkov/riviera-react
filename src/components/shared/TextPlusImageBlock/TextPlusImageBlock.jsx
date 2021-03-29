@@ -17,7 +17,9 @@ const TextPlusImageBlock = ({
                     В отеле два здания — современный корпус Модерн и исторический корпус Классик.<br/>
                     Концепцию и дизайн корпуса Модерн разработал один из самых известных и культовых шведских
                     дизайнеров, Кристиан Люндваль, владелец архитектурно-дизайнерского бюро Lundwall Architects AB и
-                    автор проектов интерьеров сотни отелей по всему миру.`
+                    автор проектов интерьеров сотни отелей по всему миру.`,
+                                image1 = img,
+                                image2 = img2,
                             }) => {
 
     let [popupOpen, setPopupOpen] = React.useState(false);
@@ -25,12 +27,12 @@ const TextPlusImageBlock = ({
 
     return <div className={s.wrapper}>
         <div className={s.container}>
-            <img className={s.rightImg} src={img2} alt=""/>
+            <img className={s.rightImg} src={image2} alt=""/>
 
             <div className={s.textContent}>
                 {title && <Headline subtitle={subtitle} title={title}/>}
                 <p dangerouslySetInnerHTML={{__html: content}}/>
-                <img className={s.leftImg} src={img} alt=""/>
+                <img className={s.leftImg} src={image1} alt=""/>
 
                 <Button text={'Заказать звонок'}
                         onClick={ () => setPopupOpen(true)}

@@ -1,24 +1,35 @@
 import React from "react";
-import s from "./BlogPage.module.scss";
-import ContactForm from "../../additional/ContactForm/ContactForm";
+import s from "./NewsPage.module.scss";
 import MapSection from "../../shared/MapSection/MapSection";
-import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
-import cx from 'classnames'
 import busImg from "../../../img/school-bus.png";
 import Button from "../../shared/Button/Button";
 import {blogPostsData} from "../../../data";
+import {request} from "../../../api";
+import {strapiUrl} from "../../../api";
 
 
-const BlogPage = () => {
+const NewsPage = () => {
 
-    React.useEffect(() => document.title = `Блог - Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+    React.useEffect(() => document.title = `Новости - Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
 
     let [currentTab, setCurrentTab] = React.useState(0);
     const [showDescr, setShowDescr] = React.useState(false);
+    const [newsData, setNewsData] = React.useState([])
 
 
-    const tabs = ['Все статьи', 'О нас', 'Крым', 'Экскурсии', 'Пляж']
+    React.useEffect((() => {
+        request(null, "GET", `${strapiUrl}/news-items/`).then(async res => {
+            if (res.status === 200) {
+                const data = await res.json()
+                console.log('data', data)
+                setNewsData(data)
+            }
+        })
+    }), [])
+
+
+    const tabs = ['Все новости', 'О нас', 'Крым', 'Экскурсии', 'Пляж']
 
     return (<>
             <section className='section'>
@@ -26,8 +37,8 @@ const BlogPage = () => {
                     <div className={s.container}>
                         <div className={s.topRow}>
                             <h2 className={s.title}>
-                                <span>Лучшие факты о нас и Крыме</span>
-                                <span>Блог</span>
+                                <span>Riviera Sunrise Resort & SPA</span>
+                                <span>Новости</span>
                             </h2>
                             <div className={s.textContent}>
                                 <p>ул. Ленина 2, Алушта, Крым</p>
@@ -51,23 +62,23 @@ const BlogPage = () => {
                             </div>
                         </div>
 
-                        <div className={s.tabsWrapper}>
-                            {tabs.map((item, index) => {
-                                const tabStyles = cx(s.tab, {[s.active]: index === currentTab})
-                                // return <div key={index} onClick={() => setCurrentTab(index)}
-                                return <div key={index}
-                                            className={tabStyles}>{item}</div>
-                            })}
-                        </div>
+                        {/*<div className={s.tabsWrapper}>*/}
+                        {/*    {tabs.map((item, index) => {*/}
+                        {/*        const tabStyles = cx(s.tab, {[s.active]: index === currentTab})*/}
+                        {/*        // return <div key={index} onClick={() => setCurrentTab(index)}*/}
+                        {/*        return <div key={index}*/}
+                        {/*                    className={tabStyles}>{item}</div>*/}
+                        {/*    })}*/}
+                        {/*</div>*/}
 
-                        {currentTab === 0 &&
+                        {(currentTab === 0 && newsData.length) &&
                         <div className={s.cardsContainer}>
-                            {blogPostsData.map( (item, index) => <div key={index} className={s.card}>
-                                <div className={s.note}>{item.note}</div>
-                                <img src={item.img} alt={item.title}/>
+                            {newsData.map( (item, index) => <div key={index} className={s.card}>
+                                {/*<div className={s.note}>{item.note}</div>*/}
+                                <img src={strapiUrl + item.content_1_img_2.url} alt={item.title}/>
                                 <h3>{item.title}</h3>
-                                <p>{item.description}</p>
-                                <Button link={item.link} text={'Подробнее'}/>
+                                <p>{item.content_1}</p>
+                                <Button link={`/news/${item.id}`} text={'Подробнее'}/>
                             </div> )}
                         </div>
                         }
@@ -84,4 +95,4 @@ const BlogPage = () => {
     );
 }
 
-export default BlogPage;
+export default NewsPage;

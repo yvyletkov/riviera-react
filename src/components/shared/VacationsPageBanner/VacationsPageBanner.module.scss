@@ -64,11 +64,12 @@ $black: #171717;
 }
 
 .pageNameBlock h1:first-of-type {
+  max-width: 50%;
   text-transform: uppercase;
   font-family: "Helvetica Neue Black", sans-serif;
 }
 
-.pageNameBlock h1:last-of-type {
+.pageNameBlock h1:nth-of-type(2) {
   text-transform: uppercase;
   white-space: nowrap;
   font-family: "Helvetica Neue Black", sans-serif;
@@ -181,7 +182,6 @@ $black: #171717;
   }
   .descriptionBtn {
     align-self: flex-start;
-    margin-bottom: 135px;
     color: #fff;
   }
   .container {
@@ -198,7 +198,9 @@ $black: #171717;
     background-color: #fff;
   }
   .leftSide {
+    box-sizing: border-box;
     padding: 0;
+    padding-bottom: 135px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
