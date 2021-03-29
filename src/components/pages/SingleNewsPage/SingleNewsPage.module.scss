@@ -491,3 +491,24 @@
   }
 }
 
+.anotherNewsContainer {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding: 0 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 70px;
+
+  @media (max-width: 500px) {
+    justify-content: space-between;
+  }
+
+}
+

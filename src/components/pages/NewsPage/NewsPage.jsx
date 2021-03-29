@@ -6,6 +6,7 @@ import Button from "../../shared/Button/Button";
 import {blogPostsData} from "../../../data";
 import {request} from "../../../api";
 import {strapiUrl} from "../../../api";
+import NewsItemPreviewCard from "./NewsItemPreviewCard";
 
 
 const NewsPage = () => {
@@ -43,17 +44,22 @@ const NewsPage = () => {
                             <div className={s.textContent}>
                                 <p>ул. Ленина 2, Алушта, Крым</p>
                                 <p>GPS координаты: 44.667638, 34.411936</p>
-                                <p>Воспользуйтесь услугой трансфер, заказать вы можете по телефону <b><a style={{whiteSpace: 'nowrap'}} href="tel:8 800 550 98 24" target={'_blank'}>8 800 550 98 24</a></b>
+                                <p>Воспользуйтесь услугой трансфер, заказать вы можете по телефону <b><a
+                                    style={{whiteSpace: 'nowrap'}} href="tel:8 800 550 98 24" target={'_blank'}>8 800
+                                    550 98 24</a></b>
                                 </p>
-                                <div className={s.btn} onClick={() => setShowDescr(!showDescr)}><b>Как к нам добраться?</b>
+                                <div className={s.btn} onClick={() => setShowDescr(!showDescr)}><b>Как к нам
+                                    добраться?</b>
                                 </div>
                                 <div className={showDescr ? s.description + ' ' + s.active : s.description}>
                                     <img src={busImg} alt="Автобус"/>
                                     <p><b>Общественным автотранспортом:</b></p>
                                     <ul>
-                                        <li>Из автовокзала г. Симферополь ежедневный рейсы автобусов Симферополь — Алушта
+                                        <li>Из автовокзала г. Симферополь ежедневный рейсы автобусов Симферополь —
+                                            Алушта
                                         </li>
-                                        <li>Из троллейбусного парка г. Симферополь ежедневное рейсы троллейбусов Симферополь
+                                        <li>Из троллейбусного парка г. Симферополь ежедневное рейсы троллейбусов
+                                            Симферополь
                                             -
                                             Алушта. № троллейбуса 51,52
                                         </li>
@@ -71,17 +77,16 @@ const NewsPage = () => {
                         {/*    })}*/}
                         {/*</div>*/}
 
+
                         {(currentTab === 0 && newsData.length) &&
                         <div className={s.cardsContainer}>
-                            {newsData.map( (item, index) => <div key={index} className={s.card}>
-                                {/*<div className={s.note}>{item.note}</div>*/}
-                                <img src={strapiUrl + item.content_1_img_2.url} alt={item.title}/>
-                                <h3>{item.title}</h3>
-                                <p>{item.content_1}</p>
-                                <Button link={`/news/${item.id}`} text={'Подробнее'}/>
-                            </div> )}
-                        </div>
-                        }
+                            {newsData.map((item, index) =>
+                                <NewsItemPreviewCard title={item.title}
+                                                     content={item.content_1}
+                                                     previewImg={item.preview_img.url}
+                                                     id={item.id}
+                                                     key={index}/>)}
+                        </div>}
 
                     </div>
                 </div>
