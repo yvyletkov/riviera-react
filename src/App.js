@@ -56,7 +56,7 @@ const MedicalSpaPage = lazy(() => import('./components/pages/MedicalSpaPage/Medi
 const ReviewsPage = lazy(() => import('./components/pages/ReviewsPage/ReviewsPage'));
 const TransferPage = lazy(() => import("./components/pages/TransferPage/TransferPage"));
 const PartnersPage = lazy(() => import("./components/pages/PartnersPage/PartnersPage"));
-const BlogPage = lazy(() => import("./components/pages/BlogPage/BlogPage"));
+const NewsPage = lazy(() => import("./components/pages/NewsPage/NewsPage"));
 const AfishaPage = lazy(() => import("./components/pages/AfishaPage/AfishaPage"));
 const PoolSchedulePage = lazy(() => import("./components/pages/PoolSchedulePage/PoolSchedulePage"));
 const DocumentsPage = lazy(() => import("./components/pages/DocumentsPage/DocumentsPage"));
@@ -153,7 +153,7 @@ function App() {
                            component={() => <PoolSchedulePage/>}/>
 
                     <Route path='/news' exact
-                           component={() => <BlogPage/>}/>
+                           component={() => <NewsPage/>}/>
 
                     <Route path='/partners' exact
                            component={() => <PartnersPage/>}/>
