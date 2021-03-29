@@ -12,6 +12,8 @@ import img from "../../../img/home-page/textimg.jpg";
 import Headline from "../../shared/Headline/Headline";
 import Button from "../../shared/Button/Button";
 import {strapiUrl} from "../../../api";
+import NewsItemPreviewCard from "../NewsPage/NewsItemPreviewCard";
+import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
 
 
 const SingleNewsPage = ({match}) => {
@@ -27,6 +29,7 @@ const SingleNewsPage = ({match}) => {
         content_2_img: {url: ''},
         published_at: ''
     })
+    const [allNewsData, setAllNewsData] = React.useState([])
 
 
     console.log('AAAA', marked('привет\n пока'))
@@ -37,8 +40,13 @@ const SingleNewsPage = ({match}) => {
         request(null, "GET", `${strapiUrl}/news-items/${newsId}`).then(async res => {
             if (res.status === 200) {
                 const data = await res.json()
-                console.log('data', data)
                 setNewsData(data)
+            }
+        })
+        request(null, "GET", `${strapiUrl}/news-items/`).then(async res => {
+            if (res.status === 200) {
+                const data = await res.json()
+                setAllNewsData(data)
             }
         })
     }), [newsId])
@@ -70,7 +78,7 @@ const SingleNewsPage = ({match}) => {
                         <img className={s.leftImg} src={strapiUrl + newsData.content_1_img_1.url} alt=""/>
 
                         {newsData.buttonLink && <Button link={newsData.buttonLink} text={'Подробнее'}
-                                style={window.matchMedia("screen and (max-width: 768px)").matches ? {width: "100%"} : {width: "230px"}}/> }
+                                                        style={window.matchMedia("screen and (max-width: 768px)").matches ? {width: "100%"} : {width: "230px"}}/>}
 
                     </div>
                 </div>
@@ -90,6 +98,20 @@ const SingleNewsPage = ({match}) => {
             </div>
         </section>
 
+        {allNewsData.slice(0, 2).filter( item => item.id != newsId).length &&
+        <section className="section">
+            <HeadlineCenter title={'Это может быть интересно'}/>
+            <div className={s.anotherNewsContainer}>
+                <div className={s.cardsContainer}>
+                    {allNewsData.slice(0, 2).filter( item => item.id != newsId).map((item, index) =>
+                        <NewsItemPreviewCard title={item.title}
+                                             content={item.content_1}
+                                             previewImg={item.preview_img.url}
+                                             id={item.id}
+                                             key={index}/>)}
+                </div>
+            </div>
+        </section>}
 
         <section className='section'>
             <GridSlider slides={homePageData.gridSlides}/>
