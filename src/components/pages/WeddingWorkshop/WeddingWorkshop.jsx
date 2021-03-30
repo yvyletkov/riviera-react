@@ -1,5 +1,5 @@
 import React from "react";
-import {crimeaTourPageData, homePageData, vacationPagesData} from "../../../data";
+import {crimeaTourPageData, eventPagesData, homePageData, vacationPagesData} from "../../../data";
 import MapSection from "../../shared/MapSection/MapSection";
 import VacationsPageBanner from "../../shared/VacationsPageBanner/VacationsPageBanner";
 import bannerImg from "../../../img/crimea-tour/banner.png";
@@ -351,9 +351,10 @@ const WeddingWorkshop = () => {
             </section>
         </ProgramsBlock>
 
-        <section className='section'>
-            <EventMainSlider slides={crimeaTourPageData.crimeaTourPageMainSlides}
-                             title={'Наши площадки'} manySlides allClosedAtStart/>
+        <section className='section' id='places'>
+            <EventMainSlider slides={eventPagesData.visitingCeremony.ceremonyMainSlides}
+                             manySlides
+                             title={'Наши прлощадки'}/>
         </section>
 
         <section className='section'>

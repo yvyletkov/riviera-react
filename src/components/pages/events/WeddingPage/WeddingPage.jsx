@@ -46,6 +46,7 @@ const WeddingPage = () => {
         <section className='section' id='places'>
             <EventMainSlider slides={eventPagesData.visitingCeremony.ceremonyMainSlides}
                              title={'Варианты выездной церемонии'}
+                             manySlides
                              titleMobile={'Варианты церемоний'}/>
         </section>
 
