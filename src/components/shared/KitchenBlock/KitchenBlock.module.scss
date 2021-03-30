@@ -88,6 +88,7 @@
           height: calc(100vw * 0.87);
           width: calc(100% + 40px);
           margin-left: -20px;
+          margin-bottom: 15px;
         }
       }
       .textContent {
@@ -96,7 +97,7 @@
         p {
           margin: 20px 0;
           &:last-of-type {
-            text-align: center;
+            text-align: justify;
           }
         }
 
