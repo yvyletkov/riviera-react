@@ -1,5 +1,5 @@
 import React from "react";
-import {crimeaTourPageData, eventPagesData, homePageData, vacationPagesData} from "../../../data";
+import {crimeaTourPageData, eventPagesData, homePageData, LanguageCampData, vacationPagesData} from "../../../data";
 import MapSection from "../../shared/MapSection/MapSection";
 import VacationsPageBanner from "../../shared/VacationsPageBanner/VacationsPageBanner";
 import bannerImg from "../../../img/crimea-tour/banner.png";
@@ -19,6 +19,9 @@ import Accordeon from "../../shared/Accordeon/Accordeon";
 import CirqleTip from "../../shared/CirqleTip/CirqleTip";
 import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
 import WorkshopForm from "../../additional/WorkshopForm/WorkshopForm";
+import Button from "../../shared/Button/Button";
+import decisionBlockImg from "../../../img/events/wedding/decision.jpg";
+import ContactForm from "../../additional/ContactForm/ContactForm";
 
 const ProgramsBlock = styled.div`
   .container {
@@ -93,7 +96,7 @@ const ProgramsBlock = styled.div`
 
     .program-block__content {
       padding: 30px 25px 20px;
-      
+
       form > div, form > select {
         margin-bottom: 10px;
       }
@@ -247,6 +250,7 @@ const ProgramsBlock = styled.div`
   @media (max-width: 767px) {
     .container {
       box-sizing: border-box;
+      margin-bottom: 30px;
     }
 
     .program-block__text {
@@ -277,41 +281,45 @@ const ProgramsBlock = styled.div`
 
 const WeddingWorkshop = () => {
 
-    React.useEffect(() => document.title = `Свадебный переполох – Workshop – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
-
-    const [accordeonStatus, setAccordeonStatus] = React.useState(false)
+    React.useEffect(() => document.title = `Riviera Wedding Date – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
 
     return <>
         <VacationsPageBanner fontSize={["50px", "70px"]}
                              fontSizeMobile={["8.3vw", "11.7vw"]}
-                             subtitle={'Сбор гостей в 12:00 и в 15:00.'}
-                             topLine={"Workshop"}
-                             bottomLine={"Свадебный<br/>переполох"}
-                             extraLine={['25 апреля 2021 года', '3.9vw', '27px']}
+                             subtitle={'25 апреля 2021 года'}
+                             topLine={"ВЕЧЕРИНКА"}
+                             bottomLine={"RIVIERA<br/>WEDDING DAY"}
+                             extraLine={['Вход бесплатный*', '3.9vw', '27px']}
+                             descr='* при условии обязательно регистрации'
                              bannerImg={bannerImg}
-                             bannerMobileImg={bannerImg}
-                             descr={'<p><b>Включено в стоимость</b></p><ul><li>Экскурсионная программа</li><li>Питание</li><li>SPA услуги</li><li>Развлекательная программа</li></ul>'}/>
+                             bannerMobileImg={bannerImg}/>
 
         <section className='section first'>
             <div className={s.textBlockWrapper}>
                 <div className={s.container}>
                     <div className={s.background}/>
                     <div className={s.textContent}>
-                        <Headline subtitle={'Что мы предлагаем?'} title={'Свадебный переполох'}/>
+                        <Headline subtitle={'Что мы предлагаем?'} title={'RIVIERA WEDDING DAY'}/>
 
-                        <p>Если вы планируете свою свадьбу в Крыму в 2021 году, то мы готовы рассказать вам всё о
-                            свадьбах!
+                        <p><b>Если вы планируете свою свадьбу в Крыму в 2021 году, то мы готовы рассказать вам всё о
+                            свадьбах!</b>
                         </p>
                         <p>
                             Как сделать этот день особенным, как избежать ошибок и реализовать все самые смелые идеи?
+                        </p>
+                        <p>
                             Профессионалы свадебной индустрии Крыма соберутся вместе на одной из лучших свадебных
-                            площадок Крыма - финалисты Wedding Awards Yug - отель Riviera Sunrise, город Алушта.
+                            площадок Крыма – финалиста Wedding Awards Yug 2021 - отель Riviera Sunrise, город Алушта.
+                        </p>
+                        <p>
                             Гости мероприятия смогут познакомиться с организаторами, ведущими, фотографами, декораторами
                             и другими специалистами event-индустрии.
                         </p>
                         <p>
                             Мы ответим на все ваши вопросы и сделаем это воскресный день вдохновляющим и прекрасным.
+                        </p>
+                        <p>
                             Мероприятие пройдет в формате свадебной выставки.
                         </p>
 
@@ -322,10 +330,54 @@ const WeddingWorkshop = () => {
             </div>
         </section>
 
+        <section className='section'>
+            <div className={s.secondTextBlock}>
+                <div className={s.wrapper}>
+                    <div className={s.grid}>
+
+                        <div className={s.imageBlock}>
+                            <img src={decisionBlockImg} alt="Riviera Sunrise"/>
+                        </div>
+
+                        <div className={s.textBlock}>
+                            <div className={s.textContent}>
+                                {/*<Headline subtitle={'Вам предстоит'} title={'Ответственное решение'}/>*/}
+
+                                <p>
+                                    <b>Настоящий профессионал на вес золота?!
+                                        Каждый человек работающий в свадебной сфере это точно знает.</b>
+                                </p>
+
+                                <p>Специалисты свадебной индустрии могут поучаствовать в деловом нетворкинге и
+                                    воркшопах:
+                                    <ul>
+                                        <li>speed dating - формат быстрого знакомства специалистов друг с другом.  Этот формат позволяет максимально быстро найти необходимого подрядчика в регионе. </li>
+                                        <li>эффективные продажи в 2021 году.
+                                            Самые полезные коды для активизации продаж. Способы выхода на новых клиентов.
+                                        </li>
+                                        <li>мастер-класс финансовая грамотность свадебного специалиста. Все о деньгах в свадебной индустрии.</li>
+                                        <li>живое общение и выступление артистов </li>
+                                    </ul>
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <ProgramsBlock>
             <div className="flex-wrapper">
                 <HeadlineCenter title={'Зарегистрируйтесь на мероприятие'}
-                                style={{width: 'fit-content', display: 'block', margin: '0 0 50px'}}/>
+                                style={{
+                                    width: 'fit-content',
+                                    display: 'block',
+                                    margin: window.matchMedia('(max-width: 450px)').matches ? '0 0 30px' : '0 0 60px'
+                                }}/>
             </div>
 
             <section className="programs section">
@@ -335,14 +387,18 @@ const WeddingWorkshop = () => {
                         <div className="program-block">
                             <div className="program-block__content">
                                 <div className="programs-block__title">Вы невеста?</div>
-                                <WorkshopForm type={'bride'} />
+                                <Button text={'Заполнить форму'}
+                                        otherWindow
+                                        href={'https://docs.google.com/forms/d/e/1FAIpQLSeTZ_xEcOWhxfhbtnE3mZ4xLo3w6ZQ0_k57tSP8jtdHKgddQA/viewform'}/>
                             </div>
                         </div>
 
                         <div className="program-block">
                             <div className="program-block__content">
                                 <div className="programs-block__title">Вы организатор?</div>
-                                <WorkshopForm type={'organizator'} />
+                                <Button text={'Заполнить форму'}
+                                        otherWindow
+                                        href={'https://docs.google.com/forms/d/e/1FAIpQLSdToMEs2AyrAIbxuJmVgc37x8R3qqKT757siBOYYXJAjPhO-Q/viewform'}/>
                             </div>
                         </div>
 
@@ -354,12 +410,13 @@ const WeddingWorkshop = () => {
         <section className='section' id='places'>
             <EventMainSlider slides={eventPagesData.visitingCeremony.ceremonyMainSlides}
                              manySlides
-                             title={'Наши прлощадки'}/>
+                             title={'Наши площадки'}/>
         </section>
 
         <section className='section'>
-            <EventMainSlider slides={crimeaTourPageData.crimeaTourPageMainSlides}
-                             title={'Наши участники'} manySlides allClosedAtStart/>
+            <EventMainSlider slides={LanguageCampData.languageCampMainSlides}
+                             title={'Наши партнеры'}
+                             onlyTitle/>
         </section>
 
         <section className='section'>

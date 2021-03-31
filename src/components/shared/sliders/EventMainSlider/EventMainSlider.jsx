@@ -28,7 +28,7 @@ const SliderStyles = styled(Slider)`
   @media screen and (min-width: 481px) {
     .slick-slider {
       height: unset;
-      padding-bottom: 40px;
+      padding-bottom: ${p => p.onlyTitle ? '0' : '40px'}
     }
   }
   @media screen and (max-width: 1200px) {
@@ -57,7 +57,7 @@ const SliderStylesManySlider = styled(Slider)`
   @media screen and (min-width: 481px) {
     .slick-slider {
       height: unset;
-      padding-bottom: 40px;
+      padding-bottom: ${p => p.onlyTitle ? '0' : '40px'}
     }
   }
   @media screen and (max-width: 1200px) {
@@ -161,7 +161,7 @@ const EventMainSlider = ({
                 {topText && <p className={s.text}>{topText}</p>}
                 {manySlides ? <SliderStylesManySlider><Slider {...settings}>{items}</Slider></SliderStylesManySlider>
                     :
-                    <SliderStyles>
+                    <SliderStyles onlyTitle={onlyTitle}>
                         <Slider {...settings}>{items}</Slider>
                     </SliderStyles>}
                 {bottomText && <p className={s.text}>{bottomText}</p>}
