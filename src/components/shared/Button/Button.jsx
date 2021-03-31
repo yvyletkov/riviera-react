@@ -6,6 +6,7 @@ import {NavLink} from "react-router-dom";
 const Button = ({
                     text = 'Кнопка',
                     link = "#",
+                    otherWindow = false,
                     onClick,
                     style,
                     notActive = false,
@@ -20,11 +21,18 @@ const Button = ({
         </span>
         </div>
     }
+    if (otherWindow) {
+        return <a style={style} className={notActive ? s.buttonNotActive : s.button} href={href}>
+            <span>
+                {text}
+            </span>
+        </a>
+    }
     if (withIcon) {
         return (
             <a style={style} href={href} target="_blank" className={s.buttonWithIcon}>
-                    <span>{text}</span>
-                    <img className={s.icon} src={icon} alt="whatsapp"/>
+                <span>{text}</span>
+                <img className={s.icon} src={icon} alt="whatsapp"/>
             </a>)
     } else return <NavLink style={style} className={notActive ? s.buttonNotActive : s.button} to={link}>
         <span onClick={onClick}>
