@@ -157,7 +157,6 @@
 
       span:last-of-type {
         font-size: 6.2vw;
-        font-family: "Helvetica Neue Bold", sans-serif;
       }
     }
   }
@@ -198,4 +197,18 @@
   @media screen and (max-width: 620px) {
     display: none;
   }
+}
+
+.extraText {
+  font-family: "Helvetica Neue Medium", sans-serif;
+  font-size: 20px;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.circles {
+  position: absolute;
+  bottom: -210px;
+  left: 50%;
+  transform: translateX(-50%);
 }

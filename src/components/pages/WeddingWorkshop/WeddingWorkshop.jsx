@@ -2,26 +2,18 @@ import React from "react";
 import {crimeaTourPageData, eventPagesData, homePageData, LanguageCampData, vacationPagesData} from "../../../data";
 import MapSection from "../../shared/MapSection/MapSection";
 import VacationsPageBanner from "../../shared/VacationsPageBanner/VacationsPageBanner";
-import bannerImg from "../../../img/crimea-tour/banner.png";
 import img1 from "../../../img/crimea-tour/text-block.jpg";
-import groupImg from "../../../img/crimea-tour/group.jpg";
-import individualImg from "../../../img/crimea-tour/individual.png";
+import bannerImg from "../../../img/banners/workshop-banner.jpg"
 import s from "./WeddingWorkshop.module.scss";
 import Headline from "../../shared/Headline/Headline";
 import EventMainSlider from "../../shared/sliders/EventMainSlider/EventMainSlider";
 import styled from "styled-components"
 import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
-import {NavLink} from "react-router-dom";
-import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
-import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
-import FoodBlock from "../../shared/FoodBlock/FoodBlock";
-import Accordeon from "../../shared/Accordeon/Accordeon";
-import CirqleTip from "../../shared/CirqleTip/CirqleTip";
 import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
-import WorkshopForm from "../../additional/WorkshopForm/WorkshopForm";
 import Button from "../../shared/Button/Button";
 import decisionBlockImg from "../../../img/events/wedding/decision.jpg";
-import ContactForm from "../../additional/ContactForm/ContactForm";
+import EventPageBanner from "../events/EventPageBanner/EventPageBanner";
+import bannerImgMobile from "../../../img/events/birthday/birthdayBanner-mob.jpg";
 
 const ProgramsBlock = styled.div`
   .container {
@@ -285,15 +277,16 @@ const WeddingWorkshop = () => {
 
 
     return <>
-        <VacationsPageBanner fontSize={["50px", "70px"]}
-                             fontSizeMobile={["8.3vw", "11.7vw"]}
-                             subtitle={'25 апреля 2021 года'}
-                             topLine={"ВЕЧЕРИНКА"}
-                             bottomLine={"RIVIERA<br/>WEDDING DAY"}
-                             extraLine={['Вход бесплатный*', '3.9vw', '27px']}
-                             descr='* при условии обязательно регистрации'
-                             bannerImg={bannerImg}
-                             bannerMobileImg={bannerImg}/>
+
+        <EventPageBanner fontSize={['82px', '78px', '100px']} mobileFontSize={['14.7vw', '17vw', '20.5vw']}
+                         titles={['Вечеринка', 'Riviera', 'Wedding', 'Day']}
+                         bannerImg={bannerImg}
+                         bannerImgMobile={bannerImgMobile}
+                         blackFont={false}
+                         extraText={'Вход бесплатный*'}
+                         extraText2={'* при условии обязательной регистрации'}
+                         btnText={'Подробнее'}
+        />
 
         <section className='section first'>
             <div className={s.textBlockWrapper}>
@@ -351,12 +344,17 @@ const WeddingWorkshop = () => {
                                 <p>Специалисты свадебной индустрии могут поучаствовать в деловом нетворкинге и
                                     воркшопах:
                                     <ul>
-                                        <li>speed dating - формат быстрого знакомства специалистов друг с другом.  Этот формат позволяет максимально быстро найти необходимого подрядчика в регионе. </li>
-                                        <li>эффективные продажи в 2021 году.
-                                            Самые полезные коды для активизации продаж. Способы выхода на новых клиентов.
+                                        <li>speed dating - формат быстрого знакомства специалистов друг с другом. Этот
+                                            формат позволяет максимально быстро найти необходимого подрядчика в регионе.
                                         </li>
-                                        <li>мастер-класс финансовая грамотность свадебного специалиста. Все о деньгах в свадебной индустрии.</li>
-                                        <li>живое общение и выступление артистов </li>
+                                        <li>эффективные продажи в 2021 году.
+                                            Самые полезные коды для активизации продаж. Способы выхода на новых
+                                            клиентов.
+                                        </li>
+                                        <li>мастер-класс финансовая грамотность свадебного специалиста. Все о деньгах в
+                                            свадебной индустрии.
+                                        </li>
+                                        <li>живое общение и выступление артистов</li>
                                     </ul>
                                 </p>
 

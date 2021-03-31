@@ -1,15 +1,11 @@
 import React from "react";
 import s from "./EventPageBanner.module.scss";
 import img from "../../../../img/events/wedding/weddingPageBanner.jpg"
-import iconCapacity from "../../../../img/events/wedding/icon-capacity.png"
-import iconPhotozone from "../../../../img/events/wedding/icon-photozone.png"
-import iconThematic from "../../../../img/events/wedding/icon-thematic.png"
 import AnimatedMouseIcon from "../../../shared/AnimatedMouseIcon/AnimatedMouseIcon";
 import Button from "../../../shared/Button/Button";
 import PopupContactForm from "../../../additional/ContactForm/PopupContactForm";
-import ContactForm from "../../../additional/ContactForm/ContactForm";
-import Rodal from "rodal";
 import NavBlock from "../../../shared/NavBlock/NavBlock";
+import circlesImg from "../../../../img/home-page/cirqles.png";
 
 
 const EventPageBanner = ({
@@ -23,11 +19,17 @@ const EventPageBanner = ({
                              btnLink = '',
                              withInfo = false,
                              withPrice = false,
-                            requestUrl,
-                             nav
-}) => {
+                             requestUrl,
+                             nav,
+                             btnText = 'Узнать стоимость',
+                             btnOnClick,
+                             extraText = false,
+                             extraText2 = false
+                         }) => {
 
     let [popupOpen, setPopupOpen] = React.useState(false);
+
+    if (!btnOnClick) btnOnClick = () => setPopupOpen(true);
 
     return (<>
         <div className={s.wrapper}
@@ -46,9 +48,10 @@ const EventPageBanner = ({
                         <span
                             style={window.matchMedia("(max-width: 620px)").matches ? {fontSize: mobileFontSize[2]} : {fontSize: fontSize[2]}}>{titles[3]}</span>
                     </h1>
+                    {extraText && <div className={s.extraText}>{extraText}</div> }
                     <div style={{display: 'flex', alignItems: 'center'}}>
                         <Button style={{width: "fit-content", marginTop: "20px"}}
-                                onClick={() => setPopupOpen(true)} text={"Узнать стоимость"}/>
+                                onClick={btnOnClick} text={btnText}/>
                     </div>
 
 
@@ -84,7 +87,7 @@ const EventPageBanner = ({
                 </div>
 
 
-                <div className={!blackFont ? s.icons : s.icons + ' ' + s.black}>
+                {icons && <div className={!blackFont ? s.icons : s.icons + ' ' + s.black}>
                     <div className={s.icon}>
                         <img src={icons[0].img} alt="Вместимость"/>
                         <p dangerouslySetInnerHTML={{__html: icons[0].descr}}/>
@@ -99,15 +102,19 @@ const EventPageBanner = ({
                         <p dangerouslySetInnerHTML={{__html: icons[2].descr}}/>
 
                     </div>
-                </div>
+                </div>}
             </div>
             <div className={s.bannerImgTop}/>
+
+            {extraText2 && <div className={s.extraText2}>{extraText2}</div> }
 
             <div className={s.animatedMouseWrapper}>
                 <AnimatedMouseIcon/>
             </div>
+
+            <img src={circlesImg} className={s.circles} alt=""/>
         </div>
-        <NavBlock links={nav}/>
+        {nav && <NavBlock links={nav}/>}
     </>)
 };
 
