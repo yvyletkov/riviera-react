@@ -206,7 +206,17 @@
   margin: 10px 0;
 }
 
+.extraText2 {
+  position: absolute;
+  bottom: 30px;
+  color: #fff;
+  font-family: "Helvetica Neue Medium", sans-serif;
+
+}
+
 .circles {
+  z-index: 0;
+  pointer-events: none;
   position: absolute;
   bottom: -210px;
   left: 50%;

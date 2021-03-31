@@ -15,7 +15,7 @@ const HomePage = () => {
 
     React.useEffect( () => document.title = 'Riviera Sunrise Resort & SPA – Алушта, Крым – главная страница', [])
 
-
+    //
     // React.useEffect(() => {
     //     setTimeout( () => {
     //         document.querySelector('.popupOfferWrapper').classList.add('active')
