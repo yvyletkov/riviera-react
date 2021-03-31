@@ -5,9 +5,8 @@ import styled from "styled-components";
 import HeadlineCenter from "../../HeadlineCenter/HeadlineCenter";
 import {NextArrow, PrevArrow} from "../SliderArrows/sliderArrowButtons";
 import Button from "../../Button/Button";
-import cx from 'classnames'
 import CirqleTip from "../../CirqleTip/CirqleTip";
-import busIcon from "../../../../img/school-bus.png";
+import cx from "classnames"
 
 const SliderStyles = styled(Slider)`
   .slick-next:before,
@@ -83,7 +82,8 @@ const EventMainSlider = ({
                              onlyTitle = false,
                              topText = null,
                              bottomText = null,
-                             allClosedAtStart = false
+                             allClosedAtStart = false,
+                             squaredCards = false
                          }) => {
 
     const settings = {
@@ -135,6 +135,7 @@ const EventMainSlider = ({
                     popupData={popupData}
                     activatePopup={activatePopup}
                     active={!onlyTitle && !allClosedAtStart ? (window.matchMedia('(max-width: 490px').matches ? false : index === 1) : false}
+                    squaredCards={squaredCards}
                 />
             </div>
         );
@@ -157,7 +158,8 @@ const EventMainSlider = ({
                 }}>
                     Новые программы<br/>в разработке
                 </div>}
-                <HeadlineCenter title={window.matchMedia('(max-width: 490px').matches ? (titleMobile || title ) : title}/>
+                <HeadlineCenter
+                    title={window.matchMedia('(max-width: 490px').matches ? (titleMobile || title) : title}/>
                 {topText && <p className={s.text}>{topText}</p>}
                 {manySlides ? <SliderStylesManySlider><Slider {...settings}>{items}</Slider></SliderStylesManySlider>
                     :
@@ -180,8 +182,10 @@ const EventMainSliderItem = (props) => {
 
     let [showDescr, setShowDescr] = React.useState(active);
 
+    let classNames = cx([s.card], {[s.active]: showDescr}, {[s.squared]: props.squaredCards})
+
     return (
-        <div className={showDescr ? s.card + ' ' + s.active : s.card}>
+        <div className={classNames}>
 
             {/*<div className={showTip ? s.tip + ' ' + s.active : s.tip}>*/}
             {/*    <p>Примечание. В течение первых суток пребывания гость посещает врача (первичный прием) .*/}

@@ -24,12 +24,16 @@ const EventPageBanner = ({
                              btnText = 'Узнать стоимость',
                              btnOnClick,
                              extraText = false,
-                             extraText2 = false
+                             extraText2 = false,
+                             withCircles = false,
+                             anchor = false
                          }) => {
 
     let [popupOpen, setPopupOpen] = React.useState(false);
 
-    if (!btnOnClick) btnOnClick = () => setPopupOpen(true);
+    if (!btnOnClick && !btnLink) btnOnClick = () => setPopupOpen(true);
+
+    console.log('btnLink', btnLink)
 
     return (<>
         <div className={s.wrapper}
@@ -51,7 +55,7 @@ const EventPageBanner = ({
                     {extraText && <div className={s.extraText}>{extraText}</div> }
                     <div style={{display: 'flex', alignItems: 'center'}}>
                         <Button style={{width: "fit-content", marginTop: "20px"}}
-                                onClick={btnOnClick} text={btnText}/>
+                                onClick={btnOnClick} anchor={anchor} text={btnText}/>
                     </div>
 
 
@@ -103,16 +107,16 @@ const EventPageBanner = ({
 
                     </div>
                 </div>}
+                {extraText2 && <div className={s.extraText2}>{extraText2}</div> }
+
             </div>
             <div className={s.bannerImgTop}/>
-
-            {extraText2 && <div className={s.extraText2}>{extraText2}</div> }
 
             <div className={s.animatedMouseWrapper}>
                 <AnimatedMouseIcon/>
             </div>
 
-            <img src={circlesImg} className={s.circles} alt=""/>
+            {withCircles && <img src={circlesImg} className={s.circles} alt=""/>}
         </div>
         {nav && <NavBlock links={nav}/>}
     </>)

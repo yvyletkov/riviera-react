@@ -13,7 +13,16 @@ const Button = ({
                     withIcon = false,
                     icon,
                     href,
+                    anchor = false
                 }) => {
+
+    if (anchor) {
+        return <a style={style} className={notActive ? s.buttonNotActive : s.button} href={anchor}>
+            <span>
+                {text}
+            </span>
+        </a>
+    }
     if (onClick) {
         return <div style={style} onClick={onClick} className={notActive ? s.buttonNotActive : s.button}>
         <span>
@@ -22,7 +31,7 @@ const Button = ({
         </div>
     }
     if (otherWindow) {
-        return <a style={style} className={notActive ? s.buttonNotActive : s.button} href={href}>
+        return <a style={style} target="_blank" className={notActive ? s.buttonNotActive : s.button} href={href}>
             <span>
                 {text}
             </span>

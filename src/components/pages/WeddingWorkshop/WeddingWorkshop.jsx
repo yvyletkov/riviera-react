@@ -1,21 +1,25 @@
 import React from "react";
-import {crimeaTourPageData, eventPagesData, homePageData, LanguageCampData, vacationPagesData} from "../../../data";
+import {eventPagesData, LanguageCampData} from "../../../data";
 import MapSection from "../../shared/MapSection/MapSection";
-import VacationsPageBanner from "../../shared/VacationsPageBanner/VacationsPageBanner";
-import img1 from "../../../img/crimea-tour/text-block.jpg";
+import img1 from "../../../img/workshop/1.jpg";
+import img2 from "../../../img/workshop/2.jpg";
+import img3 from "../../../img/workshop/3.jpg";
+import img4 from "../../../img/events/wedding/kitchen2.jpg";
 import bannerImg from "../../../img/banners/workshop-banner.jpg"
+import bannerImgMobile from "../../../img/workshop/banner mobile.jpg";
 import s from "./WeddingWorkshop.module.scss";
 import Headline from "../../shared/Headline/Headline";
 import EventMainSlider from "../../shared/sliders/EventMainSlider/EventMainSlider";
 import styled from "styled-components"
 import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
-import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
 import Button from "../../shared/Button/Button";
-import decisionBlockImg from "../../../img/events/wedding/decision.jpg";
 import EventPageBanner from "../events/EventPageBanner/EventPageBanner";
-import bannerImgMobile from "../../../img/events/birthday/birthdayBanner-mob.jpg";
+import GalleryWeddingSlider from "../../shared/sliders/GalleryWeddingSlider/GalleryWeddingSlider";
+import img from "../../../img/home-page/textimg.jpg";
+import {request, strapiUrl} from "../../../api";
+import marked from "marked"
 
-const ProgramsBlock = styled.div`
+const FormsBlock = styled.div`
   .container {
     box-sizing: border-box;
     max-width: 1200px;
@@ -275,17 +279,30 @@ const WeddingWorkshop = () => {
 
     React.useEffect(() => document.title = `Riviera Wedding Date – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
+    const [programContent, setPogramContent] = React.useState('')
+
+    React.useEffect((() => {
+        request(null, "GET", `${strapiUrl}/wedding-workshop-program/`).then(async res => {
+            if (res.status === 200) {
+                const data = await res.json()
+                setPogramContent(data.content)
+                console.log(data.content)
+            }
+        })
+    }), [])
 
     return <>
 
-        <EventPageBanner fontSize={['82px', '78px', '100px']} mobileFontSize={['14.7vw', '17vw', '20.5vw']}
-                         titles={['Вечеринка', 'Riviera', 'Wedding', 'Day']}
+        <EventPageBanner fontSize={['70px', '94px', '58px']} mobileFontSize={['13.2vw', '18vw', '9.5vw']}
+                         titles={['25 апреля 2021 года', 'Вечеринка', 'Riviera', 'Wedding Day']}
                          bannerImg={bannerImg}
                          bannerImgMobile={bannerImgMobile}
                          blackFont={false}
                          extraText={'Вход бесплатный*'}
                          extraText2={'* при условии обязательной регистрации'}
                          btnText={'Подробнее'}
+                         withCircles
+                         anchor={'#program'}
         />
 
         <section className='section first'>
@@ -329,7 +346,7 @@ const WeddingWorkshop = () => {
                     <div className={s.grid}>
 
                         <div className={s.imageBlock}>
-                            <img src={decisionBlockImg} alt="Riviera Sunrise"/>
+                            <img src={img2} alt="Riviera Sunrise"/>
                         </div>
 
                         <div className={s.textBlock}>
@@ -368,7 +385,7 @@ const WeddingWorkshop = () => {
             </div>
         </section>
 
-        <ProgramsBlock>
+        <FormsBlock>
             <div className="flex-wrapper">
                 <HeadlineCenter title={'Зарегистрируйтесь на мероприятие'}
                                 style={{
@@ -403,7 +420,7 @@ const WeddingWorkshop = () => {
                     </div>
                 </div>
             </section>
-        </ProgramsBlock>
+        </FormsBlock>
 
         <section className='section' id='places'>
             <EventMainSlider slides={eventPagesData.visitingCeremony.ceremonyMainSlides}
@@ -414,11 +431,29 @@ const WeddingWorkshop = () => {
         <section className='section'>
             <EventMainSlider slides={LanguageCampData.languageCampMainSlides}
                              title={'Наши партнеры'}
+                             manySlides
+                             squaredCards
                              onlyTitle/>
         </section>
 
+        <section className='section' id='program'>
+            <div className={s.programBlockwrapper}>
+                <div className={s.container}>
+                    <img className={s.rightImg} src={img4} alt=""/>
+
+                    <div className={s.textContent}>
+                        <Headline subtitle={'RIVIERA WEDDING DAY'} title={'Программа мероприятия'}/>
+                        <p dangerouslySetInnerHTML={{__html: marked(programContent)}}/>
+                        <img className={s.leftImg} src={img3} alt=""/>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section className='section'>
-            <GallerySlider slides={homePageData.gallerySlides}/>
+            <GalleryWeddingSlider blockName={'Фотогалерея'}
+                                  slides={eventPagesData.weddingPages.weddingGallerySlides}/>
         </section>
 
         <section className='section last'>
