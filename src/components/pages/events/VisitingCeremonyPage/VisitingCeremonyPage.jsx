@@ -21,13 +21,29 @@ import BlackBlock from "../../../shared/BlackBlock/BlackBlock";
 import EventTextImgBlock from "../../../shared/EventTextImgBlock/EventTextImgBlock";
 import EventSquaresSlider from "../../../shared/sliders/EventSquaresSlider/EventSquaresSlider";
 import ContactForm from "../../../additional/ContactForm/ContactForm";
+import {NavLink} from "react-router-dom";
+import popupImgMob from "../../../../img/workshop-mob.jpg";
+import popupImg from "../../../../img/workshop.jpg";
 
 const WeddingPage = () => {
 
     React.useEffect(() => document.title = `Выездная церемония – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
+    // React.useEffect(() => {
+    //     setTimeout( () => {
+    //         document.querySelector('.popupOfferWrapper').classList.add('active')
+    //         document.querySelector('.popupOfferWrapper').addEventListener('click', (e) => e.target.classList.remove('active'))
+    //     }, 4000)
+    // }, [])
 
     return <>
+        <div className='popupOfferWrapper'>
+            <div>
+                <NavLink to={'/8-march'}>Подробнее →</NavLink>
+                <img src={window.matchMedia('(max-width: 600px)').matches ? popupImgMob : popupImg} alt=""/>
+            </div>
+        </div>
+
         <MetaTags>
             <meta name="keywords" content="выездная регистрация, Выездная церемония в Крыму"/>
         </MetaTags>

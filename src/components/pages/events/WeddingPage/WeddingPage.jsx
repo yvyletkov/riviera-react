@@ -19,18 +19,36 @@ import BlackBlock from "../../../shared/BlackBlock/BlackBlock";
 import EventTextImgBlock from "../../../shared/EventTextImgBlock/EventTextImgBlock";
 import EventSquaresSlider from "../../../shared/sliders/EventSquaresSlider/EventSquaresSlider";
 import ContactForm from "../../../additional/ContactForm/ContactForm";
+import {NavLink} from "react-router-dom";
+import popupImgMob from "../../../../img/workshop-mob.jpg";
+import popupImg from "../../../../img/workshop.jpg";
 
 const WeddingPage = () => {
 
     React.useEffect(() => document.title = `Свадьба – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
+    // React.useEffect(() => {
+    //     setTimeout( () => {
+    //         document.querySelector('.popupOfferWrapper').classList.add('active')
+    //         document.querySelector('.popupOfferWrapper').addEventListener('click', (e) => e.target.classList.remove('active'))
+    //     }, 4000)
+    // }, [])
+
     return <>
+        <div className='popupOfferWrapper'>
+            <div>
+                <NavLink to={'/8-march'}>Подробнее →</NavLink>
+                <img src={window.matchMedia('(max-width: 600px)').matches ? popupImgMob : popupImg} alt=""/>
+            </div>
+        </div>
+
         <EventPageBanner fontSize={['68px', '82px', '52px']} mobileFontSize={['11.7vw', '19.2vw', '8.2vw']}
                          titles={['Ваша', 'свадьба', 'мечты', 'в Крыму']}
                          icons={eventPagesData.weddingPages.weddingBannerIcons} bannerImg={bannerImg}
                          bannerImgMobile={bannerImgMobile}
                          requestUrl={'https://event.rivierasunrise.ru'}
         />
+
 
         {/* Ваша семья начинается здесь */}
 
