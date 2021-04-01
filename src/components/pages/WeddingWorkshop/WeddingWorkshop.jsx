@@ -1,5 +1,5 @@
 import React from "react";
-import {eventPagesData, LanguageCampData} from "../../../data";
+import {eventPagesData, LanguageCampData, participantsSlides} from "../../../data";
 import MapSection from "../../shared/MapSection/MapSection";
 import img1 from "../../../img/workshop/1.jpg";
 import img2 from "../../../img/workshop/2.jpg";
@@ -429,11 +429,11 @@ const WeddingWorkshop = () => {
         </section>
 
         <section className='section'>
-            <EventMainSlider slides={LanguageCampData.languageCampMainSlides}
+            <EventMainSlider slides={participantsSlides}
                              title={'Наши партнеры'}
                              manySlides
                              squaredCards
-                             onlyTitle/>
+                             />
         </section>
 
         <section className='section' id='program'>
