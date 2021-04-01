@@ -104,7 +104,7 @@ function App() {
                     <Route path='/news/:newsId' exact
                            component={() => <SingleNewsPage/>}/>
 
-                    <Route path='/offers/wedding-workshop'
+                    <Route path='/wedding-day'
                            component={() => <WeddingWorkshop/>}/>
 
                     <Route path='/offers/cashback'

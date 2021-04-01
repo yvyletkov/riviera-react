@@ -27,12 +27,12 @@ const SingleNewsPage = ({match}) => {
         content_1_img_1: {url: ''},
         content_1_img_2: {url: ''},
         content_2_img: {url: ''},
-        published_at: ''
+        published_at: '',
     })
     const [allNewsData, setAllNewsData] = React.useState([])
 
+    console.log('newsData.grid_slider_initial_slide', newsData.grid_slider_initial_slide)
 
-    console.log('AAAA', marked('привет\n пока'))
 
     React.useEffect(() => document.title = `${newsData.title || '...'} – Riviera Sunrise Resort & SPA – Алушта, Крым`, [newsData])
 
@@ -41,6 +41,7 @@ const SingleNewsPage = ({match}) => {
             if (res.status === 200) {
                 const data = await res.json()
                 setNewsData(data)
+                console.log('data', data)
             }
         })
         request(null, "GET", `${strapiUrl}/news-items/`).then(async res => {
@@ -113,9 +114,9 @@ const SingleNewsPage = ({match}) => {
             </div>
         </section>}
 
-        <section className='section'>
-            <GridSlider slides={homePageData.gridSlides}/>
-        </section>
+        {newsData.grid_slider_initial_slide && <section className='section'>
+            <GridSlider slides={homePageData.gridSlides} initialSlideIndex={newsData.grid_slider_initial_slide - 1}/>
+        </section>}
 
         <section className='section last'>
             <MapSection/>

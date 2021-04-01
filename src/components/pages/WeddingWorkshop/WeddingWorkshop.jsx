@@ -286,7 +286,7 @@ const WeddingWorkshop = () => {
             if (res.status === 200) {
                 const data = await res.json()
                 setPogramContent(data.content)
-                console.log(data.content)
+                console.log(data)
             }
         })
     }), [])
