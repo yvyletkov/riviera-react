@@ -16,11 +16,7 @@ export const request = async (data,
         }
     }
 
-    const response = await fetch(`${url}`, init);
-
-    console.log('response', response);
-
-    return response;
+    return await fetch(`${url}`, init);
 };
 
 export const strapiUrl = 'https://admin.rivierasunrise.ru'

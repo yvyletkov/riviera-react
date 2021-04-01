@@ -418,6 +418,7 @@ import cookImg from "./img/vacancies/cook.jpg";
 // afisha imports
 import afishaImg1 from "./img/afisha/1.jpg";
 import afishaImg2 from "./img/afisha/2.jpg";
+import weddingDay from "./img/promos/wedding-day.jpg";
 import afishaImg3 from "./img/afisha/3.jpg";
 import afishaImg4 from "./img/afisha/4.jpg";
 import afishaImg5 from "./img/afisha/5.jpg";
@@ -911,6 +912,16 @@ const commonExtraServicesSlides = [
     },
 ]; // доп услуги
 const commonAfishaSlides = [
+    {
+        img: weddingDay,
+        title: "Вечеринка",
+        subtitle: "<span style='font-size: 60px'>Riviera</span><br/><span style='font-size: 55px'>Wedding Day</span>",
+        time: "25 апреля 2021 года",
+        date: "",
+        campus: "",
+        campusName: "",
+        link: '/wedding-day',
+    },
     {
         img: afishaImg1,
         title: "Тренировки",

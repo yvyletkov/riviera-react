@@ -80,9 +80,9 @@ function PrevArrow({style, onClick}) {
 }
 
 
-const GridSlider = ({slides}) => {
+const GridSlider = ({slides, initialSlideIndex = 0}) => {
 
-    let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
+    let [currentSlideIndex, setCurrentSlideIndex] = React.useState(initialSlideIndex);
     // let [swipedVertically, setSwipedVertically] = React.useState(0);
 
     const afterChangeHandler = (index) => setCurrentSlideIndex(index);
@@ -93,6 +93,7 @@ const GridSlider = ({slides}) => {
 
     const settings = {
         afterChange: afterChangeHandler,
+        initialSlideIndex: initialSlideIndex,
         infinite: true,
         slidesToShow: 1,
         nextArrow: <NextArrow/>,
