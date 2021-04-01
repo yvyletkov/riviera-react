@@ -516,6 +516,19 @@ import animations4 from "./img/language-camp/ch4.jpg";
 //END sliderLanguageCamp
 import cashbackPreview from "./img/promos/mir.jpg";
 
+// Wedding Day imports
+import frolove from "./img/workshop/participants/1   Команда FroLOVE лого.png";
+import dreamday from "./img/workshop/participants/2 Студия стильных свадеб Dream Day лого.jpg";
+import savchenkov from "./img/workshop/participants/3 Павел Савченко.jpg";
+import leontenkov from "./img/workshop/participants/4 Денис Леонтенков.jpg";
+import bonusband from "./img/workshop/participants/5  Плюс Бонус Бенд лого.png";
+import impulse from "./img/workshop/participants/6 Кавер группа ImPulse лого.png";
+import strahov from "./img/workshop/participants/7 фотограф страхов дмитрий.jpg";
+import arina from "./img/workshop/participants/8 Свадебный декор и флористика арина терлецкая.jpg";
+import alushta from "./img/workshop/participants/9 Студия красоты Ольги Родченко в Алуште лого.jpg";
+import lamour from "./img/workshop/participants/10 Свадебный салон Lamoursalonyalta.jpg";
+import didjey from "./img/workshop/participants/11 диджей Александр Гесс.jpg";
+import peremitko from "./img/workshop/participants/14 Фотограф Валерий Перемитько.jpg";
 
 
 const commonGridSlides = [
@@ -4283,6 +4296,7 @@ export const animationPageData = {
 
 }
 
+// Опросник
 export const quizQuestions = [
     {
         question: "Сколько гостей собирается в отель?",
@@ -4301,3 +4315,144 @@ export const quizQuestions = [
         answers: ['Экскурсии', 'Услуги няни', 'Гастрономические ужины', 'Medical SPA', 'Трансфер']
     }
 ]
+
+// Страница свадебной вечеринки
+export const participantsSlides = [
+    {
+        img: frolove,
+        title: "Команда FroLOVE",
+        descr: `Команда FroLOVE - создаем самые неформальные свадьбы с 2008 г. Самые безумные идеи и концепты, необычные форматы и сложные задачи - мы всегда найдем решение!
+        <a target="_blank" href="https://www.instagram.com/wedding_frolove/">Instagram FroLOVE</a>
+        <a target="_blank" href="https://vk.com/frolovegroup">VK FroLOVE</a>`,
+        imgHeight: '350px'
+    },
+    {
+        img: dreamday,
+        title: "Студия стильных свадеб \"Dream Day\" Натальи Коструб",
+        descr: `Создаём День вашей Мечты
+        <a target="_blank" href="https://www.instagram.com/natali_svadbasev/">Instagram</a>
+        <a target="_blank" href="https://vk.com/natashazz">VK</a>`,
+        imgHeight: '350px'
+    },
+    {
+        img: savchenkov,
+        title: "Павел Савченко",
+        descr: `15 лет веду свадебные торжества самого разного уровня - от масштабных торжеств на 300 и более гостей, до камерных свадеб.<br/>
+Провел более 1000 свадеб, как в России, так и за рубежом.<br/>
+Вхожу в ТОП 100 лучших свадебных ведущих страны (TOP 100 AWARDS 2018/2019/2020). 
+Являюсь автором и ведущим собственного телевизионного проекта на Тео ТВ Москва
+        <a target="_blank" href="https://www.instagram.com/pavel_savchenko_tv/">Instagram</a>
+        <a target="_blank" href="https://vk.com/pavelsavchenkoshowman">VK</a>
+`,
+        imgHeight: '350px'
+    },
+    {
+        img: leontenkov,
+        title: "Денис Леонтенков",
+        descr: `Ведущий для влюбленных в жизнь и друг друга.<br/>
+Резидент проекта Top10NN<br/>
+Автор Youtube-канала «С меня хватит!»<br/>
+Выпускник школы event-менеджеров Сергея Князева и Школы Первого канала<br/>
+Свадебные проекты в Италии, Черногории, Латвии, Чехии.<br/>
+На мероприятии проведет экскурсию по отелю и  Workshop  «Как привлечь в Крым молодоженов с материка и организовать свадьбу удаленно»
+        <a target="_blank" href="https://www.instagram.com/denis_leontenkov/">Instagram</a>
+`,
+        imgHeight: '350px'
+    },
+    {
+        img: bonusband,
+        title: "Кавер группа Plus Bonus Band",
+        descr: `Кавер-группа, знающая толк в настоящей музыке. Мощь, драйв и
+энергия в новом формате. Раскачают любой танцпол своим шоу. Live sound only.
+        <a target="_blank" href="https://www.instagram.com/plusbonusband/">Instagram</a>
+        <a target="_blank" href="https://vk.com/plusbonusband">VK</a>`,
+        imgHeight: '350px'
+    },
+    {
+        img: impulse,
+        title: "Кавер группа ImPulse",
+        descr: `Проверенные поп-хиты в ярком исполнении. Стильные ребята –
+зажигалки, которые сделают любой праздник ярче.
+        <a target="_blank" href="https://www.instagram.com/impulse_showband/">Instagram</a>
+        <a target="_blank" href="https://vk.com/impulse_showband">VK</a>`,
+        imgHeight: '350px'
+    },
+    {
+        img: strahov,
+        title: "Дмитрий Страхов – фотограф",
+        descr: `Кадры, наполненные теплом и любовью!<br/>
+Финалист Wedding Awards Юг 2019
+        <a target="_blank" href="https://dimastrahov.com">dimastrahov.com</a>
+        <a target="_blank" href="https://www.instagram.com/dimastrahov.photo/">Instagram</a>`,
+        imgHeight: '350px'
+    },
+    {
+        img: arina,
+        title: "Свадебный декор и флористика – Арина Терлецкая",
+        descr: `Финалист Wedding Awards yug 2019<br/>
+Победитель Wedding Award yug 2020<br/>
+На мероприятии: разработка концепции декора свадьбы на основе пожеланий невест, подготовка мудборд с готовой концепцией за время мероприятия.
+        <a target="_blank" href="https://www.instagram.com/flowers_by_terletskaya/">Instagram</a>`,
+        imgHeight: '350px'
+    },
+    {
+        img: alushta,
+        title: "Студия красоты Ольги Родченко в Алуште",
+        descr: `Находится рядом с Riviera Sunrise по адресу Краснофлотская, 28<br/>
+Мы предлагаем широкий спектр услуг и работаем на материалах премиум класса. <br/>
+Свадебные визажисты и стилисты, броу-мастера, парикмахерские услуги, окрашивание волос, мастера ногтевого сервиса и врач-подолог.
+        <a target="_blank" href="https://www.instagram.com/rodchenkobeautyfactory/">Instagram</a>`,
+        imgHeight: '350px'
+    },
+    {
+        img: lamour,
+        title: "Свадебный салон Lamoursalonyalta",
+        descr: `Лучший свадебный салон в Ялте<br/>
+На мероприятии будет представлен шоу-рум свадебных платьев и прокат вечерних нарядов
+        <a target="_blank" href="https://www.instagram.com/lamoursalonyalta">Instagram</a>`,
+        imgHeight: '350px'
+    },
+    // {
+    //     img: languageCampSlider5,
+    //     title: "Салон Свадебных платьев Lianabride",
+    //     descr: `
+    //             <a target="_blank" href="https://www.instagram.com/lianabride_sev/">Instagram</a>`,
+    //     imgHeight: '350px'
+    // },
+    {
+        img: didjey,
+        title: "Профессиональный диджей – Александр Гесс",
+        descr: `Профессионал своего дела и коллекционер-меломан имеющий в арсенале обширную фонотеку пяти десятилетий.<br/>Всегда в тренде музыкальных новинок. В наличии звук, свет и профессиональное DJ-оборудование премиум-класса.
+                <a target="_blank" href="https://www.instagram.com/alexx_guess/">Instagram</a>
+                <a target="_blank" href="https://vk.com/alexx_guess">VK</a>
+                <a target="_blank" href="https://www.facebook.com/alexxguess">Facebook</a>`,
+        imgHeight: '350px'
+    },
+    // {
+    //     img: languageCampSlider5,
+    //     title: "Павел Беляев – фотограф",
+    //     descr: `Фотограф, который поможет комфортно чувствовать себя в кадре тем, кто не умеет или не любит фотографироваться
+    //             <a target="_blank" href="http://belyaev-photo.ru">belyaev-photo.ru</a>
+    //             <a target="_blank" href="https://www.instagram.com/belyaevsmf/">Instagram</a>`,
+    //     imgHeight: '350px'
+    // },
+    {
+        img: peremitko,
+        title: "Валерий Перемитько – фотограф",
+        descr: `Предпочитаю свадьбы в европейском стиле ,со сборами в отеле или студии и выездной церемонией.
+Для меня очень важно, чтобы мы с вами были "на одной волне" и наши представления об идеальной свадьбе совпадали и вы могли довериться мне. 
+                <a target="_blank" href="https://vk.com/svadebnoe_foto_krum">VK</a>
+                <a target="_blank" href="https://vk.com/valerij_peremitko_photographer">Ещё VK</a>
+                <a target="_blank" href="https://www.instagram.com/peremitko_photo/">Instagram</a>`,
+        imgHeight: '350px'
+    },
+//     {
+//         img: languageCampSlider5,
+//         title: "Алексей Сычев – видеограф",
+//         descr: `Производство свадебных, семейных и корпоративных фильмов и клипов в Крыму.
+//                 <a target="_blank" href="https://www.instagram.com/sv_production/">Instagram</a>
+//                 <a target="_blank" href="http://sv-p.com/">sv-p.com</a>
+// `,
+//         imgHeight: '350px'
+//     },
+];
