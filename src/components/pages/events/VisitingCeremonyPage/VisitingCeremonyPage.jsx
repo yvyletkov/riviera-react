@@ -29,17 +29,17 @@ const WeddingPage = () => {
 
     React.useEffect(() => document.title = `Выездная церемония – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
-    // React.useEffect(() => {
-    //     setTimeout( () => {
-    //         document.querySelector('.popupOfferWrapper').classList.add('active')
-    //         document.querySelector('.popupOfferWrapper').addEventListener('click', (e) => e.target.classList.remove('active'))
-    //     }, 4000)
-    // }, [])
+    React.useEffect(() => {
+        setTimeout( () => {
+            document.querySelector('.popupOfferWrapper').classList.add('active')
+            document.querySelector('.popupOfferWrapper').addEventListener('click', (e) => e.target.classList.remove('active'))
+        }, 4000)
+    }, [])
 
     return <>
         <div className='popupOfferWrapper'>
             <div>
-                <NavLink to={'/8-march'}>Подробнее →</NavLink>
+                <NavLink to={'/wedding-day'}>Подробнее →</NavLink>
                 <img src={window.matchMedia('(max-width: 600px)').matches ? popupImgMob : popupImg} alt=""/>
             </div>
         </div>
