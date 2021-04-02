@@ -18,6 +18,7 @@ import GalleryWeddingSlider from "../../shared/sliders/GalleryWeddingSlider/Gall
 import img from "../../../img/home-page/textimg.jpg";
 import {request, strapiUrl} from "../../../api";
 import marked from "marked"
+import whatsappIcon from "../../../img/icons/whatsapp.svg";
 
 const FormsBlock = styled.div`
   .container {
@@ -332,6 +333,11 @@ const WeddingWorkshop = () => {
                         <p>
                             Мероприятие пройдет в формате свадебной выставки.
                         </p>
+
+                        <Button withIcon
+                                text={'Напишите нам в Whatsapp'}
+                                icon={whatsappIcon}
+                                href={'https://wa.me/89877541784'}/>
 
                     </div>
                     <img src={img1} alt={"Лучший праздник"}/>
