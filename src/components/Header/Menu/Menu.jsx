@@ -209,6 +209,12 @@ const Menu = ({menuOpened, toggleMenu}) => {
                                         </div>
                                     </NavLink>
 
+                                    <NavLink to={"/wedding-day"}>
+                                        <div className={s.listItem} onClick={toggleMenu}>
+                                            Wedding day
+                                        </div>
+                                    </NavLink>
+
                                 </div>
 
                             </div>
