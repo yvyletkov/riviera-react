@@ -24,7 +24,7 @@ const NewsPage = () => {
             if (res.status === 200) {
                 const data = await res.json()
                 console.log('data', data)
-                setNewsData(data)
+                setNewsData(data.sort((a, b) => a.pos - b.pos))
             }
         })
     }), [])

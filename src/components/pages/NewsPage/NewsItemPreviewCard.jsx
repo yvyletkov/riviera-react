@@ -40,6 +40,8 @@ const Styles = styled.div`
 
     h3 {
       font-size: 20px;
+      max-height: 50px;
+      height: 100%;
     }
 
     p {
@@ -70,6 +72,13 @@ const Styles = styled.div`
       img {height: 120px}
       h3, p {
         margin-bottom: 10px;
+      }
+      h3 {
+          height: unset;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
       }
       .note {
         top: 20%;
