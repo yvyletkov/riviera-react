@@ -12,7 +12,7 @@ const VacanciesPage = () => {
 
     let [currentTab, setCurrentTab] = React.useState(0);
     const [popupOpen, setPopupOpen] = React.useState(false);
-    const tabs = ["Служба питания", "Хозяйственная служба"]
+    const tabs = ["Служба питания", "Хозяйственная служба", "Службы приема и размещения"]
 
     return ( <>
             <section className="section">
