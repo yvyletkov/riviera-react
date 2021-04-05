@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../../shared/Button/Button";
 import {strapiUrl} from "../../../api";
 import styled from "styled-components";
+import marked from "marked"
 
 const Styles = styled.div`
     box-sizing: border-box;
@@ -43,16 +44,23 @@ const Styles = styled.div`
       max-height: 50px;
       height: 100%;
     }
-
-    p {
+    
+    .textContent {
+      max-height: 72px;
+      height: 100%;
+      overflow: hidden;
+      margin-bottom: 20px;
+      
+      p {
       text-align: justify;
       display: -webkit-box;
       -webkit-line-clamp: 4;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
+    }
 
-    h3, p {
+    h3 {
       margin-bottom: 20px;
     }
 
@@ -63,9 +71,11 @@ const Styles = styled.div`
     }
     @media (max-width: 900px) {
       padding: 0 12px;
-    }
-    @media (max-width: 900px) {
       width: 47.5%;
+      
+      .textContent {
+        max-height: 62px;
+      }
     }
     @media (max-width: 500px) {
       padding: 0;
@@ -79,6 +89,7 @@ const Styles = styled.div`
           -webkit-line-clamp: 1;
           -webkit-box-orient: vertical;
           overflow: hidden;
+          font-size: 18px;
       }
       .note {
         top: 20%;
@@ -100,7 +111,7 @@ const NewsItemPreviewCard = ({previewImg, title, key, content, id}) => {
             {/*<div className={s.note}>{item.note}</div>*/}
             <img src={strapiUrl + previewImg} alt={title}/>
             <h3>{title}</h3>
-            <p>{content}</p>
+            <div className="textContent" dangerouslySetInnerHTML={{__html: marked(content)}}/>
             <Button link={`/news/${id}`} text={'Подробнее'}/>
         </Styles>
     );
