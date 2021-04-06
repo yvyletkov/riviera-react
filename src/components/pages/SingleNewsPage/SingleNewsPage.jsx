@@ -2,7 +2,6 @@ import React from "react";
 import {homePageData} from "../../../data";
 import MapSection from "../../shared/MapSection/MapSection";
 import VacationsPageBanner from "../../shared/VacationsPageBanner/VacationsPageBanner";
-import bannerImg from "../../../img/the-grilled/restoran-gril.png";
 import s from "./SingleNewsPage.module.scss";
 import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
 import {withRouter} from "react-router-dom";
@@ -15,6 +14,9 @@ import NewsItemPreviewCard from "../NewsPage/NewsItemPreviewCard";
 import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
 import preloaderImg from "../../../img/preloader.svg";
 
+const trimmedNewsList = (allNewsData, newsId, count) => {
+    return allNewsData.filter(item => item.id != newsId).slice(0, count)
+}
 
 const SingleNewsPage = ({match}) => {
 
@@ -48,8 +50,6 @@ const SingleNewsPage = ({match}) => {
             })
     }), [newsId])
 
-    console.log(newsData)
-
     const [allNewsData, setAllNewsData] = React.useState([])
 
     React.useEffect(() => document.title = `${newsData.title || '...'} – Riviera Sunrise Resort & SPA – Алушта, Крым`, [newsData])
@@ -58,12 +58,15 @@ const SingleNewsPage = ({match}) => {
         setNewsId(match.params.newsId)
     }), [match.params])
 
+    const newNewsList = window.matchMedia("screen and (max-width: 768px)").matches ?
+        trimmedNewsList(allNewsData, newsId, 2) : trimmedNewsList(allNewsData, newsId, 3);
+
     // здесб запрос к страпи
 
     return (
         newsData.content_1 ?
             <>
-                <VacationsPageBanner fontSize={["55px", "55px"]}
+                <VacationsPageBanner fontSize={["45px", "55px"]}
                                      fontSizeMobile={["9.5vw", "9.5"]}
                                      subtitle={new Date(newsData.published_at).toLocaleDateString('ru')}
                                      topLine={newsData.title && newsData.title}
@@ -108,22 +111,25 @@ const SingleNewsPage = ({match}) => {
             </div>
         </section>
 
-                {allNewsData.slice(0, 2).filter(item => item.id != newsId).length > 0 &&
+                {newNewsList.length > 0 &&
                 <section className="section">
                     <HeadlineCenter title={'Это может быть интересно'}/>
                     <div className={s.anotherNewsContainer}>
                         <div className={s.cardsContainer}>
-                            {allNewsData.slice(0, 2).filter(item => item.id != newsId).map((item, index) =>
-                                <NewsItemPreviewCard title={item.title}
-                                                     content={item.content_1}
-                                                     previewImg={item.preview_img.url}
-                                                     id={item.id}
-                                                     key={index}/>)}
-                </div>
-            </div>
+                            {
+                                newNewsList.map((item, index) =>
+                                    <NewsItemPreviewCard title={item.title}
+                                                         content={item.content_1}
+                                                         previewImg={item.preview_img.url}
+                                                         id={item.id}
+                                                         key={index}/>)
+                            }
+                        </div>
+                    </div>
                 </section>}
 
-                {newsData.grid_slider_initial_slide && <section className='section'>
+                {newsData.grid_slider_initial_slide &&
+                <section className='section'>
                     <GridSlider slides={homePageData.gridSlides}
                                 initialSlideIndex={newsData.grid_slider_initial_slide - 1}/>
                 </section>}

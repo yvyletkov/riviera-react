@@ -383,6 +383,7 @@ select {
 // SWAL RESTYLE end
 
 .rodal-popup {
+  z-index: 999999 !important;
   .rodal-dialog {
     box-sizing: border-box;
     border-radius: .6125em !important;
