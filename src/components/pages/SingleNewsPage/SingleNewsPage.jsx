@@ -14,8 +14,15 @@ import NewsItemPreviewCard from "../NewsPage/NewsItemPreviewCard";
 import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
 import preloaderImg from "../../../img/preloader.svg";
 
-const trimmedNewsList = (allNewsData, newsId, count) => {
-    return allNewsData.filter(item => item.id != newsId).slice(0, count)
+const trimmedNewsList = (allNewsData, count) => {
+    const newNewsList = [];
+    for (let i = 0; i < allNewsData.length; i++) {
+        const index = Math.floor(Math.random() * allNewsData.length)
+        if (newNewsList.length < count && !newNewsList.includes(allNewsData[index])) {
+            newNewsList.push(allNewsData[index])
+        }
+    }
+    return newNewsList
 }
 
 const SingleNewsPage = ({match}) => {
@@ -58,8 +65,13 @@ const SingleNewsPage = ({match}) => {
         setNewsId(match.params.newsId)
     }), [match.params])
 
-    const newNewsList = window.matchMedia("screen and (max-width: 768px)").matches ?
-        trimmedNewsList(allNewsData, newsId, 2) : trimmedNewsList(allNewsData, newsId, 3);
+    const newNewsList = window.matchMedia("screen and (max-width: 768px)").matches
+        ?
+        trimmedNewsList(allNewsData.filter(item => item.id != newsId), 2)
+        :
+        trimmedNewsList(allNewsData.filter(item => item.id != newsId), 3);
+
+    console.log(newNewsList)
 
     // здесб запрос к страпи
 

@@ -299,10 +299,15 @@ const Menu = ({menuOpened, toggleMenu}) => {
                                 </NavLink>
                             </div>
 
-                            {/*<div className={s.menuItem} onClick={toggleMenu}>*/}
                             <div className={s.menuItem} onClick={toggleMenu}>
                                 <NavLink to={"/animation"}>
                                     Анимация
+                                </NavLink>
+                            </div>
+
+                            <div className={s.menuItem} onClick={toggleMenu}>
+                                <NavLink to={"/news"}>
+                                    Новости
                                 </NavLink>
                             </div>
 
