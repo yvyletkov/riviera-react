@@ -1,0 +1,55 @@
+.popupOfferWrapper {
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: opacity 300ms;
+  & .popupBlock {
+    box-shadow: -9.629px 12.778px 27px 0px rgba(23, 23, 23, 0.09);
+    position: relative;
+
+    a {
+      position: absolute;
+      bottom: 15px;
+      right: 20px;
+      color: #fff !important;
+      font-size: 16px;
+    }
+
+    & .closeIcon {
+      position: absolute;
+      top:15px;
+      right: 20px;
+      width: 15px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+  }
+  &.active {
+    z-index: 1000000;
+    opacity: 1;
+    visibility: visible;
+  }
+  @media (max-width: 600px) {
+    box-sizing: border-box;
+    padding: 0 20px;
+    & .popupBlock {
+      max-width: 500px;
+      transform: translateY(-60px);
+
+      & .backgroundImg {
+        width: 100%;
+      }
+    }
+  }
+}
