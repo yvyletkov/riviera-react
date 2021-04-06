@@ -13,7 +13,8 @@ const VacationsPageBanner = ({
                                  bannerMobileImg,
                                  descr,
                                  extraLine = [],
-                                 positionBackground = null
+                                 positionBackground = null,
+                                 width = false
                              }) => {
 
     let [descriptionShown, setDescriptionShown] = React.useState(false);
@@ -36,10 +37,15 @@ const VacationsPageBanner = ({
                     <div className={s.leftSide}>
                         <div className={s.pageNameBlock}>
                             <h2>{subtitle}</h2>
-                            <h1 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? fontSizeMobile[0] : fontSize[0]}}>{topLine}</h1>
+                            <h1 style={{
+                                fontSize: window.matchMedia("(max-width: 620px)").matches ? fontSizeMobile[0] : fontSize[0],
+                                maxWidth: width ? window.matchMedia("(max-width: 620px)").matches ? '100%' : '50%' : null
+                            }}>{topLine}</h1>
 
                             {bottomLine &&
-                                <h1 style={{fontSize: window.matchMedia("(max-width: 620px)").matches ? fontSizeMobile[1] : fontSize[1]}}
+                                <h1 style={{
+                                    fontSize: window.matchMedia("(max-width: 620px)").matches ? fontSizeMobile[1] : fontSize[1]
+                                }}
                                 dangerouslySetInnerHTML={{__html: bottomLine}}/>
                             }
 

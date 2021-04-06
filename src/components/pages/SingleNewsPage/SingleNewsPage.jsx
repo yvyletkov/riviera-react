@@ -68,7 +68,8 @@ const SingleNewsPage = ({match}) => {
                                      subtitle={new Date(newsData.published_at).toLocaleDateString('ru')}
                                      topLine={newsData.title && newsData.title}
                                      bannerImg={strapiUrl + newsData.banner_img[0].url}
-                                     bannerMobileImg={bannerImg}
+                                     bannerMobileImg={strapiUrl + newsData.banner_img[0].url}
+                                     width
                 />
 
                 <section className='section first'>
