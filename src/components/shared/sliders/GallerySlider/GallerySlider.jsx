@@ -14,7 +14,9 @@ const StyledSlider = styled(Slider)`
     color: #000;
   }
   
-  .slick-slide img {width: 100%}
+  .slick-slide img {
+    width: 100%
+  }
   
   .slick-list {
     transition: all 0.3s;

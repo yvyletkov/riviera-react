@@ -2,7 +2,7 @@ import React from "react";
 import s from "./Header.module.scss";
 import logo from "../../img/logo.svg"
 import star from "../../img/header/star.svg"
-import speaker from "../../img/header/speaker.svg"
+import news from "../../img/header/newspaper.svg"
 import reviews from "../../img/header/reviews.svg"
 import search from "../../img/header/search.svg"
 import phone from "../../img/header/phone.svg"
@@ -65,8 +65,8 @@ const Header = () => {
                         </div>
                         <div className={s.leftBlock}>
                             <Link title={"Спецпредложения"} icon={star} link={"/offers"}/>
-                            <Link title={"Анимация"}
-                                  icon={speaker} link={"/animation"}/>
+                            <Link title={"Новости"}
+                                  icon={news} link={"/news"}/>
                             {/*<Link onClickHandler={handleLinkClick} style={{cursor: 'not-allowed'}} title={"Новости"}*/}
                             {/*      icon={microphone} link={""}/>*/}
                             <Link title={"Отзывы"}
