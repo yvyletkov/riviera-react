@@ -25,6 +25,20 @@ const trimmedNewsList = (allNewsData, count) => {
     return newNewsList
 }
 
+const selectSlide = (slide) => {
+    switch (slide) {
+        case 'events':
+            return 1
+        case 'mice':
+            return 3
+        case 'resort':
+            return 0
+        default:
+            return 0
+    }
+}
+
+
 const SingleNewsPage = ({match}) => {
 
     const [newsData, setNewsData] = React.useState({
@@ -71,7 +85,7 @@ const SingleNewsPage = ({match}) => {
         :
         trimmedNewsList(allNewsData.filter(item => item.id != newsId), 3);
 
-    console.log(newNewsList)
+    console.log(selectSlide(newsData.grid_slider_initial_slider))
 
     // здесб запрос к страпи
 
@@ -140,10 +154,10 @@ const SingleNewsPage = ({match}) => {
                     </div>
                 </section>}
 
-                {newsData.grid_slider_initial_slide &&
+                {newsData.grid_slider_initial_slider &&
                 <section className='section'>
                     <GridSlider slides={homePageData.gridSlides}
-                                initialSlideIndex={newsData.grid_slider_initial_slide - 1}/>
+                                initialSlideIndex={selectSlide(newsData.grid_slider_initial_slider)}/>
                 </section>}
 
                 <section className='section last'>
