@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import s from "./VisitingCeremonyPage.module.scss";
 import {eventPagesData} from "../../../../data";
 import decisionBlockImg from "../../../../img/events/wedding/decision.jpg";
@@ -21,28 +21,28 @@ import BlackBlock from "../../../shared/BlackBlock/BlackBlock";
 import EventTextImgBlock from "../../../shared/EventTextImgBlock/EventTextImgBlock";
 import EventSquaresSlider from "../../../shared/sliders/EventSquaresSlider/EventSquaresSlider";
 import ContactForm from "../../../additional/ContactForm/ContactForm";
-import {NavLink} from "react-router-dom";
 import popupImgMob from "../../../../img/workshop-mob.jpg";
 import popupImg from "../../../../img/workshop.jpg";
+import PopupInfo from "../../../shared/PopupInfo/PopupInfo";
 
 const WeddingPage = () => {
 
-    React.useEffect(() => document.title = `Выездная церемония – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+    useEffect(() => document.title = `Выездная церемония – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+
+    const [openPopup, setOpenPopup] = useState(false);
 
     React.useEffect(() => {
         setTimeout( () => {
-            document.querySelector('.popupOfferWrapper').classList.add('active')
-            document.querySelector('.popupOfferWrapper').addEventListener('click', (e) => e.target.classList.remove('active'))
+            setOpenPopup(true);
         }, 4000)
     }, [])
 
     return <>
-        <div className='popupOfferWrapper'>
-            <div>
-                <NavLink to={'/wedding-day'}>Подробнее →</NavLink>
-                <img src={window.matchMedia('(max-width: 600px)').matches ? popupImgMob : popupImg} alt=""/>
-            </div>
-        </div>
+        <PopupInfo navLink={'/wedding-day'}
+                   popupImgMob={popupImgMob}
+                   popupImg={popupImg}
+                   openPopup={openPopup}
+                   setOpenPopup={setOpenPopup}/>
 
         <MetaTags>
             <meta name="keywords" content="выездная регистрация, Выездная церемония в Крыму"/>

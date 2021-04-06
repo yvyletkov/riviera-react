@@ -33,8 +33,6 @@ const EventPageBanner = ({
 
     if (!btnOnClick && !btnLink) btnOnClick = () => setPopupOpen(true);
 
-    console.log('btnLink', btnLink)
-
     return (<>
         <div className={s.wrapper}
              style={{
