@@ -419,7 +419,12 @@ select {
   display: none !important;
 }
 
+#SRLLightbox {
+  z-index: 99999999999;
+}
+
 .SRLImage {
   width: 100% !important;
-  height: auto !important;
+  height: 100% !important;
+  object-fit: contain;
 }
