@@ -2,11 +2,11 @@ import React from "react";
 import s from "./NewsPage.module.scss";
 import MapSection from "../../shared/MapSection/MapSection";
 import busImg from "../../../img/school-bus.png";
-import Button from "../../shared/Button/Button";
-import {blogPostsData} from "../../../data";
-import {request} from "../../../api";
-import {strapiUrl} from "../../../api";
+import {request, strapiUrl} from "../../../api";
 import NewsItemPreviewCard from "./NewsItemPreviewCard";
+import img from "../../../img/home-page/textimg.jpg";
+import preloaderImg from "../../../img/preloader.svg";
+import Preloader from "../../shared/Preloader/Preloader";
 
 
 const NewsPage = () => {
@@ -32,17 +32,18 @@ const NewsPage = () => {
 
     const tabs = ['Все новости', 'О нас', 'Крым', 'Экскурсии', 'Пляж']
 
-    return (<>
-            <section className='section'>
-                <div className={s.wrapper}>
-                    <div className={s.container}>
-                        <div className={s.topRow}>
-                            <h2 className={s.title}>
-                                <span>Riviera Sunrise Resort & SPA</span>
-                                <span>Новости</span>
-                            </h2>
-                            <div className={s.textContent}>
-                                <p>ул. Ленина 2, Алушта, Крым</p>
+    return (
+        newsData.length > 0 ? <>
+                <section className='section'>
+                    <div className={s.wrapper}>
+                        <div className={s.container}>
+                            <div className={s.topRow}>
+                                <h2 className={s.title}>
+                                    <span>Riviera Sunrise Resort & SPA</span>
+                                    <span>Новости</span>
+                                </h2>
+                                <div className={s.textContent}>
+                                    <p>ул. Ленина 2, Алушта, Крым</p>
                                 <p>GPS координаты: 44.667638, 34.411936</p>
                                 <p>Воспользуйтесь услугой трансфер, заказать вы можете по телефону <b><a
                                     style={{whiteSpace: 'nowrap'}} href="tel:8 800 550 98 24" target={'_blank'}>8 800
@@ -88,15 +89,17 @@ const NewsPage = () => {
                                                      key={index}/>)}
                         </div>}
 
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
 
-            <section className='section last'>
-                <MapSection/>
-            </section>
-        </>
+                <section className='section last'>
+                    <MapSection/>
+                </section>
+            </>
+            :
+            <Preloader />
     );
 }
 
