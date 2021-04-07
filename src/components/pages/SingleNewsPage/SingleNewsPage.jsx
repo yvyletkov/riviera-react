@@ -13,6 +13,7 @@ import Button from "../../shared/Button/Button";
 import NewsItemPreviewCard from "../NewsPage/NewsItemPreviewCard";
 import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
 import preloaderImg from "../../../img/preloader.svg";
+import Preloader from "../../shared/Preloader/Preloader";
 
 const trimmedNewsList = (allNewsData, count) => {
     const newNewsList = [];
@@ -165,15 +166,7 @@ const SingleNewsPage = ({match}) => {
                 </section>
             </>
             :
-            <div style={{
-                height: 'calc(100vh - 70px)',
-                width: '100vw',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-            }}>
-                <img width={'150px'} src={preloaderImg} alt=''/>
-            </div>
+            <Preloader />
     )
 
 };

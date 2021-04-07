@@ -20,6 +20,7 @@ import quizImgRanneeBronirovanieMob from "./img/quiz/quiz-mob.jpg";
 import quizImgLetniyOtdyh from "./img/quiz/quiz-img1.png";
 import quizImgLetniyOtdyhMob from "./img/quiz/mob-quiz1.jpg";
 import VisaPage from "./components/pages/VisaPage/VisaPage";
+import Preloader from "./components/shared/Preloader/Preloader";
 const HomePage = lazy(() => import('./components/pages/HomePage/HomePage'));
 const RoomsAndPricesPage = lazy(() => import('./components/pages/RoomsAndPricesPage/RoomsAndPricesPage'));
 const SingleRoomPage = lazy(() => import('./components/pages/SingleRoomPage/SingleRoomPage'));
@@ -90,15 +91,7 @@ function App() {
             <Header/>
             {window.matchMedia('(max-width: 767px)').matches &&
             <div style={{height: '65px'}}/>}
-            <Suspense fallback={<div style={{
-                height: 'calc(100vh - 70px)',
-                width: '100vw',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-            }}>
-                <img width={'150px'} src={preloaderImg} alt=''/>
-            </div>}>
+            <Suspense fallback={<Preloader />}>
 
                 <Switch>
                     <Route path='/news/:newsId' exact
