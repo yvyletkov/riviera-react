@@ -88,6 +88,7 @@ const ContactForm = ({
                          withMessage,
                          withAge,
                          withDate,
+                         withName = true,
                          withHiddenInput,
                          hiddenInputValue,
                          formName,
@@ -247,7 +248,7 @@ const ContactForm = ({
         validationSchema={Schema}
         onSubmit={onSubmit}>
         <Form>
-            <Field component={Input} name="name" placeholder={'Введите Ваше имя'}/>
+            {withName && <Field component={Input} name="name" placeholder={'Введите Ваше имя'}/>}
             {withEmail && <Field component={Input} name="email" type={"text"} placeholder={'Введите Ваш E-mail'}/>}
             {withPhone && <Field component={NumInput} name="phone" type={"text"} placeholder={'Введите Ваш телефон'}/>}
             {withMessage && <Field component={Textarea} name="message" placeholder={textAreaPlaceholder}/>}

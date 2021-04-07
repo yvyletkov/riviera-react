@@ -1,36 +1,45 @@
 @font-face {
     font-family: 'Helvetica Neue Light';
     src: url('fonts/HELVETICANEUECYR-LIGHT_0.OTF');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Helvetica Neue Bold';
     src: url('fonts/HELVETICANEUECYR-BOLD.OTF');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Helvetica Neue Black';
     src: url('fonts/HELVETICANEUECYR-BLACK.OTF');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Helvetica Neue Roman';
     src: url('fonts/HELVETICANEUECYR-ROMAN.OTF');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Helvetica Neue Medium';
     src: url('fonts/HELVETICANEUECYR-MEDIUM.OTF');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Bebas Neue Bold';
     src: url('fonts/BEBASNEUE-BOLD.TTF');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Bebas Neue Book';
     src: url('fonts/BEBASNEUE-BOOK.TTF');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Bebas Neue Regular';
     src: url('fonts/BEBASNEUE.TTF');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Futura Light';
     src: url('fonts/FUTURALIGHTC.TTF');
+    font-display: swap;
 }
