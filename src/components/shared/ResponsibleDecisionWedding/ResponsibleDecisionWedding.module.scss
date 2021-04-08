@@ -1,0 +1,135 @@
+.weddingDecisionBlock {
+  .wrapper {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "text img";
+      max-width: 1200px;
+      margin: 0 auto;
+
+      & .textBlock {
+        grid-area: text;
+        display: flex;
+        flex-direction: column;
+        padding: 0 30px 0 30px;
+
+        & p {
+          font-size: 16px;
+          max-width: 320px;
+          width: 100%;
+          margin-bottom: 15px;
+          margin-top: 10px;
+          line-height: 1.15;
+          text-align: justify;
+        }
+      }
+
+      & form {
+        width: 60%;
+
+        div {
+          margin-bottom: 25px;
+        }
+
+        a {
+          flex-grow: 1;
+        }
+
+        @media (max-width: 500px) {
+          width: 100%;
+
+          div {
+            width: 100%;
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      .imageBlock {
+        grid-area: img;
+        display: flex;
+        align-items: center;
+        width: 538px;
+        height: 495px;
+        position: relative;
+        border-radius: 5px;
+
+        & .bookImg {
+          position: absolute;
+          left: -70px;
+          bottom: 0;
+        }
+        & .flowerImg {
+          position: absolute;
+          left: -85px;
+          bottom: -40px;
+        }
+        & .leafsImg {
+          position: absolute;
+          left: -200px;
+          bottom: 40px;
+        }
+      }
+
+      @media screen and (max-width: 1000px) {
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: "text" "img";
+
+        & .textBlock {
+          padding: 0 15px;
+          align-items: center;
+        }
+
+        & .imageBlock {
+          height: unset;
+          width: unset;
+          overflow: hidden;
+          justify-content: center;
+
+          & .bookImg {
+            position: relative;
+            height: 300px;
+            left: 0;
+            bottom: 0px;
+          }
+
+          & .flowerImg {
+            left: unset;
+            height: 130px;
+            bottom: 0;
+          }
+
+          & .leafsImg {
+            display: none;
+          }
+        }
+      }
+
+      @media screen and (max-width: 1000px) and (min-width: 600px) {
+        & .textBlock {
+          align-items: center;
+        }
+
+        & .imageBlock {
+          justify-content: center;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        & .imageBlock {
+          justify-content: unset;
+        }
+
+        & .textBlock {
+          align-items: unset;
+        }
+      }
+    }
+  }
+}

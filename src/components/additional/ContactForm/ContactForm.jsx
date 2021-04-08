@@ -1,5 +1,5 @@
 import React from 'react';
-import {Formik, Form, Field} from 'formik';
+import {Field, Form, Formik} from 'formik';
 import * as Yup from 'yup';
 import s from "../../shared/Button/Button.module.scss";
 import cx from "classnames";
@@ -88,6 +88,7 @@ const ContactForm = ({
                          withMessage,
                          withAge,
                          withDate,
+                         withDocument,
                          withName = true,
                          withHiddenInput,
                          hiddenInputValue,
@@ -98,13 +99,9 @@ const ContactForm = ({
                          requestUrl, ...props
                      }) => {
 
-    // const rePhoneNumber = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
     const reAge = /^[1-9]?[0-9]{1}$|^100$/;
-    // Yup.addMethod(Yup.string, "phone", function () {
-    //     return this.test("phone", "Некорректный номер", value =>
-    //         rePhoneNumber.test(value)
-    //     );
-    // });
+
+    let showDocument = false;
 
     Yup.addMethod(Yup.string, "age", function () {
         return this.test("age", "Некорректный возраст", value =>
@@ -112,19 +109,11 @@ const ContactForm = ({
         );
     });
 
-    // React.useEffect( () => {
-    //     let cleave = new Cleave('input[name=phone]', {
-    //         prefix: '+7',
-    //         delimiters: ['(', ')', '-', '-'],
-    //         blocks: [2, 3, 3, 2, 2],
-    //     });
-    // }, [])
-
     const Schema = Yup.object().shape({
-        name: Yup.string()
+        name: withName ? Yup.string()
             .min(2, 'Слишком короткое имя 😢')
             .max(25, 'Слишком длинное имя 😢')
-            .required('Пожалуйста, введите имя'),
+            .required('Пожалуйста, введите имя') : null,
         phone: withPhone ? Yup.string()
             .min(18, 'Номер введен неверно')
             .max(18, 'Слишком длинный номер телефона 😢')
@@ -154,13 +143,16 @@ const ContactForm = ({
         };
         data.inputs = [
             {
-                "alias": "Имя",
-                "value": values.name,
-            },
-            {
                 "alias": "Источник",
                 "value": formName,
             }
+        ];
+        if (withName) data.inputs = [
+            ...data.inputs,
+            {
+                "alias": "Имя",
+                "value": values.name,
+            },
         ];
         if (withPhone) data.inputs = [
             ...data.inputs,
@@ -208,14 +200,26 @@ const ContactForm = ({
         request(data)
             .then((response) => {
                 if (response.status === 200) {
-                    const name = values.name[0].toUpperCase() + values.name.slice(1);
-                    // const text = values.name + ', ' + swalText;
-                    swal.fire({
-                        title: `Спасибо, ${name}!`,
-                        text: swalText,
-                        icon: 'success',
-                        confirmButtonText: 'Хорошо'
-                    })
+                    console.log('request')
+                    if (withDocument) {
+                        window.open('/document-files/Политика-обработки-персональных-данных.pdf')
+                    }
+                    if (values.name.length !== 0) {
+                        const name = values.name[0].toUpperCase() + values.name.slice(1);
+                        swal.fire({
+                            title: `Спасибо, ${name}!`,
+                            text: swalText,
+                            icon: 'success',
+                            confirmButtonText: 'Хорошо'
+                        })
+                    } else {
+                        swal.fire({
+                            title: `Спасибо!`,
+                            text: swalText,
+                            icon: 'success',
+                            confirmButtonText: 'Хорошо'
+                        })
+                    }
                 }
                 else throw response
             })
@@ -255,7 +259,7 @@ const ContactForm = ({
             {withAge && <Field component={Input} name="age" type={"number"} placeholder="Введите возраст"/>}
             {withDate && <Field component={Select} name="date" type={"select"}/>}
             <div className="agreementBlock">
-                <input className="agreementCheckbox" id="checkbox-agreement" type="checkbox" required/>
+                <input className="agreementCheckbox" type="checkbox" required/>
                 <label htmlFor="checkbox-agreement">
                     <p className="checkboxText"
                        style={{color: agreementTextColor}}>Даю&nbsp;

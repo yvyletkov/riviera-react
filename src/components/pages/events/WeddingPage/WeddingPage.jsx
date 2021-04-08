@@ -5,7 +5,6 @@ import bannerImg from "../../../../img/events/wedding/weddingPageBanner.jpg";
 import bannerImgMobile from "../../../../img/events/wedding/weddingPageBanner-mob.jpg";
 import textImgBlockImg from "../../../../img/events/wedding/wedding.jpg";
 import EventPageBanner from "../EventPageBanner/EventPageBanner";
-import Headline from "../../../shared/Headline/Headline";
 import EventMainSlider from "../../../shared/sliders/EventMainSlider/EventMainSlider";
 import SpecialsSlider from "../../../shared/sliders/SpecialsSlider/SpecialsSlider";
 import LargeGallerySlider from "../../../shared/sliders/LargeGallerySlider/LargeGallerySlider";
@@ -21,9 +20,7 @@ import ContactForm from "../../../additional/ContactForm/ContactForm";
 import popupImgMob from "../../../../img/workshop-mob.jpg";
 import popupImg from "../../../../img/workshop.jpg";
 import PopupInfo from "../../../shared/PopupInfo/PopupInfo";
-import bookImg from "../../../../img/events/book.png";
-import flowerImg from "../../../../img/events/flower.png";
-import leafsImg from "../../../../img/events/leafs.png";
+import ResponsibleDecisionWedding from "../../../shared/ResponsibleDecisionWedding/ResponsibleDecisionWedding";
 
 const WeddingPage = () => {
 
@@ -36,13 +33,6 @@ const WeddingPage = () => {
     //         setOpenPopup(true);
     //     }, 4000)
     // }, [])
-
-    const headerLineStyle = {
-        styleTitle: {
-            // fontSize: '60px',
-            fontFamily: '"Helvetica Neue Black", sans-serif'
-        }
-    }
 
 
     return <>
@@ -188,69 +178,8 @@ const WeddingPage = () => {
 
         {/* Вам предстоит ответсвенное решение */}
 
-        {/*<section className='section'>*/}
-        {/*    <div className={s.weddingDecisionBlock}>*/}
-        {/*        <div className={s.wrapper}>*/}
-        {/*            <div className={s.grid}>*/}
-
-        {/*                <div className={s.textBlock}>*/}
-        {/*                    <div className={s.textContent}>*/}
-        {/*                        <Headline subtitle={'Вам предстоит'} title={'Ответственное решение'}/>*/}
-
-        {/*                        <p>*/}
-        {/*                            Лучше принимать его, владея полной информацией. Оставьте свои контакты, и мы*/}
-        {/*                            предоставим все материалы для принятия решения о проведении свадьбы в нашем отеле.*/}
-        {/*                        </p>*/}
-
-        {/*                        <ContactForm submitBtnText={'Получить материалы для принятия решения'}*/}
-        {/*                                     formName={`Форма "Вам предстоит ответсвенное решение" (скачать коммерческое предложение)`}*/}
-        {/*                                     withPhone*/}
-        {/*                                     swalText={'мы отправим всю необходимую информацию на указанную Вами почту в самое ближайшее время!'}*/}
-        {/*                                     requestUrl={'https://event.rivierasunrise.ru'}*/}
-        {/*                        />*/}
-        {/*                    </div>*/}
-        {/*                </div>*/}
-
-        {/*                <div className={s.imageBlock}>*/}
-        {/*                    <img src={decisionBlockImg} alt="Riviera Sunrise"/>*/}
-        {/*                </div>*/}
-
-        {/*            </div>*/}
-        {/*        </div>*/}
-        {/*    </div>*/}
-        {/*</section>*/}
-
         <section className='section'>
-            <div className={s.weddingDecisionBlock}>
-                <div className={s.wrapper}>
-                    <div className={s.grid}>
-                        <div className={s.textBlock}>
-                            <Headline subtitle={'Вам предстоит'}
-                                      title={'Решение'}
-                                      subtitle1={'Ответственное'}
-                                      styleSubtitle1={headerLineStyle.styleSubtitle1}
-                                      styleTitle={headerLineStyle.styleTitle}/>
-                            <p>Лучше принимать его, владея полной информацией. Получите на свою почту все необходимые
-                                материалы для принятия решения о проведении свадьбы в нашем отеле.
-                            </p>
-
-                            <ContactForm submitBtnText={'Получить буклет на почту'}
-                                         formName={`Форма "Вам предстоит ответсвенное решение" (скачать коммерческое предложение)`}
-                                         withEmail
-                                         withName = {false}
-                                         swalText={'мы отправим всю необходимую информацию на указанную Вами почту в самое ближайшее время!'}
-                                         requestUrl={'https://event.rivierasunrise.ru'}/>
-                        </div>
-
-                        <div className={s.imageBlock}>
-                            <img className={s.bookImg} src={bookImg} alt='книга' />
-                            <img className={s.flowerImg} src={flowerImg} alt='цветы' />
-                            <img className={s.leafsImg} src={leafsImg} alt='листья' />
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+            <ResponsibleDecisionWedding />
         </section>
 
         {/* Карта */}
