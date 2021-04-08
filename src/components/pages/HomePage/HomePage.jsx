@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {homePageData} from "../../../data"
 import HomePageBanner from "./HomePageBanner/HomePageBanner";
 import CenteredSlider from "../../shared/sliders/CenteredSlider/CenteredSlider";
@@ -7,55 +7,49 @@ import TextPlusImageBlock from "../../shared/TextPlusImageBlock/TextPlusImageBlo
 import SpecialsSlider from "../../shared/sliders/SpecialsSlider/SpecialsSlider";
 import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
 import MapSection from "../../shared/MapSection/MapSection";
-import popupImg from "../../../img/8marchpopup.jpg";
-import popupImgMob from "../../../img/8marchpopup-mob.jpg";
-import {NavLink} from "react-router-dom";
+import Preloader from "../../shared/Preloader/Preloader";
 
 const HomePage = () => {
 
-    React.useEffect( () => document.title = 'Riviera Sunrise Resort & SPA – Алушта, Крым – главная страница', [])
+    useEffect(() => document.title = 'Riviera Sunrise Resort & SPA – Алушта, Крым – главная страница', [])
 
-    //
-    // React.useEffect(() => {
-    //     setTimeout( () => {
-    //         document.querySelector('.popupOfferWrapper').classList.add('active')
-    //         document.querySelector('.popupOfferWrapper').addEventListener('click', (e) => e.target.classList.remove('active'))
-    //     }, 4000)
-    // }, [])
+    const [loader, setLoader] = useState(false);
+    useEffect(() => {
+        setLoader(!loader)
+    }, [])
 
-    return <>
-        {/*<div className='popupOfferWrapper'>*/}
-        {/*    <div>*/}
-        {/*        <NavLink to={'/8-march'}>Подробнее →</NavLink>*/}
-        {/*        <img src={window.matchMedia('(max-width: 600px)').matches ? popupImgMob : popupImg} alt=""/>*/}
-        {/*    </div>*/}
-        {/*</div>*/}
-        <HomePageBanner/>
+    return (
+        loader ?
+            <>
+                <HomePageBanner/>
 
-        <section className='section first'>
-            <GridSlider slides={homePageData.gridSlides}/>
-        </section>
+                <section className='section first'>
+                    <GridSlider slides={homePageData.gridSlides}/>
+                </section>
 
-        <section className='section'>
-            <SpecialsSlider subtitle={'Лучшие'} title={'Акции'} btnLink={'/offers'} slides={homePageData.specialsSlides}/>
-        </section>
+                <section className='section'>
+                    <SpecialsSlider subtitle={'Лучшие'} title={'Акции'} btnLink={'/offers'}
+                                    slides={homePageData.specialsSlides}/>
+                </section>
 
-        <section className='section'>
-            <CenteredSlider title={'Актуальные мероприятия'} slides={homePageData.centeredSlides} type={'home-page'}/>
-        </section>
+                <section className='section'>
+                    <CenteredSlider title={'Актуальные мероприятия'} slides={homePageData.centeredSlides} type={'home-page'}/>
+                </section>
 
-        <section className='section'>
-            <TextPlusImageBlock subtitle={'Идеальный отдых в Крыму'} title={'круглый год'} withForm={true}/>
-        </section>
+                <section className='section'>
+                    <TextPlusImageBlock subtitle={'Идеальный отдых в Крыму'} title={'круглый год'} withForm={true}/>
+                </section>
 
-        <section className='section'>
-            <GallerySlider slides={homePageData.gallerySlides}/>
-        </section>
+                <section className='section'>
+                    <GallerySlider slides={homePageData.gallerySlides}/>
+                </section>
 
-        <section className='section last'>
-            <MapSection/>
-        </section>
-    </>
+                <section className='section last'>
+                    <MapSection/>
+                </section>
+            </>
+            :
+            <Preloader/>)
 
 };
 

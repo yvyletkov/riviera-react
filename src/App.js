@@ -1,17 +1,16 @@
 import React, {Suspense} from "react";
-import popupImg from "./img/14febpopup.jpg"
 import {Route, Switch} from "react-router-dom";
 import {medicalSpaPage, roomPageData, singlePromotionPages} from "./data";
 import {lazy} from '@loadable/component'
-import preloaderImg from './img/preloader.svg';
 import "./App.scss";
 import "./style/normalize.css";
 import "./style/fonts.css";
-import './style/rodal.css';
+import "./style/rodal.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import BottomMenu from "./components/additional/BottomMenu/BottomMenu";
-import swal from "sweetalert2";
 import CookiesNotification from "./components/additional/CookieNotificationWindow/CookiesNotification";
 import TagManager from 'react-gtm-module'
 import Quiz from "./components/shared/Quiz/Quiz";
@@ -21,7 +20,7 @@ import quizImgLetniyOtdyh from "./img/quiz/quiz-img1.png";
 import quizImgLetniyOtdyhMob from "./img/quiz/mob-quiz1.jpg";
 import VisaPage from "./components/pages/VisaPage/VisaPage";
 import Preloader from "./components/shared/Preloader/Preloader";
-const HomePage = lazy(() => import('./components/pages/HomePage/HomePage'));
+import HomePage from "./components/pages/HomePage/HomePage";
 const RoomsAndPricesPage = lazy(() => import('./components/pages/RoomsAndPricesPage/RoomsAndPricesPage'));
 const SingleRoomPage = lazy(() => import('./components/pages/SingleRoomPage/SingleRoomPage'));
 const FamilyVacationPage = lazy(() => import('./components/pages/VacationPages/FamilyVacationPage'));
@@ -74,8 +73,6 @@ const SearchPage = lazy(() => import("./components/pages/SearchPage/SearchPage")
 const Cashback = lazy(() => import("./components/pages/Cashback/Cashback"));
 const WeddingWorkshop = lazy(() => import("./components/pages/WeddingWorkshop/WeddingWorkshop"));
 const SingleNewsPage = lazy(() => import("./components/pages/SingleNewsPage/SingleNewsPage"));
-
-// const VisaPage = lazy(() => import('./components/pages/VisaPage/VisaPage'));
 
 function App() {
 
