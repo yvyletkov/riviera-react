@@ -101,8 +101,6 @@ const ContactForm = ({
 
     const reAge = /^[1-9]?[0-9]{1}$|^100$/;
 
-    let showDocument = false;
-
     Yup.addMethod(Yup.string, "age", function () {
         return this.test("age", "Некорректный возраст", value =>
             reAge.test(value)
@@ -200,9 +198,8 @@ const ContactForm = ({
         request(data)
             .then((response) => {
                 if (response.status === 200) {
-                    console.log('request')
                     if (withDocument) {
-                        window.open('/document-files/Политика-обработки-персональных-данных.pdf')
+                        window.open(withDocument)
                     }
                     if (values.name.length !== 0) {
                         const name = values.name[0].toUpperCase() + values.name.slice(1);
@@ -234,8 +231,6 @@ const ContactForm = ({
             });
 
         resetForm({})
-
-        console.log('values', data);
 
     };
 

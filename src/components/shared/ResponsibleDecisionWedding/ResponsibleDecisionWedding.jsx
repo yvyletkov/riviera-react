@@ -24,8 +24,8 @@ const ResponsibleDecisionWedding = () => {
                                      formName={`Форма "Вам предстоит ответсвенное решение" (скачать коммерческое предложение)`}
                                      withEmail
                                      withName={false}
-                                     withDocument
-                                     swalText={'мы отправим всю необходимую информацию на указанную Вами почту в самое ближайшее время!'}
+                                     withDocument={'/document-files/буклет.pdf'}
+                                     swalText={'мы отправим вам материалы по свадебному торжеству на указанную почту в самое ближайшее время'}
                                      requestUrl={'https://event.rivierasunrise.ru'}/>
                     </div>
 
