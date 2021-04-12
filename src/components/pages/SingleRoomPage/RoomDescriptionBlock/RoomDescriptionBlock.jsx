@@ -18,7 +18,7 @@ const RoomDescriptionBlock = ({data, img}) => {
     return (
         <div className={s.container}>
             <Headline subtitle={'Описание'} title={'номера'}/>
-            <div className={s.link}><NavLink to={''}>Посмотреть номер с видом на море →</NavLink></div>
+            {/*<div className={s.link}><NavLink to={''}>Посмотреть номер с видом на море →</NavLink></div>*/}
             <CirqleTip onClick={cirqleTipHandler} accordeonStatus={accordeonStatus}/>
 
             <div className={s.grid}>
