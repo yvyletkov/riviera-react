@@ -302,7 +302,7 @@ const WeddingWorkshop = () => {
                          extraText2={'* при условии обязательной регистрации'}
                          btnText={'Подробнее'}
                          withCircles
-                         anchor={'#program'}
+                         anchor={'program'}
         />
 
         <section className='section first'>
@@ -443,7 +443,7 @@ const WeddingWorkshop = () => {
                              />
         </section>
 
-        <section className='section' id='program'>
+        <section className='section' id='program' >
             <div className={s.programBlockwrapper}>
                 <div className={s.container}>
                     <img className={s.rightImg} src={img4} alt=""/>

@@ -7,7 +7,6 @@ import PopupContactForm from "../../../additional/ContactForm/PopupContactForm";
 import NavBlock from "../../../shared/NavBlock/NavBlock";
 import circlesImg from "../../../../img/home-page/cirqles.png";
 
-
 const EventPageBanner = ({
                              mobileFontSize,
                              fontSize,
