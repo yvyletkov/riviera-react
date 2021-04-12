@@ -78,10 +78,9 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className={s.footerGray}>
-                    <p>
-                        Riviera Sunrise Resort & SPА, Alushta © 2020 Официальный сайт
-                        гостиницы <span className={s.thinLine}>&nbsp; | &nbsp;</span><a href='https://upro.group/'
-                                                                                        className={s.managedBy}>Managed by UPRO</a>
+                    <p> Riviera Sunrise Resort & SPА, Alushta © 2020 Официальный сайт гостиницы
+                        <span className={s.thinLine}>&nbsp; | &nbsp;</span>
+                        <a href='https://upro.group/' className={s.managedBy}>Managed by UPRO</a>
                     </p>
                 </div>
             </div>
