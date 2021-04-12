@@ -49,7 +49,7 @@ const EventTextImgBlock = ({
                     <Button withIcon
                             text={'Напишите нам в Whatsapp'}
                             icon={whatsappIcon}
-                            href={'https://wa.me/89877541784'}/>
+                            href={'https://wa.me/79877541784'}/>
                 </div>
                 <img className={wideImg ? s.wide : ''} src={img} alt={"Лучший праздник"}/>
 
