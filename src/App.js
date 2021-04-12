@@ -275,41 +275,41 @@ function App() {
                            component={() => <VacationWithFriendsPage/>}/>
 
                     {/* MODERN ROOMS*/}
-                    <Route path='/rooms/standart-modern' exact
+                    <Route path='/nomera-i-tseny/standart-modern' exact
                            component={() => <SingleRoomPage data={roomPageData.modernStandart}/>}/>
 
-                    <Route path='/rooms/improved-modern/' exact
+                    <Route path='/nomera-i-tseny/improved-modern/' exact
                            component={() => <SingleRoomPage data={roomPageData.modernImproved}/>}/>
 
-                    <Route path='/rooms/semilux-modern' exact
+                    <Route path='/nomera-i-tseny/semilux-modern' exact
                            component={() => <SingleRoomPage data={roomPageData.modernSemilux}/>}/>
 
-                    <Route path='/rooms/lux-modern' exact
+                    <Route path='/nomera-i-tseny/lux-modern' exact
                            component={() => <SingleRoomPage data={roomPageData.modernLux}/>}/>
 
-                    <Route path='/rooms/vip-suite' exact
+                    <Route path='/nomera-i-tseny/vip-suite' exact
                            component={() => <SingleRoomPage data={roomPageData.spaSuite}/>}/>
 
-                    <Route path='/rooms/disabled-modern' exact
+                    <Route path='/nomera-i-tseny/disabled-modern' exact
                            component={() => <SingleRoomPage data={roomPageData.modernDisabled}/>}/>
 
-                    <Route path='/rooms/president-lux-modern' exact
+                    <Route path='/nomera-i-tseny/president-lux-modern' exact
                            component={() => <SingleRoomPage data={roomPageData.modernPresidentLux}/>}/>
 
                     {/* CLASSIC ROOMS */}
-                    <Route path='/rooms/standart-classic' exact
+                    <Route path='/nomera-i-tseny/standart-classic' exact
                            component={() => <SingleRoomPage data={roomPageData.classicStandart}/>}/>
 
-                    <Route path='/rooms/improved-classic' exact
+                    <Route path='/nomera-i-tseny/improved-classic' exact
                            component={() => <SingleRoomPage data={roomPageData.classicImproved}/>}/>
 
-                    <Route path='/rooms/semilux-classic' exact
+                    <Route path='/nomera-i-tseny/semilux-classic' exact
                            component={() => <SingleRoomPage data={roomPageData.classicSemilux}/>}/>
 
-                    <Route path='/rooms/lux-classic' exact
+                    <Route path='/nomera-i-tseny/lux-classic' exact
                            component={() => <SingleRoomPage data={roomPageData.classicLux}/>}/>
 
-                    <Route path='/rooms/president-lux-classic' exact
+                    <Route path='/nomera-i-tseny/president-lux-classic' exact
                            component={() => <SingleRoomPage
                                data={roomPageData.classicPresidentLux}/>}/>
 

@@ -428,6 +428,7 @@ import afishaImg14feb from "./img/afisha/14feb.jpg";
 import afishaImg23feb from "./img/afisha/23feb.jpg";
 import afishaImg8mar from "./img/afisha/8mar.jpg";
 import afishaBelov from "./img/afisha/belov.jpg";
+import afishaMakukin from "./img/afisha/makukin.jpg";
 import afishaFilimonova from "./img/afisha/filimonova.jpg";
 import afishaSafronova from "./img/afisha/safronova.jpg";
 // END afisha imports
@@ -937,6 +938,16 @@ const commonExtraServicesSlides = [
 ]; // доп услуги
 const commonAfishaSlides = [
     {
+        img: afishaImg1,
+        title: "Тренировки",
+        subtitle: "По плаванию<br/>для взрослых",
+        time: "и детей",
+        date: "",
+        campus: "Корпус",
+        campusName: "Modern",
+        link: '/pool-schedule',
+    },
+    {
         img: weddingDay,
         title: "Вечеринка",
         subtitle: "<span style='font-size: 60px'>Riviera</span><br/><span style='font-size: 55px'>Wedding Day</span>",
@@ -947,14 +958,22 @@ const commonAfishaSlides = [
         link: '/wedding-day',
     },
     {
-        img: afishaImg1,
-        title: "Тренировки",
-        subtitle: "По плаванию<br/>для взрослых",
-        time: "и детей",
-        date: "",
-        campus: "Корпус",
-        campusName: "Modern",
-        link: '/pool-schedule',
+        img: afishaBelov,
+        title: "Вечер инструментальной музыки",
+        subtitle: "Белов<br><span style='font-size: 70px'>Ян</span>",
+        time: "19:30",
+        date: "17 апреля, суббота",
+        campus: "Ресторан",
+        campusName: "«The Grilled»",
+    },
+    {
+        img: afishaMakukin,
+        title: "Вечер инструментальной музыки",
+        subtitle: "Виталий<br><span style='font-size: 70px'>Макукин</span>",
+        time: "19:30",
+        date: "24 апреля, суббота",
+        campus: "Ресторан",
+        campusName: "«The Grilled»",
     },
     {
         img: afishaImg2,
@@ -977,31 +996,31 @@ const commonClassicCampusSlides = [
     {
         img: classicStandart1,
         title: "Стандарт",
-        link: "/rooms/standart-classic",
+        link: "/nomera-i-tseny/standart-classic",
         bookingLink: "/booking",
     },
     {
         img: classicImproved1,
         title: "Улучшенный",
-        link: "/rooms/improved-classic",
+        link: "/nomera-i-tseny/improved-classic",
         bookingLink: "/booking",
     },
     {
         img: classicSemiLux2,
         title: "Полулюкс",
-        link: "/rooms/semilux-classic",
+        link: "/nomera-i-tseny/semilux-classic",
         bookingLink: "/booking",
     },
     {
         img: classicLux2,
         title: "Люкс",
-        link: "/rooms/lux-classic",
+        link: "/nomera-i-tseny/lux-classic",
         bookingLink: "/booking",
     },
     {
         img: classicPresidentLux1,
         title: "Президентский люкс",
-        link: "/rooms/president-lux-classic",
+        link: "/nomera-i-tseny/president-lux-classic",
         bookingLink: "/booking",
     },
 ];
@@ -1014,37 +1033,37 @@ const commonModernCampusSlides = [
     {
         img: modernStandart1,
         title: "Стандарт",
-        link: "/rooms/standart-modern",
+        link: "/nomera-i-tseny/standart-modern",
         bookingLink: "/booking",
     },
     {
         img: modernImproved1,
         title: "Улучшенный",
-        link: "/rooms/improved-modern/",
+        link: "/nomera-i-tseny/improved-modern/",
         bookingLink: "/booking",
     },
     {
         img: modernSemilux1,
         title: "Полулюкс",
-        link: "/rooms/semilux-modern",
+        link: "/nomera-i-tseny/semilux-modern",
         bookingLink: "/booking",
     },
     {
         img: modernLux1,
         title: "Люкс",
-        link: "/rooms/lux-modern",
+        link: "/nomera-i-tseny/lux-modern",
         bookingLink: "/booking",
     },
     {
         img: modernSpaSuite1,
         title: "SPA-Suite",
-        link: "/rooms/vip-suite",
+        link: "/nomera-i-tseny/vip-suite",
         bookingLink: "/booking",
     },
     {
         img: modernPresident2,
         title: "Президентский люкс",
-        link: "/rooms/president-lux-modern",
+        link: "/nomera-i-tseny/president-lux-modern",
         bookingLink: "/booking",
     },
 ];
@@ -1520,7 +1539,7 @@ const modernOtherRoomsSlides = [
         title: 'Стандарт',
         capacity: "2 человека",
         area: "25",
-        link: '/rooms/standart-modern',
+        link: '/nomera-i-tseny/standart-modern',
         key: 1,
     },
     {
@@ -1529,7 +1548,7 @@ const modernOtherRoomsSlides = [
         title: 'Улучшенный',
         capacity: "2 человека",
         area: "25",
-        link: '/rooms/improved-modern/',
+        link: '/nomera-i-tseny/improved-modern/',
         key: 2,
     },
     {
@@ -1547,7 +1566,7 @@ const modernOtherRoomsSlides = [
         title: 'Люкс',
         capacity: "2 человека",
         area: "50",
-        link: '/rooms/lux-modern',
+        link: '/nomera-i-tseny/lux-modern',
         key: 4,
     },
     {
@@ -1556,7 +1575,7 @@ const modernOtherRoomsSlides = [
         title: 'SPA-Suite',
         capacity: "2 человека",
         area: "117",
-        link: '/rooms/vip-suite',
+        link: '/nomera-i-tseny/vip-suite',
         key: 5,
     },
     {
@@ -1565,7 +1584,7 @@ const modernOtherRoomsSlides = [
         title: 'Возможностями',
         capacity: "2 человека",
         area: "25",
-        link: '/rooms/disabled-modern',
+        link: '/nomera-i-tseny/disabled-modern',
         key: 6,
     },
     {
@@ -1574,7 +1593,7 @@ const modernOtherRoomsSlides = [
         title: 'Президентский люкс',
         capacity: "4 человека",
         area: "110",
-        link: '/rooms/president-lux-modern',
+        link: '/nomera-i-tseny/president-lux-modern',
         key: 6,
     },
 ];
@@ -1585,7 +1604,7 @@ const classicOtherRoomsSlides = [
         title: 'Cтандарт',
         capacity: "2 человека",
         area: "20-25",
-        link: '/rooms/standart-classic',
+        link: '/nomera-i-tseny/standart-classic',
         key: 1,
     },
     {
@@ -1594,7 +1613,7 @@ const classicOtherRoomsSlides = [
         title: 'Улучшенный',
         capacity: "2 человека",
         area: "20-25",
-        link: '/rooms/improved-classic',
+        link: '/nomera-i-tseny/improved-classic',
         key: 2,
     },
     {
@@ -1603,7 +1622,7 @@ const classicOtherRoomsSlides = [
         title: 'Полулюкс',
         capacity: "2 человека",
         area: "20-25",
-        link: '/rooms/semilux-classic',
+        link: '/nomera-i-tseny/semilux-classic',
         key: 3,
     },
     {
@@ -1612,7 +1631,7 @@ const classicOtherRoomsSlides = [
         title: 'Люкс',
         capacity: "2 человека",
         area: "45-50",
-        link: '/rooms/lux-classic',
+        link: '/nomera-i-tseny/lux-classic',
         key: 4,
     },
     {
@@ -1621,7 +1640,7 @@ const classicOtherRoomsSlides = [
         title: 'Президентский люкс',
         capacity: "2 человека",
         area: "130",
-        link: '/rooms/president-lux-classic',
+        link: '/nomera-i-tseny/president-lux-classic',
         key: 5,
     },
 ];
@@ -3843,15 +3862,6 @@ export const afishaPageData = {
             campus: "",
             campusName: "12-14 февраля",
             link: '/love-day',
-        },
-        {
-            img: afishaBelov,
-            title: "Джаз",
-            subtitle: "Белов<br><span style='font-size: 70px'>Ян</span>",
-            time: "19:30",
-            date: "12 февраля, пятница",
-            campus: "Ресторан",
-            campusName: "«The Grilled»",
         },
         {
             img: afishaFilimonova,
