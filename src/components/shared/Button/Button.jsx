@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./Button.module.scss";
 import {NavLink} from "react-router-dom";
+import {Link as Scroll} from "react-scroll";
 
 
 const Button = ({
@@ -17,11 +18,14 @@ const Button = ({
                 }) => {
 
     if (anchor) {
-        return <a style={style} className={notActive ? s.buttonNotActive : s.button} href={anchor}>
-            <span>
-                {text}
-            </span>
-        </a>
+        return (
+            <Scroll to={anchor} spy={true} smooth={true} offset={-150} duration={1000}>
+                <div style={style} className={notActive ? s.buttonNotActive : s.button}>
+                <span>
+                    {text}
+                </span>
+                </div>
+            </Scroll>)
     }
     if (onClick) {
         return <div style={style} onClick={onClick} className={notActive ? s.buttonNotActive : s.button}>
