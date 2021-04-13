@@ -102,7 +102,7 @@ const Header = () => {
                 {/*    </div>*/}
                 {/*</div>*/}
             </div>
-            <div className="frisbuy-stories-widget"/>
+            {/*<div className="frisbuy-stories-widget"/>*/}
 
         </>
     )
