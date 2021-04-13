@@ -69,9 +69,9 @@ const SpecialsSlider = ({ title = "Заголовок", subtitle = "Какой-�
     };
 
   const items = slides.map((item, index) => {
-        const {img, title, subtitle, key, link, cashback = false} = item;
+        const {img, title, subtitle, link, cashback = false} = item;
         return (
-            <div className="SliderElement" key={key}>
+            <div className="SliderElement" key={index}>
                 <SpecialsSliderItem
                     img={img}
                     title={title}

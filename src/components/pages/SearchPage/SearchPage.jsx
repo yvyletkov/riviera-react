@@ -338,7 +338,6 @@ const SearchPage = () => {
         })
     }
 
-
     React.useEffect(() => {
         initForm(window, document, 'yandex_site_callbacks');
         initResults(window, document, 'yandex_site_callbacks')
