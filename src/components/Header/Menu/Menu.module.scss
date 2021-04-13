@@ -59,6 +59,7 @@
         font-size: 22px;
         //margin-top: -12px;
         margin-bottom: 15px;
+
         &:before {
           content: "";
           position: absolute;
@@ -91,6 +92,7 @@
 
       .icons {
         margin-top: 20px;
+
         img {
           height: 23px;
           margin-right: 15px;
@@ -111,6 +113,7 @@
       &.valentine {
         position: relative;
         width: fit-content;
+
         &:before {
           content: '';
           position: absolute;
@@ -127,6 +130,7 @@
       &.defenderDay {
         position: relative;
         width: fit-content;
+
         &:before {
           content: '';
           position: absolute;
@@ -143,6 +147,7 @@
       &.march8 {
         position: relative;
         width: fit-content;
+
         &:before {
           content: '';
           position: absolute;
@@ -212,12 +217,17 @@
           padding: 3px 10px 10px 10px;
           transform: rotate(180deg);
         }
+
         .list {
           margin-bottom: 25px;
           margin-top: 6px;
-          @media (max-width: 768px) {margin-top: -5px;}
+          @media (max-width: 768px) {
+            margin-top: -5px;
+          }
+
           a {
             height: 1.7rem;
+
             .listItem {
               margin-bottom: 10px;
             }
@@ -228,4 +238,4 @@
     }
 
   }
-}
+  }
