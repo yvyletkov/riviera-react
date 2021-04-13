@@ -335,13 +335,8 @@ const Menu = ({menuOpened, toggleMenu}) => {
                                 <a href="https://www.youtube.com/channel/UCi35hEb1HZKVvGbu5bRNXRw" target='_blank'><img src={logoYt} alt="Youtube"/></a>
                                 <a href="https://vk.com/rivierasunrise" target='_blank'><img src={logoVk} alt="VK"/></a>
                             </div>
-
                         </div>
-
-
                     </div>
-
-
                 </div>
 
 };
