@@ -7,7 +7,7 @@ import SimpleReactLightbox from "simple-react-lightbox";
 import * as Sentry from "@sentry/browser";
 
 if (process.env.NODE_ENV === 'production') {
-    Sentry.init({dsn: "https://d3f3fcbeccfd4348b0ccda9be82f78f0@siem.upro.group/1"});
+    Sentry.init({dsn: "https://5f0e5e566d534042b1bb24da7c2c4abf@siem.upro.group/2"});
 }
 
 ReactDOM.render(
