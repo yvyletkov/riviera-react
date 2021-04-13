@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/register": "^7.13.14",
     "@loadable/component": "^5.14.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -24,6 +25,7 @@
     "react-pdf": "^5.2.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
+    "react-router-sitemap": "^1.2.0",
     "react-scripts": "3.4.3",
     "react-scroll": "^1.8.1",
     "react-slick": "^0.27.11",
@@ -42,7 +44,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "scp -rp public_html ck70191@vh172.timeweb.ru:/home/c/ck70191/rivierasunrise"
+    "deploy": "scp -rp public_html ck70191@vh172.timeweb.ru:/home/c/ck70191/rivierasunrise",
+    "sitemap": "node ./src/sitemap-builder.js"
   },
   "eslintConfig": {
     "extends": "react-app"

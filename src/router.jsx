@@ -1,0 +1,74 @@
+import {Route, Switch} from "react-router-dom";
+import React from "react";
+
+export default (
+    <Switch>
+        <Route path='/wedding-day'/>
+        <Route path='/offers/cashback'/>
+        <Route path='/visa-support'/>
+        <Route path='/search'/>
+        <Route path='/excursions'/>
+        <Route path='/offers/language-camp'/>
+        <Route path='/offers/crimea-tour'/>
+        <Route path='/the-grilled'/>
+        <Route path='/8-march' />
+        <Route path='/23-february'/>
+        <Route path='/animation'/>
+        <Route path='/love-day'/>
+        <Route path='/new-year'/>
+        <Route path='/documents'/>
+        <Route path='/afisha'/>
+        <Route path='/pool-schedule'/>
+        <Route path='/news'/>
+        <Route path='/partners'/>
+        <Route path='/reviews'/>
+        <Route path='/transfer'/>
+        <Route path='/booking'/>
+        <Route path='/vacancies'/>
+        <Route path='/infrastructure/spa-services-and-prices'/>
+        <Route path='/medical-spa'/>
+        <Route path='/faq'/>
+        <Route path='/restaurant'/>
+        <Route path='/infrastructure/beach-and-pools'/>
+        <Route path='/infrastructure/aqua-thermal'/>
+        <Route path='/infrastructure/gym'/>
+        <Route path='/spa'/>
+        <Route path='/offers/rannee-bronirovanie'/>
+        <Route path='/offers/otdyh-dlya-krymchan'/>
+        <Route path='/offers/dlitelnoe-prozhivaniye'/>
+        <Route path='/offers/krymskaya-vesna'/>
+        <Route path='/offers/letniy-otdyh'/>
+        <Route path='/offers/online-conferences'/>
+        <Route path='/offers'/>
+        <Route path='/contact'/>
+        <Route path='/exhibition'/>
+        <Route path='/team-building'/>
+        <Route path='/intensive'/>
+        <Route path='/trainings'/>
+        <Route path='/bachelor-party'/>
+        <Route path='/hen-party'/>
+        <Route path='/birthday'/>
+        <Route path='/event-tourism'/>
+        <Route path='/forum'/>
+        <Route path='/conference'/>
+        <Route path='/visiting-ceremony'/>
+        <Route path='/wedding'/>
+        <Route path='/family-vacation'/>
+        <Route path='/vacation-for-yourself'/>
+        <Route path='/romantic-vacation'/>
+        <Route path='/vacation-with-friends'/>
+        <Route path='/nomera-i-tseny/standart-modern'/>
+        <Route path='/nomera-i-tseny/improved-modern/'/>
+        <Route path='/nomera-i-tseny/semilux-modern'/>
+        <Route path='/nomera-i-tseny/lux-modern'/>
+        <Route path='/nomera-i-tseny/vip-suite'/>
+        <Route path='/nomera-i-tseny/disabled-modern'/>
+        <Route path='/nomera-i-tseny/president-lux-modern'/>
+        <Route path='/nomera-i-tseny/standart-classic'/>
+        <Route path='/nomera-i-tseny/improved-classic'/>
+        <Route path='/nomera-i-tseny/semilux-classic'/>
+        <Route path='/nomera-i-tseny/lux-classic'/>
+        <Route path='/nomera-i-tseny/president-lux-classic' />
+        <Route path='/nomera-i-tseny'/>
+        <Route path='/'/>
+    </Switch>)
