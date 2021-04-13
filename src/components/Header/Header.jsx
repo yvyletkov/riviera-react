@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import s from "./Header.module.scss";
 import logo from "../../img/logo.svg"
 import star from "../../img/header/star.svg"
@@ -27,8 +27,8 @@ const Link = ({title, style, icon, link = '#', extraClass = null, onClickHandler
 
 const Header = () => {
 
-    let [scrolledFromTop, setScrolledFromTop] = React.useState(0);
-    let [menuOpened, setMenuOpened] = React.useState(false);
+    let [scrolledFromTop, setScrolledFromTop] = useState(0);
+    let [menuOpened, setMenuOpened] = useState(false);
 
     const listenToScroll = () => {
         const scroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -42,6 +42,8 @@ const Header = () => {
 
     const toggleMenu = () => {
         setMenuOpened(!menuOpened)
+        document.querySelector('.frisbuy-sr-widget.frisbuy-sr-mobile-fixed.frisbuy-sr-right')
+            .style.zIndex = (menuOpened ? '1100' : '999')
     };
 
     const handleLinkClick = (e) => {
@@ -52,7 +54,8 @@ const Header = () => {
 
             <div className={s.wrapper}>
 
-                <Menu toggleMenu={toggleMenu} menuOpened={menuOpened}/>
+                <Menu toggleMenu={toggleMenu}
+                      menuOpened={menuOpened}/>
 
                 <div className={s.container}>
 
@@ -102,8 +105,7 @@ const Header = () => {
                 {/*    </div>*/}
                 {/*</div>*/}
             </div>
-            <div className="frisbuy-stories-widget"/>
-
+            <div className='frisbuy-stories-widget' style={menuOpened ? {zIndex: '999'} : {zIndex: '1000'}}/>
         </>
     )
 };
