@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rivierasunrise.ru/sitemap.xml
