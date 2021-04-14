@@ -23,7 +23,6 @@ const NewsPage = () => {
         request(null, "GET", `${strapiUrl}/news-items/`).then(async res => {
             if (res.status === 200) {
                 const data = await res.json()
-                console.log('data', data)
                 setNewsData(data.sort((a, b) => a.pos - b.pos))
             }
         })

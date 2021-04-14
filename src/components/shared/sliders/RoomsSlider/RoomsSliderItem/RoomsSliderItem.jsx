@@ -22,7 +22,6 @@ const RoomsSliderItem = (props) => {
     }
 
     return (
-       <NavLink onClick={handleLinkClick} to={link ? link : '#'}>
             <div className={isFirst ? s.card + ' ' + s.defaultCursor : s.card}>
                 <img className={s.img} src={img} alt={title}/>
                 <div className={s.content}>{title}</div>
@@ -32,7 +31,6 @@ const RoomsSliderItem = (props) => {
                     <Styled><Button style={style1} link={link}
                             text={'Подробнее'}/></Styled></> }
             </div>
-        </NavLink>
     )
 };
 

@@ -15,6 +15,16 @@ import s from "./BookingBlock.module.scss";
 // }
 // `
 
+function NoIndex(props) {
+    return (
+        <span>
+          <span dangerouslySetInnerHTML={{__html: '<!--noindex-->'}}/>
+            {props.children}
+            <span dangerouslySetInnerHTML={{__html: '<!--/noindex-->'}}/>
+        </span>
+    );
+}
+
 function BookingBlock() {
 
     useEffect(() => {
@@ -23,8 +33,11 @@ function BookingBlock() {
 
     return <div className={s.bookingBlock}>
         <div style={{zIndex: '1000'}} id='tl-search-form' className='tl-container'>
-            <noindex><a href='http://www.travelline.ru/products/tl-hotel' rel='nofollow'>система
-                онлайн-бронирования</a></noindex>
+            <NoIndex>
+                <a href='http://www.travelline.ru/products/tl-hotel' rel='nofollow'>система
+                    онлайн-бронирования
+                </a>
+            </NoIndex>
         </div>
     </div>
 }

@@ -69,9 +69,9 @@ const PromotionsPage = () => {
     };
 
     const items = promotionsPageData.slides.map((item, index) => {
-        const {img, title, subtitle, key, link, cashback} = item;
+        const {img, title, subtitle, link, cashback} = item;
         return (
-            <div className="SliderElement" key={key}>
+            <div className="SliderElement" key={index}>
                 <SpecialsSliderItem
                     img={img}
                     title={title}

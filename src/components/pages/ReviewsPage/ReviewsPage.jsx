@@ -23,9 +23,11 @@ const ReviewsPage = () => {
                         </div>
                     </div>
                 </div>
-                <iframe
-                    src="https://api.trustyou.com/hotels/43ac3043-f10e-4b25-adb5-c3a0bf7ec355/tops_flops.html?key=e7767059-c290-4f84-9a2e-244f83a9d8ae&iframe_resizer=true"
-                    allowTransparency="true" frameBorder="0" width="100%" height="1200px"/>
+                <iframe title={'trustYou'}
+                        src="https://api.trustyou.com/hotels/43ac3043-f10e-4b25-adb5-c3a0bf7ec355/tops_flops.html?key=e7767059-c290-4f84-9a2e-244f83a9d8ae&iframe_resizer=true"
+                        frameBorder="0"
+                        width="100%"
+                        height="1200px"/>
             </section>
 
             <section className='section last'>

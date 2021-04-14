@@ -9,6 +9,16 @@ import logoPin from "../../img/footer/pin.png";
 import logoPhone from "../../img/footer/phone.png";
 import {NavLink} from "react-router-dom";
 
+function NoIndex(props) {
+    return (
+        <span>
+          <span dangerouslySetInnerHTML={{__html: '<!--noindex-->'}}/>
+                {props.children}
+          <span dangerouslySetInnerHTML={{__html: '<!--/noindex-->'}}/>
+        </span>
+    );
+}
+
 const Footer = () => {
     return (<>
             <div className={s.wrapper}>
@@ -70,9 +80,10 @@ const Footer = () => {
                                 {/*<p>Программа лояльности UPRO CLUB</p>*/}
                             </div>
                             <div id="tl-visa-support-block" style={{marginTop: '15px'}}>
-                                <noindex>
-                                    <a href="https://rivierasunrise.ru/visa-support" rel="nofollow">Получить визовое приглашение</a>
-                                </noindex>
+                                <NoIndex>
+                                    <a href="https://rivierasunrise.ru/visa-support" rel="nofollow">Получить визовое
+                                        приглашение</a>
+                                </NoIndex>
                             </div>
                         </div>
                     </div>

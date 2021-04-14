@@ -17,7 +17,7 @@ const CenteredSliderItem = (props) => {
             return (
                 <div className={active ? s.card + ' ' + s.active : s.card}>
                     <NavLink onClick={handleLinkClick} to={link ? link : '#'}>
-                        {link && <NavLink className={s.link} to={link}>Подробнее →</NavLink>}
+                        {link && <p className={s.link}>Подробнее →</p>}
                         <img className={s.img} style={desaturated ? {filter: 'saturate(0)'} : {}} src={img} alt={title}/>
                         <div className={s.content}>
                             <p className={s.title}>{title}</p>

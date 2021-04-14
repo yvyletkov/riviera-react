@@ -138,8 +138,6 @@ const PartnersForm = (props) => {
 
         resetForm({})
 
-        console.log('values', data);
-
     };
 
 

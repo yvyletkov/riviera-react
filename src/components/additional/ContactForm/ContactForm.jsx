@@ -56,8 +56,12 @@ const Select = ({
                 }) => {
     const classNames = cx('input', {'success': touched[field.name] && !errors[field.name]}, {'error': touched[field.name] && errors[field.name]})
     return <div style={{position: 'relative'}}>
-        <select type={type} style={{color: '#bababa'}} className={classNames} {...field} {...props} >
-            <option value="default" hidden selected>Выберите дату</option>
+        <select type={type}
+                style={{color: '#bababa'}}
+                className={classNames} {...field}
+                value={"default"}
+                {...props} >
+            <option value="default" hidden>Выберите дату</option>
             <option value="Дата 20.03-27.03">с 20 по 27 марта</option>
             <option value="Дата 3.04-10.04">с 3 по 10 апреля</option>
         </select>

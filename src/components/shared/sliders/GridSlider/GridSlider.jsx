@@ -142,7 +142,6 @@ const GridSlider = ({slides, initialSlideIndex = 0}) => {
 
 
     const onSwipeUp = () => {
-        console.log('up')
         if (currentSlideIndex === slides.length - 1)
             return;
         else sliderRef.current.slickNext();

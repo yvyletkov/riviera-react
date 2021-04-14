@@ -103,11 +103,11 @@ const Styles = styled.div`
     }
   `
 
-const NewsItemPreviewCard = ({previewImg, title, key, content, id}) => {
+const NewsItemPreviewCard = ({previewImg, title, content, id}) => {
 
 
     return (
-        <Styles key={key}>
+        <Styles>
             {/*<div className={s.note}>{item.note}</div>*/}
             <img src={strapiUrl + previewImg} alt={title}/>
             <h3>{title}</h3>
