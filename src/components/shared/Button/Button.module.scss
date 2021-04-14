@@ -55,12 +55,12 @@ $orange: #ff6c39;
 
 
 .button:hover {
-  background-color: $orange * 0.9;
+  background-color: #e66133;
   text-decoration: none;
 }
 
 .buttonNotActive:hover {
-  background-color: $orange * 0.9;
+  background-color: #e66133;
   text-decoration: none;
   color:#fff;
 }
@@ -76,7 +76,7 @@ $orange: #ff6c39;
   text-align: center;
   transition: all 200ms;
   background-color: #fff;
-  border:1px $orange * 0.9 solid;
+  border:1px #e66133;
 }
 
 a.button {
