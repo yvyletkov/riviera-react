@@ -2438,28 +2438,13 @@ export const LanguageCampData = {
             imgHeight: 'unset'
         },
         {
-            img: languageCampSlider4,
-            title: "Amy Fletcher",
-            imgHeight: 'unset'
-        },
-        {
             img: languageCampSlider5,
             title: "Alex",
             imgHeight: 'unset'
         },
         {
-            img: jimmyLanguage,
-            title: "Jimmy",
-            imgHeight: 'unset'
-        },
-        {
             img: rudyLanguage,
             title: "Rudy",
-            imgHeight: 'unset'
-        },
-        {
-            img: anastasiaLanguage,
-            title: "Anastasia",
             imgHeight: 'unset'
         },
     ],

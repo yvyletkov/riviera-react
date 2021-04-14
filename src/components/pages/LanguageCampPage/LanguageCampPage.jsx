@@ -10,11 +10,11 @@ import EventMainSlider from "../../shared/sliders/EventMainSlider/EventMainSlide
 import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
 import InfoSlider from "../../shared/sliders/InfoSlider/InfoSlider";
 import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
-import ContactForm from "../../additional/ContactForm/ContactForm";
 import img from "../../../img/loveDay/4.jpg";
 import formBluredImg from "../../../img/language-camp/Group-1.png";
 import Button from "../../shared/Button/Button";
 import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
+import LanguageCampForm from "../../additional/LanguageCampForm/LanguageCampForm";
 
 
 const LanguageCampPage = () => {
@@ -31,7 +31,7 @@ const LanguageCampPage = () => {
                              bottomLine={"КАНИКУЛЫ"}
                              bannerImg={bannerImg}
                              bannerMobileImg={bannerImg}
-                             descr={'с 3 по 10 апреля<br/>Уроки с носителями языка и экспертами ЕГЭ'}
+                             descr={'с 29 мая по 12 июня 2021 года'}
                              positionBackground={'0 110px'}/>
 
         <section className='section first'>
@@ -42,15 +42,13 @@ const LanguageCampPage = () => {
                         <Headline subtitle={'КАНИКУЛЫ С ПОЛЬЗОЙ'} title={'ДЛЯ ВСЕЙ СЕМЬИ'}/>
 
                         <p>
-                            Приглашаем вас провести весенние каникулы с пользой и удовольствием!
-                            Совместно с агентством по образованию за рубежом компанией "Хартфорд Партнерс" и английской
-                            языковой школой "UK Language Courses" мы организуем языковой лагерь на базе нашей гостиницы
-                            для детей от 7 лет и родителей/ сопровождающих взрослых.
-
+                            Приглашаем вас провести летние каникулы с пользой и удовольствием! Совместно с агентством по
+                            образованию за рубежом компанией "Хартфорд Партнерс" мы организуем языковой лагерь на базе
+                            нашей гостиницы для детей от 7 лет и родителей/ сопровождающих взрослых.
                         </p>
 
                         <p>
-                            Даты работы языкового лагеря - <b>с 3 по 10 апреля</b> 2021 года
+                            Даты работы языкового лагеря - <b>с 29 мая по 12 июня</b> 2021 года
                         </p>
 
                         <p>
@@ -90,13 +88,9 @@ const LanguageCampPage = () => {
                         </h4>
                         <p>Оставьте свои контакты и мы рассчитаем стоимость отдыха с обучением</p>
 
-                        <ContactForm submitBtnText={'Рассчитать стоимость'}
-                                     formName={`Форма заявки со страницы Английские каникулы`}
-                                     withPhone
-                                     withAge
-                                     withDate
-                                     requestUrl={'https://language-camp.rivierasunrise.ru/language-camp'}
-                                     swalText={'очень скоро мы свяжемся с Вами и сообщим все подробности'}/>
+                        <LanguageCampForm submitBtnText={'Рассчитать стоимость'}
+                                          requestUrl={'https://language-camp.rivierasunrise.ru/language-camp'}
+                                          swalText={'очень скоро мы свяжемся с Вами и сообщим все подробности'}/>
 
                     </div>
                 </div>
@@ -111,43 +105,24 @@ const LanguageCampPage = () => {
                         <div className={s.card}>
                             <h5>Для учеников младших классов</h5>
                             <ul>
-                                <li>4 занятия английским языком в день с носителями языка</li>
-                                <li>Занятия в первой половине дня, с 9.00 до 12.30 с небольшим перерывом</li>
+                                <li>4 урока в день /20 уроков в неделю с носителями языка</li>
+                                <li>Занятия в первой половине дня, с 9.00 до 12.45 (по 45 минут с 15 минутными перерывами)</li>
                             </ul>
                             <p>20 уроков английского языка в неделю</p>
                             <div className={s.priceBlock}>
                                 <p>Стоимость:</p>
-                                <p className={s.price}>15 000 &#8381;/смена</p>
+                                <p className={s.price}>30 000 &#8381; за 2 недели</p>
                             </div>
                             <Button text="Оставить заявку"
                                     onClick={() => setPopupOpen(!popupOpen)}
                                     style={{maxWidth: "270px", margin: "0 auto", width:"100%"}} />
                         </div>
 
-                        <div className={s.card}>
-                            <h5>Для учащихся старших классов</h5>
-                            <ul>
-                                <li>2 урока английского языка в день с носителями языка</li>
-                                <li>2 урока подготовки к международным экзаменам </li>
-                            </ul>
-                            <div>
-                                <p>Максимальное количество человек в группе - 15</p>
-                                <p>20 уроков английского языка в неделю</p>
-                            </div>
-                            <div className={s.priceBlock}>
-                                <p>Стоимость:</p>
-                                <p className={s.price}>15 000 &#8381;/смена</p>
-                            </div>
-                            <Button text="Оставить заявку"
-                                    onClick={() => setPopupOpen(!popupOpen)}
-                                    style={{maxWidth: "270px", margin:"0 auto", width:"100%"}}/>
-                        </div>
                         <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
                                           popupTitleText={'Чтобы оставить заявку, пожалуйста, оставьте свои контактные данные️'}
                                           submitBtnText='Оставить заявку'
                                           formName={`Форма обратной связи с Языкового лагеря`}
                                           swalText={'в ближайшее время с Вами свяжется координатор проекта!'}
-                                          withAge
                                           withPhone
                                           requestUrl={'https://language-camp.rivierasunrise.ru/language-camp'}/>
                     </div>
@@ -157,11 +132,11 @@ const LanguageCampPage = () => {
 
         <section>
             <InfoSlider subtitle={'Экскурсионная'}
-                            title={'программа'}
-                            slides={LanguageCampData.excursions}
-                            text={"Экскурсионная программа предполагает посещение замка Ласточкино Гнездо, Красных пещер, Ялты и зоопарка, Севастополя, Никитского Ботанического сада, канатной дороги на Ай-Петри <br/><br/>" +
-                            "В стоимость включено транспортное обслуживание, услуги профессионального гида, все входные билеты и обед на одном из маршрутов (экскурсия на весь день с посещением Ливадийского дворца и подъем на гору Ай Петри).<br/><br/>" +
-                            "Стоимость экскурсионной программы: 7 500 руб за 1 человека"}/>
+                        title={'программа'}
+                        slides={LanguageCampData.excursions}
+                        text={"Экскурсионная программа предполагает посещение замка Ласточкино Гнездо, Красных пещер, Ялты и зоопарка, Севастополя, Никитского Ботанического сада, канатной дороги на Ай-Петри <br/><br/>" +
+                        "В стоимость включено транспортное обслуживание, услуги профессионального гида, все входные билеты и обед на одном из маршрутов (экскурсия на весь день с посещением Ливадийского дворца и подъем на гору Ай Петри).<br/><br/>" +
+                        "7 экскурсий за 15 000 руб. за 1 человека"}/>
         </section>
 
         <section>
