@@ -29,8 +29,6 @@ const SinglePromotionPage = ({
                                  agreementTextColor
                              }) => {
 
-    console.log(title)
-
     React.useEffect(() => document.title = `${title[0]} ${title[1]} – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
     const [showDescr, setShowDescr] = React.useState(false);

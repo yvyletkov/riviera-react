@@ -7,10 +7,10 @@ import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
 import cx from 'classnames';
 
 
-const Question = ({title, answer = 'Ответ на этот вопрос появится на сайте чуть позже. Спасибо!', key}) => {
+const Question = ({title, answer = 'Ответ на этот вопрос появится на сайте чуть позже. Спасибо!', index}) => {
     const [opened, setOpened] = React.useState(false);
 
-    return <div key={key} className={opened ? s.question + ' ' + s.opened : s.question}>
+    return <div key={index} className={opened ? s.question + ' ' + s.opened : s.question}>
         <div className={s.title} onClick={() => setOpened(!opened)}>
             <div>{title}</div>
             <img src={arrow} className={s.arrow} alt=""/>

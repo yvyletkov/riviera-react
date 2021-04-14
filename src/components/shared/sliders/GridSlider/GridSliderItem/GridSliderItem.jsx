@@ -56,7 +56,11 @@ const GridSliderItem = ({firstRow, secondRow}) => {
         const handleLinkClick = (e) => {
             if (!item.href) e.preventDefault()
         }
-        return <NavLink onClick={handleLinkClick} to={item.href ? item.href : '#'} className={s.block} href={item.href}>
+        return <NavLink onClick={handleLinkClick}
+                        to={item.href ? item.href : '#'}
+                        className={s.block}
+                        href={item.href}
+                        key={item.title + index}>
             <LazyImage className={s.img} src={item.img} alt={item.title} style={{borderRadius: "5px"}}/>
             <div className={s.content}><p>{item.title}</p></div>
 

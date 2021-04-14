@@ -153,8 +153,6 @@ const WorkshopForm = ({type}) => {
     const data = {};
 
     const onBrideFormSubmit = (values, {resetForm}) => {
-
-        console.log('submitValues', values)
         data.form = {
             "url": `https://workshop.rivierasunrise.ru/`
         };
@@ -214,13 +212,9 @@ const WorkshopForm = ({type}) => {
 
         resetForm({})
 
-        console.log('formdata', data);
-
     };
 
     const onOrganizatorFormSubmit = (values, {resetForm}) => {
-
-        console.log('submitValues', values)
         data.form = {
             "url": `https://workshop.rivierasunrise.ru/`
         };
@@ -287,9 +281,6 @@ const WorkshopForm = ({type}) => {
             });
 
         resetForm({})
-
-        console.log('formdata', data);
-
     };
 
 

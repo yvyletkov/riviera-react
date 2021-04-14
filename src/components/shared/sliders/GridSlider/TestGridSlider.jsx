@@ -83,7 +83,6 @@ const Slider = ({ slidesMatrix }) => {
             `translateY(${y + offsetY}px) translateX(${x + offsetX}px)`
         );
         return true;
-        console.log("Slider onSwipeMove", { x, y });
     };
 
     const onSwipeRight = () => {

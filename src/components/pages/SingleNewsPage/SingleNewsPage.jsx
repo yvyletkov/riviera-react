@@ -85,9 +85,6 @@ const SingleNewsPage = ({match}) => {
         trimmedNewsList(allNewsData.filter(item => item.id != newsId), 2)
         :
         trimmedNewsList(allNewsData.filter(item => item.id != newsId), 3);
-
-    console.log(selectSlide(newsData.grid_slider_initial_slider))
-
     // здесб запрос к страпи
 
     return (

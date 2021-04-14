@@ -14,7 +14,6 @@ const MapSection = () => {
     const onClick = () => setEnableScroll(true)
 
     const onMouseMove = (event) => {
-        console.log(event)
         mapTitleRef.current.style.display = 'block';
         // if(event.offsetY > 10) mapTitleRef.current.style.top = event.offsetY + 20 + 'px';
         // if(event.offsetX > 10) mapTitleRef.current.style.left = event.offsetX + 20 + 'px';

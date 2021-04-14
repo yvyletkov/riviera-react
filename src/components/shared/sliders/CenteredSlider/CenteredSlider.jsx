@@ -45,9 +45,6 @@ const CenteredSlider = ({title = "Какой-то заголовок", slides, t
 
     let [currentSlideIndex, setCurrentSlideIndex] = React.useState(initialCurrentSlideIndex);
 
-    console.log(initialCurrentSlideIndex)
-
-
     const items = slides.map((item, index) => {
         const {img, link, title, subtitle, time, date, campus, campusName, subsubtitle='', fontsizeSubsubtitle='', capacity, area} = item;
         return (

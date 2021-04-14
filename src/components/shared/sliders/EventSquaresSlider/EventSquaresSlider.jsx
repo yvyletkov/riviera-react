@@ -59,7 +59,7 @@ const EventSquaresSlider = () => {
             <div className={s.sliderWrapper}>
                 <Slider {...settings} slidesToShow={4}>
                     {eventPagesData.weddingPages.weddingPlacesSlides.map((item, index) => {
-                        return <div>
+                        return <div key={index}>
                             <div className={s.sliderItemWrapper}>
                                 <div>{index + 1}</div>
                                 <img src={item.img} alt={item.text}/>
