@@ -3,6 +3,7 @@ import s from "./CenteredSliderItem.module.scss";
 import capacityImg from "./../../../../../img/room-page/capacity-white.png";
 import areaImg from "./../../../../../img/room-page/ploshchad-white.png";
 import {NavLink} from "react-router-dom";
+import LazyLoadImgComponent from "../../../../additional/LazyLoadImgComponent/LazyLoadImgComponent";
 
 
 const CenteredSliderItem = (props) => {
@@ -18,7 +19,7 @@ const CenteredSliderItem = (props) => {
                 <div className={active ? s.card + ' ' + s.active : s.card}>
                     <NavLink onClick={handleLinkClick} to={link ? link : '#'}>
                         {link && <p className={s.link}>Подробнее →</p>}
-                        <img className={s.img} style={desaturated ? {filter: 'saturate(0)'} : {}} src={img} alt={title}/>
+                        <LazyLoadImgComponent className={s.img} style={desaturated ? {filter: 'saturate(0)'} : {}} src={img} alt={title}/>
                         <div className={s.content}>
                             <p className={s.title}>{title}</p>
                             <p dangerouslySetInnerHTML={{__html: subtitle}} className={s.subtitle} style={!time ? {marginBottom: '20px'} : {}}/>

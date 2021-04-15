@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import React from "react";
 import arrowImg from "../../../../img/sliderArrows/arrowThin.png";
 import Button from "../../Button/Button";
+import LazyLoadImgComponent from "../../../additional/LazyLoadImgComponent/LazyLoadImgComponent";
 
 function NextArrow({style, onClick}) {
     return <div className={s.nextArrow}
@@ -81,7 +82,7 @@ const VacanciesSlider = ({sliders, popupOpen, setPopupOpen}) => {
                                                     onClick={ () => setPopupOpen(true) } /> }
                                     </div>
                                     <div className={s.imgBlock}>
-                                        <img className={s.image} src={item.img} alt="Вакансия" />
+                                        <LazyLoadImgComponent className={s.image} src={item.img} alt="Вакансия" />
                                     </div>
                                     {window.matchMedia('(min-width:992px)').matches ? null :
                                         <Button text="Оставить резюме"

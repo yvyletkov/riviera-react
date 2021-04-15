@@ -5,6 +5,7 @@ import imgAbout2 from "../../../img/mice/conference/12.jpg";
 import imgAbout1 from "../../../img/mice/conference/11.jpg";
 import Button from "../Button/Button";
 import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
+import LazyLoadImgComponent from "../../additional/LazyLoadImgComponent/LazyLoadImgComponent";
 
 const SpecialTask = () => {
 
@@ -13,7 +14,7 @@ const SpecialTask = () => {
     return (
         <div className={s.wrapper}>
             <div className={s.container}>
-                <img className={s.rightImg} src={window.matchMedia("(max-width: 768px").matches ? imgAbout1 : imgAbout2}
+                <LazyLoadImgComponent className={s.rightImg} src={window.matchMedia("(max-width: 768px").matches ? imgAbout1 : imgAbout2}
                      alt=""/>
 
                 <div className={s.textContent}>
@@ -28,7 +29,7 @@ const SpecialTask = () => {
                     <p className={s.boldSubtitle}>Поддержим все ваши идеи и расскажем, как их реализовать несколькими
                         способами, учитывая ваш бюджет!</p>
 
-                    <img className={s.leftImg}
+                    <LazyLoadImgComponent className={s.leftImg}
                          src={window.matchMedia("(max-width: 768px").matches ? imgAbout2 : imgAbout1} alt=""/>
 
                     <Button text={"Оставить заявку на консультацию"} onClick={() => setPopupOpen(true)}

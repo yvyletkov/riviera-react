@@ -6,6 +6,7 @@ import Headline from "../Headline/Headline";
 import Button from "../Button/Button";
 import 'rodal/lib/rodal.css';
 import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
+import LazyLoadImgComponent from "../../additional/LazyLoadImgComponent/LazyLoadImgComponent";
 
 const TextPlusImageBlock = ({
                                 subtitle,
@@ -27,12 +28,12 @@ const TextPlusImageBlock = ({
 
     return <div className={s.wrapper}>
         <div className={s.container}>
-            <img className={s.rightImg} src={image2} alt=""/>
+            <LazyLoadImgComponent className={s.rightImg} src={image2} alt=""/>
 
             <div className={s.textContent}>
                 {title && <Headline subtitle={subtitle} title={title}/>}
                 <p dangerouslySetInnerHTML={{__html: content}}/>
-                <img className={s.leftImg} src={image1} alt=""/>
+                <LazyLoadImgComponent className={s.leftImg} src={image1} alt=""/>
 
                 <Button text={'Заказать звонок'}
                         onClick={ () => setPopupOpen(true)}

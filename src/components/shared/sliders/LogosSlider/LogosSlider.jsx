@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import React from "react";
 import styled from "styled-components";
 import arrowImg from "../../../../img/sliderArrows/arrowThin.png";
+import LazyLoadImgComponent from "../../../additional/LazyLoadImgComponent/LazyLoadImgComponent";
 
 function NextArrow({style, onClick}) {
     return <div
@@ -63,7 +64,7 @@ const LogosSlider = ({title, icons, slidesToShow, colored}) => {
                         {icons.map((item, index) => {
                             return <div key={index}>
                                 <div className={s.iconWrapper + (colored ? (' ' + s.colored) : '')}>
-                                    <img src={item.img} alt=""/>
+                                    <LazyLoadImgComponent src={item.img} alt=""/>
                                 </div>
                             </div>
                         })}

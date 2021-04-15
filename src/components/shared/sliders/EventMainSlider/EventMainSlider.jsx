@@ -7,6 +7,7 @@ import {NextArrow, PrevArrow} from "../SliderArrows/sliderArrowButtons";
 import Button from "../../Button/Button";
 import CirqleTip from "../../CirqleTip/CirqleTip";
 import cx from "classnames"
+import LazyLoadImgComponent from "../../../additional/LazyLoadImgComponent/LazyLoadImgComponent";
 
 const SliderStyles = styled(Slider)`
   .slick-next:before,
@@ -208,7 +209,7 @@ const EventMainSliderItem = (props) => {
             {/*    </p>*/}
             {/*</div>*/}
 
-            <img className={s.img} style={{height: imgHeight}} src={img} alt=""/>
+            <LazyLoadImgComponent className={s.img} style={{height: imgHeight}} src={img} alt=""/>
 
             <div className={s.content}>
                 <h6 className={onlyTitle ? s.titleSmall : s.title} dangerouslySetInnerHTML={{__html: title}}/>

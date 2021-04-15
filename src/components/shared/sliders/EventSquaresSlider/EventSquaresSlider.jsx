@@ -4,6 +4,7 @@ import Accordeon from "../../Accordeon/Accordeon";
 import Slider from "react-slick";
 import {eventPagesData} from "../../../../data";
 import React from "react";
+import LazyLoadImgComponent from "../../../additional/LazyLoadImgComponent/LazyLoadImgComponent";
 
 const EventSquaresSlider = () => {
 
@@ -62,7 +63,7 @@ const EventSquaresSlider = () => {
                         return <div key={index}>
                             <div className={s.sliderItemWrapper}>
                                 <div>{index + 1}</div>
-                                <img src={item.img} alt={item.text}/>
+                                <LazyLoadImgComponent src={item.img} alt={item.text}/>
                                 <p dangerouslySetInnerHTML={{__html: item.text}}/>
                             </div>
                         </div>

@@ -3,6 +3,7 @@ import s from "./RoomsSliderItem.module.scss";
 import Button from "../../../Button/Button";
 import {NavLink} from "react-router-dom";
 import styled from 'styled-components'
+import LazyLoadImgComponent from "../../../../additional/LazyLoadImgComponent/LazyLoadImgComponent";
 
 const Styled = styled.div`
   &:hover *:not(span) {
@@ -23,7 +24,7 @@ const RoomsSliderItem = (props) => {
 
     return (
             <div className={isFirst ? s.card + ' ' + s.defaultCursor : s.card}>
-                <img className={s.img} src={img} alt={title}/>
+                <LazyLoadImgComponent className={s.img} src={img} alt={title}/>
                 <div className={s.content}>{title}</div>
                 {!isFirst && <>
                     <Button style={style} link={bookingLink}
