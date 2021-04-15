@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./InfoSliderItem.module.scss";
 import cx from "classnames";
+import LazyLoadImgComponent from "../../../../additional/LazyLoadImgComponent/LazyLoadImgComponent";
 
 const InfoSliderItem = (props) => {
     const {img, active, title, subtitle, decolorized, oneLine, smallText} = props;
@@ -18,7 +19,7 @@ const InfoSliderItem = (props) => {
             <div className={cardClassNames}
                  onMouseEnter = {() => !window.matchMedia("screen and (max-width: 1200px)").matches ? setLifted((subtitle || title) && true) : null}
                  onMouseLeave={() => !window.matchMedia("screen and (max-width: 1200px)").matches ? setLifted((subtitle || title) && false) : null}>
-                <img className={decolorized ? s.img + ' ' + s.decolorized : s.img} src={img} alt="Афиша"/>
+                <LazyLoadImgComponent className={decolorized ? s.img + ' ' + s.decolorized : s.img} src={img} alt="Афиша"/>
                 {(subtitle || title) &&
                 <div className={s.content}>
                     <p dangerouslySetInnerHTML={{__html: subtitle}} className={s.subtitle}/>

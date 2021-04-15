@@ -10,6 +10,7 @@ import EventMainSlider from "../../../../shared/sliders/EventMainSlider/EventMai
 import decisionBlockImg from "../../../../../img/the-grilled/reception.jpg";
 import PDFviewer from "../../../../additional/PDFviewer/PDFviewer";
 import HeadlineCenter from "../../../../shared/HeadlineCenter/HeadlineCenter";
+import LazyLoadImgComponent from "../../../../additional/LazyLoadImgComponent/LazyLoadImgComponent";
 
 
 const TheGrilledPage = () => {
@@ -54,7 +55,7 @@ const TheGrilledPage = () => {
                         </p>
 
                     </div>
-                    <img className={s.wide} src={img1} alt={"Лучший праздник"}/>
+                    <LazyLoadImgComponent className={s.wide} src={img1} alt={"Лучший праздник"}/>
 
                 </div>
             </div>

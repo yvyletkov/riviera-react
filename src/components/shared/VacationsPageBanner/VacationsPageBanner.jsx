@@ -2,6 +2,7 @@ import React from "react";
 import s from "./VacationsPageBanner.module.scss";
 // import cirqlesImg from "../../../img/home-page/cirqles.png"
 import BookingBlock from "../../additional/BookingBlock/BookingBlock";
+import LazyLoadImgComponent from "../../additional/LazyLoadImgComponent/LazyLoadImgComponent";
 
 const VacationsPageBanner = ({
                                  fontSize,
@@ -60,7 +61,7 @@ const VacationsPageBanner = ({
                         </div>}
                     </div>
                     <div className={s.rightSide}>
-                        <img src={bannerImg} alt="Riviera Sunrise" style={{objectPosition: `${positionBackground}`}}/>
+                        <LazyLoadImgComponent src={bannerImg} alt="Riviera Sunrise" style={{objectPosition: `${positionBackground}`}}/>
                     </div>
                 </div>
             </div>

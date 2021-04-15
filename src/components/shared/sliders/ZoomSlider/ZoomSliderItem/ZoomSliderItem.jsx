@@ -1,5 +1,6 @@
 import React from "react";
 import s from "./ZoomSliderItem.module.scss";
+import LazyLoadImgComponent from "../../../../additional/LazyLoadImgComponent/LazyLoadImgComponent";
 
 const ZoomSliderItem = (props) => {
     const {img} = props;
@@ -7,7 +8,7 @@ const ZoomSliderItem = (props) => {
 
     return (
         <div className={s.cardWrapper}>
-            <img className={s.img} src={img} alt="Афиша"/>
+            <LazyLoadImgComponent className={s.img} src={img} alt="Афиша"/>
         </div>);
 };
 

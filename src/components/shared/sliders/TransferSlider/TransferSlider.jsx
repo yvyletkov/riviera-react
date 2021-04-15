@@ -5,6 +5,7 @@ import React from "react";
 import arrowImg from "../../../../img/sliderArrows/arrowThin.png";
 import Button from "../../Button/Button"
 import styled from "styled-components";
+import LazyLoadImgComponent from "../../../additional/LazyLoadImgComponent/LazyLoadImgComponent";
 
 function NextArrow({style, onClick}) {
     return <div className={s.nextArrow}
@@ -69,7 +70,7 @@ const TransferSlider = ({sliders}) => {
                                                 }}/>
                                 <div className={s.itemWrapper}>
                                     <div className={s.grayBackground} />
-                                    <img src={item.img} alt={item.name}/>
+                                    <LazyLoadImgComponent src={item.img} alt={item.name}/>
                                     <div className={s.textBlock}>
                                         <p>Трансфер аэропорт Симферополь - Алушта&nbsp;</p>
                                         <p><b>&mdash;&nbsp;{item.price1}</b></p>

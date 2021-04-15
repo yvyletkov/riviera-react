@@ -375,7 +375,6 @@
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    height: 500px;
 
     img {
       object-fit: cover;
@@ -387,7 +386,8 @@
         width: 660px;
         position: absolute;
         left: -360px;
-        top: 0;
+        top: 50%;
+        transform: translateY(-50%);
       }
 
       &.rightImg {

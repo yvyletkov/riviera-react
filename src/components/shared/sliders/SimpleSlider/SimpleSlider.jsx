@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
 import {NextArrow, PrevArrow} from "../SliderArrows/sliderArrowButtons";
+import LazyLoadImgComponent from "../../../additional/LazyLoadImgComponent/LazyLoadImgComponent";
 
 const SliderStyles = styled.div`
   width: 100%;
@@ -37,7 +38,7 @@ const SimpleSlider = ({slides, setCurrentSlideIndex, styleImg}) => {
     const items = slides.map((item, index) => {
         return (
             <div className="sliderElement" key={index}>
-                <img src={item.img} style={styleImg} alt={item.name}/>
+                <LazyLoadImgComponent src={item.img} style={styleImg} alt={item.name}/>
             </div>
         );
     });

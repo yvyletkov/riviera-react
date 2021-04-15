@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./WidthSpecialsSliderItem.module.scss";
 import {NavLink} from "react-router-dom";
+import LazyLoadImgComponent from "../../../../additional/LazyLoadImgComponent/LazyLoadImgComponent";
 
 
 const WidthSpecialsSliderItem = (props) => {
@@ -15,7 +16,7 @@ const WidthSpecialsSliderItem = (props) => {
             <NavLink onClick={handleLinkClick} to={link ? link : '#'}>
                 <div
                     className={isActive ? `${s.card} ${s.lifted}` : s.card}>
-                    <img className={s.img} src={img} alt="Афиша"/>
+                    <LazyLoadImgComponent className={s.img} src={img} alt="Афиша"/>
                     <div className={s.content}>
                         <p className={s.title}>{title}</p>
                         <p className={s.subtitle}>{subtitle}</p>

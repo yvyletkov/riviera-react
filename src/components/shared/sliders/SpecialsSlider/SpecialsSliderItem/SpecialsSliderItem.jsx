@@ -4,6 +4,7 @@ import {NavLink} from "react-router-dom";
 import cx from "classnames";
 import LazyImage from "../../../../additional/LazyImg";
 import cashbackIcon from "../../../../../img/cashback-icon.png";
+import LazyLoadImgComponent from "../../../../additional/LazyLoadImgComponent/LazyLoadImgComponent";
 
 const SpecialsSliderItem = (props) => {
     const {img, active, title, subtitle, link, decolorized, oneLine, smallText, cashback = false} = props;
@@ -24,7 +25,7 @@ const SpecialsSliderItem = (props) => {
                     onMouseEnter={() => !window.matchMedia("screen and (max-width: 1200px)").matches ? setLifted(true) : null}
                     onMouseLeave={() => !window.matchMedia("screen and (max-width: 1200px)").matches ? setLifted(false) : null}>
                     {cashback ? <img src={cashbackIcon} className={s.cashbackIcon} alt="Кэшбэк"/> : null}
-                    <img className={decolorized ? s.img + ' ' + s.decolorized : s.img} src={img} alt="Афиша"/>
+                    <LazyLoadImgComponent className={decolorized ? s.img + ' ' + s.decolorized : s.img} src={img} alt="Афиша"/>
                     <div className={s.content}>
                         <p dangerouslySetInnerHTML={{__html: subtitle}} className={s.subtitle}/>
                         <p dangerouslySetInnerHTML={{__html: title}} className={s.title}/>

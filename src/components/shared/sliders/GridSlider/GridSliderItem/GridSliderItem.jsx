@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import styled from "styled-components";
 import {NavLink} from "react-router-dom";
 import LazyImage from "../../../../additional/LazyImg";
+import LazyLoadImgComponent from "../../../../additional/LazyLoadImgComponent/LazyLoadImgComponent";
 
 const InnerSliderStyles = styled.div`
   .slick-list { 
@@ -48,7 +49,7 @@ const GridSliderItem = ({firstRow, secondRow}) => {
         }
         return <NavLink onClick={handleLinkClick} to={item.href ? item.href : '#'} key={item.title + index}
                         className={s.block}>
-            <LazyImage className={s.img} src={item.img} alt={item.title} style={{borderRadius: "5px"}}/>
+            <LazyLoadImgComponent className={s.img} src={item.img} alt={item.title} style={{borderRadius: "5px"}}/>
             <div className={s.content}><p>{item.title}</p></div>
         </NavLink>
     });
@@ -61,7 +62,7 @@ const GridSliderItem = ({firstRow, secondRow}) => {
                         className={s.block}
                         href={item.href}
                         key={item.title + index}>
-            <LazyImage className={s.img} src={item.img} alt={item.title} style={{borderRadius: "5px"}}/>
+            <LazyLoadImgComponent className={s.img} src={item.img} alt={item.title} style={{borderRadius: "5px"}}/>
             <div className={s.content}><p>{item.title}</p></div>
 
         </NavLink>
