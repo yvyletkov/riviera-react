@@ -209,7 +209,7 @@ const EventMainSliderItem = (props) => {
             {/*    </p>*/}
             {/*</div>*/}
 
-            <LazyLoadImgComponent className={s.img} style={{height: imgHeight}} src={img} alt=""/>
+            <img className={s.img} style={{height: imgHeight}} src={img} alt=""/>
 
             <div className={s.content}>
                 <h6 className={onlyTitle ? s.titleSmall : s.title} dangerouslySetInnerHTML={{__html: title}}/>
