@@ -382,7 +382,7 @@
       box-shadow: -14.444px 19.167px 27px 0px rgba(23, 23, 23, 0.08);
 
       &.leftImg {
-        height: 500px;
+        height: 620px;
         width: 660px;
         position: absolute;
         left: -360px;
@@ -392,7 +392,7 @@
 
       &.rightImg {
         margin-left: 330px;
-        height: 500px;
+        height: 620px;
         width: 350px;
       }
 
@@ -436,6 +436,8 @@
           position: relative;
           left: unset;
           margin-bottom: 20px;
+          top:0;
+          transform: unset;
         }
 
         &.rightImg {
