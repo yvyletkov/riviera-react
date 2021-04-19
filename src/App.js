@@ -18,6 +18,7 @@ import quizImgLetniyOtdyh from "./img/quiz/quiz-img1.png";
 import quizImgLetniyOtdyhMob from "./img/quiz/mob-quiz1.jpg";
 import Preloader from "./components/shared/Preloader/Preloader";
 import HomePage from "./components/pages/HomePage/HomePage";
+
 const CookiesNotification = lazy(() => import("./components/additional/CookieNotificationWindow/CookiesNotification"));
 const Quiz = lazy(() => import('./components/shared/Quiz/Quiz'));
 const VisaPage = lazy(() => import("./components/pages/VisaPage/VisaPage"));
@@ -88,7 +89,9 @@ function App() {
             <Header/>
             {window.matchMedia('(max-width: 767px)').matches &&
             <div style={{height: '65px'}}/>}
-            <Suspense fallback={<Preloader />}>
+            <Route path='/' exact
+                   render={() => <HomePage/>}/>
+            <Suspense fallback={<Preloader/>}>
 
                 <Switch>
                     <Route path='/news/:newsId' exact
@@ -204,7 +207,7 @@ function App() {
                            component={() =>
                                <SinglePromotionPage {...singlePromotionPages.barhatnyiSezon}
                                                     formBlockBtnText='Отправить'
-                                                    />}/>
+                               />}/>
 
                     <Route path='/offers/letniy-otdyh' exact
                            component={() => <SinglePromotionPage {...singlePromotionPages.letniyOtdyh}
@@ -315,9 +318,6 @@ function App() {
 
                     <Route path='/nomera-i-tseny' exact
                            component={() => <RoomsAndPricesPage/>}/>
-
-                    <Route path='/' exact
-                           render={() => <HomePage/>}/>
 
                     <Route component={NotFoundPage}/>
 

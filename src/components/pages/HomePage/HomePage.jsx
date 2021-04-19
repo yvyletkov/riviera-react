@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import {homePageData} from "../../../data"
 import HomePageBanner from "./HomePageBanner/HomePageBanner";
 import CenteredSlider from "../../shared/sliders/CenteredSlider/CenteredSlider";
@@ -7,19 +7,12 @@ import TextPlusImageBlock from "../../shared/TextPlusImageBlock/TextPlusImageBlo
 import SpecialsSlider from "../../shared/sliders/SpecialsSlider/SpecialsSlider";
 import GallerySlider from "../../shared/sliders/GallerySlider/GallerySlider";
 import MapSection from "../../shared/MapSection/MapSection";
-import Preloader from "../../shared/Preloader/Preloader";
 
 const HomePage = () => {
 
     useEffect(() => document.title = 'Riviera Sunrise Resort & SPA – Алушта, Крым – главная страница', [])
 
-    const [loader, setLoader] = useState(false);
-    useEffect(() => {
-        setLoader(!loader)
-    }, [])
-
     return (
-        loader ?
             <>
                 <HomePageBanner/>
 
@@ -47,9 +40,7 @@ const HomePage = () => {
                 <section className='section last'>
                     <MapSection/>
                 </section>
-            </>
-            :
-            <Preloader/>)
+            </>)
 
 };
 
