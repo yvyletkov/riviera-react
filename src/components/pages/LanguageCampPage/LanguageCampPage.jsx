@@ -10,7 +10,6 @@ import EventMainSlider from "../../shared/sliders/EventMainSlider/EventMainSlide
 import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
 import InfoSlider from "../../shared/sliders/InfoSlider/InfoSlider";
 import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
-import img from "../../../img/loveDay/4.jpg";
 import formBluredImg from "../../../img/language-camp/Group-1.png";
 import Button from "../../shared/Button/Button";
 import PopupContactForm from "../../additional/ContactForm/PopupContactForm";

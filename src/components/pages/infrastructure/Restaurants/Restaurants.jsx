@@ -5,9 +5,6 @@ import MapSection from "../../../shared/MapSection/MapSection";
 import SimpleSlider from "../../../shared/sliders/SimpleSlider/SimpleSlider";
 import styled from "styled-components";
 import Button from "../../../shared/Button/Button";
-import iconBreakfast from "../../../../img/infrastructure/restaurant/icons/breakfast.png";
-import iconDinner from "../../../../img/infrastructure/restaurant/icons/dinner.png";
-import iconSupper from "../../../../img/infrastructure/restaurant/icons/supper.png";
 import iconTime from "../../../../img/infrastructure/restaurant/icons/time.svg";
 import {NavLink} from "react-router-dom";
 
