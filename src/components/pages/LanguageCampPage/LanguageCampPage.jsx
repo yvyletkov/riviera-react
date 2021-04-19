@@ -16,6 +16,7 @@ import Button from "../../shared/Button/Button";
 import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
 import LanguageCampForm from "../../additional/LanguageCampForm/LanguageCampForm";
 import He from "styled-components/dist/styled-components.browser.esm";
+import LazyLoadImgComponent from "../../additional/LazyLoadImgComponent/LazyLoadImgComponent";
 
 
 const LanguageCampPage = () => {
@@ -67,7 +68,7 @@ const LanguageCampPage = () => {
                         </p>
 
                     </div>
-                    <img src={img1} alt={"КАНИКУЛЫ С ПОЛЬЗОЙ"}/>
+                    <LazyLoadImgComponent src={img1} alt={"КАНИКУЛЫ С ПОЛЬЗОЙ"}/>
 
                 </div>
             </div>
@@ -86,7 +87,7 @@ const LanguageCampPage = () => {
         <section className='section'>
             <div className={s.formBlock}>
                 <div className={s.wrapper}>
-                    <img className={s.bluredImg} src={formBluredImg} alt=""/>
+                    <LazyLoadImgComponent className={s.bluredImg} src={formBluredImg} alt=""/>
 
                     <div className={s.container}>
                         <h4 className={s.title}>

@@ -47,7 +47,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "scp -rp public_html ck70191@vh172.timeweb.ru:/home/c/ck70191/rivierasunrise",
-    "sitemap": "node ./src/sitemap-builder.js"
+    "sitemap": "node ./src/sitemap-builder.js",
+    "deploy-test": "scp -rp build dev@188.225.77.63:/home/dev/riviera"
   },
   "eslintConfig": {
     "extends": "react-app"

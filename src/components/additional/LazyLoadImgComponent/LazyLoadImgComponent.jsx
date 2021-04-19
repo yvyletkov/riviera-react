@@ -7,13 +7,14 @@ const LazyLoadImgComponent = ({
                                   alt,
                                   src,
                                   width = null,
-                                  style = null
+                                  style = null,
+                                  height = '100%'
                               }) => {
     return <LazyLoadImage
         className={className}
         alt={alt}
         effect='opacity'
-        height={'100%'}
+        height={height}
         src={src}
         style={style}
         width={width}/>

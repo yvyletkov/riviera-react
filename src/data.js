@@ -543,7 +543,7 @@ import tovma from "./img/workshop/participants/21 ведущая товма.jpg"
 import sychev from "./img/workshop/participants/15 видеограф.jpg";
 
 
-const commonGridSlides = [
+export const commonGridSlides = [
     {
         name: "Курортный отдых",
         firstRow: [
@@ -708,7 +708,7 @@ const commonGridSlides = [
         ],
     },
 ];
-const commonVacationGridSlides = [
+export const commonVacationGridSlides = [
     {
         name: "SPA комплекс",
         firstRow: [{title: "Финская сауна", img: gridSpaImg1}, {
@@ -796,7 +796,7 @@ const commonVacationGridSlides = [
         ],
     },
 ];
-const commonSpecialsSlides = [
+export const commonSpecialsSlides = [
     {
         img: promoImg1,
         subtitle: "Летний отдых",
@@ -859,7 +859,7 @@ const commonSpecialsSlides = [
         link: '/offers/online-conferences',
     },
 ];
-const commonClosePoolsSlides = [
+export const commonClosePoolsSlides = [
     {
         img: closePool1,
         key: 1,
@@ -877,7 +877,7 @@ const commonClosePoolsSlides = [
         key: 4,
     },
 ]; //крытые бассейны
-const commonExtraServicesSlides = [
+export const commonExtraServicesSlides = [
     {
         img: extraService1,
         title: "Medical<br/>SPA",
@@ -927,7 +927,7 @@ const commonExtraServicesSlides = [
         key: 6,
     },
 ]; // доп услуги
-const commonAfishaSlides = [
+export const commonAfishaSlides = [
     {
         img: afishaImg1,
         title: "Тренировки",
@@ -978,7 +978,7 @@ const commonAfishaSlides = [
     },
 
 ];
-const commonClassicCampusSlides = [
+export const commonClassicCampusSlides = [
     {
         img: classic1img,
         title: "Корпус классик",
@@ -1015,7 +1015,7 @@ const commonClassicCampusSlides = [
         bookingLink: "/booking",
     },
 ];
-const commonModernCampusSlides = [
+export const commonModernCampusSlides = [
     {
         img: modern1img,
         title: "Корпус Модерн",
@@ -1058,15 +1058,15 @@ const commonModernCampusSlides = [
         bookingLink: "/booking",
     },
 ];
-const commonClassicDescr = [
+export const commonClassicDescr = [
     '63 номера в классическом стиле',
     'Исторический корпус Классик был полностью реновирован в 2016 году.  Свою историю начал вести в 1913 году и имеет особую атмосферу. Дизайн номеров выполнен в эксклюзивном, классическом стиле.'
 ];
-const commonModernDescr = [
+export const commonModernDescr = [
     '146 номеров в современном дизайне',
     'Дизайн интерьера выдержан в стиле Модерн и выполнен в концепции Natural Cool и Ocean Style. Современная эксклюзивная дизайнерская мебель в натуральных тонах создает лучшие условия для комфорта и уюта.'
 ];
-const commonGallerySlides = [
+export const commonGallerySlides = [
     {
         img: promoImg1,
         title: "Корпус Modern",
@@ -1523,7 +1523,7 @@ export const roomsAndPricesPageData = {
 }
 
 // Страницы номеров
-const modernOtherRoomsSlides = [
+export const modernOtherRoomsSlides = [
     {
         img: otherRoomsModernStandart,
         subtitle: 'номер',
@@ -1588,7 +1588,7 @@ const modernOtherRoomsSlides = [
         key: 6,
     },
 ];
-const classicOtherRoomsSlides = [
+export const classicOtherRoomsSlides = [
     {
         img: otherRoomsClassicStandart,
         subtitle: 'номер',
@@ -1635,8 +1635,8 @@ const classicOtherRoomsSlides = [
         key: 5,
     },
 ];
-const modernTopBlockImg = modern1img;
-const classicTopBlockImg = classic1img;
+export const modernTopBlockImg = modern1img;
+export const classicTopBlockImg = classic1img;
 
 export const roomPageData = {
     modernStandart: {
