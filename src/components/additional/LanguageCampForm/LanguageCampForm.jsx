@@ -82,15 +82,13 @@ const LanguageCampForm = ({
             .min(18, 'Номер введен неверно')
             .max(18, 'Слишком длинный номер телефона 😢')
             .required('Это поле тоже обязательное'),
+        email: Yup.string()
+            .email('E-mail введен некорректно')
+            .required('Это поле тоже обязательное'),
         childrenAge: Yup.string()
             .min(1, 'Введите корректный возраст')
             .max(2, 'Возраст указан не корректно 😢')
             .age()
-            .required('Это поле тоже обязательное'),
-        childrenExp: Yup.string()
-            .min(1, 'Введите корректный опыт')
-            .max(2, 'Не корректно заполнено поле 😢')
-            .exp()
             .required('Это поле тоже обязательное'),
     });
 
@@ -123,8 +121,8 @@ const LanguageCampForm = ({
                 "value": values.childrenAge,
             },
             {
-                "alias": "Сколько лет изучает язык",
-                "value": values.childrenExp,
+                "alias": "Email",
+                "value": values.email,
             },
         ];
         request(data)
@@ -167,9 +165,9 @@ const LanguageCampForm = ({
         <Form>
             <Field component={Input} name="name" placeholder={'Введите Ваше имя'}/>
             <Field component={NumInput} name="phone" type={"text"} placeholder={'Введите Ваш телефон'}/>
+            <Field component={Input} name="email" type={"text"} placeholder={'Введите Ваш E-mail'}/>
             <Field component={Input} name="childrenName" placeholder={'Введите имя ребенка'}/>
             <Field component={Input} name="childrenAge" min={7} type={"number"} placeholder={'Введите возраст ребенка'}/>
-            <Field component={Input} name="childrenExp" min={1} type={"number"} placeholder={'Сколько лет изучает язык'}/>
             <div className="agreementBlock">
                 <input className="agreementCheckbox" type="checkbox" required/>
                 <label htmlFor="checkbox-agreement">

@@ -14,7 +14,6 @@ import formBluredImg from "../../../img/language-camp/Group-1.png";
 import Button from "../../shared/Button/Button";
 import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
 import LanguageCampForm from "../../additional/LanguageCampForm/LanguageCampForm";
-import LazyLoadImgComponent from "../../additional/LazyLoadImgComponent/LazyLoadImgComponent";
 
 
 const LanguageCampPage = () => {
@@ -66,7 +65,7 @@ const LanguageCampPage = () => {
                         </p>
 
                     </div>
-                    <LazyLoadImgComponent src={img1} alt={"КАНИКУЛЫ С ПОЛЬЗОЙ"}/>
+                    <img src={img1} alt={"КАНИКУЛЫ С ПОЛЬЗОЙ"}/>
 
                 </div>
             </div>
@@ -85,7 +84,7 @@ const LanguageCampPage = () => {
         <section className='section'>
             <div className={s.formBlock}>
                 <div className={s.wrapper}>
-                    <LazyLoadImgComponent className={s.bluredImg} src={formBluredImg} alt=""/>
+                    <img className={s.bluredImg} src={formBluredImg} alt=""/>
 
                     <div className={s.container}>
                         <h4 className={s.title}>
