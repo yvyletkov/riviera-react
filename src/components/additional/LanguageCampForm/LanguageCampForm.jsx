@@ -63,6 +63,12 @@ const LanguageCampForm = ({
         );
     });
 
+    Yup.addMethod(Yup.string, "exp", function () {
+        return this.test("exp", "Некорректные данные", value =>
+                reAge.test(value)
+        );
+    });
+
     const Schema = Yup.object().shape({
         name: Yup.string()
             .min(2, 'Слишком короткое имя 😢')
@@ -84,6 +90,7 @@ const LanguageCampForm = ({
         childrenExp: Yup.string()
             .min(1, 'Введите корректный опыт')
             .max(2, 'Не корректно заполнено поле 😢')
+            .exp()
             .required('Это поле тоже обязательное'),
     });
 
@@ -161,8 +168,8 @@ const LanguageCampForm = ({
             <Field component={Input} name="name" placeholder={'Введите Ваше имя'}/>
             <Field component={NumInput} name="phone" type={"text"} placeholder={'Введите Ваш телефон'}/>
             <Field component={Input} name="childrenName" placeholder={'Введите имя ребенка'}/>
-            <Field component={Input} name="childrenAge" type={"number"} placeholder={'Введите возраст ребенка'}/>
-            <Field component={Input} name="childrenExp" type={"number"} placeholder={'Сколько лет изучает язык'}/>
+            <Field component={Input} name="childrenAge" min={7} type={"number"} placeholder={'Введите возраст ребенка'}/>
+            <Field component={Input} name="childrenExp" min={1} type={"number"} placeholder={'Сколько лет изучает язык'}/>
             <div className="agreementBlock">
                 <input className="agreementCheckbox" type="checkbox" required/>
                 <label htmlFor="checkbox-agreement">

@@ -15,6 +15,7 @@ import formBluredImg from "../../../img/language-camp/Group-1.png";
 import Button from "../../shared/Button/Button";
 import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
 import LanguageCampForm from "../../additional/LanguageCampForm/LanguageCampForm";
+import He from "styled-components/dist/styled-components.browser.esm";
 
 
 const LanguageCampPage = () => {
@@ -105,14 +106,15 @@ const LanguageCampPage = () => {
         </section>
 
         <section>
-            <HeadlineCenter title={"ПРОГРАММА ОБУЧЕНИЯ"} />
+            <HeadlineCenter title={"ПРОГРАММА ОБУЧЕНИЯ"}/>
             <div className={s.programsBlock}>
                 <div className={s.wrapper}>
                     <div className={s.container}>
                         <div className={s.card}>
                             <ul>
-                                <li>4 урока в день /20 уроков в неделю с носителями языка</li>
-                                <li>Занятия в первой половине дня, с 9.00 до 12.45 (по 45 минут с 15 минутными перерывами)</li>
+                                <li>обучение (40 уроков за 2 недели) – 30000 рублей</li>
+                                <li>обучение и экскурсии – 45000 рублей</li>
+                                <li>активный отдых, развлекательные мероприятия – бесплатно</li>
                             </ul>
                             <p>20 уроков английского языка в неделю</p>
                             <div className={s.priceBlock}>
@@ -121,7 +123,7 @@ const LanguageCampPage = () => {
                             </div>
                             <Button text="Оставить заявку"
                                     onClick={() => setPopupOpen(!popupOpen)}
-                                    style={{maxWidth: "270px", margin: "0 auto", width:"100%"}} />
+                                    style={{maxWidth: "270px", margin: "0 auto", width: "100%"}}/>
                         </div>
 
                         <PopupContactForm popupOpen={popupOpen} setPopupOpen={setPopupOpen}
@@ -136,7 +138,7 @@ const LanguageCampPage = () => {
             </div>
         </section>
 
-        <section>
+        <section className='section'>
             <InfoSlider subtitle={'Экскурсионная'}
                         title={'программа'}
                         slides={LanguageCampData.excursions}
@@ -145,12 +147,22 @@ const LanguageCampPage = () => {
                         "7 экскурсий за 15 000 руб. за 1 человека"}/>
         </section>
 
+        <section className='section'>
+            <HeadlineCenter title={'"Весенние каникулы с пользой" в Riviera Sunrise Resort & SPА'}/>
+            <div style={{display:'flex', justifyContent: 'center'}}>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/hjZiCOdMB3M"
+                        title="YouTube video player" frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen />
+            </div>
+        </section>
+
         <section>
             <InfoSlider subtitle={'Программа'}
-                            title={'анимации'}
-                            slides={LanguageCampData.animations}
-                            text={"Детские развлекательные программы в отеле: спортивные состязания, веселые конкурсы и настольные игры для детей нескольких возрастных групп.<br/><br/>" +
-                            "Команда аниматоров подготовила веселое путешествие по странам мира во время каникул"}/>
+                        title={'анимации'}
+                        slides={LanguageCampData.animations}
+                        text={"Детские развлекательные программы в отеле: спортивные состязания, веселые конкурсы и настольные игры для детей нескольких возрастных групп.<br/><br/>" +
+                        "Команда аниматоров подготовила веселое путешествие по странам мира во время каникул"}/>
         </section>
 
         <section>
