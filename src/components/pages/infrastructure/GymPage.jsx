@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import InfrastructurePageBanner from "./InfrastructurePageBanner/InfrastructurePageBanner";
 import InfraMainSlider from "../../shared/sliders/InfraMainSlider/InfraMainSlider";
 import MapSection from "../../shared/MapSection/MapSection";

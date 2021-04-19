@@ -14,7 +14,6 @@ import formBluredImg from "../../../img/language-camp/Group-1.png";
 import Button from "../../shared/Button/Button";
 import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
 import LanguageCampForm from "../../additional/LanguageCampForm/LanguageCampForm";
-import He from "styled-components/dist/styled-components.browser.esm";
 import LazyLoadImgComponent from "../../additional/LazyLoadImgComponent/LazyLoadImgComponent";
 
 
