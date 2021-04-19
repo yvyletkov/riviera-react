@@ -15,7 +15,6 @@ import RoomsSlider from "../../shared/sliders/RoomsSlider/RoomsSlider";
 import GridSlider from "../../shared/sliders/GridSlider/GridSlider";
 import CenteredSlider from "../../shared/sliders/CenteredSlider/CenteredSlider";
 import SpecialsSlider from "../../shared/sliders/SpecialsSlider/SpecialsSlider";
-// import HeadlineCenter from "../../shared/HeadlineCenter/HeadlineCenter";
 
 const DefenderDayPage = () => {
 

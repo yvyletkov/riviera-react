@@ -7,6 +7,7 @@ import Headline from "../Headline/Headline";
 import Button from "../Button/Button";
 import 'rodal/lib/rodal.css';
 import PopupContactForm from "../../additional/ContactForm/PopupContactForm";
+import LazyLoadImgComponent from "../../additional/LazyLoadImgComponent/LazyLoadImgComponent";
 
 const KitchenBlock = ({firstImg = kitchenImg1, btnLink = ''}) => {
 
@@ -15,8 +16,8 @@ const KitchenBlock = ({firstImg = kitchenImg1, btnLink = ''}) => {
 
     return <div id='food' className={s.wrapper}>
         <div className={s.container}>
-            <img className={s.rightImg} src={kitchenImg2} alt=""/>
-            <img className={s.menuPriceImg} src={menuPriceImg} alt="Стоимость меню"/>
+            <LazyLoadImgComponent className={s.rightImg} src={kitchenImg2} alt=""/>
+            <LazyLoadImgComponent className={s.menuPriceImg} src={menuPriceImg} alt="Стоимость меню"/>
 
             <div className={s.textContent}>
                 <Headline subtitle={'Вас ожидает'} title={'Изысканная кухня'}/>
@@ -25,7 +26,7 @@ const KitchenBlock = ({firstImg = kitchenImg1, btnLink = ''}) => {
                     композиции из нескольких курсов для ценителей вкусной и сытной кухни. Гости будут в
                     восторге!
                 </p>
-                <img className={s.leftImg} src={firstImg} alt=""/>
+                <LazyLoadImgComponent className={s.leftImg} src={firstImg} alt=""/>
 
                 <Button text={btnLink ? "Посмотреть меню" : "Получить меню"} onClick={btnLink ? () => window.open(btnLink) : () => setPopupOpen(true)}
                         style={window.matchMedia("screen and (max-width: 768px)").matches ? {width: "100%"} : {width: "230px"}}/>

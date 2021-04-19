@@ -70,7 +70,7 @@ const TransferSlider = ({sliders}) => {
                                                 }}/>
                                 <div className={s.itemWrapper}>
                                     <div className={s.grayBackground} />
-                                    <LazyLoadImgComponent src={item.img} alt={item.name}/>
+                                    <LazyLoadImgComponent height={'auto'} src={item.img} alt={item.name}/>
                                     <div className={s.textBlock}>
                                         <p>Трансфер аэропорт Симферополь - Алушта&nbsp;</p>
                                         <p><b>&mdash;&nbsp;{item.price1}</b></p>

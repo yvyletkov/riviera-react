@@ -11,16 +11,16 @@ import "slick-carousel/slick/slick-theme.css";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import BottomMenu from "./components/additional/BottomMenu/BottomMenu";
-import CookiesNotification from "./components/additional/CookieNotificationWindow/CookiesNotification";
 import TagManager from 'react-gtm-module'
-import Quiz from "./components/shared/Quiz/Quiz";
 import quizImgRanneeBronirovanie from "./img/quiz/quiz-img.png";
 import quizImgRanneeBronirovanieMob from "./img/quiz/quiz-mob.jpg";
 import quizImgLetniyOtdyh from "./img/quiz/quiz-img1.png";
 import quizImgLetniyOtdyhMob from "./img/quiz/mob-quiz1.jpg";
-import VisaPage from "./components/pages/VisaPage/VisaPage";
 import Preloader from "./components/shared/Preloader/Preloader";
 import HomePage from "./components/pages/HomePage/HomePage";
+const CookiesNotification = lazy(() => import("./components/additional/CookieNotificationWindow/CookiesNotification"));
+const Quiz = lazy(() => import('./components/shared/Quiz/Quiz'));
+const VisaPage = lazy(() => import("./components/pages/VisaPage/VisaPage"));
 const RoomsAndPricesPage = lazy(() => import('./components/pages/RoomsAndPricesPage/RoomsAndPricesPage'));
 const SingleRoomPage = lazy(() => import('./components/pages/SingleRoomPage/SingleRoomPage'));
 const FamilyVacationPage = lazy(() => import('./components/pages/VacationPages/FamilyVacationPage'));
@@ -322,12 +322,11 @@ function App() {
                     <Route component={NotFoundPage}/>
 
                 </Switch>
+                <CookiesNotification/>
             </Suspense>
             <Footer/>
 
             <BottomMenu/>
-
-            <CookiesNotification/>
         </>
     );
 }
