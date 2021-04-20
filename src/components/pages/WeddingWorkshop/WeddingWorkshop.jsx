@@ -278,7 +278,7 @@ const FormsBlock = styled.div`
 
 const WeddingWorkshop = () => {
 
-    React.useEffect(() => document.title = `Riviera Wedding Date – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
+    React.useEffect(() => document.title = `Riviera Wedding Day – Riviera Sunrise Resort & SPA – Алушта, Крым`, [])
 
     const [programContent, setPogramContent] = React.useState('')
 

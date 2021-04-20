@@ -321,7 +321,7 @@ function App() {
                            render={() => <HomePage/>}/>
 
                     <Route component={NotFoundPage}/>
-                    
+
                 </Switch>
                 <CookiesNotification/>
             </Suspense>
