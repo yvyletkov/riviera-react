@@ -948,6 +948,15 @@ export const commonAfishaSlides = [
         link: '/wedding-day',
     },
     {
+        img: afishaImg3,
+        title: "Открытый",
+        subtitle: "Подогреваемый<br/>бассейн",
+        time: "На улице",
+        date: "",
+        campus: "",
+        campusName: "С 23 апреля",
+    },
+    {
         img: afishaBelov,
         title: "Вечер инструментальной музыки",
         subtitle: "Белов<br><span style='font-size: 70px'>Ян</span>",
@@ -3854,15 +3863,6 @@ export const afishaPageData = {
             date: "14 февраля, воскресенье",
             campus: "Ресторан",
             campusName: "«The Grilled»",
-        },
-        {
-            img: afishaImg3,
-            title: "Открытый",
-            subtitle: "Подогреваемый<br/>бассейн",
-            time: "На улице",
-            date: "",
-            campus: "",
-            campusName: "С 26 декабря<br/>по 10 января",
         },
         {
             img: afishaImg4,
