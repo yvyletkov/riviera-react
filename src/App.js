@@ -89,8 +89,6 @@ function App() {
             <Header/>
             {window.matchMedia('(max-width: 767px)').matches &&
             <div style={{height: '65px'}}/>}
-            <Route path='/' exact
-                   render={() => <HomePage/>}/>
             <Suspense fallback={<Preloader/>}>
 
                 <Switch>
@@ -319,8 +317,11 @@ function App() {
                     <Route path='/nomera-i-tseny' exact
                            component={() => <RoomsAndPricesPage/>}/>
 
-                    <Route component={NotFoundPage}/>
+                    <Route path='/' exact
+                           render={() => <HomePage/>}/>
 
+                    <Route component={NotFoundPage}/>
+                    
                 </Switch>
                 <CookiesNotification/>
             </Suspense>
